@@ -15,8 +15,8 @@
     return;
   }
 
-  // Populate nav once DOM is ready
-  document.addEventListener('DOMContentLoaded', async function () {
+  // Populate nav safely
+  function initNav() {
     window.ImatAuth.populateNav(session.user);
     // Migrate any existing localStorage data (once per user)
     window.ImatAuth.migrateLocalStorage();
@@ -26,7 +26,13 @@
     if (!localStorage.getItem(firstLoginKey)) {
       localStorage.setItem(firstLoginKey, Date.now().toString());
     }
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+  } else {
+    initNav();
+  }
 
   // Listen for session changes (logout from another tab, expiry, etc.)
   window.ImatAuth.client.auth.onAuthStateChange(function (event) {
