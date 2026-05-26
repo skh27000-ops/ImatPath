@@ -302,9 +302,9 @@ function renderSelectExam(){let html=`
   </div>
   <div class="sec-label" style="justify-content:center;animation:fadeInUp 0.6s ease;">Practice exams</div>
   <h1 class="sec-title" style="text-align:center;margin:0 auto 14px;animation:fadeInUp 0.6s ease 0.1s backwards;">Mock Exams<span style="color:var(--teal);">.</span></h1>
-  <p class="sec-sub" style="text-align:center;margin:0 auto 40px;animation:fadeInUp 0.6s ease 0.2s backwards;">Each exam has 60 questions and 100 minutes. 10 unique exams available.</p>
+  <p class="sec-sub" style="text-align:center;margin:0 auto 40px;animation:fadeInUp 0.6s ease 0.2s backwards;">Each exam has 60 questions and 100 minutes. 20 unique exams available.</p>
   <div class="mock-grid">`;
-  for(let i=1; i<=10; i++) {
+  for(let i=1; i<=20; i++) {
     html += `
     <div class="mock-card" onclick="selectExam(${i})" style="animation:fadeInUp 0.6s ease ${0.2 + (i*0.05)}s backwards;">
       <div class="mock-icon"><i class="fas fa-stopwatch"></i></div>
