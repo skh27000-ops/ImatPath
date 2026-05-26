@@ -202,7 +202,7 @@
     console.log('[ImatAuth] Migrated localStorage data to Supabase ✓');
   }
 
-  // ── Sync: Supabase → localStorage ──────────────────────────────
+  // ── Sync: Supabase ↔ localStorage ──────────────────────────────
   async function syncFromCloud() {
     const user = await getUser();
     if (!user) return false;
@@ -211,27 +211,38 @@
     // Sync Question Bank
     try {
       const qbData = await loadQuestionState();
-      if (qbData && Object.keys(qbData.revealed || {}).length > 0) {
+      const localQbRaw = localStorage.getItem('imatpath_qb');
+      const localQb = localQbRaw ? JSON.parse(localQbRaw) : null;
+      
+      const cloudCount = qbData ? Object.keys(qbData.revealed || {}).length : 0;
+      const localCount = localQb ? Object.keys(localQb.revealed || {}).length : 0;
+
+      if (cloudCount > localCount) {
+        // Pull from cloud
         localStorage.setItem('imatpath_qb', JSON.stringify(qbData));
-        
-        // Also update the correct count cache for the dashboard
-        let correctCount = 0;
-        if (qbData.answers && qbData.revealed) {
-          for (const key in qbData.revealed) {
-            // We can't know if it's correct without questions-data.js, but we assume dashboard will recalculate it.
-            // Actually dashboard recalculates it. So we are good.
-          }
-        }
         updated = true;
+      } else if (localCount > cloudCount) {
+        // Push to cloud
+        await saveQuestionState(localQb.answers || {}, localQb.revealed || {}, localQb.bookmarks || {});
       }
     } catch (e) { console.warn('Cloud sync QB failed', e); }
 
     // Sync XP
     try {
       const xpData = await loadXPProgress();
-      if (xpData && xpData.xp > 0) {
+      const localXpRaw = localStorage.getItem('imatpath_xp');
+      const localXp = localXpRaw ? JSON.parse(localXpRaw) : null;
+      
+      const cloudXp = xpData ? xpData.xp : 0;
+      const localXpVal = localXp ? localXp.xp : 0;
+
+      if (cloudXp > localXpVal) {
+        // Pull from cloud
         localStorage.setItem('imatpath_xp', JSON.stringify(xpData));
         updated = true;
+      } else if (localXpVal > cloudXp) {
+        // Push to cloud
+        await saveXPProgress(localXp);
       }
     } catch (e) { console.warn('Cloud sync XP failed', e); }
 

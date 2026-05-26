@@ -22,7 +22,7 @@
     window.ImatAuth.migrateLocalStorage();
 
     // Pull progress from cloud if first time on this device
-    const syncKey = 'imatpath_synced_' + session.user.id;
+    const syncKey = 'imatpath_synced_v2_' + session.user.id;
     if (!localStorage.getItem(syncKey)) {
       const updated = await window.ImatAuth.syncFromCloud();
       localStorage.setItem(syncKey, '1');
