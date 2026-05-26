@@ -64,8 +64,12 @@
 
   // ── Nav population ────────────────────────────────────────────
   function populateNav(user) {
-    const firstName = user?.user_metadata?.first_name || user?.email?.split('@')[0] || 'User';
-    const initial   = firstName.charAt(0).toUpperCase();
+    let firstName = user?.user_metadata?.first_name || user?.user_metadata?.full_name || user?.user_metadata?.name || user?.email?.split('@')[0] || 'User';
+    // If it's a full name from Google, grab just the first word
+    if (firstName.includes(' ')) {
+      firstName = firstName.split(' ')[0];
+    }
+    const initial = firstName.charAt(0).toUpperCase();
 
     // Avatar
     const avatar = document.getElementById('userAvatar');
