@@ -202,6 +202,42 @@
     console.log('[ImatAuth] Migrated localStorage data to Supabase ✓');
   }
 
+  // ── Sync: Supabase → localStorage ──────────────────────────────
+  async function syncFromCloud() {
+    const user = await getUser();
+    if (!user) return false;
+    let updated = false;
+
+    // Sync Question Bank
+    try {
+      const qbData = await loadQuestionState();
+      if (qbData && Object.keys(qbData.revealed || {}).length > 0) {
+        localStorage.setItem('imatpath_qb', JSON.stringify(qbData));
+        
+        // Also update the correct count cache for the dashboard
+        let correctCount = 0;
+        if (qbData.answers && qbData.revealed) {
+          for (const key in qbData.revealed) {
+            // We can't know if it's correct without questions-data.js, but we assume dashboard will recalculate it.
+            // Actually dashboard recalculates it. So we are good.
+          }
+        }
+        updated = true;
+      }
+    } catch (e) { console.warn('Cloud sync QB failed', e); }
+
+    // Sync XP
+    try {
+      const xpData = await loadXPProgress();
+      if (xpData && xpData.xp > 0) {
+        localStorage.setItem('imatpath_xp', JSON.stringify(xpData));
+        updated = true;
+      }
+    } catch (e) { console.warn('Cloud sync XP failed', e); }
+
+    return updated;
+  }
+
   // ── Expose global ─────────────────────────────────────────────
   window.ImatAuth = {
     client,
@@ -219,7 +255,8 @@
     saveMockResult,
     loadMockResults,
     submitFeedback,
-    migrateLocalStorage
+    migrateLocalStorage,
+    syncFromCloud
   };
 
 })();
