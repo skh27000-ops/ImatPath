@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In — ImatPath</title>
+<meta name="description" content="Sign in or create your ImatPath account. Access 2,000+ IMAT practice questions, mock exams, and your personalized study roadmap.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #F4F3F0;
+  color: #1A1916;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── Layout ── */
+.auth-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ── Left panel ── */
+.auth-left {
+  flex: 0 0 480px;
+  background: linear-gradient(145deg, #0D9488 0%, #0a7a70 40%, #065f59 100%);
+  padding: 56px 56px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-left::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  top: -150px; right: -200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.auth-left::after {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px;
+  bottom: -100px; left: -100px;
+  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.auth-bg-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.auth-logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; margin-bottom: 64px; position: relative;
+}
+.auth-logo-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 1.2rem;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+.auth-logo-text {
+  font-size: 1.4rem; font-weight: 800;
+  color: white; letter-spacing: -0.5px;
+}
+.auth-logo-text span { color: rgba(255,255,255,0.65); }
+
+.auth-hero { flex: 1; position: relative; }
+.auth-hero-label {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: rgba(255,255,255,0.55);
+  margin-bottom: 16px;
+}
+.auth-hero h1 {
+  font-size: 2.4rem; font-weight: 800;
+  color: white; line-height: 1.1;
+  letter-spacing: -1.5px; margin-bottom: 32px;
+}
+.auth-hero h1 em { font-style: normal; color: rgba(255,255,255,0.65); }
+
+.auth-features { display: flex; flex-direction: column; gap: 14px; margin-bottom: 48px; }
+.auth-feat {
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.auth-feat-check {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(255,255,255,0.15); border: 1.5px solid rgba(255,255,255,0.3);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.auth-feat-check i { font-size: 0.6rem; color: white; }
+.auth-feat-text { font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.5; font-weight: 500; }
+.auth-feat-text strong { color: white; font-weight: 700; }
+
+.auth-stats {
+  display: flex; gap: 24px;
+  padding: 20px 24px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  position: relative;
+}
+.auth-stat-val {
+  font-size: 1.6rem; font-weight: 800;
+  color: white; letter-spacing: -1px; line-height: 1;
+}
+.auth-stat-lbl {
+  font-size: 0.72rem; color: rgba(255,255,255,0.55);
+  margin-top: 3px; font-weight: 500;
+}
+
+/* ── Right panel ── */
+.auth-right {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  padding: 48px 40px;
+  background: #F4F3F0;
+}
+
+.auth-form-wrap {
+  width: 100%; max-width: 420px;
+}
+
+.auth-form-header { margin-bottom: 32px; }
+.auth-form-title {
+  font-size: 1.9rem; font-weight: 800;
+  color: #1A1916; letter-spacing: -1px; margin-bottom: 8px;
+}
+.auth-form-sub {
+  font-size: 0.9rem; color: #5A5750;
+}
+
+/* Tab toggle */
+.auth-tabs {
+  display: flex; background: #EDECEA;
+  border-radius: 12px; padding: 4px;
+  margin-bottom: 32px; gap: 4px;
+}
+.auth-tab {
+  flex: 1; padding: 10px 16px; border-radius: 9px; border: none;
+  background: transparent; color: #8A8780;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem; font-weight: 600; cursor: pointer;
+  transition: all 0.2s;
+}
+.auth-tab.active {
+  background: white; color: #1A1916;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+/* Form fields */
+.auth-field { margin-bottom: 16px; }
+.auth-label {
+  display: block; font-size: 0.82rem; font-weight: 600;
+  color: #3D3A36; margin-bottom: 6px;
+}
+.auth-input {
+  width: 100%; padding: 12px 16px;
+  border: 1.5px solid #E0DEDB; border-radius: 10px;
+  background: white; color: #1A1916;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem; font-weight: 500;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.auth-input:focus {
+  border-color: #0D9488;
+  box-shadow: 0 0 0 3px rgba(13,148,136,0.1);
+}
+.auth-input::placeholder { color: #C8C5C1; }
+.auth-input-wrap { position: relative; }
+.auth-input-wrap .auth-input { padding-right: 44px; }
+.auth-eye {
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer;
+  color: #8A8780; font-size: 0.9rem; padding: 4px;
+  transition: color 0.2s;
+}
+.auth-eye:hover { color: #0D9488; }
+
+/* Submit button */
+.auth-submit {
+  width: 100%; padding: 14px;
+  border-radius: 12px; border: none;
+  background: #0D9488; color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem; font-weight: 700;
+  cursor: pointer; transition: all 0.2s;
+  margin-top: 4px; margin-bottom: 20px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  box-shadow: 0 4px 15px rgba(13,148,136,0.25);
+}
+.auth-submit:hover { background: #0F766E; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(13,148,136,0.35); }
+.auth-submit:active { transform: translateY(0); }
+.auth-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+/* Divider */
+.auth-divider {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 20px; color: #C8C5C1; font-size: 0.82rem;
+}
+.auth-divider::before, .auth-divider::after {
+  content: ''; flex: 1; height: 1px; background: #E0DEDB;
+}
+
+/* Google button */
+.auth-google {
+  width: 100%; padding: 12px;
+  border-radius: 12px; border: 1.5px solid #E0DEDB;
+  background: white; color: #3D3A36;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.auth-google:hover { border-color: #0D9488; color: #1A1916; }
+.auth-google svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+/* Error / success */
+.auth-error, .auth-success {
+  padding: 12px 16px; border-radius: 10px;
+  font-size: 0.85rem; font-weight: 600;
+  margin-bottom: 16px; display: none;
+  animation: slideIn 0.3s ease;
+}
+.auth-error { background: #FEF2F2; color: #DC2626; border: 1px solid #FECACA; }
+.auth-success { background: #F0FDFB; color: #0F766E; border: 1px solid #99F6E4; }
+.auth-error.show, .auth-success.show { display: flex; align-items: center; gap: 8px; }
+@keyframes slideIn { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+
+/* Footer toggle */
+.auth-toggle {
+  text-align: center; margin-top: 24px;
+  font-size: 0.85rem; color: #5A5750;
+}
+.auth-toggle a {
+  color: #0D9488; font-weight: 700; text-decoration: none;
+  cursor: pointer;
+}
+.auth-toggle a:hover { text-decoration: underline; }
+
+/* Verification notice */
+.auth-verify {
+  display: none; text-align: center; padding: 32px 24px;
+}
+.auth-verify-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: #F0FDFB; border: 2px solid #0D9488;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px; font-size: 1.8rem;
+}
+.auth-verify h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 10px; color: #1A1916; }
+.auth-verify p { font-size: 0.88rem; color: #5A5750; line-height: 1.6; }
+
+/* Spinner */
+.spinner {
+  width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white; border-radius: 50%;
+  animation: spin 0.7s linear infinite; display: none;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .auth-left { display: none; }
+  .auth-right { padding: 32px 24px; }
+}
+@media (max-width: 480px) {
+  .auth-right { align-items: flex-start; padding-top: 48px; }
+  .auth-form-title { font-size: 1.6rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="auth-wrapper">
+
+  <!-- ── Left panel ── -->
+  <div class="auth-left">
+    <div class="auth-bg-grid"></div>
+
+    <a class="auth-logo" href="index.html">
+      <div class="auth-logo-icon"><i class="fas fa-graduation-cap"></i></div>
+      <div class="auth-logo-text">Imat<span>Path</span></div>
+    </a>
+
+    <div class="auth-hero">
+      <div class="auth-hero-label">IMAT 2026 Preparation</div>
+      <h1>Your clear path to <em>medicine</em> in Italy.</h1>
+
+      <div class="auth-features">
+        <div class="auth-feat">
+          <div class="auth-feat-check"><i class="fas fa-check"></i></div>
+          <div class="auth-feat-text"><strong>2,000+ practice questions</strong> across all IMAT subjects with detailed solutions</div>
+        </div>
+        <div class="auth-feat">
+          <div class="auth-feat-check"><i class="fas fa-check"></i></div>
+          <div class="auth-feat-text"><strong>10 full mock exams</strong> with real IMAT scoring (+1.5 / −0.4)</div>
+        </div>
+        <div class="auth-feat">
+          <div class="auth-feat-check"><i class="fas fa-check"></i></div>
+          <div class="auth-feat-text"><strong>Personalized study roadmap</strong> built around your timeline and weak subjects</div>
+        </div>
+        <div class="auth-feat">
+          <div class="auth-feat-check"><i class="fas fa-check"></i></div>
+          <div class="auth-feat-text"><strong>Daily streaks & XP system</strong> to keep your motivation high every day</div>
+        </div>
+        <div class="auth-feat">
+          <div class="auth-feat-check"><i class="fas fa-check"></i></div>
+          <div class="auth-feat-text"><strong>Progress synced to the cloud</strong> — study from any device, anytime</div>
+        </div>
+      </div>
+
+      <div class="auth-stats">
+        <div>
+          <div class="auth-stat-val">2K+</div>
+          <div class="auth-stat-lbl">Practice questions</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.12);"></div>
+        <div>
+          <div class="auth-stat-val">10</div>
+          <div class="auth-stat-lbl">Mock exams</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.12);"></div>
+        <div>
+          <div class="auth-stat-val">7</div>
+          <div class="auth-stat-lbl">IMAT subjects</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Right panel ── -->
+  <div class="auth-right">
+    <div class="auth-form-wrap">
+
+      <!-- Header -->
+      <div class="auth-form-header">
+        <!-- Mobile logo -->
+        <a href="index.html" style="display:none;align-items:center;gap:10px;text-decoration:none;margin-bottom:24px;" id="mobileLogo">
+          <div style="width:36px;height:36px;border-radius:10px;background:#0D9488;display:flex;align-items:center;justify-content:center;color:white;">
+            <i class="fas fa-graduation-cap" style="font-size:0.9rem;"></i>
+          </div>
+          <span style="font-size:1.2rem;font-weight:800;color:#1A1916;">Imat<span style="color:#0D9488;">Path</span></span>
+        </a>
+        <h1 class="auth-form-title" id="formTitle">Welcome back</h1>
+        <p class="auth-form-sub" id="formSub">Sign in to continue your IMAT preparation.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tabSignIn" onclick="switchTab('signin')">Sign In</button>
+        <button class="auth-tab" id="tabSignUp" onclick="switchTab('signup')">Create Account</button>
+      </div>
+
+      <!-- Error / Success -->
+      <div class="auth-error" id="authError">
+        <i class="fas fa-circle-exclamation"></i>
+        <span id="authErrorText">Something went wrong.</span>
+      </div>
+      <div class="auth-success" id="authSuccess">
+        <i class="fas fa-circle-check"></i>
+        <span id="authSuccessText">Success!</span>
+      </div>
+
+      <!-- Form -->
+      <form id="authForm" onsubmit="handleSubmit(event)">
+
+        <!-- First name (signup only) -->
+        <div class="auth-field" id="fieldName" style="display:none;">
+          <label class="auth-label" for="inputName">First name</label>
+          <input class="auth-input" type="text" id="inputName" placeholder="e.g. Marco" autocomplete="given-name">
+        </div>
+
+        <!-- Email -->
+        <div class="auth-field">
+          <label class="auth-label" for="inputEmail">Email address</label>
+          <input class="auth-input" type="email" id="inputEmail" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+
+        <!-- Password -->
+        <div class="auth-field">
+          <label class="auth-label" for="inputPassword">Password</label>
+          <div class="auth-input-wrap">
+            <input class="auth-input" type="password" id="inputPassword" placeholder="At least 6 characters" autocomplete="current-password" required>
+            <button type="button" class="auth-eye" onclick="togglePassword('inputPassword', this)">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button class="auth-submit" type="submit" id="submitBtn">
+          <div class="spinner" id="spinner"></div>
+          <span id="submitText">Sign In</span>
+          <i class="fas fa-arrow-right" id="submitIcon"></i>
+        </button>
+      </form>
+
+      <!-- Verification sent message -->
+      <div class="auth-verify" id="verifyMsg">
+        <div class="auth-verify-icon">📬</div>
+        <h3>Check your email!</h3>
+        <p>We sent a confirmation link to <strong id="verifyEmail"></strong>. Click the link in the email to activate your account, then sign in.</p>
+        <button onclick="switchTab('signin')" style="margin-top:20px;padding:10px 24px;border-radius:10px;border:none;background:#0D9488;color:white;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;cursor:pointer;">
+          Go to Sign In
+        </button>
+      </div>
+
+      <!-- Divider -->
+      <div class="auth-divider">or continue with</div>
+
+      <!-- Google -->
+      <button class="auth-google" onclick="handleGoogle()">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Continue with Google
+      </button>
+
+      <!-- Toggle -->
+      <div class="auth-toggle" id="formToggle">
+        Don't have an account? <a onclick="switchTab('signup')">Create one free</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script>
+// If already logged in → go to dashboard
+(async function() {
+  if (!window.ImatAuth) return;
+  const session = await window.ImatAuth.getSession();
+  if (session) window.location.replace('dashboard.html');
+})();
+
+// Show mobile logo on small screens
+if (window.innerWidth <= 900) {
+  document.getElementById('mobileLogo').style.display = 'flex';
+}
+
+let currentTab = 'signin';
+
+function switchTab(tab) {
+  currentTab = tab;
+  hideMessages();
+
+  const isSignUp = tab === 'signup';
+  document.getElementById('tabSignIn').classList.toggle('active', !isSignUp);
+  document.getElementById('tabSignUp').classList.toggle('active', isSignUp);
+  document.getElementById('fieldName').style.display = isSignUp ? 'block' : 'none';
+  document.getElementById('formTitle').textContent = isSignUp ? 'Create your account' : 'Welcome back';
+  document.getElementById('formSub').textContent = isSignUp
+    ? 'Join thousands of students preparing for IMAT 2026.'
+    : 'Sign in to continue your IMAT preparation.';
+  document.getElementById('submitText').textContent = isSignUp ? 'Create Account' : 'Sign In';
+  document.getElementById('formToggle').innerHTML = isSignUp
+    ? 'Already have an account? <a onclick="switchTab(\'signin\')">Sign in</a>'
+    : 'Don\'t have an account? <a onclick="switchTab(\'signup\')">Create one free</a>';
+
+  // Show/hide verification message
+  document.getElementById('authForm').style.display = 'block';
+  document.getElementById('authForm').querySelector('.auth-divider')?.remove();
+  document.getElementById('verifyMsg').style.display = 'none';
+
+  if (isSignUp) {
+    document.getElementById('inputPassword').setAttribute('autocomplete', 'new-password');
+    document.getElementById('inputPassword').placeholder = 'Choose a password (min. 6 chars)';
+  } else {
+    document.getElementById('inputPassword').setAttribute('autocomplete', 'current-password');
+    document.getElementById('inputPassword').placeholder = 'Your password';
+  }
+}
+
+function togglePassword(inputId, btn) {
+  const input = document.getElementById(inputId);
+  const isText = input.type === 'text';
+  input.type = isText ? 'password' : 'text';
+  btn.innerHTML = isText ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+}
+
+function setLoading(loading) {
+  const btn = document.getElementById('submitBtn');
+  const spinner = document.getElementById('spinner');
+  const icon = document.getElementById('submitIcon');
+  btn.disabled = loading;
+  spinner.style.display = loading ? 'block' : 'none';
+  icon.style.display = loading ? 'none' : 'inline';
+}
+
+function showError(msg) {
+  const el = document.getElementById('authError');
+  document.getElementById('authErrorText').textContent = msg;
+  el.classList.add('show');
+  document.getElementById('authSuccess').classList.remove('show');
+}
+
+function showSuccess(msg) {
+  const el = document.getElementById('authSuccess');
+  document.getElementById('authSuccessText').textContent = msg;
+  el.classList.add('show');
+  document.getElementById('authError').classList.remove('show');
+}
+
+function hideMessages() {
+  document.getElementById('authError').classList.remove('show');
+  document.getElementById('authSuccess').classList.remove('show');
+}
+
+async function handleSubmit(e) {
+  e.preventDefault();
+  hideMessages();
+
+  const email    = document.getElementById('inputEmail').value.trim();
+  const password = document.getElementById('inputPassword').value;
+  const name     = document.getElementById('inputName').value.trim();
+
+  if (!email || !password) { showError('Please fill in all fields.'); return; }
+  if (currentTab === 'signup' && !name) { showError('Please enter your first name.'); return; }
+  if (password.length < 6) { showError('Password must be at least 6 characters.'); return; }
+
+  setLoading(true);
+
+  try {
+    if (currentTab === 'signin') {
+      await window.ImatAuth.signIn(email, password);
+      showSuccess('Signing you in…');
+      setTimeout(() => window.location.href = 'dashboard.html', 600);
+    } else {
+      const data = await window.ImatAuth.signUp(email, password, name);
+      setLoading(false);
+      // Show verification message
+      document.getElementById('authForm').style.display = 'none';
+      document.getElementById('verifyMsg').style.display = 'block';
+      document.getElementById('verifyEmail').textContent = email;
+    }
+  } catch (err) {
+    setLoading(false);
+    const msg = err.message || 'Something went wrong. Please try again.';
+    if (msg.includes('Invalid login credentials')) showError('Incorrect email or password. Try again.');
+    else if (msg.includes('already registered') || msg.includes('already been registered')) showError('This email is already registered. Sign in instead.');
+    else if (msg.includes('Email not confirmed')) showError('Please verify your email first, then sign in.');
+    else showError(msg);
+  }
+}
+
+async function handleGoogle() {
+  try {
+    await window.ImatAuth.signInWithGoogle();
+  } catch (err) {
+    showError(err.message || 'Google sign-in failed. Please try again.');
+  }
+}
+
+// Check for OAuth redirect
+window.ImatAuth?.client?.auth?.onAuthStateChange(function(event, session) {
+  if ((event === 'SIGNED_IN') && session) {
+    window.location.href = 'dashboard.html';
+  }
+});
+</script>
+</body>
+</html>

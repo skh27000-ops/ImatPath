@@ -1,0 +1,100 @@
+/* ═══════════════════════════════════════════
+   ImatPath — Dark Mode Override
+   ═══════════════════════════════════════════ */
+
+[data-theme="dark"] {
+  --stone:    #1A1A1F;
+  --stone-2:  #222228;
+  --stone-3:  #2E2E35;
+  --stone-4:  #3D3D45;
+  --ink:      #E8E6E3;
+  --ink-2:    #C5C3BF;
+  --ink-3:    #9A9890;
+  --ink-4:    #6E6C65;
+  --teal:     #2DD4BF;
+  --teal-2:   #14B8A6;
+  --teal-pale:#0D3D38;
+  --teal-faint:#0A2926;
+  --white:    #222228;
+  --red:      #F87171;
+  --red-faint:#3B1515;
+  --amber:    #FBBF24;
+  --amber-pale:#3B2F10;
+  --green:    #4ADE80;
+  --green-faint:#0F2918;
+}
+
+[data-theme="dark"] nav {
+  background: rgba(26, 26, 31, 0.95);
+  border-bottom-color: var(--stone-3);
+}
+
+[data-theme="dark"] footer {
+  background: var(--stone);
+  border-top-color: var(--stone-3);
+}
+
+[data-theme="dark"] .toast {
+  background: var(--stone-2);
+  border-color: var(--stone-3);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+[data-theme="dark"] .hero-bg-grid {
+  opacity: 0.15;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1.5px solid var(--stone-3);
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: border-color 0.18s, color 0.18s, background 0.18s;
+  flex-shrink: 0;
+}
+.dark-mode-toggle:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+[data-theme="dark"] .dark-mode-toggle {
+  background: var(--stone-3);
+  border-color: var(--stone-4);
+  color: var(--amber);
+}
+
+/* Pricing section dark mode overrides */
+[data-theme="dark"] .pricing-section { background: var(--stone); }
+[data-theme="dark"] .pricing-inner .sec-title { color: var(--ink); }
+[data-theme="dark"] .pricing-inner .sec-sub { color: var(--ink-3); }
+[data-theme="dark"] .pricing-card { background: var(--stone-2); border-color: var(--stone-3); }
+[data-theme="dark"] .plan-name { color: var(--ink-3); }
+[data-theme="dark"] .pricing-card.featured .plan-name { color: var(--teal); }
+[data-theme="dark"] .plan-price { color: var(--ink); }
+[data-theme="dark"] .plan-price sup { color: var(--ink); }
+[data-theme="dark"] .plan-period { color: var(--ink-4); }
+[data-theme="dark"] .plan-divider { background: var(--stone-3); }
+[data-theme="dark"] .pricing-card.featured .plan-divider { background: rgba(45, 212, 191, 0.2); }
+[data-theme="dark"] .plan-feat { color: var(--ink-2); }
+[data-theme="dark"] .plan-feat.missing { color: var(--ink-4); }
+[data-theme="dark"] .plan-feat.missing::before { border-color: var(--stone-4); background: var(--stone-3); }
+[data-theme="dark"] .btn-plan { border-color: var(--stone-4); color: var(--ink); }
+[data-theme="dark"] .btn-plan:hover { border-color: var(--ink-3); }
+
+/* Problem section dark mode overrides */
+[data-theme="dark"] .problem-section { background: var(--stone); }
+[data-theme="dark"] .problem-text .sec-title { color: var(--ink); }
+[data-theme="dark"] .problem-text .sec-sub { color: var(--ink-3); }
+[data-theme="dark"] .problem-item { background: var(--stone-2); border-color: var(--stone-3); }
+[data-theme="dark"] .problem-item:hover { border-color: var(--stone-4); }
+[data-theme="dark"] .problem-item.lead { background: rgba(45, 212, 191, 0.05); border-color: var(--teal); }
+[data-theme="dark"] .problem-item-title { color: var(--ink); }
+[data-theme="dark"] .problem-item-desc { color: var(--ink-3); }
+[data-theme="dark"] .problem-item.lead .problem-item-desc { color: var(--ink-2); }

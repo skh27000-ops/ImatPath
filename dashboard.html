@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — ImatPath</title>
+<meta name="description" content="Your IMAT preparation hub. Track progress, access study tools, and stay on track for exam day.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --stone:    #F4F3F0;
+  --stone-2:  #EDECEA;
+  --stone-3:  #E0DEDB;
+  --stone-4:  #C8C5C1;
+  --ink:      #1A1916;
+  --ink-2:    #3D3A36;
+  --ink-3:    #5A5750;
+  --ink-4:    #8A8780;
+  --teal:     #0D9488;
+  --teal-2:   #0F766E;
+  --teal-pale:#CCFBF1;
+  --teal-faint:#F0FDFB;
+  --white:    #FFFFFF;
+  --red:      #DC2626;
+  --red-faint:#FEF2F2;
+  --amber:    #B45309;
+  --amber-pale:#FEF3C7;
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  --gradient: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+  --gradient-2: linear-gradient(135deg, #0D9488 0%, #CCFBF1 100%);
+  --gradient-3: linear-gradient(135deg, #0F766E 0%, #0D9488 100%);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:'Plus Jakarta Sans', sans-serif;
+  background:var(--stone);
+  color:var(--ink);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  height:70px; display:flex; align-items:center; justify-content:space-between;
+  padding:0 40px;
+  background:rgba(244,243,240,0.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--stone-3);
+  box-shadow:var(--shadow);
+}
+
+.logo { font-size:1.4rem; font-weight:800; letter-spacing:-0.5px; color:var(--ink); text-decoration:none; }
+.logo span { color:var(--teal); }
+
+.nav-links { display:flex; gap:8px; align-items:center; }
+.nav-link { padding:10px 20px; border-radius:10px; text-decoration:none; color:var(--ink-3); font-weight:500; font-size:0.9rem; transition:all 0.3s ease; }
+.nav-link:hover, .nav-link.active { background:var(--teal); color:white; transform:translateY(-2px); }
+.nav-link i { margin-right:8px; }
+
+.nav-right { display:flex; gap:12px; align-items:center; }
+.user-avatar { width:42px; height:42px; border-radius:50%; background:var(--teal); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:1rem; cursor:pointer; transition:transform 0.3s; }
+.user-avatar:hover { transform:scale(1.1); }
+
+.btn-primary {
+  padding:12px 24px; border-radius:12px; border:none;
+  background:var(--teal); color:white;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:0.9rem; font-weight:600;
+  cursor:pointer; transition:all 0.3s ease; box-shadow:var(--shadow);
+}
+.btn-primary:hover { background:var(--teal-2); transform:translateY(-2px); box-shadow:var(--shadow-lg); }
+
+.btn-secondary {
+  padding:12px 24px; border-radius:12px; border:2px solid var(--stone-3);
+  background:var(--white); color:var(--ink-2);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:0.9rem; font-weight:600;
+  cursor:pointer; transition:all 0.3s ease;
+}
+.btn-secondary:hover { border-color:var(--teal); color:var(--teal); }
+
+.dashboard-container {
+  padding: 120px 40px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.welcome-section {
+  margin-bottom: 40px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.welcome-title {
+  font-size: 2.5rem; font-weight: 800;
+  line-height: 1.1; letter-spacing: -1px; color: var(--ink);
+  margin-bottom: 12px;
+}
+.welcome-title .highlight { color: var(--teal); }
+
+.welcome-sub {
+  font-size: 1.1rem; font-weight: 400; color: var(--ink-3);
+  line-height: 1.6; max-width: 600px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow:var(--shadow);
+  transition:all 0.3s ease;
+  position:relative; overflow:hidden;
+  animation: fadeInUp 0.6s ease backwards;
+}
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+.stat-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:4px;
+  background:var(--gradient); transform:scaleX(0); transform-origin:left; transition:transform 0.3s ease;
+}
+.stat-card:hover::before { transform:scaleX(1); }
+.stat-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+
+.stat-card.purple::before { background:var(--teal); }
+.stat-card.green::before { background:var(--teal-2); }
+.stat-card.orange::before { background:var(--amber); }
+.stat-card.blue::before { background:var(--teal); }
+
+.stat-icon {
+  width:50px; height:50px; border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.3rem; margin-bottom:16px;
+}
+.stat-card.purple .stat-icon { background:var(--teal-faint); color:var(--teal); }
+.stat-card.green .stat-icon { background:var(--teal-pale); color:var(--teal-2); }
+.stat-card.orange .stat-icon { background:var(--amber-pale); color:var(--amber); }
+.stat-card.blue .stat-icon { background:var(--teal-faint); color:var(--teal); }
+
+.stat-value {
+  font-size: 2.5rem; font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -2px;
+  margin-bottom: 4px;
+  line-height:1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--ink-3);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform:uppercase;
+}
+
+.stat-change {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.stat-change.positive { color: var(--teal); }
+.stat-change.negative { color: var(--red); }
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.section-card {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow:var(--shadow);
+  animation: fadeInUp 0.6s ease backwards;
+  animation-delay: 0.5s;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 1.3rem; font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  font-size: 0.9rem; color: var(--ink-3);
+}
+
+.progress-card {
+  background: var(--teal-faint);
+  border: 2px solid rgba(13,148,136,0.2);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.progress-title {
+  font-size: 1rem; font-weight: 600;
+  color: var(--ink);
+}
+
+.progress-value {
+  font-size: 1.5rem; font-weight: 800;
+  color: var(--teal);
+}
+
+.progress-bar {
+  height: 10px;
+  background: var(--stone-2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--teal);
+  border-radius: 10px;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--ink-3);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.action-card {
+  background: var(--white);
+  border: 2px solid var(--stone-3);
+  border-radius: 20px;
+  padding: 24px;
+  cursor: pointer;
+  transition:all 0.3s ease;
+  position:relative; overflow:hidden;
+  animation: fadeInUp 0.6s ease backwards;
+}
+.action-card:nth-child(1) { animation-delay: 0.6s; }
+.action-card:nth-child(2) { animation-delay: 0.7s; }
+.action-card:nth-child(3) { animation-delay: 0.8s; }
+.action-card:nth-child(4) { animation-delay: 0.9s; }
+
+.action-card::after {
+  content:''; position:absolute; top:0; left:0; right:0; bottom:0;
+  background:var(--teal); opacity:0; transition:opacity 0.3s ease;
+}
+.action-card:hover::after { opacity:0.05; }
+.action-card:hover { transform:translateY(-5px); border-color:var(--teal); box-shadow:var(--shadow-lg); }
+
+.action-card.featured {
+  background:var(--teal);
+  border:none;
+}
+.action-card.featured .action-icon { background:rgba(255,255,255,0.2); color:white; }
+.action-card.featured .action-title { color:white; }
+.action-card.featured .action-desc { color:rgba(255,255,255,0.8); }
+.action-card.featured .action-meta { color:rgba(255,255,255,0.9); }
+.action-card.featured::after { display:none; }
+
+.action-icon {
+  width:56px; height:56px; border-radius:16px;
+  background:var(--teal-faint);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--teal); font-size:1.4rem;
+  margin-bottom:16px; transition:all 0.3s ease;
+}
+.action-card:hover .action-icon { transform:scale(1.1) rotate(5deg); }
+
+.action-title {
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.action-desc {
+  font-size: 0.9rem;
+  color: var(--ink-3);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.action-meta {
+  font-size: 0.85rem;
+  color: var(--teal);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position:relative; z-index:1;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--stone-2);
+  border-radius: 16px;
+  transition:all 0.3s ease;
+  animation: fadeInUp 0.6s ease backwards;
+}
+.activity-item:nth-child(1) { animation-delay: 0.6s; }
+.activity-item:nth-child(2) { animation-delay: 0.7s; }
+.activity-item:nth-child(3) { animation-delay: 0.8s; }
+.activity-item:hover { transform:translateX(5px); background:var(--teal-faint); }
+
+.activity-icon {
+  width:44px; height:44px; border-radius:12px;
+  background:var(--teal);
+  display:flex; align-items:center; justify-content:center;
+  color:white; font-size:1rem;
+  flex-shrink:0;
+}
+
+.activity-content { flex:1; }
+.activity-title { font-size:0.95rem; font-weight:600; color:var(--ink); margin-bottom:4px; }
+.activity-time { font-size:0.8rem; color:var(--ink-3); }
+.activity-arrow { color:var(--ink-3); transition:transform 0.3s; }
+.activity-item:hover .activity-arrow { transform:translateX(5px); color:var(--teal); }
+
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(30px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+@media(max-width:1024px){
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  .main-grid { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
+}
+
+@media(max-width:768px){
+  nav { padding:0 20px; }
+  .nav-links { display:none; }
+  .dashboard-container { padding: 100px 20px 60px; }
+  .stats-row { grid-template-columns: 1fr; }
+  .welcome-title { font-size: 1.8rem; }
+}
+/* Feedback Modal */
+.feedback-modal-overlay {
+  position:fixed; top:0; left:0; right:0; bottom:0;
+  background:rgba(0,0,0,0.5); backdrop-filter:blur(4px);
+  z-index:999; display:none; align-items:center; justify-content:center;
+  opacity:0; transition:opacity 0.3s ease;
+}
+.feedback-modal-overlay.show { display:flex; opacity:1; }
+.feedback-modal {
+  background:var(--white); border-radius:20px; width:90%; max-width:440px;
+  padding:32px; box-shadow:var(--shadow-lg); text-align:center;
+  transform:translateY(20px); transition:transform 0.3s ease; position:relative;
+}
+.feedback-modal-overlay.show .feedback-modal { transform:translateY(0); }
+.feedback-close { position:absolute; top:16px; right:16px; background:none; border:none; font-size:1.2rem; color:var(--ink-3); cursor:pointer; }
+.feedback-title { font-size:1.4rem; font-weight:800; color:var(--ink); margin-bottom:8px; }
+.feedback-sub { font-size:0.9rem; color:var(--ink-3); margin-bottom:24px; line-height:1.5; }
+.feedback-stars { display:flex; justify-content:center; gap:8px; margin-bottom:20px; flex-direction:row-reverse; }
+.feedback-stars input { display:none; }
+.feedback-stars label { font-size:2.2rem; color:var(--stone-3); cursor:pointer; transition:color 0.2s; }
+.feedback-stars label:hover, .feedback-stars label:hover ~ label, .feedback-stars input:checked ~ label { color:var(--amber); }
+.feedback-comment { width:100%; border:2px solid var(--stone-3); border-radius:12px; padding:12px; font-family:inherit; font-size:0.9rem; resize:vertical; min-height:80px; margin-bottom:20px; background:transparent; color:var(--ink); }
+.feedback-comment:focus { outline:none; border-color:var(--teal); }
+.feedback-btns { display:flex; gap:12px; }
+.feedback-btns button { flex:1; }
+</style>
+<link rel="stylesheet" href="dark-mode.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="auth-guard.js"></script>
+<script src="questions-data.js"></script>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Imat<span>Path</span></a>
+  <div class="nav-links">
+    <a href="dashboard.html" class="nav-link active"><i class="fas fa-th-large"></i> Dashboard</a>
+    <a href="question-bank.html" class="nav-link"><i class="fas fa-layer-group"></i> Question Bank</a>
+    <a href="mock-exam.html" class="nav-link"><i class="fas fa-stopwatch"></i> Mock Exams</a>
+    <a href="roadmap.html" class="nav-link"><i class="fas fa-route"></i> Roadmap</a>
+    <a href="analytics.html" class="nav-link"><i class="fas fa-chart-line"></i> Analytics</a>
+  </div>
+  <div class="nav-right">
+    <div class="user-avatar" id="userAvatar">U</div>
+    <button class="btn-secondary" onclick="window.ImatAuth ? window.ImatAuth.signOut() : (localStorage.removeItem('imatpath_user'), window.location.href='auth.html')">Log out</button>
+  </div>
+</nav>
+
+<div class="dashboard-container">
+  <div class="welcome-section">
+    <h1 class="welcome-title">Welcome back, <span class="highlight" id="userName">User</span></h1>
+    <p class="welcome-sub">Your personalized IMAT preparation journey. Track your progress, practice with real questions, and ace the exam.</p>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card purple">
+      <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+      <div class="stat-value" id="questionsCompleted">0</div>
+      <div class="stat-label">Questions Completed</div>
+      <div class="stat-change positive"><i class="fas fa-arrow-up"></i> +12 this week</div>
+    </div>
+    <div class="stat-card green">
+      <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+      <div class="stat-value" id="mockExamsTaken">0</div>
+      <div class="stat-label">Mock Exams Taken</div>
+      <div class="stat-change positive"><i class="fas fa-arrow-up"></i> +2 this week</div>
+    </div>
+    <div class="stat-card orange">
+      <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
+      <div class="stat-value" id="accuracyRate">0<span>%</span></div>
+      <div class="stat-label">Accuracy Rate</div>
+      <div class="stat-change positive"><i class="fas fa-arrow-up"></i> +5% improvement</div>
+    </div>
+    <div class="stat-card blue">
+      <div class="stat-icon"><i class="fas fa-calendar"></i></div>
+      <div class="stat-value" id="daysRemaining">0</div>
+      <div class="stat-label">Days Until IMAT</div>
+      <div class="stat-change"><i class="fas fa-clock"></i> Keep going!</div>
+    </div>
+  </div>
+
+  <!-- XP & Streak Row -->
+  <div class="stats-row" id="xpRow" style="margin-bottom:40px;">
+    <!-- Streak Card -->
+    <div class="stat-card" style="background:linear-gradient(135deg,#0D9488,#0F766E);border:none;animation-delay:0.45s;">
+      <div class="stat-icon" style="background:rgba(255,255,255,0.15);color:white;font-size:1.4rem;">🔥</div>
+      <div class="stat-value" id="streakValue" style="color:white;">0</div>
+      <div class="stat-label" style="color:rgba(255,255,255,0.75);">Day Streak</div>
+      <div class="stat-change" style="color:rgba(255,255,255,0.9);" id="streakMsg"><i class="fas fa-fire"></i> Keep it up!</div>
+    </div>
+    <!-- Longest Streak -->
+    <div class="stat-card orange" style="animation-delay:0.5s;">
+      <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+      <div class="stat-value" id="longestStreakValue">0</div>
+      <div class="stat-label">Best Streak</div>
+      <div class="stat-change positive"><i class="fas fa-star"></i> Personal best</div>
+    </div>
+    <!-- Level Card -->
+    <div class="stat-card purple" style="animation-delay:0.55s;">
+      <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+      <div class="stat-value" id="xpLevel" style="font-size:2rem;">Lv.1</div>
+      <div class="stat-label">XP Level</div>
+      <div id="xpLevelBar" style="margin-top:10px;">
+        <div style="height:6px;background:var(--stone-2);border-radius:3px;overflow:hidden;">
+          <div id="xpLevelFill" style="height:100%;background:var(--teal);border-radius:3px;width:0%;transition:width 1.2s cubic-bezier(0.4,0,0.2,1);"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:4px;">
+          <span id="xpCurrent">0 XP</span><span id="xpToNext">100 to next</span>
+        </div>
+      </div>
+    </div>
+    <!-- Total XP Card -->
+    <div class="stat-card blue" style="animation-delay:0.6s;">
+      <div class="stat-icon"><i class="fas fa-star"></i></div>
+      <div class="stat-value" id="totalXp">0</div>
+      <div class="stat-label">Total XP</div>
+      <div class="stat-change positive"><i class="fas fa-arrow-up"></i> Keep earning!</div>
+    </div>
+  </div>
+
+    <div class="section-card">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Quick Actions</h2>
+          <p class="section-subtitle">Jump into your study session</p>
+        </div>
+      </div>
+      <div class="cards-grid">
+        <div class="action-card" onclick="openRoadmap()">
+          <div class="action-icon"><i class="fas fa-route"></i></div>
+          <div class="action-title">Study Roadmap</div>
+          <div class="action-desc">Your personalized week-by-week study plan</div>
+          <div class="action-meta"><i class="fas fa-arrow-right"></i> Open roadmap</div>
+        </div>
+        <div class="action-card" onclick="window.location.href='question-bank.html'">
+          <div class="action-icon"><i class="fas fa-layer-group"></i></div>
+          <div class="action-title">Question Bank</div>
+          <div class="action-desc">2,000+ IMAT-style questions</div>
+          <div class="action-meta"><i class="fas fa-arrow-right"></i> Start practicing</div>
+        </div>
+        <div class="action-card" onclick="window.location.href='mock-exam.html'">
+          <div class="action-icon"><i class="fas fa-stopwatch"></i></div>
+          <div class="action-title">Mock Exams</div>
+          <div class="action-desc">Full 100-minute timed simulations</div>
+          <div class="action-meta"><i class="fas fa-arrow-right"></i> Take exam</div>
+        </div>
+        <div class="action-card" onclick="window.location.href='analytics.html'">
+          <div class="action-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="action-title">Analytics</div>
+          <div class="action-desc">Performance tracking & insights</div>
+          <div class="action-meta"><i class="fas fa-arrow-right"></i> View stats</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Progress</h2>
+          <p class="section-subtitle">Your journey to IMAT 2026</p>
+        </div>
+      </div>
+      <div class="progress-card">
+        <div class="progress-header">
+          <div class="progress-title">Overall Progress</div>
+          <div class="progress-value" id="progressPercent">0%</div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-meta">
+          <span>Started</span>
+          <span id="currentPlan">Free Plan</span>
+        </div>
+      </div>
+      <div class="activity-list" id="activityList">
+        <div style="padding: 20px; text-align: center; color: var(--ink-3); font-size: 0.9rem;">Loading activities...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="xp-system.js"></script>
+<script>
+function checkAccess() {
+  const user = JSON.parse(localStorage.getItem('imatpath_user'));
+  if (!user) {
+    const defaultUser = { firstName: 'Guest', planSelected: true };
+    localStorage.setItem('imatpath_user', JSON.stringify(defaultUser));
+    return defaultUser;
+  }
+  return user;
+}
+
+function logout() {
+  localStorage.removeItem('imatpath_user');
+  window.location.href = 'index.html';
+}
+
+function updateDashboard() {
+  const user = checkAccess();
+  if (!user) return;
+
+  document.getElementById('userName').textContent = user.firstName || 'User';
+  document.getElementById('userAvatar').textContent = (user.firstName || 'U').charAt(0).toUpperCase();
+
+  const planDisplay = user.plan === 'monthly' ? 'Pro Plan' : 'Free Plan';
+  document.getElementById('currentPlan').textContent = planDisplay;
+
+  const imatDate = new Date('2026-09-15');
+  const today = new Date();
+  const daysLeft = Math.ceil((imatDate - today) / (1000 * 60 * 60 * 24));
+  document.getElementById('daysRemaining').textContent = daysLeft;
+
+  const totalDays = 365;
+  const daysPassed = totalDays - daysLeft;
+  const progress = Math.min(100, Math.max(0, (daysPassed / totalDays) * 100));
+  
+  document.getElementById('progressPercent').textContent = Math.round(progress) + '%';
+  setTimeout(() => {
+    document.getElementById('progressFill').style.width = progress + '%';
+  }, 300);
+
+  const qbState = localStorage.getItem('imatpath_qb');
+  if (qbState) {
+    const qb = JSON.parse(qbState);
+    let totalRevealed = Object.keys(qb.revealed || {}).length;
+    document.getElementById('questionsCompleted').textContent = totalRevealed;
+    
+    let correctCount = parseInt(localStorage.getItem('imatpath_qb_correct') || '0');
+    if (totalRevealed > 0) {
+      const accuracy = Math.round((correctCount / totalRevealed) * 100);
+      document.getElementById('accuracyRate').innerHTML = accuracy + '<span>%</span>';
+    }
+
+    // Find weak subject
+    window.weakSubject = null;
+    window.lowestAcc = 100;
+    if (typeof subjects !== 'undefined') {
+      subjects.forEach(sub => {
+        let total = 0, correct = 0;
+        sub.questions.forEach((q, i) => {
+          const k = sub.id + '-' + i;
+          if (qb.revealed && qb.revealed[k]) {
+            total++;
+            if (qb.answers && qb.answers[k] === q.correct) correct++;
+          }
+        });
+        if (total >= 5) {
+          const acc = (correct / total) * 100;
+          if (acc < window.lowestAcc) { window.lowestAcc = acc; window.weakSubject = sub; }
+        }
+      });
+    }
+  }
+
+  const mockState = localStorage.getItem('imatpath_mock');
+  if (mockState) {
+    const mock = JSON.parse(mockState);
+    const examsTaken = Object.keys(mock.results || {}).length;
+    document.getElementById('mockExamsTaken').textContent = examsTaken;
+  }
+}
+
+function openRoadmap() {
+  window.location.href = 'roadmap.html';
+}
+
+async function loadDashboardExtras() {
+  let recentsHtml = '';
+  if (window.ImatAuth) {
+    const mocks = await window.ImatAuth.loadMockResults();
+    if (mocks && mocks.length > 0) {
+      const recent = mocks.slice(0, 2);
+      recent.forEach(m => {
+        const date = new Date(m.taken_at).toLocaleDateString();
+        recentsHtml += `<div class="activity-item" onclick="window.location.href='mock-exam.html'">
+          <div class="activity-icon" style="background:var(--teal-faint);color:var(--teal);"><i class="fas fa-file-alt"></i></div>
+          <div class="activity-content">
+            <div class="activity-title">Mock Exam ${m.exam_id}</div>
+            <div class="activity-time">Score: ${m.score} &middot; ${date}</div>
+          </div>
+          <i class="fas fa-chevron-right activity-arrow"></i>
+        </div>`;
+      });
+    }
+  }
+  
+  if (!recentsHtml) {
+    recentsHtml = `<div class="activity-item" onclick="window.location.href='mock-exam.html'">
+          <div class="activity-icon"><i class="fas fa-play"></i></div>
+          <div class="activity-content">
+            <div class="activity-title">Start a mock exam</div>
+            <div class="activity-time">Test your knowledge under time pressure</div>
+          </div>
+          <i class="fas fa-chevron-right activity-arrow"></i>
+        </div>`;
+  }
+  
+  let focusHtml = '';
+  if (window.weakSubject) {
+    focusHtml = `<div class="activity-item" onclick="window.location.href='question-bank.html'">
+          <div class="activity-icon" style="background:var(--red-faint);color:var(--red);"><i class="fas fa-bullseye"></i></div>
+          <div class="activity-content">
+            <div class="activity-title">Recommended Focus: ${window.weakSubject.name}</div>
+            <div class="activity-time">Accuracy is low (${Math.round(window.lowestAcc)}%). Review recommended.</div>
+          </div>
+          <i class="fas fa-chevron-right activity-arrow"></i>
+        </div>`;
+  } else {
+    focusHtml = `<div class="activity-item" onclick="window.location.href='question-bank.html'">
+          <div class="activity-icon"><i class="fas fa-book-open"></i></div>
+          <div class="activity-content">
+            <div class="activity-title">Continue practicing</div>
+            <div class="activity-time">Pick up where you left off</div>
+          </div>
+          <i class="fas fa-chevron-right activity-arrow"></i>
+        </div>`;
+  }
+  
+  document.getElementById('activityList').innerHTML = focusHtml + recentsHtml;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  updateDashboard();
+  loadDashboardExtras();
+  // Load XP data into dashboard
+  if (typeof XP !== 'undefined') {
+    const xpState = XP.getState();
+    document.getElementById('streakValue').textContent = xpState.streak;
+    document.getElementById('longestStreakValue').textContent = xpState.longestStreak;
+    document.getElementById('totalXp').textContent = xpState.xp.toLocaleString();
+
+    const lvl = XP.calcLevel(xpState.xp);
+    const curLvlXp = XP.xpForLevel(lvl);
+    const nextLvlXp = XP.xpForLevel(lvl + 1);
+    const pct = Math.min(100, ((xpState.xp - curLvlXp) / (nextLvlXp - curLvlXp)) * 100);
+
+    document.getElementById('xpLevel').textContent = 'Lv.' + lvl;
+    document.getElementById('xpCurrent').textContent = xpState.xp.toLocaleString() + ' XP';
+    document.getElementById('xpToNext').textContent = (nextLvlXp - xpState.xp) + ' to next';
+
+    // Streak message
+    if (xpState.streak >= 7) document.getElementById('streakMsg').innerHTML = '<i class="fas fa-fire"></i> On fire!';
+    else if (xpState.streak >= 3) document.getElementById('streakMsg').innerHTML = '<i class="fas fa-fire"></i> Great streak!';
+
+    setTimeout(() => {
+      document.getElementById('xpLevelFill').style.width = pct + '%';
+    }, 400);
+  }
+
+  // Feedback Trigger Logic
+  setTimeout(() => {
+    if (!window.ImatAuth) return;
+    window.ImatAuth.getUser().then(user => {
+      if (!user) return;
+      const firstLoginKey = 'imatpath_first_login_' + user.id;
+      const feedbackKey = 'imatpath_feedback_given_' + user.id;
+      
+      const firstLogin = localStorage.getItem(firstLoginKey);
+      const hasGiven = localStorage.getItem(feedbackKey);
+      
+      if (firstLogin && !hasGiven) {
+        // 60 minutes = 60 * 60 * 1000 = 3600000 ms
+        const elapsed = Date.now() - parseInt(firstLogin);
+        if (elapsed > 3600000) {
+          document.getElementById('feedbackModal').classList.add('show');
+        }
+      }
+    });
+  }, 2000); // Check 2 seconds after dashboard load
+
+});
+
+function closeFeedback() {
+  document.getElementById('feedbackModal').classList.remove('show');
+}
+async function submitFeedbackForm() {
+  const ratingInput = document.querySelector('input[name="rating"]:checked');
+  const comment = document.getElementById('feedbackComment').value.trim();
+  
+  if (!ratingInput) {
+    alert('Please select a star rating first!');
+    return;
+  }
+  
+  const rating = parseInt(ratingInput.value);
+  if (window.ImatAuth) {
+    await window.ImatAuth.submitFeedback(rating, comment);
+    window.ImatAuth.getUser().then(user => {
+      if(user) localStorage.setItem('imatpath_feedback_given_' + user.id, 'true');
+    });
+  }
+  closeFeedback();
+  
+  // Show thank you toast
+  const t = document.createElement('div');
+  t.innerHTML = '<div style="position:fixed;bottom:30px;right:30px;background:var(--teal);color:white;padding:14px 22px;border-radius:12px;z-index:9999;box-shadow:0 10px 20px rgba(0,0,0,0.2);animation:fadeInUp 0.3s ease;"><i class="fas fa-heart"></i> Thank you for your feedback!</div>';
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 4000);
+}
+</script>
+<script src="dark-mode.js"></script>
+
+<div class="feedback-modal-overlay" id="feedbackModal">
+  <div class="feedback-modal">
+    <button class="feedback-close" onclick="closeFeedback()"><i class="fas fa-times"></i></button>
+    <div class="feedback-title">How is your experience?</div>
+    <div class="feedback-sub">You've been using ImatPath for a while! We'd love to hear your thoughts to help us improve.</div>
+    <div class="feedback-stars">
+      <input type="radio" id="star5" name="rating" value="5" /><label for="star5" class="fas fa-star"></label>
+      <input type="radio" id="star4" name="rating" value="4" /><label for="star4" class="fas fa-star"></label>
+      <input type="radio" id="star3" name="rating" value="3" /><label for="star3" class="fas fa-star"></label>
+      <input type="radio" id="star2" name="rating" value="2" /><label for="star2" class="fas fa-star"></label>
+      <input type="radio" id="star1" name="rating" value="1" /><label for="star1" class="fas fa-star"></label>
+    </div>
+    <textarea id="feedbackComment" class="feedback-comment" placeholder="Tell us what you like or what we can do better..."></textarea>
+    <div class="feedback-btns">
+      <button class="btn-secondary" onclick="closeFeedback()">Later</button>
+      <button class="btn-primary" onclick="submitFeedbackForm()">Submit</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

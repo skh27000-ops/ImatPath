@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mock Exams — ImatPath</title>
+<meta name="description" content="Practice with full-length IMAT mock exams using official scoring. 60 questions, 100 minutes, real exam conditions.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --stone: #F4F3F0; --stone-2: #EDECEA; --stone-3: #E0DEDB; --stone-4: #C8C5C1;
+  --ink: #1A1916; --ink-2: #3D3A36; --ink-3: #5A5750; --ink-4: #8A8780;
+  --teal: #0D9488; --teal-2: #0F766E; --teal-pale:#CCFBF1; --teal-faint:#F0FDFB;
+  --white: #FFFFFF; --red: #DC2626; --red-faint:#FEF2F2; --amber: #B45309; --amber-pale:#FEF3C7;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--stone);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  height:70px; display:flex; align-items:center; justify-content:space-between;
+  padding:0 40px;
+  background:rgba(244,243,240,0.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--stone-3);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+}
+.logo { font-size:1.4rem; font-weight:800; letter-spacing:-0.5px; color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:10px; }
+.logo span { color:var(--teal); }
+.logo-icon { width:40px; height:40px; background:var(--teal); border-radius:12px; display:flex; align-items:center; justify-content:center; color:white; font-size:1.1rem; }
+
+.nav-links { display:flex; gap:8px; align-items:center; }
+.nav-link { padding:10px 20px; border-radius:10px; text-decoration:none; color:var(--ink-3); font-weight:500; font-size:0.9rem; transition:all 0.3s ease; }
+.nav-link:hover, .nav-link.active { background:var(--teal); color:white; transform:translateY(-2px); }
+.nav-link i { margin-right:8px; }
+
+.nav-right { display:flex; gap:12px; align-items:center; }
+.user-avatar { width:42px; height:42px; border-radius:50%; background:var(--teal); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:1rem; cursor:pointer; transition:transform 0.3s; }
+.user-avatar:hover { transform:scale(1.1); }
+.btn-ghost{padding:12px 24px;border-radius:12px;border:2px solid var(--stone-3);background:var(--white);color:var(--ink-2);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.3s ease;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px);}
+.btn-teal{padding:12px 24px;border-radius:12px;border:none;background:var(--teal);color:var(--white);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;transition:all 0.3s ease;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);}
+.btn-teal:hover{background:var(--teal-2);transform:translateY(-2px);box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);}
+.btn-teal:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:none;}
+.hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(var(--stone-3) 1px,transparent 1px),linear-gradient(90deg,var(--stone-3) 1px,transparent 1px);background-size:48px 48px;opacity:0.4;mask-image:radial-gradient(ellipse 70% 60% at 50% 50%,black 20%,transparent 100%);pointer-events:none;}
+.hero-glow{position:absolute;width:600px;height:500px;top:10%;left:50%;transform:translateX(-50%);background:radial-gradient(circle,rgba(13,148,136,0.08) 0%,rgba(13,148,136,0.03) 40%,transparent 70%);pointer-events:none;filter:blur(20px);}
+.sec-label{display:flex;align-items:center;gap:10px;font-size:0.72rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--teal);margin-bottom:14px;}
+.sec-label::before{content:'';display:block;width:18px;height:2px;background:var(--teal);border-radius:1px;}
+.sec-title{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800;letter-spacing:-1.2px;line-height:1.1;color:var(--ink);margin-bottom:14px;}
+.sec-sub{font-size:0.95rem;color:var(--ink-3);line-height:1.7;max-width:480px;font-weight:400;}
+.exam-setup{max-width:700px;margin:0 auto;padding:120px 40px 60px;min-height:100vh;position:relative;overflow:hidden;}
+.exam-card{background:var(--white);border:1px solid var(--stone-3);border-radius:20px;padding:32px;margin-bottom:24px;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);transition:all 0.3s ease;}
+.exam-card-title{font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:20px;letter-spacing:-0.3px;}
+.exam-option{display:flex;align-items:center;gap:14px;padding:16px 20px;border:2px solid var(--stone-3);border-radius:14px;background:transparent;cursor:pointer;transition:all 0.3s ease;font-size:0.95rem;color:var(--ink-2);font-weight:500;text-align:left;font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:12px;}
+.exam-option:hover{border-color:var(--teal);background:var(--teal-faint);transform:translateX(4px);}
+.exam-option.selected{border-color:var(--teal);background:var(--teal-faint);color:var(--teal-2);}
+.exam-option-radio{width:24px;height:24px;border-radius:50%;border:2px solid var(--stone-3);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s ease;}
+.exam-option.selected .exam-option-radio{border-color:var(--teal);background:var(--teal);}
+.exam-option.selected .exam-option-radio::after{content:'';width:8px;height:8px;border-radius:50%;background:white;}
+.timer-display{font-size:3rem;font-weight:800;color:var(--teal);letter-spacing:-2px;text-align:center;margin-bottom:24px;}
+.timer-warning{color:var(--red);animation:pulse 1s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.5;}}
+.q-card{background:var(--white);border:1px solid var(--stone-3);border-radius:20px;padding:32px;margin-bottom:24px;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);transition:all 0.3s ease;}
+.q-passage{background:var(--stone-2);border:1px solid var(--stone-3);border-radius:14px;padding:20px 24px;margin-bottom:24px;font-size:0.95rem;line-height:1.8;color:var(--ink-2);}
+.q-text{font-size:1.05rem;font-weight:600;color:var(--ink);line-height:1.6;margin-bottom:24px;letter-spacing:-0.2px;}
+.q-opts{display:flex;flex-direction:column;gap:8px;}
+.q-opt{display:flex;align-items:center;gap:14px;padding:15px 20px;border:2px solid var(--stone-3);border-radius:14px;background:transparent;cursor:pointer;transition:all 0.3s ease;font-size:0.95rem;color:var(--ink-2);font-weight:500;text-align:left;font-family:'Plus Jakarta Sans',sans-serif;}
+.q-opt:hover{border-color:rgba(13,148,136,0.4);background:var(--teal-faint);transform:translateX(4px);}
+.q-opt.selected{border-color:var(--teal);background:var(--teal-faint);color:var(--teal-2);}
+.q-opt-letter{width:32px;height:32px;border-radius:10px;background:var(--stone-2);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:var(--ink-3);flex-shrink:0;transition:all 0.3s ease;}
+.q-opt.selected .q-opt-letter{background:var(--teal);color:white;}
+.q-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;}
+.q-nav-btn{padding:12px 24px;border-radius:12px;border:2px solid var(--stone-3);background:transparent;color:var(--ink-3);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;gap:8px;}
+.q-nav-btn:hover{border-color:var(--ink-3);color:var(--ink-2);transform:translateY(-2px);}
+.q-nav-btn.primary{border:none;background:var(--teal);color:white;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);}
+.q-nav-btn.primary:hover{background:var(--teal-2);box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);}
+.q-nav-btn:disabled{opacity:0.35;cursor:not-allowed;pointer-events:none;}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:32px;}
+.result-card{background:var(--white);border:1px solid var(--stone-3);border-radius:20px;padding:28px;text-align:center;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);transition:all 0.3s ease;}
+.result-value{font-size:2.5rem;font-weight:800;letter-spacing:-2px;line-height:1;}
+.result-label{font-size:0.85rem;color:var(--ink-3);margin-top:6px;font-weight:500;}
+.breakdown-card{background:var(--white);border:1px solid var(--stone-3);border-radius:20px;padding:28px;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);}
+.breakdown-title{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:20px;letter-spacing:-0.3px;}
+.breakdown-row{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:12px;cursor:pointer;transition:all 0.3s ease;}
+.breakdown-row:hover{background:var(--stone-2);transform:translateX(4px);}
+.breakdown-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;flex-shrink:0;}
+.breakdown-icon.ok{background:var(--teal-pale);color:var(--teal);}
+.breakdown-icon.fail{background:var(--red-faint);color:var(--red);}
+.breakdown-icon.skip{background:var(--stone-2);color:var(--ink-3);}
+.breakdown-q{font-size:0.9rem;font-weight:600;color:var(--ink-2);min-width:60px;}
+.breakdown-label{font-size:0.9rem;color:var(--ink-3);flex:1;}
+.breakdown-arrow{font-size:0.7rem;color:var(--ink-3);transition:transform 0.3s ease;}
+footer{background:var(--stone);border-top:1px solid var(--stone-3);padding:28px 56px;display:flex;align-items:center;justify-content:space-between;}
+.footer-logo{font-size:1rem;font-weight:800;letter-spacing:-0.3px;color:var(--ink);}
+.footer-logo span{color:var(--teal);}
+.toast{position:fixed;bottom:30px;right:30px;padding:14px 22px;border-radius:12px;background:var(--white);border:1px solid var(--stone-3);box-shadow:0 12px 40px rgba(0,0,0,0.1);font-size:0.85rem;font-weight:500;color:var(--ink);display:flex;align-items:center;gap:10px;transform:translateY(100px);opacity:0;transition:all .35s cubic-bezier(0.22,1,0.36,1);z-index:200;}
+.toast.show{transform:translateY(0);opacity:1;}
+.toast i{color:var(--teal);}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.mock-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+.mock-card { background: var(--white); border: 1px solid var(--stone-3); border-radius: 20px; padding: 28px; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.mock-card:hover { border-color: var(--teal); transform: translateY(-5px); box-shadow: 0 12px 20px -8px rgba(13,148,136,0.15); }
+.mock-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+.mock-card:hover::before { transform: scaleX(1); }
+.mock-icon { width: 48px; height: 48px; border-radius: 14px; background: var(--teal-faint); color: var(--teal); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 16px; transition: transform 0.3s ease; }
+.mock-card:hover .mock-icon { transform: scale(1.1) rotate(5deg); }
+.mock-title { font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.3px; }
+.mock-desc { font-size: 0.85rem; color: var(--ink-3); line-height: 1.5; margin-bottom: 16px; }
+.mock-meta { font-size: 0.8rem; font-weight: 600; color: var(--teal); display: flex; align-items: center; gap: 6px; }
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.stat-card{background:var(--white);border-radius:20px;padding:28px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);transition:all 0.3s ease;position:relative;overflow:hidden;animation:fadeInUp 0.6s ease backwards;}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(135deg, #0D9488 0%, #0F766E 100%);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;}
+.stat-card:hover::before{transform:scaleX(1);}
+.stat-card:hover{transform:translateY(-5px);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);}
+.stat-card.purple::before{background:var(--teal);}
+.stat-card.green::before{background:var(--teal-2);}
+.stat-card.orange::before{background:var(--amber);}
+.stat-card.blue::before{background:var(--teal);}
+.stat-icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px;}
+.stat-card.purple .stat-icon{background:var(--teal-faint);color:var(--teal);}
+.stat-card.green .stat-icon{background:var(--teal-pale);color:var(--teal-2);}
+.stat-card.orange .stat-icon{background:var(--amber-pale);color:var(--amber);}
+.stat-card.blue .stat-icon{background:var(--teal-faint);color:var(--teal);}
+.stat-value{font-size:2.5rem;font-weight:800;color:var(--ink);letter-spacing:-2px;margin-bottom:4px;line-height:1;}
+.stat-label{font-size:0.85rem;color:var(--ink-3);font-weight:500;letter-spacing:0.5px;text-transform:uppercase;}
+@media(max-width:1024px){.mock-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:900px){
+  nav{padding:0 20px;}
+  .exam-setup{padding:110px 20px 60px;}
+  .results-grid{grid-template-columns:1fr;}
+  footer{flex-direction:column;gap:12px;text-align:center;padding:24px 20px;}
+}
+@media(max-width:768px){.mock-grid{grid-template-columns:1fr;}.stats-row{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:500px){.stats-row{grid-template-columns:1fr;}}
+</style>
+<link rel="stylesheet" href="dark-mode.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="auth-guard.js"></script>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="dashboard.html">
+    <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+    Imat<span>Path</span>
+  </a>
+  <div class="nav-links">
+    <a href="dashboard.html" class="nav-link"><i class="fas fa-th-large"></i> Dashboard</a>
+    <a href="question-bank.html" class="nav-link"><i class="fas fa-layer-group"></i> Question Bank</a>
+    <a href="mock-exam.html" class="nav-link active"><i class="fas fa-stopwatch"></i> Mock Exams</a>
+    <a href="roadmap.html" class="nav-link"><i class="fas fa-route"></i> Roadmap</a>
+    <a href="analytics.html" class="nav-link"><i class="fas fa-chart-line"></i> Analytics</a>
+  </div>
+  <div class="nav-right">
+    <div class="user-avatar" id="userAvatar">U</div>
+  </div>
+</nav>
+
+<div id="app"></div>
+
+<footer>
+  <div class="footer-logo">Imat<span>Path</span></div>
+  <div style="font-size:0.78rem;color:var(--ink-3);">&copy; 2026 ImatPath &middot; Mock Exams</div>
+</footer>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastText"></span></div>
+
+<script src="questions-data.js"></script>
+<script>
+// Debug: Check if subjects loaded
+console.log('Subjects loaded:', typeof subjects, subjects ? subjects.length : 'undefined');
+if(!subjects || !Array.isArray(subjects) || subjects.length===0){
+  console.error('Subjects array not loaded! Check questions-data.js');
+  document.getElementById('app').innerHTML='<div style="padding:80px 56px;text-align:center;"><h2>Error loading questions</h2><p>Could not load question bank. Please ensure questions-data.js is in the same folder.</p></div>';
+}
+// Subjects loaded from questions-data.js
+
+// IMAT scoring constants
+const IMAT_CORRECT = 1.5;
+const IMAT_WRONG = -0.4;
+const IMAT_QUESTIONS = 60;
+
+// Exam configuration
+const EXAM_DURATION_MINUTES = 100;
+const QUESTIONS_PER_EXAM = 60;
+
+// Fixed question distribution per subject (standard IMAT structure: 60 Qs total)
+const QUESTION_DISTRIBUTION = {
+  'critical-thinking': 4,
+  'problem-solving': 5,
+  'data-analysis': 4,
+  'biology': 18,
+  'chemistry': 12,
+  'physics': 8,
+  'maths': 9
+};
+
+let state = {view:'select-exam', selectedExamId:null, timer:null, timeRemaining:EXAM_DURATION_MINUTES*60, currentQuestion:0, answers:{}, examQuestions:[]};
+
+function loadState(){const saved=localStorage.getItem('imatpath_mock');if(saved){const parsed=JSON.parse(saved);state={...state,...parsed};}if(state.view==='exam'||state.view==='results'){state.view='select-exam';state.selectedExamId=null;state.answers={};state.examQuestions=[];state.currentQuestion=0;state.timeRemaining=EXAM_DURATION_MINUTES*60;}}
+function saveState(){localStorage.setItem('imatpath_mock',JSON.stringify(state));}
+
+loadState();
+
+function showToast(m){const t=document.getElementById('toast');document.getElementById('toastText').textContent=m;t.classList.add('show');clearTimeout(t._tid);t._tid=setTimeout(()=>t.classList.remove('show'),3000);}
+
+function shuffleArray(array){for(let i=array.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[array[i],array[j]]=[array[j],array[i]];}return array;}
+
+function selectExam(examId){state.selectedExamId=examId;state.view='setup';state.answers={};state.examQuestions=[];state.currentQuestion=0;state.timeRemaining=EXAM_DURATION_MINUTES*60;saveState();render();}
+
+function startExam(){
+  if(!confirm('WARNING: Once you start this exam, you should not stop it. The timer will run continuously. Are you sure you want to start?')) return;
+  let examQuestions = [];
+  subjects.forEach(s => {
+    const count = QUESTION_DISTRIBUTION[s.id] || 0;
+    if (count > 0 && s.questions && s.questions.length > 0) {
+      // Randomly sample 'count' questions from the full pool
+      const pool = s.questions.map(q => ({...q, subjectId: s.id, subjectName: s.name, section: s.section}));
+      const shuffled = shuffleArray([...pool]);
+      const selected = shuffled.slice(0, Math.min(count, shuffled.length));
+      examQuestions.push(...selected);
+    }
+  });
+  if (examQuestions.length === 0) {
+    alert('No questions available. Please check the question bank.');
+    return;
+  }
+  examQuestions = shuffleArray(examQuestions);
+  state.examQuestions = examQuestions;
+  state.view = 'exam';
+  state.timeRemaining = EXAM_DURATION_MINUTES * 60;
+  state.currentQuestion = 0;
+  state.answers = {};
+  saveState();
+  startTimer();
+  render();
+}
+
+function startTimer(){if(state.timer)clearInterval(state.timer);state.timer=setInterval(()=>{state.timeRemaining--;if(state.timeRemaining<=0){clearInterval(state.timer);submitExam();}saveState();render();},1000);}
+
+function formatTime(seconds){const mins=Math.floor(seconds/60);const secs=seconds%60;return`${mins.toString().padStart(2,'0')}:${secs.toString().padStart(2,'0')}`;}
+
+function selectAnswer(questionIndex,answerIndex){state.answers[questionIndex]=answerIndex;saveState();render();}
+
+function nextQuestion(){if(state.currentQuestion<state.examQuestions.length-1){state.currentQuestion++;saveState();render();}}
+
+function prevQuestion(){if(state.currentQuestion>0){state.currentQuestion--;saveState();render();}}
+
+function jumpTo(index){state.currentQuestion=index;saveState();render();}
+
+function submitExam(){
+  clearInterval(state.timer);
+  state.view='results';
+  saveState();
+  const score = calculateScore();
+  if (window.ImatAuth) {
+    window.ImatAuth.saveMockResult(state.selectedExamId, score);
+  }
+  // Award XP for completing mock exam
+  if(typeof XP !== 'undefined') setTimeout(()=>XP.award('mock'), 600);
+  render();
+}
+
+function calculateScore(){let correct=0,wrong=0,unanswered=0,score=0;state.examQuestions.forEach((q,i)=>{const answer=state.answers[i];if(answer===undefined){unanswered++;}else if(answer===q.correct){correct++;score+=IMAT_CORRECT;}else{wrong++;score+=IMAT_WRONG;}});return{correct,wrong,unanswered,score:score.toFixed(1)};}
+
+function goBack(){clearInterval(state.timer);state.view='select-exam';saveState();render();}
+
+function quitExam(){if(confirm('Are you sure you want to quit this exam? Your progress will be lost.')){clearInterval(state.timer);state.selectedExamId=null;state.view='select-exam';state.answers={};state.examQuestions=[];state.currentQuestion=0;saveState();render();}}
+
+function startReview(){ state.view='review'; state.currentQuestion=0; saveState(); render(); }
+function restartExam(){if(confirm('Are you sure you want to restart this exam? Your current progress will be lost.')){state.answers={};state.currentQuestion=0;state.timeRemaining=EXAM_DURATION_MINUTES*60;saveState();render();}}
+
+function render(){console.log('Rendering view:', state.view);const app=document.getElementById('app');if(!app){console.error('App div not found!');return;}if(state.view==='select-exam'){app.innerHTML=renderSelectExam();}else if(state.view==='setup'){app.innerHTML=renderSetup();}else if(state.view==='exam'){app.innerHTML=renderExam();}else if(state.view==='results'){app.innerHTML=renderResults();}else if(state.view==='review'){app.innerHTML=renderReview();}window.scrollTo({top:0,behavior:'smooth'});}
+
+function renderSelectExam(){let html=`
+<section class="exam-setup" style="position:relative;overflow:hidden;padding-top:120px;">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div style="margin-bottom: 30px; animation: fadeInUp 0.6s ease;">
+    <a href="dashboard.html" class="btn-teal" style="font-size: 1.05rem; padding: 14px 28px; box-shadow: 0 10px 15px -3px rgba(13,148,136,0.2); display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Go back to dashboard</a>
+  </div>
+  <div class="sec-label" style="justify-content:center;animation:fadeInUp 0.6s ease;">Practice exams</div>
+  <h1 class="sec-title" style="text-align:center;margin:0 auto 14px;animation:fadeInUp 0.6s ease 0.1s backwards;">Mock Exams<span style="color:var(--teal);">.</span></h1>
+  <p class="sec-sub" style="text-align:center;margin:0 auto 40px;animation:fadeInUp 0.6s ease 0.2s backwards;">Each exam has 60 questions and 100 minutes. 10 unique exams available.</p>
+  <div class="mock-grid">`;
+  for(let i=1; i<=10; i++) {
+    html += `
+    <div class="mock-card" onclick="selectExam(${i})" style="animation:fadeInUp 0.6s ease ${0.2 + (i*0.05)}s backwards;">
+      <div class="mock-icon"><i class="fas fa-stopwatch"></i></div>
+      <div class="mock-title">Mock Exam ${i}</div>
+      <div class="mock-desc">Full 100-minute simulation with 60 IMAT-style questions.</div>
+      <div class="mock-meta">Start Exam <i class="fas fa-arrow-right"></i></div>
+    </div>`;
+  }
+  html += `</div>
+</section>`;return html;}
+
+function renderSetup(){const hasProgress=state.examQuestions.length>0;let html=`
+<section class="exam-setup" style="position:relative;overflow:hidden;padding-top:120px;">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  
+  <div style="max-width: 600px; margin: 0 auto;">
+    <div style="display:flex; gap:12px; margin-bottom:24px; animation:fadeInUp 0.6s ease;">
+      <a href="dashboard.html" class="btn-teal" style="font-size: 1rem; padding: 12px 24px; box-shadow: 0 10px 15px -3px rgba(13,148,136,0.2); display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Go back to dashboard</a>
+      <button class="btn-ghost" onclick="state.selectedExamId=null;state.view='select-exam';saveState();render();" style="font-size: 1rem; padding: 12px 24px;"><i class="fas fa-arrow-left"></i> Back to Exams</button>
+    </div>
+    
+    <div class="sec-label" style="animation:fadeInUp 0.6s ease 0.1s backwards;">Exam Setup</div>
+    <h1 class="sec-title" style="margin-bottom:14px;animation:fadeInUp 0.6s ease 0.2s backwards;">Mock Exam ${state.selectedExamId}<span style="color:var(--teal);">.</span></h1>
+    <p class="sec-sub" style="margin-bottom:32px;animation:fadeInUp 0.6s ease 0.3s backwards;">Simulate the real IMAT with ${QUESTIONS_PER_EXAM} questions across all sections. ${EXAM_DURATION_MINUTES} minutes to complete.</p>
+    
+    ${hasProgress?`<div class="exam-card" style="border:2px solid var(--teal);background:var(--teal-faint);animation:fadeInUp 0.6s ease 0.4s backwards;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);color:white;display:flex;align-items:center;justify-content:center;font-size:1.2rem;"><i class="fas fa-play"></i></div>
+        <div class="exam-card-title" style="margin:0;color:var(--ink);">Exam in Progress</div>
+      </div>
+      <div style="font-size:0.9rem;color:var(--ink-2);margin-bottom:20px;">
+        <div style="margin-bottom:8px;display:flex;justify-content:space-between;"><span><strong>Progress:</strong></span> <span>${Object.keys(state.answers).length}/${state.examQuestions.length} answered</span></div>
+        <div style="display:flex;justify-content:space-between;"><span><strong>Time remaining:</strong></span> <span style="color:var(--teal);font-weight:700;">${formatTime(state.timeRemaining)}</span></div>
+      </div>
+      <div style="display:flex;gap:12px;">
+        <button class="btn-teal" onclick="state.view='exam';saveState();render();" style="flex:1;padding:14px;font-size:1rem;"><i class="fas fa-play"></i> Resume Exam</button>
+        <button class="btn-ghost" onclick="restartExam()" style="color:var(--red);border-color:var(--red-faint);"><i class="fas fa-rotate-right"></i> Restart</button>
+      </div>
+    </div>`:''}
+    
+    <div class="exam-card" style="animation:fadeInUp 0.6s ease 0.5s backwards;">
+      <div class="exam-card-title"><i class="fas fa-sliders" style="color:var(--teal);margin-right:8px;"></i> Exam Details</div>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:0.95rem;color:var(--ink-2);">
+        <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--stone-3);"><span><strong>Exam:</strong></span> <span>Mock Exam ${state.selectedExamId}</span></div>
+        <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--stone-3);"><span><strong>Duration:</strong></span> <span>${EXAM_DURATION_MINUTES} minutes</span></div>
+        <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--stone-3);"><span><strong>Questions:</strong></span> <span>${QUESTIONS_PER_EXAM} (fixed distribution)</span></div>
+        <div style="display:flex;justify-content:space-between;"><span><strong>Scoring:</strong></span> <span><span style="color:var(--teal);font-weight:600;">+${IMAT_CORRECT}</span> / <span style="color:var(--red);font-weight:600;">${IMAT_WRONG}</span> / 0</span></div>
+      </div>
+    </div>
+    
+    <button class="btn-teal" onclick="startExam()" style="width:100%;padding:16px;font-size:1.05rem;animation:fadeInUp 0.6s ease 0.6s backwards;box-shadow:var(--shadow-lg);">${hasProgress?'Start New Exam':'Start Mock Exam '+state.selectedExamId}</button>
+  </div>
+</section>`;return html;}
+
+function renderExam(){const q=state.examQuestions[state.currentQuestion];const answer=state.answers[state.currentQuestion];const isWarning=state.timeRemaining<300;const L=['A','B','C','D','E'];
+// Calculate section-based question number
+let sectionQNum=1;
+for(let i=0;i<state.currentQuestion;i++){if(state.examQuestions[i].section===q.section)sectionQNum++;}
+let html=`
+<section style="padding:100px 56px 60px;min-height:100vh;background:var(--stone-2);"><div style="max-width:800px;margin:0 auto;">
+  <div style="background:var(--white);border:1px solid var(--stone-3);border-radius:20px;padding:24px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:center;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+    <div>
+      <div style="font-size:0.8rem;color:var(--ink-3);font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;">Mock Exam ${state.selectedExamId}</div>
+      <div style="display:flex;gap:16px;font-size:0.9rem;font-weight:600;">
+        <span style="color:var(--teal);"><i class="fas fa-check-circle"></i> ${Object.keys(state.answers).length}/${state.examQuestions.length} answered</span>
+      </div>
+    </div>
+    <div class="timer-display${isWarning?' timer-warning':''}" style="margin:0;font-size:2rem;"><i class="fas fa-clock" style="font-size:1.2rem;margin-right:8px;vertical-align:middle;"></i>${formatTime(state.timeRemaining)}</div>
+  </div>
+  
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="font-size:0.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-3);">${q.section}</div>
+      <div style="width:4px;height:4px;border-radius:50%;background:var(--stone-4);"></div>
+      <div style="font-size:0.85rem;color:var(--teal);font-weight:700;">${q.subjectName}</div>
+    </div>
+    <div style="font-size:0.85rem;font-weight:700;color:var(--ink);">Question ${state.currentQuestion + 1} of ${state.examQuestions.length}</div>
+  </div>
+  
+  <div class="quiz-bar" style="height:6px;background:var(--stone-3);border-radius:3px;overflow:hidden;margin-bottom:24px;">
+    <div class="quiz-bar-fill" style="height:100%;background:var(--teal);width:${((state.currentQuestion)/state.examQuestions.length)*100}%;"></div>
+  </div>
+  
+  <div class="q-card" style="box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);border:none;">
+    ${q.passage?`<div class="q-passage" style="background:var(--stone-2);border-color:var(--stone-3);">${q.passage}</div>`:''}
+    <div class="q-text" style="font-size:1.15rem;font-weight:700;">${q.question}</div>
+    <div class="q-opts">${q.options.map((opt,i)=>`<button class="q-opt ${answer===i?'selected':''}" onclick="selectAnswer(${state.currentQuestion},${i})"><span class="q-opt-letter">${L[i]}</span>${opt}</button>`).join('')}</div>
+  </div>
+  
+  <div class="q-nav" style="background:var(--white);border:1px solid var(--stone-3);border-radius:16px;padding:16px 24px;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+    <button class="btn-ghost" onclick="quitExam()" style="color:var(--red);border-color:var(--red-faint);"><i class="fas fa-times"></i> Quit</button>
+    <div style="display:flex;gap:12px;">
+      <button class="btn-ghost" onclick="prevQuestion()" ${state.currentQuestion===0?'disabled':''}><i class="fas fa-chevron-left"></i> Previous</button>
+      ${state.currentQuestion<state.examQuestions.length-1?`<button class="btn-teal" onclick="nextQuestion()">Next <i class="fas fa-chevron-right"></i></button>`:`<button class="btn-teal" onclick="submitExam()" style="background:var(--amber);color:white;"><i class="fas fa-flag-checkered"></i> Submit Exam</button>`}
+    </div>
+  </div>
+  
+  <div style="margin-top:32px;background:var(--white);border:1px solid var(--stone-3);border-radius:16px;padding:24px;">
+    <div style="font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:16px;">Question Navigator</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(40px, 1fr));gap:8px;">
+      ${state.examQuestions.map((qi,i)=>{
+        let isCurrent = i === state.currentQuestion;
+        let isAnswered = state.answers[i] !== undefined;
+        let btnStyle = "height:40px;border-radius:8px;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;";
+        if (isCurrent) btnStyle += "background:var(--teal-faint);border:2px solid var(--teal);color:var(--teal);";
+        else if (isAnswered) btnStyle += "background:var(--teal);border:1px solid var(--teal);color:white;";
+        else btnStyle += "background:var(--stone-2);border:1px solid var(--stone-3);color:var(--ink-3);";
+        return `<div style="${btnStyle}" onclick="jumpTo(${i})">${i+1}</div>`;
+      }).join('')}
+    </div>
+  </div>
+</div></section>`;return html;}
+
+function renderReview(){const q=state.examQuestions[state.currentQuestion];const answer=state.answers[state.currentQuestion];const L=['A','B','C','D','E'];
+  let html=`
+<section style="padding:100px 56px 60px;min-height:100vh;background:var(--stone-2);"><div style="max-width:800px;margin:0 auto;">
+  <div style="background:var(--white);border:1px solid var(--stone-3);border-radius:20px;padding:24px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:center;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+    <div>
+      <div style="font-size:0.8rem;color:var(--ink-3);font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;">Review Mode</div>
+      <div style="font-size:0.9rem;font-weight:600;color:var(--ink);">Mock Exam ${state.selectedExamId}</div>
+    </div>
+    <button class="btn-ghost" onclick="state.view='results';render();"><i class="fas fa-arrow-left"></i> Back to Results</button>
+  </div>
+  
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="font-size:0.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-3);">${q.section}</div>
+      <div style="width:4px;height:4px;border-radius:50%;background:var(--stone-4);"></div>
+      <div style="font-size:0.85rem;color:var(--teal);font-weight:700;">${q.subjectName}</div>
+    </div>
+    <div style="font-size:0.85rem;font-weight:700;color:var(--ink);">Question ${state.currentQuestion + 1} of ${state.examQuestions.length}</div>
+  </div>
+  
+  <div class="q-card" style="box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);border:none;">
+    ${q.passage?`<div class="q-passage" style="background:var(--stone-2);border-color:var(--stone-3);">${q.passage}</div>`:''}
+    <div class="q-text" style="font-size:1.15rem;font-weight:700;">${q.question}</div>
+    <div class="q-opts">${q.options.map((opt,i)=>{
+      let cls = 'locked';
+      if(i === q.correct) cls += ' correct';
+      else if(i === answer) cls += ' wrong';
+      return `<button class="q-opt ${cls}" disabled><span class="q-opt-letter">${L[i]}</span>${opt}</button>`;
+    }).join('')}</div>
+    
+    <div style="margin-top:24px;padding:20px;border-radius:12px;background:${answer===q.correct?'var(--teal-faint)':'var(--red-faint)'};border:1px solid ${answer===q.correct?'rgba(13,148,136,0.2)':'rgba(220,38,38,0.2)'};">
+      <div style="font-weight:700;margin-bottom:8px;color:${answer===q.correct?'var(--teal)':'var(--red)'};"><i class="fas ${answer===q.correct?'fa-circle-check':'fa-circle-xmark'}"></i> ${answer===q.correct?'Correct!':'Incorrect'}</div>
+      <div style="color:var(--ink);font-size:0.95rem;line-height:1.6;">${q.solution || 'No detailed solution available.'}</div>
+    </div>
+  </div>
+  
+  <div class="q-nav" style="background:var(--white);border:1px solid var(--stone-3);border-radius:16px;padding:16px 24px;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);display:flex;justify-content:center;gap:12px;">
+    <button class="btn-ghost" onclick="prevQuestion()" ${state.currentQuestion===0?'disabled':''}><i class="fas fa-chevron-left"></i> Previous</button>
+    <button class="btn-ghost" onclick="nextQuestion()" ${state.currentQuestion===state.examQuestions.length-1?'disabled':''}>Next <i class="fas fa-chevron-right"></i></button>
+  </div>
+  
+  <div style="margin-top:32px;background:var(--white);border:1px solid var(--stone-3);border-radius:16px;padding:24px;">
+    <div style="font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:16px;">Question Navigator</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(40px, 1fr));gap:8px;">
+      ${state.examQuestions.map((qi,i)=>{
+        let isCurrent = i === state.currentQuestion;
+        let isCorrect = state.answers[i] === qi.correct;
+        let isAnswered = state.answers[i] !== undefined;
+        let btnStyle = "height:40px;border-radius:8px;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;";
+        if (isCurrent) btnStyle += "background:var(--stone-2);border:2px solid var(--ink);color:var(--ink);";
+        else if (isAnswered && isCorrect) btnStyle += "background:var(--teal-faint);border:1px solid rgba(13,148,136,0.3);color:var(--teal);";
+        else if (isAnswered) btnStyle += "background:var(--red-faint);border:1px solid rgba(220,38,38,0.3);color:var(--red);";
+        else btnStyle += "background:var(--stone-2);border:1px solid var(--stone-3);color:var(--ink-3);";
+        return `<div style="${btnStyle}" onclick="jumpTo(${i})">${i+1}</div>`;
+      }).join('')}
+    </div>
+  </div>
+</div></section>`;return html;}
+
+function renderResults(){const score=calculateScore();const total=state.examQuestions.length;const pct=score.correct/total*100;
+let message = score.score > 40 ? "Excellent work! You're well prepared." : score.score > 25 ? "Good effort. Keep practicing to improve." : "More practice needed. Review your mistakes.";
+let html=`
+<section style="padding:100px 56px 80px;"><div style="max-width:900px;margin:0 auto;">
+  <div style="text-align:center;margin-bottom:40px;">
+    <div class="sec-label" style="justify-content:center;animation:fadeInUp 0.6s ease;">Exam Complete</div>
+    <h1 class="sec-title" style="animation:fadeInUp 0.6s ease 0.1s backwards;">Mock Exam ${state.selectedExamId} Results</h1>
+    <p class="sec-sub" style="margin:0 auto;animation:fadeInUp 0.6s ease 0.2s backwards;">${message}</p>
+    <div style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#0D9488,#0F766E);color:white;padding:10px 24px;border-radius:50px;font-weight:700;font-size:0.9rem;margin-top:18px;animation:fadeInUp 0.6s ease 0.25s backwards;box-shadow:0 6px 20px rgba(13,148,136,0.3);">
+      <span style="font-size:1.1rem">⚡</span> +50 XP earned for completing this exam!
+    </div>
+  </div>
+  
+  <div class="stats-row" style="margin-bottom:32px;">
+    <div class="stat-card purple" style="animation-delay:0.3s;">
+      <div class="stat-icon" style="margin:0 auto 16px;"><i class="fas fa-star"></i></div>
+      <div class="stat-value" style="text-align:center;">${score.score}</div>
+      <div class="stat-label" style="text-align:center;">IMAT Score</div>
+    </div>
+    <div class="stat-card green" style="animation-delay:0.4s;">
+      <div class="stat-icon" style="margin:0 auto 16px;"><i class="fas fa-check"></i></div>
+      <div class="stat-value" style="text-align:center;">${score.correct}</div>
+      <div class="stat-label" style="text-align:center;">Correct</div>
+    </div>
+    <div class="stat-card orange" style="animation-delay:0.5s;">
+      <div class="stat-icon" style="margin:0 auto 16px;background:var(--red-faint);color:var(--red);"><i class="fas fa-xmark"></i></div>
+      <div class="stat-value" style="text-align:center;">${score.wrong}</div>
+      <div class="stat-label" style="text-align:center;">Incorrect</div>
+    </div>
+    <div class="stat-card blue" style="animation-delay:0.6s;">
+      <div class="stat-icon" style="margin:0 auto 16px;"><i class="fas fa-bullseye"></i></div>
+      <div class="stat-value" style="text-align:center;">${Math.round(pct)}%</div>
+      <div class="stat-label" style="text-align:center;">Accuracy</div>
+    </div>
+  </div>
+  
+  <div class="breakdown-card" style="animation:fadeInUp 0.6s ease 0.7s backwards;box-shadow:var(--shadow-lg);">
+    <div class="breakdown-title" style="font-size:1.2rem;border-bottom:1px solid var(--stone-3);padding-bottom:16px;margin-bottom:16px;">Question Breakdown</div>
+    <div style="display:flex;flex-direction:column;gap:8px;max-height:500px;overflow-y:auto;padding-right:10px;">
+    ${state.examQuestions.map((q,i)=>{
+      const isCorrect=state.answers[i]===q.correct;
+      const isAnswered=state.answers[i]!==undefined;
+      let iconCls='skip',icon='fa-minus',label='Unanswered', colorCls='var(--ink-3)';
+      if(isAnswered&&isCorrect){iconCls='ok';icon='fa-check';label='Correct';colorCls='var(--teal)';}
+      else if(isAnswered){iconCls='fail';icon='fa-xmark';label='Incorrect';colorCls='var(--red)';}
+      
+      return `<div class="breakdown-row" style="background:var(--stone-2);border:1px solid var(--stone-3);display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:12px;">
+        <div class="breakdown-icon ${iconCls}"><i class="fas ${icon}"></i></div>
+        <div style="width:40px;font-weight:700;color:var(--ink);">Q${i+1}</div>
+        <div style="flex:1;">
+          <div style="font-size:0.9rem;font-weight:600;color:var(--ink);">${q.subjectName}</div>
+          <div style="font-size:0.75rem;color:var(--ink-3);">${q.section}</div>
+        </div>
+        <div style="font-weight:700;font-size:0.85rem;color:${colorCls};">${label}</div>
+      </div>`;
+    }).join('')}
+    </div>
+  </div>
+  
+  <div style="display:flex;justify-content:center;gap:16px;margin-top:40px;animation:fadeInUp 0.6s ease 0.8s backwards;">
+    <button class="btn-teal" onclick="startReview()" style="padding:14px 28px;font-size:1rem;"><i class="fas fa-search"></i> Review Questions</button>
+    <button class="btn-ghost" onclick="goBack()" style="padding:14px 28px;font-size:1rem;"><i class="fas fa-rotate-right"></i> Take another exam</button>
+  </div>
+</div></section>`;return html;}
+
+render();
+
+// Set user avatar
+const user = JSON.parse(localStorage.getItem('imatpath_user'));
+if (user && user.firstName) {
+  document.getElementById('userAvatar').textContent = user.firstName.charAt(0).toUpperCase();
+}
+</script>
+<script src="xp-system.js"></script>
+<script src="dark-mode.js"></script>
+</body>
+</html>

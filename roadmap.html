@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Roadmap — ImatPath</title>
+<meta name="description" content="Get your personalized IMAT study roadmap. Answer 4 questions and receive a week-by-week study plan tailored to your timeline and weak subjects.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="shared.css">
+<style>
+.roadmap-container { max-width:640px; margin:0 auto; padding:100px 56px 60px; }
+
+.rm-progress { display:flex; gap:4px; margin-bottom:28px; }
+.rm-prog-bar { flex:1; height:4px; border-radius:2px; background:var(--stone-3); transition:background .3s; }
+.rm-prog-bar.done { background:var(--teal); }
+.rm-prog-bar.current { background:var(--teal); opacity:0.5; }
+
+.rm-question { font-size:1.15rem; font-weight:700; color:var(--ink); margin-bottom:20px; letter-spacing:-0.3px; }
+.rm-options { display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
+.rm-opt {
+  display:flex; align-items:center; gap:12px; padding:14px 18px;
+  border:1.5px solid var(--stone-3); border-radius:11px; background:var(--white);
+  cursor:pointer; transition:all .18s; font-size:0.88rem; color:var(--ink-2); font-weight:500;
+}
+.rm-opt:hover { border-color:var(--teal); }
+.rm-opt.selected { border-color:var(--teal); background:var(--teal-faint); color:var(--teal-2); }
+.rm-opt-dot {
+  width:18px; height:18px; border-radius:50%; border:2px solid var(--stone-4);
+  flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:all .18s;
+}
+.rm-opt.selected .rm-opt-dot { border-color:var(--teal); background:var(--teal); }
+.rm-opt.selected .rm-opt-dot::after { content:''; width:6px; height:6px; border-radius:50%; background:white; }
+.rm-opt.multi .rm-opt-dot { border-radius:5px; }
+.rm-opt.multi.selected .rm-opt-dot::after { content:'\2713'; color:white; font-size:11px; font-weight:700; width:auto; height:auto; border-radius:0; background:none; }
+
+.rm-nav { display:flex; justify-content:space-between; align-items:center; }
+.rm-back {
+  padding:10px 20px; border-radius:9px; border:1.5px solid var(--stone-3); background:transparent;
+  color:var(--ink-3); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.85rem; font-weight:600;
+  cursor:pointer; transition:border-color .18s, color .18s;
+}
+.rm-back:hover { border-color:var(--ink-3); color:var(--ink-2); }
+.rm-next {
+  padding:10px 24px; border-radius:9px; border:none; background:var(--teal); color:var(--white);
+  font-family:'Plus Jakarta Sans',sans-serif; font-size:0.85rem; font-weight:700;
+  cursor:pointer; transition:background .18s;
+}
+.rm-next:hover { background:var(--teal-2); }
+.rm-next:disabled { opacity:0.4; cursor:not-allowed; }
+
+/* Roadmap result */
+.roadmap-result { background:var(--white); border:1px solid var(--stone-3); border-radius:18px; padding:36px; }
+.roadmap-result-header { text-align:center; margin-bottom:28px; }
+.roadmap-result-check {
+  width:56px; height:56px; border-radius:50%;
+  background:var(--teal-pale); border:2px solid var(--teal);
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 16px;
+}
+.roadmap-result-check i { font-size:1.3rem; color:var(--teal); }
+.roadmap-result-title { font-size:1.15rem; font-weight:800; color:var(--ink); letter-spacing:-0.5px; margin-bottom:8px; }
+.roadmap-result-sub { font-size:0.88rem; color:var(--ink-3); line-height:1.65; max-width:400px; margin:0 auto; }
+
+.rm-summary { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:24px; }
+.rm-summary-item { padding:14px 16px; background:var(--stone-2); border-radius:10px; }
+.rm-summary-label { font-size:0.68rem; font-weight:700; letter-spacing:0.8px; text-transform:uppercase; color:var(--ink-3); margin-bottom:4px; }
+.rm-summary-value { font-size:0.85rem; font-weight:600; color:var(--ink); }
+
+/* Week plan */
+.plan-section { margin-top:28px; }
+.plan-section-title { font-size:0.78rem; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal); margin-bottom:16px; }
+.plan-week {
+  display:flex; align-items:center; gap:14px; padding:16px 18px;
+  background:var(--stone); border:1px solid var(--stone-3); border-radius:12px;
+  margin-bottom:8px; transition:border-color .18s;
+}
+.plan-week:hover { border-color:var(--teal); }
+.plan-week-num { font-size:0.78rem; font-weight:800; color:var(--teal); min-width:70px; }
+.plan-week-bar-wrap { flex:1; height:8px; background:var(--stone-3); border-radius:4px; overflow:hidden; }
+.plan-week-bar { height:100%; border-radius:4px; transition:width 0.8s cubic-bezier(.22,1,.36,1); }
+.plan-week-subj { font-size:0.82rem; font-weight:600; color:var(--ink-2); min-width:120px; text-align:right; }
+.plan-week-focus { font-size:0.65rem; font-weight:700; padding:2px 8px; border-radius:4px; background:var(--teal-faint); color:var(--teal); margin-left:8px; }
+
+.plan-tip {
+  margin-top:20px; padding:16px 18px; background:var(--teal-faint);
+  border:1px solid rgba(13,148,136,0.15); border-radius:10px;
+  font-size:0.82rem; color:var(--ink-2); line-height:1.6;
+}
+.plan-tip strong { color:var(--teal-2); }
+
+.plan-actions { display:flex; gap:10px; margin-top:24px; }
+.plan-actions .btn-teal { flex:1; padding:13px; justify-content:center; font-size:0.9rem; }
+.plan-actions .btn-ghost { flex:1; padding:13px; justify-content:center; font-size:0.9rem; }
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(18px);} to{opacity:1;transform:translateY(0);} }
+.fade-in { animation: fadeUp .4s ease both; }
+
+@media(max-width:900px){
+  .roadmap-container { padding:100px 20px 60px; }
+  .rm-summary { grid-template-columns:1fr; }
+}
+</style>
+<link rel="stylesheet" href="dark-mode.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="auth-guard.js"></script>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="dashboard.html">Imat<span>Path</span></a>
+  <div class="nav-right">
+  </div>
+</nav>
+
+<div class="roadmap-container" id="app"></div>
+
+<footer>
+  <div class="footer-logo">Imat<span>Path</span></div>
+  <div style="font-size:0.78rem;color:var(--ink-3);">&copy; 2026 ImatPath &middot; Study Roadmap</div>
+</footer>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastText"></span></div>
+
+<script>
+function showToast(m){const t=document.getElementById('toast');document.getElementById('toastText').textContent=m;t.classList.add('show');clearTimeout(t._tid);t._tid=setTimeout(()=>t.classList.remove('show'),3000);}
+
+const rmLabels = {
+  science:'Science background', nonscience:'Non-science background', gap:'Gap year / self-studying',
+  lt2:'Less than 2 months', '2to4':'2 – 4 months', '4to6':'4 – 6 months', '6plus':'6+ months',
+  lt10:'Less than 10 h/week', '10to20':'10 – 20 h/week', '20to30':'20 – 30 h/week', '30plus':'30+ h/week',
+  biology:'Biology', chemistry:'Chemistry', physics:'Physics', math:'Mathematics', gk:'General Knowledge'
+};
+
+const rmSteps = [
+  {question:"What is your academic background?", options:[
+    {val:'science',text:'Studying science (Biology, Chemistry, A-levels or equivalent)'},
+    {val:'nonscience',text:'Studying non-science subjects'},
+    {val:'gap',text:'Gap year or self-studying'},
+    {val:'graduate',text:'University graduate'}
+  ]},
+  {question:"How many months until your IMAT exam?", options:[
+    {val:'lt2',text:'Less than 2 months'},
+    {val:'2to4',text:'2 – 4 months'},
+    {val:'4to6',text:'4 – 6 months'},
+    {val:'6plus',text:'6+ months'}
+  ]},
+  {question:"Which subjects are your weakest? (Select all that apply)", multi:true, options:[
+    {val:'biology',text:'Biology'},
+    {val:'chemistry',text:'Chemistry'},
+    {val:'physics',text:'Physics'},
+    {val:'math',text:'Mathematics'},
+    {val:'gk',text:'General Knowledge'}
+  ]},
+  {question:"How many hours per week can you realistically study?", options:[
+    {val:'lt10',text:'Less than 10 hours'},
+    {val:'10to20',text:'10 – 20 hours'},
+    {val:'20to30',text:'20 – 30 hours'},
+    {val:'30plus',text:'30+ hours'}
+  ]}
+];
+
+let state = { step: 1, answers: {} };
+
+// Load existing roadmap answers from user data
+function loadState() {
+  const user = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
+  if (user.roadmapGenerated && user.roadmapAnswers) {
+    state.step = 5; // Go straight to result
+    state.answers = {
+      1: user.roadmapAnswers.background,
+      2: user.roadmapAnswers.months,
+      3: user.roadmapAnswers.weakSubjects || [],
+      4: user.roadmapAnswers.hours
+    };
+  }
+}
+loadState();
+
+function saveToUser() {
+  const user = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
+  user.roadmapGenerated = true;
+  user.roadmapAnswers = {
+    background: state.answers[1],
+    months: state.answers[2],
+    weakSubjects: state.answers[3],
+    hours: state.answers[4]
+  };
+  localStorage.setItem('imatpath_user', JSON.stringify(user));
+}
+
+function selectOpt(step, val, multi) {
+  if (multi) {
+    let a = state.answers[step] || [];
+    if (a.includes(val)) a = a.filter(v => v !== val);
+    else a.push(val);
+    state.answers[step] = a;
+  } else {
+    state.answers[step] = val;
+  }
+  render();
+}
+
+function goBack() { state.step--; render(); }
+function goNext() {
+  if (state.step < 4) { state.step++; render(); }
+  else { state.step = 5; saveToUser(); render(); }
+}
+function resetRoadmap() { state.step = 1; state.answers = {}; render(); }
+
+function generatePlan(weak, months, hours) {
+  const plan = [];
+  const focus = weak.length > 0 ? weak : ['biology', 'chemistry'];
+  const totalWeeks = {lt2:8, '2to4':16, '4to6':22, '6plus':26}[months] || 16;
+  const hrsPerWeek = {lt10:8, '10to20':15, '20to30':25, '30plus':35}[hours] || 15;
+
+  // Phase 1: Foundation (first 30%)
+  const p1end = Math.max(2, Math.floor(totalWeeks * 0.3));
+  // Phase 2: Deep study (next 40%)
+  const p2end = Math.max(p1end + 2, Math.floor(totalWeeks * 0.7));
+  // Phase 3: Mock & revision (last 30%)
+
+  // Foundation phase
+  const foundationSubjects = focus.includes('biology') ? 'Biology foundations' : 
+    focus.includes('chemistry') ? 'Chemistry foundations' : 'Science foundations';
+  plan.push({ label: `Weeks 1–${p1end}`, subj: foundationSubjects, pct: 85, color: '#0D9488', phase: 'Foundation', isFocus: true });
+
+  // Deep study phases
+  const chunk = Math.max(2, Math.floor((p2end - p1end) / 3));
+  let w = p1end + 1;
+  const deepSubjects = [
+    { k: 'biology', n: 'Biology deep dive', c: '#16a34a' },
+    { k: 'chemistry', n: 'Chemistry mastery', c: '#b45309' },
+    { k: 'physics', n: 'Physics & Math', c: '#dc2626' }
+  ];
+  deepSubjects.forEach(s => {
+    if (w > p2end) return;
+    const end = Math.min(w + chunk - 1, p2end);
+    const isFocus = focus.includes(s.k);
+    plan.push({ label: `Weeks ${w}–${end}`, subj: s.n, pct: isFocus ? 80 : 55, color: s.c, phase: 'Deep study', isFocus });
+    w = end + 1;
+  });
+
+  // Mock & revision phase
+  if (w <= totalWeeks) {
+    plan.push({ label: `Weeks ${w}–${totalWeeks}`, subj: 'Mock exams & revision', pct: 90, color: '#7c3aed', phase: 'Exam prep', isFocus: false });
+  }
+
+  return { plan, totalWeeks, hrsPerWeek };
+}
+
+function render() {
+  const app = document.getElementById('app');
+
+  if (state.step <= 4) {
+    const s = rmSteps[state.step - 1];
+    let h = '<div class="fade-in">';
+    h += '<div style="margin-bottom: 30px;"><a href="dashboard.html" class="btn-teal" style="font-size: 1.05rem; padding: 14px 28px; box-shadow: 0 10px 15px -3px rgba(13,148,136,0.2); display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Go back to dashboard</a></div>';
+    h += '<div class="sec-label" style="margin-bottom:24px;">Study Roadmap</div>';
+    h += '<div class="rm-progress">';
+    for (let i = 1; i <= 4; i++) h += `<div class="rm-prog-bar ${i < state.step ? 'done' : i === state.step ? 'current' : ''}"></div>`;
+    h += '</div>';
+    h += `<div class="rm-question">${s.question}</div>`;
+    h += '<div class="rm-options">';
+    s.options.forEach(o => {
+      const sel = s.multi
+        ? (state.answers[state.step] || []).includes(o.val) ? 'selected' : ''
+        : state.answers[state.step] === o.val ? 'selected' : '';
+      h += `<div class="rm-opt ${sel} ${s.multi ? 'multi' : ''}" onclick="selectOpt(${state.step},'${o.val}',${!!s.multi})"><div class="rm-opt-dot"></div>${o.text}</div>`;
+    });
+    h += '</div>';
+    h += '<div class="rm-nav">';
+    h += state.step > 1 ? '<button class="rm-back" onclick="goBack()">Back</button>' : '<div></div>';
+    const canNext = s.multi ? (state.answers[state.step] || []).length > 0 : !!state.answers[state.step];
+    h += `<button class="rm-next" onclick="goNext()" ${canNext ? '' : 'disabled'}>${state.step === 4 ? 'Generate my plan' : 'Next'}</button>`;
+    h += '</div></div>';
+    app.innerHTML = h;
+
+  } else {
+    // Show roadmap result
+    const bg = state.answers[1], months = state.answers[2];
+    const weak = state.answers[3] || [], hrs = state.answers[4];
+    const weekEst = {lt2:'~8 weeks', '2to4':'~16 weeks', '4to6':'~22 weeks', '6plus':'~26 weeks'};
+    const weakText = weak.map(w => rmLabels[w]).join(', ') || 'None specified';
+    const { plan, totalWeeks, hrsPerWeek } = generatePlan(weak, months, hrs);
+
+    let h = '<div class="fade-in">';
+    h += '<div style="margin-bottom: 30px;"><a href="dashboard.html" class="btn-teal" style="font-size: 1.05rem; padding: 14px 28px; box-shadow: 0 10px 15px -3px rgba(13,148,136,0.2); display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Go back to dashboard</a></div>';
+    h += '<div class="sec-label" style="margin-bottom:24px;">Your personalized plan</div>';
+    h += '<div class="roadmap-result">';
+
+    // Header
+    h += '<div class="roadmap-result-header">';
+    h += '<div class="roadmap-result-check"><i class="fas fa-check"></i></div>';
+    h += '<div class="roadmap-result-title">Your study plan is ready</div>';
+    h += `<div class="roadmap-result-sub">${totalWeeks} weeks, ~${hrsPerWeek} hours/week — tailored to your background and weak subjects.</div>`;
+    h += '</div>';
+
+    // Summary
+    h += '<div class="rm-summary">';
+    h += `<div class="rm-summary-item"><div class="rm-summary-label">Background</div><div class="rm-summary-value">${rmLabels[bg] || bg}</div></div>`;
+    h += `<div class="rm-summary-item"><div class="rm-summary-label">Until exam</div><div class="rm-summary-value">${rmLabels[months]} (${weekEst[months] || '~16 weeks'})</div></div>`;
+    h += `<div class="rm-summary-item"><div class="rm-summary-label">Study time</div><div class="rm-summary-value">${rmLabels[hrs] || hrs}</div></div>`;
+    h += `<div class="rm-summary-item"><div class="rm-summary-label">Weak subjects</div><div class="rm-summary-value">${weakText}</div></div>`;
+    h += '</div>';
+
+    // Week-by-week plan
+    h += '<div class="plan-section">';
+    h += '<div class="plan-section-title">Week-by-week plan</div>';
+    plan.forEach((p, i) => {
+      h += `<div class="plan-week">`;
+      h += `<div class="plan-week-num">${p.label}</div>`;
+      h += `<div class="plan-week-bar-wrap"><div class="plan-week-bar" data-w="${p.pct}" style="width:0%;background:${p.color};"></div></div>`;
+      h += `<div class="plan-week-subj">${p.subj}</div>`;
+      if (p.isFocus) h += '<span class="plan-week-focus">Focus</span>';
+      h += '</div>';
+    });
+    h += '</div>';
+
+    // Tip
+    h += '<div class="plan-tip">';
+    h += '<strong>💡 How to use this plan:</strong> Each phase builds on the last. Start with foundations, then deep-dive into each subject. ';
+    h += 'Use the <strong>Question Bank</strong> to test yourself after each phase, and take <strong>Mock Exams</strong> in the final weeks to simulate real conditions.';
+    h += '</div>';
+
+    // Actions
+    h += '<div class="plan-actions">';
+    h += '<a class="btn-teal" href="question-bank.html"><i class="fas fa-layer-group" style="font-size:0.75rem;"></i> Start practicing</a>';
+    h += '<button class="btn-ghost" onclick="resetRoadmap()"><i class="fas fa-redo" style="font-size:0.7rem;"></i> Rebuild plan</button>';
+    h += '</div>';
+
+    h += '</div></div>';
+    app.innerHTML = h;
+
+    // Animate bars
+    setTimeout(() => {
+      document.querySelectorAll('.plan-week-bar[data-w]').forEach(el => {
+        el.style.width = el.dataset.w + '%';
+      });
+    }, 200);
+  }
+}
+
+render();
+</script>
+<script src="xp-system.js"></script>
+<script src="dark-mode.js"></script>
+</body>
+</html>
