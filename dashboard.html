@@ -592,8 +592,7 @@ function updateDashboard() {
   const user = checkAccess();
   if (!user) return;
 
-  document.getElementById('userName').textContent = user.firstName || 'User';
-  document.getElementById('userAvatar').textContent = (user.firstName || 'U').charAt(0).toUpperCase();
+  // We let auth-guard.js and supabase.js handle the Name and Avatar based on real DB data.
 
   const planDisplay = user.plan === 'monthly' ? 'Pro Plan' : 'Free Plan';
   document.getElementById('currentPlan').textContent = planDisplay;
