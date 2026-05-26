@@ -26536,11 +26536,7 @@ function viewResults(){state.view='results';saveState();render();}
 // Only render if this is the main page (not loaded as a script)
 if(window.location.pathname.includes('question-bank')){render();}
 
-// Set user avatar
-const user = JSON.parse(localStorage.getItem('imatpath_user'));
-if (user && user.firstName) {
-  document.getElementById('userAvatar').textContent = user.firstName.charAt(0).toUpperCase();
-}
+// Legacy avatar logic removed. Auth-guard handles it dynamically.
 </script>
 <script src="xp-system.js"></script>
 <script src="dark-mode.js"></script>

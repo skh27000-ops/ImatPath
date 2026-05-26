@@ -448,19 +448,19 @@ nav {
       <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
       <div class="stat-value" id="questionsCompleted">0</div>
       <div class="stat-label">Questions Completed</div>
-      <div class="stat-change positive"><i class="fas fa-arrow-up"></i> +12 this week</div>
+      <div class="stat-change positive"><i class="fas fa-fire"></i> Keep practicing!</div>
     </div>
     <div class="stat-card green">
       <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
       <div class="stat-value" id="mockExamsTaken">0</div>
       <div class="stat-label">Mock Exams Taken</div>
-      <div class="stat-change positive"><i class="fas fa-arrow-up"></i> +2 this week</div>
+      <div class="stat-change positive"><i class="fas fa-check-circle"></i> Great job!</div>
     </div>
     <div class="stat-card orange">
       <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
       <div class="stat-value" id="accuracyRate">0<span>%</span></div>
       <div class="stat-label">Accuracy Rate</div>
-      <div class="stat-change positive"><i class="fas fa-arrow-up"></i> +5% improvement</div>
+      <div class="stat-change positive"><i class="fas fa-chart-line"></i> Aim for 100%!</div>
     </div>
     <div class="stat-card blue">
       <div class="stat-icon"><i class="fas fa-calendar"></i></div>
@@ -602,6 +602,13 @@ function updateDashboard() {
   const today = new Date();
   const daysLeft = Math.ceil((imatDate - today) / (1000 * 60 * 60 * 24));
   document.getElementById('daysRemaining').textContent = daysLeft;
+
+  // Fetch Mock Exams count
+  if (window.ImatAuth) {
+    window.ImatAuth.loadMockResults().then(results => {
+      document.getElementById('mockExamsTaken').textContent = results ? results.length : 0;
+    });
+  }
 
   const qbStateRaw = localStorage.getItem('imatpath_qb');
   let qbData = { revealed: {} };
