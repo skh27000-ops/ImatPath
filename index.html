@@ -1003,50 +1003,42 @@ updateUrgency();
 const rmState={step:1,answers:{}};
 const rmSteps=[
   {question:"What is your academic background?",options:[{val:'science',text:'Studying science (Biology, Chemistry, A-levels or equivalent)'},{val:'nonscience',text:'Studying non-science subjects'},{val:'gap',text:'Gap year or self-studying'}]},
-  {question:"How many months until your IMAT exam?",options:[{val:'lt2',text:'Less than 2 months'},{val:'2to4',text:'2 – 4 months'},{val:'4to6',text:'4 – 6 months'},{val:'6plus',text:'6+ months'}]},
-  {question:"Which subjects are your weakest? (Select all that apply)",multi:true,options:[{val:'biology',text:'Biology'},{val:'chemistry',text:'Chemistry'},{val:'physics',text:'Physics'},{val:'math',text:'Mathematics'},{val:'gk',text:'General Knowledge'}]},
-  {question:"How many hours per week can you realistically study?",options:[{val:'lt10',text:'Less than 10 hours'},{val:'10to20',text:'10 – 20 hours'},{val:'20to30',text:'20 – 30 hours'},{val:'30plus',text:'30+ hours'}]}
+  {question:"How many hours per week can you realistically study?",options:[{val:'lt10',text:'Less than 10 hours'},{val:'10to20',text:'10 – 20 hours'},{val:'20to30',text:'20 – 30 hours'},{val:'30plus',text:'30+ hours'}]},
+  {question:"Diagnostic Test",options:[{val:'start',text:'Start 15-question diagnostic test (Unlock full plan)'}]}
 ];
-const rmLabels={science:'Science background',nonscience:'Non-science background',gap:'Gap year / self-studying',lt2:'Less than 2 months','2to4':'2 – 4 months','4to6':'4 – 6 months','6plus':'6+ months',lt10:'Less than 10 h/week','10to20':'10 – 20 h/week','20to30':'20 – 30 h/week','30plus':'30+ h/week',biology:'Biology',chemistry:'Chemistry',physics:'Physics',math:'Mathematics',gk:'General Knowledge'};
+const rmLabels={science:'Science background',nonscience:'Non-science background',gap:'Gap year / self-studying',lt10:'Less than 10 h/week','10to20':'10 – 20 h/week','20to30':'20 – 30 h/week','30plus':'30+ h/week'};
 
-function renderRoadmap(){const c=document.getElementById('rmContainer');if(rmState.step<=4){const s=rmSteps[rmState.step-1];let h='<div class="rm-progress">';for(let i=1;i<=4;i++)h+=`<div class="rm-prog-bar ${i<rmState.step?'done':i===rmState.step?'current':''}"></div>`;h+='</div>';h+=`<div class="rm-step active"><div class="rm-question">${s.question}</div><div class="rm-options">`;s.options.forEach(o=>{const sel=s.multi?(rmState.answers[rmState.step]||[]).includes(o.val)?'selected':'':rmState.answers[rmState.step]===o.val?'selected':'';h+=`<div class="rm-opt ${sel} ${s.multi?'multi':''}" onclick="selectRmOpt(${rmState.step},'${o.val}',${!!s.multi})"><div class="rm-opt-dot"></div>${o.text}</div>`;});h+='</div><div class="rm-nav">';h+=rmState.step>1?'<button class="rm-back" onclick="rmBack()">Back</button>':'<div></div>';const cn=s.multi?(rmState.answers[rmState.step]||[]).length>0:rmState.answers[rmState.step];h+=`<button class="rm-next" onclick="rmNext()" ${cn?'':'disabled'}>${rmState.step===4?'See your summary':'Next'}</button></div></div>`;c.innerHTML=h;}else{c.innerHTML=renderPaywall();}}
+function renderRoadmap(){const c=document.getElementById('rmContainer');if(rmState.step<=3){const s=rmSteps[rmState.step-1];let h='<div class="rm-progress">';for(let i=1;i<=3;i++)h+=`<div class="rm-prog-bar ${i<rmState.step?'done':i===rmState.step?'current':''}"></div>`;h+='</div>';h+=`<div class="rm-step active"><div class="rm-question">${s.question}</div><div class="rm-options">`;s.options.forEach(o=>{const sel=rmState.answers[rmState.step]===o.val?'selected':'';h+=`<div class="rm-opt ${sel}" onclick="selectRmOpt(${rmState.step},'${o.val}',false)"><div class="rm-opt-dot"></div>${o.text}</div>`;});h+='</div><div class="rm-nav">';h+=rmState.step>1?'<button class="rm-back" onclick="rmBack()">Back</button>':'<div></div>';const cn=rmState.answers[rmState.step];h+=`<button class="rm-next" onclick="rmNext()" ${cn?'':'disabled'}>${rmState.step===3?'See your summary':'Next'}</button></div></div>`;c.innerHTML=h;}else{c.innerHTML=renderPaywall();}}
 function selectRmOpt(step,val,multi){if(multi){let a=rmState.answers[step]||[];if(a.includes(val))a=a.filter(v=>v!==val);else a.push(val);rmState.answers[step]=a;}else{rmState.answers[step]=val;}renderRoadmap();}
 function rmBack(){rmState.step--;renderRoadmap();}
-function rmNext(){if(rmState.step<4){rmState.step++;renderRoadmap();}else{rmState.step=5;renderRoadmap();}}
+function rmNext(){if(rmState.step<3){rmState.step++;renderRoadmap();}else{rmState.step=4;renderRoadmap();}}
 
 function renderPaywall(){
-  const bg=rmState.answers[1],months=rmState.answers[2],weak=rmState.answers[3]||[],hrs=rmState.answers[4];
-  const weekEst={lt2:'~8 weeks','2to4':'~16 weeks','4to6':'~22 weeks','6plus':'~26 weeks'};
-  const weakText=weak.map(w=>rmLabels[w]).join(', ')||'None specified';
-  const samplePlan=generateSamplePlan(weak,months);
+  const bg=rmState.answers[1],hrs=rmState.answers[2];
   let h='<div class="rm-paywall">';
   h+='<div class="rm-paywall-check"><i class="fas fa-check"></i></div>';
   h+='<div class="rm-paywall-title">We\'ve got everything we need.</div>';
-  h+='<div class="rm-paywall-sub">Based on your answers, we\'ll build a personalized week-by-week plan. Here\'s what we\'ll work with:</div>';
+  h+='<div class="rm-paywall-sub">Based on your answers, we\'ll build a personalized chapter-by-chapter plan. Here\'s what we\'ll work with:</div>';
   h+='<div class="rm-summary">';
-  h+=`<div class="rm-summary-item"><div class="rm-summary-label">Background</div><div class="rm-summary-value">${rmLabels[bg]}</div></div>`;
-  h+=`<div class="rm-summary-item"><div class="rm-summary-label">Until exam</div><div class="rm-summary-value">${rmLabels[months]} (${weekEst[months]||'~16 weeks'})</div></div>`;
-  h+=`<div class="rm-summary-item"><div class="rm-summary-label">Study time</div><div class="rm-summary-value">${rmLabels[hrs]}</div></div>`;
-  h+=`<div class="rm-summary-item"><div class="rm-summary-label">Weak subjects</div><div class="rm-summary-value">${weakText}</div></div>`;
+  h+=`<div class="rm-summary-item"><div class="rm-summary-label">Background</div><div class="rm-summary-value">${rmLabels[bg] || 'Science'}</div></div>`;
+  h+=`<div class="rm-summary-item"><div class="rm-summary-label">Study time</div><div class="rm-summary-value">${rmLabels[hrs] || '10-20 h/week'}</div></div>`;
+  h+=`<div class="rm-summary-item"><div class="rm-summary-label">Diagnostic</div><div class="rm-summary-value">15 questions pending</div></div>`;
   h+='</div>';
   h+='<div class="rm-plan-preview"><div class="rm-plan-preview-blur">';
-  samplePlan.forEach(w=>{h+=`<div class="rp-week"><div class="rp-week-num">${w.label}</div><div class="rp-week-bar-wrap"><div class="rp-week-bar" style="width:${w.pct}%;"></div></div><div class="rp-week-subj">${w.subj}</div></div>`;});
+  h+=`<div class="rp-week"><div class="rp-week-num">Week 1</div><div class="rp-week-bar-wrap"><div class="rp-week-bar" style="width:70%;"></div></div><div class="rp-week-subj">Cell Biology</div></div>`;
+  h+=`<div class="rp-week"><div class="rp-week-num">Week 2</div><div class="rp-week-bar-wrap"><div class="rp-week-bar" style="width:80%;"></div></div><div class="rp-week-subj">Atomic Structure</div></div>`;
+  h+=`<div class="rp-week"><div class="rp-week-num">Week 3</div><div class="rp-week-bar-wrap"><div class="rp-week-bar" style="width:60%;"></div></div><div class="rp-week-subj">Kinematics</div></div>`;
+  h+=`<div class="rp-week"><div class="rp-week-num">Week 4</div><div class="rp-week-bar-wrap"><div class="rp-week-bar" style="width:90%;"></div></div><div class="rp-week-subj">Genetics</div></div>`;
   h+='</div>';
   h+='<div class="rm-plan-preview-label"><i class="fas fa-lock"></i><span>Your personalized plan</span><small>Subscribe to unlock</small></div></div>';
   h+='<button class="rm-paywall-cta" onclick="scrollTo(\'#pricing\')">Subscribe to get your plan</button>';
-  h+='<div class="rm-paywall-note">Starting at $10/one-time</div>';
   h+='<div style="margin-top:20px;"><button class="rm-back" onclick="resetRoadmap()" style="margin:0 auto;display:inline-flex;">Start over</button></div>';
   h+='</div>';
   return h;
 }
 
 function generateSamplePlan(weak,months){
-  const plan=[];const focus=weak.length>0?weak:['biology','chemistry'];
-  const weeks={lt2:8,'2to4':16,'4to6':22,'6plus':26}[months]||16;
-  const chunk=Math.max(2,Math.floor(weeks/4));let w=1;
-  const subjects=[{k:'biology',n:'Biology'},{k:'chemistry',n:'Chemistry'},{k:'physics',n:'Physics & Math'},{k:'gk',n:'GK & revision'}];
-  subjects.forEach((s,i)=>{if(w>weeks)return;const isFocus=focus.includes(s.k);const pct=isFocus?75+Math.floor(Math.random()*20):40+Math.floor(Math.random()*25);plan.push({label:`Weeks ${w}–${Math.min(w+chunk-1,weeks)}`,subj:s.n,pct});w+=chunk;});
-  return plan;
+  return [];
 }
 
 function resetRoadmap(){rmState.step=1;rmState.answers={};renderRoadmap();}

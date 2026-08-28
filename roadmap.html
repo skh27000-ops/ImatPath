@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Study Roadmap — ImatPath</title>
-<meta name="description" content="Get your personalized IMAT study roadmap. Answer 4 questions and receive a week-by-week study plan tailored to your timeline and weak subjects.">
+<meta name="description" content="Get your personalized IMAT study roadmap. Take the diagnostic test and receive a week-by-week study plan tailored to your weak subjects.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="shared.css">
 <style>
-.roadmap-container { max-width:640px; margin:0 auto; padding:100px 56px 60px; }
+.roadmap-container { max-width:800px; margin:0 auto; padding:100px 20px 60px; }
 
 .rm-progress { display:flex; gap:4px; margin-bottom:28px; }
 .rm-prog-bar { flex:1; height:4px; border-radius:2px; background:var(--stone-3); transition:background .3s; }
 .rm-prog-bar.done { background:var(--teal); }
 .rm-prog-bar.current { background:var(--teal); opacity:0.5; }
 
-.rm-question { font-size:1.15rem; font-weight:700; color:var(--ink); margin-bottom:20px; letter-spacing:-0.3px; }
+.rm-question { font-size:1.15rem; font-weight:700; color:var(--ink); margin-bottom:20px; letter-spacing:-0.3px; line-height: 1.5; }
 .rm-options { display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
 .rm-opt {
   display:flex; align-items:center; gap:12px; padding:14px 18px;
@@ -35,7 +35,7 @@
 .rm-opt.multi .rm-opt-dot { border-radius:5px; }
 .rm-opt.multi.selected .rm-opt-dot::after { content:'\2713'; color:white; font-size:11px; font-weight:700; width:auto; height:auto; border-radius:0; background:none; }
 
-.rm-nav { display:flex; justify-content:space-between; align-items:center; }
+.rm-nav { display:flex; justify-content:space-between; align-items:center; margin-top:20px; }
 .rm-back {
   padding:10px 20px; border-radius:9px; border:1.5px solid var(--stone-3); background:transparent;
   color:var(--ink-3); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.85rem; font-weight:600;
@@ -51,7 +51,7 @@
 .rm-next:disabled { opacity:0.4; cursor:not-allowed; }
 
 /* Roadmap result */
-.roadmap-result { background:var(--white); border:1px solid var(--stone-3); border-radius:18px; padding:36px; }
+.roadmap-result { background:var(--white); border:1px solid var(--stone-3); border-radius:18px; padding:36px; margin-top:24px; }
 .roadmap-result-header { text-align:center; margin-bottom:28px; }
 .roadmap-result-check {
   width:56px; height:56px; border-radius:50%;
@@ -61,120 +61,117 @@
 }
 .roadmap-result-check i { font-size:1.3rem; color:var(--teal); }
 .roadmap-result-title { font-size:1.15rem; font-weight:800; color:var(--ink); letter-spacing:-0.5px; margin-bottom:8px; }
-.roadmap-result-sub { font-size:0.88rem; color:var(--ink-3); line-height:1.65; max-width:400px; margin:0 auto; }
+.roadmap-result-sub { font-size:0.88rem; color:var(--ink-3); line-height:1.65; max-width:500px; margin:0 auto; }
 
-.rm-summary { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:24px; }
-.rm-summary-item { padding:14px 16px; background:var(--stone-2); border-radius:10px; }
+.rm-summary { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:24px; }
+.rm-summary-item { padding:14px 16px; background:var(--stone-2); border-radius:10px; text-align: center; }
 .rm-summary-label { font-size:0.68rem; font-weight:700; letter-spacing:0.8px; text-transform:uppercase; color:var(--ink-3); margin-bottom:4px; }
 .rm-summary-value { font-size:0.85rem; font-weight:600; color:var(--ink); }
 
 /* Week plan */
-.plan-section { margin-top:28px; }
-.plan-section-title { font-size:0.78rem; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal); margin-bottom:16px; }
-.plan-week {
-  display:flex; align-items:center; gap:14px; padding:16px 18px;
-  background:var(--stone); border:1px solid var(--stone-3); border-radius:12px;
-  margin-bottom:8px; transition:border-color .18s;
-}
-.plan-week:hover { border-color:var(--teal); }
-.plan-week-num { font-size:0.78rem; font-weight:800; color:var(--teal); min-width:70px; }
-.plan-week-bar-wrap { flex:1; height:8px; background:var(--stone-3); border-radius:4px; overflow:hidden; }
-.plan-week-bar { height:100%; border-radius:4px; transition:width 0.8s cubic-bezier(.22,1,.36,1); }
-.plan-week-subj { font-size:0.82rem; font-weight:600; color:var(--ink-2); min-width:120px; text-align:right; }
-.plan-week-focus { font-size:0.65rem; font-weight:700; padding:2px 8px; border-radius:4px; background:var(--teal-faint); color:var(--teal); margin-left:8px; }
+.plan-section { margin-top:32px; }
+.plan-week-block { margin-bottom: 24px; background: var(--stone); border: 1px solid var(--stone-3); border-radius: 12px; padding: 20px; }
+.plan-week-title { font-size:1.05rem; font-weight:800; color:var(--ink); margin-bottom:16px; border-bottom:2px solid var(--stone-3); padding-bottom:8px; }
 
-.plan-tip {
-  margin-top:20px; padding:16px 18px; background:var(--teal-faint);
-  border:1px solid rgba(13,148,136,0.15); border-radius:10px;
-  font-size:0.82rem; color:var(--ink-2); line-height:1.6;
-}
-.plan-tip strong { color:var(--teal-2); }
+.chapter-row { display:flex; align-items:center; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--stone-3); gap:16px; }
+.chapter-row:last-child { border-bottom:none; padding-bottom:0; }
+.chapter-info { flex:1; }
+.chapter-subj { font-size:0.7rem; font-weight:700; text-transform:uppercase; color:var(--teal); letter-spacing:0.5px; margin-bottom:4px; }
+.chapter-name { font-size:0.95rem; font-weight:600; color:var(--ink); }
+.chapter-meta { font-size:0.8rem; color:var(--ink-3); margin-top:4px; }
+.chapter-meta i { margin-right:4px; }
 
-.plan-actions { display:flex; gap:10px; margin-top:24px; }
-.plan-actions .btn-teal { flex:1; padding:13px; justify-content:center; font-size:0.9rem; }
-.plan-actions .btn-ghost { flex:1; padding:13px; justify-content:center; font-size:0.9rem; }
+.chapter-actions { display:flex; gap:12px; align-items:center; }
+.checkbox-wrap { display:flex; align-items:center; gap:6px; cursor:pointer; user-select:none; }
+.checkbox-wrap input { display:none; }
+.checkbox-custom { width:20px; height:20px; border:2px solid var(--stone-4); border-radius:6px; display:flex; align-items:center; justify-content:center; transition:all 0.2s; background:white; }
+.checkbox-wrap input:checked + .checkbox-custom { background:var(--teal); border-color:var(--teal); }
+.checkbox-wrap input:checked + .checkbox-custom::after { content:'\2713'; color:white; font-size:12px; font-weight:bold; }
+.checkbox-label { font-size:0.8rem; font-weight:600; color:var(--ink-2); }
+.mastered-badge { display:inline-flex; align-items:center; gap:4px; padding:4px 8px; background:var(--teal-pale); color:var(--teal-2); border-radius:20px; font-size:0.75rem; font-weight:700; }
+
+.btn-practice { padding:8px 16px; border-radius:8px; border:none; background:var(--teal); color:white; font-size:0.8rem; font-weight:600; cursor:pointer; text-decoration:none; display:inline-block; }
+.btn-practice:hover { background:var(--teal-2); }
+
+.plan-banner { padding:12px 16px; background:var(--teal-faint); border-radius:10px; border:1px solid rgba(13,148,136,0.2); font-size:0.85rem; color:var(--teal-2); font-weight:500; margin-bottom:20px; display:flex; align-items:center; gap:10px; }
+.plan-banner i { font-size:1.1rem; }
 
 @keyframes fadeUp { from{opacity:0;transform:translateY(18px);} to{opacity:1;transform:translateY(0);} }
 .fade-in { animation: fadeUp .4s ease both; }
 
-@media(max-width:900px){
-  .roadmap-container { padding:100px 20px 60px; }
+@media(max-width:768px){
+  .chapter-row { flex-direction:column; align-items:flex-start; }
+  .chapter-actions { width:100%; justify-content:space-between; margin-top:12px; flex-wrap:wrap; }
   .rm-summary { grid-template-columns:1fr; }
 }
 </style>
 <link rel="stylesheet" href="dark-mode.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
 <script src="supabase.js"></script>
 <script src="auth-guard.js"></script>
+<script src="questions-data.js"></script>
 </head>
 <body>
 
 <nav>
   <a class="logo" href="dashboard.html">Imat<span>Path</span></a>
-  <div class="nav-right">
-  </div>
+  <div class="nav-right"></div>
 </nav>
 
 <div class="roadmap-container" id="app"></div>
 
-<footer>
-  <div class="footer-logo">Imat<span>Path</span></div>
-  <div style="font-size:0.78rem;color:var(--ink-3);">&copy; 2026 ImatPath &middot; Study Roadmap</div>
-</footer>
-
-<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastText"></span></div>
-
 <script>
-function showToast(m){const t=document.getElementById('toast');document.getElementById('toastText').textContent=m;t.classList.add('show');clearTimeout(t._tid);t._tid=setTimeout(()=>t.classList.remove('show'),3000);}
-
-const rmLabels = {
-  science:'Science background', nonscience:'Non-science background', gap:'Gap year / self-studying',
-  lt2:'Less than 2 months', '2to4':'2 – 4 months', '4to6':'4 – 6 months', '6plus':'6+ months',
-  lt10:'Less than 10 h/week', '10to20':'10 – 20 h/week', '20to30':'20 – 30 h/week', '30plus':'30+ h/week',
-  biology:'Biology', chemistry:'Chemistry', physics:'Physics', math:'Mathematics', gk:'General Knowledge'
+// State
+let state = {
+  step: 1,
+  answers: {},
+  diagQuestions: [],
+  diagAnswers: {}
 };
 
 const rmSteps = [
-  {question:"What is your academic background?", options:[
-    {val:'science',text:'Studying science (Biology, Chemistry, A-levels or equivalent)'},
+  {id: 'bg', question:"What is your academic background?", options:[
+    {val:'science',text:'Studying science (Biology, Chemistry, etc.)'},
     {val:'nonscience',text:'Studying non-science subjects'},
     {val:'gap',text:'Gap year or self-studying'},
     {val:'graduate',text:'University graduate'}
   ]},
-  {question:"How many months until your IMAT exam?", options:[
-    {val:'lt2',text:'Less than 2 months'},
-    {val:'2to4',text:'2 – 4 months'},
-    {val:'4to6',text:'4 – 6 months'},
-    {val:'6plus',text:'6+ months'}
-  ]},
-  {question:"Which subjects are your weakest? (Select all that apply)", multi:true, options:[
-    {val:'biology',text:'Biology'},
-    {val:'chemistry',text:'Chemistry'},
-    {val:'physics',text:'Physics'},
-    {val:'math',text:'Mathematics'},
-    {val:'gk',text:'General Knowledge'}
-  ]},
-  {question:"How many hours per week can you realistically study?", options:[
+  {id: 'hrs', question:"How many hours per week can you realistically study?", options:[
     {val:'lt10',text:'Less than 10 hours'},
     {val:'10to20',text:'10 – 20 hours'},
     {val:'20to30',text:'20 – 30 hours'},
     {val:'30plus',text:'30+ hours'}
-  ]}
+  ]},
+  {id: 'diag_intro', question:"Diagnostic Test", intro:true, text: "Before we build your personalized roadmap, you need to take a short diagnostic test. This will assess your current level across all IMAT subjects so we can allocate more time to your weak areas. You will face 15 questions."}
 ];
 
-let state = { step: 1, answers: {} };
+function initDiagnosticTest() {
+  state.diagQuestions = [];
+  // Pick 3 random questions from biology, chemistry, physics, math, critical-thinking
+  const targetSubjects = ['biology', 'chemistry', 'physics', 'math', 'critical-thinking'];
+  targetSubjects.forEach(subId => {
+    const sub = subjects.find(s => s.id === subId);
+    if(sub) {
+      let allQs = [];
+      sub.chapters.forEach(ch => {
+        ch.questions.forEach((q, idx) => {
+          allQs.push({...q, subjectId: sub.id, chapterId: ch.id, origIdx: idx});
+        });
+      });
+      allQs.sort(() => 0.5 - Math.random());
+      state.diagQuestions.push(...allQs.slice(0, 3));
+    }
+  });
+  // Shuffle final test
+  state.diagQuestions.sort(() => 0.5 - Math.random());
+}
 
-// Load existing roadmap answers from user data
 function loadState() {
   const user = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
   if (user.roadmapGenerated && user.roadmapAnswers) {
-    state.step = 5; // Go straight to result
-    state.answers = {
-      1: user.roadmapAnswers.background,
-      2: user.roadmapAnswers.months,
-      3: user.roadmapAnswers.weakSubjects || [],
-      4: user.roadmapAnswers.hours
-    };
+    state.step = 'result';
+    state.answers = user.roadmapAnswers;
   }
 }
 loadState();
@@ -182,170 +179,302 @@ loadState();
 function saveToUser() {
   const user = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
   user.roadmapGenerated = true;
-  user.roadmapAnswers = {
-    background: state.answers[1],
-    months: state.answers[2],
-    weakSubjects: state.answers[3],
-    hours: state.answers[4]
-  };
+  user.roadmapAnswers = state.answers;
+  
+  // Calculate diag scores
+  let scores = { 'biology': 0, 'chemistry': 0, 'physics': 0, 'math': 0, 'critical-thinking': 0 };
+  let counts = { 'biology': 0, 'chemistry': 0, 'physics': 0, 'math': 0, 'critical-thinking': 0 };
+  state.diagQuestions.forEach((q, i) => {
+    counts[q.subjectId]++;
+    if(state.diagAnswers[i] === q.correct) scores[q.subjectId]++;
+  });
+  user.diagnosticScores = {};
+  Object.keys(scores).forEach(k => {
+    user.diagnosticScores[k] = counts[k] > 0 ? (scores[k] / counts[k]) : 0;
+  });
+  
   localStorage.setItem('imatpath_user', JSON.stringify(user));
 }
 
-function selectOpt(step, val, multi) {
-  if (multi) {
-    let a = state.answers[step] || [];
-    if (a.includes(val)) a = a.filter(v => v !== val);
-    else a.push(val);
-    state.answers[step] = a;
-  } else {
-    state.answers[step] = val;
-  }
+function selectOpt(step, val) {
+  state.answers[step] = val;
   render();
 }
 
-function goBack() { state.step--; render(); }
-function goNext() {
-  if (state.step < 4) { state.step++; render(); }
-  else { state.step = 5; saveToUser(); render(); }
+function selectDiagAns(qIdx, ansIdx) {
+  state.diagAnswers[qIdx] = ansIdx;
+  render();
 }
-function resetRoadmap() { state.step = 1; state.answers = {}; render(); }
 
-function generatePlan(weak, months, hours) {
-  const plan = [];
-  const focus = weak.length > 0 ? weak : ['biology', 'chemistry'];
-  const totalWeeks = {lt2:8, '2to4':16, '4to6':22, '6plus':26}[months] || 16;
-  const hrsPerWeek = {lt10:8, '10to20':15, '20to30':25, '30plus':35}[hours] || 15;
-
-  // Phase 1: Foundation (first 30%)
-  const p1end = Math.max(2, Math.floor(totalWeeks * 0.3));
-  // Phase 2: Deep study (next 40%)
-  const p2end = Math.max(p1end + 2, Math.floor(totalWeeks * 0.7));
-  // Phase 3: Mock & revision (last 30%)
-
-  // Foundation phase
-  const foundationSubjects = focus.includes('biology') ? 'Biology foundations' : 
-    focus.includes('chemistry') ? 'Chemistry foundations' : 'Science foundations';
-  plan.push({ label: `Weeks 1–${p1end}`, subj: foundationSubjects, pct: 85, color: '#0D9488', phase: 'Foundation', isFocus: true });
-
-  // Deep study phases
-  const chunk = Math.max(2, Math.floor((p2end - p1end) / 3));
-  let w = p1end + 1;
-  const deepSubjects = [
-    { k: 'biology', n: 'Biology deep dive', c: '#16a34a' },
-    { k: 'chemistry', n: 'Chemistry mastery', c: '#b45309' },
-    { k: 'physics', n: 'Physics & Math', c: '#dc2626' }
-  ];
-  deepSubjects.forEach(s => {
-    if (w > p2end) return;
-    const end = Math.min(w + chunk - 1, p2end);
-    const isFocus = focus.includes(s.k);
-    plan.push({ label: `Weeks ${w}–${end}`, subj: s.n, pct: isFocus ? 80 : 55, color: s.c, phase: 'Deep study', isFocus });
-    w = end + 1;
-  });
-
-  // Mock & revision phase
-  if (w <= totalWeeks) {
-    plan.push({ label: `Weeks ${w}–${totalWeeks}`, subj: 'Mock exams & revision', pct: 90, color: '#7c3aed', phase: 'Exam prep', isFocus: false });
+function goBack() {
+  if(typeof state.step === 'number') {
+    state.step--;
+    render();
+  } else if(state.step.startsWith('diag_')) {
+    let qIdx = parseInt(state.step.split('_')[1]);
+    if(qIdx === 0) state.step = 3;
+    else state.step = `diag_${qIdx-1}`;
+    render();
   }
+}
 
-  return { plan, totalWeeks, hrsPerWeek };
+function goNext() {
+  if (state.step === 1 || state.step === 2) {
+    state.step++;
+    if(state.step === 3) initDiagnosticTest();
+    render();
+  } else if (state.step === 3) {
+    state.step = 'diag_0';
+    render();
+  } else if (typeof state.step === 'string' && state.step.startsWith('diag_')) {
+    let qIdx = parseInt(state.step.split('_')[1]);
+    if(qIdx < state.diagQuestions.length - 1) {
+      state.step = `diag_${qIdx+1}`;
+    } else {
+      saveToUser();
+      state.step = 'result';
+    }
+    render();
+  }
+}
+
+function resetRoadmap() { state.step = 1; state.answers = {}; state.diagAnswers = {}; render(); }
+
+function toggleReviewed(chapterId, checkbox) {
+  const user = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
+  if(!user.roadmapReviewed) user.roadmapReviewed = {};
+  user.roadmapReviewed[chapterId] = checkbox.checked;
+  localStorage.setItem('imatpath_user', JSON.stringify(user));
+}
+
+function getQbStats() {
+  const qbRaw = localStorage.getItem('imatpath_qb');
+  if(!qbRaw) return {};
+  const qb = JSON.parse(qbRaw);
+  let stats = {}; // chapterId -> { total, correct }
+  if(qb.revealed) {
+    Object.keys(qb.revealed).forEach(k => {
+      // k is like 'biology-3' -> subjectId-qIdx
+      const parts = k.split('-');
+      if(parts.length >= 2) {
+        const subId = parts[0];
+        const qIdx = parseInt(parts[1]);
+        const sub = subjects.find(s => s.id === subId);
+        if(sub) {
+          let currentIdx = 0;
+          sub.chapters.forEach(ch => {
+            if(qIdx >= currentIdx && qIdx < currentIdx + ch.questions.length) {
+              if(!stats[ch.id]) stats[ch.id] = { total: 0, correct: 0 };
+              stats[ch.id].total++;
+              if(qb.answers && qb.answers[k] === ch.questions[qIdx - currentIdx].correct) {
+                stats[ch.id].correct++;
+              }
+            }
+            currentIdx += ch.questions.length;
+          });
+        }
+      }
+    });
+  }
+  return stats;
+}
+
+function generateChapterPlan() {
+  const user = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
+  const diagScores = user.diagnosticScores || { 'biology': 0.5, 'chemistry': 0.5, 'physics': 0.5, 'math': 0.5, 'critical-thinking': 0.5 };
+  
+  // Weights based on IMAT format
+  const subWeights = { 'biology': 1.5, 'chemistry': 1.2, 'physics': 1.0, 'math': 1.0, 'critical-thinking': 0.8, 'problem-solving': 0.8, 'data-analysis': 0.8, 'general-knowledge': 0.4 };
+  
+  // Calculate days remaining
+  const examDate = new Date('2026-09-29T15:00:00+02:00');
+  let daysLeft = Math.ceil((examDate - new Date()) / (1000*60*60*24));
+  if(daysLeft < 14) daysLeft = 14; // minimum 2 weeks for planner logic
+  
+  // Gather chapters
+  let planChapters = [];
+  subjects.forEach(sub => {
+    sub.chapters.forEach(ch => {
+      const score = diagScores[sub.id] !== undefined ? diagScores[sub.id] : 0.5;
+      const weight = subWeights[sub.id] || 1.0;
+      let allocFactor = weight * (1.2 - score); // Base factor
+      planChapters.push({
+        id: ch.id,
+        name: ch.name,
+        subjectId: sub.id,
+        subjectName: sub.name,
+        allocFactor: allocFactor,
+        days: 0,
+        mastered: false,
+        qbAccuracy: 0,
+        qbTotal: 0
+      });
+    });
+  });
+  
+  // Read QB stats to find mastered chapters
+  const qbStats = getQbStats();
+  let masteredCount = 0;
+  planChapters.forEach(ch => {
+    if(qbStats[ch.id]) {
+      ch.qbTotal = qbStats[ch.id].total;
+      ch.qbAccuracy = ch.qbTotal > 0 ? (qbStats[ch.id].correct / ch.qbTotal) : 0;
+      if(ch.qbTotal >= 5 && ch.qbAccuracy >= 0.75) {
+        ch.mastered = true;
+        ch.allocFactor = 0; // Don't allocate days if mastered
+        masteredCount++;
+      }
+    }
+  });
+  
+  // Allocate days
+  let totalFactor = planChapters.reduce((sum, ch) => sum + ch.allocFactor, 0);
+  planChapters.forEach(ch => {
+    if(!ch.mastered) {
+      ch.days = Math.max(1, Math.round(daysLeft * (ch.allocFactor / totalFactor)));
+    }
+  });
+  
+  // Sort by priority (allocate weakest first)
+  planChapters.sort((a,b) => b.allocFactor - a.allocFactor);
+  
+  // Group into weeks
+  let weeks = [];
+  let currentWeek = { num: 1, chapters: [], daysAccum: 0 };
+  
+  planChapters.forEach(ch => {
+    if(ch.mastered) return; // Hide or push to bottom? Let's just skip them from the schedule but we can list them at the bottom.
+    if(currentWeek.daysAccum + ch.days > 7 && currentWeek.chapters.length > 0) {
+      weeks.push(currentWeek);
+      currentWeek = { num: weeks.length + 1, chapters: [], daysAccum: 0 };
+    }
+    currentWeek.chapters.push(ch);
+    currentWeek.daysAccum += ch.days;
+  });
+  if(currentWeek.chapters.length > 0) weeks.push(currentWeek);
+  
+  return { weeks, planChapters, masteredCount, daysLeft };
 }
 
 function render() {
   const app = document.getElementById('app');
 
-  if (state.step <= 4) {
+  if (typeof state.step === 'number' && state.step <= 3) {
     const s = rmSteps[state.step - 1];
     let h = '<div class="fade-in">';
-    h += '<div style="margin-bottom: 30px;"><a href="dashboard.html" class="btn-teal" style="font-size: 1.05rem; padding: 14px 28px; box-shadow: 0 10px 15px -3px rgba(13,148,136,0.2); display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Go back to dashboard</a></div>';
-    h += '<div class="sec-label" style="margin-bottom:24px;">Study Roadmap</div>';
+    h += '<div style="margin-bottom: 30px;"><a href="dashboard.html" class="btn-secondary" style="font-size: 0.95rem;"><i class="fas fa-arrow-left"></i> Dashboard</a></div>';
     h += '<div class="rm-progress">';
-    for (let i = 1; i <= 4; i++) h += `<div class="rm-prog-bar ${i < state.step ? 'done' : i === state.step ? 'current' : ''}"></div>`;
+    for (let i = 1; i <= 3; i++) h += `<div class="rm-prog-bar ${i < state.step ? 'done' : i === state.step ? 'current' : ''}"></div>`;
     h += '</div>';
     h += `<div class="rm-question">${s.question}</div>`;
+    
+    if(s.intro) {
+      h += `<p style="color:var(--ink-3); line-height:1.6; margin-bottom:24px;">${s.text}</p>`;
+    } else {
+      h += '<div class="rm-options">';
+      s.options.forEach(o => {
+        const sel = state.answers[state.step] === o.val ? 'selected' : '';
+        h += `<div class="rm-opt ${sel}" onclick="selectOpt(${state.step},'${o.val}')"><div class="rm-opt-dot"></div>${o.text}</div>`;
+      });
+      h += '</div>';
+    }
+    
+    h += '<div class="rm-nav">';
+    h += state.step > 1 ? '<button class="rm-back" onclick="goBack()">Back</button>' : '<div></div>';
+    const canNext = s.intro ? true : !!state.answers[state.step];
+    h += `<button class="rm-next" onclick="goNext()" ${canNext ? '' : 'disabled'}>${s.intro ? 'Start Diagnostic' : 'Next'}</button>`;
+    h += '</div></div>';
+    app.innerHTML = h;
+
+  } else if (typeof state.step === 'string' && state.step.startsWith('diag_')) {
+    let qIdx = parseInt(state.step.split('_')[1]);
+    const q = state.diagQuestions[qIdx];
+    let h = '<div class="fade-in">';
+    h += `<div style="font-size:0.8rem; font-weight:700; color:var(--teal); margin-bottom:8px; text-transform:uppercase;">Diagnostic Test • Q${qIdx+1}/15</div>`;
+    h += `<div class="rm-question" style="font-size:1.05rem;">${q.passage ? '<div style="font-size:0.9rem; font-weight:400; color:var(--ink-3); margin-bottom:12px; background:var(--stone-2); padding:12px; border-radius:8px;">'+q.passage+'</div>' : ''}${q.question}</div>`;
     h += '<div class="rm-options">';
-    s.options.forEach(o => {
-      const sel = s.multi
-        ? (state.answers[state.step] || []).includes(o.val) ? 'selected' : ''
-        : state.answers[state.step] === o.val ? 'selected' : '';
-      h += `<div class="rm-opt ${sel} ${s.multi ? 'multi' : ''}" onclick="selectOpt(${state.step},'${o.val}',${!!s.multi})"><div class="rm-opt-dot"></div>${o.text}</div>`;
+    q.options.forEach((opt, idx) => {
+      const sel = state.diagAnswers[qIdx] === idx ? 'selected' : '';
+      h += `<div class="rm-opt ${sel}" onclick="selectDiagAns(${qIdx},${idx})"><div class="rm-opt-dot"></div>${opt}</div>`;
     });
     h += '</div>';
     h += '<div class="rm-nav">';
-    h += state.step > 1 ? '<button class="rm-back" onclick="goBack()">Back</button>' : '<div></div>';
-    const canNext = s.multi ? (state.answers[state.step] || []).length > 0 : !!state.answers[state.step];
-    h += `<button class="rm-next" onclick="goNext()" ${canNext ? '' : 'disabled'}>${state.step === 4 ? 'Generate my plan' : 'Next'}</button>`;
+    h += '<button class="rm-back" onclick="goBack()">Back</button>';
+    const canNext = state.diagAnswers[qIdx] !== undefined;
+    h += `<button class="rm-next" onclick="goNext()" ${canNext ? '' : 'disabled'}>${qIdx === 14 ? 'Generate Plan' : 'Next Question'}</button>`;
     h += '</div></div>';
     app.innerHTML = h;
 
   } else {
     // Show roadmap result
-    const bg = state.answers[1], months = state.answers[2];
-    const weak = state.answers[3] || [], hrs = state.answers[4];
-    const weekEst = {lt2:'~8 weeks', '2to4':'~16 weeks', '4to6':'~22 weeks', '6plus':'~26 weeks'};
-    const weakText = weak.map(w => rmLabels[w]).join(', ') || 'None specified';
-    const { plan, totalWeeks, hrsPerWeek } = generatePlan(weak, months, hrs);
-
+    const { weeks, planChapters, masteredCount, daysLeft } = generateChapterPlan();
+    const user = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
+    const reviewed = user.roadmapReviewed || {};
+    
     let h = '<div class="fade-in">';
-    h += '<div style="margin-bottom: 30px;"><a href="dashboard.html" class="btn-teal" style="font-size: 1.05rem; padding: 14px 28px; box-shadow: 0 10px 15px -3px rgba(13,148,136,0.2); display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Go back to dashboard</a></div>';
-    h += '<div class="sec-label" style="margin-bottom:24px;">Your personalized plan</div>';
-    h += '<div class="roadmap-result">';
+    h += '<div style="margin-bottom: 30px;"><a href="dashboard.html" class="btn-practice" style="font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Back to Dashboard</a></div>';
+    h += '<div class="roadmap-result" style="padding:24px;">';
 
-    // Header
     h += '<div class="roadmap-result-header">';
-    h += '<div class="roadmap-result-check"><i class="fas fa-check"></i></div>';
-    h += '<div class="roadmap-result-title">Your study plan is ready</div>';
-    h += `<div class="roadmap-result-sub">${totalWeeks} weeks, ~${hrsPerWeek} hours/week — tailored to your background and weak subjects.</div>`;
+    h += '<div class="roadmap-result-check"><i class="fas fa-calendar-check"></i></div>';
+    h += '<div class="roadmap-result-title">Your Chapter-by-Chapter Plan</div>';
+    h += `<div class="roadmap-result-sub">${daysLeft} days until IMAT 2026. This plan dynamically adapts to your diagnostic and practice scores.</div>`;
     h += '</div>';
-
-    // Summary
-    h += '<div class="rm-summary">';
-    h += `<div class="rm-summary-item"><div class="rm-summary-label">Background</div><div class="rm-summary-value">${rmLabels[bg] || bg}</div></div>`;
-    h += `<div class="rm-summary-item"><div class="rm-summary-label">Until exam</div><div class="rm-summary-value">${rmLabels[months]} (${weekEst[months] || '~16 weeks'})</div></div>`;
-    h += `<div class="rm-summary-item"><div class="rm-summary-label">Study time</div><div class="rm-summary-value">${rmLabels[hrs] || hrs}</div></div>`;
-    h += `<div class="rm-summary-item"><div class="rm-summary-label">Weak subjects</div><div class="rm-summary-value">${weakText}</div></div>`;
-    h += '</div>';
+    
+    if(masteredCount > 0) {
+      h += `<div class="plan-banner"><i class="fas fa-magic"></i><span>Adaptive Engine: You mastered ${masteredCount} chapter${masteredCount>1?'s':''} in practice. We've dynamically redistributed their study time to your weaker areas!</span></div>`;
+    }
 
     // Week-by-week plan
     h += '<div class="plan-section">';
-    h += '<div class="plan-section-title">Week-by-week plan</div>';
-    plan.forEach((p, i) => {
-      h += `<div class="plan-week">`;
-      h += `<div class="plan-week-num">${p.label}</div>`;
-      h += `<div class="plan-week-bar-wrap"><div class="plan-week-bar" data-w="${p.pct}" style="width:0%;background:${p.color};"></div></div>`;
-      h += `<div class="plan-week-subj">${p.subj}</div>`;
-      if (p.isFocus) h += '<span class="plan-week-focus">Focus</span>';
-      h += '</div>';
+    weeks.forEach(w => {
+      h += `<div class="plan-week-block">`;
+      h += `<div class="plan-week-title">Week ${w.num} <span style="font-size:0.8rem;color:var(--ink-3);font-weight:500;float:right;">~${w.daysAccum} days of material</span></div>`;
+      
+      w.chapters.forEach(ch => {
+        h += `<div class="chapter-row">`;
+        h += `<div class="chapter-info">`;
+        h += `<div class="chapter-subj">${ch.subjectName} &middot; ${ch.days} days allocated</div>`;
+        h += `<div class="chapter-name">${ch.name}</div>`;
+        if(ch.qbTotal > 0) {
+           const pct = Math.round(ch.qbAccuracy * 100);
+           h += `<div class="chapter-meta"><i class="fas fa-chart-bar"></i> Practice Accuracy: <strong style="color:${pct>=75?'var(--teal)':'var(--ink)'}">${pct}%</strong> (${ch.qbTotal} done)</div>`;
+        }
+        h += `</div>`;
+        
+        h += `<div class="chapter-actions">`;
+        const isRev = reviewed[ch.id] ? 'checked' : '';
+        h += `<label class="checkbox-wrap">
+                <input type="checkbox" onchange="toggleReviewed('${ch.id}', this)" ${isRev}>
+                <div class="checkbox-custom"></div>
+                <span class="checkbox-label">Reviewed</span>
+              </label>`;
+        
+        if(ch.mastered) {
+          h += `<div class="mastered-badge"><i class="fas fa-star"></i> Mastered</div>`;
+        } else {
+          h += `<a href="question-bank.html?chapter=${ch.id}" class="btn-practice"><i class="fas fa-play" style="font-size:0.7rem;margin-right:6px;"></i> Practice</a>`;
+        }
+        h += `</div>`;
+        h += `</div>`;
+      });
+      
+      h += `</div>`;
     });
     h += '</div>';
 
-    // Tip
-    h += '<div class="plan-tip">';
-    h += '<strong>💡 How to use this plan:</strong> Each phase builds on the last. Start with foundations, then deep-dive into each subject. ';
-    h += 'Use the <strong>Question Bank</strong> to test yourself after each phase, and take <strong>Mock Exams</strong> in the final weeks to simulate real conditions.';
-    h += '</div>';
-
     // Actions
-    h += '<div class="plan-actions">';
-    h += '<a class="btn-teal" href="question-bank.html"><i class="fas fa-layer-group" style="font-size:0.75rem;"></i> Start practicing</a>';
-    h += '<button class="btn-ghost" onclick="resetRoadmap()"><i class="fas fa-redo" style="font-size:0.7rem;"></i> Rebuild plan</button>';
+    h += '<div style="margin-top:24px; text-align:center;">';
+    h += '<button class="btn-secondary" onclick="resetRoadmap()"><i class="fas fa-redo" style="font-size:0.7rem;"></i> Retake Diagnostic Test</button>';
     h += '</div>';
 
     h += '</div></div>';
     app.innerHTML = h;
-
-    // Animate bars
-    setTimeout(() => {
-      document.querySelectorAll('.plan-week-bar[data-w]').forEach(el => {
-        el.style.width = el.dataset.w + '%';
-      });
-    }, 200);
   }
 }
 
 render();
 </script>
-<script src="xp-system.js"></script>
 <script src="dark-mode.js"></script>
 </body>
 </html>

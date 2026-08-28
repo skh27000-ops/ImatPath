@@ -26643,6 +26643,26 @@ function jumpTo(i){
 }
 function viewResults(){state.view='results';saveState();render();}
 
+// Check for URL parameters to directly open a chapter
+const urlParams = new URLSearchParams(window.location.search);
+const targetChapter = urlParams.get('chapter');
+if(targetChapter) {
+  subjects.forEach(s => {
+    if(s.chapters) {
+      s.chapters.forEach(ch => {
+        if(ch.id === targetChapter) {
+          state.view = 'quiz';
+          state.subject = s.id;
+          state.chapter = ch.id;
+          state.qIdx = ch.startIndex;
+          saveState();
+        }
+      });
+    }
+  });
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
+
 // Only render if this is the main page (not loaded as a script)
 if(window.location.pathname.includes('question-bank')){render();}
 
