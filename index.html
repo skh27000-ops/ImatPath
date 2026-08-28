@@ -993,49 +993,6 @@ function switchPlatTab(id,btn){document.querySelectorAll('.plat-tab').forEach(t=
 function updateUrgency(){const el=document.getElementById('ctaUrgency');if(!el)return;const now=new Date(),target=new Date(now.getFullYear(),8,29);if(now>target)target.setFullYear(target.getFullYear()+1);const days=Math.ceil((target-now)/(86400000));el.innerHTML=`<strong>${days} days</strong> remaining until IMAT 2026`;}
 updateUrgency();
 
-const rmState={step:1,answers:{}};
-const rmSteps=[
-  {question:"What is your academic background?",options:[{val:'science',text:'Studying science (Biology, Chemistry, A-levels or equivalent)'},{val:'nonscience',text:'Studying non-science subjects'},{val:'gap',text:'Gap year or self-studying'}]},
-  {question:"How many hours per week can you realistically study?",options:[{val:'lt10',text:'Less than 10 hours'},{val:'10to20',text:'10 – 20 hours'},{val:'20to30',text:'20 – 30 hours'},{val:'30plus',text:'30+ hours'}]},
-  {question:"Diagnostic Test",options:[{val:'start',text:'Start 15-question diagnostic test (Unlock full plan)'}]}
-];
-const rmLabels={science:'Science background',nonscience:'Non-science background',gap:'Gap year / self-studying',lt10:'Less than 10 h/week','10to20':'10 – 20 h/week','20to30':'20 – 30 h/week','30plus':'30+ h/week'};
-
-function renderRoadmap(){const c=document.getElementById('rmContainer');if(rmState.step<=3){const s=rmSteps[rmState.step-1];let h='<div class="rm-progress">';for(let i=1;i<=3;i++)h+=`<div class="rm-prog-bar ${i<rmState.step?'done':i===rmState.step?'current':''}"></div>`;h+='</div>';h+=`<div class="rm-step active"><div class="rm-question">${s.question}</div><div class="rm-options">`;s.options.forEach(o=>{const sel=rmState.answers[rmState.step]===o.val?'selected':'';h+=`<div class="rm-opt ${sel}" onclick="selectRmOpt(${rmState.step},'${o.val}',false)"><div class="rm-opt-dot"></div>${o.text}</div>`;});h+='</div><div class="rm-nav">';h+=rmState.step>1?'<button class="rm-back" onclick="rmBack()">Back</button>':'<div></div>';const cn=rmState.answers[rmState.step];h+=`<button class="rm-next" onclick="rmNext()" ${cn?'':'disabled'}>${rmState.step===3?'See your summary':'Next'}</button></div></div>`;c.innerHTML=h;}else{c.innerHTML=renderPaywall();}}
-function selectRmOpt(step,val,multi){if(multi){let a=rmState.answers[step]||[];if(a.includes(val))a=a.filter(v=>v!==val);else a.push(val);rmState.answers[step]=a;}else{rmState.answers[step]=val;}renderRoadmap();}
-function rmBack(){rmState.step--;renderRoadmap();}
-function rmNext(){if(rmState.step<3){rmState.step++;renderRoadmap();}else{rmState.step=4;renderRoadmap();}}
-
-function renderPaywall(){
-  const bg=rmState.answers[1],hrs=rmState.answers[2];
-  let h='<div class="rm-paywall">';
-  h+='<div class="rm-paywall-check"><i class="fas fa-check"></i></div>';
-  h+='<div class="rm-paywall-title">We\'ve got everything we need.</div>';
-  h+='<div class="rm-paywall-sub">Based on your answers, we\'ll build a personalized IMAT Test plan. Here\'s what we\'ll work with:</div>';
-  h+='<div class="rm-summary">';
-  h+=`<div class="rm-summary-item"><div class="rm-summary-label">Background</div><div class="rm-summary-value">${rmLabels[bg] || 'Science'}</div></div>`;
-  h+=`<div class="rm-summary-item"><div class="rm-summary-label">Study time</div><div class="rm-summary-value">${rmLabels[hrs] || '10-20 h/week'}</div></div>`;
-  h+=`<div class="rm-summary-item"><div class="rm-summary-label">Diagnostic</div><div class="rm-summary-value">15 questions pending</div></div>`;
-  h+='</div>';
-  h+='<div class="rm-plan-preview"><div class="rm-plan-preview-blur">';
-  h+=`<div class="rp-week"><div class="rp-week-num">Week 1</div><div class="rp-week-bar-wrap"><div class="rp-week-bar" style="width:70%;"></div></div><div class="rp-week-subj">Cell Biology</div></div>`;
-  h+=`<div class="rp-week"><div class="rp-week-num">Week 2</div><div class="rp-week-bar-wrap"><div class="rp-week-bar" style="width:80%;"></div></div><div class="rp-week-subj">Atomic Structure</div></div>`;
-  h+=`<div class="rp-week"><div class="rp-week-num">Week 3</div><div class="rp-week-bar-wrap"><div class="rp-week-bar" style="width:60%;"></div></div><div class="rp-week-subj">Kinematics</div></div>`;
-  h+=`<div class="rp-week"><div class="rp-week-num">Week 4</div><div class="rp-week-bar-wrap"><div class="rp-week-bar" style="width:90%;"></div></div><div class="rp-week-subj">Genetics</div></div>`;
-  h+='</div>';
-  h+='<div class="rm-plan-preview-label"><i class="fas fa-lock"></i><span>Your personalized IMAT Test</span><small>Subscribe to unlock</small></div></div>';
-  h+='<button class="rm-paywall-cta" onclick="scrollTo(\'#pricing\')">Subscribe to get your IMAT Test</button>';
-  h+='<div style="margin-top:20px;"><button class="rm-back" onclick="resetRoadmap()" style="margin:0 auto;display:inline-flex;">Start over</button></div>';
-  h+='</div>';
-  return h;
-}
-
-function generateSamplePlan(weak,months){
-  return [];
-}
-
-function resetRoadmap(){rmState.step=1;rmState.answers={};renderRoadmap();}
-
 const qbData={biology:[{q:"Which organelle is known as the \"powerhouse of the cell\"?",opts:["Ribosome","Mitochondria","Golgi apparatus","Lysosome"],ans:1,diff:"easy",exp:"<strong>Mitochondria</strong> generate most of the cell's ATP through oxidative phosphorylation."},{q:"During which phase of mitosis do chromosomes align at the cell's equatorial plate?",opts:["Prophase","Metaphase","Anaphase","Telophase"],ans:1,diff:"medium",exp:"In <strong>metaphase</strong>, chromosomes line up at the metaphase plate."},{q:"Which blood type is the universal donor for red blood cell transfusions?",opts:["Type A","Type B","Type AB","Type O negative"],ans:3,diff:"medium",exp:"<strong>Type O negative</strong> lacks A, B, and RhD antigens."},{q:"In Hardy-Weinberg, if allele 'a' frequency is 0.3, what % is heterozygous?",opts:["21%","42%","49%","9%"],ans:1,diff:"hard",exp:"2pq = 2 × 0.7 × 0.3 = <strong>0.42</strong> = 42%."}],chemistry:[{q:"What is the molecular geometry of water (H₂O)?",opts:["Linear","Trigonal planar","Bent (V-shaped)","Tetrahedral"],ans:2,diff:"easy",exp:"Water has a <strong>bent geometry</strong> with ~104.5° bond angle."},{q:"Which of the following is a strong acid?",opts:["CH₃COOH","HCl","H₂CO₃","NH₄⁺"],ans:1,diff:"medium",exp:"<strong>HCl</strong> completely dissociates (pKa ≈ −7)."},{q:"What is the oxidation state of Mn in KMnO₄?",opts:["+4","+5","+6","+7"],ans:3,diff:"medium",exp:"+1 + Mn − 8 = 0, so <strong>Mn = +7</strong>."},{q:"Which statement about reaction kinetics is correct?",opts:["Temperature decreases rate constant","Catalyst changes equilibrium","Rate-determining step is fastest","Arrhenius equation relates k to T"],ans:3,diff:"hard",exp:"The <strong>Arrhenius equation</strong> relates rate constant to temperature."}],physics:[{q:"What is the SI unit of force?",opts:["Joule","Watt","Newton","Pascal"],ans:2,diff:"easy",exp:"The <strong>Newton (N)</strong> is the SI unit of force."},{q:"A 10Ω resistor at 5V. What current flows?",opts:["0.5 A","2 A","50 A","0.05 A"],ans:0,diff:"medium",exp:"I = V/R = 5/10 = <strong>0.5 A</strong>."},{q:"Object at 30cm from f=10cm converging lens. Image at?",opts:["15 cm","20 cm","30 cm","Infinity"],ans:0,diff:"hard",exp:"1/v = 1/10 − 1/30 = 2/30, so <strong>v = 15 cm</strong>."}],math:[{q:"What is the derivative of sin(x)?",opts:["−cos(x)","cos(x)","tan(x)","−sin(x)"],ans:1,diff:"easy",exp:"d/dx[sin(x)] = <strong>cos(x)</strong>."},{q:"If log₂(x) = 5, what is x?",opts:["10","25","32","64"],ans:2,diff:"medium",exp:"2⁵ = <strong>32</strong>."},{q:"∫ 1/(1+x²) dx = ?",opts:["ln(1+x²)+C","arctan(x)+C","arcsin(x)+C","1/x+C"],ans:1,diff:"hard",exp:"<strong>arctan(x) + C</strong> is a standard integral."}],gk:[{q:"When did the Italian Republic come into existence?",opts:["1943","1946","1948","1950"],ans:1,diff:"easy",exp:"June 2, <strong>1946</strong> institutional referendum."},{q:"Which is a fundamental EU principle?",opts:["Freedom of movement","Single language","Centralized tax","Unified military"],ans:0,diff:"medium",exp:"<strong>Freedom of movement</strong> is a fundamental EU freedom."},{q:"The IMAT is administered by which organization?",opts:["Italian Ministry","Cambridge Assessment","ETS","British Council"],ans:1,diff:"medium",exp:"<strong>Cambridge Assessment Admissions Testing</strong>."}]};
 const qbState={subject:'biology',qIdx:0,answered:false,scores:{}};
 Object.keys(qbData).forEach(k=>{qbState.scores[k]={correct:0,total:0};});
