@@ -224,7 +224,7 @@ footer{background:var(--stone);border-top:1px solid var(--stone-3);padding:28px 
 
 <footer>
   <div class="footer-logo">Imat<span>Path</span></div>
-  <div style="font-size:0.78rem;color:var(--ink-3);">&copy; 2026 ImatPath &middot; past papers</div>
+  <div style="font-size:0.78rem;color:var(--ink-3);">&copy; 2025 ImatPath &middot; past papers</div>
 </footer>
 
 <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastText"></span></div>
@@ -233,7 +233,7 @@ footer{background:var(--stone);border-top:1px solid var(--stone-3);padding:28px 
 <script>
 // Debug: Check if past papers loaded
 console.log('Past papers loaded:', typeof pastPapersData);
-if(typeof pastPapersData === 'undefined' || !pastPapersData['2026']){
+if(typeof pastPapersData === 'undefined' || !pastPapersData['2025']){
   console.error('Past papers array not loaded! Check past-papers-data.js');
   document.getElementById('app').innerHTML='<div style="padding:80px 56px;text-align:center;"><h2>Error loading questions</h2><p>Could not load past papers data. Please ensure past-papers-data.js is in the same folder.</p></div>';
 }
@@ -352,10 +352,10 @@ function render(){console.log('Rendering view:', state.view);const app=document.
   <h1 class="sec-title" style="text-align:center;margin:0 auto 14px;animation:fadeInUp 0.6s ease 0.1s backwards;">Past Papers<span style="color:var(--teal);">.</span></h1>
   <p class="sec-sub" style="text-align:center;margin:0 auto 40px;animation:fadeInUp 0.6s ease 0.2s backwards;">Practice with official past IMAT papers under real exam conditions.</p>
   <div class="mock-grid">
-    <div class="mock-card" onclick="selectExam('2026')" style="animation:fadeInUp 0.6s ease 0.25s backwards;">
+    <div class="mock-card" onclick="selectExam('2025')" style="animation:fadeInUp 0.6s ease 0.25s backwards;">
       <div class="mock-icon"><i class="fas fa-file-signature"></i></div>
-      <div class="mock-title">IMAT 2026 Past Paper</div>
-      <div class="mock-desc">Full 100-minute simulation with 60 IMAT questions from 2026.</div>
+      <div class="mock-title">IMAT 2025 Past Paper</div>
+      <div class="mock-desc">Full 100-minute simulation with 60 IMAT questions from 2025.</div>
       <div class="mock-meta">Start Exam <i class="fas fa-arrow-right"></i></div>
     </div>
   </div>
@@ -647,6 +647,7 @@ render();
 <script src="ai-tutor.js"></script>
 </body>
 </html>
+
 
 
 

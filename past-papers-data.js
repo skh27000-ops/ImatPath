@@ -1,5 +1,5 @@
 const pastPapersData = {
-  '2026': [
+  '2025': [
   {
     "id": 1,
     "question": "\"Other serious conditions (the frequency cannot be determined based on available data): yellowing of the skin or the whites of the eyes (indicative of severe liver cell damage or jaundice), or symptoms such as fever, rash, and kidney enlargement. These may sometimes be accompanied by painful urination and lower back pain (signs of severe kidney inflammation), which can potentially progress to kidney failure.\"From the informational leaflet for Teva Pantoprazolo  Which of the following statements is the correct interpretation of the information contained in this excerpt?",
@@ -842,3 +842,4 @@ const pastPapersData = {
   }
 ]
 };
+
