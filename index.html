@@ -826,8 +826,8 @@ footer {
   <div class="preview-inner">
     <div>
       <div class="sec-label rv-l">Inside ImatPath</div>
-      <h2 class="sec-title rv-l d1" style="font-size:clamp(2rem,3.5vw,2.8rem);">Your IMAT Test, built around your timeline.</h2>
-      <p class="sec-sub rv-l d2" style="margin-bottom:28px;">Every student gets a different plan. Tell us when your exam is and what you struggle with — we handle the rest.</p>
+      <h2 class="sec-title rv-l d1" style="font-size:clamp(2rem,3.5vw,2.8rem);">Master the IMAT with real practice.</h2>
+      <p class="sec-sub rv-l d2" style="margin-bottom:28px;">Stop guessing. Our Question Bank features over 2,000 IMAT-style questions, complete with detailed explanations for every single answer.</p>
       <button class="btn-hero-primary rv-l d3" style="font-size:0.88rem;padding:11px 26px;" onclick="window.location.href='dashboard.html'">Get started</button>
     </div>
     <div class="preview-ui rv-r d2">
@@ -835,25 +835,20 @@ footer {
         <div class="ui-dot" style="background:#E57373;"></div>
         <div class="ui-dot" style="background:#FFB74D;"></div>
         <div class="ui-dot" style="background:#81C784;"></div>
-        <span style="font-size:0.7rem;color:var(--ink-3);margin-left:8px;">ImatPath — IMAT Test</span>
+        <span style="font-size:0.7rem;color:var(--ink-3);margin-left:8px;">ImatPath — Question Bank</span>
       </div>
       <div class="preview-ui-body">
-        <div class="ui-label">Step 2 of 4</div>
-        <div class="ui-q">When is your IMAT exam?</div>
+        <div class="ui-label">Biology &middot; Question 42</div>
+        <div class="ui-q">Which organelle is known as the "powerhouse" of the cell and is responsible for ATP production?</div>
         <div class="ui-opts">
-          <div class="ui-opt"><div class="ui-opt-dot"></div>Less than 2 months</div>
-          <div class="ui-opt sel"><div class="ui-opt-dot"></div>2 – 4 months</div>
-          <div class="ui-opt"><div class="ui-opt-dot"></div>4 – 6 months</div>
-          <div class="ui-opt"><div class="ui-opt-dot"></div>6+ months</div>
+          <div class="ui-opt"><div class="ui-opt-dot"></div>Ribosome</div>
+          <div class="ui-opt sel" style="border-color:var(--teal); background:var(--teal-faint); color:var(--teal-2);"><div class="ui-opt-dot" style="border-color:var(--teal); background:var(--teal);"><span style="color:white; font-size:10px; font-weight:bold; line-height:14px; text-align:center; display:block; width:100%;">✓</span></div>Mitochondria</div>
+          <div class="ui-opt"><div class="ui-opt-dot"></div>Golgi apparatus</div>
+          <div class="ui-opt"><div class="ui-opt-dot"></div>Lysosome</div>
         </div>
-        <div class="ui-progress-row"><span>Building your plan...</span><span>50%</span></div>
-        <div class="ui-bar-wrap"><div class="ui-bar-fill" id="uiBarFill"></div></div>
-        <div class="ui-plan-title">Your 12-week plan preview</div>
-        <div class="ui-weeks">
-          <div class="ui-week"><div class="ui-week-label">Weeks 1–3</div><div class="ui-week-bar-wrap"><div class="ui-week-bar" data-width="90" style="background:#0D9488;"></div></div><div class="ui-week-subj">Biology foundation</div></div>
-          <div class="ui-week"><div class="ui-week-label">Weeks 4–6</div><div class="ui-week-bar-wrap"><div class="ui-week-bar" data-width="75" style="background:#5DCAA5;"></div></div><div class="ui-week-subj">Chemistry core</div></div>
-          <div class="ui-week"><div class="ui-week-label">Weeks 7–8</div><div class="ui-week-bar-wrap"><div class="ui-week-bar" data-width="50" style="background:#0D9488;"></div></div><div class="ui-week-subj">Physics & Math</div></div>
-          <div class="ui-week"><div class="ui-week-label">Weeks 9–12</div><div class="ui-week-bar-wrap"><div class="ui-week-bar" data-width="80" style="background:#5DCAA5;"></div></div><div class="ui-week-subj">Mocks + revision</div></div>
+        <div style="margin-top:20px; padding:16px; background:var(--teal-faint); border:1px solid rgba(13,148,136,0.2); border-radius:10px;">
+          <div style="font-size:0.75rem; font-weight:800; color:var(--teal); margin-bottom:6px; letter-spacing:0.5px; text-transform:uppercase;"><i class="fas fa-check-circle" style="margin-right:4px;"></i> Correct</div>
+          <div style="font-size:0.85rem; color:var(--ink-2); line-height:1.6;"><strong>Mitochondria</strong> generate most of the cell's supply of adenosine triphosphate (ATP), used as a source of chemical energy.</div>
         </div>
       </div>
     </div>
@@ -868,13 +863,11 @@ footer {
       <p class="sec-sub rv d2" style="margin:0 auto;">Every tool below is fully functional. Go ahead — click around.</p>
     </div>
     <div class="platform-tabs rv d3">
-      <button class="plat-tab active" onclick="switchPlatTab('roadmap',this)"><i class="fas fa-route" style="margin-right:6px;font-size:12px;"></i>IMAT Test</button>
-      <button class="plat-tab" onclick="switchPlatTab('qbank',this)"><i class="fas fa-layer-group" style="margin-right:6px;font-size:12px;"></i>Question Bank</button>
+      <button class="plat-tab active" onclick="switchPlatTab('qbank',this)"><i class="fas fa-layer-group" style="margin-right:6px;font-size:12px;"></i>Question Bank</button>
       <button class="plat-tab" onclick="switchPlatTab('mock',this)"><i class="fas fa-stopwatch" style="margin-right:6px;font-size:12px;"></i>Mock Exam</button>
       <button class="plat-tab" onclick="switchPlatTab('guide',this)"><i class="fas fa-clipboard-check" style="margin-right:6px;font-size:12px;"></i>Application Guide</button>
     </div>
-    <div class="plat-panel active" id="panel-roadmap"><div class="rm-container" id="rmContainer"></div></div>
-    <div class="plat-panel" id="panel-qbank"><div class="qb-container"><div class="qb-subject-tabs" id="qbSubjectTabs"></div><div class="qb-card" id="qbCard"></div></div></div>
+    <div class="plat-panel active" id="panel-qbank"><div class="qb-container"><div class="qb-subject-tabs" id="qbSubjectTabs"></div><div class="qb-card" id="qbCard"></div></div></div>
     <div class="plat-panel" id="panel-mock"><div class="mock-container"><div class="mock-start" id="mockStart"><h3>IMAT Mini Mock Exam</h3><p>10 IMAT-style questions across all subjects, timed to simulate real exam pressure. See your score breakdown by subject when you finish.</p><div class="mock-rules"><div class="mock-rule"><strong>10 questions</strong>Across Biology, Chemistry, Physics, Math & GK</div><div class="mock-rule"><strong>15 minutes</strong>Timed — just like the real thing. Timer pauses if you switch tabs.</div><div class="mock-rule"><strong>IMAT scoring</strong>+1.5 correct, −0.4 wrong, 0 blank</div></div><button class="btn-hero-primary" style="font-size:0.88rem;padding:11px 28px;" onclick="startMockExam()">Start mock exam</button></div><div class="mock-active" id="mockActive"><div class="mock-topbar"><div style="display:flex;align-items:center;gap:12px;"><div class="mock-timer" id="mockTimer"><i class="fas fa-clock"></i> <span id="mockTimeDisplay">15:00</span></div><span class="mock-paused-label" id="mockPausedLabel">Paused</span></div><div class="mock-progress-text" id="mockProgressText">0 / 10 answered</div><button class="mock-submit-btn" id="mockSubmitBtn" onclick="confirmSubmitMock()">End exam</button></div><div class="mock-question-grid" id="mockQGrid"></div><div class="mock-q-card" id="mockQCard"></div></div><div class="mock-results" id="mockResults"></div></div></div>
     <div class="plat-panel" id="panel-guide"><div class="guide-container"><div class="guide-toggle"><button class="guide-toggle-btn active" onclick="switchGuide('eu',this)">EU Students</button><button class="guide-toggle-btn" onclick="switchGuide('noneu',this)">Non-EU Students</button></div><div class="guide-progress-card"><div class="guide-prog-label">Your progress</div><div class="guide-prog-bar"><div class="guide-prog-fill" id="guideProgFill" style="width:0%;"></div></div><div class="guide-prog-pct" id="guideProgPct">0%</div></div><div id="guideChecklist"></div></div></div>
   </div>
@@ -1130,9 +1123,10 @@ function toggleGuideItem(key,allItems){guideState.checked[key]=!guideState.check
 
 function toggleFaq(btn){const item=btn.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false');});if(!wasOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}}
 
-document.addEventListener('DOMContentLoaded',()=>{renderRoadmap();initQB();renderGuide();});
+document.addEventListener('DOMContentLoaded',()=>{initQB();renderGuide();});
 </script>
 <script src="dark-mode.js"></script>
 </body>
 </html>
+
 
