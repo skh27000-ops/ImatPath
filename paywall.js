@@ -34,7 +34,7 @@ async function renderPayPalButtons(session) {
           purchase_units: [{
             description: 'ImatPath Until Exam 2026',
             amount: {
-              value: '10.00'
+              value: '1.00'
             }
           }]
         });
