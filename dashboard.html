@@ -598,7 +598,7 @@ function updateDashboard() {
   document.getElementById('currentPlan').textContent = planDisplay;
 
   // Days until IMAT
-  const imatDate = new Date('2026-09-15');
+  const imatDate = new Date('2026-09-29');
   const today = new Date();
   const daysLeft = Math.ceil((imatDate - today) / (1000 * 60 * 60 * 24));
   document.getElementById('daysRemaining').textContent = daysLeft;

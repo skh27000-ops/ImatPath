@@ -976,7 +976,7 @@ if(previewUi)previewObs.observe(previewUi);
 
 function switchPlatTab(id,btn){document.querySelectorAll('.plat-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.plat-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById('panel-'+id).classList.add('active');}
 
-function updateUrgency(){const el=document.getElementById('ctaUrgency');if(!el)return;const now=new Date(),target=new Date(now.getFullYear(),8,17);if(now>target)target.setFullYear(target.getFullYear()+1);const days=Math.ceil((target-now)/(86400000));el.innerHTML=`<strong>${days} days</strong> remaining until IMAT 2026`;}
+function updateUrgency(){const el=document.getElementById('ctaUrgency');if(!el)return;const now=new Date(),target=new Date(now.getFullYear(),8,29);if(now>target)target.setFullYear(target.getFullYear()+1);const days=Math.ceil((target-now)/(86400000));el.innerHTML=`<strong>${days} days</strong> remaining until IMAT 2026`;}
 updateUrgency();
 
 const rmState={step:1,answers:{}};
