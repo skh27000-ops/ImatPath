@@ -229,11 +229,11 @@ footer{background:var(--stone);border-top:1px solid var(--stone-3);padding:28px 
 
 <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastText"></span></div>
 
-<script src="questions-data.js"></script>
+<script src="past-papers-data.js"></script>
 <script>
 // Debug: Check if past papers loaded
 console.log('Past papers loaded:', typeof pastPapersData);
-if(!pastPapersData || !pastPapersData['2026']){
+if(typeof pastPapersData === 'undefined' || !pastPapersData['2026']){
   console.error('Past papers array not loaded! Check past-papers-data.js');
   document.getElementById('app').innerHTML='<div style="padding:80px 56px;text-align:center;"><h2>Error loading questions</h2><p>Could not load past papers data. Please ensure past-papers-data.js is in the same folder.</p></div>';
 }
