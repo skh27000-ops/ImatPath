@@ -135,13 +135,74 @@ footer{background:var(--stone);border-top:1px solid var(--stone-3);padding:28px 
 }
 @media(max-width:768px){.mock-grid{grid-template-columns:1fr;}.stats-row{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:500px){.stats-row{grid-template-columns:1fr;}}
+
+/* Paywall Overlay */
+.paywall-overlay {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(250, 249, 246, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+}
+.paywall-overlay.active {
+  opacity: 1; pointer-events: all;
+}
+.paywall-card {
+  background: var(--white);
+  border-radius: 24px; padding: 40px;
+  max-width: 500px; width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  transform: translateY(20px); transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.paywall-overlay.active .paywall-card {
+  transform: translateY(0);
+}
+.paywall-icon {
+  font-size: 3rem; color: var(--teal); margin-bottom: 20px;
+}
+.paywall-title {
+  font-size: 1.8rem; font-weight: 800; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.5px;
+}
+.paywall-desc {
+  font-size: 1rem; color: var(--ink-3); margin-bottom: 24px; line-height: 1.6;
+}
+.paywall-feats {
+  text-align: left; margin-bottom: 32px; display:flex; flex-direction: column; gap:12px;
+}
+.paywall-feat {
+  display: flex; align-items: center; gap: 10px; font-size: 0.95rem; font-weight: 500; color: var(--ink-2);
+}
+.paywall-feat i { color: var(--teal); }
 </style>
 <link rel="stylesheet" href="dark-mode.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase.js"></script>
+<script src="paywall.js"></script>
 <script src="auth-guard.js"></script>
 </head>
 <body>
+
+<!-- Paywall Overlay -->
+<div class="paywall-overlay" id="paywallOverlay">
+  <div class="paywall-card">
+    <div class="paywall-icon"><i class="fas fa-lock"></i></div>
+    <div class="paywall-title">Unlock ImatPath</div>
+    <div class="paywall-desc">Get unlimited access to all premium features and study materials until the day of your IMAT exam.</div>
+    
+    <div class="paywall-feats">
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 2000+ IMAT-style questions & solutions</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 20 full timed mock exams</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Personalized AI study roadmap</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> AI Tutor (powered by Gemini)</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Score predictions & analytics</div>
+    </div>
+
+    <div id="paypal-button-container" style="margin-top: 20px;"></div>
+  </div>
+</div>
 
 <nav>
   <a class="logo" href="dashboard.html">
@@ -419,6 +480,46 @@ let html=`
   </div>
 </div></section>`;return html;}
 
+function toggleAITutor() {
+  const container = document.getElementById('ai-tutor-container');
+  if(container.style.display === 'none') {
+    container.style.display = 'block';
+  } else {
+    container.style.display = 'none';
+  }
+}
+
+async function askAITutor() {
+  const inputEl = document.getElementById('ai-tutor-input');
+  const responseEl = document.getElementById('ai-tutor-response');
+  const submitBtn = document.getElementById('ai-tutor-submit');
+  const query = inputEl.value.trim();
+  if(!query) return;
+
+  if(!window.ImatAITutor) {
+    responseEl.style.display = 'block';
+    responseEl.innerHTML = '<span style="color:var(--red);">Error: AI Tutor module not loaded.</span>';
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Thinking...';
+  responseEl.style.display = 'none';
+
+  try {
+    const q = state.examQuestions[state.currentQuestion];
+    const htmlResponse = await window.ImatAITutor.ask(q, query);
+    responseEl.innerHTML = htmlResponse;
+    responseEl.style.display = 'block';
+  } catch(e) {
+    responseEl.innerHTML = '<span style="color:var(--red);">Error: ' + e.message + '</span>';
+    responseEl.style.display = 'block';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send to AI Tutor';
+  }
+}
+
 function renderReview(){const q=state.examQuestions[state.currentQuestion];const answer=state.answers[state.currentQuestion];const L=['A','B','C','D','E'];
   let html=`
 <section style="padding:100px 56px 60px;min-height:100vh;background:var(--stone-2);"><div style="max-width:800px;margin:0 auto;">
@@ -452,6 +553,15 @@ function renderReview(){const q=state.examQuestions[state.currentQuestion];const
     <div style="margin-top:24px;padding:20px;border-radius:12px;background:${answer===q.correct?'var(--teal-faint)':'var(--red-faint)'};border:1px solid ${answer===q.correct?'rgba(13,148,136,0.2)':'rgba(220,38,38,0.2)'};">
       <div style="font-weight:700;margin-bottom:8px;color:${answer===q.correct?'var(--teal)':'var(--red)'};"><i class="fas ${answer===q.correct?'fa-circle-check':'fa-circle-xmark'}"></i> ${answer===q.correct?'Correct!':'Incorrect'}</div>
       <div style="color:var(--ink);font-size:0.95rem;line-height:1.6;">${q.solution || 'No detailed solution available.'}</div>
+      
+      <div class="ai-tutor-box" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(0,0,0,0.05);">
+        <button class="btn-ghost" onclick="toggleAITutor()" style="width:100%;font-size:0.9rem;border:1px dashed var(--teal);color:var(--teal);"><i class="fas fa-sparkles"></i> Ask AI Tutor</button>
+        <div id="ai-tutor-container" style="display:none;margin-top:12px;">
+          <textarea id="ai-tutor-input" placeholder="e.g. Why is option B incorrect?" style="width:100%;padding:12px;border:1px solid var(--stone-3);border-radius:8px;font-family:inherit;margin-bottom:8px;resize:vertical;"></textarea>
+          <button class="btn-teal" onclick="askAITutor()" style="width:100%;font-size:0.9rem;" id="ai-tutor-submit"><i class="fas fa-paper-plane"></i> Send to AI Tutor</button>
+          <div id="ai-tutor-response" style="margin-top:16px;font-size:0.95rem;color:var(--ink-2);background:var(--white);padding:16px;border-radius:8px;display:none;box-shadow:inset 0 2px 4px rgba(0,0,0,0.05);"></div>
+        </div>
+      </div>
     </div>
   </div>
   
@@ -549,5 +659,7 @@ render();
 </script>
 <script src="xp-system.js"></script>
 <script src="dark-mode.js"></script>
+<script src="config.js"></script>
+<script src="ai-tutor.js"></script>
 </body>
 </html>

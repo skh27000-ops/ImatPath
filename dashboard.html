@@ -34,6 +34,47 @@
   --gradient-3: linear-gradient(135deg, #0F766E 0%, #0D9488 100%);
 }
 
+/* Paywall Overlay */
+.paywall-overlay {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(250, 249, 246, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+}
+.paywall-overlay.active {
+  opacity: 1; pointer-events: all;
+}
+.paywall-card {
+  background: var(--white);
+  border-radius: 24px; padding: 40px;
+  max-width: 500px; width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  transform: translateY(20px); transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.paywall-overlay.active .paywall-card {
+  transform: translateY(0);
+}
+.paywall-icon {
+  font-size: 3rem; color: var(--teal); margin-bottom: 20px;
+}
+.paywall-title {
+  font-size: 1.8rem; font-weight: 800; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.5px;
+}
+.paywall-desc {
+  font-size: 1rem; color: var(--ink-3); margin-bottom: 24px; line-height: 1.6;
+}
+.paywall-feats {
+  text-align: left; margin-bottom: 32px; display:flex; flex-direction: column; gap:12px;
+}
+.paywall-feat {
+  display: flex; align-items: center; gap: 10px; font-size: 0.95rem; font-weight: 500; color: var(--ink-2);
+}
+.paywall-feat i { color: var(--teal); }
+
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 
@@ -417,10 +458,30 @@ nav {
 <link rel="stylesheet" href="dark-mode.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase.js"></script>
+<script src="paywall.js"></script>
 <script src="auth-guard.js"></script>
 <script src="questions-data.js"></script>
 </head>
 <body>
+
+<!-- Paywall Overlay -->
+<div class="paywall-overlay" id="paywallOverlay">
+  <div class="paywall-card">
+    <div class="paywall-icon"><i class="fas fa-lock"></i></div>
+    <div class="paywall-title">Unlock ImatPath</div>
+    <div class="paywall-desc">Get unlimited access to all premium features and study materials until the day of your IMAT exam.</div>
+    
+    <div class="paywall-feats">
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 2000+ IMAT-style questions & solutions</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 20 full timed mock exams</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Personalized AI study roadmap</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> AI Tutor (powered by Gemini)</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Score predictions & analytics</div>
+    </div>
+
+    <div id="paypal-button-container" style="margin-top: 20px;"></div>
+  </div>
+</div>
 
 <nav>
   <a class="logo" href="index.html">Imat<span>Path</span></a>
