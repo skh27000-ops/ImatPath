@@ -3,311 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ImatPath — Question Bank</title>
-<meta name="description" content="Practice 2,000+ IMAT-style questions across Biology, Chemistry, Physics, Mathematics, and General Knowledge with detailed explanations.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<title>Question Bank — ImatPath</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230c2b21'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23f6f1e7' font-family='Georgia'>i</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-700.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-:root {
-  --stone: #F4F3F0; --stone-2: #EDECEA; --stone-3: #E0DEDB; --stone-4: #C8C5C1;
-  --ink: #1A1916; --ink-2: #3D3A36; --ink-3: #5A5750; --ink-4: #8A8780;
-  --teal: #0D9488; --teal-2: #0F766E; --teal-pale:#CCFBF1; --teal-faint:#F0FDFB;
-  --white: #FFFFFF; --red: #DC2626; --red-faint:#FEF2F2; --amber: #B45309; --amber-pale:#FEF3C7;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--stone);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(244,243,240,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--stone-3);box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);}
-.logo{font-size:1.4rem;font-weight:800;letter-spacing:-0.5px;color:var(--ink);text-decoration:none;}
-.logo span{color:var(--teal);}
-.logo-icon{width:40px;height:40px;background:var(--teal);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:1.1rem;}
 
-.nav-links{display:flex;gap:8px;align-items:center;}
-.nav-link{padding:10px 20px;border-radius:10px;text-decoration:none;color:var(--ink-3);font-weight:500;font-size:0.9rem;transition:all 0.3s ease;}
-.nav-link:hover,.nav-link.active{background:var(--teal);color:white;transform:translateY(-2px);}
-.nav-link i{margin-right:8px;}
-
-.nav-right{display:flex;gap:12px;align-items:center;}
-.user-avatar{width:42px;height:42px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:1rem;cursor:pointer;transition:transform 0.3s;}
-.user-avatar:hover{transform:scale(1.1);}
-
-.dashboard-container{padding:120px 40px 60px;max-width:1400px;margin:0 auto;}
-
-.welcome-section{margin-bottom:40px;animation:fadeInUp 0.6s ease;}
-.welcome-title{font-size:2.5rem;font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--ink);margin-bottom:12px;}
-.welcome-title .highlight{color:var(--teal);}
-.welcome-sub{font-size:1.1rem;font-weight:400;color:var(--ink-3);line-height:1.6;max-width:600px;}
-
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:40px;}
-.stat-card{background:var(--white);border-radius:20px;padding:28px;box-shadow:var(--shadow);transition:all 0.3s ease;position:relative;overflow:hidden;animation:fadeInUp 0.6s ease backwards;}
-.stat-card:nth-child(1){animation-delay:0.1s;}
-.stat-card:nth-child(2){animation-delay:0.2s;}
-.stat-card:nth-child(3){animation-delay:0.3s;}
-.stat-card:nth-child(4){animation-delay:0.4s;}
-.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gradient);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;}
-.stat-card:hover::before{transform:scaleX(1);}
-.stat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
-.stat-card.purple::before{background:var(--teal);}
-.stat-card.green::before{background:var(--teal-2);}
-.stat-card.orange::before{background:var(--amber);}
-.stat-card.blue::before{background:var(--teal);}
-.stat-icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px;}
-.stat-card.purple .stat-icon{background:var(--teal-faint);color:var(--teal);}
-.stat-card.green .stat-icon{background:var(--teal-pale);color:var(--teal-2);}
-.stat-card.orange .stat-icon{background:var(--amber-pale);color:var(--amber);}
-.stat-card.blue .stat-icon{background:var(--teal-faint);color:var(--teal);}
-.stat-value{font-size:2.5rem;font-weight:800;color:var(--ink);letter-spacing:-2px;margin-bottom:4px;line-height:1;}
-.stat-label{font-size:0.85rem;color:var(--ink-3);font-weight:500;letter-spacing:0.5px;text-transform:uppercase;}
-
-.section-card{background:var(--white);border-radius:24px;padding:32px;box-shadow:var(--shadow);animation:fadeInUp 0.6s ease backwards;animation-delay:0.5s;}
-.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;}
-.section-title{font-size:1.3rem;font-weight:700;color:var(--ink);letter-spacing:-0.5px;}
-.section-subtitle{font-size:0.9rem;color:var(--ink-3);}
-
-.cards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-.action-card{background:var(--white);border:2px solid var(--stone-3);border-radius:20px;padding:24px;cursor:pointer;transition:all 0.3s ease;position:relative;overflow:hidden;animation:fadeInUp 0.6s ease backwards;}
-.action-card:nth-child(1){animation-delay:0.6s;}
-.action-card:nth-child(2){animation-delay:0.7s;}
-.action-card:nth-child(3){animation-delay:0.8s;}
-.action-card:nth-child(4){animation-delay:0.9s;}
-.action-card::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:var(--teal);opacity:0;transition:opacity 0.3s ease;}
-.action-card:hover::after{opacity:0.05;}
-.action-card:hover{transform:translateY(-5px);border-color:var(--teal);box-shadow:var(--shadow-lg);}
-.action-card.featured{background:var(--teal);border:none;}
-.action-card.featured .action-icon{background:rgba(255,255,255,0.2);color:white;}
-.action-card.featured .action-title{color:white;}
-.action-card.featured .action-desc{color:rgba(255,255,255,0.8);}
-.action-card.featured .action-meta{color:rgba(255,255,255,0.9);}
-.action-card.featured::after{display:none;}
-.action-icon{width:56px;height:56px;border-radius:16px;background:var(--teal-faint);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:1.4rem;margin-bottom:16px;transition:all 0.3s ease;}
-.action-card:hover .action-icon{transform:scale(1.1) rotate(5deg);}
-.action-title{font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:-0.3px;}
-.action-desc{font-size:0.9rem;color:var(--ink-3);line-height:1.5;margin-bottom:16px;}
-.action-meta{font-size:0.85rem;color:var(--teal);font-weight:600;display:flex;align-items:center;gap:6px;position:relative;z-index:1;}
-
-.activity-list{display:flex;flex-direction:column;gap:16px;}
-.activity-item{display:flex;align-items:center;gap:16px;padding:16px;background:var(--white);border:1px solid var(--stone-3);border-radius:16px;transition:all 0.3s ease;}
-.activity-item:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:var(--shadow);}
-
-@keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-
-.btn-ghost{padding:12px 24px;border-radius:12px;border:2px solid var(--stone-3);background:var(--white);color:var(--ink-2);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.3s ease;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
-.btn-ghost:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px);}
-.btn-teal{padding:12px 24px;border-radius:12px;border:none;background:var(--teal);color:var(--white);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;transition:all 0.3s ease;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);}
-.btn-teal:hover{background:var(--teal-2);transform:translateY(-2px);box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);}
-.subj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.subj-card{background:var(--white);border:1px solid var(--stone-3);border-radius:20px;padding:28px;cursor:pointer;transition:all 0.3s ease;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);}
-.subj-card:hover{border-color:var(--teal);transform:translateY(-5px);box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);}
-.subj-icon{width:52px;height:52px;border-radius:14px;background:var(--teal-faint);border:1px solid rgba(13,148,136,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--teal);font-size:1.2rem;transition:transform 0.3s ease;}
-.subj-sec{font-size:0.65rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;}
-.subj-name{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:6px;}
-.subj-desc{font-size:0.8rem;color:var(--ink-3);line-height:1.6;}
-.subj-footer{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--stone-3);}
-.subj-count{font-size:0.75rem;color:var(--ink-3);}
-.hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(var(--stone-3) 1px,transparent 1px),linear-gradient(90deg,var(--stone-3) 1px,transparent 1px);background-size:48px 48px;opacity:0.4;mask-image:radial-gradient(ellipse 70% 60% at 50% 50%,black 20%,transparent 100%);pointer-events:none;}
-.hero-glow{position:absolute;width:600px;height:500px;top:10%;left:50%;transform:translateX(-50%);background:radial-gradient(circle,rgba(13,148,136,0.08) 0%,rgba(13,148,136,0.03) 40%,transparent 70%);pointer-events:none;filter:blur(20px);}
-.sec-label{display:flex;align-items:center;gap:10px;font-size:0.72rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--teal);margin-bottom:14px;}
-.sec-label::before{content:'';display:block;width:18px;height:2px;background:var(--teal);border-radius:1px;}
-.sec-title{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800;letter-spacing:-1.2px;line-height:1.1;color:var(--ink);margin-bottom:14px;}
-.sec-sub{font-size:0.95rem;color:var(--ink-3);line-height:1.7;max-width:480px;font-weight:400;}
-.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px;}
-.stat-card{background:var(--white);border:1px solid var(--stone-3);border-radius:16px;padding:20px;text-align:center;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);transition:all 0.3s ease;}
-.stat-val{font-size:1.5rem;font-weight:800;color:var(--teal);letter-spacing:-0.5px;}
-.stat-lbl{font-size:0.72rem;color:var(--ink-3);margin-top:2px;}
-.subj-prog-bar{height:4px;background:var(--stone-2);border-radius:2px;overflow:hidden;margin-top:10px;}
-.subj-prog-fill{height:100%;background:var(--teal);border-radius:2px;transition:width .4s ease;}
-.quiz-header{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
-.quiz-header-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;}
-.quiz-header-info{flex:1;}
-.quiz-header-sec{font-size:0.65rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-3);}
-.quiz-header-name{font-size:1.05rem;font-weight:700;color:var(--ink);}
-.quiz-header-score{font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:6px;background:var(--teal-pale);color:var(--teal);}
-.quiz-progress{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;font-size:0.72rem;color:var(--ink-3);}
-.quiz-bar{height:4px;background:var(--stone-2);border-radius:2px;overflow:hidden;margin-bottom:14px;}
-.quiz-bar-fill{height:100%;background:var(--teal);border-radius:2px;transition:width .4s ease;}
-.quiz-dots{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:20px;}
-.quiz-dot{width:30px;height:30px;border-radius:8px;border:1.5px solid var(--stone-3);background:transparent;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;cursor:pointer;transition:all .18s;color:var(--ink-3);}
-.quiz-dot:hover{border-color:var(--ink-4);}
-.quiz-dot.current{border-color:var(--teal);color:var(--teal);background:var(--teal-faint);}
-.quiz-dot.correct{background:rgba(13,148,136,0.12);border-color:rgba(13,148,136,0.3);color:var(--teal);}
-.quiz-dot.wrong{background:var(--red-faint);border-color:rgba(220,38,38,0.3);color:var(--red);}
-.q-card{background:var(--white);border:1px solid var(--stone-3);border-radius:20px;padding:32px;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);}
-.q-passage{background:var(--stone-2);border:1px solid var(--stone-3);border-radius:14px;padding:20px 24px;margin-bottom:24px;font-size:0.95rem;line-height:1.8;color:var(--ink-2);}
-.q-text{font-size:1.05rem;font-weight:600;color:var(--ink);line-height:1.6;margin-bottom:24px;letter-spacing:-0.2px;}
-.q-opts{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;}
-.q-opt{display:flex;align-items:center;gap:14px;padding:15px 20px;border:2px solid var(--stone-3);border-radius:14px;background:transparent;cursor:pointer;transition:all 0.3s ease;font-size:0.95rem;color:var(--ink-2);font-weight:500;text-align:left;font-family:'Plus Jakarta Sans',sans-serif;}
-.q-opt:hover:not(.locked){border-color:rgba(13,148,136,0.4);background:var(--teal-faint);transform:translateX(4px);}
-.q-opt.selected{border-color:var(--teal);background:var(--teal-faint);color:var(--teal-2);}
-.q-opt.locked{cursor:default;}
-.q-opt.correct{border-color:var(--teal)!important;background:var(--teal-pale)!important;color:var(--teal-2)!important;}
-.q-opt.wrong{border-color:var(--red)!important;background:var(--red-faint)!important;color:var(--red)!important;}
-.q-opt-letter{width:32px;height:32px;border-radius:10px;background:var(--stone-2);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;color:var(--ink-3);flex-shrink:0;transition:all 0.3s ease;}
-.q-opt.selected .q-opt-letter{background:var(--teal);color:white;}
-.q-opt.correct .q-opt-letter{background:var(--teal);color:white;}
-.q-opt.wrong .q-opt-letter{background:var(--red);color:white;}
-.btn-reveal{width:100%;padding:14px;border-radius:12px;border:none;background:var(--teal);color:var(--white);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);}
-.btn-reveal:hover{background:var(--teal-2);transform:translateY(-2px);box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);}
-.solution-panel{background:var(--teal-faint);border:1px solid rgba(13,148,136,0.15);border-radius:16px;padding:24px;margin-top:20px;}
-.solution-status{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:0.88rem;font-weight:700;}
-.solution-status.is-correct{color:var(--teal);}
-.solution-status.is-wrong{color:var(--red);}
-.solution-status .detail{font-weight:500;color:var(--ink-3);font-size:0.82rem;}
-.solution-body{font-size:0.85rem;color:var(--ink-2);line-height:1.8;}
-.solution-body p{margin-bottom:8px;}
-.solution-body strong{color:var(--teal-2);}
-.solution-body .step-label{color:var(--teal-2);font-weight:600;}
-.quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
-.quiz-nav-btn{padding:12px 24px;border-radius:12px;border:2px solid var(--stone-3);background:transparent;color:var(--ink-3);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;gap:8px;}
-.quiz-nav-btn:hover{border-color:var(--ink-3);color:var(--ink-2);transform:translateY(-2px);}
-.quiz-nav-btn.primary{border:none;background:var(--teal);color:white;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);}
-.quiz-nav-btn.primary:hover{background:var(--teal-2);box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);}
-.quiz-nav-btn:disabled{opacity:0.35;cursor:not-allowed;pointer-events:none;}
-.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;}
-.result-card{background:var(--white);border:1px solid var(--stone-3);border-radius:20px;padding:28px;text-align:center;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);transition:all 0.3s ease;}
-.result-value{font-size:2rem;font-weight:800;letter-spacing:-1px;}
-.result-label{font-size:0.75rem;color:var(--ink-3);margin-top:4px;}
-.result-msg{background:var(--white);border:1px solid var(--stone-3);border-radius:12px;padding:18px 22px;margin-bottom:20px;font-size:0.9rem;font-weight:600;color:var(--ink);text-align:center;}
-.breakdown-card{background:var(--white);border:1px solid var(--stone-3);border-radius:16px;padding:24px;}
-.breakdown-title{font-size:0.85rem;font-weight:700;color:var(--ink);margin-bottom:16px;}
-.breakdown-row{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;cursor:pointer;transition:background .15s;}
-.breakdown-row:hover{background:var(--stone-2);}
-.breakdown-icon{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0;}
-.breakdown-icon.ok{background:var(--teal-pale);color:var(--teal);}
-.breakdown-icon.fail{background:var(--red-faint);color:var(--red);}
-.breakdown-icon.skip{background:var(--stone-2);color:var(--ink-3);}
-.breakdown-q{font-size:0.82rem;font-weight:600;color:var(--ink-2);min-width:50px;}
-.breakdown-label{font-size:0.8rem;color:var(--ink-3);flex:1;}
-.breakdown-arrow{font-size:0.6rem;color:var(--ink-3);}
-footer{background:var(--stone);border-top:1px solid var(--stone-3);padding:28px 56px;display:flex;align-items:center;justify-content:space-between;}
-.footer-logo{font-size:1rem;font-weight:800;letter-spacing:-0.3px;color:var(--ink);}
-.footer-logo span{color:var(--teal);}
-.toast{position:fixed;bottom:30px;right:30px;padding:14px 22px;border-radius:12px;background:var(--white);border:1px solid var(--stone-3);box-shadow:0 12px 40px rgba(0,0,0,0.1);font-size:0.85rem;font-weight:500;color:var(--ink);display:flex;align-items:center;gap:10px;transform:translateY(100px);opacity:0;transition:all .35s cubic-bezier(0.22,1,0.36,1);z-index:200;}
-.toast.show{transform:translateY(0);opacity:1;}
-.toast i{color:var(--teal);}
-.ch-list{display:flex;flex-direction:column;gap:6px;margin-top:32px;}
-.ch-row{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--white);border:1px solid var(--stone-3);border-radius:12px;cursor:pointer;transition:all .22s cubic-bezier(0.22,1,0.36,1);}
-.ch-row:hover{border-color:var(--teal);transform:translateX(6px);box-shadow:0 4px 20px rgba(13,148,136,0.08);}
-.ch-num{width:34px;height:34px;border-radius:9px;background:var(--stone-2);display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:800;color:var(--ink-3);flex-shrink:0;transition:all .22s;letter-spacing:-0.3px;}
-.ch-row:hover .ch-num{background:var(--teal);color:var(--white);}
-.ch-body{flex:1;min-width:0;}
-.ch-name{font-size:0.88rem;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.ch-bar-wrap{height:3px;background:var(--stone-2);border-radius:2px;margin-top:7px;overflow:hidden;}
-.ch-bar-fill{height:100%;background:var(--teal);border-radius:2px;transition:width .5s ease;}
-.ch-meta{display:flex;align-items:center;gap:14px;flex-shrink:0;}
-.ch-tag{font-size:0.72rem;font-weight:600;padding:3px 10px;border-radius:6px;background:var(--stone-2);color:var(--ink-3);white-space:nowrap;}
-.ch-tag.has-score{background:var(--teal-faint);color:var(--teal);}
-.ch-arrow{font-size:0.65rem;color:var(--ink-4);transition:all .22s;}
-.ch-row:hover .ch-arrow{transform:translateX(3px);color:var(--teal);}
-.ch-header-card{background:var(--white);border:1px solid var(--stone-3);border-radius:14px;padding:24px 26px;margin-bottom:8px;display:flex;align-items:center;gap:20px;}
-.ch-header-stats{display:flex;gap:24px;}
-.ch-header-stat{text-align:center;}
-.ch-header-val{font-size:1.3rem;font-weight:800;color:var(--teal);letter-spacing:-0.5px;}
-.ch-header-lbl{font-size:0.68rem;color:var(--ink-3);margin-top:1px;font-weight:500;}
-@media(max-width:900px){
-  nav{padding:0 20px;}
-  .subj-grid{grid-template-columns:1fr;}
-  .results-grid{grid-template-columns:1fr;}
-  footer{flex-direction:column;gap:12px;text-align:center;padding:24px 20px;}
-  .ch-row{gap:12px;padding:14px 16px;}
-  .ch-meta{gap:8px;}
-  .ch-tag{font-size:0.68rem;padding:2px 8px;}
-  .ch-header-card{flex-direction:column;gap:12px;padding:18px 20px;}
-}
-
-/* Paywall Overlay */
-.paywall-overlay {
-  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-  background: rgba(250, 249, 246, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 9999;
-  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
-  overflow-y: auto; padding: 40px 20px;
-  opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
-}
-.paywall-overlay.active {
-  opacity: 1; pointer-events: all;
-}
-.paywall-card {
-  background: var(--white);
-  border-radius: 24px; padding: 40px;
-  max-width: 500px; width: 90%;
-  text-align: center; margin: auto;
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
-  transform: translateY(20px); transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.paywall-overlay.active .paywall-card {
-  transform: translateY(0);
-}
-.paywall-icon {
-  font-size: 3rem; color: var(--teal); margin-bottom: 20px;
-}
-.paywall-title {
-  font-size: 1.8rem; font-weight: 800; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.5px;
-}
-.paywall-desc {
-  font-size: 1rem; color: var(--ink-3); margin-bottom: 24px; line-height: 1.6;
-}
-.paywall-feats {
-  text-align: left; margin-bottom: 32px; display:flex; flex-direction: column; gap:12px;
-}
-.paywall-feat {
-  display: flex; align-items: center; gap: 10px; font-size: 0.95rem; font-weight: 500; color: var(--ink-2);
-}
-.paywall-feat i { color: var(--teal); }
-
-</style>
-<link rel="stylesheet" href="dark-mode.css">
+<!-- Core Supabase & Auth Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="supabase.js"></script>
 <script src="paywall.js"></script>
 <script src="auth-guard.js"></script>
+
+<script>
+// ── Fast Dark Mode Init ──
+(function() {
+  const saved = localStorage.getItem('imatpath_dark_mode');
+  if (saved === 'true') document.documentElement.setAttribute('data-theme', 'dark');
+})();
+</script>
+
+<style>
+:root{
+  --cream:#f6f1e6; --cream-2:#efe7d5; --card:#fffdf7;
+  --ink:#152720; --ink-soft:#42574d;
+  --g900:#0a241b; --g800:#0e2f23; --g700:#164534; --g600:#1e5b44;
+  --terra:#c1591f; --terra-d:#a84a15;
+  --gold:#d9a441; --gold-l:#e9c070;
+  --line:#e2d8c2; --line-d:#23443a;
+  --ok:#2e7d4f; --bad:#b3402e;
+  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --sh-sm:0 1px 2px rgba(21,39,32,.06),0 4px 14px rgba(21,39,32,.06);
+  --sh-md:0 2px 6px rgba(21,39,32,.08),0 14px 34px rgba(21,39,32,.10);
+}
+
+[data-theme="dark"] {
+  --cream: #111714; --cream-2: #191f1c; --card: #1a211d;
+  --ink: #e2ddd3; --ink-soft: #a4b3a9;
+  --line: #2a3530; --line-d: #2a3530;
+  --g900: #0a0e0c; --g800: #0f1613;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;transition:background 0.3s, color 0.3s;}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+svg{display:block}
+::selection{background:var(--terra);color:#fff}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,164,65,.5)}50%{box-shadow:0 0 0 6px rgba(217,164,65,0)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+
+/* ============ SIDEBAR ============ */
+.sidebar{position:fixed;inset:0 auto 0 0;width:264px;background:var(--g900);color:var(--cream);display:flex;flex-direction:column;z-index:60;transition:transform .35s ease}
+.logo{display:flex;align-items:center;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em;padding:26px 26px 22px;color:var(--cream)}
+.logo em{font-style:italic;color:var(--gold-l)}
+.sb-nav{display:flex;flex-direction:column;gap:4px;padding:6px 14px}
+.sb-nav a{display:flex;align-items:center;gap:13px;padding:12px 14px;border-radius:12px;font-size:14.5px;font-weight:500;color:#9db3a5;position:relative;transition:.2s}
+.sb-nav a svg{flex:none;opacity:.85}
+.sb-nav a:hover{color:var(--cream);background:rgba(246,241,230,.06)}
+.sb-nav a.active{color:var(--cream);background:rgba(217,164,65,.12);font-weight:600}
+.sb-nav a.active::before{content:"";position:absolute;left:-14px;top:9px;bottom:9px;width:3px;border-radius:3px;background:var(--gold)}
+.sb-spacer{flex:1}
+
+.access-card{margin:0 16px 14px;padding:16px 18px;border:1px solid rgba(217,164,65,.45);border-radius:16px;background:linear-gradient(150deg,rgba(217,164,65,.14),rgba(217,164,65,.04));position:relative;overflow:hidden;cursor:pointer;transition:transform .2s;}
+.access-card:hover{transform:translateY(-2px);}
+.access-card::after{content:"";position:absolute;top:-30px;right:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.25),transparent 70%)}
+.access-card .ac-l{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);display:flex;align-items:center;gap:7px;margin-bottom:6px}
+.access-card .ac-l i{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+.access-card b{font-family:var(--serif);font-size:16.5px;font-weight:600;display:block;color:var(--cream)}
+.access-card span{font-size:12px;color:#9db3a5}
+
+.user-row{display:flex;align-items:center;gap:12px;padding:16px 20px;border-top:1px solid var(--line-d)}
+.avatar{width:38px;height:38px;border-radius:12px;background:var(--g700);border:1.5px solid var(--line-d);display:grid;place-items:center;font-weight:700;font-size:15px;color:var(--gold-l)}
+.user-row .u-t{flex:1;min-width:0}
+.user-row .u-t b{display:block;font-size:14px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.user-row .u-t small{font-size:11.5px;color:#8fa897}
+.logout{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;color:#8fa897;transition:.2s;cursor:pointer;}
+.logout:hover{color:#ff9c7a;background:rgba(179,64,46,.15)}
+
+/* ============ MAIN ============ */
+.main{margin-left:264px;min-height:100vh;display:flex;flex-direction:column}
+.topbar{position:sticky;top:0;z-index:40;background:rgba(246,241,230,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:18px;transition:background 0.3s, border-color 0.3s;}
+[data-theme="dark"] .topbar { background: rgba(17,23,20,.85); }
+.burger{display:none;flex-direction:column;gap:5px;padding:8px;margin-right:4px}
+.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px}
+.topbar h1{font-size:clamp(1.3rem,2.2vw,1.7rem)}
+.topbar p{font-size:13px;color:var(--ink-soft);max-width:520px}
+.top-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.date-chip{font-size:12.5px;font-weight:600;color:var(--ink-soft);background:var(--card);border:1px solid var(--line);padding:8px 15px;border-radius:999px}
+.count-chip{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;background:var(--g800);color:var(--cream);padding:8px 16px;border-radius:999px;white-space:nowrap}
+.count-chip b{color:var(--gold-l);font-family:var(--serif);font-size:15px}
+.count-chip .fl{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+
+.nav-dark-toggle{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);display:flex;align-items:center;justify-content:center;font-size:14px;transition:.25s;cursor:pointer;}
+.nav-dark-toggle:hover{border-color:var(--terra);color:var(--terra)}
+[data-theme="dark"] .nav-dark-toggle{border-color:var(--line);color:var(--gold)}
+
+.content-container{padding:32px 36px 60px;max-width:1160px;width:100%;margin:0 auto}
+
+/* ============ KPI & CARDS ============ */
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit, minmax(190px, 1fr));gap:14px;margin-bottom:28px;}
+.kpi{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--sh-sm);display:flex;flex-direction:column;gap:4px;}
+.kpi-val{font-family:var(--serif);font-size:36px;font-weight:600;line-height:1;color:var(--ink);}
+.kpi-lbl{font-size:13px;font-weight:700;color:var(--ink);margin-top:6px;}
+.kpi-sub{font-size:11.5px;color:var(--ink-soft);}
+
+.subj-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:18px;margin-top:20px;}
+.subj-card{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--sh-sm);cursor:pointer;transition:transform .28s, box-shadow .28s, border-color .28s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:12px;}
+.subj-card:hover{transform:translateY(-5px);border-color:var(--terra);box-shadow:var(--sh-md);}
+.subj-top{display:flex;align-items:center;justify-content:space-between;}
+.subj-badge{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:rgba(217,164,65,.16);color:#8a6413;padding:4px 10px;border-radius:99px;}
+[data-theme="dark"] .subj-badge{color:var(--gold-l);background:rgba(217,164,65,.15);}
+.subj-card h3{font-size:21px;color:var(--ink);}
+.subj-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
+.subj-meta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-soft);}
+.subj-cta{color:var(--terra);font-weight:700;display:inline-flex;align-items:center;gap:6px;}
+
+/* ============ QUIZ / CHAPTERS ============ */
+.panel{background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--sh-sm);margin-bottom:24px;}
+.chapter-item{display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid var(--line);border-radius:16px;background:var(--cream);margin-bottom:10px;cursor:pointer;transition:transform .2s, border-color .2s;}
+.chapter-item:hover{transform:translateX(4px);border-color:var(--terra);}
+.ch-num{width:42px;height:42px;border-radius:12px;background:rgba(193,89,31,.1);color:var(--terra);display:grid;place-items:center;font-weight:700;font-size:15px;flex-shrink:0;}
+
+.q-box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px;box-shadow:var(--sh-sm);margin-bottom:22px;}
+.q-sub-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--terra);}
+.q-passage{background:var(--cream-2);border:1px solid var(--line);border-radius:14px;padding:18px 22px;font-size:14.5px;line-height:1.7;color:var(--ink);margin-bottom:20px;}
+.q-text{font-size:18px;font-weight:600;line-height:1.5;color:var(--ink);margin-bottom:22px;font-family:var(--serif);}
+.q-opts{display:grid;gap:10px;}
+.q-opt{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1.5px solid var(--line);border-radius:14px;background:var(--cream);font-size:15px;font-weight:500;text-align:left;color:var(--ink);transition:.2s;}
+.q-opt:hover:not(:disabled){border-color:var(--terra);transform:translateX(3px);}
+.q-opt.selected{border-color:var(--terra);background:rgba(193,89,31,.08);color:var(--terra-d);}
+[data-theme="dark"] .q-opt.selected{color:var(--gold-l);}
+.q-opt-letter{flex:none;width:30px;height:30px;border-radius:9px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font-size:12.5px;font-weight:700;color:var(--ink-soft);}
+.q-opt.selected .q-opt-letter{background:var(--terra);border-color:var(--terra);color:#fff;}
+.q-opt.correct{border-color:var(--ok);background:rgba(46,125,79,.1);}
+.q-opt.correct .q-opt-letter{background:var(--ok);border-color:var(--ok);color:#fff;}
+.q-opt.wrong{border-color:var(--bad);background:rgba(179,64,46,.1);}
+.q-opt.wrong .q-opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:999px;transition:.2s}
+.btn-primary{background:var(--terra);color:#fff;box-shadow:0 6px 18px rgba(193,89,31,.3)}
+.btn-primary:hover{background:var(--terra-d);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--line);color:var(--ink-soft);background:var(--card)}
+.btn-line:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
+
+/* ============ PAYWALL MODAL ============ */
+.paywall-overlay {
+  position: fixed; inset: 0; width: 100vw; height: 100vh;
+  background: rgba(10, 36, 27, 0.82);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 24px; opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+}
+.paywall-overlay.active { opacity: 1; pointer-events: all; }
+.paywall-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 40px;
+  max-width: 480px; width: 100%; text-align: center; box-shadow: var(--sh-md);
+}
+
+.toast{position:fixed;bottom:30px;right:30px;padding:14px 22px;border-radius:12px;background:var(--card);border:1px solid var(--line);box-shadow:var(--sh-md);font-size:14px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:10px;transform:translateY(100px);opacity:0;transition:all .35s;z-index:200;}
+.toast.show{transform:translateY(0);opacity:1;}
+
+.overlay{position:fixed;inset:0;background:rgba(10,36,27,.5);z-index:55;opacity:0;pointer-events:none;transition:.3s}
+.overlay.show{opacity:1;pointer-events:auto}
+
+@media(max-width:960px){
+  .sidebar{transform:translateX(-100%)}
+  .sidebar.open{transform:none;box-shadow:0 0 60px rgba(0,0,0,.4)}
+  .main{margin-left:0}
+  .burger{display:flex}
+  .topbar{padding:16px 20px}
+  .content-container{padding:22px 20px 40px}
+  .subj-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
 <body>
 
-<!-- Paywall Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- ================= PAYWALL OVERLAY ================= -->
 <div class="paywall-overlay" id="paywallOverlay">
   <div class="paywall-card">
-    <div class="paywall-icon"><i class="fas fa-lock"></i></div>
-    <div class="paywall-title">Unlock ImatPath</div>
-    <div class="paywall-desc">Get unlimited access to all premium features and study materials until the day of your IMAT exam.</div>
-    
-    <div class="paywall-feats">
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 2000+ IMAT-style questions & solutions</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 20 full timed mock exams</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Personalized AI IMAT Test</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> AI Tutor (powered by Gemini)</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Score predictions & analytics</div>
-    </div>
-
-    <div id="paypal-button-container" style="margin-top: 20px;"></div>
+    <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:var(--g900);padding:5px 14px;border-radius:999px;margin-bottom:16px;">IMAT 2026 Full Pass</span>
+    <h2 style="font-family:var(--serif);font-size:1.8rem;margin-bottom:8px;">Unlock Question Bank</h2>
+    <p style="font-size:14px;color:var(--ink-soft);margin-bottom:24px;">Get unlimited access to 2,000+ IMAT practice questions with detailed explanations.</p>
+    <div id="paypal-button-container" style="min-height: 45px;"></div>
   </div>
 </div>
 
-<nav>
-  <a class="logo" href="dashboard.html">Imat<span>Path</span></a>
-  <div class="nav-links">
-    <a href="dashboard.html" class="nav-link"><i class="fas fa-th-large"></i> Dashboard</a>
-    <a href="question-bank.html" class="nav-link active"><i class="fas fa-layer-group"></i> Question Bank</a>
-    <a href="mock-exam.html" class="nav-link"><i class="fas fa-stopwatch"></i> Mock Exams</a>
-    <a href="roadmap.html" class="nav-link"><i class="fas fa-route"></i> IMAT Past Papers</a>
-    <a href="analytics.html" class="nav-link"><i class="fas fa-chart-line"></i> Analytics</a>
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar" id="sidebar">
+  <a class="logo" href="index.html">Imat<em>Path</em></a>
+  <nav class="sb-nav">
+    <a href="dashboard.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+      Dashboard</a>
+    <a class="active" href="question-bank.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      Question Bank</a>
+    <a href="mock-exam.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg>
+      Mock Exams</a>
+    <a href="roadmap.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+      IMAT Past Papers</a>
+    <a href="analytics.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M8 17v-6M13 17V7M18 17v-4"/></svg>
+      Analytics</a>
+  </nav>
+  <div class="sb-spacer"></div>
+  
+  <div class="access-card" id="accessPlanCard" onclick="window.location.href='dashboard.html'">
+    <span class="ac-l"><i></i><span id="accessPlanTitle">Premium Plan</span></span>
+    <b id="accessPlanStatus">Active until exam day</b>
+    <span id="accessPlanSub">September 29, 2026 · full access</span>
   </div>
-  <div class="nav-right">
-    <div class="user-avatar" id="userAvatar">U</div>
-    <button class="btn-ghost" id="navResetBtn" style="display:none;" onclick="goHome()">All subjects</button>
+  
+  <div class="user-row">
+    <span class="avatar" id="userAvatar">U</span>
+    <div class="u-t">
+      <b id="userName">User</b>
+      <small>IMAT 2026 candidate</small>
+    </div>
+    <a class="logout" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+    </a>
   </div>
-</nav>
+</aside>
 
-<div id="app"></div>
+<!-- ================= MAIN ================= -->
+<div class="main">
+  <header class="topbar">
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div>
+        <h1 id="pageHeadingTitle">Question Bank</h1>
+        <p>2,000+ original IMAT-style questions with detailed worked solutions.</p>
+      </div>
+    </div>
+    <div class="top-right">
+      <button class="nav-dark-toggle" id="navDarkToggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      <span class="date-chip" id="todayChip">—</span>
+      <span class="count-chip"><span class="fl"></span><b id="daysChip">31</b>&nbsp;days to IMAT</span>
+    </div>
+  </header>
 
-<footer>
-  <div class="footer-logo">Imat<span>Path</span></div>
-  <div style="font-size:0.78rem;color:var(--ink-3);">&copy; 2026 ImatPath &middot; Question Bank</div>
-</footer>
+  <div class="content-container">
+    <div id="app"></div>
+  </div>
+</div>
 
 <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastText"></span></div>
 
@@ -26276,41 +26232,134 @@ const subjects = [
 let state = {view:'home', subject:null, chapter:null, qIdx:0, filter:'all', answers:{}, revealed:{}, bookmarks:{}};
 
 function loadState(){
-  const saved=localStorage.getItem('imatpath_qb');
+  const saved = localStorage.getItem('imatpath_qb');
   if(saved){
-    state = { ...state, ...JSON.parse(saved) };
-    state.bookmarks = state.bookmarks || {};
+    try {
+      state = { ...state, ...JSON.parse(saved) };
+      state.bookmarks = state.bookmarks || {};
+    } catch(e){}
   }
 }
 function saveState(){
-  localStorage.setItem('imatpath_qb',JSON.stringify(state));
+  localStorage.setItem('imatpath_qb', JSON.stringify(state));
   if (window.ImatAuth && typeof window.ImatAuth.saveQuestionState === 'function') {
     window.ImatAuth.saveQuestionState(state.answers, state.revealed, state.bookmarks);
   }
 }
-function updateCorrectCount(){let correct=0;subjects.forEach(s=>{s.questions.forEach((q,i)=>{const k=s.id+'-'+i;if(state.revealed[k]&&state.answers[k]===q.correct)correct++;});});localStorage.setItem('imatpath_qb_correct',correct.toString());}
+function updateCorrectCount(){
+  let correct = 0;
+  subjects.forEach(s => {
+    s.questions.forEach((q, i) => {
+      const k = s.id + '-' + i;
+      if (state.revealed[k] && state.answers[k] === q.correct) correct++;
+    });
+  });
+  localStorage.setItem('imatpath_qb_correct', correct.toString());
+}
 
 loadState();
 updateCorrectCount();
 
-function showToast(m){const t=document.getElementById('toast');document.getElementById('toastText').textContent=m;t.classList.add('show');clearTimeout(t._tid);t._tid=setTimeout(()=>t.classList.remove('show'),3000);}
-
-function getStats(){let total=0,attempted=0,correct=0;subjects.forEach(s=>{s.questions.forEach((q,i)=>{total++;const k=s.id+'-'+i;if(state.revealed[k]){attempted++;if(state.answers[k]===q.correct)correct++;}});});return{total,attempted,correct};}
-
-function getSubjectStats(sub){let attempted=0,correct=0;sub.questions.forEach((q,i)=>{const k=sub.id+'-'+i;if(state.revealed[k]){attempted++;if(state.answers[k]===q.correct)correct++;}});return{total:sub.questions.length,attempted,correct};}
-
-function getSubjectAttempted(subId){const sub=subjects.find(s=>s.id===subId);if(!sub)return 0;let attempted=0;sub.questions.forEach((q,i)=>{const k=subId+'-'+i;if(state.revealed[k])attempted++;});return attempted;}
-
-function toggleAITutor() {
-  const container = document.getElementById('ai-tutor-container');
-  if(container.style.display === 'none') {
-    container.style.display = 'block';
+/* ── Dark Mode Toggle & Sync ── */
+window.toggleDarkMode = function() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('imatpath_dark_mode', 'false');
   } else {
-    container.style.display = 'none';
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('imatpath_dark_mode', 'true');
+  }
+  updateDarkIcon();
+};
+
+function updateDarkIcon() {
+  const btn = document.querySelector('#navDarkToggle');
+  if (btn) {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
   }
 }
+document.addEventListener('DOMContentLoaded', updateDarkIcon);
 
-async function askAITutor() {
+/* ── Logout Handler ── */
+window.handleLogout = async function(e) {
+  if (e) e.preventDefault();
+  if (window.ImatAuth) {
+    await window.ImatAuth.signOut();
+  } else {
+    localStorage.removeItem('imatpath_user');
+    window.location.href = 'auth.html';
+  }
+};
+
+/* ── Sidebar Mobile ── */
+const sb = document.querySelector("#sidebar"), ov = document.querySelector("#overlay");
+if (document.querySelector("#burger")) document.querySelector("#burger").addEventListener("click",()=>{sb.classList.add("open");ov.classList.add("show");});
+if (ov) ov.addEventListener("click",()=>{sb.classList.remove("open");ov.classList.remove("show");});
+
+/* ── Today & Countdown ── */
+if (document.querySelector("#todayChip")) {
+  document.querySelector("#todayChip").textContent = new Date().toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+}
+const examDate = new Date("2026-09-29T09:00:00");
+const diffDays = Math.max(0, Math.ceil((examDate - new Date()) / 864e5));
+if (document.querySelector("#daysChip")) document.querySelector("#daysChip").textContent = diffDays;
+
+function showToast(m){
+  const t = document.getElementById('toast');
+  if(!t) return;
+  document.getElementById('toastText').textContent = m;
+  t.classList.add('show');
+  clearTimeout(t._tid);
+  t._tid = setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+function getStats(){
+  let total = 0, attempted = 0, correct = 0;
+  subjects.forEach(s => {
+    s.questions.forEach((q, i) => {
+      total++;
+      const k = s.id + '-' + i;
+      if(state.revealed[k]){
+        attempted++;
+        if(state.answers[k] === q.correct) correct++;
+      }
+    });
+  });
+  return { total, attempted, correct };
+}
+
+function getSubjectStats(sub){
+  let attempted = 0, correct = 0;
+  sub.questions.forEach((q, i) => {
+    const k = sub.id + '-' + i;
+    if(state.revealed[k]){
+      attempted++;
+      if(state.answers[k] === q.correct) correct++;
+    }
+  });
+  return { total: sub.questions.length, attempted, correct };
+}
+
+function getSubjectAttempted(subId){
+  const sub = subjects.find(s => s.id === subId);
+  if(!sub) return 0;
+  let attempted = 0;
+  sub.questions.forEach((q, i) => {
+    const k = subId + '-' + i;
+    if(state.revealed[k]) attempted++;
+  });
+  return attempted;
+}
+
+window.toggleAITutor = function() {
+  const container = document.getElementById('ai-tutor-container');
+  if(!container) return;
+  container.style.display = (container.style.display === 'none') ? 'block' : 'none';
+};
+
+window.askAITutor = async function() {
   const inputEl = document.getElementById('ai-tutor-input');
   const responseEl = document.getElementById('ai-tutor-response');
   const submitBtn = document.getElementById('ai-tutor-submit');
@@ -26319,83 +26368,97 @@ async function askAITutor() {
 
   if(!window.ImatAITutor) {
     responseEl.style.display = 'block';
-    responseEl.innerHTML = '<span style="color:var(--red);">Error: AI Tutor module not loaded.</span>';
+    responseEl.innerHTML = '<span style="color:var(--bad);">Error: AI Tutor module not loaded.</span>';
     return;
   }
 
   submitBtn.disabled = true;
-  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Thinking...';
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Asking AI...';
   responseEl.style.display = 'none';
 
   try {
-    const q = subjects.find(s=>s.id===state.subject).questions[state.qIdx];
+    const q = subjects.find(s => s.id === state.subject).questions[state.qIdx];
     const htmlResponse = await window.ImatAITutor.ask(q, query);
     responseEl.innerHTML = htmlResponse;
     responseEl.style.display = 'block';
   } catch(e) {
-    responseEl.innerHTML = '<span style="color:var(--red);">Error: ' + e.message + '</span>';
+    responseEl.innerHTML = '<span style="color:var(--bad);">Error: ' + e.message + '</span>';
     responseEl.style.display = 'block';
   } finally {
     submitBtn.disabled = false;
     submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send to AI Tutor';
   }
+};
+
+function render(){
+  const app = document.getElementById('app');
+  if(!app) return;
+  if(state.view === 'home'){ app.innerHTML = renderHome(); }
+  else if(state.view === 'chapters'){ app.innerHTML = renderChapters(); }
+  else if(state.view === 'quiz'){ app.innerHTML = renderQuiz(); }
+  else if(state.view === 'results'){ app.innerHTML = renderResults(); }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function render(){const app=document.getElementById('app');const navReset=document.getElementById('navResetBtn');if(state.view==='home'){navReset.style.display='none';app.innerHTML=renderHome();}else if(state.view==='chapters'){navReset.style.display='inline-flex';app.innerHTML=renderChapters();}else if(state.view==='quiz'){navReset.style.display='inline-flex';app.innerHTML=renderQuiz();}else if(state.view==='results'){navReset.style.display='inline-flex';app.innerHTML=renderResults();}window.scrollTo({top:0,behavior:'smooth'});}
-
-function renderHome(){const stats=getStats();let html=`
-<div class="dashboard-container">
-  <div style="margin-bottom: 30px; animation: fadeInUp 0.6s ease;">
-    <a href="dashboard.html" class="btn-teal" style="font-size: 1.05rem; padding: 14px 28px; box-shadow: 0 10px 15px -3px rgba(13,148,136,0.2); display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Go back to dashboard</a>
-  </div>
-  <div class="welcome-section">
-    <div class="welcome-title">Question Bank<span class="highlight">.</span></div>
-    <div class="welcome-sub">${stats.total} original IMAT-style questions across all sections, each with a fully worked solution.</div>
-  </div>
-
-  <div class="stats-row">
-    <div class="stat-card purple">
-      <div class="stat-icon"><i class="fas fa-book-open"></i></div>
-      <div class="stat-value">${stats.total}</div>
-      <div class="stat-label">Total Questions</div>
-    </div>
-    <div class="stat-card green">
-      <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
-      <div class="stat-value">${subjects.length}</div>
-      <div class="stat-label">Subjects</div>
-    </div>
-    <div class="stat-card orange">
-      <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
-      <div class="stat-value">${stats.attempted}</div>
-      <div class="stat-label">Attempted</div>
-    </div>
-    <div class="stat-card blue">
-      <div class="stat-icon"><i class="fas fa-percentage"></i></div>
-      <div class="stat-value">${stats.total > 0 ? Math.round(stats.attempted/stats.total*100) : 0}%</div>
-      <div class="stat-label">Progress</div>
-    </div>
-  </div>
-
-  <div class="section-card">
-    <div class="section-header">
-      <div>
-        <div class="section-title">Choose a Subject</div>
-        <div class="section-subtitle">Select a subject to start practicing questions</div>
+function renderHome(){
+  const stats = getStats();
+  const acc = stats.attempted > 0 ? Math.round((stats.correct / stats.attempted) * 100) : 0;
+  
+  let html = `
+    <div style="animation:fadeInUp .45s ease">
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kpi-val">${stats.total}</div>
+          <div class="kpi-lbl">Total Questions</div>
+          <div class="kpi-sub">Official syllabus coverage</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val" style="color:var(--terra)">${stats.attempted}</div>
+          <div class="kpi-lbl">Questions Attempted</div>
+          <div class="kpi-sub">${stats.total > 0 ? Math.round(stats.attempted/stats.total*100) : 0}% completed</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val" style="color:var(--ok)">${stats.correct}</div>
+          <div class="kpi-lbl">Correct Answers</div>
+          <div class="kpi-sub">${acc}% accuracy rate</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val">${subjects.length}</div>
+          <div class="kpi-lbl">Exam Subjects</div>
+          <div class="kpi-sub">All 4 IMAT sections</div>
+        </div>
       </div>
-    </div>
-    <div class="cards-grid" style="grid-template-columns: repeat(3, 1fr);">`;
-subjects.forEach((sub, idx) => {
-  const attempted = getSubjectAttempted(sub.id);
-  const total = sub.questions.length;
-  const pct = total > 0 ? Math.round(attempted/total*100) : 0;
-  html+=`<div class="action-card" onclick="startQuiz('${sub.id}')" style="animation-delay: ${0.6 + idx * 0.1}s;">
-    <div class="action-icon"><i class="fas ${sub.icon}"></i></div>
-    <div class="action-title">${sub.name}</div>
-    <div class="action-desc">${sub.desc}</div>
-    <div class="action-meta"><i class="fas fa-chart-pie"></i> ${attempted}/${total} questions (${pct}%)</div>
-  </div>`;
-});
-html+=`</div></div></div>`;return html;}
+
+      <div style="margin-top:32px;">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:6px">Curated Practice</span>
+        <h2>Choose a Subject</h2>
+        <p style="color:var(--ink-soft);font-size:14.5px;max-width:580px;margin-bottom:20px;">Master each syllabus area chapter-by-chapter with instant solutions and AI tutor guidance.</p>
+
+        <div class="subj-grid">`;
+
+  subjects.forEach(sub => {
+    const attempted = getSubjectAttempted(sub.id);
+    const total = sub.questions.length;
+    const pct = total > 0 ? Math.round(attempted/total*100) : 0;
+    html += `
+      <div class="subj-card" onclick="startQuiz('${sub.id}')">
+        <div class="subj-top">
+          <span class="subj-badge">${sub.section}</span>
+          <span style="font-size:12px;color:var(--ink-soft);font-weight:600">${total} Questions</span>
+        </div>
+        <h3>${sub.name}</h3>
+        <p>${sub.desc}</p>
+        <div class="subj-meta">
+          <span>${attempted}/${total} solved (${pct}%)</span>
+          <span class="subj-cta">Practice <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+    `;
+  });
+
+  html += `</div></div></div>`;
+  return html;
+}
 
 function renderChapters() {
   const sub = subjects.find(s => s.id === state.subject);
@@ -26404,71 +26467,58 @@ function renderChapters() {
     totalQ += ch.questions.length;
     for (let i = ch.startIndex; i <= ch.endIndex; i++) {
       const k = sub.id + '-' + i;
-      if (state.revealed[k]) { totalAttempted++; if (state.answers[k] === sub.questions[i].correct) totalCorrect++; }
+      if (state.revealed[k]) {
+        totalAttempted++;
+        if (state.answers[k] === sub.questions[i].correct) totalCorrect++;
+      }
     }
   });
   const totalPct = totalAttempted > 0 ? Math.round(totalCorrect / totalAttempted * 100) : 0;
+
   let html = `
-<div class="dashboard-container">
-  <button class="btn-ghost" onclick="goHome()" style="margin-bottom:20px;"><i class="fas fa-arrow-left" style="font-size:0.7rem;"></i> All subjects</button>
-  
-  <div class="welcome-section">
-    <div class="welcome-title">${sub.name}<span class="highlight">.</span></div>
-    <div class="welcome-sub">${sub.chapters.length} chapters with ${totalQ} questions total</div>
-  </div>
+    <div style="max-width:880px;margin:0 auto;animation:fadeInUp .45s ease">
+      <button class="btn-line" onclick="goHome()" style="margin-bottom:20px;padding:9px 18px;font-size:13px"><i class="fas fa-arrow-left"></i> All Subjects</button>
+      
+      <div class="panel">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);background:var(--g900);padding:4px 12px;border-radius:99px;">${sub.section}</span>
+        <h2 style="font-size:2.2rem;margin:14px 0 8px;">${sub.name}</h2>
+        <p style="color:var(--ink-soft);font-size:14.5px;margin-bottom:24px;">${sub.chapters.length} structured chapters with ${totalQ} questions total.</p>
 
-  <div class="stats-row">
-    <div class="stat-card purple">
-      <div class="stat-icon"><i class="fas fa-book"></i></div>
-      <div class="stat-value">${sub.chapters.length}</div>
-      <div class="stat-label">Chapters</div>
-    </div>
-    <div class="stat-card green">
-      <div class="stat-icon"><i class="fas fa-question-circle"></i></div>
-      <div class="stat-value">${totalQ}</div>
-      <div class="stat-label">Total Questions</div>
-    </div>
-    <div class="stat-card orange">
-      <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
-      <div class="stat-value">${totalAttempted}</div>
-      <div class="stat-label">Attempted</div>
-    </div>
-    <div class="stat-card blue">
-      <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
-      <div class="stat-value">${totalPct}%</div>
-      <div class="stat-label">Accuracy</div>
-    </div>
-  </div>
+        <div class="kpi-row" style="margin-bottom:24px">
+          <div class="kpi"><div class="kpi-val">${totalQ}</div><div class="kpi-lbl">Total Qs</div></div>
+          <div class="kpi"><div class="kpi-val" style="color:var(--terra)">${totalAttempted}</div><div class="kpi-lbl">Solved</div></div>
+          <div class="kpi"><div class="kpi-val" style="color:var(--ok)">${totalPct}%</div><div class="kpi-lbl">Accuracy</div></div>
+        </div>
 
-  <div class="section-card">
-    <div class="section-header">
-      <div>
-        <div class="section-title">Chapters</div>
-        <div class="section-subtitle">Select a chapter to start practicing</div>
-      </div>
-    </div>
-    <div class="activity-list">`;
+        <h3 style="font-size:18px;margin-bottom:14px;">Select Chapter</h3>
+        <div style="display:flex;flex-direction:column;gap:8px">`;
+
   sub.chapters.forEach((ch, idx) => {
     let attempted = 0, correct = 0;
     for (let i = ch.startIndex; i <= ch.endIndex; i++) {
       const k = sub.id + '-' + i;
-      if (state.revealed[k]) { attempted++; if (state.answers[k] === sub.questions[i].correct) correct++; }
+      if (state.revealed[k]) {
+        attempted++;
+        if (state.answers[k] === sub.questions[i].correct) correct++;
+      }
     }
-    const pct = attempted > 0 ? Math.round(correct / attempted * 100) : 0;
     const progPct = Math.round(attempted / ch.questions.length * 100);
-    html += `<div class="activity-item" onclick="startChapterQuiz('${sub.id}','${ch.id}')" style="cursor:pointer;transition:all 0.3s ease;">
-      <div style="width:48px;height:48px;border-radius:12px;background:var(--teal-faint);display:flex;align-items:center;justify-content:center;color:var(--teal);font-weight:700;font-size:1.1rem;">${idx + 1}</div>
-      <div style="flex:1;">
-        <div style="font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:4px;">${ch.name}</div>
-        <div style="font-size:0.85rem;color:var(--ink-3);">${ch.questions.length} questions</div>
+    html += `
+      <div class="chapter-item" onclick="startChapterQuiz('${sub.id}','${ch.id}')">
+        <div class="ch-num">${idx + 1}</div>
+        <div style="flex:1">
+          <div style="font-size:15px;font-weight:700;color:var(--ink)">${ch.name}</div>
+          <div style="font-size:12.5px;color:var(--ink-soft)">${ch.questions.length} questions &middot; ${attempted} attempted</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--serif);font-size:18px;font-weight:600;color:var(--terra)">${progPct}%</div>
+          <div style="font-size:11px;color:var(--ink-soft)">completed</div>
+        </div>
+        <i class="fas fa-chevron-right" style="color:var(--ink-soft);font-size:12px;margin-left:8px"></i>
       </div>
-      <div style="text-align:right;">
-        <div style="font-size:1.1rem;font-weight:700;color:var(--teal);">${progPct}%</div>
-        <div style="font-size:0.75rem;color:var(--ink-3);">complete</div>
-      </div>
-      <i class="fas fa-chevron-right" style="color:var(--ink-4);margin-left:12px;"></i>
-    </div>`;
+    `;
   });
+
   html += `</div></div></div>`;
   return html;
 }
@@ -26494,156 +26544,214 @@ function getActiveIndices(sub, chapterId, filter) {
 }
 
 function renderQuiz(){
-  const sub=subjects.find(s=>s.id===state.subject);
-  let ch=null;
-  if(sub.chapters && state.chapter) { ch=sub.chapters.find(c=>c.id===state.chapter); }
+  const sub = subjects.find(s => s.id === state.subject);
+  let ch = null;
+  if(sub.chapters && state.chapter) { ch = sub.chapters.find(c => c.id === state.chapter); }
   
   const activeIndices = getActiveIndices(sub, state.chapter, state.filter);
   if (activeIndices.length > 0 && !activeIndices.includes(state.qIdx)) {
-    state.qIdx = activeIndices[0]; // snap to first valid if current is filtered out
+    state.qIdx = activeIndices[0];
   }
 
   let filterHtml = `
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-    <button class="btn-ghost" onclick="${sub.chapters ? 'viewChapters()' : 'goHome()'}"><i class="fas fa-arrow-left" style="font-size:0.7rem;"></i> ${sub.chapters ? sub.name + ' Chapters' : 'All subjects'}</button>
-    <select onchange="setFilter(this.value)" style="padding:6px 12px; border-radius:8px; border:1px solid var(--border); background:var(--surface); color:var(--ink); font-family:inherit; font-size:0.9rem; cursor:pointer; outline:none;">
-      <option value="all" ${state.filter==='all'?'selected':''}>All Questions</option>
-      <option value="unattempted" ${state.filter==='unattempted'?'selected':''}>Unattempted</option>
-      <option value="incorrect" ${state.filter==='incorrect'?'selected':''}>Incorrect</option>
-      <option value="bookmarked" ${state.filter==='bookmarked'?'selected':''}>Bookmarked</option>
-    </select>
-  </div>`;
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; flex-wrap:wrap; gap:10px">
+      <button class="btn-line" onclick="${sub.chapters ? 'viewChapters()' : 'goHome()'}" style="padding:8px 16px;font-size:13px"><i class="fas fa-arrow-left"></i> ${sub.chapters ? sub.name + ' Chapters' : 'All subjects'}</button>
+      <select onchange="setFilter(this.value)" style="padding:8px 14px; border-radius:12px; border:1.5px solid var(--line); background:var(--card); color:var(--ink); font-family:inherit; font-size:13px; font-weight:600; cursor:pointer; outline:none;">
+        <option value="all" ${state.filter==='all'?'selected':''}>All Questions</option>
+        <option value="unattempted" ${state.filter==='unattempted'?'selected':''}>Unattempted</option>
+        <option value="incorrect" ${state.filter==='incorrect'?'selected':''}>Incorrect</option>
+        <option value="bookmarked" ${state.filter==='bookmarked'?'selected':''}>Bookmarked</option>
+      </select>
+    </div>`;
 
   if (activeIndices.length === 0) {
-    return `<section style="padding:80px 56px 96px;"><div style="max-width:720px;margin:0 auto;">
-      ${filterHtml}
-      <div style="text-align:center; padding:60px 20px; background:var(--surface); border-radius:16px; border:1px solid var(--border);">
-        <i class="fas fa-inbox" style="font-size:2.5rem; color:var(--ink-4); margin-bottom:16px;"></i>
-        <h3 style="color:var(--ink); margin-bottom:8px;">No questions found</h3>
-        <p style="color:var(--ink-3);">There are no questions matching the "${state.filter}" filter.</p>
-        <button class="btn-teal" style="margin-top:20px;" onclick="setFilter('all')">View All Questions</button>
-      </div>
-    </div></section>`;
+    return `
+      <div style="max-width:860px;margin:0 auto;animation:fadeInUp .4s ease">
+        ${filterHtml}
+        <div class="panel" style="text-align:center;padding:48px 24px">
+          <i class="fas fa-inbox" style="font-size:2.5rem; color:var(--ink-soft); margin-bottom:16px;"></i>
+          <h3>No questions found</h3>
+          <p style="color:var(--ink-soft);font-size:14px;margin-top:6px;">There are no questions matching the "${state.filter}" filter.</p>
+          <button class="btn btn-primary" style="margin-top:20px;" onclick="setFilter('all')">View All Questions</button>
+        </div>
+      </div>`;
   }
 
   const currentIndexInFilter = activeIndices.indexOf(state.qIdx);
   const q = sub.questions[state.qIdx];
-  const key = sub.id+'-'+state.qIdx;
-  const isAnswered = state.answers[key]!==undefined;
+  const key = sub.id + '-' + state.qIdx;
+  const isAnswered = state.answers[key] !== undefined;
   const isRevealed = state.revealed[key];
   const isBookmarked = state.bookmarks[key];
-  const ss = getSubjectStats(sub);
   const L = ['A','B','C','D','E'];
 
-  let html=`
-<section style="padding:80px 56px 96px;"><div style="max-width:720px;margin:0 auto;">
-  ${filterHtml}
-  <div class="quiz-header">
-    <div class="quiz-header-icon" style="background:var(--teal-faint);border:1px solid rgba(13,148,136,0.15);color:var(--teal);"><i class="fas ${sub.icon}"></i></div>
-    <div class="quiz-header-info"><div class="quiz-header-sec">${sub.section}</div><div class="quiz-header-name">${sub.name}${ch ? ' — ' + ch.name : ''}</div></div>
-    <div class="quiz-header-score">${ss.correct}/${ss.attempted} correct</div>
-  </div>
-  <div class="quiz-progress"><span>Question ${currentIndexInFilter+1} of ${activeIndices.length}</span></div>
-  <div class="quiz-bar"><div class="quiz-bar-fill" style="width:${((currentIndexInFilter)/activeIndices.length)*100}%;"></div></div>
-  <div class="q-card" style="position:relative;">
-    <button onclick="toggleBookmark('${key}')" style="position:absolute; top:24px; right:24px; background:none; border:none; cursor:pointer; font-size:1.2rem; color:${isBookmarked?'var(--teal)':'var(--ink-4)'}; transition:all 0.2s;"><i class="${isBookmarked?'fas':'far'} fa-bookmark"></i></button>
-    ${q.passage?`<div class="q-passage">${q.passage}</div>`:''}
-    <div class="q-text" style="padding-right:32px;">${q.question}</div>
-    <div class="q-opts">${q.options.map((opt,i)=>{let cls='';if(isRevealed){cls+=' locked';if(i===q.correct)cls+=' correct';else if(i===state.answers[key]&&i!==q.correct)cls+=' wrong';}else if(i===state.answers[key])cls+=' selected';return`<button class="q-opt ${cls}" onclick="selectOpt(${i})" ${isRevealed?'disabled':''}><span class="q-opt-letter">${L[i]||''}</span>${opt}</button>`;}).join('')}</div>
-    ${!isRevealed&&isAnswered?`<button class="btn-reveal" onclick="reveal()">Reveal solution</button>`:''}
-    ${isRevealed?`<div class="solution-panel"><div class="solution-status ${state.answers[key]===q.correct?'is-correct':'is-wrong'}"><i class="fas ${state.answers[key]===q.correct?'fa-circle-check':'fa-circle-xmark'}"></i>${state.answers[key]===q.correct?'Correct!':'Incorrect'}</div><div class="solution-body">${q.solution}</div>
-      <div class="ai-tutor-box" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(0,0,0,0.05);">
-        <button class="btn-ghost" onclick="toggleAITutor()" style="width:100%;font-size:0.9rem;border:1px dashed var(--teal);color:var(--teal);"><i class="fas fa-sparkles"></i> Ask AI Tutor</button>
-        <div id="ai-tutor-container" style="display:none;margin-top:12px;">
-          <textarea id="ai-tutor-input" placeholder="e.g. Why is option B incorrect?" style="width:100%;padding:12px;border:1px solid var(--stone-3);border-radius:8px;font-family:inherit;margin-bottom:8px;resize:vertical;"></textarea>
-          <button class="btn-teal" onclick="askAITutor()" style="width:100%;font-size:0.9rem;" id="ai-tutor-submit"><i class="fas fa-paper-plane"></i> Send to AI Tutor</button>
-          <div id="ai-tutor-response" style="margin-top:16px;font-size:0.95rem;color:var(--ink-2);background:var(--white);padding:16px;border-radius:8px;display:none;box-shadow:inset 0 2px 4px rgba(0,0,0,0.05);"></div>
+  return `
+    <div style="max-width:860px;margin:0 auto;animation:fadeInUp .4s ease">
+      ${filterHtml}
+      
+      <div class="q-box" style="position:relative">
+        <button onclick="toggleBookmark('${key}')" style="position:absolute; top:28px; right:28px; background:none; border:none; cursor:pointer; font-size:1.3rem; color:${isBookmarked ? 'var(--terra)' : 'var(--ink-soft)'};" title="Bookmark question">
+          <i class="${isBookmarked ? 'fas' : 'far'} fa-bookmark"></i>
+        </button>
+
+        <div class="q-sub-bar">
+          <span>${sub.name}${ch ? ' &middot; ' + ch.name : ''}</span>
+          <span style="margin-right:28px">Question ${currentIndexInFilter + 1} of ${activeIndices.length}</span>
         </div>
+
+        ${q.passage ? `<div class="q-passage">${q.passage}</div>` : ''}
+        <div class="q-text">${q.question}</div>
+        
+        <div class="q-opts">
+          ${q.options.map((opt, i) => {
+            let cls = '';
+            if (isRevealed) {
+              if (i === q.correct) cls = 'correct';
+              else if (i === state.answers[key] && i !== q.correct) cls = 'wrong';
+            } else if (i === state.answers[key]) {
+              cls = 'selected';
+            }
+            return `
+              <button class="q-opt ${cls}" onclick="selectOpt(${i})" ${isRevealed ? 'disabled' : ''}>
+                <span class="q-opt-letter">${L[i]}</span>
+                <span>${opt}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+
+        ${!isRevealed && isAnswered ? `<button class="btn btn-primary" onclick="reveal()" style="width:100%;margin-top:20px;padding:14px"><i class="fas fa-eye"></i> Reveal Solution</button>` : ''}
+
+        ${isRevealed ? `
+          <div style="margin-top:24px;padding:22px;border-radius:18px;background:var(--cream-2);border:1px solid var(--line);">
+            <div style="font-weight:700;margin-bottom:8px;font-size:15px;color:${state.answers[key] === q.correct ? 'var(--ok)' : 'var(--bad)'}">
+              ${state.answers[key] === q.correct ? '&#10003; Correct Answer!' : '&#10007; Incorrect'}
+            </div>
+            <div style="font-size:14.5px;line-height:1.6;color:var(--ink);margin-bottom:16px;">${q.solution}</div>
+            
+            <div style="border-top:1px solid var(--line);padding-top:16px;">
+              <button class="btn-line" onclick="toggleAITutor()" style="width:100%;font-size:13px;padding:10px;border-style:dashed"><i class="fas fa-sparkles" style="color:var(--terra)"></i> Ask AI Tutor</button>
+              <div id="ai-tutor-container" style="display:none;margin-top:12px;">
+                <textarea id="ai-tutor-input" placeholder="e.g. Why is option B incorrect?" style="width:100%;padding:12px;border:1.5px solid var(--line);border-radius:12px;font-family:inherit;font-size:14px;background:var(--card);color:var(--ink);margin-bottom:8px;resize:vertical;"></textarea>
+                <button class="btn btn-primary" onclick="askAITutor()" style="width:100%;font-size:13px;padding:11px" id="ai-tutor-submit"><i class="fas fa-paper-plane"></i> Send to AI Tutor</button>
+                <div id="ai-tutor-response" style="margin-top:14px;font-size:14px;color:var(--ink);background:var(--card);padding:16px;border-radius:12px;display:none;border:1px solid var(--line);"></div>
+              </div>
+            </div>
+          </div>
+        ` : ''}
       </div>
-    </div>`:''}
-  </div>
-  <div class="quiz-nav">
-    <button class="quiz-nav-btn" onclick="prevQ()" ${currentIndexInFilter===0?'disabled':''}><i class="fas fa-chevron-left"></i> Previous</button>
-    ${currentIndexInFilter < activeIndices.length - 1 ? `<button class="quiz-nav-btn" onclick="nextQ()">Next <i class="fas fa-chevron-right"></i></button>` : `<button class="quiz-nav-btn primary" onclick="${sub.chapters ? 'viewChapters()' : 'viewResults()'}">${sub.chapters ? 'Finish chapter' : 'View results'}</button>`}
-  </div>
-</div></section>`;
-  return html;
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:18px;">
+        <button class="btn-line" onclick="prevQ()" ${currentIndexInFilter === 0 ? 'disabled' : ''}><i class="fas fa-chevron-left"></i> Previous</button>
+        ${currentIndexInFilter < activeIndices.length - 1
+          ? `<button class="btn btn-primary" onclick="nextQ()">Next <i class="fas fa-chevron-right"></i></button>`
+          : `<button class="btn btn-primary" onclick="${sub.chapters ? 'viewChapters()' : 'viewResults()'}" style="background:var(--ok)"><i class="fas fa-flag-checkered"></i> ${sub.chapters ? 'Finish Chapter' : 'View Results'}</button>`
+        }
+      </div>
+    </div>
+  `;
 }
 
-function renderResults(){const sub=subjects.find(s=>s.id===state.subject);const ss=getSubjectStats(sub);const pct=ss.attempted>0?Math.round(ss.correct/ss.attempted*100):0;let html=`
-<section style="padding:80px 56px 96px;"><div style="max-width:720px;margin:0 auto;">
-  <button class="btn-ghost" onclick="goHome()" style="margin-bottom:20px;"><i class="fas fa-arrow-left" style="font-size:0.7rem;"></i> All subjects</button>
-  <div class="quiz-header"><div class="quiz-header-icon" style="background:var(--teal-faint);border:1px solid rgba(13,148,136,0.15);color:var(--teal);"><i class="fas ${sub.icon}"></i></div><div class="quiz-header-info"><div class="quiz-header-sec">${sub.section}</div><div class="quiz-header-name">${sub.name} — Results</div></div></div>
-  <div class="results-grid"><div class="result-card"><div class="result-value" style="color:var(--teal);">${pct}%</div><div class="result-label">Accuracy</div></div><div class="result-card"><div class="result-value">${ss.correct}/${ss.attempted}</div><div class="result-label">Correct</div></div><div class="result-card"><div class="result-value">${sub.questions.length}</div><div class="result-label">Total</div></div></div>
-  <div class="breakdown-card"><div class="breakdown-title">Question breakdown</div>${sub.questions.map((q,i)=>{const k=sub.id+'-'+i;const isRevealed=state.revealed[k];const isCorrect=isRevealed&&state.answers[k]===q.correct;let iconCls='skip',icon='fa-minus',label='Unanswered';if(isCorrect){iconCls='ok';icon='fa-check';label='Correct';}else if(isRevealed){iconCls='fail';icon='fa-xmark';label='Incorrect';}return`<div class="breakdown-row" onclick="jumpTo(${i})"><div class="breakdown-icon ${iconCls}"><i class="fas ${icon}"></i></div><div class="breakdown-q">Q${i+1}</div><div class="breakdown-label">${label}</div><div class="breakdown-arrow"><i class="fas fa-chevron-right"></i></div></div>`;}).join('')}</div>
-  <div style="display:flex;justify-content:space-between;margin-top:20px;"><button class="btn-ghost" onclick="jumpTo(0)">Review questions</button><button class="btn-teal" onclick="goHome()">All subjects</button></div>
-</div></section>`;return html;}
+function renderResults(){
+  const sub = subjects.find(s => s.id === state.subject);
+  const ss = getSubjectStats(sub);
+  const pct = ss.attempted > 0 ? Math.round((ss.correct / ss.attempted) * 100) : 0;
 
-function goHome(){state.view='home';saveState();render();}
-function startQuiz(id){
-  const sub=subjects.find(s=>s.id===id);
+  return `
+    <div class="panel" style="max-width:780px;margin:0 auto;text-align:center;animation:fadeInUp .45s ease">
+      <button class="btn-line" onclick="goHome()" style="margin-bottom:20px;padding:8px 16px;font-size:13px"><i class="fas fa-arrow-left"></i> All Subjects</button>
+      <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:6px">${sub.section}</span>
+      <h2>${sub.name} &middot; Results</h2>
+      
+      <div class="kpi-row" style="margin:24px 0">
+        <div class="kpi"><div class="kpi-val" style="color:var(--terra)">${pct}%</div><div class="kpi-lbl">Accuracy</div></div>
+        <div class="kpi"><div class="kpi-val" style="color:var(--ok)">${ss.correct} / ${ss.attempted}</div><div class="kpi-lbl">Correct</div></div>
+        <div class="kpi"><div class="kpi-val">${sub.questions.length}</div><div class="kpi-lbl">Total Questions</div></div>
+      </div>
+
+      <div style="display:flex;gap:12px;justify-content:center;margin-top:20px;">
+        <button class="btn btn-primary" onclick="jumpTo(0)"><i class="fas fa-search"></i> Review Questions</button>
+        <button class="btn-line" onclick="goHome()"><i class="fas fa-th-large"></i> All Subjects</button>
+      </div>
+    </div>
+  `;
+}
+
+window.goHome = function(){ state.view = 'home'; saveState(); render(); };
+window.startQuiz = function(id){
+  const sub = subjects.find(s => s.id === id);
   if(sub.chapters) {
-    state.view='chapters'; state.subject=id; state.chapter=null; saveState(); render();
+    state.view = 'chapters'; state.subject = id; state.chapter = null; saveState(); render();
   } else {
-    state.view='quiz'; state.subject=id; state.chapter=null; state.qIdx=0; saveState(); render();
+    state.view = 'quiz'; state.subject = id; state.chapter = null; state.qIdx = 0; saveState(); render();
   }
-}
-function startChapterQuiz(subjId, chId){
-  const sub=subjects.find(s=>s.id===subjId);
-  const ch=sub.chapters.find(c=>c.id===chId);
-  state.view='quiz'; state.subject=subjId; state.chapter=chId; state.qIdx=ch.startIndex; saveState(); render();
-}
-function viewChapters(){ state.view='chapters'; saveState(); render(); }
-function selectOpt(i){const key=state.subject+'-'+state.qIdx;if(state.revealed[key])return;state.answers[key]=i;saveState();render();}
-function reveal(){const key=state.subject+'-'+state.qIdx;state.revealed[key]=true;const q=subjects.find(s=>s.id===state.subject).questions[state.qIdx];const isCorrect=state.answers[key]===q.correct;showToast(isCorrect?'Correct!':'Incorrect');saveState();updateCorrectCount();render();
-  // Award XP
-  if(typeof XP !== 'undefined'){
-    XP.award('answer');
-    if(isCorrect) setTimeout(()=>XP.award('correct'), 400);
-  }
-}
-function setFilter(f){ state.filter = f; saveState(); render(); }
-function toggleBookmark(key) {
-  state.bookmarks[key] = !state.bookmarks[key];
-  if (!state.bookmarks[key]) delete state.bookmarks[key]; // cleanup
+};
+window.startChapterQuiz = function(subjId, chId){
+  const sub = subjects.find(s => s.id === subjId);
+  const ch = sub.chapters.find(c => c.id === chId);
+  state.view = 'quiz'; state.subject = subjId; state.chapter = chId; state.qIdx = ch.startIndex; saveState(); render();
+};
+window.viewChapters = function(){ state.view = 'chapters'; saveState(); render(); };
+window.selectOpt = function(i){
+  const key = state.subject + '-' + state.qIdx;
+  if(state.revealed[key]) return;
+  state.answers[key] = i;
   saveState();
   render();
-}
-
-function nextQ() {
+};
+window.reveal = function(){
+  const key = state.subject + '-' + state.qIdx;
+  state.revealed[key] = true;
+  const q = subjects.find(s => s.id === state.subject).questions[state.qIdx];
+  const isCorrect = state.answers[key] === q.correct;
+  showToast(isCorrect ? 'Correct! +10 XP' : 'Incorrect. Check solution.');
+  saveState();
+  updateCorrectCount();
+  render();
+  if(typeof XP !== 'undefined'){
+    XP.award('answer');
+    if(isCorrect) setTimeout(() => XP.award('correct'), 400);
+  }
+};
+window.setFilter = function(f){ state.filter = f; saveState(); render(); };
+window.toggleBookmark = function(key){
+  state.bookmarks[key] = !state.bookmarks[key];
+  if (!state.bookmarks[key]) delete state.bookmarks[key];
+  saveState();
+  render();
+};
+window.nextQ = function(){
   const sub = subjects.find(s => s.id === state.subject);
   const activeIndices = getActiveIndices(sub, state.chapter, state.filter);
   const currentIndexInFilter = activeIndices.indexOf(state.qIdx);
-  
   if (currentIndexInFilter > -1 && currentIndexInFilter < activeIndices.length - 1) {
     state.qIdx = activeIndices[currentIndexInFilter + 1];
     saveState(); render();
   }
-}
-function prevQ() {
+};
+window.prevQ = function(){
   const sub = subjects.find(s => s.id === state.subject);
   const activeIndices = getActiveIndices(sub, state.chapter, state.filter);
   const currentIndexInFilter = activeIndices.indexOf(state.qIdx);
-  
   if (currentIndexInFilter > 0) {
     state.qIdx = activeIndices[currentIndexInFilter - 1];
     saveState(); render();
   }
-}
-function jumpTo(i){
-  state.view='quiz';
-  state.qIdx=i;
-  const sub=subjects.find(s=>s.id===state.subject);
+};
+window.jumpTo = function(i){
+  state.view = 'quiz';
+  state.qIdx = i;
+  const sub = subjects.find(s => s.id === state.subject);
   if(sub.chapters){
     const ch = sub.chapters.find(c => i >= c.startIndex && i <= c.endIndex);
     if(ch) state.chapter = ch.id;
   }
   saveState();
   render();
-}
-function viewResults(){state.view='results';saveState();render();}
+};
+window.viewResults = function(){ state.view = 'results'; saveState(); render(); };
 
-// Check for URL parameters to directly open a chapter
+// Check for URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const targetChapter = urlParams.get('chapter');
 if(targetChapter) {
@@ -26663,16 +26771,13 @@ if(targetChapter) {
   window.history.replaceState({}, document.title, window.location.pathname);
 }
 
-// Only render if this is the main page (not loaded as a script)
-if(window.location.pathname.includes('question-bank')){render();}
+if(window.location.pathname.includes('question-bank')){ render(); }
 
-// Legacy avatar logic removed. Auth-guard handles it dynamically.
 </script>
 <script src="xp-system.js"></script>
-<script src="dark-mode.js"></script>
-<script src="config.js"></script>
 <script src="ai-tutor.js"></script>
 </body>
 </html>
+
 
 
