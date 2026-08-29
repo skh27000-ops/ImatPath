@@ -702,13 +702,13 @@ const pastPapersData = {
     },
     {
       "id": 51,
-      "question": "Which of the following is the solution of the inequality (x² + 4x + 3)/(4 - 3x) ≥ 0 ?",
+      "question": "Which of the following is the solution of the inequality <span style=\"display:inline-block;text-align:center;vertical-align:middle;\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:2px 6px;\">x² + |4x + 3|</span><span style=\"display:block;padding:2px 6px;\">4 − 3x</span></span> ≥ 0 ?",
       "options": [
-        "each real x with x ≥ 4/3",
-        "each real x with x < 4/3",
-        "each real x with x > 4/3",
-        "each real x with x ≠ -3 ∧ x ≠ 0",
-        "each real x with x ≤ 4/3"
+        "each real x with x ≥ <span style=\"display:inline-block;text-align:center;vertical-align:middle;\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 4px;\">4</span><span style=\"display:block;padding:0 4px;\">3</span></span>",
+        "each real x with x < <span style=\"display:inline-block;text-align:center;vertical-align:middle;\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 4px;\">4</span><span style=\"display:block;padding:0 4px;\">3</span></span>",
+        "each real x with x > <span style=\"display:inline-block;text-align:center;vertical-align:middle;\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 4px;\">4</span><span style=\"display:block;padding:0 4px;\">3</span></span>",
+        "each real x with x ≠ −<span style=\"display:inline-block;text-align:center;vertical-align:middle;\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 4px;\">3</span><span style=\"display:block;padding:0 4px;\">4</span></span> ∧ x ≠ 0",
+        "each real x with x ≤ <span style=\"display:inline-block;text-align:center;vertical-align:middle;\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 4px;\">4</span><span style=\"display:block;padding:0 4px;\">3</span></span>"
       ],
       "correct": 1,
       "section": "Physics and Mathematics",
