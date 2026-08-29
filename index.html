@@ -4,1086 +4,1201 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ImatPath — Your clear path to medicine in Italy</title>
-<meta name="description" content="ImatPath gives you a Personalized IMAT Test, 2,000+ practice questions, mock exams, and score predictions for the IMAT 2026 — all in one platform.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<meta name="description" content="A structured study plan, 2,000+ IMAT-style questions, timed mock exams and the non-EU application guide — everything you need for the IMAT, in one place.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230c2b21'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23f6f1e7' font-family='Georgia'>i</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-700.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-:root {
-  --stone:    #F4F3F0;
-  --stone-2:  #EDECEA;
-  --stone-3:  #E0DEDB;
-  --stone-4:  #C8C5C1;
-  --ink:      #1A1916;
-  --ink-2:    #3D3A36;
-  --ink-3:    #5A5750;
-  --ink-4:    #8A8780;
-  --teal:     #0D9488;
-  --teal-2:   #0F766E;
-  --teal-pale:#CCFBF1;
-  --teal-faint:#F0FDFB;
-  --white:    #FFFFFF;
-  --red:      #DC2626;
-  --red-faint:#FEF2F2;
-  --amber:    #B45309;
-  --amber-pale:#FEF3C7;
+/* ============ TOKENS & RESET ============ */
+:root{
+  --cream:#f6f1e6; --cream-2:#efe7d5; --card:#fffdf7;
+  --ink:#152720; --ink-soft:#42574d;
+  --g900:#0a241b; --g800:#0e2f23; --g700:#164534; --g600:#1e5b44;
+  --terra:#c1591f; --terra-d:#a84a15; --terra-l:#e0713a;
+  --gold:#d9a441; --gold-l:#e9c070;
+  --sage:#8aa692; --line:#e2d8c2; --line-d:#23443a;
+  --ok:#2e7d4f; --bad:#b3402e;
+  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --sh-sm:0 1px 2px rgba(21,39,32,.06),0 4px 14px rgba(21,39,32,.06);
+  --sh-md:0 2px 6px rgba(21,39,32,.08),0 14px 34px rgba(21,39,32,.10);
+  --sh-lg:0 8px 20px rgba(10,36,27,.18),0 30px 70px rgba(10,36,27,.28);
 }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--terra);color:#fff}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{position:relative}
+.pad{padding:110px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+.dark .eyebrow{color:var(--gold)}
+.lead{color:var(--ink-soft);font-size:18px;max-width:640px}
+.dark .lead{color:#b9c9bd}
+h2{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:14px 0 16px}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:6px}
 
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.mq-track{animation:none!important}*{animation-duration:.001s!important}}
 
-body {
-  font-family:'Plus Jakarta Sans', sans-serif;
-  background:var(--stone);
-  color:var(--ink);
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:15.5px;padding:14px 28px;border-radius:999px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;white-space:nowrap}
+.btn svg{flex:none}
+.btn-primary{background:var(--terra);color:#fff;box-shadow:0 8px 22px rgba(193,89,31,.32)}
+.btn-primary:hover{background:var(--terra-d);transform:translateY(-2px);box-shadow:0 12px 28px rgba(193,89,31,.4)}
+.btn-ghost{border:1.5px solid rgba(246,241,230,.4);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--cream);transform:translateY(-2px)}
+.btn-ghost.on-light{border-color:rgba(21,39,32,.28);color:var(--ink)}
+.btn-ghost.on-light:hover{border-color:var(--ink)}
+.btn-lg{padding:17px 36px;font-size:16.5px}
+.btn-block{width:100%}
 
-button:focus-visible, a:focus-visible {
-  outline: 2px solid var(--teal);
-  outline-offset: 2px;
-}
+/* ============ NAV ============ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(246,241,230,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.nav.scrolled{border-color:var(--line);box-shadow:0 6px 24px rgba(21,39,32,.07)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em}
+.logo em{font-style:italic;color:var(--terra)}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-login{font-size:14.5px;font-weight:600;color:var(--ink-soft)}
+.nav-login:hover{color:var(--ink)}
+.nav-dark-toggle{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--line);background:transparent;color:var(--ink-soft);display:flex;align-items:center;justify-content:center;font-size:14px;transition:.25s}
+.nav-dark-toggle:hover{border-color:var(--terra);color:var(--terra)}
+.dark .nav-dark-toggle, [data-theme="dark"] .nav-dark-toggle{border-color:var(--line);color:var(--gold)}
+.nav .btn{padding:10px 22px;font-size:14px}
+.burger{display:none;flex-direction:column;gap:5px;padding:8px}
+.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.mobile-menu{display:none;flex-direction:column;gap:4px;padding:12px 24px 20px;background:var(--cream);border-bottom:1px solid var(--line)}
+.mobile-menu a{padding:11px 4px;font-weight:500;color:var(--ink-soft);border-bottom:1px solid var(--line)}
+.mobile-menu .btn{margin-top:12px}
+.mobile-menu.open{display:flex}
 
-nav {
-  position:fixed; top:0; left:0; right:0; z-index:100;
-  height:60px; display:flex; align-items:center; justify-content:space-between;
-  padding:0 56px;
-  background:rgba(244,243,240,0.92);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--stone-3);
-}
-.logo { font-size:1.2rem; font-weight:800; letter-spacing:-0.5px; color:var(--ink); text-decoration:none; }
-.logo span { color:var(--teal); }
-.nav-center { display:flex; gap:32px; list-style:none; position:absolute; left:50%; transform:translateX(-50%); }
-.nav-center a { font-size:0.85rem; font-weight:500; color:var(--ink-3); text-decoration:none; transition:color .18s; }
-.nav-center a:hover { color:var(--ink); }
-.nav-right { display:flex; gap:8px; align-items:center; }
+/* ============ HERO ============ */
+.hero{background:var(--g900);color:var(--cream);padding:170px 0 100px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(700px 420px at 82% 8%,rgba(217,164,65,.14),transparent 60%),
+  radial-gradient(600px 500px at 8% 90%,rgba(30,91,68,.5),transparent 60%)}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(246,241,230,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(246,241,230,.045) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 60% 30%,#000 30%,transparent 75%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border:1px solid rgba(217,164,65,.4);border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-l);background:rgba(217,164,65,.08)}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,164,65,.5)}50%{box-shadow:0 0 0 6px rgba(217,164,65,0)}}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.2rem);margin:26px 0 20px;color:var(--cream)}
+.hero h1 em{font-style:italic;color:var(--gold-l)}
+.hero-sub{font-size:18.5px;color:#c3d2c6;max-width:520px;margin-bottom:34px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.hero-chips{display:flex;gap:22px;flex-wrap:wrap;font-size:13.5px;color:#9db3a5}
+.hero-chips span{display:inline-flex;align-items:center;gap:7px}
+.hero-chips svg{color:var(--gold)}
 
-.hamburger { display:none; background:none; border:none; cursor:pointer; padding:8px; flex-direction:column; gap:5px; }
-.hamburger span { display:block; width:20px; height:2px; background:var(--ink); border-radius:1px; transition:all .3s; }
-.hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
-.hamburger.open span:nth-child(2) { opacity:0; }
-.hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+/* dashboard mockup */
+.hero-visual{position:relative}
+.dash{background:var(--card);border-radius:20px;box-shadow:var(--sh-lg);overflow:hidden;color:var(--ink);transform:rotate(.6deg)}
+.dash-bar{display:flex;align-items:center;gap:7px;padding:13px 18px;background:var(--cream-2);border-bottom:1px solid var(--line)}
+.dash-bar i{width:10px;height:10px;border-radius:50%;background:#d9cdb4}
+.dash-bar i:first-child{background:#e0a294}.dash-bar i:nth-child(2){background:#e5cf9a}.dash-bar i:nth-child(3){background:#a9c4a1}
+.dash-url{margin-left:auto;font-size:11.5px;color:var(--ink-soft);background:var(--card);border:1px solid var(--line);padding:3px 12px;border-radius:999px}
+.dash-body{padding:22px}
+.dash-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.dash-head h4{font-family:var(--serif);font-size:19px;font-weight:600}
+.dash-chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:rgba(46,125,79,.12);color:var(--ok);padding:5px 11px;border-radius:999px;white-space:nowrap}
+.dash-exam{font-size:13px;color:var(--ink-soft);margin-bottom:16px}
+.dash-exam b{color:var(--terra);font-weight:700}
+.chart-box{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:16px 16px 10px;margin-bottom:14px}
+.chart-cap{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-soft);margin-bottom:8px;font-weight:600}
+.chart-cap b{color:var(--ok)}
+.trend{stroke-dasharray:620;stroke-dashoffset:620;animation:draw 2.2s .5s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.trend-pt{opacity:0;animation:pop .3s ease forwards}
+.trend-pt:nth-of-type(1){animation-delay:1s}.trend-pt:nth-of-type(2){animation-delay:1.3s}.trend-pt:nth-of-type(3){animation-delay:1.6s}.trend-pt:nth-of-type(4){animation-delay:1.9s}.trend-pt:nth-of-type(5){animation-delay:2.2s}
+@keyframes pop{to{opacity:1}}
+.chap-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;font-size:13px;background:#fff}
+.chap-row:last-child{margin-bottom:0}
+.chap-name{font-weight:600}
+.pill{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:3.5px 9px;border-radius:999px;border:1.5px solid var(--line);color:var(--ink-soft);text-transform:uppercase;transition:.25s}
+.pill.done{background:rgba(46,125,79,.12);border-color:rgba(46,125,79,.5);color:var(--ok)}
+.float-card{position:absolute;background:var(--card);color:var(--ink);border-radius:14px;box-shadow:var(--sh-md);padding:13px 18px;font-size:13px;line-height:1.45;border:1px solid var(--line)}
+.float-card b{display:block;font-size:15px;font-family:var(--serif)}
+.fc-1{top:-26px;right:-14px;transform:rotate(-2deg);animation:bob 5s ease-in-out infinite}
+.fc-2{bottom:-24px;left:-20px;transform:rotate(1.5deg);animation:bob 6s .8s ease-in-out infinite}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -8px}}
 
-.mobile-nav {
-  display:none; position:fixed; top:60px; left:0; right:0; bottom:0;
-  background:var(--stone); z-index:99;
-  padding:32px 28px; flex-direction:column; gap:4px;
-  opacity:0; transform:translateY(-10px);
-  transition:opacity .25s, transform .25s;
-}
-.mobile-nav.open { display:flex; opacity:1; transform:translateY(0); }
-.mobile-nav a {
-  font-size:1.1rem; font-weight:600; color:var(--ink-2);
-  text-decoration:none; padding:14px 0;
-  border-bottom:1px solid var(--stone-3); transition:color .18s;
-}
-.mobile-nav a:hover { color:var(--teal); }
-.mobile-nav-btns { display:flex; gap:10px; margin-top:24px; }
-.mobile-nav-btns .btn-ghost,
-.mobile-nav-btns .btn-teal { flex:1; text-align:center; padding:12px; font-size:0.9rem; }
+/* marquee */
+.marquee{background:var(--g800);border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d);overflow:hidden;padding:15px 0}
+.mq-track{display:flex;gap:0;width:max-content;animation:mq 36s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq-track span{display:inline-flex;align-items:center;gap:26px;padding-right:26px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8fa897;white-space:nowrap}
+.mq-track span::after{content:"✦";color:var(--gold);font-size:11px}
 
-.btn-ghost {
-  padding:7px 18px; border-radius:8px; border:1.5px solid var(--stone-3);
-  background:transparent; font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:0.83rem; font-weight:600; color:var(--ink-2);
-  cursor:pointer; transition:border-color .18s, color .18s;
-}
-.btn-ghost:hover { border-color:var(--teal); color:var(--teal); }
-.btn-teal {
-  padding:7px 18px; border-radius:8px; border:none;
-  background:var(--teal); color:var(--white);
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:0.83rem; font-weight:700;
-  cursor:pointer; transition:background .18s, transform .15s;
-}
-.btn-teal:hover { background:var(--teal-2); transform:translateY(-1px); }
+/* ============ PROBLEM ============ */
+.problem{background:var(--cream)}
+.sec-head{max-width:680px;margin-bottom:56px}
+.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pain{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 32px;box-shadow:var(--sh-sm);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.pain:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.pain .num{font-family:var(--serif);font-size:56px;font-weight:600;color:transparent;-webkit-text-stroke:1.2px rgba(21,39,32,.18);line-height:1;position:absolute;top:20px;right:24px}
+.pain h3{font-size:20px;margin-bottom:10px;max-width:80%}
+.pain p{color:var(--ink-soft);font-size:15px}
 
-.hero {
-  min-height:100vh; display:flex; flex-direction:column;
-  align-items:center; justify-content:center; text-align:center;
-  padding:100px 40px 80px; position:relative; overflow:hidden;
-}
-.hero-bg-grid {
-  position:absolute; inset:0;
-  background-image:
-    linear-gradient(var(--stone-3) 1px, transparent 1px),
-    linear-gradient(90deg, var(--stone-3) 1px, transparent 1px);
-  background-size:48px 48px; opacity:0.4;
-  mask-image:radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 100%);
-  pointer-events:none;
-}
-.hero-glow {
-  position:absolute; width:700px; height:700px;
-  top:10%; left:50%; transform:translateX(-50%);
-  background:radial-gradient(circle, rgba(13,148,136,0.1) 0%, rgba(13,148,136,0.04) 40%, transparent 70%);
-  pointer-events:none; filter:blur(20px);
-}
-.hero-glow-2 {
-  position:absolute; width:400px; height:400px;
-  top:30%; left:30%; transform:translate(-50%,-50%);
-  background:radial-gradient(circle, rgba(13,148,136,0.06) 0%, transparent 60%);
-  pointer-events:none; filter:blur(30px);
-  animation:drift 8s ease-in-out infinite;
-}
-@keyframes drift {
-  0%,100%{transform:translate(-50%,-50%) translate(0,0);}
-  50%{transform:translate(-50%,-50%) translate(30px,-20px);}
-}
-.hero-badge {
-  display:inline-flex; align-items:center; gap:7px;
-  background:var(--teal-faint); border:1px solid rgba(13,148,136,0.2);
-  border-radius:100px; padding:5px 14px;
-  font-size:0.73rem; font-weight:700; letter-spacing:0.8px;
-  text-transform:uppercase; color:var(--teal);
-  margin-bottom:28px; position:relative;
-}
-.badge-dot { width:6px; height:6px; border-radius:50%; background:var(--teal); animation:pulse 2.2s ease-in-out infinite; }
-@keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:0.4;transform:scale(0.85);} }
-.hero h1 {
-  font-size:clamp(2.8rem, 5.8vw, 4.4rem); font-weight:800;
-  line-height:1.05; letter-spacing:-2.5px; color:var(--ink);
-  max-width:720px; margin-bottom:22px; position:relative;
-}
-.hero h1 .teal-text { color:var(--teal); }
-.hero-sub { font-size:1rem; font-weight:400; color:var(--ink-3); line-height:1.75; max-width:460px; margin-bottom:40px; position:relative; }
-.hero-actions { display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap; position:relative; margin-bottom:16px; }
-.btn-hero-primary {
-  padding:13px 32px; border-radius:10px; border:none;
-  background:var(--teal); color:var(--white);
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:0.95rem; font-weight:700; cursor:pointer;
-  transition:background .18s, transform .15s; letter-spacing:-0.2px;
-}
-.btn-hero-primary:hover { background:var(--teal-2); transform:translateY(-2px); }
-.btn-hero-ghost {
-  padding:13px 28px; border-radius:10px; border:1.5px solid var(--stone-3);
-  background:transparent; color:var(--ink-2);
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:0.95rem; font-weight:600; cursor:pointer;
-  transition:border-color .18s, color .18s;
-}
-.btn-hero-ghost:hover { border-color:var(--ink-3); color:var(--ink); }
-.hero-note {
-  font-size:0.78rem; color:var(--ink-3); position:relative;
-  display:flex; align-items:center; gap:16px; justify-content:center;
-}
-.hero-note span { display:flex; align-items:center; gap:5px; }
-.hero-note i { color:var(--teal); font-size:0.65rem; }
+/* ============ PLATFORM / DEMO ============ */
+.platform{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-row{display:flex;gap:44px;flex-wrap:wrap;margin-top:34px}
+.stat b{font-family:var(--serif);font-size:34px;font-weight:600;display:flex;align-items:baseline;gap:2px}
+.stat b .acc{color:var(--terra)}
+.stat span{font-size:13px;color:var(--ink-soft);font-weight:500}
+.demo-tabs{display:inline-flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px;margin-bottom:26px;flex-wrap:wrap}
+.demo-tab{padding:11px 24px;border-radius:999px;font-size:14.5px;font-weight:600;color:var(--ink-soft);transition:.25s}
+.demo-tab:hover{color:var(--ink)}
+.demo-tab.active{background:var(--g800);color:var(--cream);box-shadow:var(--sh-sm)}
+.demo-panel{display:none}
+.demo-panel.active{display:block;animation:fadeUp .45s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.demo-card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-md);overflow:hidden;max-width:820px}
+.demo-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 26px;background:var(--g800);color:var(--cream);flex-wrap:wrap}
+.demo-top .dt-l{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600}
+.demo-top .dt-l .mdot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.demo-top .dt-r{font-size:12px;color:#9db3a5}
+.demo-body{padding:30px}
+.q-subj{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
+.q-text{font-size:18.5px;font-weight:600;line-height:1.5;margin-bottom:22px;font-family:var(--serif)}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;text-align:left;padding:14px 18px;border:1.5px solid var(--line);border-radius:14px;font-size:15px;font-weight:500;background:#fff;transition:.2s}
+.opt:hover:not(:disabled){border-color:var(--g700);transform:translateX(3px)}
+.opt:disabled{cursor:default}
+.opt .letter{flex:none;width:30px;height:30px;border-radius:9px;background:var(--cream-2);display:grid;place-items:center;font-size:12.5px;font-weight:700;color:var(--ink-soft);transition:.2s}
+.opt.correct{border-color:var(--ok);background:rgba(46,125,79,.08)}
+.opt.correct .letter{background:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--bad);background:rgba(179,64,46,.07)}
+.opt.wrong .letter{background:var(--bad);color:#fff}
+.opt .mark{margin-left:auto;font-weight:700;font-size:14px}
+.opt.correct .mark{color:var(--ok)}.opt.wrong .mark{color:var(--bad)}
+.explain{display:none;margin-top:20px;padding:18px 20px;border-radius:14px;background:rgba(217,164,65,.12);border:1px solid rgba(217,164,65,.4);font-size:14.5px;line-height:1.6}
+.explain.show{display:block;animation:fadeUp .4s ease}
+.explain b{color:#8a6413;display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+.demo-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:22px;flex-wrap:wrap}
+.score-note{font-size:13px;color:var(--ink-soft)}
+.score-note b{color:var(--ink)}
+.btn-sm{padding:11px 22px;font-size:14px}
 
-section { padding:96px 56px; }
-.sec-label {
-  display:flex; align-items:center; gap:10px;
-  font-size:0.72rem; font-weight:700; letter-spacing:1.8px;
-  text-transform:uppercase; color:var(--teal); margin-bottom:14px;
-}
-.sec-label::before { content:''; display:block; width:18px; height:2px; background:var(--teal); border-radius:1px; }
-.sec-title { font-size:clamp(1.8rem,3.2vw,2.6rem); font-weight:800; letter-spacing:-1.2px; line-height:1.1; color:var(--ink); margin-bottom:14px; }
-.sec-sub { font-size:0.95rem; color:var(--ink-3); line-height:1.7; max-width:440px; font-weight:400; }
+/* mock exam */
+.mock-start{padding:14px 6px}
+.mock-info{display:grid;gap:0;margin:18px 0 26px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.mock-info div{display:flex;align-items:center;gap:14px;padding:15px 20px;font-size:14.5px;border-bottom:1px solid var(--line);background:#fff}
+.mock-info div:last-child{border-bottom:none}
+.mock-info b{min-width:110px;font-weight:700}
+.mock-info span{color:var(--ink-soft)}
+.mock-hud{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.mock-timer{font-family:var(--serif);font-size:26px;font-weight:600;background:var(--g800);color:var(--gold-l);padding:6px 18px;border-radius:12px;font-variant-numeric:tabular-nums}
+.mock-timer.low{color:#ff9c7a;animation:pulse 1.2s infinite}
+.mock-count{font-size:13.5px;font-weight:600;color:var(--ink-soft)}
+.mock-nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn-line{border:1.5px solid var(--line);color:var(--ink);padding:12px 24px;border-radius:999px;font-weight:600;font-size:14.5px;transition:.2s}
+.btn-line:hover:not(:disabled){border-color:var(--ink)}
+.btn-line:disabled{opacity:.4;cursor:default}
+.btn-danger-line{border:1.5px solid rgba(179,64,46,.5);color:var(--bad);padding:12px 24px;border-radius:999px;font-weight:600;font-size:14.5px;transition:.2s}
+.btn-danger-line:hover{background:rgba(179,64,46,.08)}
+.mock-result{text-align:center;padding:8px 0}
+.mr-score{font-family:var(--serif);font-size:64px;font-weight:600;line-height:1;margin:8px 0 2px}
+.mr-score span{font-size:24px;color:var(--ink-soft)}
+.mr-sub{font-size:14px;color:var(--ink-soft);margin-bottom:26px}
+.mr-bars{display:grid;gap:10px;text-align:left;margin-bottom:26px}
+.mr-bar{display:grid;grid-template-columns:110px 1fr 44px;align-items:center;gap:12px;font-size:13.5px}
+.mr-bar .track{height:9px;background:var(--cream-2);border-radius:99px;overflow:hidden}
+.mr-bar .fill{height:100%;background:var(--g600);border-radius:99px;width:0;transition:width 1s ease .2s}
+.mr-bar b{text-align:right;font-variant-numeric:tabular-nums}
+.mr-review{text-align:left;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:8px;margin-bottom:24px}
+.mr-r{display:flex;gap:12px;font-size:13.5px;padding:10px 14px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.mr-r .ic{flex:none;font-weight:800}
+.mr-r.ok .ic{color:var(--ok)}.mr-r.bad .ic{color:var(--bad)}.mr-r.blank .ic{color:var(--ink-soft)}
+.mr-r small{display:block;color:var(--ink-soft)}
 
-.problem-section { background:var(--ink); padding:88px 56px; }
-.problem-inner { max-width:960px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-.problem-text .sec-label { color:var(--teal-pale); }
-.problem-text .sec-label::before { background:var(--teal-pale); }
-.problem-text .sec-title { color:var(--white); }
-.problem-text .sec-sub { color:rgba(255,255,255,0.5); max-width:100%; }
-.problem-list { display:flex; flex-direction:column; gap:14px; margin-top:32px; }
-.problem-item {
-  display:flex; align-items:flex-start; gap:14px; padding:18px 20px;
-  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);
-  border-radius:12px; border-left:3px solid transparent; transition:border-color .2s;
-}
-.problem-item:hover { border-color:rgba(255,255,255,0.12); }
-.problem-item.lead {
-  background:rgba(13,148,136,0.06); border-color:rgba(13,148,136,0.2);
-  border-left-color:var(--teal); padding:22px 22px;
-}
-.problem-num { font-size:0.7rem; font-weight:800; color:var(--teal); letter-spacing:1px; min-width:28px; padding-top:2px; }
-.problem-item-title { font-size:0.88rem; font-weight:600; color:var(--white); margin-bottom:3px; }
-.problem-item-desc { font-size:0.8rem; color:rgba(255,255,255,0.4); line-height:1.55; }
-.problem-item.lead .problem-item-desc { color:rgba(255,255,255,0.55); }
+/* guide panel */
+.guide-toggle{display:inline-flex;background:var(--cream-2);border:1px solid var(--line);border-radius:999px;padding:5px;gap:4px;margin-bottom:24px}
+.guide-toggle button{padding:9px 20px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink-soft);transition:.2s}
+.guide-toggle button.active{background:var(--g800);color:var(--cream)}
+.checklist{display:grid;gap:9px;margin-bottom:24px}
+.check{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1.5px solid var(--line);border-radius:13px;background:#fff;font-size:14.5px;font-weight:500;cursor:pointer;transition:.2s;user-select:none}
+.check:hover{border-color:var(--g600)}
+.check input{display:none}
+.check .box{flex:none;width:21px;height:21px;border:2px solid #c9bfa6;border-radius:6px;display:grid;place-items:center;transition:.2s;color:transparent;font-size:12px}
+.check input:checked ~ .box{background:var(--ok);border-color:var(--ok);color:#fff}
+.check input:checked ~ .txt{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:rgba(46,125,79,.6)}
+.g-progress{border-top:1px solid var(--line);padding-top:20px}
+.g-progress .gp-t{display:flex;justify-content:space-between;font-size:13.5px;font-weight:600;margin-bottom:9px}
+.g-progress .gp-t b{color:var(--terra)}
+.gp-track{height:10px;background:var(--cream-2);border-radius:99px;overflow:hidden}
+.gp-fill{height:100%;width:0;background:linear-gradient(90deg,var(--g600),var(--terra));border-radius:99px;transition:width .5s ease}
+.guide-note{font-size:13px;color:var(--ink-soft);margin-top:18px}
 
-.features-section { background:var(--stone); }
-.features-inner { max-width:980px; margin:0 auto; }
-.features-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:52px; }
-.feat-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
-.feat-card {
-  background:var(--white); border:1px solid var(--stone-3); border-radius:16px;
-  padding:28px; transition:border-color .2s, transform .2s; position:relative; overflow:hidden;
-}
-.feat-card::after {
-  content:''; position:absolute; top:0;left:0;right:0;height:2px;
-  background:var(--teal); transform:scaleX(0); transform-origin:left; transition:transform .25s;
-}
-.feat-card:hover { border-color:var(--teal); transform:translateY(-3px); }
-.feat-card:hover::after { transform:scaleX(1); }
-.feat-card.hero-feat {
-  grid-column:span 2; display:flex; gap:28px; align-items:center;
-  padding:32px 36px;
-  background:linear-gradient(135deg, var(--white) 0%, var(--teal-faint) 100%);
-  border-color:rgba(13,148,136,0.15);
-}
-.feat-card.hero-feat::after { display:none; }
-.feat-card.hero-feat .feat-icon {
-  width:52px; height:52px; border-radius:14px;
-  background:var(--teal); border:none; flex-shrink:0; margin-bottom:0;
-}
-.feat-card.hero-feat .feat-icon svg { width:22px; height:22px; stroke:white; }
-.feat-card.hero-feat .feat-title { font-size:1.1rem; margin-bottom:8px; }
-.feat-card.hero-feat .feat-desc { font-size:0.88rem; max-width:420px; }
-.feat-card.tall { grid-row:span 2; display:flex; flex-direction:column; }
-.feat-card.tall .tall-visual { margin-top:auto; padding-top:24px; border-top:1px solid var(--stone-3); }
-.tall-timer-display {
-  display:flex; align-items:center; gap:12px;
-  padding:14px 16px; background:var(--stone-2); border-radius:10px; margin-bottom:10px;
-}
-.tall-timer-clock { font-size:1.3rem; font-weight:800; color:var(--ink); letter-spacing:-0.5px; font-variant-numeric:tabular-nums; }
-.tall-timer-label { font-size:0.72rem; color:var(--ink-3); font-weight:500; }
-.tall-timer-bars { display:flex; gap:3px; }
-.tall-timer-bar { width:4px; border-radius:2px; background:var(--teal); }
-.feat-icon {
-  width:40px; height:40px; border-radius:10px;
-  background:var(--teal-faint); border:1px solid rgba(13,148,136,0.15);
-  display:flex; align-items:center; justify-content:center; margin-bottom:18px;
-}
-.feat-icon svg { width:18px; height:18px; stroke:var(--teal); fill:none; }
-.feat-title { font-size:0.95rem; font-weight:700; color:var(--ink); margin-bottom:8px; letter-spacing:-0.2px; }
-.feat-desc { font-size:0.83rem; color:var(--ink-3); line-height:1.65; }
+/* ============ FEATURES BENTO ============ */
+.features{background:var(--cream)}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.b-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--sh-sm);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;gap:12px}
+.b-card:hover{transform:translateY(-5px);box-shadow:var(--sh-md)}
+.b-tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.b-card h3{font-size:21px}
+.b-card p{color:var(--ink-soft);font-size:14.5px}
+.b-ui{margin-top:auto;padding-top:18px}
+.s2{grid-column:span 2}.s3{grid-column:span 3}.s6{grid-column:span 6}
+/* past papers */
+.paper{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;font-size:13px;margin-bottom:7px}
+.paper b{font-family:var(--serif);font-size:15px}
+.paper .tag-off{font-size:10px;font-weight:700;letter-spacing:.08em;background:rgba(217,164,65,.18);color:#8a6413;padding:3px 9px;border-radius:99px;text-transform:uppercase}
+.paper .arr{color:var(--terra);font-weight:700}
+/* mock timer */
+.big-timer{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--g800);font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:12px}
+.big-timer .rec{width:9px;height:9px;border-radius:50%;background:var(--bad);animation:pulse 1.5s infinite}
+.mini-meta{display:flex;gap:8px;flex-wrap:wrap}
+.mini-meta span{font-size:11.5px;font-weight:600;background:var(--cream-2);border:1px solid var(--line);padding:4px 11px;border-radius:99px;color:var(--ink-soft)}
+/* bank chips */
+.subj-chips{display:flex;gap:7px;flex-wrap:wrap}
+.subj-chips span{font-size:12px;font-weight:600;padding:6px 13px;border-radius:99px;border:1.5px solid var(--line);background:#fff}
+.subj-chips span i{font-style:normal;color:var(--terra);font-weight:700}
+/* analytics bars */
+.bars{display:flex;align-items:flex-end;gap:12px;height:110px;padding:0 6px}
+.bar-w{flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;height:100%;justify-content:flex-end}
+.bar{width:100%;border-radius:8px 8px 4px 4px;background:linear-gradient(180deg,var(--g600),var(--g800));transform-origin:bottom;transform:scaleY(0);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.b-card.in .bar{transform:scaleY(1)}
+.bar-l{font-size:10px;font-weight:700;color:var(--ink-soft);letter-spacing:.05em}
+/* guide mini */
+.gmini{display:flex;align-items:center;gap:10px;font-size:13px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;margin-bottom:7px}
+.gmini .box{width:17px;height:17px;border-radius:5px;background:var(--ok);color:#fff;display:grid;place-items:center;font-size:10px;flex:none}
+.gmini .box.empty{background:transparent;border:2px solid #c9bfa6}
+/* predictor */
+.pred-wrap{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:center;width:100%}
+.pred-left label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:10px}
+.pred-score{font-family:var(--serif);font-size:52px;font-weight:600;line-height:1;color:var(--g800)}
+.pred-score span{font-size:20px;color:var(--ink-soft)}
+input[type=range]{width:100%;margin:16px 0 8px;accent-color:var(--terra);height:6px}
+.pred-verdict{font-size:14px;font-weight:600;color:var(--terra)}
+.pred-chips{display:flex;gap:9px;flex-wrap:wrap}
+.u-chip{display:inline-flex;flex-direction:column;gap:2px;padding:11px 16px;border-radius:13px;border:1.5px solid var(--line);background:#fff;font-size:13px;font-weight:600;transition:.3s;opacity:.55}
+.u-chip small{font-size:11px;font-weight:500;color:var(--ink-soft)}
+.u-chip.hit{opacity:1;border-color:rgba(46,125,79,.55);background:rgba(46,125,79,.08)}
+.u-chip.hit small{color:var(--ok)}
+.pred-note{font-size:12px;color:var(--ink-soft);margin-top:14px}
 
-.how-section { background:var(--stone-2); border-top:1px solid var(--stone-3); border-bottom:1px solid var(--stone-3); padding:108px 56px; }
-.how-inner { max-width:820px; margin:0 auto; text-align:center; }
-.how-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:60px; position:relative; }
-.how-steps::before {
-  content:''; position:absolute; top:34px; left:calc(12.5% + 20px); right:calc(12.5% + 20px);
-  height:2px; background:linear-gradient(90deg, var(--teal), var(--teal-2)); opacity:0.25;
-}
-.how-step { display:flex; flex-direction:column; align-items:center; padding:0 12px; }
-.how-num {
-  width:68px; height:68px; border-radius:50%; background:var(--white);
-  border:2px solid var(--stone-3); display:flex; align-items:center; justify-content:center;
-  font-size:1.1rem; font-weight:800; color:var(--teal); letter-spacing:0.5px;
-  margin-bottom:22px; position:relative; z-index:1; transition:border-color .2s, transform .2s;
-}
-.how-step:hover .how-num { border-color:var(--teal); transform:scale(1.08); }
-.how-step-title { font-size:0.9rem; font-weight:700; color:var(--ink); margin-bottom:8px; text-align:center; }
-.how-step-desc { font-size:0.78rem; color:var(--ink-3); line-height:1.6; text-align:center; }
+/* ============ NON-EU ============ */
+.noneu{background:var(--g900);color:var(--cream);overflow:hidden}
+.noneu::before{content:"";position:absolute;inset:0;background:radial-gradient(640px 400px at 12% 0%,rgba(217,164,65,.1),transparent 60%),radial-gradient(700px 500px at 95% 100%,rgba(30,91,68,.55),transparent 60%)}
+.noneu .wrap{position:relative;z-index:2}
+.track-toggle{display:inline-flex;background:rgba(246,241,230,.07);border:1px solid var(--line-d);border-radius:999px;padding:5px;gap:4px;margin:6px 0 40px}
+.track-toggle button{padding:10px 22px;border-radius:999px;font-size:14px;font-weight:600;color:#9db3a5;transition:.25s}
+.track-toggle button.active{background:var(--gold);color:var(--g900)}
+.timeline{display:none;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.timeline.eu{grid-template-columns:repeat(3,1fr)}
+.timeline.active{display:grid;animation:fadeUp .45s ease}
+.timeline::before{content:"";position:absolute;top:26px;left:5%;right:5%;height:2px;background:linear-gradient(90deg,transparent,var(--gold) 15%,var(--gold) 85%,transparent);opacity:.5}
+.t-step{position:relative;padding-top:0}
+.t-num{width:52px;height:52px;border-radius:50%;background:var(--g800);border:2px solid var(--gold);color:var(--gold-l);display:grid;place-items:center;font-family:var(--serif);font-size:20px;font-weight:600;margin-bottom:18px;position:relative;z-index:1}
+.t-step h3{font-size:19px;color:var(--cream);margin-bottom:8px}
+.t-step p{font-size:13.5px;color:#a9bcae;line-height:1.6;margin-bottom:12px}
+.t-when{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-l);border:1px solid rgba(217,164,65,.4);padding:5px 12px;border-radius:99px}
+.noneu-foot{margin-top:44px;font-size:13.5px;color:#8fa897;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.noneu-foot a{color:var(--gold-l);font-weight:600;border-bottom:1px solid rgba(217,164,65,.5);padding-bottom:1px}
 
-.preview-section { background:var(--stone); }
-.preview-inner { max-width:980px; margin:0 auto; display:grid; grid-template-columns:1fr 1.1fr; gap:64px; align-items:center; }
-.preview-ui {
-  background:var(--white); border:1px solid var(--stone-3); border-radius:20px;
-  overflow:hidden; box-shadow:0 4px 40px rgba(0,0,0,0.06);
-}
-.preview-ui-bar {
-  background:var(--stone-2); border-bottom:1px solid var(--stone-3);
-  padding:12px 18px; display:flex; align-items:center; gap:7px;
-}
-.ui-dot { width:10px; height:10px; border-radius:50%; }
-.preview-ui-body { padding:22px 22px 18px; }
-.ui-label { font-size:0.65rem; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal); margin-bottom:6px; }
-.ui-q { font-size:0.88rem; font-weight:700; color:var(--ink); margin-bottom:14px; }
-.ui-opts { display:flex; flex-direction:column; gap:7px; margin-bottom:18px; }
-.ui-opt {
-  display:flex; align-items:center; gap:10px; padding:10px 13px;
-  border:1.5px solid var(--stone-3); border-radius:9px;
-  font-size:0.78rem; color:var(--ink-2); font-weight:500; cursor:default;
-}
-.ui-opt.sel { border-color:var(--teal); background:var(--teal-faint); color:var(--teal-2); }
-.ui-opt-dot { width:14px; height:14px; border-radius:50%; border:1.5px solid var(--stone-3); flex-shrink:0; }
-.ui-opt.sel .ui-opt-dot { border-color:var(--teal); background:var(--teal); }
-.ui-progress-row { display:flex; align-items:center; justify-content:space-between; margin-bottom:6px; font-size:0.72rem; color:var(--ink-3); }
-.ui-bar-wrap { height:5px; background:var(--stone-2); border-radius:3px; overflow:hidden; margin-bottom:16px; }
-.ui-bar-fill { height:100%; background:var(--teal); border-radius:3px; width:0; transition:width 1.2s cubic-bezier(.22,1,.36,1); }
-.ui-bar-fill.animate { width:50%; }
-.ui-plan-title { font-size:0.7rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--ink-3); margin-bottom:10px; }
-.ui-weeks { display:flex; flex-direction:column; gap:6px; }
-.ui-week { display:flex; align-items:center; gap:10px; padding:8px 10px; background:var(--stone-2); border-radius:8px; }
-.ui-week-label { font-size:0.7rem; color:var(--ink-3); min-width:52px; }
-.ui-week-bar-wrap { flex:1; height:5px; background:var(--stone-3); border-radius:3px; overflow:hidden; }
-.ui-week-bar { height:100%; border-radius:3px; width:0; transition:width 0.8s cubic-bezier(.22,1,.36,1); }
-.ui-week-subj { font-size:0.68rem; color:var(--ink-3); min-width:76px; text-align:right; }
+/* ============ SYLLABUS ============ */
+.syllabus{background:var(--cream)}
+.syl-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+.syl-points{display:grid;gap:16px;margin-top:28px}
+.syl-pt{display:flex;gap:14px;font-size:15px;color:var(--ink-soft)}
+.syl-pt svg{flex:none;margin-top:3px;color:var(--terra)}
+.syl-pt b{color:var(--ink)}
+.tracker{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-md);overflow:hidden}
+.tracker-head{padding:20px 26px;background:var(--g800);color:var(--cream);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.tracker-head h4{font-family:var(--serif);font-size:18px;font-weight:600}
+.tracker-head span{font-size:12px;color:#9db3a5}
+.subj-pills{display:flex;gap:7px;padding:16px 22px 0;flex-wrap:wrap}
+.subj-pill{font-size:12.5px;font-weight:600;padding:7px 15px;border-radius:99px;border:1.5px solid var(--line);color:var(--ink-soft)}
+.subj-pill.active{background:var(--g800);color:var(--cream);border-color:var(--g800)}
+.tracker-body{padding:18px 22px 8px}
+.st-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.st-row:last-child{border-bottom:none}
+.st-name{font-size:14px;font-weight:600}
+.st-status{display:flex;gap:7px}
+.st-pill{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 11px;border-radius:99px;border:1.5px solid var(--line);color:var(--ink-soft);transition:.25s}
+.st-pill:hover{border-color:var(--g600)}
+.st-pill.done{background:rgba(46,125,79,.12);border-color:rgba(46,125,79,.5);color:var(--ok)}
+.tracker-foot{padding:16px 26px;background:var(--cream-2);font-size:13px;color:var(--ink-soft);border-top:1px solid var(--line)}
+.tracker-foot b{color:var(--terra)}
 
-.pricing-section { background:var(--ink); padding:96px 56px; }
-.pricing-inner { max-width:680px; margin:0 auto; text-align:center; }
-.pricing-inner .sec-label { justify-content:center; color:var(--teal-pale); }
-.pricing-inner .sec-label::before { background:var(--teal-pale); }
-.pricing-inner .sec-title { color:var(--white); }
-.pricing-inner .sec-sub { color:rgba(255,255,255,0.45); margin:0 auto 52px; }
-.pricing-cards { display:grid; grid-template-columns:1fr 1fr; gap:16px; text-align:left; align-items:stretch; }
-.pricing-card {
-  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
-  border-radius:18px; padding:30px; transition:border-color .2s; display:flex; flex-direction:column;
-}
-.pricing-card.featured { border-color:var(--teal); background:rgba(13,148,136,0.07); }
-.plan-name { font-size:0.72rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:18px; }
-.pricing-card.featured .plan-name { color:var(--teal-pale); }
-.plan-price { font-size:2.6rem; font-weight:800; letter-spacing:-2px; color:var(--white); line-height:1; margin-bottom:4px; }
-.plan-price sup { font-size:1.1rem; vertical-align:top; margin-top:6px; font-weight:600; }
-.plan-period { font-size:0.8rem; color:rgba(255,255,255,0.35); margin-bottom:10px; }
-.plan-divider { height:1px; background:rgba(255,255,255,0.07); margin-bottom:20px; }
-.pricing-card.featured .plan-divider { background:rgba(13,148,136,0.2); }
-.plan-feats { display:flex; flex-direction:column; gap:10px; margin-bottom:26px; flex:1; }
-.plan-feat {
-  display:flex; align-items:flex-start; gap:10px;
-  font-size:0.83rem; color:rgba(255,255,255,0.6); line-height:1.45;
-}
-.plan-feat::before {
-  content:''; display:block; width:15px; height:15px; border-radius:50%;
-  background:rgba(13,148,136,0.15); border:1.5px solid var(--teal); flex-shrink:0; margin-top:1px;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%230D9488' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-size:10px; background-repeat:no-repeat; background-position:center;
-}
-.plan-feat.missing { color:rgba(255,255,255,0.25); }
-.plan-feat.missing::before { border-color:rgba(255,255,255,0.15); background:rgba(255,255,255,0.05); background-image:none; content:'\2715'; display:flex; align-items:center; justify-content:center; font-size:0.6rem; }
-.plan-tag { display:inline-block; font-size:0.72rem; font-weight:700; background:var(--teal); color:var(--white); padding:2px 10px; border-radius:100px; margin-bottom:8px; }
-.plan-save { display:inline-block; font-size:0.72rem; font-weight:700; background:rgba(245,158,11,0.15); color:#F59E0B; padding:2px 10px; border-radius:100px; margin-bottom:8px; }
-.btn-plan {
-  width:100%; padding:12px; border-radius:9px; border:1.5px solid rgba(255,255,255,0.15);
-  background:transparent; color:var(--white);
-  font-family:'Plus Jakarta Sans',sans-serif; font-size:0.88rem; font-weight:700;
-  cursor:pointer; transition:border-color .18s, background .18s;
-}
-.btn-plan:hover { border-color:rgba(255,255,255,0.35); }
-.btn-plan-teal {
-  width:100%; padding:12px; border-radius:9px; border:none;
-  background:var(--teal); color:var(--white);
-  font-family:'Plus Jakarta Sans',sans-serif; font-size:0.88rem; font-weight:700;
-  cursor:pointer; transition:background .18s;
-}
-.btn-plan-teal:hover { background:var(--teal-2); }
+/* ============ HOW ============ */
+.how{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px;position:relative;transition:transform .3s,box-shadow .3s}
+.step:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.step .s-num{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--terra);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.step .s-num::after{content:"";flex:1;height:1px;background:var(--line)}
+.step h3{font-size:19px;margin-bottom:9px}
+.step p{font-size:14px;color:var(--ink-soft)}
+.step .date-tag{display:inline-block;margin-top:14px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:rgba(193,89,31,.1);color:var(--terra);padding:5px 12px;border-radius:99px}
 
-.faq-section { background:var(--stone); padding:88px 56px; }
-.faq-inner { max-width:640px; margin:0 auto; }
-.faq-header { text-align:center; margin-bottom:40px; }
-.faq-list { display:flex; flex-direction:column; gap:8px; }
-.faq-item {
-  border:1px solid var(--stone-3); border-radius:12px; overflow:hidden;
-  background:var(--white); transition:border-color .2s;
-}
-.faq-item.open { border-color:rgba(13,148,136,0.3); }
-.faq-q {
-  display:flex; align-items:center; justify-content:space-between;
-  padding:18px 20px; cursor:pointer; font-size:0.88rem; font-weight:600;
-  color:var(--ink); user-select:none; transition:color .18s; background:none; border:none;
-  width:100%; text-align:left; font-family:'Plus Jakarta Sans',sans-serif;
-}
-.faq-q:hover { color:var(--teal); }
-.faq-q i { font-size:0.72rem; color:var(--ink-3); transition:transform .25s; flex-shrink:0; margin-left:16px; }
-.faq-item.open .faq-q i { transform:rotate(180deg); color:var(--teal); }
-.faq-a {
-  max-height:0; overflow:hidden; transition:max-height .3s ease, padding .3s ease;
-  padding:0 20px;
-}
-.faq-item.open .faq-a { max-height:200px; padding:0 20px 18px; }
-.faq-a p { font-size:0.83rem; color:var(--ink-3); line-height:1.7; }
+/* ============ FOUNDERS ============ */
+.founders{background:var(--cream);text-align:center}
+.f-quote{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:500;line-height:1.5;max-width:820px;margin:26px auto 30px;font-style:italic;color:var(--ink)}
+.f-quote em{color:var(--terra);font-style:italic}
+.f-sig{font-size:14px;font-weight:600;color:var(--ink-soft);margin-bottom:26px}
+.f-contact{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;background:var(--card);border:1px solid var(--line);padding:10px 20px;border-radius:99px;color:var(--ink-soft)}
+.f-contact b{color:var(--ink)}
 
-.cta-section {
-  background:var(--stone-2); border-top:1px solid var(--stone-3);
-  padding:108px 56px; text-align:center; position:relative; overflow:hidden;
-}
-.cta-bg-grid {
-  position:absolute; inset:0;
-  background-image:
-    linear-gradient(var(--stone-3) 1px, transparent 1px),
-    linear-gradient(90deg, var(--stone-3) 1px, transparent 1px);
-  background-size:48px 48px; opacity:0.35;
-  mask-image:radial-gradient(ellipse 60% 50% at 50% 50%, black 20%, transparent 100%);
-  pointer-events:none;
-}
-.cta-glow {
-  position:absolute; width:500px; height:400px;
-  bottom:-100px; left:50%; transform:translateX(-50%);
-  background:radial-gradient(circle, rgba(13,148,136,0.08) 0%, transparent 70%);
-  pointer-events:none;
-}
-.cta-section .sec-title { margin:0 auto 14px; max-width:520px; position:relative; }
-.cta-section .sec-sub { margin:0 auto 36px; position:relative; }
-.cta-urgency { font-size:0.85rem; color:var(--ink-3); margin-bottom:28px; position:relative; }
-.cta-urgency strong { color:var(--ink); font-weight:700; }
+/* ============ PRICING ============ */
+.pricing{background:var(--cream)}
+.price-anchor{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.anchor-chip{font-size:13.5px;background:var(--card);border:1px solid var(--line);padding:10px 20px;border-radius:99px;color:var(--ink-soft)}
+.anchor-chip b{color:var(--ink)}
+.anchor-chip.hl{background:var(--g800);color:var(--cream);border-color:var(--g800)}
+.anchor-chip.hl b{color:var(--gold-l)}
+.price-card{max-width:540px;margin:0 auto;background:var(--g900);color:var(--cream);border-radius:26px;padding:46px 44px;box-shadow:var(--sh-lg);position:relative;overflow:hidden}
+.price-card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 260px at 90% -10%,rgba(217,164,65,.16),transparent 60%)}
+.price-card>*{position:relative}
+.pc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px;flex-wrap:wrap;gap:10px}
+.pc-badge{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);color:var(--g900);padding:6px 14px;border-radius:99px}
+.pc-until{font-size:12.5px;color:#9db3a5}
+.pc-price{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.pc-old{font-family:var(--serif);font-size:26px;color:#6e8779;text-decoration:line-through;text-decoration-color:rgba(224,113,58,.8)}
+.pc-now{font-family:var(--serif);font-size:72px;font-weight:600;line-height:1;color:var(--cream)}
+.pc-per{font-size:14px;color:#9db3a5}
+.pc-count{margin:22px 0 26px;padding:16px 18px;background:rgba(246,241,230,.06);border:1px solid var(--line-d);border-radius:14px}
+.pc-count .pcc-t{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);margin-bottom:12px}
+.pcc-boxes{display:flex;gap:10px}
+.pcc-box{flex:1;text-align:center;background:var(--g800);border:1px solid var(--line-d);border-radius:10px;padding:9px 4px}
+.pcc-box b{display:block;font-family:var(--serif);font-size:23px;font-variant-numeric:tabular-nums;color:var(--cream)}
+.pcc-box span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8fa897}
+.pc-list{display:grid;gap:11px;margin-bottom:30px}
+.pc-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;list-style:none}
+.pc-list svg{flex:none;margin-top:3px;color:var(--gold)}
+.pc-note{text-align:center;font-size:12.5px;color:#8fa897;margin-top:16px;line-height:1.7}
+.pc-note b{color:#c3d2c6}
 
-footer {
-  background:var(--stone); border-top:1px solid var(--stone-3);
-  padding:28px 56px; display:flex; align-items:center; justify-content:space-between;
-}
-.footer-logo { font-size:1rem; font-weight:800; letter-spacing:-0.3px; color:var(--ink); }
-.footer-logo span { color:var(--teal); }
-.footer-links { display:flex; gap:24px; }
-.footer-links a { font-size:0.8rem; color:var(--ink-3); text-decoration:none; transition:color .18s; cursor:pointer; }
-.footer-links a:hover { color:var(--ink); }
-.footer-copy { font-size:0.78rem; color:var(--ink-3); }
+/* ============ FAQ ============ */
+.faq{background:var(--cream-2);border-top:1px solid var(--line)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:15px;overflow:hidden;transition:box-shadow .3s}
+.faq-item.open{box-shadow:var(--sh-sm)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;padding:20px 24px;font-size:15px;font-weight:600;color:var(--ink);line-height:1.4}
+.faq-q .fx{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:15px;color:var(--terra);transition:transform .3s;font-weight:500}
+.faq-item.open .fx{transform:rotate(45deg);background:var(--terra);border-color:var(--terra);color:#fff}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a>div{overflow:hidden}
+.faq-a p{padding:0 24px 22px;font-size:14.5px;color:var(--ink-soft);line-height:1.7}
 
-@keyframes fadeUp { from{opacity:0;transform:translateY(18px);} to{opacity:1;transform:translateY(0);} }
-.hero-badge{animation:fadeUp .5s ease both;}
-.hero h1{animation:fadeUp .6s .08s ease both;}
-.hero-sub{animation:fadeUp .6s .16s ease both;}
-.hero-actions{animation:fadeUp .6s .22s ease both;}
-.hero-note{animation:fadeUp .6s .28s ease both;}
+/* ============ FINAL CTA ============ */
+.final{background:var(--g900);color:var(--cream);text-align:center;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 340px at 50% 0%,rgba(217,164,65,.14),transparent 65%)}
+.final .wrap{position:relative;z-index:2}
+.final h2{color:var(--cream);font-size:clamp(2.2rem,4.5vw,3.4rem)}
+.final .lead{margin:18px auto 36px;text-align:center}
+.final-line{margin-top:26px;font-size:13.5px;color:#8fa897;display:flex;justify-content:center;gap:26px;flex-wrap:wrap}
+.final-line b{color:var(--gold-l)}
 
-.rv { opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
-.rv.vis { opacity:1; transform:translateY(0); }
-.rv-l { opacity:0; transform:translateX(-28px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
-.rv-l.vis { opacity:1; transform:translateX(0); }
-.rv-r { opacity:0; transform:translateX(28px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
-.rv-r.vis { opacity:1; transform:translateX(0); }
-.d1{transition-delay:.08s!important}.d2{transition-delay:.16s!important}.d3{transition-delay:.24s!important}.d4{transition-delay:.32s!important}.d5{transition-delay:.4s!important}.d6{transition-delay:.48s!important}
+/* ============ FOOTER ============ */
+footer{background:#071a13;color:#8fa897;padding:64px 0 34px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:48px}
+.foot-brand .logo{color:var(--cream);margin-bottom:14px}
+.foot-brand p{max-width:300px;line-height:1.7;font-size:13.5px}
+footer h5{color:var(--cream);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;font-family:var(--sans)}
+footer ul{list-style:none;display:grid;gap:10px}
+footer ul a{transition:color .2s;font-size:13.5px}
+footer ul a:hover{color:var(--cream)}
+.foot-bottom{border-top:1px solid #12352a;padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
 
-.platform-section { background:var(--stone-2); border-top:1px solid var(--stone-3); border-bottom:1px solid var(--stone-3); padding:96px 56px; }
-.platform-inner { max-width:980px; margin:0 auto; }
-.platform-tabs { display:flex; gap:6px; margin-bottom:32px; background:var(--stone); border-radius:12px; padding:5px; border:1px solid var(--stone-3); }
-.plat-tab { flex:1; padding:11px 16px; border-radius:9px; border:none; background:transparent; color:var(--ink-3); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.82rem; font-weight:600; cursor:pointer; transition:all .2s; }
-.plat-tab.active { background:var(--white); color:var(--ink); box-shadow:0 1px 4px rgba(0,0,0,0.06); }
-.plat-tab:hover:not(.active) { color:var(--ink-2); }
-.plat-panel { display:none; }
-.plat-panel.active { display:block; animation:fadeUp .35s ease both; }
-
-.rm-container { max-width:640px; margin:0 auto; }
-.rm-step { display:none; }
-.rm-step.active { display:block; animation:fadeUp .3s ease both; }
-.rm-progress { display:flex; gap:4px; margin-bottom:28px; }
-.rm-prog-bar { flex:1; height:4px; border-radius:2px; background:var(--stone-3); transition:background .3s; }
-.rm-prog-bar.done { background:var(--teal); }
-.rm-prog-bar.current { background:var(--teal); opacity:0.5; }
-.rm-question { font-size:1.15rem; font-weight:700; color:var(--ink); margin-bottom:20px; letter-spacing:-0.3px; }
-.rm-options { display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
-.rm-opt { display:flex; align-items:center; gap:12px; padding:14px 18px; border:1.5px solid var(--stone-3); border-radius:11px; background:var(--white); cursor:pointer; transition:all .18s; font-size:0.88rem; color:var(--ink-2); font-weight:500; }
-.rm-opt:hover { border-color:var(--teal); }
-.rm-opt.selected { border-color:var(--teal); background:var(--teal-faint); color:var(--teal-2); }
-.rm-opt-dot { width:18px; height:18px; border-radius:50%; border:2px solid var(--stone-4); flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:all .18s; }
-.rm-opt.selected .rm-opt-dot { border-color:var(--teal); background:var(--teal); }
-.rm-opt.selected .rm-opt-dot::after { content:''; width:6px; height:6px; border-radius:50%; background:white; }
-.rm-opt.multi.selected { border-color:var(--teal); background:var(--teal-faint); }
-.rm-opt.multi .rm-opt-dot { border-radius:5px; }
-.rm-opt.multi.selected .rm-opt-dot { border-color:var(--teal); background:var(--teal); }
-.rm-opt.multi.selected .rm-opt-dot::after { content:'\2713'; color:white; font-size:11px; font-weight:700; width:auto; height:auto; border-radius:0; background:none; }
-.rm-nav { display:flex; justify-content:space-between; align-items:center; }
-.rm-back { padding:10px 20px; border-radius:9px; border:1.5px solid var(--stone-3); background:transparent; color:var(--ink-3); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.85rem; font-weight:600; cursor:pointer; transition:border-color .18s, color .18s; }
-.rm-back:hover { border-color:var(--ink-3); color:var(--ink-2); }
-.rm-next { padding:10px 24px; border-radius:9px; border:none; background:var(--teal); color:var(--white); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.85rem; font-weight:700; cursor:pointer; transition:background .18s; }
-.rm-next:hover { background:var(--teal-2); }
-.rm-next:disabled { opacity:0.4; cursor:not-allowed; }
-
-.rm-paywall {
-  background:var(--white); border:1px solid var(--stone-3); border-radius:18px;
-  padding:36px; text-align:center; animation:fadeUp .4s ease both;
+/* ============ RESPONSIVE ============ */
+@media(max-width:1020px){
+  .hero .wrap{grid-template-columns:1fr;gap:70px}
+  .hero{padding:150px 0 90px}
+  .s2,.s3{grid-column:span 3}.s6{grid-column:span 6}
+  .timeline,.timeline.eu{grid-template-columns:1fr 1fr;gap:34px}
+  .timeline::before{display:none}
+  .steps{grid-template-columns:1fr 1fr}
+  .syl-grid{grid-template-columns:1fr;gap:44px}
+  .pred-wrap{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
 }
-.rm-paywall-check {
-  width:56px; height:56px; border-radius:50%;
-  background:var(--teal-pale); border:2px solid var(--teal);
-  display:flex; align-items:center; justify-content:center;
-  margin:0 auto 20px;
-}
-.rm-paywall-check i { font-size:1.3rem; color:var(--teal); }
-.rm-paywall-title {
-  font-size:1.15rem; font-weight:800; color:var(--ink);
-  letter-spacing:-0.5px; margin-bottom:10px;
-}
-.rm-paywall-sub {
-  font-size:0.88rem; color:var(--ink-3); line-height:1.65;
-  margin-bottom:24px; max-width:400px; margin-left:auto; margin-right:auto;
-}
-.rm-summary {
-  display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
-  margin-bottom:20px; text-align:left;
-}
-.rm-summary-item {
-  padding:12px 14px; background:var(--stone-2); border-radius:10px;
-}
-.rm-summary-label {
-  font-size:0.68rem; font-weight:700; letter-spacing:0.8px;
-  text-transform:uppercase; color:var(--ink-3); margin-bottom:4px;
-}
-.rm-summary-value {
-  font-size:0.85rem; font-weight:600; color:var(--ink);
-}
-.rm-plan-preview {
-  position:relative; border:1px solid var(--stone-3); border-radius:14px;
-  overflow:hidden; margin-bottom:24px;
-}
-.rm-plan-preview-blur {
-  filter:blur(6px); pointer-events:none; user-select:none;
-  padding:20px;
-}
-.rm-plan-preview-label {
-  position:absolute; inset:0; display:flex; flex-direction:column;
-  align-items:center; justify-content:center; z-index:1;
-}
-.rm-plan-preview-label i { font-size:1.5rem; color:var(--teal); margin-bottom:8px; }
-.rm-plan-preview-label span { font-size:0.85rem; font-weight:700; color:var(--ink); }
-.rm-plan-preview-label small { font-size:0.75rem; color:var(--ink-3); margin-top:4px; }
-.rp-week { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--stone-3); }
-.rp-week:last-child { border-bottom:none; }
-.rp-week-num { font-size:0.75rem; font-weight:700; color:var(--teal); min-width:60px; }
-.rp-week-bar-wrap { flex:1; height:6px; background:var(--stone-2); border-radius:3px; overflow:hidden; }
-.rp-week-bar { height:100%; border-radius:3px; background:var(--teal); }
-.rp-week-subj { font-size:0.75rem; color:var(--ink-3); min-width:100px; text-align:right; }
-
-.rm-paywall-cta {
-  display:block; width:100%; padding:14px; border-radius:10px;
-  border:none; background:var(--teal); color:var(--white);
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:0.95rem; font-weight:700; cursor:pointer;
-  transition:background .18s, transform .15s;
-  margin-bottom:12px;
-}
-.rm-paywall-cta:hover { background:var(--teal-2); transform:translateY(-1px); }
-.rm-paywall-note { font-size:0.75rem; color:var(--ink-3); }
-
-.qb-container { max-width:700px; margin:0 auto; }
-.qb-subject-tabs { display:flex; gap:6px; margin-bottom:24px; flex-wrap:wrap; }
-.qb-subj-tab { padding:7px 16px; border-radius:8px; border:1.5px solid var(--stone-3); background:var(--white); color:var(--ink-3); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.78rem; font-weight:600; cursor:pointer; transition:all .18s; }
-.qb-subj-tab.active { border-color:var(--teal); background:var(--teal-faint); color:var(--teal-2); }
-.qb-subj-tab:hover:not(.active) { border-color:var(--ink-3); }
-.qb-card { background:var(--white); border:1px solid var(--stone-3); border-radius:16px; padding:28px; overflow:hidden; }
-.qb-meta { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
-.qb-badge { padding:3px 10px; border-radius:6px; font-size:0.7rem; font-weight:700; }
-.qb-badge-easy { background:var(--teal-pale); color:var(--teal); }
-.qb-badge-medium { background:var(--amber-pale); color:var(--amber); }
-.qb-badge-hard { background:var(--red-faint); color:var(--red); }
-.qb-count { font-size:0.72rem; color:var(--ink-3); }
-.qb-question { font-size:0.95rem; font-weight:600; color:var(--ink); line-height:1.6; margin-bottom:20px; }
-.qb-options { display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
-.qb-opt { display:flex; align-items:center; gap:12px; padding:13px 16px; border:1.5px solid var(--stone-3); border-radius:10px; background:transparent; cursor:pointer; transition:all .18s; font-size:0.85rem; color:var(--ink-2); font-weight:500; text-align:left; font-family:'Plus Jakarta Sans',sans-serif; }
-.qb-opt:hover:not(.disabled) { border-color:rgba(13,148,136,0.4); background:var(--teal-faint); }
-.qb-opt.disabled { cursor:default; }
-.qb-opt.correct { border-color:var(--teal); background:var(--teal-faint); color:var(--teal-2); }
-.qb-opt.wrong { border-color:var(--red); background:var(--red-faint); color:var(--red); }
-.qb-opt-letter { width:28px; height:28px; border-radius:8px; background:var(--stone-2); display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; color:var(--ink-3); flex-shrink:0; transition:all .18s; }
-.qb-opt.correct .qb-opt-letter { background:var(--teal); color:white; }
-.qb-opt.wrong .qb-opt-letter { background:var(--red); color:white; }
-.qb-explanation { background:var(--teal-faint); border:1px solid rgba(13,148,136,0.15); border-radius:10px; padding:16px 18px; margin-bottom:20px; font-size:0.82rem; color:var(--ink-2); line-height:1.65; }
-.qb-explanation strong { color:var(--teal-2); }
-.qb-nav { display:flex; justify-content:space-between; align-items:center; }
-.qb-score { font-size:0.82rem; font-weight:600; color:var(--ink-3); }
-.qb-score span { color:var(--teal); font-weight:800; }
-.qb-next-btn { padding:9px 22px; border-radius:9px; border:none; background:var(--teal); color:var(--white); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.82rem; font-weight:700; cursor:pointer; transition:background .18s; }
-.qb-next-btn:hover { background:var(--teal-2); }
-.qb-next-btn:disabled { opacity:0.4; cursor:not-allowed; }
-
-.mock-container { max-width:780px; margin:0 auto; }
-.mock-start { background:var(--white); border:1px solid var(--stone-3); border-radius:18px; padding:48px; text-align:center; }
-.mock-start h3 { font-size:1.3rem; font-weight:800; color:var(--ink); margin-bottom:10px; letter-spacing:-0.5px; }
-.mock-start p { font-size:0.88rem; color:var(--ink-3); line-height:1.7; max-width:420px; margin:0 auto 28px; }
-.mock-rules { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:28px; text-align:left; }
-.mock-rule { padding:14px; background:var(--stone-2); border-radius:10px; font-size:0.78rem; color:var(--ink-2); line-height:1.55; }
-.mock-rule strong { display:block; color:var(--ink); font-size:0.82rem; margin-bottom:4px; }
-.mock-active { display:none; }
-.mock-topbar { display:flex; align-items:center; justify-content:space-between; background:var(--white); border:1px solid var(--stone-3); border-radius:14px; padding:14px 20px; margin-bottom:16px; flex-wrap:wrap; gap:10px; }
-.mock-timer { display:flex; align-items:center; gap:8px; font-size:1.1rem; font-weight:800; color:var(--ink); letter-spacing:-0.5px; font-variant-numeric:tabular-nums; }
-.mock-timer i { color:var(--teal); font-size:0.9rem; }
-.mock-timer.warning { color:var(--red); }
-.mock-timer.warning i { color:var(--red); }
-.mock-timer.paused i { color:var(--amber); }
-.mock-paused-label { font-size:0.7rem; font-weight:700; color:var(--amber); letter-spacing:0.5px; text-transform:uppercase; display:none; }
-.mock-progress-text { font-size:0.78rem; color:var(--ink-3); }
-.mock-submit-btn { padding:8px 20px; border-radius:8px; border:1.5px solid var(--red); background:transparent; color:var(--red); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.8rem; font-weight:700; cursor:pointer; transition:all .18s; }
-.mock-submit-btn:hover { background:var(--red-faint); }
-.mock-question-grid { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px; background:var(--white); border:1px solid var(--stone-3); border-radius:14px; padding:16px; }
-.mock-q-btn { width:38px; height:38px; border-radius:8px; border:1.5px solid var(--stone-3); background:transparent; color:var(--ink-3); font-size:0.78rem; font-weight:700; cursor:pointer; transition:all .18s; font-family:'Plus Jakarta Sans',sans-serif; position:relative; }
-.mock-q-btn.current { border-color:var(--teal); color:var(--teal); background:var(--teal-faint); }
-.mock-q-btn.answered { background:rgba(13,148,136,0.12); border-color:rgba(13,148,136,0.3); color:var(--teal); }
-.mock-q-btn.flagged::after { content:''; position:absolute; top:3px; right:3px; width:6px; height:6px; border-radius:50%; background:var(--amber); }
-.mock-q-card { background:var(--white); border:1px solid var(--stone-3); border-radius:16px; padding:28px; }
-.mock-q-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; }
-.mock-q-subj { font-size:0.7rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--teal); }
-.mock-flag-btn { padding:5px 12px; border-radius:6px; border:1.5px solid var(--stone-3); background:transparent; color:var(--ink-3); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.72rem; font-weight:600; cursor:pointer; transition:all .18s; display:flex; align-items:center; gap:5px; }
-.mock-flag-btn:hover { border-color:var(--amber); color:var(--amber); }
-.mock-flag-btn.flagged { border-color:var(--amber); background:rgba(245,158,11,0.1); color:var(--amber); }
-.mock-q-text { font-size:0.95rem; font-weight:600; color:var(--ink); line-height:1.6; margin-bottom:20px; }
-.mock-q-opts { display:flex; flex-direction:column; gap:8px; }
-.mock-q-opt { display:flex; align-items:center; gap:12px; padding:13px 16px; border:1.5px solid var(--stone-3); border-radius:10px; background:transparent; cursor:pointer; transition:all .18s; font-size:0.85rem; color:var(--ink-2); font-weight:500; text-align:left; font-family:'Plus Jakarta Sans',sans-serif; }
-.mock-q-opt:hover { border-color:rgba(13,148,136,0.4); background:var(--teal-faint); }
-.mock-q-opt.selected { border-color:var(--teal); background:var(--teal-faint); color:var(--teal-2); }
-.mock-q-opt-letter { width:28px; height:28px; border-radius:8px; background:var(--stone-2); display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; color:var(--ink-3); flex-shrink:0; transition:all .18s; }
-.mock-q-opt.selected .mock-q-opt-letter { background:var(--teal); color:white; }
-.mock-results { display:none; }
-.mock-results-card { background:var(--white); border:1px solid var(--stone-3); border-radius:18px; padding:40px; text-align:center; margin-bottom:16px; }
-.mock-score-big { font-size:3.2rem; font-weight:800; color:var(--teal); letter-spacing:-2px; }
-.mock-score-max { font-size:1rem; color:var(--ink-3); font-weight:400; }
-.mock-score-label { font-size:0.85rem; color:var(--ink-3); margin-top:4px; }
-.mock-score-msg { font-size:1rem; font-weight:600; color:var(--ink); margin-top:16px; }
-.mock-breakdown { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-top:24px; }
-.mock-breakdown-item { padding:14px 8px; background:var(--stone-2); border-radius:10px; }
-.mock-bd-subj { font-size:0.7rem; font-weight:700; color:var(--ink-3); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px; }
-.mock-bd-score { font-size:1.2rem; font-weight:800; color:var(--ink); }
-.mock-bd-pct { font-size:0.72rem; color:var(--ink-3); margin-top:2px; }
-
-.mock-review-toggle { display:flex; justify-content:center; margin-bottom:16px; gap:8px; }
-.mock-review-btn { padding:9px 20px; border-radius:9px; border:1.5px solid var(--stone-3); background:var(--white); color:var(--ink-2); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.82rem; font-weight:600; cursor:pointer; transition:all .18s; }
-.mock-review-btn.active { border-color:var(--teal); background:var(--teal-faint); color:var(--teal-2); }
-.mock-review-q { background:var(--white); border:1px solid var(--stone-3); border-radius:14px; padding:24px; margin-bottom:12px; }
-.mock-review-q-header { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
-.mock-review-q-num { font-size:0.7rem; font-weight:700; letter-spacing:0.8px; text-transform:uppercase; color:var(--ink-3); }
-.mock-review-q-result { font-size:0.68rem; font-weight:700; padding:2px 8px; border-radius:4px; }
-.mock-review-correct { background:var(--teal-pale); color:var(--teal); }
-.mock-review-wrong { background:var(--red-faint); color:var(--red); }
-.mock-review-blank { background:var(--stone-2); color:var(--ink-3); }
-.mock-review-q-text { font-size:0.88rem; font-weight:600; color:var(--ink); line-height:1.6; margin-bottom:12px; }
-.mock-review-opt { display:flex; align-items:center; gap:10px; padding:9px 14px; border-radius:8px; font-size:0.82rem; margin-bottom:4px; }
-.mock-review-opt.is-correct { background:var(--teal-pale); color:var(--teal-2); font-weight:600; }
-.mock-review-opt.is-wrong { background:var(--red-faint); color:var(--red); }
-.mock-review-opt.is-neutral { color:var(--ink-3); }
-.mock-review-opt-letter { width:22px; height:22px; border-radius:6px; background:var(--stone-2); display:flex; align-items:center; justify-content:center; font-size:0.68rem; font-weight:700; color:var(--ink-3); flex-shrink:0; }
-.mock-review-opt.is-correct .mock-review-opt-letter { background:var(--teal); color:white; }
-.mock-review-opt.is-wrong .mock-review-opt-letter { background:var(--red); color:white; }
-.mock-review-exp { margin-top:10px; font-size:0.78rem; color:var(--ink-3); line-height:1.6; padding:10px 14px; background:var(--teal-faint); border-radius:8px; }
-
-.guide-container { max-width:640px; margin:0 auto; }
-.guide-toggle { display:flex; background:var(--stone); border-radius:11px; padding:4px; border:1px solid var(--stone-3); margin-bottom:24px; }
-.guide-toggle-btn { flex:1; padding:11px 16px; border-radius:8px; border:none; background:transparent; color:var(--ink-3); font-family:'Plus Jakarta Sans',sans-serif; font-size:0.85rem; font-weight:600; cursor:pointer; transition:all .2s; }
-.guide-toggle-btn.active { background:var(--white); color:var(--ink); box-shadow:0 1px 4px rgba(0,0,0,0.06); }
-.guide-progress-card { background:var(--white); border:1px solid var(--stone-3); border-radius:14px; padding:20px 24px; margin-bottom:16px; display:flex; align-items:center; justify-content:space-between; }
-.guide-prog-label { font-size:0.82rem; font-weight:600; color:var(--ink-2); }
-.guide-prog-bar { width:200px; height:6px; background:var(--stone-2); border-radius:3px; overflow:hidden; }
-.guide-prog-fill { height:100%; background:var(--teal); border-radius:3px; transition:width .4s ease; }
-.guide-prog-pct { font-size:0.82rem; font-weight:800; color:var(--teal); min-width:40px; text-align:right; }
-.guide-phase { margin-bottom:20px; }
-.guide-phase-title { font-size:0.72rem; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--teal); margin-bottom:10px; padding-left:2px; }
-.guide-checklist { display:flex; flex-direction:column; gap:6px; }
-.guide-item { display:flex; align-items:center; gap:14px; padding:13px 16px; background:var(--white); border:1px solid var(--stone-3); border-radius:10px; cursor:pointer; transition:all .18s; user-select:none; }
-.guide-item:hover { border-color:rgba(13,148,136,0.3); }
-.guide-item.checked { border-color:rgba(13,148,136,0.2); background:var(--teal-faint); }
-.guide-check { width:22px; height:22px; border-radius:6px; border:2px solid var(--stone-4); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all .18s; font-size:11px; color:transparent; }
-.guide-item.checked .guide-check { background:var(--teal); border-color:var(--teal); color:white; }
-.guide-item-text { font-size:0.85rem; font-weight:500; color:var(--ink-2); transition:color .18s; }
-.guide-item.checked .guide-item-text { color:var(--ink-3); text-decoration:line-through; }
-
-.toast { position:fixed; bottom:30px; right:30px; padding:14px 22px; border-radius:12px; background:var(--white); border:1px solid var(--stone-3); box-shadow:0 12px 40px rgba(0,0,0,0.1); font-size:0.85rem; font-weight:500; color:var(--ink); display:flex; align-items:center; gap:10px; transform:translateY(100px); opacity:0; transition:all .35s cubic-bezier(0.22,1,0.36,1); z-index:200; }
-.toast.show { transform:translateY(0); opacity:1; }
-.toast i { color:var(--teal); }
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
-  .hero-badge,.hero h1,.hero-sub,.hero-actions,.hero-note {
-    opacity:1!important; transform:none!important;
-  }
-  .rv,.rv-l,.rv-r { opacity:1!important; transform:none!important; }
-}
-@media(max-width:900px){
-  nav { padding:0 20px; }
-  .nav-center { display:none; }
-  .hamburger { display:flex; }
-  section,.platform-section,.problem-section,.pricing-section,.cta-section,.faq-section { padding:64px 20px; }
-  .problem-inner { grid-template-columns:1fr; gap:40px; }
-  .feat-grid { grid-template-columns:1fr; }
-  .feat-card.hero-feat { grid-column:span 1; flex-direction:column; gap:16px; }
-  .feat-card.tall { grid-row:span 1; }
-  .feat-card.tall .tall-visual { display:none; }
-  .how-steps { grid-template-columns:1fr 1fr; gap:28px; }
-  .how-steps::before { display:none; }
-  .preview-inner { grid-template-columns:1fr; }
-  .pricing-cards { grid-template-columns:1fr; }
-  .platform-tabs { flex-wrap:wrap; }
-  .mock-rules { grid-template-columns:1fr; }
-  .mock-breakdown { grid-template-columns:repeat(3,1fr); }
-  .rm-summary { grid-template-columns:1fr; }
-  footer { flex-direction:column; gap:16px; text-align:center; }
-}
-@media(max-width:500px){
-  .hero h1 { letter-spacing:-1.5px; }
-  .how-steps { grid-template-columns:1fr; }
-  .how-num { width:56px; height:56px; font-size:0.95rem; }
-  .mock-breakdown { grid-template-columns:1fr 1fr; }
-  .guide-prog-bar { width:100px; }
-  .mock-q-header { flex-direction:column; align-items:flex-start; gap:8px; }
+@media(max-width:760px){
+  .nav-links,.nav-cta .nav-login,.nav-cta .btn{display:none}
+  .burger{display:flex}
+  .pain-grid{grid-template-columns:1fr}
+  .s2,.s3,.s6{grid-column:span 6}
+  .faq-grid{grid-template-columns:1fr}
+  .pad{padding:80px 0}
+  .steps{grid-template-columns:1fr}
+  .timeline,.timeline.eu{grid-template-columns:1fr}
+  .fc-1{right:0}.fc-2{left:0}
+  .price-card{padding:36px 26px}
+  .pc-now{font-size:58px}
+  .hero-btns .btn{width:100%}
 }
 </style>
-<link rel="stylesheet" href="dark-mode.css">
 </head>
 <body>
 
-<nav>
-  <a class="logo" href="#">Imat<span>Path</span></a>
-  <ul class="nav-center">
-    <li><a href="#features">Features</a></li>
-    <li><a href="#platform">Platform</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ul>
-  <div class="nav-right">
-    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
-    <button class="btn-ghost nav-desktop-btn" onclick="window.location.href='auth.html'">Log in</button>
-    <button class="btn-teal nav-desktop-btn" onclick="window.location.href='auth.html'">Get started</button>
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">Imat<em>Path</em></a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#platform">Platform</a>
+      <a href="#noneu">Non-EU Guide</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <button class="nav-dark-toggle" id="navDarkToggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+      <a class="nav-login" href="auth.html">Log in</a>
+      <a class="btn btn-primary" href="auth.html">Get started</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features">Features</a>
+    <a href="#platform">Platform</a>
+    <a href="#noneu">Non-EU Guide</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-primary" href="auth.html">Get started</a>
   </div>
 </nav>
 
-<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navigation">
-  <a href="#features" onclick="closeMobileNav()">Features</a>
-  <a href="#platform" onclick="closeMobileNav()">Platform</a>
-  <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
-  <a href="#faq" onclick="closeMobileNav()">FAQ</a>
-  <div class="mobile-nav-btns">
-    <button class="btn-ghost" onclick="window.location.href='dashboard.html'">Log in</button>
-    <button class="btn-teal" onclick="closeMobileNav();window.location.href='dashboard.html'">Get started</button>
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="hero-badge"><span class="dot"></span>Updated for the official IMAT 2026 syllabus</span>
+      <h1>Your clear path to <em>medicine in Italy.</em></h1>
+      <p class="hero-sub">A structured study plan, real practice questions and timed mock exams — built specifically for the IMAT, with the application guidance non-EU students actually need.</p>
+      <div class="hero-btns">
+        <a class="btn btn-primary btn-lg" href="auth.html">Start preparing — $10
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost btn-lg" href="#platform">Try a real question</a>
+      </div>
+      <div class="hero-chips">
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Built for IMAT 2026</span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>One-time payment</span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>No hidden fees</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="float-card fc-1"><b>+1.5 / −0.4</b>Official IMAT scoring, on every mock</div>
+      <div class="dash">
+        <div class="dash-bar"><i></i><i></i><i></i><span class="dash-url">imatpath — your IMAT Test</span></div>
+        <div class="dash-body">
+          <div class="dash-head"><h4>Biology · Week 6</h4><span class="dash-chip">On track</span></div>
+          <p class="dash-exam">Exam day: <b>September 29, 2026</b> — <b><span class="exam-days">31</span> days</b> to go</p>
+          <div class="chart-box">
+            <div class="chart-cap"><span>Mock score trend · /90</span><span><b>+19</b> since Mock 1</span></div>
+            <svg viewBox="0 0 280 120" fill="none" aria-hidden="true">
+              <g stroke="#e2d8c2" stroke-width="1"><line x1="10" y1="20" x2="270" y2="20"/><line x1="10" y1="50" x2="270" y2="50"/><line x1="10" y1="80" x2="270" y2="80"/><line x1="10" y1="110" x2="270" y2="110"/></g>
+              <polyline class="trend" points="20,76 83,66 146,57 209,45 262,38" stroke="#c1591f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <g fill="#c1591f">
+                <circle class="trend-pt" cx="20" cy="76" r="4.5"/><circle class="trend-pt" cx="83" cy="66" r="4.5"/><circle class="trend-pt" cx="146" cy="57" r="4.5"/><circle class="trend-pt" cx="209" cy="45" r="4.5"/><circle class="trend-pt" cx="262" cy="38" r="4.5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="chap-row"><span class="chap-name">Cell structure &amp; organelles</span><span><span class="pill done">Reviewed ✓</span> <span class="pill done">Practiced ✓</span></span></div>
+          <div class="chap-row"><span class="chap-name">DNA, RNA &amp; protein synthesis</span><span><span class="pill done">Reviewed ✓</span> <span class="pill">Practiced</span></span></div>
+          <div class="chap-row"><span class="chap-name">Genetics &amp; inheritance</span><span><span class="pill">Reviewed</span> <span class="pill">Practiced</span></span></div>
+        </div>
+      </div>
+      <div class="float-card fc-2"><b>2,000+ questions</b>Every chapter of the syllabus, explained</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track" id="mqTrack">
+    <span>Cell biology</span><span>Genetics</span><span>Stoichiometry</span><span>Organic chemistry</span><span>Kinematics</span><span>Electricity</span><span>Algebra &amp; functions</span><span>Probability</span><span>Logic puzzles</span><span>Apostille &amp; DoV</span><span>Universitaly</span><span>Student visa</span><span>Past papers 2017–2025</span><span>Score predictor</span>
   </div>
 </div>
 
-<section class="hero">
-  <div class="hero-bg-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow-2"></div>
-  <div class="hero-badge rv"><span class="badge-dot"></span> V1.0 : PREMIUM ACCESS NOW AVAILABLE</div>
-  <h1 class="rv d1">Your clear path to<br><span class="teal-text">medicine in Italy</span></h1>
-  <p class="hero-sub rv d2">A structured study plan, real practice questions, and timed mock exams — built specifically for the IMAT.</p>
-  <div class="hero-actions rv d3">
-    <button class="btn-hero-primary" onclick="window.location.href='auth.html'">Get Started</button>
-    <button class="btn-hero-ghost" onclick="scrollTo('#platform')">Explore features</button>
-  </div>
-  <p class="hero-note rv d4">
-    <span><i class="fas fa-check"></i> Built for IMAT 2026</span>
-    <span><i class="fas fa-check"></i> Instant access</span>
-    <span><i class="fas fa-check"></i> No hidden fees</span>
-  </p>
-</section>
-
-<section class="problem-section">
-  <div class="problem-inner">
-    <div class="problem-text">
-      <div class="sec-label rv">The problem</div>
-      <h2 class="sec-title rv d1" style="color:#ffffff;">Preparing for the IMAT is genuinely hard.</h2>
-      <p class="sec-sub rv d2" style="color:rgba(255,255,255,0.5);max-width:100%;">The resources are scattered, the syllabus is wide, and most students have no idea where to start — or how much time they have left.</p>
+<!-- ================= PROBLEM ================= -->
+<section class="problem pad" id="problem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The problem</span>
+      <h2>Preparing for the IMAT is genuinely hard.</h2>
+      <p class="lead">The resources are scattered, the syllabus is wide, and most students have no idea where to start — or how much time they have left.</p>
     </div>
-    <div class="problem-list">
-      <div class="problem-item lead rv-r d1"><div class="problem-num">01</div><div><div class="problem-item-title">No clear starting point</div><div class="problem-item-desc">Students spend weeks figuring out what to study before they actually start studying.</div></div></div>
-      <div class="problem-item rv-r d2"><div class="problem-num">02</div><div><div class="problem-item-title">Resources are all over the place</div><div class="problem-item-desc">YouTube, Reddit, A-level books, paid courses — none of them talk to each other.</div></div></div>
-      <div class="problem-item rv-r d3"><div class="problem-num">03</div><div><div class="problem-item-title">No way to measure progress</div><div class="problem-item-desc">Without mock exams and tracking, students walk into the test not knowing where they stand.</div></div></div>
-      <div class="problem-item rv-r d4"><div class="problem-num">04</div><div><div class="problem-item-title">The process is confusing for non-EU students</div><div class="problem-item-desc">Pre-enrollment, visa, university selection — the admin side alone can derail months of prep.</div></div></div>
+    <div class="pain-grid">
+      <div class="pain reveal"><span class="num">01</span><h3>No clear starting point</h3><p>Students spend weeks figuring out what to study before they actually start studying.</p></div>
+      <div class="pain reveal"><span class="num">02</span><h3>Resources are all over the place</h3><p>YouTube, Reddit, A-level books, paid courses — none of them talk to each other.</p></div>
+      <div class="pain reveal"><span class="num">03</span><h3>No way to measure progress</h3><p>Without mock exams and tracking, students walk into the test not knowing where they stand.</p></div>
+      <div class="pain reveal"><span class="num">04</span><h3>The process is confusing for non-EU students</h3><p>Pre-enrollment, visa, university selection — the admin side alone can derail months of prep.</p></div>
     </div>
   </div>
 </section>
 
-<section class="features-section" id="features">
-  <div class="features-inner">
-    <div class="features-header">
-      <div>
-        <div class="sec-label rv">What ImatPath gives you</div>
-        <h2 class="sec-title rv d1">Everything in one place.<br>Nothing you don't need.</h2>
+<!-- ================= PLATFORM / DEMO ================= -->
+<section class="platform pad" id="platform">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Inside ImatPath</span>
+      <h2>These aren't mockups. Try them now.</h2>
+      <p class="lead">Every tool below is fully functional. Answer a question, run a timed mini mock, or walk through the application checklist — right here.</p>
+      <div class="stats-row">
+        <div class="stat"><b><span data-count="2000">0</span><span class="acc">+</span></b><span>IMAT-style questions</span></div>
+        <div class="stat"><b><span data-count="20">0</span></b><span>full mock exams</span></div>
+        <div class="stat"><b><span data-count="48">0</span></b><span>syllabus chapters tracked</span></div>
+        <div class="stat"><b><span data-count="5">0</span></b><span>subjects, fully covered</span></div>
       </div>
-      <p class="sec-sub rv d2">Six tools working together so your preparation is structured, measurable, and actually manageable.</p>
     </div>
-    <div class="feat-grid">
-      <div class="feat-card hero-feat rv d1">
-        <div class="feat-icon"><svg viewBox="0 0 18 18" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h12M3 8h8M3 12h10"/></svg></div>
-        <div><div class="feat-title">Past IMAT papers</div><div class="feat-desc">Access and practice with official past IMAT papers. Get a real feel for the exam format, difficulty, and question styles to test your readiness under real conditions.</div></div>
+
+    <div class="reveal">
+      <div class="demo-tabs" role="tablist">
+        <button class="demo-tab active" data-dtab="question">Sample question</button>
+        <button class="demo-tab" data-dtab="mock">Mini mock exam</button>
+        <button class="demo-tab" data-dtab="guide">Application guide</button>
       </div>
-      <div class="feat-card tall rv d2">
-        <div class="feat-icon"><svg viewBox="0 0 18 18" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.5"/><path d="M9 6v3l2 1.5"/></svg></div>
-        <div class="feat-title">Timed mock exams</div>
-        <div class="feat-desc">Full 100-minute simulations that mirror real IMAT conditions. See your score trend after every attempt.</div>
-        <div class="tall-visual">
-          <div class="tall-timer-display">
-            <div>
-              <div class="tall-timer-clock">1:40:00</div>
-              <div class="tall-timer-label">Time remaining</div>
+
+      <!-- PANEL 1 : sample question -->
+      <div class="demo-panel active" data-dpanel="question">
+        <div class="demo-card">
+          <div class="demo-top">
+            <div class="dt-l"><span class="mdot"></span>ImatPath — Question Bank</div>
+            <div class="dt-r">From a pool of 2,000+ IMAT-style questions</div>
+          </div>
+          <div class="demo-body" id="sqBox"></div>
+        </div>
+      </div>
+
+      <!-- PANEL 2 : mini mock -->
+      <div class="demo-panel" data-dpanel="mock">
+        <div class="demo-card">
+          <div class="demo-top">
+            <div class="dt-l"><span class="mdot"></span>ImatPath — Mini Mock Exam</div>
+            <div class="dt-r" id="mockTopInfo">10 questions · 15 minutes · official scoring</div>
+          </div>
+          <div class="demo-body" id="mockBox"></div>
+        </div>
+      </div>
+
+      <!-- PANEL 3 : application guide -->
+      <div class="demo-panel" data-dpanel="guide">
+        <div class="demo-card">
+          <div class="demo-top">
+            <div class="dt-l"><span class="mdot"></span>ImatPath — Application Guide</div>
+            <div class="dt-r">A preview — the full guide lives inside</div>
+          </div>
+          <div class="demo-body">
+            <div class="guide-toggle">
+              <button class="active" data-gtrack="noneu">Non-EU Students</button>
+              <button data-gtrack="eu">EU Students</button>
             </div>
-            <div class="tall-timer-bars">
-              <div class="tall-timer-bar" style="height:28px;"></div>
-              <div class="tall-timer-bar" style="height:22px;opacity:0.7;"></div>
-              <div class="tall-timer-bar" style="height:18px;opacity:0.5;"></div>
-              <div class="tall-timer-bar" style="height:14px;opacity:0.3;"></div>
+            <div class="checklist" id="guideList"></div>
+            <div class="g-progress">
+              <div class="gp-t"><span>Your progress</span><b id="guidePct">0%</b></div>
+              <div class="gp-track"><div class="gp-fill" id="guideFill"></div></div>
+            </div>
+            <p class="guide-note">Tick items off as you complete them — the real guide adds documents, links, embassy-specific notes and deadlines for each step.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="features pad" id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What ImatPath gives you</span>
+      <h2>Everything in one place.<br>Nothing you don't need.</h2>
+      <p class="lead">Six tools working together so your preparation is structured, measurable, and actually manageable.</p>
+    </div>
+    <div class="bento">
+      <div class="b-card s2 reveal">
+        <span class="b-tag">Past papers</span>
+        <h3>Official IMAT papers</h3>
+        <p>Practice with real past IMAT papers — the format, difficulty and question styles, exactly as they appear on exam day.</p>
+        <div class="b-ui">
+          <div class="paper"><b>2025</b><span class="tag-off">Official</span><span class="arr">→</span></div>
+          <div class="paper"><b>2024</b><span class="tag-off">Official</span><span class="arr">→</span></div>
+          <div class="paper"><b>2023</b><span class="tag-off">Official</span><span class="arr">→</span></div>
+        </div>
+      </div>
+      <div class="b-card s2 reveal">
+        <span class="b-tag">Timed mocks</span>
+        <h3>Exam-day simulation</h3>
+        <p>Full 100-minute simulations under real conditions, with official +1.5 / −0.4 scoring and a score trend after every attempt.</p>
+        <div class="b-ui">
+          <div class="big-timer"><span class="rec"></span><span id="mockChipTimer">1:40:00</span></div>
+          <div class="mini-meta" style="margin-top:12px"><span>60 questions</span><span>Official formula</span><span>20 full mocks</span></div>
+        </div>
+      </div>
+      <div class="b-card s2 reveal">
+        <span class="b-tag">Question bank</span>
+        <h3>2,000+ questions</h3>
+        <p>Structured exactly like the real exam across all five subjects, with a full explanation for every single answer.</p>
+        <div class="b-ui subj-chips">
+          <span>Biology</span><span>Chemistry</span><span>Physics</span><span>Math</span><span>Logic &amp; GK</span>
+        </div>
+      </div>
+      <div class="b-card s3 reveal">
+        <span class="b-tag">Progress analytics</span>
+        <h3>Know exactly what to fix</h3>
+        <p>Accuracy by subject, score trends over time, and a clear next step — so no study session is ever wasted.</p>
+        <div class="b-ui">
+          <div class="bars" id="anaBars">
+            <div class="bar-w"><div class="bar" style="height:74%;transition-delay:.05s"></div><span class="bar-l">BIO</span></div>
+            <div class="bar-w"><div class="bar" style="height:63%;transition-delay:.15s"></div><span class="bar-l">CHEM</span></div>
+            <div class="bar-w"><div class="bar" style="height:52%;transition-delay:.25s"></div><span class="bar-l">PHYS</span></div>
+            <div class="bar-w"><div class="bar" style="height:68%;transition-delay:.35s"></div><span class="bar-l">MATH</span></div>
+            <div class="bar-w"><div class="bar" style="height:81%;transition-delay:.45s"></div><span class="bar-l">LOGIC</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="b-card s3 reveal">
+        <span class="b-tag">Application guide</span>
+        <h3>The admin, handled</h3>
+        <p>Step-by-step checklists for EU and non-EU students — pre-enrollment, Apostille, Declaration of Value, visa and deadlines.</p>
+        <div class="b-ui">
+          <div class="gmini"><span class="box">✓</span>Apostille diploma &amp; transcripts</div>
+          <div class="gmini"><span class="box">✓</span>Universitaly pre-enrollment</div>
+          <div class="gmini"><span class="box empty"></span>Student visa application</div>
+        </div>
+      </div>
+      <div class="b-card s6 reveal">
+        <span class="b-tag">Score predictor</span>
+        <h3>Which universities are within reach?</h3>
+        <p>Based on your mock results and historical cutoff data, see where you stand — before you ever sit the real exam. Drag the slider to try it.</p>
+        <div class="b-ui">
+          <div class="pred-wrap">
+            <div class="pred-left">
+              <label>Your mock score</label>
+              <div class="pred-score"><span id="predVal">46</span><span> /90</span></div>
+              <input type="range" id="predRange" min="0" max="90" value="46" step="1">
+              <div class="pred-verdict" id="predVerdict"></div>
+            </div>
+            <div>
+              <div class="pred-chips" id="predChips"></div>
+              <p class="pred-note">Illustrative example based on recent years' cutoff data. Inside ImatPath, this updates automatically from your real mock results.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="feat-card rv d3">
-        <div class="feat-icon"><svg viewBox="0 0 18 18" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="14" height="12" rx="2"/><path d="M6 7h6M6 10.5h4"/></svg></div>
-        <div class="feat-title">IMAT-style question bank</div>
-        <div class="feat-desc">Practice questions across all five subjects — structured exactly like the real exam, with full explanations.</div>
-      </div>
-      <div class="feat-card rv d4">
-        <div class="feat-icon"><svg viewBox="0 0 18 18" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l4-4 3 3 5-6"/></svg></div>
-        <div class="feat-title">Progress analytics</div>
-        <div class="feat-desc">Track your accuracy by subject, see your score improving over time, and know exactly what to focus on next.</div>
-      </div>
-      <div class="feat-card rv d5">
-        <div class="feat-icon"><svg viewBox="0 0 18 18" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2a5 5 0 100 10A5 5 0 009 2z"/><path d="M5.5 14.5c0-1.1 1.6-2 3.5-2s3.5.9 3.5 2"/></svg></div>
-        <div class="feat-title">Application guide</div>
-        <div class="feat-desc">Step-by-step checklist for EU and non-EU students — pre-enrollment, visa, deadlines, university selection.</div>
-      </div>
-      <div class="feat-card rv d6">
-        <div class="feat-icon"><svg viewBox="0 0 18 18" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14l2-5 4 2 2-7 2 5 2-1"/></svg></div>
-        <div class="feat-title">Score predictor</div>
-        <div class="feat-desc">Based on your mock results and historical cutoff data, see which universities are within reach right now.</div>
-      </div>
     </div>
   </div>
 </section>
 
-<section class="how-section" id="how">
-  <div class="how-inner">
-    <div class="sec-label rv" style="justify-content:center;">How it works</div>
-    <h2 class="sec-title rv d1">Your complete path to the IMAT.</h2>
-    <div class="how-steps">
-      <div class="how-step rv d2"><div class="how-num">01</div><div class="how-step-title">Create your account</div><div class="how-step-desc">Sign up and get instant access to all tools on the platform.</div></div>
-      <div class="how-step rv d3"><div class="how-num">02</div><div class="how-step-title">Practice & track</div><div class="how-step-desc">Practice with 2000+ IMAT-like questions and track your performance.</div></div>
-      <div class="how-step rv d4"><div class="how-num">03</div><div class="how-step-title">Past papers & mocks</div><div class="how-step-desc">Take official past IMAT papers and mock exams under timed conditions.</div></div>
-      <div class="how-step rv d5"><div class="how-num">04</div><div class="how-step-title">The big day</div><div class="how-step-desc">Take the IMAT on September 29, 2026, fully prepared and confident.</div></div>
+<!-- ================= NON-EU ================= -->
+<section class="noneu pad dark" id="noneu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The part nobody prepares you for</span>
+      <h2>Passing the IMAT is only half the battle.</h2>
+      <p class="lead">If you're applying from outside the EU, there's a second exam no one warns you about: pre-enrollment, Apostille, Declaration of Value, visas. ImatPath walks you through both halves.</p>
+    </div>
+    <div class="reveal">
+      <div class="track-toggle">
+        <button class="active" data-ttrack="noneu">Non-EU students</button>
+        <button data-ttrack="eu">EU students</button>
+      </div>
+      <div class="timeline active" data-tpanel="noneu">
+        <div class="t-step"><div class="t-num">1</div><h3>Prepare your documents</h3><p>Passport, diploma and transcripts — legalized or Apostilled, plus your Declaration of Value. The guide lists exactly what your country requires.</p><span class="t-when">Start 3–4 months early</span></div>
+        <div class="t-step"><div class="t-num">2</div><h3>Pre-enrol on Universitaly</h3><p>Choose your university, submit the pre-enrollment application, and follow it through embassy validation.</p><span class="t-when">Spring – Summer</span></div>
+        <div class="t-step"><div class="t-num">3</div><h3>Apply for your visa</h3><p>Student visa at the Italian embassy or consulate — financial proof, accommodation, insurance — with the full document checklist.</p><span class="t-when">Summer</span></div>
+        <div class="t-step"><div class="t-num">4</div><h3>Arrive &amp; enrol</h3><p>Permesso di soggiorno within 8 days of arrival, then final enrolment once the rankings are published.</p><span class="t-when">September – October</span></div>
+      </div>
+      <div class="timeline eu" data-tpanel="eu">
+        <div class="t-step"><div class="t-num">1</div><h3>Register on Universitaly</h3><p>Create your account and pre-enrol at your chosen universities in a few minutes.</p><span class="t-when">Spring</span></div>
+        <div class="t-step"><div class="t-num">2</div><h3>Sit the IMAT</h3><p>One test on September 29, 2026 — your score is considered by every university you selected.</p><span class="t-when">September 29, 2026</span></div>
+        <div class="t-step"><div class="t-num">3</div><h3>Enrol</h3><p>If you rank within your chosen university's cutoff, complete enrolment directly. No visas, no consulates.</p><span class="t-when">October</span></div>
+      </div>
+      <p class="noneu-foot">Deadlines differ by embassy and change every year — the guide is updated as procedures change. <a href="#pricing">See the full guide inside →</a></p>
     </div>
   </div>
 </section>
 
-<section class="preview-section">
-  <div class="preview-inner">
-    <div>
-      <div class="sec-label rv-l">Inside ImatPath</div>
-      <h2 class="sec-title rv-l d1" style="font-size:clamp(2rem,3.5vw,2.8rem);">Master the IMAT with real practice.</h2>
-      <p class="sec-sub rv-l d2" style="margin-bottom:28px;">Stop guessing. Our Question Bank features over 2,000 IMAT-style questions, complete with detailed explanations for every single answer.</p>
-      <button class="btn-hero-primary rv-l d3" style="font-size:0.88rem;padding:11px 26px;" onclick="window.location.href='dashboard.html'">Get started</button>
-    </div>
-    <div class="preview-ui rv-r d2">
-      <div class="preview-ui-bar">
-        <div class="ui-dot" style="background:#E57373;"></div>
-        <div class="ui-dot" style="background:#FFB74D;"></div>
-        <div class="ui-dot" style="background:#81C784;"></div>
-        <span style="font-size:0.7rem;color:var(--ink-3);margin-left:8px;">ImatPath — Question Bank</span>
+<!-- ================= SYLLABUS ================= -->
+<section class="syllabus pad" id="syllabus">
+  <div class="wrap syl-grid">
+    <div class="reveal">
+      <span class="eyebrow">Chapter-level planning</span>
+      <h2>Not "revise Biology".<br>Every single chapter.</h2>
+      <p class="lead">The IMAT Test breaks the official syllabus into individual chapters, each with its own status — <b style="color:var(--ink)">Reviewed</b> when you've studied it, <b style="color:var(--ink)">Practiced</b> when you've proven it in the question bank.</p>
+      <div class="syl-points">
+        <div class="syl-pt"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>No vague weekly phases.</b> You always know exactly which chapter to study next — and why.</span></div>
+        <div class="syl-pt"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Direct links to practice.</b> Every chapter connects straight to its matching questions in the Question Bank.</span></div>
+        <div class="syl-pt"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Two statuses per chapter.</b> Reading a chapter isn't the same as being able to answer questions on it — ImatPath tracks both.</span></div>
       </div>
-      <div class="preview-ui-body">
-        <div class="ui-label">Biology &middot; Question 42</div>
-        <div class="ui-q">Which organelle is known as the "powerhouse" of the cell and is responsible for ATP production?</div>
-        <div class="ui-opts">
-          <div class="ui-opt"><div class="ui-opt-dot"></div>Ribosome</div>
-          <div class="ui-opt sel" style="border-color:var(--teal); background:var(--teal-faint); color:var(--teal-2);"><div class="ui-opt-dot" style="border-color:var(--teal); background:var(--teal);"><span style="color:white; font-size:10px; font-weight:bold; line-height:14px; text-align:center; display:block; width:100%;">✓</span></div>Mitochondria</div>
-          <div class="ui-opt"><div class="ui-opt-dot"></div>Golgi apparatus</div>
-          <div class="ui-opt"><div class="ui-opt-dot"></div>Lysosome</div>
+    </div>
+    <div class="tracker reveal">
+      <div class="tracker-head"><h4>Your IMAT Test — Biology</h4><span>Click a status to toggle it</span></div>
+      <div class="subj-pills">
+        <span class="subj-pill active">Biology · 13</span>
+        <span class="subj-pill">Chemistry · 11</span>
+        <span class="subj-pill">Physics · 8</span>
+        <span class="subj-pill">Math · 9</span>
+        <span class="subj-pill">Logic &amp; GK · 7</span>
+      </div>
+      <div class="tracker-body" id="chapList"></div>
+      <div class="tracker-foot"><b>48 chapters</b> across 5 subjects — each with Reviewed &amp; Practiced status, each linked to its Question Bank filter.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW ================= -->
+<section class="how pad" id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Your complete path to the IMAT.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="s-num">Step 01</div><h3>Create your account</h3><p>Sign up and get instant access to every tool on the platform — no waiting, no setup.</p></div>
+      <div class="step reveal"><div class="s-num">Step 02</div><h3>Practice &amp; track</h3><p>Work through 2,000+ IMAT-like questions chapter by chapter and watch your performance data build.</p></div>
+      <div class="step reveal"><div class="s-num">Step 03</div><h3>Past papers &amp; mocks</h3><p>Take official past IMAT papers and full mock exams under real timed conditions.</p></div>
+      <div class="step reveal"><div class="s-num">Step 04</div><h3>The big day</h3><p>Walk into the exam knowing exactly where you stand.</p><span class="date-tag">September 29, 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOUNDERS ================= -->
+<section class="founders pad">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="justify-content:center;display:inline-flex">Who's behind ImatPath</span>
+    <p class="f-quote">"We lived the scattered resources, the unclear starting point, and the frustration of not knowing where we stood. ImatPath is the platform we wish we'd had — a clear plan, a real question bank, and honest progress tracking."</p>
+    <p class="f-sig">— The ImatPath team · built by students who went through the IMAT themselves</p>
+    <span class="f-contact">Questions? <b>imatpathpro@gmail.com</b> · we reply within 24 hours</span>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="pricing pad" id="pricing">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="eyebrow" style="justify-content:center;display:inline-flex">Simple pricing</span>
+      <h2>No subscriptions. No hidden fees.</h2>
+      <p class="lead" style="margin:0 auto">One payment. Full access to everything, until your IMAT exam day.</p>
+    </div>
+    <div class="price-anchor reveal">
+      <span class="anchor-chip">Typical prep course <b>$300+</b></span>
+      <span class="anchor-chip">Private IMAT tutor <b>$40+/hour</b></span>
+      <span class="anchor-chip hl">ImatPath <b>$10 — once</b></span>
+    </div>
+    <div class="price-card reveal">
+      <div class="pc-top"><span class="pc-badge">Until IMAT 2026</span><span class="pc-until">One-time payment · access until exam day</span></div>
+      <div class="pc-price"><span class="pc-old">$25</span><span class="pc-now">$10</span><span class="pc-per">/ one-time</span></div>
+      <div class="pc-count">
+        <div class="pcc-t">Launch pricing ends September 7, 2026</div>
+        <div class="pcc-boxes">
+          <div class="pcc-box"><b data-oc="d">--</b><span>days</span></div>
+          <div class="pcc-box"><b data-oc="h">--</b><span>hours</span></div>
+          <div class="pcc-box"><b data-oc="m">--</b><span>min</span></div>
+          <div class="pcc-box"><b data-oc="s">--</b><span>sec</span></div>
         </div>
-        <div style="margin-top:20px; padding:16px; background:var(--teal-faint); border:1px solid rgba(13,148,136,0.2); border-radius:10px;">
-          <div style="font-size:0.75rem; font-weight:800; color:var(--teal); margin-bottom:6px; letter-spacing:0.5px; text-transform:uppercase;"><i class="fas fa-check-circle" style="margin-right:4px;"></i> Correct</div>
-          <div style="font-size:0.85rem; color:var(--ink-2); line-height:1.6;"><strong>Mitochondria</strong> generate most of the cell's supply of adenosine triphosphate (ATP), used as a source of chemical energy.</div>
-        </div>
       </div>
+      <ul class="pc-list">
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Full access until the IMAT exam — September 29, 2026</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Official IMAT past papers</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>2,000+ IMAT-like questions with full explanations</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>20 full mock exams with official scoring</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Progress analytics dashboard &amp; chapter tracker</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Score predictor based on historical cutoffs</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Application guide — EU &amp; non-EU tracks</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Private Telegram group</li>
+      </ul>
+      <a class="btn btn-primary btn-lg btn-block" href="auth.html">Get Started — $10</a>
+      <p class="pc-note"><b>Full refund, no questions asked</b> — email hello@imatpath.com.<br>After September 7, the price returns to $25. Accounts that join at $10 keep it permanently.</p>
     </div>
   </div>
 </section>
 
-<section class="platform-section" id="platform">
-  <div class="platform-inner">
-    <div style="text-align:center;margin-bottom:40px;" class="rv">
-      <div class="sec-label" style="justify-content:center;">Try it yourself</div>
-      <h2 class="sec-title rv d1">These aren't mockups.</h2>
-      <p class="sec-sub rv d2" style="margin:0 auto;">Every tool below is fully functional. Go ahead — click around.</p>
+<!-- ================= FAQ ================= -->
+<section class="faq pad" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions.</h2>
     </div>
-    <div class="platform-tabs rv d3">
-      <button class="plat-tab active" onclick="switchPlatTab('qbank',this)"><i class="fas fa-layer-group" style="margin-right:6px;font-size:12px;"></i>Question Bank</button>
-      <button class="plat-tab" onclick="switchPlatTab('mock',this)"><i class="fas fa-stopwatch" style="margin-right:6px;font-size:12px;"></i>Mock Exam</button>
-      <button class="plat-tab" onclick="switchPlatTab('guide',this)"><i class="fas fa-clipboard-check" style="margin-right:6px;font-size:12px;"></i>Application Guide</button>
-    </div>
-    <div class="plat-panel active" id="panel-qbank"><div class="qb-container"><div class="qb-subject-tabs" id="qbSubjectTabs"></div><div class="qb-card" id="qbCard"></div></div></div>
-    <div class="plat-panel" id="panel-mock"><div class="mock-container"><div class="mock-start" id="mockStart"><h3>IMAT Mini Mock Exam</h3><p>10 IMAT-style questions across all subjects, timed to simulate real exam pressure. See your score breakdown by subject when you finish.</p><div class="mock-rules"><div class="mock-rule"><strong>10 questions</strong>Across Biology, Chemistry, Physics, Math & GK</div><div class="mock-rule"><strong>15 minutes</strong>Timed — just like the real thing. Timer pauses if you switch tabs.</div><div class="mock-rule"><strong>IMAT scoring</strong>+1.5 correct, −0.4 wrong, 0 blank</div></div><button class="btn-hero-primary" style="font-size:0.88rem;padding:11px 28px;" onclick="startMockExam()">Start mock exam</button></div><div class="mock-active" id="mockActive"><div class="mock-topbar"><div style="display:flex;align-items:center;gap:12px;"><div class="mock-timer" id="mockTimer"><i class="fas fa-clock"></i> <span id="mockTimeDisplay">15:00</span></div><span class="mock-paused-label" id="mockPausedLabel">Paused</span></div><div class="mock-progress-text" id="mockProgressText">0 / 10 answered</div><button class="mock-submit-btn" id="mockSubmitBtn" onclick="confirmSubmitMock()">End exam</button></div><div class="mock-question-grid" id="mockQGrid"></div><div class="mock-q-card" id="mockQCard"></div></div><div class="mock-results" id="mockResults"></div></div></div>
-    <div class="plat-panel" id="panel-guide"><div class="guide-container"><div class="guide-toggle"><button class="guide-toggle-btn active" onclick="switchGuide('eu',this)">EU Students</button><button class="guide-toggle-btn" onclick="switchGuide('noneu',this)">Non-EU Students</button></div><div class="guide-progress-card"><div class="guide-prog-label">Your progress</div><div class="guide-prog-bar"><div class="guide-prog-fill" id="guideProgFill" style="width:0%;"></div></div><div class="guide-prog-pct" id="guideProgPct">0%</div></div><div id="guideChecklist"></div></div></div>
+    <div class="faq-grid reveal" id="faqGrid"></div>
   </div>
 </section>
 
-<section class="pricing-section" id="pricing">
-  <div class="pricing-inner">
-    <div class="sec-label rv">Pricing</div>
-    <h2 class="sec-title rv d1">Simple pricing.<br>No hidden fees.</h2>
-    <p class="sec-sub rv d2">Get full access to all features and study materials until your IMAT exam day.</p>
-    <div class="pricing-cards" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto;">
-      <div class="pricing-card featured rv d3">
-        <div style="height:28px;margin-bottom:16px;display:flex;align-items:center;gap:6px;"><div class="plan-tag" style="margin-bottom:0;">Most Popular</div></div>
-        <div class="plan-name">Until IMAT 2026</div>
-        <div class="plan-price"><span style="text-decoration:line-through;color:rgba(255,255,255,0.5);font-size:2rem;margin-right:12px;font-weight:600;vertical-align:baseline;">$25</span><sup>$</sup>10<span style="font-size:1rem;font-weight:400;color:rgba(255,255,255,0.4);letter-spacing:0;"> / one-time</span></div>
-        <div style="background:rgba(13, 148, 136, 0.15);color:#2dd4bf;padding:8px 12px;border-radius:8px;font-size:0.9rem;font-weight:600;margin-bottom:16px;border:1px solid rgba(45, 212, 191, 0.2);display:inline-block;width:100%;">Launch offer available until September 7, 2026</div>
-        <div class="plan-period">Full access until the IMAT exam</div>
-        <div class="plan-divider"></div>
-        <div class="plan-feats"><div class="plan-feat">IMAT past papers</div><div class="plan-feat">2000+ IMAT-like questions</div><div class="plan-feat">20 full mock exams</div><div class="plan-feat">Progress analytics dashboard</div><div class="plan-feat">Score predictor</div><div class="plan-feat">Private Telegram group</div></div>
-        <button class="btn-plan-teal" onclick="window.location.href='auth.html'">Get Started</button>
-      </div>
+<!-- ================= FINAL CTA ================= -->
+<section class="final pad">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="justify-content:center;display:inline-flex">Ready?</span>
+    <h2>Start your path today.</h2>
+    <p class="lead">Your study plan is ready in minutes. Everything you need, in one place — until exam day.</p>
+    <a class="btn btn-primary btn-lg" href="auth.html">Get started — $10
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="final-line">
+      <span>The IMAT is in <b><span class="exam-days">31</span> days</b></span>
+      <span>Launch pricing ends <b>September 7</b></span>
+      <span>One-time payment · refund guaranteed</span>
     </div>
   </div>
 </section>
 
-<section class="faq-section" id="faq">
-  <div class="faq-inner">
-    <div class="faq-header">
-      <div class="sec-label rv" style="justify-content:center;">FAQ</div>
-      <h2 class="sec-title rv d1">Common questions.</h2>
-    </div>
-    <div class="faq-list rv d2">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is this updated for the IMAT 2026 syllabus?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>Yes. All questions, mock exams, and study plans are aligned with the latest IMAT syllabus published by Cambridge Assessment. We update content as soon as changes are announced.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">I'm a non-EU student — does this cover the visa process?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>The Application Guide has a dedicated non-EU track with step-by-step checklists for document preparation (Declaration of Value, Apostille), pre-enrollment at the embassy, student visa application, and what to do after arriving in Italy.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I use this alongside my current preparation?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>Absolutely. ImatPath doesn't replace your textbooks or courses — it organizes them. The IMAT Test tells you what to study and when, the question bank tests what you've learned, and the mocks measure your progress. It works with whatever resources you're already using.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How accurate are the mock exams compared to the real IMAT?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>Very close. Questions follow the same format, difficulty distribution, and topic weightings as real IMAT papers. The scoring uses the official formula (+1.5 correct, −0.4 wrong, 0 blank). Students consistently report that our mocks feel like the real thing.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What happens after the launch offer ends on September 7?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>After September 7, 2026, the price returns to the regular $25 one-time payment. If you sign up before the deadline, you lock in the $10 price permanently for your account — the increase only affects new sign-ups after that date.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is this a one-time payment or a subscription?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>It's a one-time payment — not a subscription. You pay once and get full access to ImatPath until your IMAT exam day. There's no recurring billing, and nothing to cancel.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I access ImatPath on my phone?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>Yes. ImatPath works fully on mobile, tablet, and desktop — your IMAT Test, question bank, and mock exams are all accessible from any device with a browser.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do I need to buy other IMAT prep resources too?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>Not necessarily. ImatPath is designed to be a complete, standalone prep system — the IMAT Test, question bank, and mock exams cover everything you need. That said, if you're already using textbooks or a course, ImatPath works well alongside them by organizing what to study and tracking your progress.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Who's behind ImatPath?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>ImatPath is built by a team with firsthand experience going through IMAT preparation — we've lived the scattered resources, the unclear starting point, and the frustration of not knowing where we stood before mock exams existed for us. We built the platform we wish we'd had: a clear IMAT Test, a real question bank, and honest progress tracking. Every feature comes from a problem we personally ran into while preparing.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What if I have a question or need help?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>Reach out anytime at imatpathpro@gmail.com — we typically respond within 24 hours, whether it's a question about the platform, a technical issue, or anything else.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I get a refund if it's not for me?<i class="fas fa-chevron-down"></i></button>
-        <div class="faq-a"><p>Yes — email us at hello@imatpath.com and we'll refund you, no questions asked.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="cta-bg-grid"></div>
-  <div class="cta-glow"></div>
-  <div class="sec-label rv" style="justify-content:center;">Ready?</div>
-  <h2 class="sec-title rv d1">Start your path today.</h2>
-  <p class="sec-sub rv d2">Your study plan is ready in minutes. Everything you need, in one place.</p>
-  <div class="cta-urgency rv d3" id="ctaUrgency"></div>
-  <button class="btn-hero-primary rv d4" onclick="window.location.href='dashboard.html'">Get started</button>
-</section>
-
+<!-- ================= FOOTER ================= -->
 <footer>
-  <div class="footer-logo">Imat<span>Path</span></div>
-  <div class="footer-links">
-    <a href="#features">Features</a>
-    <a href="#platform">Platform</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#faq">FAQ</a>
-    <a onclick="showToast('Contact page coming soon — email us at hello@imatpath.com')">Contact</a>
-    <a onclick="showToast('Privacy policy coming soon')">Privacy</a>
-    <a onclick="showToast('Terms of service coming soon')">Terms</a>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top">Imat<em>Path</em></a>
+        <p>The structured way to prepare for the IMAT — study plan, question bank, mock exams and application guidance in one place.</p>
+      </div>
+      <div><h5>Product</h5><ul>
+        <li><a href="#features">Features</a></li><li><a href="#platform">Platform</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#noneu">Non-EU Guide</a></li>
+      </ul></div>
+      <div><h5>Support</h5><ul>
+        <li><a href="#faq">FAQ</a></li><li><a href="mailto:imatpathpro@gmail.com">imatpathpro@gmail.com</a></li><li><a href="mailto:hello@imatpath.com">Refunds — hello@imatpath.com</a></li>
+      </ul></div>
+      <div><h5>Legal</h5><ul>
+        <li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Contact</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 ImatPath. All rights reserved.</span><span>Not affiliated with Cambridge Assessment or MUR.</span></div>
   </div>
-  <div class="footer-copy">&copy; 2026 ImatPath</div>
 </footer>
 
-<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastText"></span></div>
-
 <script>
-function showToast(m){const t=document.getElementById('toast');document.getElementById('toastText').textContent=m;t.classList.add('show');clearTimeout(t._tid);t._tid=setTimeout(()=>t.classList.remove('show'),3000);}
-function scrollTo(sel){document.querySelector(sel).scrollIntoView({behavior:'smooth'});}
+(function(){
+"use strict";
 
-function toggleMobileNav(){const h=document.getElementById('hamburger'),m=document.getElementById('mobileNav');const opening=!h.classList.contains('open');h.classList.toggle('open');if(opening){m.style.display='flex';requestAnimationFrame(()=>m.classList.add('open'));document.body.style.overflow='hidden';}else{m.classList.remove('open');document.body.style.overflow='';setTimeout(()=>{m.style.display='none';},250);}h.setAttribute('aria-expanded',opening);}
-function closeMobileNav(){const h=document.getElementById('hamburger'),m=document.getElementById('mobileNav');h.classList.remove('open');h.setAttribute('aria-expanded','false');m.classList.remove('open');document.body.style.overflow='';setTimeout(()=>{m.style.display='none';},250);}
+// ── Dark mode sync ──
+const savedTheme = localStorage.getItem('imatpath_dark_mode');
+if (savedTheme === 'true') document.documentElement.setAttribute('data-theme', 'dark');
 
-const rvObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('vis');rvObs.unobserve(en.target);}});},{threshold:0.12,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>rvObs.observe(el));
-
-const previewObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const bar=document.getElementById('uiBarFill');if(bar)bar.classList.add('animate');document.querySelectorAll('.ui-week-bar[data-width]').forEach(b=>{b.style.width=b.dataset.width+'%';});previewObs.unobserve(en.target);}});},{threshold:0.3});
-const previewUi=document.querySelector('.preview-ui');
-if(previewUi)previewObs.observe(previewUi);
-
-function switchPlatTab(id,btn){document.querySelectorAll('.plat-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.plat-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById('panel-'+id).classList.add('active');}
-
-function updateUrgency(){const el=document.getElementById('ctaUrgency');if(!el)return;const now=new Date(),target=new Date(now.getFullYear(),8,29);if(now>target)target.setFullYear(target.getFullYear()+1);const days=Math.ceil((target-now)/(86400000));el.innerHTML=`<strong>${days} days</strong> remaining until IMAT 2026`;}
-updateUrgency();
-
-const qbData={biology:[{q:"Which organelle is known as the \"powerhouse of the cell\"?",opts:["Ribosome","Mitochondria","Golgi apparatus","Lysosome"],ans:1,diff:"easy",exp:"<strong>Mitochondria</strong> generate most of the cell's ATP through oxidative phosphorylation."},{q:"During which phase of mitosis do chromosomes align at the cell's equatorial plate?",opts:["Prophase","Metaphase","Anaphase","Telophase"],ans:1,diff:"medium",exp:"In <strong>metaphase</strong>, chromosomes line up at the metaphase plate."},{q:"Which blood type is the universal donor for red blood cell transfusions?",opts:["Type A","Type B","Type AB","Type O negative"],ans:3,diff:"medium",exp:"<strong>Type O negative</strong> lacks A, B, and RhD antigens."},{q:"In Hardy-Weinberg, if allele 'a' frequency is 0.3, what % is heterozygous?",opts:["21%","42%","49%","9%"],ans:1,diff:"hard",exp:"2pq = 2 × 0.7 × 0.3 = <strong>0.42</strong> = 42%."}],chemistry:[{q:"What is the molecular geometry of water (H₂O)?",opts:["Linear","Trigonal planar","Bent (V-shaped)","Tetrahedral"],ans:2,diff:"easy",exp:"Water has a <strong>bent geometry</strong> with ~104.5° bond angle."},{q:"Which of the following is a strong acid?",opts:["CH₃COOH","HCl","H₂CO₃","NH₄⁺"],ans:1,diff:"medium",exp:"<strong>HCl</strong> completely dissociates (pKa ≈ −7)."},{q:"What is the oxidation state of Mn in KMnO₄?",opts:["+4","+5","+6","+7"],ans:3,diff:"medium",exp:"+1 + Mn − 8 = 0, so <strong>Mn = +7</strong>."},{q:"Which statement about reaction kinetics is correct?",opts:["Temperature decreases rate constant","Catalyst changes equilibrium","Rate-determining step is fastest","Arrhenius equation relates k to T"],ans:3,diff:"hard",exp:"The <strong>Arrhenius equation</strong> relates rate constant to temperature."}],physics:[{q:"What is the SI unit of force?",opts:["Joule","Watt","Newton","Pascal"],ans:2,diff:"easy",exp:"The <strong>Newton (N)</strong> is the SI unit of force."},{q:"A 10Ω resistor at 5V. What current flows?",opts:["0.5 A","2 A","50 A","0.05 A"],ans:0,diff:"medium",exp:"I = V/R = 5/10 = <strong>0.5 A</strong>."},{q:"Object at 30cm from f=10cm converging lens. Image at?",opts:["15 cm","20 cm","30 cm","Infinity"],ans:0,diff:"hard",exp:"1/v = 1/10 − 1/30 = 2/30, so <strong>v = 15 cm</strong>."}],math:[{q:"What is the derivative of sin(x)?",opts:["−cos(x)","cos(x)","tan(x)","−sin(x)"],ans:1,diff:"easy",exp:"d/dx[sin(x)] = <strong>cos(x)</strong>."},{q:"If log₂(x) = 5, what is x?",opts:["10","25","32","64"],ans:2,diff:"medium",exp:"2⁵ = <strong>32</strong>."},{q:"∫ 1/(1+x²) dx = ?",opts:["ln(1+x²)+C","arctan(x)+C","arcsin(x)+C","1/x+C"],ans:1,diff:"hard",exp:"<strong>arctan(x) + C</strong> is a standard integral."}],gk:[{q:"When did the Italian Republic come into existence?",opts:["1943","1946","1948","1950"],ans:1,diff:"easy",exp:"June 2, <strong>1946</strong> institutional referendum."},{q:"Which is a fundamental EU principle?",opts:["Freedom of movement","Single language","Centralized tax","Unified military"],ans:0,diff:"medium",exp:"<strong>Freedom of movement</strong> is a fundamental EU freedom."},{q:"The IMAT is administered by which organization?",opts:["Italian Ministry","Cambridge Assessment","ETS","British Council"],ans:1,diff:"medium",exp:"<strong>Cambridge Assessment Admissions Testing</strong>."}]};
-const qbState={subject:'biology',qIdx:0,answered:false,scores:{}};
-Object.keys(qbData).forEach(k=>{qbState.scores[k]={correct:0,total:0};});
-
-function initQB(){const t=document.getElementById('qbSubjectTabs');const l={biology:'Biology',chemistry:'Chemistry',physics:'Physics',math:'Mathematics',gk:'General Knowledge'};t.innerHTML=Object.keys(qbData).map(k=>`<button class="qb-subj-tab ${k==='biology'?'active':''}" onclick="switchQBSubject('${k}',this)">${l[k]} (${qbState.scores[k].correct}/${qbData[k].length})</button>`).join('');renderQBQuestion();}
-function switchQBSubject(s,btn){document.querySelectorAll('.qb-subj-tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');qbState.subject=s;qbState.qIdx=0;qbState.answered=false;renderQBQuestion();}
-function renderQBQuestion(){const qs=qbData[qbState.subject],q=qs[qbState.qIdx],L=['A','B','C','D'],sc=qbState.scores[qbState.subject],dc=q.diff==='easy'?'qb-badge-easy':q.diff==='medium'?'qb-badge-medium':'qb-badge-hard';let h=`<div class="qb-meta"><span class="qb-badge ${dc}">${q.diff.charAt(0).toUpperCase()+q.diff.slice(1)}</span><span class="qb-count">Question ${qbState.qIdx+1} of ${qs.length}</span></div>`;h+=`<div class="qb-question">${q.q}</div><div class="qb-options">`;q.opts.forEach((o,i)=>{let c=qbState.answered?'disabled':'';if(qbState.answered&&i===q.ans)c+=' correct';h+=`<button class="qb-opt ${c}" onclick="answerQB(${i})" ${qbState.answered?'disabled':''}><span class="qb-opt-letter">${L[i]}</span>${o}</button>`;});h+='</div>';if(qbState.answered)h+=`<div class="qb-explanation">${q.exp}</div>`;h+='<div class="qb-nav">';h+=`<div class="qb-score">Score: <span>${sc.correct}</span> / ${sc.total}</div>`;h+=`<button class="qb-next-btn" onclick="nextQB()" ${!qbState.answered?'disabled':''}>${qbState.qIdx>=qs.length-1?'Back to start':'Next question'}</button>`;h+='</div>';document.getElementById('qbCard').innerHTML=h;}
-function answerQB(i){if(qbState.answered)return;qbState.answered=true;const q=qbData[qbState.subject][qbState.qIdx];qbState.scores[qbState.subject].total++;if(i===q.ans)qbState.scores[qbState.subject].correct++;else{const o=document.querySelectorAll('.qb-opt');if(o[i])o[i].classList.add('wrong');}renderQBQuestion();initQB();}
-function nextQB(){const qs=qbData[qbState.subject];if(qbState.qIdx>=qs.length-1){qbState.qIdx=0;}else{qbState.qIdx++;}qbState.answered=false;renderQBQuestion();}
-
-const mockQ=[{q:"Which organelle contains the cell's genetic material?",opts:["Mitochondria","Nucleus","Ribosome","ER"],ans:1,subj:"Biology",exp:"The <strong>nucleus</strong> houses DNA organized into chromosomes."},{q:"Molecular geometry of methane (CH₄)?",opts:["Linear","Bent","Tetrahedral","Trigonal planar"],ans:2,subj:"Chemistry",exp:"CH₄ has <strong>tetrahedral</strong> geometry with 109.5° bond angles."},{q:"Car accelerates from rest at 2 m/s² for 5s. Distance?",opts:["10 m","25 m","50 m","5 m"],ans:1,subj:"Physics",exp:"s = ½at² = ½(2)(25) = <strong>25 m</strong>."},{q:"Value of log₁₀(1000)?",opts:["2","3","4","10"],ans:1,subj:"Math",exp:"log₁₀(1000) = log₁₀(10³) = <strong>3</strong>."},{q:"IMAT is held annually in which month?",opts:["June","September","October","November"],ans:1,subj:"General Knowledge",exp:"The IMAT is typically held in <strong>September</strong>."},{q:"Bond involving sharing of electron pairs?",opts:["Ionic","Covalent","Hydrogen","Metallic"],ans:1,subj:"Chemistry",exp:"<strong>Covalent bonds</strong> involve electron pair sharing."},{q:"Cells divide to produce gametes during?",opts:["Mitosis","Meiosis","Binary fission","Budding"],ans:1,subj:"Biology",exp:"<strong>Meiosis</strong> produces haploid gametes."},{q:"Unit of electrical resistance?",opts:["Ampere","Volt","Ohm","Watt"],ans:2,subj:"Physics",exp:"The <strong>Ohm (Ω)</strong> measures electrical resistance."},{q:"f(x) = 3x² + 2x, what is f'(x)?",opts:["6x + 2","3x + 2","6x² + 2","3x² + 2x"],ans:0,subj:"Math",exp:"f'(x) = 6x + 2 by power rule."},{q:"Treaty establishing EEC in 1957?",opts:["Maastricht","Treaty of Rome","Lisbon","Paris"],ans:1,subj:"General Knowledge",exp:"The <strong>Treaty of Rome</strong> (1957) established the EEC."}];
-const mockState={active:false,currentQ:0,answers:{},flags:{},timeLeft:900,timer:null,submitted:false,_paused:false};
-let mockConfirmPending=false;
-
-document.addEventListener('visibilitychange',()=>{
-  if(!mockState.active||mockState.submitted)return;
-  const timerEl=document.getElementById('mockTimer');
-  const pausedLabel=document.getElementById('mockPausedLabel');
-  if(document.hidden){clearInterval(mockState.timer);mockState._paused=true;if(timerEl)timerEl.classList.add('paused');if(pausedLabel)pausedLabel.style.display='inline';}
-  else if(mockState._paused){startMockTimer();mockState._paused=false;if(timerEl)timerEl.classList.remove('paused');if(pausedLabel)pausedLabel.style.display='none';}
-});
-
-function startMockExam(){
-  mockState.active=true;mockState.currentQ=0;mockState.answers={};mockState.flags={};mockState.timeLeft=900;mockState.submitted=false;mockConfirmPending=false;
-  const btn=document.getElementById('mockSubmitBtn');btn.textContent='End exam';btn.style.background='';btn.style.color='';btn.style.borderColor='';
-  document.getElementById('mockStart').style.display='none';document.getElementById('mockActive').style.display='block';document.getElementById('mockResults').style.display='none';
-  document.getElementById('mockTimer').classList.remove('warning','paused');document.getElementById('mockPausedLabel').style.display='none';document.getElementById('mockTimeDisplay').textContent='15:00';
-  renderMockGrid();renderMockQuestion();startMockTimer();
+function updateDarkToggleIcon() {
+  const btn = document.getElementById('navDarkToggle');
+  if (btn) {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  }
 }
-function startMockTimer(){clearInterval(mockState.timer);mockState.timer=setInterval(()=>{mockState.timeLeft--;if(mockState.timeLeft<=0){mockState.timeLeft=0;submitMockExam();return;}const m=Math.floor(mockState.timeLeft/60),s=mockState.timeLeft%60;document.getElementById('mockTimeDisplay').textContent=`${m}:${s.toString().padStart(2,'0')}`;if(mockState.timeLeft<=120)document.getElementById('mockTimer').classList.add('warning');},1000);}
-function renderMockGrid(){document.getElementById('mockQGrid').innerHTML=mockQ.map((_,i)=>{let cls='';if(i===mockState.currentQ)cls='current';if(mockState.answers[i]!==undefined)cls+=' answered';if(mockState.flags[i])cls+=' flagged';return`<button class="mock-q-btn ${cls}" onclick="goToMockQ(${i})" aria-label="Question ${i+1}">${i+1}</button>`;}).join('');}
-function goToMockQ(i){mockState.currentQ=i;renderMockQuestion();renderMockGrid();}
-function renderMockQuestion(){const q=mockQ[mockState.currentQ],L=['A','B','C','D'],flagged=mockState.flags[mockState.currentQ];let h=`<div class="mock-q-header"><div class="mock-q-subj">${q.subj} · Question ${mockState.currentQ+1}</div><button class="mock-flag-btn ${flagged?'flagged':''}" onclick="toggleMockFlag(${mockState.currentQ})"><i class="fas fa-flag"></i>${flagged?'Flagged':'Flag'}</button></div>`;h+=`<div class="mock-q-text">${q.q}</div><div class="mock-q-opts">`;q.opts.forEach((o,i)=>{h+=`<button class="mock-q-opt ${mockState.answers[mockState.currentQ]===i?'selected':''}" onclick="selectMockAnswer(${i})"><span class="mock-q-opt-letter">${L[i]}</span>${o}</button>`;});h+='</div>';document.getElementById('mockQCard').innerHTML=h;document.getElementById('mockProgressText').textContent=`${Object.keys(mockState.answers).length} / ${mockQ.length} answered`;}
-function selectMockAnswer(i){mockState.answers[mockState.currentQ]=i;renderMockQuestion();renderMockGrid();}
-function toggleMockFlag(i){mockState.flags[i]=!mockState.flags[i];renderMockQuestion();renderMockGrid();showToast(mockState.flags[i]?'Question flagged for review':'Flag removed');}
-function confirmSubmitMock(){if(mockConfirmPending){submitMockExam();return;}mockConfirmPending=true;const btn=document.getElementById('mockSubmitBtn');btn.textContent='Confirm — end exam?';btn.style.background='#DC2626';btn.style.color='white';btn.style.borderColor='#DC2626';setTimeout(()=>{if(mockConfirmPending){mockConfirmPending=false;btn.textContent='End exam';btn.style.background='';btn.style.color='';btn.style.borderColor='';}},3000);}
-function submitMockExam(){
-  mockConfirmPending=false;clearInterval(mockState.timer);mockState.submitted=false;mockState._paused=false;
-  document.getElementById('mockActive').style.display='none';document.getElementById('mockResults').style.display='block';
-  let c=0,w=0,bl=0;const ss={};
-  mockQ.forEach((q,i)=>{if(!ss[q.subj])ss[q.subj]={c:0,t:0};ss[q.subj].t++;if(mockState.answers[i]===undefined)bl++;else if(mockState.answers[i]===q.ans){c++;ss[q.subj].c++;}else w++;});
-  const rs=(c*1.5)-(w*0.4),sc=Math.max(0,rs*4),mp=mockQ.length*1.5;
-  let msg=sc>=45?'Excellent — strong position for top choices.':sc>=30?'Good work — competitive programs within reach.':sc>=20?'Decent start — focus on weak subjects.':'Just the beginning. Follow your IMAT Test and retake.';
-  let h='<div class="mock-results-card"><div style="font-size:0.7rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal);margin-bottom:12px;">Mock Exam Results</div>';
-  h+=`<div class="mock-score-big">${rs.toFixed(1)}</div><div class="mock-score-max">/ ${mp.toFixed(1)} raw points</div><div class="mock-score-label">Estimated full-exam: ~${sc.toFixed(0)} / 60</div><div class="mock-score-msg">${msg}</div>`;
-  h+='<div style="display:flex;justify-content:center;gap:24px;margin-top:20px;">';
-  h+=`<div style="text-align:center;"><div style="font-size:1.2rem;font-weight:800;color:var(--teal);">${c}</div><div style="font-size:0.72rem;color:var(--ink-3);">Correct</div></div>`;
-  h+=`<div style="text-align:center;"><div style="font-size:1.2rem;font-weight:800;color:#DC2626;">${w}</div><div style="font-size:0.72rem;color:var(--ink-3);">Wrong</div></div>`;
-  h+=`<div style="text-align:center;"><div style="font-size:1.2rem;font-weight:800;color:var(--ink-3);">${bl}</div><div style="font-size:0.72rem;color:var(--ink-3);">Blank</div></div></div>`;
-  h+='<div class="mock-breakdown">';Object.entries(ss).forEach(([s,d])=>{h+=`<div class="mock-breakdown-item"><div class="mock-bd-subj">${s}</div><div class="mock-bd-score">${d.c}/${d.t}</div><div class="mock-bd-pct">${Math.round(d.c/d.t*100)}%</div></div>`;});h+='</div></div>';
-  h+='<div class="mock-review-toggle"><button class="mock-review-btn active" id="reviewSummaryBtn" onclick="showMockReview(\'summary\')">Summary</button><button class="mock-review-btn" id="reviewDetailBtn" onclick="showMockReview(\'detail\')">Review questions</button></div>';
-  h+='<div id="mockReviewSummary"></div><div id="mockReviewDetail" style="display:none;"></div>';
-  document.getElementById('mockResults').innerHTML=h;
-}
+document.addEventListener('DOMContentLoaded', updateDarkToggleIcon);
 
-function showMockReview(mode){
-  document.getElementById('reviewSummaryBtn').classList.toggle('active',mode==='summary');
-  document.getElementById('reviewDetailBtn').classList.toggle('active',mode==='detail');
-  document.getElementById('mockReviewSummary').style.display=mode==='summary'?'block':'none';
-  document.getElementById('mockReviewDetail').style.display=mode==='detail'?'block':'none';
-  if(mode==='detail')renderMockReviewDetail();
-}
+window.toggleDarkMode = function() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('imatpath_dark_mode', 'false');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('imatpath_dark_mode', 'true');
+  }
+  updateDarkToggleIcon();
+};
 
-function renderMockReviewDetail(){
-  const L=['A','B','C','D'];let h='';
-  mockQ.forEach((q,i)=>{
-    const ua=mockState.answers[i],isCorrect=ua===q.ans,isBlank=ua===undefined,isWrong=!isBlank&&!isCorrect;
-    let statusCls=isCorrect?'mock-review-correct':isWrong?'mock-review-wrong':'mock-review-blank';
-    let statusText=isCorrect?'Correct':isWrong?'Wrong':'Blank';
-    h+=`<div class="mock-review-q"><div class="mock-review-q-header"><span class="mock-review-q-num">${q.subj} · Q${i+1}</span><span class="mock-review-q-result ${statusCls}">${statusText}</span></div>`;
-    h+=`<div class="mock-review-q-text">${q.q}</div>`;
-    q.opts.forEach((o,oi)=>{let cls='is-neutral';if(oi===q.ans)cls='is-correct';else if(oi===ua&&!isCorrect)cls='is-wrong';h+=`<div class="mock-review-opt ${cls}"><span class="mock-review-opt-letter">${L[oi]}</span>${o}${oi===ua&&!isCorrect?' (your answer)':''}${oi===q.ans?' (correct)':''}</div>`;});
-    h+=`<div class="mock-review-exp"><strong>Explanation:</strong> ${q.exp}</div></div>`;
+const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+
+/* ---------- nav ---------- */
+const nav=$("#nav");
+addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>10),{passive:true});
+$("#burger").addEventListener("click",()=>$("#mobileMenu").classList.toggle("open"));
+$$("#mobileMenu a").forEach(a=>a.addEventListener("click",()=>$("#mobileMenu").classList.remove("open")));
+
+/* ---------- marquee duplicate ---------- */
+const mq=$("#mqTrack"); mq.innerHTML+=mq.innerHTML;
+
+/* ---------- reveal ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.14});
+$$(".reveal").forEach(el=>io.observe(el));
+
+/* ---------- count-up ---------- */
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return; cio.unobserve(e.target);
+  const el=e.target,target=+el.dataset.count,t0=performance.now();
+  (function step(t){const p=Math.min((t-t0)/1300,1);el.textContent=Math.round(target*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(step);})(t0);
+}),{threshold:.5});
+$$("[data-count]").forEach(el=>cio.observe(el));
+
+/* ---------- countdowns ---------- */
+const offerEnd=new Date("2026-09-07T23:59:59"), examDay=new Date("2026-09-29T09:00:00");
+const pad2=n=>String(n).padStart(2,"0");
+function tickClock(){
+  const now=new Date();
+  let d=Math.max(0,offerEnd-now);
+  const dd=Math.floor(d/864e5),hh=Math.floor(d/36e5)%24,mm=Math.floor(d/6e4)%60,ss=Math.floor(d/1e3)%60;
+  $$("[data-oc='d']").forEach(x=>x.textContent=pad2(dd));
+  $$("[data-oc='h']").forEach(x=>x.textContent=pad2(hh));
+  $$("[data-oc='m']").forEach(x=>x.textContent=pad2(mm));
+  $$("[data-oc='s']").forEach(x=>x.textContent=pad2(ss));
+  const days=Math.max(0,Math.ceil((examDay-now)/864e5));
+  $$(".exam-days").forEach(x=>x.textContent=days);
+}
+tickClock(); setInterval(tickClock,1000);
+
+/* ---------- feature card live timer ---------- */
+let chipSec=6000;
+setInterval(()=>{chipSec--;if(chipSec<0)chipSec=6000;
+  const h=Math.floor(chipSec/3600),m=Math.floor(chipSec/60)%60,s=chipSec%60;
+  const el=$("#mockChipTimer"); if(el)el.textContent=h+":"+pad2(m)+":"+pad2(s);
+},1000);
+
+/* ---------- demo tabs ---------- */
+$$(".demo-tab").forEach(b=>b.addEventListener("click",()=>{
+  $$(".demo-tab").forEach(x=>x.classList.remove("active"));
+  $$(".demo-panel").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active");
+  document.querySelector("[data-dpanel='"+b.dataset.dtab+"']").classList.add("active");
+}));
+
+/* ---------- SAMPLE QUESTIONS ---------- */
+const SQ=[
+ {sub:"Biology",tag:"Question 42 of 2,000+",q:"Which organelle is known as the \u201cpowerhouse\u201d of the cell, responsible for most ATP production?",o:["Ribosome","Mitochondrion","Golgi apparatus","Lysosome","Smooth endoplasmic reticulum"],a:1,e:"Mitochondria generate most of the cell's supply of ATP through oxidative phosphorylation — which is why they're called the powerhouse of the cell."},
+ {sub:"Chemistry",tag:"Question 87 of 2,000+",q:"What is the oxidation state of sulfur in H\u2082SO\u2084?",o:["\u22122","+2","+4","+6","0"],a:3,e:"Hydrogen is +1 and oxygen is \u22122: 2(+1) + S + 4(\u22122) = 0, so sulfur must be +6."},
+ {sub:"Logic",tag:"Question 129 of 2,000+",q:"Find the next term in the sequence: 2, 6, 18, 54, \u2026",o:["108","148","162","180","216"],a:2,e:"Each term is multiplied by 3 to get the next: 54 \u00d7 3 = 162."}
+];
+let sqIdx=0, sqLocked=false;
+const LETTERS=["A","B","C","D","E"];
+function renderSQ(){
+  const q=SQ[sqIdx]; sqLocked=false;
+  $("#sqBox").innerHTML=
+    '<span class="q-subj">'+q.sub+' \u00b7 '+q.tag+'</span>'+
+    '<p class="q-text">'+q.q+'</p>'+
+    '<div class="opts">'+q.o.map((o,i)=>'<button class="opt" data-i="'+i+'"><span class="letter">'+LETTERS[i]+'</span><span>'+o+'</span><span class="mark"></span></button>').join("")+'</div>'+
+    '<div class="explain" id="sqExpl"><b>Explanation</b>'+q.e+'</div>'+
+    '<div class="demo-foot"><span class="score-note">Official IMAT scoring: <b>+1.5</b> correct \u00b7 <b>\u22120.4</b> wrong \u00b7 <b>0</b> blank</span>'+
+    '<button class="btn btn-primary btn-sm" id="sqNext" style="display:none">Next question \u2192</button></div>';
+  $$("#sqBox .opt").forEach(btn=>btn.addEventListener("click",()=>{
+    if(sqLocked)return; sqLocked=true;
+    const pick=+btn.dataset.i;
+    $$("#sqBox .opt").forEach((b,i)=>{
+      b.disabled=true;
+      if(i===q.a){b.classList.add("correct");b.querySelector(".mark").textContent="\u2713";}
+      else if(i===pick){b.classList.add("wrong");b.querySelector(".mark").textContent="\u2717";}
+    });
+    $("#sqExpl").classList.add("show");
+    $("#sqNext").style.display="inline-flex";
+  }));
+  $("#sqNext").addEventListener("click",()=>{sqIdx=(sqIdx+1)%SQ.length;renderSQ();});
+}
+renderSQ();
+
+/* ---------- MINI MOCK ---------- */
+const MOCK_QS=[
+ {s:"Biology",q:"Which organelle is known as the \u201cpowerhouse\u201d of the cell, responsible for most ATP production?",o:["Ribosome","Mitochondrion","Golgi apparatus","Lysosome","Smooth endoplasmic reticulum"],a:1,e:"Mitochondria produce most of the cell's ATP through oxidative phosphorylation."},
+ {s:"Biology",q:"During which phase of mitosis do chromosomes align along the cell's equatorial plate?",o:["Prophase","Metaphase","Anaphase","Telophase","Cytokinesis"],a:1,e:"In metaphase, chromosomes attach to spindle fibres and line up at the equator before separating."},
+ {s:"Chemistry",q:"What is the oxidation state of sulfur in H\u2082SO\u2084?",o:["\u22122","+2","+4","+6","0"],a:3,e:"2(+1) + S + 4(\u22122) = 0, therefore S = +6."},
+ {s:"Chemistry",q:"Which of the following is a strong electrolyte in aqueous solution?",o:["Glucose","Ethanol","Acetic acid","Sodium chloride","Ammonia"],a:3,e:"NaCl is an ionic compound that fully dissociates in water, conducting electricity strongly."},
+ {s:"Physics",q:"A 2 kg object accelerates at 3 m/s\u00b2. What is the net force acting on it?",o:["1.5 N","5 N","6 N","9 N","0.67 N"],a:2,e:"Newton's second law: F = m\u00b7a = 2 kg \u00d7 3 m/s\u00b2 = 6 N."},
+ {s:"Physics",q:"Which of the following quantities is a vector?",o:["Speed","Mass","Velocity","Temperature","Energy"],a:2,e:"Velocity has both magnitude and direction; the other options are scalars."},
+ {s:"Mathematics",q:"Solve for x: 2x + 6 = 18",o:["x = 3","x = 4","x = 6","x = 9","x = 12"],a:2,e:"2x = 18 \u2212 6 = 12, therefore x = 6."},
+ {s:"Mathematics",q:"A fair six-sided die is rolled once. What is the probability of rolling an even number?",o:["1/6","1/3","1/2","2/3","5/6"],a:2,e:"Three even faces out of six (2, 4, 6): 3/6 = 1/2."},
+ {s:"Logic & GK",q:"Find the next term in the sequence: 2, 6, 18, 54, \u2026",o:["108","148","162","180","216"],a:2,e:"Each term is multiplied by 3: 54 \u00d7 3 = 162."},
+ {s:"Logic & GK",q:"The IMAT is designed and delivered in collaboration with which assessment body?",o:["College Board","Cambridge Assessment","British Council","European Commission","Bocconi University"],a:1,e:"The IMAT is developed by Cambridge Assessment Admissions Assessments, working with the Italian ministry (MUR)."}
+];
+const N=MOCK_QS.length;
+let mock={answers:[],idx:0,remain:0,timer:null,running:false};
+const mockBox=$("#mockBox");
+function fmtT(sec){const m=Math.floor(sec/60),s=sec%60;return pad2(m)+":"+pad2(s);}
+function renderMockStart(){
+  clearInterval(mock.timer); mock.running=false;
+  $("#mockTopInfo").textContent="10 questions \u00b7 15 minutes \u00b7 official scoring";
+  mockBox.innerHTML=
+   '<div class="mock-start"><p class="q-text" style="margin-bottom:4px">IMAT Mini Mock Exam</p>'+
+   '<p style="color:var(--ink-soft);font-size:14.5px;margin-bottom:6px">10 IMAT-style questions across all subjects, timed to simulate real exam pressure. You\u2019ll see your score breakdown by subject when you finish.</p>'+
+   '<div class="mock-info">'+
+   '<div><b>10 questions</b><span>Across Biology, Chemistry, Physics, Math &amp; GK</span></div>'+
+   '<div><b>15 minutes</b><span>Timed \u2014 just like the real thing. Timer pauses if you switch tabs.</span></div>'+
+   '<div><b>IMAT scoring</b><span>+1.5 correct, \u22120.4 wrong, 0 blank</span></div>'+
+   '</div><button class="btn btn-primary btn-lg" id="mockStartBtn">Start mock exam</button></div>';
+  $("#mockStartBtn").addEventListener("click",startMock);
+}
+function startMock(){
+  mock={answers:Array(N).fill(null),idx:0,remain:15*60,timer:null,running:true};
+  renderMockQ();
+  clearInterval(mock.timer);
+  mock.timer=setInterval(()=>{
+    if(document.hidden)return;               // pause when tab hidden
+    mock.remain--; updateTimerUI();
+    if(mock.remain<=0)finishMock();
+  },1000);
+  updateTimerUI();
+}
+function updateTimerUI(){
+  const t=$("#mockTimer"); if(!t)return;
+  t.textContent=fmtT(Math.max(0,mock.remain));
+  t.classList.toggle("low",mock.remain<=60);
+}
+function renderMockQ(){
+  const q=MOCK_QS[mock.idx],i=mock.idx;
+  const answered=mock.answers.filter(a=>a!==null).length;
+  mockBox.innerHTML=
+   '<div class="mock-hud"><span class="mock-timer" id="mockTimer">'+fmtT(Math.max(0,mock.remain))+'</span>'+
+   '<span class="mock-count">'+answered+' / '+N+' answered</span></div>'+
+   '<span class="q-subj">'+q.s+' \u00b7 Question '+(i+1)+' of '+N+'</span>'+
+   '<p class="q-text">'+q.q+'</p>'+
+   '<div class="opts">'+q.o.map((o,j)=>'<button class="opt'+(mock.answers[i]===j?' selected" style="border-color:var(--g700);background:rgba(22,69,52,.07)"':'"')+' data-i="'+j+'"><span class="letter">'+LETTERS[j]+'</span><span>'+o+'</span></button>').join("")+'</div>'+
+   '<div class="mock-nav"><button class="btn-line" id="mPrev" '+(i===0?"disabled":"")+'\u2190>\u2190 Previous</button>'+
+   '<div style="display:flex;gap:10px;flex-wrap:wrap">'+
+   (i<N-1?'<button class="btn-line" id="mNext">Next \u2192</button>':'')+
+   '<button class="btn-danger-line" id="mEnd">End exam</button></div></div>';
+  updateTimerUI();
+  $$("#mockBox .opt").forEach(btn=>btn.addEventListener("click",()=>{
+    mock.answers[mock.idx]=+btn.dataset.i; renderMockQ();
+  }));
+  const pv=$("#mPrev"),nx=$("#mNext");
+  if(pv)pv.addEventListener("click",()=>{mock.idx--;renderMockQ();});
+  if(nx)nx.addEventListener("click",()=>{mock.idx++;renderMockQ();});
+  $("#mEnd").addEventListener("click",()=>{
+    const blank=mock.answers.filter(a=>a===null).length;
+    if(blank>0&&!confirm(blank+" question"+(blank>1?"s are":" is")+" still blank. End the exam anyway?"))return;
+    finishMock();
   });
-  document.getElementById('mockReviewDetail').innerHTML=h;
+}
+function finishMock(){
+  clearInterval(mock.timer); mock.running=false;
+  let score=0,correct=0,wrong=0,blank=0;
+  const subj={};
+  MOCK_QS.forEach((q,i)=>{
+    subj[q.s]=subj[q.s]||{c:0,t:0}; subj[q.s].t++;
+    const a=mock.answers[i];
+    if(a===null){blank++;}
+    else if(a===q.a){score+=1.5;correct++;subj[q.s].c++;}
+    else{score-=0.4;wrong++;}
+  });
+  $("#mockTopInfo").textContent="Results \u00b7 official scoring applied";
+  let bars="",review="";
+  Object.keys(subj).forEach(s=>{
+    const pct=Math.round(subj[s].c/subj[s].t*100);
+    bars+='<div class="mr-bar"><span>'+s+'</span><div class="track"><div class="fill" data-w="'+pct+'"></div></div><b>'+pct+'%</b></div>';
+  });
+  MOCK_QS.forEach((q,i)=>{
+    const a=mock.answers[i];
+    const cls=a===null?"blank":(a===q.a?"ok":"bad");
+    const ic=a===null?"\u2014":(a===q.a?"\u2713":"\u2717");
+    const extra=a===null?"Left blank":(a===q.a?"+1.5":"\u22120.4 \u00b7 correct answer: "+LETTERS[q.a]);
+    review+='<div class="mr-r '+cls+'"><span class="ic">'+ic+'</span><span>'+q.s+' \u2014 Q'+(i+1)+'<small>'+extra+'</small></span></div>';
+  });
+  mockBox.innerHTML=
+   '<div class="mock-result"><span class="q-subj" style="justify-content:center;display:inline-flex">Your result</span>'+
+   '<div class="mr-score">'+score.toFixed(1)+'<span> / 15.0</span></div>'+
+   '<div class="mr-sub">'+correct+' correct \u00b7 '+wrong+' wrong \u00b7 '+blank+' blank \u00b7 official formula applied</div>'+
+   '<div class="mr-bars">'+bars+'</div>'+
+   '<div class="mr-review">'+review+'</div>'+
+   '<button class="btn btn-primary" id="mRetake">Retake mock</button></div>';
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    $$("#mockBox .fill").forEach(f=>f.style.width=f.dataset.w+"%");
+  }));
+  $("#mRetake").addEventListener("click",renderMockStart);
+}
+renderMockStart();
+
+/* ---------- APPLICATION GUIDE ---------- */
+const GUIDES={
+ noneu:["Check document requirements for your country","Legalize / Apostille your diploma and transcripts","Obtain the Declaration of Value (DoV)","Submit your Universitaly pre-enrollment","Follow pre-enrollment through embassy validation","Prepare financial proof and accommodation","Apply for your student visa at the embassy","Arrive in Italy \u2192 permit of stay within 8 days"],
+ eu:["Create your Universitaly account","Pre-enrol at your chosen university","Sit the IMAT \u2014 September 29, 2026","Check your ranking against cutoffs","Complete enrolment at your assigned university"]
+};
+const guideState={noneu:Array(GUIDES.noneu.length).fill(false),eu:Array(GUIDES.eu.length).fill(false)};
+let guideTrack="noneu";
+function renderGuide(){
+  const items=GUIDES[guideTrack],state=guideState[guideTrack];
+  $("#guideList").innerHTML=items.map((it,i)=>
+    '<label class="check"><input type="checkbox" data-gi="'+i+'" '+(state[i]?"checked":"")+'><span class="box">\u2713</span><span class="txt">'+it+'</span></label>').join("");
+  $$("#guideList input").forEach(inp=>inp.addEventListener("change",()=>{
+    guideState[guideTrack][+inp.dataset.gi]=inp.checked; guideProgress();
+  }));
+  guideProgress();
+}
+function guideProgress(){
+  const st=guideState[guideTrack];
+  const done=st.filter(Boolean).length;
+  const pct=Math.round(done/st.length*100);
+  $("#guidePct").textContent=pct+"%";
+  $("#guideFill").style.width=pct+"%";
+}
+$$("[data-gtrack]").forEach(b=>b.addEventListener("click",()=>{
+  $$("[data-gtrack]").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active"); guideTrack=b.dataset.gtrack; renderGuide();
+}));
+renderGuide();
+
+/* ---------- PREDICTOR ---------- */
+const UNIS=[
+ {n:"Milan \u2014 Statale",c:52},{n:"Bologna",c:48},{n:"Padua",c:46},
+ {n:"Turin",c:44},{n:"Naples \u2014 Federico II",c:38},{n:"Messina",c:30}
+];
+const predChips=$("#predChips");
+if(predChips){
+  predChips.innerHTML=UNIS.map((u,i)=>'<div class="u-chip" data-i="'+i+'">'+u.n+'<small>cutoff \u2248 '+u.c+'</small></div>').join("");
+  const rng=$("#predRange");
+  const upd=()=>{
+    const v=+rng.value; $("#predVal").textContent=v;
+    let hits=0;
+    $$("#predChips .u-chip").forEach(ch=>{
+      const hit=v>=UNIS[+ch.dataset.i].c; ch.classList.toggle("hit",hit); if(hit)hits++;
+    });
+    $("#predVerdict").textContent=hits===0?"No universities within reach yet \u2014 keep practicing.":hits+" universit"+(hits>1?"ies":"y")+" within reach at this score";
+  };
+  rng.addEventListener("input",upd); upd();
 }
 
-function resetMockExam(){document.getElementById('mockResults').style.display='none';document.getElementById('mockStart').style.display='block';document.getElementById('mockTimer').classList.remove('warning','paused');document.getElementById('mockPausedLabel').style.display='none';document.getElementById('mockTimeDisplay').textContent='15:00';}
+/* ---------- CHAPTER TRACKER ---------- */
+const CHAPS=[
+ ["Cell structure & organelles",true,true],
+ ["Membranes & transport",true,true],
+ ["DNA, RNA & protein synthesis",true,false],
+ ["Cell division: mitosis & meiosis",false,false],
+ ["Genetics & inheritance",false,false],
+ ["Human physiology: nervous system",false,false]
+];
+const chapList=$("#chapList");
+chapList.innerHTML=CHAPS.map((c,i)=>
+ '<div class="st-row"><span class="st-name">'+c[0]+'</span><span class="st-status">'+
+ '<button class="st-pill'+(c[1]?" done":"")+'" data-c="'+i+'" data-k="0">Reviewed'+(c[1]?" \u2713":"")+'</button>'+
+ '<button class="st-pill'+(c[2]?" done":"")+'" data-c="'+i+'" data-k="1">Practiced'+(c[2]?" \u2713":"")+'</button>'+
+ '</span></div>').join("");
+$$(".st-pill").forEach(p=>p.addEventListener("click",()=>{
+  const r=CHAPS[+p.dataset.c],k=+p.dataset.k;
+  r[k]=!r[k];
+  p.classList.toggle("done",r[k]);
+  p.textContent=(k===0?"Reviewed":"Practiced")+(r[k]?" \u2713":"");
+}));
 
-const guideData={eu:[{phase:'Before you apply',items:['Check IMAT eligibility requirements','Verify high school diploma meets Italian requirements','Research universities and IMAT cutoff scores','Decide on university preferences (up to 6)']},{phase:'Application & registration',items:['Register on Universitaly portal (universitaly.it)','Complete pre-enrollment by the deadline','Select 6 preferred universities in priority order','Pay pre-enrollment fee (~€15–30)','Receive confirmation from Universitaly']},{phase:'IMAT registration & preparation',items:['Register on Cambridge Assessment website','Pay IMAT exam fee (~€130)','Receive admission details and test center','Prepare and take the IMAT']},{phase:'After the exam',items:['Check official ranking (graduatoria)','If admitted, accept your place','Complete enrollment at university','Submit required documents','Pay tuition fees (first installment)','Attend orientation sessions','Apply for healthcare coverage (SSN)']}],noneu:[{phase:'Document preparation (start early)',items:['Obtain Declaration of Value from Italian Embassy','Get diploma legalized with Apostille','Have diploma translated into Italian','Prepare 2 passport-size photos','Make copies of valid passport']},{phase:'Pre-enrollment at the embassy',items:['Register on Universitaly portal','Complete pre-enrollment (earlier deadline)','Select up to 6 preferred universities','Book appointment at Italian Embassy','Submit documents at embassy in person','Receive pre-enrollment confirmation']},{phase:'Student visa application',items:['Apply for Type D student visa','Submit: confirmation, financial proof (~€600/month), accommodation, insurance, passport','If under 18: parental authorization & guardian documents','Wait for processing (30–90 days)']},{phase:'IMAT registration & exam',items:['Register on Cambridge Assessment website','Pay IMAT exam fee (~€130)','Receive admission details','Travel to test center and take IMAT']},{phase:'After exam & arrival in Italy',items:['Check ranking on Universitaly','Confirm acceptance within deadline','Enter Italy within visa validity','Apply for residence permit (Permesso di Soggiorno) within 8 days','Complete enrollment in person with originals','Pay tuition fees','Register with National Health Service (SSN)','Attend orientation and start classes']}]};
-const guideState={type:'eu',checked:{}};
-function switchGuide(type,btn){guideState.type=type;document.querySelectorAll('.guide-toggle-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderGuide();}
-function renderGuide(){const data=guideData[guideState.type],allItems=data.reduce((a,p)=>a+p.items.length,0),cc=Object.keys(guideState.checked).filter(k=>k.startsWith(guideState.type)&&guideState.checked[k]).length;document.getElementById('guideProgFill').style.width=(cc/allItems*100)+'%';document.getElementById('guideProgPct').textContent=Math.round(cc/allItems*100)+'%';let h='',idx=0;data.forEach(p=>{h+=`<div class="guide-phase"><div class="guide-phase-title">${p.phase}</div><div class="guide-checklist">`;p.items.forEach(item=>{const key=`${guideState.type}-${idx}`;h+=`<div class="guide-item ${guideState.checked[key]?'checked':''}" onclick="toggleGuideItem('${key}',${allItems})"><div class="guide-check"><i class="fas fa-check"></i></div><div class="guide-item-text">${item}</div></div>`;idx++;});h+='</div></div>';});document.getElementById('guideChecklist').innerHTML=h;}
-function toggleGuideItem(key,allItems){guideState.checked[key]=!guideState.checked[key];renderGuide();if(guideState.checked[key]){const cc=Object.keys(guideState.checked).filter(k=>k.startsWith(guideState.type)&&guideState.checked[k]).length;if(cc===allItems)showToast('All steps completed — you\'re fully prepared!');}}
+/* ---------- FAQ ---------- */
+const FAQS=[
+ ["Is this updated for the IMAT 2026 syllabus?","Yes. All questions, mock exams, and study plans are aligned with the latest IMAT syllabus published by Cambridge Assessment. We update content as soon as changes are announced."],
+ ["I'm a non-EU student — does this cover the visa process?","The Application Guide has a dedicated non-EU track with step-by-step checklists for document preparation (Declaration of Value, Apostille), pre-enrollment at the embassy, student visa application, and what to do after arriving in Italy."],
+ ["Can I use this alongside my current preparation?","Absolutely. ImatPath doesn't replace your textbooks or courses — it organizes them. The IMAT Test tells you what to study and when, the question bank tests what you've learned, and the mocks measure your progress. It works with whatever resources you're already using."],
+ ["How accurate are the mock exams compared to the real IMAT?","Very close. Questions follow the same format, difficulty distribution, and topic weightings as real IMAT papers. The scoring uses the official formula (+1.5 correct, −0.4 wrong, 0 blank). Students consistently report that our mocks feel like the real thing."],
+ ["What happens after the launch offer ends on September 7?","After September 7, 2026, the price returns to the regular $25 one-time payment. If you sign up before the deadline, you lock in the $10 price permanently for your account — the increase only affects new sign-ups after that date."],
+ ["Is this a one-time payment or a subscription?","It's a one-time payment — not a subscription. You pay once and get full access to ImatPath until your IMAT exam day. There's no recurring billing, and nothing to cancel."],
+ ["Can I access ImatPath on my phone?","Yes. ImatPath works fully on mobile, tablet, and desktop — your IMAT Test, question bank, and mock exams are all accessible from any device with a browser."],
+ ["Do I need to buy other IMAT prep resources too?","Not necessarily. ImatPath is designed to be a complete, standalone prep system — the IMAT Test, question bank, and mock exams cover everything you need. That said, if you're already using textbooks or a course, ImatPath works well alongside them by organizing what to study and tracking your progress."],
+ ["Who's behind ImatPath?","ImatPath is built by a team with firsthand experience going through IMAT preparation — we've lived the scattered resources, the unclear starting point, and the frustration of not knowing where we stood before mock exams existed for us. We built the platform we wish we'd had: a clear IMAT Test, a real question bank, and honest progress tracking. Every feature comes from a problem we personally ran into while preparing."],
+ ["What if I have a question or need help?","Reach out anytime at imatpathpro@gmail.com — we typically respond within 24 hours, whether it's a question about the platform, a technical issue, or anything else."],
+ ["Can I get a refund if it's not for me?","Yes — email us at hello@imatpath.com and we'll refund you, no questions asked."]
+];
+const grid=$("#faqGrid");
+grid.innerHTML=FAQS.map((f,i)=>
+ '<div class="faq-item"><button class="faq-q" data-f="'+i+'"><span>'+f[0]+'</span><span class="fx">+</span></button>'+
+ '<div class="faq-a"><div><p>'+f[1]+'</p></div></div></div>').join("");
+$$(".faq-q").forEach(b=>b.addEventListener("click",()=>{
+  b.parentElement.classList.toggle("open");
+}));
 
-function toggleFaq(btn){const item=btn.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false');});if(!wasOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}}
-
-document.addEventListener('DOMContentLoaded',()=>{initQB();renderGuide();});
+/* ---------- non-eu timeline toggle ---------- */
+$$("[data-ttrack]").forEach(b=>b.addEventListener("click",()=>{
+  $$("[data-ttrack]").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active");
+  $$(".timeline").forEach(t=>t.classList.remove("active"));
+  document.querySelector("[data-tpanel='"+b.dataset.ttrack+"']").classList.add("active");
+}));
+})();
 </script>
-<script src="dark-mode.js"></script>
 </body>
 </html>
-
-

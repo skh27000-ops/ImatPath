@@ -5,129 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sign In — ImatPath</title>
 <meta name="description" content="Sign in or create your ImatPath account. Access 2,000+ IMAT practice questions, mock exams, and your personalized IMAT Test.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230c2b21'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23f6f1e7' font-family='Georgia'>i</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-700.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+/* ── Tokens & Reset ── */
+:root {
+  --cream: #f6f1e6; --cream-2: #efe7d5; --card: #fffdf7;
+  --ink: #152720; --ink-soft: #42574d;
+  --g900: #0a241b; --g800: #0e2f23; --g700: #164534; --g600: #1e5b44;
+  --terra: #c1591f; --terra-d: #a84a15;
+  --gold: #d9a441; --gold-l: #e9c070;
+  --sage: #8aa692; --line: #e2d8c2; --line-d: #23443a;
+  --ok: #2e7d4f; --bad: #b3402e;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --sh-sm: 0 1px 2px rgba(21,39,32,.06), 0 4px 14px rgba(21,39,32,.06);
+  --sh-md: 0 2px 6px rgba(21,39,32,.08), 0 14px 34px rgba(21,39,32,.10);
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] {
+  --cream: #111714; --cream-2: #191f1c; --card: #1a211d;
+  --ink: #e2ddd3; --ink-soft: #a4b3a9;
+  --line: #2a3530; --line-d: #2a3530;
+  --g900: #0a0e0c; --g800: #0f1613;
+}
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { height: 100%; }
 
-/* ── CSS Variables (Light) ── */
-:root {
-  --bg: #F4F3F0;
-  --bg-2: #EDECEA;
-  --bg-3: #E0DEDB;
-  --bg-4: #C8C5C1;
-  --surface: #FFFFFF;
-  --surface-hover: #FAFAF9;
-  --ink: #1A1916;
-  --ink-2: #3D3A36;
-  --ink-3: #5A5750;
-  --ink-4: #8A8780;
-  --teal: #0D9488;
-  --teal-2: #0F766E;
-  --teal-light: #5eead4;
-  --teal-pale: #CCFBF1;
-  --teal-faint: #F0FDFB;
-  --red: #DC2626;
-  --red-faint: #FEF2F2;
-  --left-bg: linear-gradient(145deg, #0D9488 0%, #0a7a70 40%, #065f59 100%);
-  --left-text: #FFFFFF;
-  --left-text-muted: rgba(255,255,255,0.55);
-  --left-text-soft: rgba(255,255,255,0.8);
-  --left-glass: rgba(255,255,255,0.08);
-  --left-glass-border: rgba(255,255,255,0.12);
-  --left-grid: rgba(255,255,255,0.04);
-  --input-border: #E0DEDB;
-  --input-bg: #FFFFFF;
-  --input-text: #1A1916;
-  --input-placeholder: #C8C5C1;
-  --input-focus-shadow: rgba(13,148,136,0.1);
-  --tab-bg: #EDECEA;
-  --tab-active-bg: #FFFFFF;
-  --tab-active-text: #1A1916;
-  --tab-text: #8A8780;
-  --tab-shadow: 0 1px 6px rgba(0,0,0,0.08);
-  --divider: #E0DEDB;
-  --divider-text: #C8C5C1;
-  --google-border: #E0DEDB;
-  --google-bg: #FFFFFF;
-  --google-text: #3D3A36;
-  --toggle-text: #5A5750;
-  --toggle-link: #0D9488;
-  --card-bg: transparent;
-  --card-border: transparent;
-  --card-shadow: none;
-  --error-bg: #FEF2F2;
-  --error-text: #DC2626;
-  --error-border: #FECACA;
-  --success-bg: #F0FDFB;
-  --success-text: #0F766E;
-  --success-border: #99F6E4;
-}
-
-/* ── Dark Mode Variables ── */
-[data-theme="dark"] {
-  --bg: #0f0f12;
-  --bg-2: #18181d;
-  --bg-3: #26262d;
-  --bg-4: #35353d;
-  --surface: #1c1c22;
-  --surface-hover: #222229;
-  --ink: #E8E6E3;
-  --ink-2: #C5C3BF;
-  --ink-3: #9A9890;
-  --ink-4: #6E6C65;
-  --teal: #2DD4BF;
-  --teal-2: #14B8A6;
-  --teal-light: #5eead4;
-  --teal-pale: #0D3D38;
-  --teal-faint: #0A2926;
-  --red: #F87171;
-  --red-faint: #3B1515;
-  --left-bg: linear-gradient(145deg, #0a2e2a 0%, #071f1d 40%, #040f0e 100%);
-  --left-text: #E8E6E3;
-  --left-text-muted: rgba(255,255,255,0.4);
-  --left-text-soft: rgba(255,255,255,0.65);
-  --left-glass: rgba(255,255,255,0.05);
-  --left-glass-border: rgba(255,255,255,0.08);
-  --left-grid: rgba(255,255,255,0.025);
-  --input-border: #2e2e35;
-  --input-bg: #18181d;
-  --input-text: #E8E6E3;
-  --input-placeholder: #4a4a52;
-  --input-focus-shadow: rgba(45,212,191,0.1);
-  --tab-bg: #18181d;
-  --tab-active-bg: rgba(45,212,191,0.12);
-  --tab-active-text: #5eead4;
-  --tab-text: #6E6C65;
-  --tab-shadow: 0 0 10px rgba(45,212,191,0.08);
-  --divider: #2e2e35;
-  --divider-text: #4a4a52;
-  --google-border: #2e2e35;
-  --google-bg: #18181d;
-  --google-text: #C5C3BF;
-  --toggle-text: #9A9890;
-  --toggle-link: #5eead4;
-  --card-bg: rgba(255,255,255,0.02);
-  --card-border: rgba(255,255,255,0.06);
-  --card-shadow: 0 20px 50px -12px rgba(0,0,0,0.5);
-  --error-bg: rgba(248,113,113,0.08);
-  --error-text: #F87171;
-  --error-border: rgba(248,113,113,0.15);
-  --success-bg: rgba(45,212,191,0.08);
-  --success-text: #5eead4;
-  --success-border: rgba(45,212,191,0.15);
-}
-
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background: var(--bg);
+  font-family: var(--sans);
+  background: var(--cream);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.35s ease, color 0.35s ease;
 }
+
+::selection { background: var(--terra); color: #fff; }
 
 /* ── Layout ── */
 .auth-wrapper {
@@ -137,114 +61,97 @@ body {
 /* ── Left Panel ── */
 .auth-left {
   flex: 0 0 480px;
-  background: var(--left-bg);
+  background: var(--g900);
   padding: 56px;
   display: flex; flex-direction: column;
   position: relative; overflow: hidden;
+  color: #f6f1e6;
 }
 .auth-left::before {
   content: '';
-  position: absolute;
-  width: 600px; height: 600px;
-  top: -150px; right: -200px;
-  background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 60%);
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(600px 400px at 80% 10%, rgba(217,164,65,.12), transparent 60%),
+    radial-gradient(500px 400px at 10% 90%, rgba(30,91,68,.45), transparent 60%);
   pointer-events: none;
 }
 .auth-left::after {
   content: '';
-  position: absolute;
-  width: 400px; height: 400px;
-  bottom: -100px; left: -100px;
-  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 60%);
-  pointer-events: none;
-}
-.auth-bg-grid {
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(var(--left-grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--left-grid) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(rgba(246,241,230,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(246,241,230,.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 50% 50%, #000 20%, transparent 80%);
   pointer-events: none;
 }
 
 /* Logo */
 .auth-logo {
-  display: flex; align-items: center; gap: 10px;
-  text-decoration: none; margin-bottom: 64px; position: relative;
+  display: flex; align-items: center;
+  text-decoration: none; margin-bottom: 64px; position: relative; z-index: 1;
+  font-family: var(--serif); font-size: 22px; font-weight: 600;
+  letter-spacing: -0.01em; color: #f6f1e6;
 }
-.auth-logo-text {
-  font-size: 1.4rem; font-weight: 800;
-  color: var(--left-text); letter-spacing: -0.5px;
-}
-.auth-logo-text span { color: rgba(255,255,255,0.65); }
+.auth-logo em { font-style: italic; color: var(--gold-l); }
 
 /* Hero */
-.auth-hero { flex: 1; position: relative; }
+.auth-hero { flex: 1; position: relative; z-index: 1; }
 .auth-hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 6px 14px; border-radius: 50px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: var(--left-text-muted);
-  font-size: 0.68rem; font-weight: 700;
-  letter-spacing: 2px; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 7px 14px; border-radius: 999px;
+  border: 1px solid rgba(217,164,65,.4);
+  background: rgba(217,164,65,.08);
+  font-size: 11.5px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gold-l);
   margin-bottom: 20px;
   animation: fadeInUp 0.6s ease;
 }
-.auth-hero-badge .pulse-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: rgba(255,255,255,0.6);
-  animation: pulseDot 2s ease-in-out infinite;
+.auth-hero-badge .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--gold);
+  animation: pulse 2s infinite;
 }
-@keyframes pulseDot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(1.4); }
-}
+@keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(217,164,65,.5)} 50%{box-shadow:0 0 0 6px rgba(217,164,65,0)} }
+
 .auth-hero h1 {
-  font-size: 2.4rem; font-weight: 800;
-  color: var(--left-text); line-height: 1.1;
-  letter-spacing: -1.5px; margin-bottom: 32px;
+  font-family: var(--serif); font-size: 2.4rem; font-weight: 600;
+  color: #f6f1e6; line-height: 1.1; letter-spacing: -1.5px;
+  margin-bottom: 28px;
   animation: fadeInUp 0.6s ease 0.1s backwards;
 }
-.auth-hero h1 em { font-style: normal; color: rgba(255,255,255,0.65); }
+.auth-hero h1 em { font-style: italic; color: var(--gold-l); }
 
 .auth-features {
-  display: flex; flex-direction: column; gap: 14px; margin-bottom: 48px;
+  display: flex; flex-direction: column; gap: 12px;
+  margin-bottom: 44px;
   animation: fadeInUp 0.6s ease 0.2s backwards;
 }
 .auth-feat {
-  display: flex; align-items: center; gap: 14px;
-  padding: 10px 14px; border-radius: 12px;
-  transition: all 0.3s ease;
+  display: flex; align-items: center; gap: 12px;
+  padding: 8px 0;
+  font-size: 14px; color: rgba(246,241,230,.7);
+  transition: transform 0.3s ease;
 }
-.auth-feat:hover { background: rgba(255,255,255,0.05); transform: translateX(4px); }
-.auth-feat-icon {
-  width: 34px; height: 34px; border-radius: 10px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.12);
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 0.8rem; flex-shrink: 0;
-}
-.auth-feat-text {
-  font-size: 0.88rem; color: var(--left-text-soft);
-  line-height: 1.5; font-weight: 500;
-}
-.auth-feat-text strong { color: var(--left-text); font-weight: 700; }
+.auth-feat:hover { transform: translateX(4px); }
+.auth-feat svg { flex-shrink: 0; color: var(--gold); }
+.auth-feat strong { color: #f6f1e6; font-weight: 600; }
 
 .auth-stats {
   display: flex; gap: 24px;
-  padding: 20px 24px;
-  background: var(--left-glass);
-  border: 1px solid var(--left-glass-border);
-  border-radius: 16px; position: relative;
+  padding: 18px 22px;
+  background: rgba(246,241,230,.06);
+  border: 1px solid rgba(246,241,230,.1);
+  border-radius: 16px;
   animation: fadeInUp 0.6s ease 0.3s backwards;
 }
 .auth-stat-val {
-  font-size: 1.6rem; font-weight: 800;
-  color: var(--left-text); letter-spacing: -1px; line-height: 1;
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 600;
+  color: #f6f1e6; letter-spacing: -1px; line-height: 1;
 }
 .auth-stat-lbl {
-  font-size: 0.72rem; color: var(--left-text-muted);
+  font-size: 11px; color: rgba(246,241,230,.45);
   margin-top: 3px; font-weight: 500;
 }
 
@@ -253,177 +160,164 @@ body {
   flex: 1;
   display: flex; align-items: center; justify-content: center;
   padding: 48px 40px;
-  background: var(--bg);
-  transition: background 0.3s ease;
+  background: var(--cream);
+  transition: background 0.35s ease;
   position: relative;
 }
 
 /* Dark mode toggle */
 .auth-dark-toggle {
   position: absolute; top: 24px; right: 24px;
-  width: 40px; height: 40px; border-radius: 12px;
-  border: 1.5px solid var(--bg-3);
-  background: var(--surface);
-  color: var(--ink-4);
-  cursor: pointer;
+  width: 38px; height: 38px; border-radius: 10px;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--ink-soft); cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  font-size: 0.9rem;
-  transition: all 0.25s ease;
-  z-index: 10;
+  font-size: 0.85rem;
+  transition: all 0.25s ease; z-index: 10;
 }
 .auth-dark-toggle:hover {
-  border-color: var(--teal);
-  color: var(--teal);
-  transform: scale(1.05);
+  border-color: var(--terra); color: var(--terra);
 }
 [data-theme="dark"] .auth-dark-toggle {
-  background: var(--bg-3);
-  border-color: var(--bg-4);
-  color: #FBBF24;
+  background: var(--cream-2); border-color: var(--line);
+  color: var(--gold);
 }
 
 /* Form card */
 .auth-form-wrap {
   width: 100%; max-width: 420px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 24px;
-  padding: 40px 36px;
-  box-shadow: var(--card-shadow);
   animation: cardSlideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
-}
-[data-theme="dark"] .auth-form-wrap {
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 }
 @keyframes cardSlideIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 .auth-form-header { margin-bottom: 32px; }
 .auth-form-title {
-  font-size: 1.9rem; font-weight: 800;
+  font-family: var(--serif); font-size: 1.9rem; font-weight: 600;
   color: var(--ink); letter-spacing: -1px; margin-bottom: 8px;
   transition: color 0.3s;
 }
 .auth-form-sub {
-  font-size: 0.9rem; color: var(--ink-3);
-  transition: color 0.3s;
+  font-size: 14.5px; color: var(--ink-soft); transition: color 0.3s;
 }
 
 /* Tabs */
 .auth-tabs {
-  display: flex; background: var(--tab-bg);
-  border-radius: 12px; padding: 4px;
-  margin-bottom: 32px; gap: 4px;
-  transition: background 0.3s;
+  display: inline-flex; gap: 4px;
+  background: var(--cream-2); border: 1px solid var(--line);
+  border-radius: 999px; padding: 5px;
+  margin-bottom: 28px;
+  transition: background 0.3s, border-color 0.3s;
 }
 .auth-tab {
-  flex: 1; padding: 10px 16px; border-radius: 9px; border: none;
-  background: transparent; color: var(--tab-text);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.88rem; font-weight: 600; cursor: pointer;
-  transition: all 0.25s ease;
+  padding: 10px 22px; border-radius: 999px; border: none;
+  background: transparent; color: var(--ink-soft);
+  font-family: var(--sans); font-size: 14px; font-weight: 600;
+  cursor: pointer; transition: all 0.25s ease;
 }
+.auth-tab:hover { color: var(--ink); }
 .auth-tab.active {
-  background: var(--tab-active-bg);
-  color: var(--tab-active-text);
-  box-shadow: var(--tab-shadow);
+  background: var(--g800); color: #f6f1e6;
+  box-shadow: var(--sh-sm);
 }
 
 /* Fields */
-.auth-field { margin-bottom: 16px; }
+.auth-field { margin-bottom: 18px; }
 .auth-label {
-  display: block; font-size: 0.82rem; font-weight: 600;
-  color: var(--ink-2); margin-bottom: 6px;
+  display: block; font-size: 12px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink-soft); margin-bottom: 8px;
   transition: color 0.3s;
 }
 .auth-input {
-  width: 100%; padding: 12px 16px;
-  border: 1.5px solid var(--input-border); border-radius: 10px;
-  background: var(--input-bg); color: var(--input-text);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.9rem; font-weight: 500;
-  transition: all 0.25s ease;
-  outline: none;
+  width: 100%; padding: 13px 16px;
+  border: 1.5px solid var(--line); border-radius: 12px;
+  background: var(--card); color: var(--ink);
+  font-family: var(--sans); font-size: 15px; font-weight: 500;
+  transition: all 0.25s ease; outline: none;
 }
+.auth-input:hover { border-color: rgba(21,39,32,.35); }
 .auth-input:focus {
-  border-color: var(--teal);
-  box-shadow: 0 0 0 3px var(--input-focus-shadow);
+  border-color: var(--terra);
+  box-shadow: 0 0 0 3px rgba(193,89,31,.1);
 }
-.auth-input::placeholder { color: var(--input-placeholder); }
+[data-theme="dark"] .auth-input:focus {
+  box-shadow: 0 0 0 3px rgba(193,89,31,.15);
+}
+.auth-input::placeholder { color: var(--sage); }
 .auth-input-wrap { position: relative; }
 .auth-input-wrap .auth-input { padding-right: 44px; }
 .auth-eye {
   position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
   background: none; border: none; cursor: pointer;
-  color: var(--ink-4); font-size: 0.9rem; padding: 4px;
+  color: var(--sage); font-size: 0.85rem; padding: 4px;
   transition: color 0.2s;
 }
-.auth-eye:hover { color: var(--teal); }
+.auth-eye:hover { color: var(--terra); }
 
 /* Submit */
 .auth-submit {
-  width: 100%; padding: 14px;
-  border-radius: 12px; border: none;
-  background: var(--teal); color: white;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.95rem; font-weight: 700;
+  width: 100%; padding: 15px;
+  border-radius: 999px; border: none;
+  background: var(--terra); color: #fff;
+  font-family: var(--sans); font-size: 15.5px; font-weight: 600;
   cursor: pointer; transition: all 0.25s ease;
-  margin-top: 4px; margin-bottom: 20px;
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  box-shadow: 0 4px 15px rgba(13,148,136,0.25);
+  margin-top: 4px; margin-bottom: 22px;
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  box-shadow: 0 8px 22px rgba(193,89,31,.28);
 }
 .auth-submit:hover {
-  background: var(--teal-2); transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(13,148,136,0.35);
+  background: var(--terra-d); transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(193,89,31,.38);
 }
 .auth-submit:active { transform: translateY(0); }
-.auth-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
+.auth-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
 
 /* Divider */
 .auth-divider {
   display: flex; align-items: center; gap: 12px;
-  margin-bottom: 20px; color: var(--divider-text); font-size: 0.82rem;
+  margin-bottom: 20px; color: var(--sage); font-size: 12px;
+  font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
 }
 .auth-divider::before, .auth-divider::after {
-  content: ''; flex: 1; height: 1px; background: var(--divider);
+  content: ''; flex: 1; height: 1px; background: var(--line);
 }
 
 /* Google */
 .auth-google {
-  width: 100%; padding: 12px;
-  border-radius: 12px; border: 1.5px solid var(--google-border);
-  background: var(--google-bg); color: var(--google-text);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.9rem; font-weight: 600;
+  width: 100%; padding: 13px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--card); color: var(--ink);
+  font-family: var(--sans); font-size: 14.5px; font-weight: 600;
   cursor: pointer; transition: all 0.25s ease;
   display: flex; align-items: center; justify-content: center; gap: 10px;
 }
-.auth-google:hover { border-color: var(--teal); color: var(--ink); transform: translateY(-1px); }
+.auth-google:hover { border-color: var(--ink-soft); transform: translateY(-2px); box-shadow: var(--sh-sm); }
 .auth-google svg { width: 18px; height: 18px; flex-shrink: 0; }
 
 /* Error / Success */
 .auth-error, .auth-success {
-  padding: 12px 16px; border-radius: 10px;
-  font-size: 0.85rem; font-weight: 600;
+  padding: 12px 16px; border-radius: 12px;
+  font-size: 14px; font-weight: 600;
   margin-bottom: 16px; display: none;
   animation: slideIn 0.3s ease;
 }
-.auth-error { background: var(--error-bg); color: var(--error-text); border: 1px solid var(--error-border); }
-.auth-success { background: var(--success-bg); color: var(--success-text); border: 1px solid var(--success-border); }
+.auth-error { background: rgba(179,64,46,.08); color: var(--bad); border: 1px solid rgba(179,64,46,.2); }
+.auth-success { background: rgba(46,125,79,.08); color: var(--ok); border: 1px solid rgba(46,125,79,.2); }
 .auth-error.show, .auth-success.show { display: flex; align-items: center; gap: 8px; }
 @keyframes slideIn { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
 
 /* Toggle */
 .auth-toggle {
   text-align: center; margin-top: 24px;
-  font-size: 0.85rem; color: var(--toggle-text);
+  font-size: 14px; color: var(--ink-soft);
 }
 .auth-toggle a {
-  color: var(--toggle-link); font-weight: 700; text-decoration: none; cursor: pointer;
+  color: var(--terra); font-weight: 700; text-decoration: none; cursor: pointer;
 }
 .auth-toggle a:hover { text-decoration: underline; }
 
@@ -433,16 +327,21 @@ body {
 }
 .auth-verify-icon {
   width: 64px; height: 64px; border-radius: 50%;
-  background: var(--teal-faint); border: 2px solid var(--teal);
+  background: rgba(46,125,79,.08); border: 2px solid var(--ok);
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 20px; font-size: 1.8rem;
 }
-.auth-verify h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 10px; color: var(--ink); }
-.auth-verify p { font-size: 0.88rem; color: var(--ink-3); line-height: 1.6; }
+.auth-verify h3 {
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 600;
+  margin-bottom: 10px; color: var(--ink);
+}
+.auth-verify p { font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+.auth-verify strong { color: var(--terra); }
 
 /* Spinner */
 .spinner {
-  width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3);
+  width: 18px; height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
   border-top-color: white; border-radius: 50%;
   animation: spin 0.7s linear infinite; display: none;
 }
@@ -453,11 +352,11 @@ body {
 @media (max-width: 900px) {
   .auth-left { display: none; }
   .auth-right { padding: 32px 24px; }
+  #mobileLogo { display: flex !important; }
 }
 @media (max-width: 480px) {
   .auth-right { align-items: flex-start; padding-top: 48px; }
   .auth-form-title { font-size: 1.6rem; }
-  .auth-form-wrap { padding: 32px 24px; }
 }
 </style>
 </head>
@@ -467,39 +366,35 @@ body {
 
   <!-- ── Left Panel ── -->
   <div class="auth-left">
-    <div class="auth-bg-grid"></div>
-
-    <a class="auth-logo" href="index.html">
-      <div class="auth-logo-text">Imat<span>Path</span></div>
-    </a>
+    <a class="auth-logo" href="index.html">Imat<em>Path</em></a>
 
     <div class="auth-hero">
       <div class="auth-hero-badge">
-        <span class="pulse-dot"></span>
+        <span class="dot"></span>
         IMAT 2026 Preparation
       </div>
-      <h1>Your clear path to <em>medicine</em> in Italy.</h1>
+      <h1>Your clear path to <em>medicine in Italy.</em></h1>
 
       <div class="auth-features">
         <div class="auth-feat">
-          <div class="auth-feat-icon"><i class="fas fa-layer-group"></i></div>
-          <div class="auth-feat-text"><strong>2,000+ practice questions</strong> across all IMAT subjects with detailed solutions</div>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><strong>2,000+ practice questions</strong> with detailed solutions</span>
         </div>
         <div class="auth-feat">
-          <div class="auth-feat-icon"><i class="fas fa-stopwatch"></i></div>
-          <div class="auth-feat-text"><strong>20 full mock exams</strong> with real IMAT scoring (+1.5 / −0.4)</div>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><strong>20 full mock exams</strong> with real IMAT scoring</span>
         </div>
         <div class="auth-feat">
-          <div class="auth-feat-icon"><i class="fas fa-brain"></i></div>
-          <div class="auth-feat-text"><strong>AI Tutor</strong> powered by Gemini to explain any question</div>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><strong>AI Tutor</strong> powered by Gemini</span>
         </div>
         <div class="auth-feat">
-          <div class="auth-feat-icon"><i class="fas fa-chart-line"></i></div>
-          <div class="auth-feat-text"><strong>Progress analytics</strong> to track your strengths & weak areas</div>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><strong>Progress analytics</strong> & score predictions</span>
         </div>
         <div class="auth-feat">
-          <div class="auth-feat-icon"><i class="fas fa-cloud"></i></div>
-          <div class="auth-feat-text"><strong>Cloud sync</strong> — study from any device, anytime</div>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><strong>Non-EU application guide</strong> — step by step</span>
         </div>
       </div>
 
@@ -508,12 +403,12 @@ body {
           <div class="auth-stat-val">2K+</div>
           <div class="auth-stat-lbl">Practice questions</div>
         </div>
-        <div style="width:1px;background:rgba(255,255,255,0.12);"></div>
+        <div style="width:1px;background:rgba(246,241,230,.1);"></div>
         <div>
           <div class="auth-stat-val">20</div>
           <div class="auth-stat-lbl">Mock exams</div>
         </div>
-        <div style="width:1px;background:rgba(255,255,255,0.12);"></div>
+        <div style="width:1px;background:rgba(246,241,230,.1);"></div>
         <div>
           <div class="auth-stat-val">7</div>
           <div class="auth-stat-lbl">IMAT subjects</div>
@@ -533,8 +428,8 @@ body {
     <div class="auth-form-wrap">
 
       <!-- Mobile logo -->
-      <a href="index.html" style="display:none;align-items:center;gap:10px;text-decoration:none;margin-bottom:24px;" id="mobileLogo">
-        <span style="font-size:1.2rem;font-weight:800;color:var(--ink);">Imat<span style="color:var(--teal);">Path</span></span>
+      <a href="index.html" style="display:none;align-items:center;text-decoration:none;margin-bottom:28px;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);" id="mobileLogo">
+        Imat<em style="font-style:italic;color:var(--terra);">Path</em>
       </a>
 
       <!-- Header -->
@@ -561,20 +456,14 @@ body {
 
       <!-- Form -->
       <form id="authForm" onsubmit="handleSubmit(event)">
-
-        <!-- First name (signup only) -->
         <div class="auth-field" id="fieldName" style="display:none;">
           <label class="auth-label" for="inputName">First name</label>
           <input class="auth-input" type="text" id="inputName" placeholder="e.g. Marco" autocomplete="given-name">
         </div>
-
-        <!-- Email -->
         <div class="auth-field">
           <label class="auth-label" for="inputEmail">Email address</label>
           <input class="auth-input" type="email" id="inputEmail" placeholder="you@example.com" autocomplete="email" required>
         </div>
-
-        <!-- Password -->
         <div class="auth-field">
           <label class="auth-label" for="inputPassword">Password</label>
           <div class="auth-input-wrap">
@@ -584,21 +473,19 @@ body {
             </button>
           </div>
         </div>
-
-        <!-- Submit -->
         <button class="auth-submit" type="submit" id="submitBtn">
           <div class="spinner" id="spinner"></div>
           <span id="submitText">Sign In</span>
-          <i class="fas fa-arrow-right" id="submitIcon"></i>
+          <svg id="submitIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
       </form>
 
-      <!-- Verification sent message -->
+      <!-- Verification -->
       <div class="auth-verify" id="verifyMsg">
         <div class="auth-verify-icon">📬</div>
         <h3>Check your email!</h3>
-        <p>We sent a confirmation link to <strong id="verifyEmail"></strong>. Click the link in the email to activate your account, then sign in.</p>
-        <button onclick="switchTab('signin')" style="margin-top:20px;padding:10px 24px;border-radius:10px;border:none;background:var(--teal);color:white;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;cursor:pointer;">
+        <p>We sent a confirmation link to <strong id="verifyEmail"></strong>. Click the link to activate your account, then sign in.</p>
+        <button onclick="switchTab('signin')" style="margin-top:20px;padding:12px 28px;border-radius:999px;border:none;background:var(--terra);color:white;font-family:var(--sans);font-weight:600;cursor:pointer;box-shadow:0 6px 18px rgba(193,89,31,.25);">
           Go to Sign In
         </button>
       </div>
@@ -621,7 +508,6 @@ body {
       <div class="auth-toggle" id="formToggle">
         Don't have an account? <a onclick="switchTab('signup')">Create one free</a>
       </div>
-
     </div>
   </div>
 
@@ -631,16 +517,11 @@ body {
 <script src="config.js"></script>
 <script src="supabase.js"></script>
 <script>
-// ── Dark mode sync (reads from same localStorage key as the rest of the app) ──
+// ── Dark mode sync ──
 (function() {
   const saved = localStorage.getItem('imatpath_dark_mode');
-  if (saved === 'true') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
-  // Update toggle icon on load
-  document.addEventListener('DOMContentLoaded', function() {
-    updateDarkToggleIcon();
-  });
+  if (saved === 'true') document.documentElement.setAttribute('data-theme', 'dark');
+  document.addEventListener('DOMContentLoaded', updateDarkToggleIcon);
 })();
 
 function toggleAuthDarkMode() {
@@ -680,7 +561,6 @@ let currentTab = 'signin';
 function switchTab(tab) {
   currentTab = tab;
   hideMessages();
-
   const isSignUp = tab === 'signup';
   document.getElementById('tabSignIn').classList.toggle('active', !isSignUp);
   document.getElementById('tabSignUp').classList.toggle('active', isSignUp);
@@ -693,10 +573,8 @@ function switchTab(tab) {
   document.getElementById('formToggle').innerHTML = isSignUp
     ? 'Already have an account? <a onclick="switchTab(\'signin\')">Sign in</a>'
     : 'Don\'t have an account? <a onclick="switchTab(\'signup\')">Create one free</a>';
-
   document.getElementById('authForm').style.display = 'block';
   document.getElementById('verifyMsg').style.display = 'none';
-
   if (isSignUp) {
     document.getElementById('inputPassword').setAttribute('autocomplete', 'new-password');
     document.getElementById('inputPassword').placeholder = 'Choose a password (min. 6 chars)';
@@ -744,17 +622,13 @@ function hideMessages() {
 async function handleSubmit(e) {
   e.preventDefault();
   hideMessages();
-
   const email    = document.getElementById('inputEmail').value.trim();
   const password = document.getElementById('inputPassword').value;
   const name     = document.getElementById('inputName').value.trim();
-
   if (!email || !password) { showError('Please fill in all fields.'); return; }
   if (currentTab === 'signup' && !name) { showError('Please enter your first name.'); return; }
   if (password.length < 6) { showError('Password must be at least 6 characters.'); return; }
-
   setLoading(true);
-
   try {
     if (currentTab === 'signin') {
       await window.ImatAuth.signIn(email, password);
