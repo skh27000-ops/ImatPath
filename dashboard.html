@@ -4,890 +4,852 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard — ImatPath</title>
-<meta name="description" content="Your IMAT preparation hub. Track progress, access study tools, and stay on track for exam day.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230c2b21'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23f6f1e7' font-family='Georgia'>i</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-700.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Core Supabase & Auth Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="supabase.js"></script>
+<script src="paywall.js"></script>
+<script src="auth-guard.js"></script>
+
+<script>
+// ── Fast Dark Mode Init ──
+(function() {
+  const saved = localStorage.getItem('imatpath_dark_mode');
+  if (saved === 'true') document.documentElement.setAttribute('data-theme', 'dark');
+})();
+</script>
+
 <style>
-:root {
-  --stone:    #F4F3F0;
-  --stone-2:  #EDECEA;
-  --stone-3:  #E0DEDB;
-  --stone-4:  #C8C5C1;
-  --ink:      #1A1916;
-  --ink-2:    #3D3A36;
-  --ink-3:    #5A5750;
-  --ink-4:    #8A8780;
-  --teal:     #0D9488;
-  --teal-2:   #0F766E;
-  --teal-pale:#CCFBF1;
-  --teal-faint:#F0FDFB;
-  --white:    #FFFFFF;
-  --red:      #DC2626;
-  --red-faint:#FEF2F2;
-  --amber:    #B45309;
-  --amber-pale:#FEF3C7;
-  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
-  --gradient: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
-  --gradient-2: linear-gradient(135deg, #0D9488 0%, #CCFBF1 100%);
-  --gradient-3: linear-gradient(135deg, #0F766E 0%, #0D9488 100%);
+:root{
+  --cream:#f6f1e6; --cream-2:#efe7d5; --card:#fffdf7;
+  --ink:#152720; --ink-soft:#42574d;
+  --g900:#0a241b; --g800:#0e2f23; --g700:#164534; --g600:#1e5b44;
+  --terra:#c1591f; --terra-d:#a84a15;
+  --gold:#d9a441; --gold-l:#e9c070;
+  --line:#e2d8c2; --line-d:#23443a;
+  --ok:#2e7d4f; --bad:#b3402e;
+  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --sh-sm:0 1px 2px rgba(21,39,32,.06),0 4px 14px rgba(21,39,32,.06);
+  --sh-md:0 2px 6px rgba(21,39,32,.08),0 14px 34px rgba(21,39,32,.10);
 }
 
-/* Paywall Overlay */
+[data-theme="dark"] {
+  --cream: #111714; --cream-2: #191f1c; --card: #1a211d;
+  --ink: #e2ddd3; --ink-soft: #a4b3a9;
+  --line: #2a3530; --line-d: #2a3530;
+  --g900: #0a0e0c; --g800: #0f1613;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;transition:background 0.3s, color 0.3s;}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+svg{display:block}
+::selection{background:var(--terra);color:#fff}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+.up{opacity:0;transform:translateY(16px);animation:up .6s ease forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.d1{animation-delay:.05s}.d2{animation-delay:.12s}.d3{animation-delay:.19s}.d4{animation-delay:.26s}.d5{animation-delay:.33s}.d6{animation-delay:.4s}.d7{animation-delay:.47s}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,164,65,.5)}50%{box-shadow:0 0 0 6px rgba(217,164,65,0)}}
+@keyframes pulseT{0%,100%{box-shadow:0 0 0 0 rgba(193,89,31,.45)}50%{box-shadow:0 0 0 7px rgba(193,89,31,0)}}
+
+/* ============ SIDEBAR ============ */
+.sidebar{position:fixed;inset:0 auto 0 0;width:264px;background:var(--g900);color:var(--cream);display:flex;flex-direction:column;z-index:60;transition:transform .35s ease}
+.logo{display:flex;align-items:center;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em;padding:26px 26px 22px;color:var(--cream)}
+.logo em{font-style:italic;color:var(--gold-l)}
+.sb-nav{display:flex;flex-direction:column;gap:4px;padding:6px 14px}
+.sb-nav a{display:flex;align-items:center;gap:13px;padding:12px 14px;border-radius:12px;font-size:14.5px;font-weight:500;color:#9db3a5;position:relative;transition:.2s}
+.sb-nav a svg{flex:none;opacity:.85}
+.sb-nav a:hover{color:var(--cream);background:rgba(246,241,230,.06)}
+.sb-nav a.active{color:var(--cream);background:rgba(217,164,65,.12);font-weight:600}
+.sb-nav a.active::before{content:"";position:absolute;left:-14px;top:9px;bottom:9px;width:3px;border-radius:3px;background:var(--gold)}
+.sb-spacer{flex:1}
+
+.access-card{margin:0 16px 14px;padding:16px 18px;border:1px solid rgba(217,164,65,.45);border-radius:16px;background:linear-gradient(150deg,rgba(217,164,65,.14),rgba(217,164,65,.04));position:relative;overflow:hidden;cursor:pointer;transition:transform .2s;}
+.access-card:hover{transform:translateY(-2px);}
+.access-card::after{content:"";position:absolute;top:-30px;right:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.25),transparent 70%)}
+.access-card .ac-l{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);display:flex;align-items:center;gap:7px;margin-bottom:6px}
+.access-card .ac-l i{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+.access-card b{font-family:var(--serif);font-size:16.5px;font-weight:600;display:block;color:var(--cream)}
+.access-card span{font-size:12px;color:#9db3a5}
+
+.user-row{display:flex;align-items:center;gap:12px;padding:16px 20px;border-top:1px solid var(--line-d)}
+.avatar{width:38px;height:38px;border-radius:12px;background:var(--g700);border:1.5px solid var(--line-d);display:grid;place-items:center;font-weight:700;font-size:15px;color:var(--gold-l)}
+.user-row .u-t{flex:1;min-width:0}
+.user-row .u-t b{display:block;font-size:14px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.user-row .u-t small{font-size:11.5px;color:#8fa897}
+.logout{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;color:#8fa897;transition:.2s;cursor:pointer;}
+.logout:hover{color:#ff9c7a;background:rgba(179,64,46,.15)}
+
+/* ============ MAIN ============ */
+.main{margin-left:264px;min-height:100vh;display:flex;flex-direction:column}
+.topbar{position:sticky;top:0;z-index:40;background:rgba(246,241,230,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:18px;transition:background 0.3s, border-color 0.3s;}
+[data-theme="dark"] .topbar { background: rgba(17,23,20,.85); }
+.burger{display:none;flex-direction:column;gap:5px;padding:8px;margin-right:4px}
+.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px}
+.topbar h1{font-size:clamp(1.3rem,2.2vw,1.7rem)}
+.topbar p{font-size:13px;color:var(--ink-soft);max-width:520px}
+.top-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.date-chip{font-size:12.5px;font-weight:600;color:var(--ink-soft);background:var(--card);border:1px solid var(--line);padding:8px 15px;border-radius:999px}
+.count-chip{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;background:var(--g800);color:var(--cream);padding:8px 16px;border-radius:999px;white-space:nowrap}
+.count-chip b{color:var(--gold-l);font-family:var(--serif);font-size:15px}
+.count-chip .fl{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+
+.nav-dark-toggle{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);display:flex;align-items:center;justify-content:center;font-size:14px;transition:.25s;cursor:pointer;}
+.nav-dark-toggle:hover{border-color:var(--terra);color:var(--terra)}
+[data-theme="dark"] .nav-dark-toggle{border-color:var(--line);color:var(--gold)}
+
+.content{padding:30px 36px 46px;display:flex;flex-direction:column;gap:20px;max-width:1240px;width:100%;margin:0 auto}
+
+/* ---- 1 · HERO : mission + countdown ---- */
+.hero-band{display:grid;grid-template-columns:1.45fr .95fr;gap:18px}
+.mission{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-md);padding:30px 34px;position:relative;overflow:hidden}
+.mission::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 240px at 100% 0%,rgba(193,89,31,.09),transparent 65%)}
+.mission>*{position:relative}
+.m-eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);display:inline-flex;align-items:center;gap:8px}
+.m-eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--terra);animation:pulseT 2s infinite}
+.mission h2{font-size:clamp(1.5rem,2.5vw,2.15rem);margin:12px 0 10px;max-width:560px}
+.mission h2 em{font-style:italic;color:var(--terra)}
+.mission p{color:var(--ink-soft);font-size:14.5px;max-width:540px}
+.m-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:999px;transition:.2s}
+.btn-primary{background:var(--terra);color:#fff;box-shadow:0 6px 18px rgba(193,89,31,.3)}
+.btn-primary:hover{background:var(--terra-d);transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--line);color:var(--ink-soft)}
+.btn-line:hover{border-color:var(--ink);color:var(--ink)}
+.m-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.m-meta span{font-size:11.5px;font-weight:600;background:var(--cream-2);border:1px solid var(--line);padding:5px 12px;border-radius:99px;color:var(--ink-soft)}
+.count-card{background:var(--g900);color:var(--cream);border-radius:22px;padding:26px 28px;position:relative;overflow:hidden;box-shadow:var(--sh-md);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.count-card::before{content:"";position:absolute;inset:0;background:radial-gradient(340px 220px at 90% -20%,rgba(217,164,65,.22),transparent 65%)}
+.count-card>*{position:relative}
+.cc-l{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l)}
+.cc-num{font-family:var(--serif);font-size:84px;font-weight:600;line-height:1;color:var(--cream)}
+.cc-num small{font-size:18px;color:#9db3a5;font-family:var(--sans);font-weight:500;margin-left:10px}
+.cc-sub{font-size:12.5px;color:#9db3a5;margin-top:-6px}
+.cc-boxes{display:flex;gap:8px}
+.cc-box{flex:1;text-align:center;background:var(--g800);border:1px solid var(--line-d);border-radius:10px;padding:7px 2px}
+.cc-box b{display:block;font-family:var(--serif);font-size:17px;font-variant-numeric:tabular-nums;color:var(--gold-l)}
+.cc-box span{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#8fa897}
+
+/* ---- 2 · START HERE tiles ---- */
+.start-here{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-sm);padding:26px 26px 24px}
+.sh-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.sh-eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:4px}
+.sh-head h3{font-size:21px}
+.sh-head>span{font-size:13px;color:var(--ink-soft)}
+.sh-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sh-tile{--acc:#c1591f;--acc-soft:rgba(193,89,31,.12);position:relative;display:flex;flex-direction:column;gap:7px;padding:20px 20px 18px;border:1.5px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden;transition:transform .28s cubic-bezier(.2,.7,.3,1.25),box-shadow .28s,border-color .28s}
+.sh-tile:hover{transform:translateY(-6px);border-color:var(--acc);box-shadow:0 16px 38px rgba(21,39,32,.16)}
+.sh-tile:active{transform:translateY(-2px) scale(.985)}
+.sh-tile::after{content:"";position:absolute;top:0;left:-75%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:left .7s ease;pointer-events:none}
+.sh-tile:hover::after{left:135%}
+.sh-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:2px}
+.sh-ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--acc-soft);color:var(--acc);animation:breathe 3.2s ease-in-out infinite}
+.sh-tile:nth-child(2) .sh-ic{animation-delay:.6s}
+.sh-tile:nth-child(3) .sh-ic{animation-delay:1.2s}
+.sh-tile:nth-child(4) .sh-ic{animation-delay:1.8s}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.sh-num{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--acc)}
+.sh-tile h4{font-family:var(--serif);font-size:19px;font-weight:600}
+.sh-tile>p{font-size:13px;color:var(--ink-soft)}
+.sh-vis{margin-top:4px;min-height:36px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.sh-cta{margin-top:8px;display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-size:13px;font-weight:700;color:var(--acc);background:var(--acc-soft);padding:9px 17px;border-radius:999px;transition:.25s}
+.sh-cta svg{transition:transform .25s}
+.sh-tile:hover .sh-cta{background:var(--acc);color:#fff;box-shadow:0 8px 20px rgba(21,39,32,.22)}
+.sh-tile:hover .sh-cta svg{transform:translateX(4px)}
+.pp{font-size:11.5px;font-weight:700;background:var(--cream-2);border:1.5px solid var(--line);border-radius:9px;padding:5px 10px;display:inline-flex;gap:7px;align-items:center;transition:transform .3s}
+.pp i{font-style:normal;font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:#8a6413;background:rgba(217,164,65,.18);padding:2px 7px;border-radius:99px}
+.sh-tile:hover .pp:nth-child(1){transform:translateY(-3px) rotate(-2deg)}
+.sh-tile:hover .pp:nth-child(2){transform:translateY(-1px)}
+.sh-tile:hover .pp:nth-child(3){transform:translateY(-3px) rotate(2deg)}
+.schip{font-size:11px;font-weight:600;border:1.5px solid var(--line);background:var(--cream-2);border-radius:99px;padding:5px 11px;transition:.25s}
+.sh-tile:hover .schip{border-color:var(--acc)}
+.schip.plus{background:var(--acc-soft);border-color:transparent;color:var(--acc);font-weight:800}
+.sh-timer{display:inline-flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--g800);background:var(--cream-2);border:1.5px solid var(--line);border-radius:12px;padding:5px 14px;font-variant-numeric:tabular-nums}
+.sh-timer .rec{width:8px;height:8px;border-radius:50%;background:var(--bad);animation:pulse 1.4s infinite}
+.sh-tmeta{font-size:11px;color:var(--ink-soft);font-weight:600}
+.sh-bars{display:flex;align-items:flex-end;gap:5px;height:34px}
+.sh-bars i{width:9px;border-radius:4px;background:var(--acc);opacity:.85;transform-origin:bottom;animation:eq 1.5s ease-in-out infinite alternate}
+@keyframes eq{from{transform:scaleY(.5)}to{transform:scaleY(1)}}
+
+/* ---- 3 · STATS ---- */
+.stats-panel{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh-sm);padding:22px 26px 20px}
+.sp-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.sp-head h3{font-size:17px}
+.sp-head span{font-size:12.5px;color:var(--ink-soft)}
+.dsp-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+.dsp{padding:14px 18px 12px;border-left:1px dashed var(--line)}
+.dsp:first-child{border-left:none;padding-left:4px}
+.dsp .v{font-family:var(--serif);font-size:32px;font-weight:600;color:var(--ink);line-height:1.1}
+.dsp .l{font-size:12.5px;font-weight:600;color:var(--ink);margin-top:2px}
+.dsp .h{font-size:11px;color:var(--ink-soft);margin-top:3px;line-height:1.45}
+.xp-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px dashed var(--line);margin-top:8px;padding-top:16px}
+.lvl{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700}
+.lvl .lv{background:var(--g800);color:var(--gold-l);font-family:var(--serif);font-size:13px;padding:4px 11px;border-radius:9px}
+.xp-track{flex:1;min-width:180px;height:10px;background:var(--cream-2);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+.xp-fill{height:100%;width:0;background:linear-gradient(90deg,var(--g600),var(--terra));border-radius:99px;transition:width .5s ease}
+.xp-note{font-size:12px;color:var(--ink-soft)}
+.xp-note b{color:var(--terra)}
+
+/* ---- 4 · JOURNEY + ACTIVITY ---- */
+.row3{display:grid;grid-template-columns:1.15fr 1.25fr;gap:18px}
+.journey{background:var(--g900);color:var(--cream);border-radius:20px;padding:26px 30px;box-shadow:var(--sh-md);position:relative;overflow:hidden}
+.journey::before{content:"";position:absolute;inset:0;background:radial-gradient(320px 200px at 100% 0%,rgba(217,164,65,.16),transparent 65%)}
+.journey>*{position:relative}
+.journey h3{font-size:18px;color:var(--cream)}
+.j-sub{font-size:12.5px;color:#9db3a5;margin-top:2px}
+.j-track{position:relative;margin:44px 8px 6px;height:8px}
+.j-line{position:absolute;inset:0;border-radius:8px;background:var(--line-d)}
+.j-fill{position:absolute;left:0;top:0;bottom:0;width:2%;border-radius:8px;background:linear-gradient(90deg,var(--terra),var(--gold));transition:width .5s ease}
+.j-dot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);background:var(--g900);border:4px solid var(--terra)}
+.j-dot.start{left:1%}
+.j-dot.end{left:99%;border-color:var(--gold)}
+.j-marker{position:absolute;left:2%;top:-34px;transform:translateX(-50%);display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-l);white-space:nowrap;transition:left .5s ease}
+.j-marker i{width:9px;height:9px;border-radius:50%;background:var(--gold);animation:pulse 1.8s infinite}
+.j-ends{display:flex;justify-content:space-between;font-size:12px;color:#9db3a5;margin-top:14px}
+.j-ends b{color:var(--cream);font-weight:600}
+.j-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.p-chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 13px;border-radius:999px;border:1px solid var(--line-d);color:#c3d2c6}
+.p-chip.gold{border-color:rgba(217,164,65,.5);color:var(--gold-l);background:rgba(217,164,65,.1)}
+
+.activity-card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh-sm);padding:24px 26px;display:flex;flex-direction:column}
+.activity-card h3{font-size:17px;margin-bottom:14px}
+.activity-list{display:flex;flex-direction:column;gap:10px;}
+.activity-item{display:flex;align-items:center;gap:14px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--cream);cursor:pointer;transition:transform .2s, border-color .2s;}
+.activity-item:hover{transform:translateX(3px);border-color:var(--terra);}
+.activity-icon{width:36px;height:36px;border-radius:10px;background:rgba(193,89,31,.1);color:var(--terra);display:grid;place-items:center;font-size:15px;flex-shrink:0;}
+.activity-content{flex:1;min-width:0;}
+.activity-title{font-size:14px;font-weight:600;color:var(--ink);}
+.activity-time{font-size:12px;color:var(--ink-soft);}
+.activity-arrow{color:var(--ink-soft);font-size:13px;}
+
+.empty{flex:1;border:2px dashed var(--line);border-radius:16px;background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;padding:34px 24px}
+.empty .e-ic{width:52px;height:52px;border-radius:16px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;color:var(--terra);box-shadow:var(--sh-sm);margin-bottom:4px}
+.empty b{font-family:var(--serif);font-size:17px;font-weight:600}
+.empty p{font-size:13px;color:var(--ink-soft);max-width:380px}
+
+/* ---- feedback ---- */
+.feedback{background:var(--cream-2);border:1px solid var(--line);border-radius:18px;padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.feedback .f-t b{font-family:var(--serif);font-size:16px;font-weight:600;display:block}
+.feedback .f-t p{font-size:13px;color:var(--ink-soft)}
+.f-btns{display:flex;gap:10px}
+.f-thanks{font-size:14px;font-weight:600;color:var(--ok);display:flex;align-items:center;gap:9px}
+
+/* ============ PAYWALL MODAL ============ */
 .paywall-overlay {
-  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-  background: rgba(250, 249, 246, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  position: fixed; inset: 0; width: 100vw; height: 100vh;
+  background: rgba(10, 36, 27, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 9999;
-  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
-  overflow-y: auto; padding: 40px 20px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 24px;
   opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
 }
 .paywall-overlay.active {
   opacity: 1; pointer-events: all;
 }
 .paywall-card {
-  background: var(--white);
+  background: var(--card);
+  border: 1px solid var(--line);
   border-radius: 24px; padding: 40px;
-  max-width: 500px; width: 90%;
-  text-align: center; margin: auto;
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  max-width: 480px; width: 100%;
+  text-align: center;
+  box-shadow: var(--sh-md);
   transform: translateY(20px); transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
 }
 .paywall-overlay.active .paywall-card {
   transform: translateY(0);
 }
-.paywall-icon {
-  font-size: 3rem; color: var(--teal); margin-bottom: 20px;
+.paywall-badge {
+  display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  background: var(--gold); color: var(--g900); padding: 5px 14px; border-radius: 999px; margin-bottom: 16px;
 }
 .paywall-title {
-  font-size: 1.8rem; font-weight: 800; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.5px;
+  font-family: var(--serif); font-size: 1.8rem; font-weight: 600; color: var(--ink); margin-bottom: 8px;
 }
 .paywall-desc {
-  font-size: 1rem; color: var(--ink-3); margin-bottom: 24px; line-height: 1.6;
+  font-size: 14px; color: var(--ink-soft); margin-bottom: 24px; line-height: 1.5;
 }
+.paywall-price {
+  font-family: var(--serif); font-size: 2.8rem; font-weight: 600; color: var(--terra); line-height: 1; margin-bottom: 4px;
+}
+.paywall-price-sub { font-size: 12px; color: var(--ink-soft); margin-bottom: 22px; }
 .paywall-feats {
-  text-align: left; margin-bottom: 32px; display:flex; flex-direction: column; gap:12px;
+  text-align: left; margin-bottom: 26px; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px;
 }
-.paywall-feat {
-  display: flex; align-items: center; gap: 10px; font-size: 0.95rem; font-weight: 500; color: var(--ink-2);
+.paywall-feat { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 500; }
+.paywall-feat i { color: var(--ok); font-size: 14px; flex-shrink: 0; }
+
+.overlay{position:fixed;inset:0;background:rgba(10,36,27,.5);z-index:55;opacity:0;pointer-events:none;transition:.3s}
+.overlay.show{opacity:1;pointer-events:auto}
+
+@media(max-width:1180px){
+  .hero-band,.row3{grid-template-columns:1fr}
+  .dsp-grid{grid-template-columns:repeat(3,1fr)}
+  .dsp{border-left:none;padding-left:4px}
 }
-.paywall-feat i { color: var(--teal); }
-
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-
-body {
-  font-family:'Plus Jakarta Sans', sans-serif;
-  background:var(--stone);
-  color:var(--ink);
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
+@media(max-width:960px){
+  .sidebar{transform:translateX(-100%)}
+  .sidebar.open{transform:none;box-shadow:0 0 60px rgba(0,0,0,.4)}
+  .main{margin-left:0}
+  .burger{display:flex}
+  .topbar{padding:16px 20px}
+  .content{padding:22px 20px 40px}
 }
-
-button:focus-visible, a:focus-visible {
-  outline: 2px solid var(--teal);
-  outline-offset: 2px;
+@media(max-width:640px){
+  .sh-grid{grid-template-columns:1fr}
+  .dsp-grid{grid-template-columns:1fr 1fr}
+  .cc-num{font-size:64px}
+  .top-right{justify-content:flex-start}
 }
-
-nav {
-  position:fixed; top:0; left:0; right:0; z-index:100;
-  height:70px; display:flex; align-items:center; justify-content:space-between;
-  padding:0 40px;
-  background:rgba(244,243,240,0.92);
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--stone-3);
-  box-shadow:var(--shadow);
-}
-
-.logo { font-size:1.4rem; font-weight:800; letter-spacing:-0.5px; color:var(--ink); text-decoration:none; }
-.logo span { color:var(--teal); }
-
-.nav-links { display:flex; gap:8px; align-items:center; }
-.nav-link { padding:10px 20px; border-radius:10px; text-decoration:none; color:var(--ink-3); font-weight:500; font-size:0.9rem; transition:all 0.3s ease; }
-.nav-link:hover, .nav-link.active { background:var(--teal); color:white; transform:translateY(-2px); }
-.nav-link i { margin-right:8px; }
-
-.nav-right { display:flex; gap:12px; align-items:center; }
-.user-avatar { width:42px; height:42px; border-radius:50%; background:var(--teal); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:1rem; cursor:pointer; transition:transform 0.3s; }
-.user-avatar:hover { transform:scale(1.1); }
-
-.btn-primary {
-  padding:12px 24px; border-radius:12px; border:none;
-  background:var(--teal); color:white;
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:0.9rem; font-weight:600;
-  cursor:pointer; transition:all 0.3s ease; box-shadow:var(--shadow);
-}
-.btn-primary:hover { background:var(--teal-2); transform:translateY(-2px); box-shadow:var(--shadow-lg); }
-
-.btn-secondary {
-  padding:12px 24px; border-radius:12px; border:2px solid var(--stone-3);
-  background:var(--white); color:var(--ink-2);
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:0.9rem; font-weight:600;
-  cursor:pointer; transition:all 0.3s ease;
-}
-.btn-secondary:hover { border-color:var(--teal); color:var(--teal); }
-
-.dashboard-container {
-  padding: 120px 40px 60px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.welcome-section {
-  margin-bottom: 40px;
-  animation: fadeInUp 0.6s ease;
-}
-
-.welcome-title {
-  font-size: 2.5rem; font-weight: 800;
-  line-height: 1.1; letter-spacing: -1px; color: var(--ink);
-  margin-bottom: 12px;
-}
-.welcome-title .highlight { color: var(--teal); }
-
-.welcome-sub {
-  font-size: 1.1rem; font-weight: 400; color: var(--ink-3);
-  line-height: 1.6; max-width: 600px;
-}
-
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-bottom: 40px;
-}
-
-.stat-card {
-  background: var(--white);
-  border-radius: 20px;
-  padding: 28px;
-  box-shadow:var(--shadow);
-  transition:all 0.3s ease;
-  position:relative; overflow:hidden;
-  animation: fadeInUp 0.6s ease backwards;
-}
-.stat-card:nth-child(1) { animation-delay: 0.1s; }
-.stat-card:nth-child(2) { animation-delay: 0.2s; }
-.stat-card:nth-child(3) { animation-delay: 0.3s; }
-.stat-card:nth-child(4) { animation-delay: 0.4s; }
-
-.stat-card::before {
-  content:''; position:absolute; top:0; left:0; right:0; height:4px;
-  background:var(--gradient); transform:scaleX(0); transform-origin:left; transition:transform 0.3s ease;
-}
-.stat-card:hover::before { transform:scaleX(1); }
-.stat-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
-
-.stat-card.purple::before { background:var(--teal); }
-.stat-card.green::before { background:var(--teal-2); }
-.stat-card.orange::before { background:var(--amber); }
-.stat-card.blue::before { background:var(--teal); }
-
-.stat-icon {
-  width:50px; height:50px; border-radius:14px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:1.3rem; margin-bottom:16px;
-}
-.stat-card.purple .stat-icon { background:var(--teal-faint); color:var(--teal); }
-.stat-card.green .stat-icon { background:var(--teal-pale); color:var(--teal-2); }
-.stat-card.orange .stat-icon { background:var(--amber-pale); color:var(--amber); }
-.stat-card.blue .stat-icon { background:var(--teal-faint); color:var(--teal); }
-
-.stat-value {
-  font-size: 2.5rem; font-weight: 800;
-  color: var(--ink);
-  letter-spacing: -2px;
-  margin-bottom: 4px;
-  line-height:1;
-}
-
-.stat-label {
-  font-size: 0.85rem;
-  color: var(--ink-3);
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  text-transform:uppercase;
-}
-
-.stat-change {
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.stat-change.positive { color: var(--teal); }
-.stat-change.negative { color: var(--red); }
-
-.main-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 32px;
-  margin-bottom: 40px;
-}
-
-.section-card {
-  background: var(--white);
-  border-radius: 24px;
-  padding: 32px;
-  box-shadow:var(--shadow);
-  animation: fadeInUp 0.6s ease backwards;
-  animation-delay: 0.5s;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.section-title {
-  font-size: 1.3rem; font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.5px;
-}
-
-.section-subtitle {
-  font-size: 0.9rem; color: var(--ink-3);
-}
-
-.progress-card {
-  background: var(--teal-faint);
-  border: 2px solid rgba(13,148,136,0.2);
-  border-radius: 16px;
-  padding: 24px;
-  margin-bottom: 20px;
-}
-
-.progress-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.progress-title {
-  font-size: 1rem; font-weight: 600;
-  color: var(--ink);
-}
-
-.progress-value {
-  font-size: 1.5rem; font-weight: 800;
-  color: var(--teal);
-}
-
-.progress-bar {
-  height: 10px;
-  background: var(--stone-2);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 12px;
-}
-
-.progress-fill {
-  height: 100%;
-  background: var(--teal);
-  border-radius: 10px;
-  width: 0;
-  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.progress-meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  color: var(--ink-3);
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.action-card {
-  background: var(--white);
-  border: 2px solid var(--stone-3);
-  border-radius: 20px;
-  padding: 24px;
-  cursor: pointer;
-  transition:all 0.3s ease;
-  position:relative; overflow:hidden;
-  animation: fadeInUp 0.6s ease backwards;
-}
-.action-card:nth-child(1) { animation-delay: 0.6s; }
-.action-card:nth-child(2) { animation-delay: 0.7s; }
-.action-card:nth-child(3) { animation-delay: 0.8s; }
-.action-card:nth-child(4) { animation-delay: 0.9s; }
-
-.action-card::after {
-  content:''; position:absolute; top:0; left:0; right:0; bottom:0;
-  background:var(--teal); opacity:0; transition:opacity 0.3s ease;
-}
-.action-card:hover::after { opacity:0.05; }
-.action-card:hover { transform:translateY(-5px); border-color:var(--teal); box-shadow:var(--shadow-lg); }
-
-.action-card.featured {
-  background:var(--teal);
-  border:none;
-}
-.action-card.featured .action-icon { background:rgba(255,255,255,0.2); color:white; }
-.action-card.featured .action-title { color:white; }
-.action-card.featured .action-desc { color:rgba(255,255,255,0.8); }
-.action-card.featured .action-meta { color:rgba(255,255,255,0.9); }
-.action-card.featured::after { display:none; }
-
-.action-icon {
-  width:56px; height:56px; border-radius:16px;
-  background:var(--teal-faint);
-  display:flex; align-items:center; justify-content:center;
-  color:var(--teal); font-size:1.4rem;
-  margin-bottom:16px; transition:all 0.3s ease;
-}
-.action-card:hover .action-icon { transform:scale(1.1) rotate(5deg); }
-
-.action-title {
-  font-size: 1.1rem; font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 8px;
-  letter-spacing: -0.3px;
-}
-
-.action-desc {
-  font-size: 0.9rem;
-  color: var(--ink-3);
-  line-height: 1.5;
-  margin-bottom: 16px;
-}
-
-.action-meta {
-  font-size: 0.85rem;
-  color: var(--teal);
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  position:relative; z-index:1;
-}
-
-.activity-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.activity-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 16px;
-  background: var(--stone-2);
-  border-radius: 16px;
-  transition:all 0.3s ease;
-  animation: fadeInUp 0.6s ease backwards;
-}
-.activity-item:nth-child(1) { animation-delay: 0.6s; }
-.activity-item:nth-child(2) { animation-delay: 0.7s; }
-.activity-item:nth-child(3) { animation-delay: 0.8s; }
-.activity-item:hover { transform:translateX(5px); background:var(--teal-faint); }
-
-.activity-icon {
-  width:44px; height:44px; border-radius:12px;
-  background:var(--teal);
-  display:flex; align-items:center; justify-content:center;
-  color:white; font-size:1rem;
-  flex-shrink:0;
-}
-
-.activity-content { flex:1; }
-.activity-title { font-size:0.95rem; font-weight:600; color:var(--ink); margin-bottom:4px; }
-.activity-time { font-size:0.8rem; color:var(--ink-3); }
-.activity-arrow { color:var(--ink-3); transition:transform 0.3s; }
-.activity-item:hover .activity-arrow { transform:translateX(5px); color:var(--teal); }
-
-@keyframes fadeInUp {
-  from { opacity:0; transform:translateY(30px); }
-  to { opacity:1; transform:translateY(0); }
-}
-
-@media(max-width:1024px){
-  .stats-row { grid-template-columns: repeat(2, 1fr); }
-  .main-grid { grid-template-columns: 1fr; }
-  .cards-grid { grid-template-columns: 1fr; }
-}
-
-@media(max-width:768px){
-  nav { padding:0 20px; }
-  .nav-links { display:none; }
-  .dashboard-container { padding: 100px 20px 60px; }
-  .stats-row { grid-template-columns: 1fr; }
-  .welcome-title { font-size: 1.8rem; }
-}
-/* Feedback Modal */
-.feedback-modal-overlay {
-  position:fixed; top:0; left:0; right:0; bottom:0;
-  background:rgba(0,0,0,0.5); backdrop-filter:blur(4px);
-  z-index:999; display:none; align-items:center; justify-content:center;
-  opacity:0; transition:opacity 0.3s ease;
-}
-.feedback-modal-overlay.show { display:flex; opacity:1; }
-.feedback-modal {
-  background:var(--white); border-radius:20px; width:90%; max-width:440px;
-  padding:32px; box-shadow:var(--shadow-lg); text-align:center;
-  transform:translateY(20px); transition:transform 0.3s ease; position:relative;
-}
-.feedback-modal-overlay.show .feedback-modal { transform:translateY(0); }
-.feedback-close { position:absolute; top:16px; right:16px; background:none; border:none; font-size:1.2rem; color:var(--ink-3); cursor:pointer; }
-.feedback-title { font-size:1.4rem; font-weight:800; color:var(--ink); margin-bottom:8px; }
-.feedback-sub { font-size:0.9rem; color:var(--ink-3); margin-bottom:24px; line-height:1.5; }
-.feedback-stars { display:flex; justify-content:center; gap:8px; margin-bottom:20px; flex-direction:row-reverse; }
-.feedback-stars input { display:none; }
-.feedback-stars label { font-size:2.2rem; color:var(--stone-3); cursor:pointer; transition:color 0.2s; }
-.feedback-stars label:hover, .feedback-stars label:hover ~ label, .feedback-stars input:checked ~ label { color:var(--amber); }
-.feedback-comment { width:100%; border:2px solid var(--stone-3); border-radius:12px; padding:12px; font-family:inherit; font-size:0.9rem; resize:vertical; min-height:80px; margin-bottom:20px; background:transparent; color:var(--ink); }
-.feedback-comment:focus { outline:none; border-color:var(--teal); }
-.feedback-btns { display:flex; gap:12px; }
-.feedback-btns button { flex:1; }
 </style>
-<link rel="stylesheet" href="dark-mode.css">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="config.js"></script>
-<script src="supabase.js"></script>
-<script src="paywall.js"></script>
-<script src="auth-guard.js"></script>
-<script src="questions-data.js"></script>
 </head>
 <body>
 
-<!-- Paywall Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- ================= PAYWALL OVERLAY ================= -->
 <div class="paywall-overlay" id="paywallOverlay">
   <div class="paywall-card">
-    <div class="paywall-icon"><i class="fas fa-lock"></i></div>
-    <div class="paywall-title">Unlock ImatPath</div>
-    <div class="paywall-desc">Get unlimited access to all premium features and study materials until the day of your IMAT exam.</div>
+    <span class="paywall-badge">IMAT 2026 Full Pass</span>
+    <h2 class="paywall-title">Unlock Full Access</h2>
+    <p class="paywall-desc">Get instant unlimited access to the entire question bank, all 20 timed mock exams, and official IMAT past papers.</p>
+    
+    <div class="paywall-price">$10 <span style="font-size:16px;color:var(--ink-soft);font-family:var(--sans)">one-time</span></div>
+    <div class="paywall-price-sub">Lifetime access until your exam on September 29, 2026. No subscriptions.</div>
     
     <div class="paywall-feats">
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 2000+ IMAT-style questions & solutions</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 20 full timed mock exams</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Personalized AI IMAT Test</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> AI Tutor (powered by Gemini)</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Score predictions & analytics</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 2,000+ IMAT practice questions & explanations</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 20 full timed mock exams with official scoring</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Official 2017–2025 past papers with solutions</div>
+      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Complete Non-EU & EU application guide</div>
     </div>
-
-    <div id="paypal-button-container" style="margin-top: 20px;"></div>
+    
+    <!-- PayPal button container -->
+    <div id="paypal-button-container" style="min-height: 45px;"></div>
   </div>
 </div>
 
-<nav>
-  <a class="logo" href="index.html">Imat<span>Path</span></a>
-  <div class="nav-links">
-    <a href="dashboard.html" class="nav-link active"><i class="fas fa-th-large"></i> Dashboard</a>
-    <a href="question-bank.html" class="nav-link"><i class="fas fa-layer-group"></i> Question Bank</a>
-    <a href="mock-exam.html" class="nav-link"><i class="fas fa-stopwatch"></i> Mock Exams</a>
-    <a href="roadmap.html" class="nav-link"><i class="fas fa-route"></i> IMAT Past Papers</a>
-    <a href="analytics.html" class="nav-link"><i class="fas fa-chart-line"></i> Analytics</a>
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar" id="sidebar">
+  <a class="logo" href="index.html">Imat<em>Path</em></a>
+  <nav class="sb-nav">
+    <a class="active" href="dashboard.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+      Dashboard</a>
+    <a href="question-bank.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      Question Bank</a>
+    <a href="mock-exam.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg>
+      Mock Exams</a>
+    <a href="roadmap.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+      IMAT Past Papers</a>
+    <a href="analytics.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M8 17v-6M13 17V7M18 17v-4"/></svg>
+      Analytics</a>
+  </nav>
+  <div class="sb-spacer"></div>
+  
+  <!-- Access plan badge in sidebar -->
+  <div class="access-card" id="accessPlanCard" onclick="openPaywallModal()">
+    <span class="ac-l"><i id="accessPulse"></i><span id="accessPlanTitle">Premium Plan</span></span>
+    <b id="accessPlanStatus">Active until IMAT day</b>
+    <span id="accessPlanSub">September 29, 2026 · full access</span>
   </div>
-  <div class="nav-right">
-    <div class="user-avatar" id="userAvatar">U</div>
-    <button class="btn-secondary" onclick="window.ImatAuth ? window.ImatAuth.signOut() : (localStorage.removeItem('imatpath_user'), window.location.href='auth.html')">Log out</button>
+  
+  <div class="user-row">
+    <span class="avatar" id="userAvatar">U</span>
+    <div class="u-t">
+      <b id="userName">User</b>
+      <small>IMAT 2026 candidate</small>
+    </div>
+    <a class="logout" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+    </a>
   </div>
-</nav>
+</aside>
 
-<div class="dashboard-container">
-  <div class="welcome-section">
-    <h1 class="welcome-title">Welcome back, <span class="highlight" id="userName">User</span></h1>
-    <p class="welcome-sub">Your personalized IMAT preparation journey. Track your progress, practice with real questions, and ace the exam.</p>
-  </div>
-
-  <div class="stats-row">
-    <div class="stat-card purple">
-      <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
-      <div class="stat-value" id="questionsCompleted">0</div>
-      <div class="stat-label">Questions Completed</div>
-      <div class="stat-change positive"><i class="fas fa-fire"></i> Keep practicing!</div>
-    </div>
-    <div class="stat-card green">
-      <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
-      <div class="stat-value" id="mockExamsTaken">0</div>
-      <div class="stat-label">Mock Exams Taken</div>
-      <div class="stat-change positive"><i class="fas fa-check-circle"></i> Great job!</div>
-    </div>
-    <div class="stat-card orange">
-      <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
-      <div class="stat-value" id="accuracyRate">0<span>%</span></div>
-      <div class="stat-label">Accuracy Rate</div>
-      <div class="stat-change positive"><i class="fas fa-chart-line"></i> Aim for 100%!</div>
-    </div>
-    <div class="stat-card blue">
-      <div class="stat-icon"><i class="fas fa-calendar"></i></div>
-      <div class="stat-value" id="daysRemaining">0</div>
-      <div class="stat-label">Days Until IMAT</div>
-      <div class="stat-change"><i class="fas fa-clock"></i> Keep going!</div>
-    </div>
-  </div>
-
-  <!-- XP & Streak Row -->
-  <div class="stats-row" id="xpRow" style="margin-bottom:40px;">
-    <!-- Streak Card -->
-    <div class="stat-card" style="background:linear-gradient(135deg,#0D9488,#0F766E);border:none;animation-delay:0.45s;">
-      <div class="stat-icon" style="background:rgba(255,255,255,0.15);color:white;font-size:1.4rem;">🔥</div>
-      <div class="stat-value" id="streakValue" style="color:white;">0</div>
-      <div class="stat-label" style="color:rgba(255,255,255,0.75);">Day Streak</div>
-      <div class="stat-change" style="color:rgba(255,255,255,0.9);" id="streakMsg"><i class="fas fa-fire"></i> Keep it up!</div>
-    </div>
-    <!-- Longest Streak -->
-    <div class="stat-card orange" style="animation-delay:0.5s;">
-      <div class="stat-icon"><i class="fas fa-trophy"></i></div>
-      <div class="stat-value" id="longestStreakValue">0</div>
-      <div class="stat-label">Best Streak</div>
-      <div class="stat-change positive"><i class="fas fa-star"></i> Personal best</div>
-    </div>
-    <!-- Level Card -->
-    <div class="stat-card purple" style="animation-delay:0.55s;">
-      <div class="stat-icon"><i class="fas fa-bolt"></i></div>
-      <div class="stat-value" id="xpLevel" style="font-size:2rem;">Lv.1</div>
-      <div class="stat-label">XP Level</div>
-      <div id="xpLevelBar" style="margin-top:10px;">
-        <div style="height:6px;background:var(--stone-2);border-radius:3px;overflow:hidden;">
-          <div id="xpLevelFill" style="height:100%;background:var(--teal);border-radius:3px;width:0%;transition:width 1.2s cubic-bezier(0.4,0,0.2,1);"></div>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:4px;">
-          <span id="xpCurrent">0 XP</span><span id="xpToNext">100 to next</span>
-        </div>
+<!-- ================= MAIN ================= -->
+<div class="main">
+  <header class="topbar">
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div>
+        <h1>Welcome back, <span id="topUserName">User</span></h1>
+        <p>Your personalized IMAT preparation journey. Track your progress, practice with real questions, and ace the exam.</p>
       </div>
     </div>
-    <!-- Total XP Card -->
-    <div class="stat-card blue" style="animation-delay:0.6s;">
-      <div class="stat-icon"><i class="fas fa-star"></i></div>
-      <div class="stat-value" id="totalXp">0</div>
-      <div class="stat-label">Total XP</div>
-      <div class="stat-change positive"><i class="fas fa-arrow-up"></i> Keep earning!</div>
+    <div class="top-right">
+      <button class="nav-dark-toggle" id="navDarkToggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      <span class="date-chip" id="todayChip">—</span>
+      <span class="count-chip"><span class="fl"></span><b id="daysChip">31</b>&nbsp;days to IMAT</span>
     </div>
-  </div>
+  </header>
 
-    <div class="section-card">
-      <div class="section-header">
+  <div class="content">
+
+    <!-- 1 · HERO : mission + countdown -->
+    <section class="hero-band">
+      <div class="mission up d1">
+        <span class="m-eyebrow"><i></i>Today's mission</span>
+        <h2>Find out exactly where you stand — <em>in 15 minutes.</em></h2>
+        <p>Take a timed mock exam. You'll get your score calculated with the official IMAT formula, your accuracy by subject, and a clear picture of what to study first.</p>
+        <div class="m-btns">
+          <a class="btn btn-primary" href="mock-exam.html">Take a mock exam
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-line" href="question-bank.html">Or answer a few questions first</a>
+        </div>
+        <div class="m-meta"><span>Timed, like the real thing</span><span>+1.5 / −0.4 official scoring</span><span>Instant subject breakdown</span></div>
+      </div>
+      <div class="count-card up d2">
         <div>
-          <h2 class="section-title">Quick Actions</h2>
-          <p class="section-subtitle">Jump into your study session</p>
+          <div class="cc-l">Days until the IMAT</div>
+          <div class="cc-num"><span id="heroDays">31</span><small>days</small></div>
+          <div class="cc-sub">September 29, 2026 — make every day count.</div>
+        </div>
+        <div class="cc-boxes">
+          <div class="cc-box"><b id="cdD">--</b><span>days</span></div>
+          <div class="cc-box"><b id="cdH">--</b><span>hrs</span></div>
+          <div class="cc-box"><b id="cdM">--</b><span>min</span></div>
+          <div class="cc-box"><b id="cdS">--</b><span>sec</span></div>
         </div>
       </div>
-      <div class="cards-grid">
-          <div class="action-card" onclick="window.location.href='roadmap.html'">
-            <div class="action-icon"><i class="fas fa-file-alt"></i></div>
-            <div class="action-title">IMAT Past Papers</div>
-            <div class="action-desc">Practice with official past papers</div>
-            <div class="action-meta"><i class="fas fa-arrow-right"></i> Open Past Papers</div>
+    </section>
+
+    <!-- 2 · START HERE -->
+    <section class="start-here up d3">
+      <div class="sh-head">
+        <div>
+          <span class="sh-eyebrow">Your tools</span>
+          <h3>Start here</h3>
+        </div>
+        <span>Jump into your study session</span>
+      </div>
+      <div class="sh-grid">
+        <a class="sh-tile" style="--acc:#a97b1c;--acc-soft:rgba(217,164,65,.16)" href="roadmap.html">
+          <div class="sh-top">
+            <span class="sh-ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
+            <span class="sh-num">01</span>
           </div>
-        <div class="action-card" onclick="window.location.href='question-bank.html'">
-          <div class="action-icon"><i class="fas fa-layer-group"></i></div>
-          <div class="action-title">Question Bank</div>
-          <div class="action-desc">2,000+ IMAT-style questions</div>
-          <div class="action-meta"><i class="fas fa-arrow-right"></i> Start practicing</div>
+          <h4>IMAT Past Papers</h4>
+          <p>Practice with official past papers</p>
+          <div class="sh-vis">
+            <span class="pp">2025 <i>Official</i></span>
+            <span class="pp">2024 <i>Official</i></span>
+            <span class="pp">2023 <i>Official</i></span>
+          </div>
+          <span class="sh-cta">Open Past Papers
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="sh-tile" style="--acc:#c1591f;--acc-soft:rgba(193,89,31,.12)" href="question-bank.html">
+          <div class="sh-top">
+            <span class="sh-ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+            <span class="sh-num">02</span>
+          </div>
+          <h4>Question Bank</h4>
+          <p>2,000+ IMAT-style questions</p>
+          <div class="sh-vis">
+            <span class="schip">Biology</span>
+            <span class="schip">Chemistry</span>
+            <span class="schip">Physics</span>
+            <span class="schip">Math</span>
+            <span class="schip plus">+2,000</span>
+          </div>
+          <span class="sh-cta">Start practicing
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="sh-tile" style="--acc:#1e5b44;--acc-soft:rgba(30,91,68,.12)" href="mock-exam.html">
+          <div class="sh-top">
+            <span class="sh-ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg></span>
+            <span class="sh-num">03</span>
+          </div>
+          <h4>Mock Exams</h4>
+          <p>Full 100-minute timed simulations</p>
+          <div class="sh-vis">
+            <span class="sh-timer"><span class="rec"></span><span id="shTimer">1:40:00</span></span>
+            <span class="sh-tmeta">+1.5 / −0.4 official scoring</span>
+          </div>
+          <span class="sh-cta">Take exam
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="sh-tile" style="--acc:#557a63;--acc-soft:rgba(85,122,99,.14)" href="analytics.html">
+          <div class="sh-top">
+            <span class="sh-ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M8 17v-6M13 17V7M18 17v-4"/></svg></span>
+            <span class="sh-num">04</span>
+          </div>
+          <h4>Analytics</h4>
+          <p>Performance tracking &amp; insights</p>
+          <div class="sh-vis">
+            <div class="sh-bars">
+              <i style="height:14px;animation-delay:0s"></i>
+              <i style="height:22px;animation-delay:.15s"></i>
+              <i style="height:17px;animation-delay:.3s"></i>
+              <i style="height:27px;animation-delay:.45s"></i>
+              <i style="height:20px;animation-delay:.6s"></i>
+              <i style="height:30px;animation-delay:.75s"></i>
+            </div>
+            <span class="sh-tmeta">Accuracy by subject</span>
+          </div>
+          <span class="sh-cta">View stats
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 3 · STATS -->
+    <section class="stats-panel up d4">
+      <div class="sp-head">
+        <h3>Your stats</h3>
+        <span>Tracked live — every correct answer earns 10 XP.</span>
+      </div>
+      <div class="dsp-grid">
+        <div class="dsp">
+          <div class="v" id="statQuestions">—</div>
+          <div class="l">Questions Completed</div>
+          <div class="h">From 2,000+ pool</div>
         </div>
-        <div class="action-card" onclick="window.location.href='mock-exam.html'">
-          <div class="action-icon"><i class="fas fa-stopwatch"></i></div>
-          <div class="action-title">Mock Exams</div>
-          <div class="action-desc">Full 100-minute timed simulations</div>
-          <div class="action-meta"><i class="fas fa-arrow-right"></i> Take exam</div>
+        <div class="dsp">
+          <div class="v" id="statMocks">—</div>
+          <div class="l">Mock Exams Taken</div>
+          <div class="h">Full simulations</div>
         </div>
-        <div class="action-card" onclick="window.location.href='analytics.html'">
-          <div class="action-icon"><i class="fas fa-chart-line"></i></div>
-          <div class="action-title">Analytics</div>
-          <div class="action-desc">Performance tracking & insights</div>
-          <div class="action-meta"><i class="fas fa-arrow-right"></i> View stats</div>
+        <div class="dsp">
+          <div class="v" id="statAccuracy">—</div>
+          <div class="l">Accuracy Rate</div>
+          <div class="h">Overall performance</div>
         </div>
+        <div class="dsp">
+          <div class="v" id="statStreak">—</div>
+          <div class="l">Day Streak 🔥</div>
+          <div class="h">Consecutive study days</div>
+        </div>
+        <div class="dsp">
+          <div class="v" id="statBestStreak">—</div>
+          <div class="l">Best Streak</div>
+          <div class="h">Your all-time record</div>
+        </div>
+      </div>
+      <div class="xp-row">
+        <span class="lvl"><span class="lv" id="xpLevelBadge">Lv.1</span> XP Level</span>
+        <div class="xp-track"><div class="xp-fill" id="xpFillBar"></div></div>
+        <span class="xp-note"><b id="xpToNext">100 XP</b> to next level · Total: <span id="xpTotalVal">0</span> XP</span>
+      </div>
+    </section>
+
+    <!-- 4 · JOURNEY + ACTIVITY -->
+    <section class="row3">
+      <div class="journey up d5">
+        <h3>Your journey to IMAT 2026</h3>
+        <p class="j-sub">Overall progress — moves forward as you complete chapters and mocks.</p>
+        <div class="j-track">
+          <div class="j-line"></div>
+          <div class="j-fill" id="journeyFill"></div>
+          <div class="j-dot start"></div>
+          <div class="j-dot end"></div>
+          <div class="j-marker" id="journeyMarker"><i></i><span id="journeyText">Day 1 · 0%</span></div>
+        </div>
+        <div class="j-ends"><span><b>Today</b> · <span id="journeyToday">Aug 29</span></span><span><b>IMAT</b> · Sep 29, 2026</span></div>
+        <div class="j-chips">
+          <span class="p-chip gold" id="journeyPlanChip">Premium Plan</span>
+          <span class="p-chip"><span class="days-left-count">31</span> days left</span>
+          <span class="p-chip">Access until exam day</span>
+        </div>
+      </div>
+      <div class="activity-card up d6">
+        <h3>Recent activity</h3>
+        <div class="activity-list" id="activityList">
+          <div class="empty">
+            <span class="e-ic">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </span>
+            <b>No activity yet</b>
+            <p>Your journey starts with your first question — everything you complete will show up here.</p>
+            <a class="btn btn-primary" href="question-bank.html">Answer your first question</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- feedback -->
+    <div class="feedback up d7" id="feedback">
+      <div class="f-t">
+        <b>How is your experience?</b>
+        <p>You've been using ImatPath — we'd love to hear your thoughts to help us improve.</p>
+      </div>
+      <div class="f-btns">
+        <button class="btn btn-line" id="fbLater">Later</button>
+        <button class="btn btn-primary" id="fbSubmit">Submit feedback</button>
       </div>
     </div>
 
-    <div class="section-card">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Progress</h2>
-          <p class="section-subtitle">Your journey to IMAT 2026</p>
-        </div>
-      </div>
-      <div class="progress-card">
-        <div class="progress-header">
-          <div class="progress-title">Overall Progress</div>
-          <div class="progress-value" id="progressPercent">0%</div>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-        <div class="progress-meta">
-          <span>Started</span>
-          <span id="currentPlan">Free Plan</span>
-        </div>
-      </div>
-      <div class="activity-list" id="activityList">
-        <div style="padding: 20px; text-align: center; color: var(--ink-3); font-size: 0.9rem;">Loading activities...</div>
-      </div>
-    </div>
   </div>
 </div>
 
 <script src="xp-system.js"></script>
 <script>
-function checkAccess() {
-  const user = JSON.parse(localStorage.getItem('imatpath_user'));
-  if (!user) {
-    const defaultUser = { firstName: 'Guest', planSelected: true };
-    localStorage.setItem('imatpath_user', JSON.stringify(defaultUser));
-    return defaultUser;
-  }
-  return user;
-}
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const $$=s=>Array.from(document.querySelectorAll(s));
 
-function logout() {
-  localStorage.removeItem('imatpath_user');
-  window.location.href = 'index.html';
-}
-
-function updateDashboard() {
-  const user = checkAccess();
-  if (!user) return;
-
-  // We let auth-guard.js and supabase.js handle the Name and Avatar based on real DB data.
-
-  const planDisplay = user.is_premium ? 'Premium Plan' : 'Free Plan';
-  document.getElementById('currentPlan').textContent = planDisplay;
-
-  // Days until IMAT
-  const imatDate = new Date('2026-09-29');
-  const today = new Date();
-  const daysLeft = Math.ceil((imatDate - today) / (1000 * 60 * 60 * 24));
-  document.getElementById('daysRemaining').textContent = daysLeft;
-
-  // Fetch Mock Exams count
-  if (window.ImatAuth) {
-    window.ImatAuth.loadMockResults().then(results => {
-      document.getElementById('mockExamsTaken').textContent = results ? results.length : 0;
-    });
-  }
-
-  const qbStateRaw = localStorage.getItem('imatpath_qb');
-  let qbData = { revealed: {} };
-  if (qbStateRaw) qbData = JSON.parse(qbStateRaw);
-  
-  let totalRevealedOverall = Object.keys(qbData.revealed || {}).length;
-  // Estimate total questions around 2000 for the progress bar
-  const ESTIMATED_TOTAL_QUESTIONS = 2000;
-  
-  const progress = Math.min(100, Math.max(0, (totalRevealedOverall / ESTIMATED_TOTAL_QUESTIONS) * 100));
-  
-  document.getElementById('progressPercent').textContent = progress.toFixed(1) + '%';
-  setTimeout(() => {
-    document.getElementById('progressFill').style.width = progress + '%';
-  }, 300);
-
-  const qbState = localStorage.getItem('imatpath_qb');
-  if (qbState) {
-    const qb = JSON.parse(qbState);
-    let totalRevealed = Object.keys(qb.revealed || {}).length;
-    document.getElementById('questionsCompleted').textContent = totalRevealed;
-    
-    let correctCount = parseInt(localStorage.getItem('imatpath_qb_correct') || '0');
-    if (totalRevealed > 0) {
-      const accuracy = Math.round((correctCount / totalRevealed) * 100);
-      document.getElementById('accuracyRate').innerHTML = accuracy + '<span>%</span>';
-    }
-
-    // Find weak subject
-    window.weakSubject = null;
-    window.lowestAcc = 100;
-    if (typeof subjects !== 'undefined') {
-      subjects.forEach(sub => {
-        let total = 0, correct = 0;
-        sub.questions.forEach((q, i) => {
-          const k = sub.id + '-' + i;
-          if (qb.revealed && qb.revealed[k]) {
-            total++;
-            if (qb.answers && qb.answers[k] === q.correct) correct++;
-          }
-        });
-        if (total >= 5) {
-          const acc = (correct / total) * 100;
-          if (acc < window.lowestAcc) { window.lowestAcc = acc; window.weakSubject = sub; }
-        }
-      });
-    }
-  }
-
-  const mockState = localStorage.getItem('imatpath_mock');
-  if (mockState) {
-    const mock = JSON.parse(mockState);
-    const examsTaken = Object.keys(mock.results || {}).length;
-    document.getElementById('mockExamsTaken').textContent = examsTaken;
-  }
-}
-
-
-
-async function loadDashboardExtras() {
-  let recentsHtml = '';
-  if (window.ImatAuth) {
-    const mocks = await window.ImatAuth.loadMockResults();
-    if (mocks && mocks.length > 0) {
-      const recent = mocks.slice(0, 2);
-      recent.forEach(m => {
-        const date = new Date(m.taken_at).toLocaleDateString();
-        recentsHtml += `<div class="activity-item" onclick="window.location.href='mock-exam.html'">
-          <div class="activity-icon" style="background:var(--teal-faint);color:var(--teal);"><i class="fas fa-file-alt"></i></div>
-          <div class="activity-content">
-            <div class="activity-title">Mock Exam ${m.exam_id}</div>
-            <div class="activity-time">Score: ${m.score} &middot; ${date}</div>
-          </div>
-          <i class="fas fa-chevron-right activity-arrow"></i>
-        </div>`;
-      });
-    }
-  }
-  
-  if (!recentsHtml) {
-    recentsHtml = `<div class="activity-item" onclick="window.location.href='mock-exam.html'">
-          <div class="activity-icon"><i class="fas fa-play"></i></div>
-          <div class="activity-content">
-            <div class="activity-title">Start a mock exam</div>
-            <div class="activity-time">Test your knowledge under time pressure</div>
-          </div>
-          <i class="fas fa-chevron-right activity-arrow"></i>
-        </div>`;
-  }
-  
-  let focusHtml = '';
-  if (window.weakSubject) {
-    focusHtml = `<div class="activity-item" onclick="window.location.href='question-bank.html'">
-          <div class="activity-icon" style="background:var(--red-faint);color:var(--red);"><i class="fas fa-bullseye"></i></div>
-          <div class="activity-content">
-            <div class="activity-title">Recommended Focus: ${window.weakSubject.name}</div>
-            <div class="activity-time">Accuracy is low (${Math.round(window.lowestAcc)}%). Review recommended.</div>
-          </div>
-          <i class="fas fa-chevron-right activity-arrow"></i>
-        </div>`;
+/* ── Dark Mode Toggle & Sync ── */
+window.toggleDarkMode = function() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('imatpath_dark_mode', 'false');
   } else {
-    focusHtml = `<div class="activity-item" onclick="window.location.href='question-bank.html'">
-          <div class="activity-icon"><i class="fas fa-book-open"></i></div>
-          <div class="activity-content">
-            <div class="activity-title">Continue practicing</div>
-            <div class="activity-time">Pick up where you left off</div>
-          </div>
-          <i class="fas fa-chevron-right activity-arrow"></i>
-        </div>`;
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('imatpath_dark_mode', 'true');
   }
-  
-  document.getElementById('activityList').innerHTML = focusHtml + recentsHtml;
+  updateDarkIcon();
+};
+
+function updateDarkIcon() {
+  const btn = $('#navDarkToggle');
+  if (btn) {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  }
 }
+document.addEventListener('DOMContentLoaded', updateDarkIcon);
 
-document.addEventListener('DOMContentLoaded', function() {
-  updateDashboard();
-  loadDashboardExtras();
-  // Load XP data into dashboard
-  if (typeof XP !== 'undefined') {
-    const xpState = XP.getState();
-    document.getElementById('streakValue').textContent = xpState.streak;
-    document.getElementById('longestStreakValue').textContent = xpState.longestStreak;
-    document.getElementById('totalXp').textContent = xpState.xp.toLocaleString();
-
-    const lvl = XP.calcLevel(xpState.xp);
-    const curLvlXp = XP.xpForLevel(lvl);
-    const nextLvlXp = XP.xpForLevel(lvl + 1);
-    const pct = Math.min(100, ((xpState.xp - curLvlXp) / (nextLvlXp - curLvlXp)) * 100);
-
-    document.getElementById('xpLevel').textContent = 'Lv.' + lvl;
-    document.getElementById('xpCurrent').textContent = xpState.xp.toLocaleString() + ' XP';
-    document.getElementById('xpToNext').textContent = (nextLvlXp - xpState.xp) + ' to next';
-
-    // Streak message
-    if (xpState.streak >= 7) document.getElementById('streakMsg').innerHTML = '<i class="fas fa-fire"></i> On fire!';
-    else if (xpState.streak >= 3) document.getElementById('streakMsg').innerHTML = '<i class="fas fa-fire"></i> Great streak!';
-
-    setTimeout(() => {
-      document.getElementById('xpLevelFill').style.width = pct + '%';
-    }, 400);
+/* ── Logout Handler ── */
+window.handleLogout = async function(e) {
+  if (e) e.preventDefault();
+  if (window.ImatAuth) {
+    await window.ImatAuth.signOut();
+  } else {
+    localStorage.removeItem('imatpath_user');
+    window.location.href = 'auth.html';
   }
+};
 
-  // Feedback Trigger Logic
-  setTimeout(() => {
-    if (!window.ImatAuth) return;
-    window.ImatAuth.getUser().then(user => {
-      if (!user) return;
-      const firstLoginKey = 'imatpath_first_login_' + user.id;
-      const feedbackKey = 'imatpath_feedback_given_' + user.id;
-      
-      const firstLogin = localStorage.getItem(firstLoginKey);
-      const hasGiven = localStorage.getItem(feedbackKey);
-      
-      if (firstLogin && !hasGiven) {
-        // 60 minutes = 60 * 60 * 1000 = 3600000 ms
-        const elapsed = Date.now() - parseInt(firstLogin);
-        if (elapsed > 3600000) {
-          document.getElementById('feedbackModal').classList.add('show');
-        }
+/* ── Paywall Modal Triggers ── */
+window.openPaywallModal = async function() {
+  const user = window.ImatAuth ? await window.ImatAuth.getUser() : null;
+  const isPremium = user?.user_metadata?.is_premium === true;
+  if (!isPremium) {
+    const paywall = document.getElementById('paywallOverlay');
+    if (paywall) {
+      paywall.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      if (typeof renderPayPalButtons === 'function') {
+        const session = await window.ImatAuth.getSession();
+        renderPayPalButtons(session);
       }
-    });
-  }, 2000); // Check 2 seconds after dashboard load
+    }
+  }
+};
 
+// Close paywall on overlay click if outside card
+document.getElementById('paywallOverlay')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
 });
 
-function closeFeedback() {
-  document.getElementById('feedbackModal').classList.remove('show');
+/* ── Sidebar Mobile ── */
+const sb=$("#sidebar"), ov=$("#overlay");
+if ($("#burger")) {
+  $("#burger").addEventListener("click",function(){sb.classList.add("open");ov.classList.add("show");});
 }
-async function submitFeedbackForm() {
-  const ratingInput = document.querySelector('input[name="rating"]:checked');
-  const comment = document.getElementById('feedbackComment').value.trim();
+if (ov) {
+  ov.addEventListener("click",function(){sb.classList.remove("open");ov.classList.remove("show");});
+}
+
+/* ── Today's Date & Countdown ── */
+const todayDate = new Date();
+if ($("#todayChip")) {
+  $("#todayChip").textContent = todayDate.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
+}
+if ($("#journeyToday")) {
+  $("#journeyToday").textContent = todayDate.toLocaleDateString("en-US",{month:"short",day:"numeric"});
+}
+
+const exam = new Date("2026-09-29T09:00:00");
+const p2 = n => String(n).padStart(2,"0");
+
+function tickCountdown(){
+  const now = new Date();
+  const d = Math.max(0, exam - now);
+  const dd = Math.floor(d/864e5), hh = Math.floor(d/36e5)%24, mm = Math.floor(d/6e4)%60, ss = Math.floor(d/1e3)%60;
   
-  if (!ratingInput) {
-    alert('Please select a star rating first!');
-    return;
-  }
+  if ($("#heroDays")) $("#heroDays").textContent = dd;
+  if ($("#daysChip")) $("#daysChip").textContent = dd;
+  $$(".days-left-count").forEach(el => el.textContent = dd);
   
-  const rating = parseInt(ratingInput.value);
+  if ($("#cdD")) $("#cdD").textContent = p2(dd);
+  if ($("#cdH")) $("#cdH").textContent = p2(hh);
+  if ($("#cdM")) $("#cdM").textContent = p2(mm);
+  if ($("#cdS")) $("#cdS").textContent = p2(ss);
+}
+tickCountdown();
+setInterval(tickCountdown, 1000);
+
+/* ── Live Mock Timer in Tile 03 ── */
+let shSec = 6000;
+setInterval(function(){
+  shSec--; if (shSec < 0) shSec = 6000;
+  const h = Math.floor(shSec/3600), m = Math.floor(shSec/60)%60, s = shSec%60;
+  const el = $("#shTimer");
+  if (el) el.textContent = h + ":" + p2(m) + ":" + p2(s);
+}, 1000);
+
+/* ── Feedback Handlers ── */
+if ($("#fbLater")) {
+  $("#fbLater").addEventListener("click",function(){
+    const f=$("#feedback");
+    f.style.transition="opacity .3s,transform .3s"; f.style.opacity="0"; f.style.transform="translateY(8px)";
+    setTimeout(function(){f.style.display="none";},300);
+  });
+}
+if ($("#fbSubmit")) {
+  $("#fbSubmit").addEventListener("click", async function(){
+    const comment = prompt("Tell us your thoughts or feedback for ImatPath:");
+    if (comment && comment.trim()) {
+      if (window.ImatAuth) {
+        await window.ImatAuth.submitFeedback(5, comment.trim());
+      }
+      $("#feedback").innerHTML='<div class="f-thanks"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Thank you! Your feedback helps us make ImatPath better.</div>';
+    }
+  });
+}
+
+/* ── Live Data Population ── */
+async function loadLiveDashboardData() {
+  // 1. User details & plan status
   if (window.ImatAuth) {
-    await window.ImatAuth.submitFeedback(rating, comment);
-    window.ImatAuth.getUser().then(user => {
-      if(user) localStorage.setItem('imatpath_feedback_given_' + user.id, 'true');
-    });
+    const user = await window.ImatAuth.getUser();
+    if (user) {
+      let firstName = user?.user_metadata?.first_name || user?.user_metadata?.full_name || user?.user_metadata?.name || user?.email?.split('@')[0] || 'User';
+      if (firstName.includes(' ')) firstName = firstName.split(' ')[0];
+      const initial = firstName.charAt(0).toUpperCase();
+      
+      if ($('#userName')) $('#userName').textContent = firstName;
+      if ($('#topUserName')) $('#topUserName').textContent = firstName;
+      if ($('#userAvatar')) $('#userAvatar').textContent = initial;
+
+      const isPremium = user?.user_metadata?.is_premium === true;
+      if ($('#accessPlanTitle')) $('#accessPlanTitle').textContent = isPremium ? 'Premium Plan' : 'Free Plan';
+      if ($('#accessPlanStatus')) $('#accessPlanStatus').textContent = isPremium ? 'Active until IMAT day' : 'Upgrade for $10';
+      if ($('#accessPlanSub')) $('#accessPlanSub').textContent = isPremium ? 'September 29, 2026 · full access' : 'Click to unlock all questions & mocks';
+      if ($('#journeyPlanChip')) $('#journeyPlanChip').textContent = isPremium ? 'Premium Plan' : 'Free Plan';
+    }
   }
-  closeFeedback();
-  
-  // Show thank you toast
-  const t = document.createElement('div');
-  t.innerHTML = '<div style="position:fixed;bottom:30px;right:30px;background:var(--teal);color:white;padding:14px 22px;border-radius:12px;z-index:9999;box-shadow:0 10px 20px rgba(0,0,0,0.2);animation:fadeInUp 0.3s ease;"><i class="fas fa-heart"></i> Thank you for your feedback!</div>';
-  document.body.appendChild(t);
-  setTimeout(() => t.remove(), 4000);
+
+  // 2. Questions Completed & Accuracy
+  const qbRaw = localStorage.getItem('imatpath_qb');
+  let qbCount = 0;
+  if (qbRaw) {
+    try {
+      const qb = JSON.parse(qbRaw);
+      qbCount = Object.keys(qb.revealed || {}).length;
+    } catch(e) {}
+  }
+  if ($('#statQuestions')) $('#statQuestions').textContent = qbCount > 0 ? qbCount : '0';
+
+  const correctRaw = localStorage.getItem('imatpath_qb_correct');
+  let correctCount = parseInt(correctRaw || '0');
+  let accuracy = 0;
+  if (qbCount > 0) {
+    accuracy = Math.round((correctCount / qbCount) * 100);
+    if ($('#statAccuracy')) $('#statAccuracy').textContent = accuracy + '%';
+  } else {
+    if ($('#statAccuracy')) $('#statAccuracy').textContent = '—';
+  }
+
+  // 3. Mock Exams Taken
+  let mocksCount = 0;
+  let mockList = [];
+  if (window.ImatAuth) {
+    try {
+      mockList = await window.ImatAuth.loadMockResults() || [];
+      mocksCount = mockList.length;
+    } catch(e) {}
+  }
+  if (!mocksCount) {
+    const mockState = localStorage.getItem('imatpath_mock');
+    if (mockState) {
+      try {
+        const mock = JSON.parse(mockState);
+        mocksCount = Object.keys(mock.results || {}).length;
+      } catch(e) {}
+    }
+  }
+  if ($('#statMocks')) $('#statMocks').textContent = mocksCount > 0 ? mocksCount : '0';
+
+  // 4. XP & Streaks
+  if (typeof XP !== 'undefined') {
+    const xpState = XP.getState();
+    if ($('#statStreak')) $('#statStreak').textContent = xpState.streak > 0 ? xpState.streak : '0';
+    if ($('#statBestStreak')) $('#statBestStreak').textContent = xpState.longestStreak > 0 ? xpState.longestStreak : '0';
+    if ($('#xpLevelBadge')) $('#xpLevelBadge').textContent = 'Lv.' + xpState.level;
+    if ($('#xpTotalVal')) $('#xpTotalVal').textContent = xpState.xp;
+
+    const curLvlXp = XP.xpForLevel(xpState.level);
+    const nextLvlXp = XP.xpForLevel(xpState.level + 1);
+    const needed = nextLvlXp - xpState.xp;
+    if ($('#xpToNext')) $('#xpToNext').textContent = Math.max(0, needed) + ' XP';
+
+    const pct = Math.min(100, Math.max(0, ((xpState.xp - curLvlXp) / (nextLvlXp - curLvlXp)) * 100));
+    if ($('#xpFillBar')) $('#xpFillBar').style.width = pct + '%';
+  }
+
+  // 5. Journey progress
+  const ESTIMATED_TOTAL = 2000;
+  const journeyPct = Math.min(100, Math.max(2, Math.round((qbCount / ESTIMATED_TOTAL) * 100)));
+  if ($('#journeyFill')) $('#journeyFill').style.width = journeyPct + '%';
+  if ($('#journeyMarker')) {
+    $('#journeyMarker').style.left = journeyPct + '%';
+    if ($('#journeyText')) $('#journeyText').textContent = journeyPct + '% Progress';
+  }
+
+  // 6. Recent Activity List
+  if (mockList && mockList.length > 0) {
+    const actList = $('#activityList');
+    if (actList) {
+      let html = '';
+      mockList.slice(0, 3).forEach(m => {
+        const dateStr = new Date(m.taken_at).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+        html += `
+          <div class="activity-item" onclick="window.location.href='mock-exam.html'">
+            <div class="activity-icon"><i class="fas fa-file-alt"></i></div>
+            <div class="activity-content">
+              <div class="activity-title">Mock Exam ${m.exam_id || ''}</div>
+              <div class="activity-time">Score: ${m.score} / 90 &middot; ${dateStr}</div>
+            </div>
+            <i class="fas fa-chevron-right activity-arrow"></i>
+          </div>
+        `;
+      });
+      actList.innerHTML = html;
+    }
+  }
 }
+
+document.addEventListener('DOMContentLoaded', loadLiveDashboardData);
+window.addEventListener('load', loadLiveDashboardData);
+
+})();
 </script>
-<script src="dark-mode.js"></script>
-
-<div class="feedback-modal-overlay" id="feedbackModal">
-  <div class="feedback-modal">
-    <button class="feedback-close" onclick="closeFeedback()"><i class="fas fa-times"></i></button>
-    <div class="feedback-title">How is your experience?</div>
-    <div class="feedback-sub">You've been using ImatPath for a while! We'd love to hear your thoughts to help us improve.</div>
-    <div class="feedback-stars">
-      <input type="radio" id="star5" name="rating" value="5" /><label for="star5" class="fas fa-star"></label>
-      <input type="radio" id="star4" name="rating" value="4" /><label for="star4" class="fas fa-star"></label>
-      <input type="radio" id="star3" name="rating" value="3" /><label for="star3" class="fas fa-star"></label>
-      <input type="radio" id="star2" name="rating" value="2" /><label for="star2" class="fas fa-star"></label>
-      <input type="radio" id="star1" name="rating" value="1" /><label for="star1" class="fas fa-star"></label>
-    </div>
-    <textarea id="feedbackComment" class="feedback-comment" placeholder="Tell us what you like or what we can do better..."></textarea>
-    <div class="feedback-btns">
-      <button class="btn-secondary" onclick="closeFeedback()">Later</button>
-      <button class="btn-primary" onclick="submitFeedbackForm()">Submit</button>
-    </div>
-  </div>
-</div>
-
 </body>
 </html>
-
-

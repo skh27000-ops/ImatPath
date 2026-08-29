@@ -43,6 +43,9 @@ const XP = (function () {
 
   function saveState(s) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
+    if (window.ImatAuth && typeof window.ImatAuth.saveXPProgress === 'function') {
+      window.ImatAuth.saveXPProgress(s).catch(e => console.warn('Background XP sync failed', e));
+    }
   }
 
   // ── Streak logic ─────────────────────────────────────────
