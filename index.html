@@ -282,18 +282,23 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:14px 0 16px}
 .gmini .box{width:17px;height:17px;border-radius:5px;background:var(--ok);color:#fff;display:grid;place-items:center;font-size:10px;flex:none}
 .gmini .box.empty{background:transparent;border:2px solid #c9bfa6}
 /* predictor */
-.pred-wrap{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:center;width:100%}
-.pred-left label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:10px}
-.pred-score{font-family:var(--serif);font-size:52px;font-weight:600;line-height:1;color:var(--g800)}
-.pred-score span{font-size:20px;color:var(--ink-soft)}
-input[type=range]{width:100%;margin:16px 0 8px;accent-color:var(--terra);height:6px}
-.pred-verdict{font-size:14px;font-weight:600;color:var(--terra)}
-.pred-chips{display:flex;gap:9px;flex-wrap:wrap}
-.u-chip{display:inline-flex;flex-direction:column;gap:2px;padding:11px 16px;border-radius:13px;border:1.5px solid var(--line);background:#fff;font-size:13px;font-weight:600;transition:.3s;opacity:.55}
-.u-chip small{font-size:11px;font-weight:500;color:var(--ink-soft)}
-.u-chip.hit{opacity:1;border-color:rgba(46,125,79,.55);background:rgba(46,125,79,.08)}
-.u-chip.hit small{color:var(--ok)}
-.pred-note{font-size:12px;color:var(--ink-soft);margin-top:14px}
+.pred-wrap{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:center;width:100%}
+.pred-left{background:var(--g900);color:var(--cream);padding:24px;border-radius:18px;position:relative;overflow:hidden;box-shadow:var(--sh-sm);display:flex;flex-direction:column;gap:4px}
+.pred-left label{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-l);display:block}
+.pred-score{font-family:var(--serif);font-size:50px;font-weight:600;line-height:1;color:var(--cream);margin:4px 0 8px}
+.pred-score span{font-size:18px;color:#9db3a5;font-family:var(--sans)}
+.pred-verdict{font-size:12.5px;font-weight:700;color:var(--gold-l);background:rgba(217,164,65,.15);padding:4px 10px;border-radius:99px;display:inline-block;width:fit-content;margin-bottom:8px}
+.pred-math{font-size:12.5px;color:#9db3a5;border-top:1px solid rgba(255,255,255,.1);padding-top:10px}
+.pred-math b{color:var(--cream)}
+.pred-controls{display:flex;flex-direction:column;gap:14px}
+.pred-ctrl-head{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;font-weight:600;color:var(--ink)}
+.pred-ctrl-head span{font-size:12px;color:var(--ink-soft);font-weight:500}
+.pred-ctrl-head b{color:var(--terra);font-family:var(--serif);font-size:16px}
+.pred-stats-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.pred-chip{font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--cream);border:1px solid var(--line);color:var(--ink-soft)}
+.pred-chip b{color:var(--ink)}
+.pred-note{font-size:12px;color:var(--ink-soft);margin-top:10px}
+input[type=range]{width:100%;margin:8px 0 4px;accent-color:var(--terra);height:6px}
 
 /* ============ NON-EU ============ */
 .noneu{background:var(--g900);color:var(--cream);overflow:hidden}
@@ -679,19 +684,39 @@ footer ul a:hover{color:var(--cream)}
       </div>
       <div class="b-card s6 reveal">
         <span class="b-tag">Score predictor</span>
-        <h3>Which universities are within reach?</h3>
-        <p>Based on your mock results and historical cutoff data, see where you stand — before you ever sit the real exam. Drag the slider to try it.</p>
+        <h3>Official IMAT Score Predictor</h3>
+        <p>Calculate your predicted test score out of 90.0 using the official formula (+1.5 per correct, −0.4 per incorrect, 0 for blank). Adjust the sliders to simulate your results.</p>
         <div class="b-ui">
           <div class="pred-wrap">
             <div class="pred-left">
-              <label>Your mock score</label>
-              <div class="pred-score"><span id="predVal">46</span><span> /90</span></div>
-              <input type="range" id="predRange" min="0" max="90" value="46" step="1">
-              <div class="pred-verdict" id="predVerdict"></div>
+              <label>Estimated IMAT Score</label>
+              <div class="pred-score"><span id="predVal">53.0</span><span> / 90.0</span></div>
+              <div class="pred-verdict" id="predVerdict">Competitive Tier</div>
+              <div class="pred-math" id="predMath">
+                <span><b>+57.0</b> earned</span> &middot; <span><b>-4.0</b> penalty</span>
+              </div>
             </div>
-            <div>
-              <div class="pred-chips" id="predChips"></div>
-              <p class="pred-note">Illustrative example based on recent years' cutoff data. Inside ImatPath, this updates automatically from your real mock results.</p>
+            <div class="pred-controls">
+              <div class="pred-ctrl-row">
+                <div class="pred-ctrl-head">
+                  <div>Questions Correct <span>(+1.5 pts each)</span></div>
+                  <b id="lblCorrect">38</b>
+                </div>
+                <input type="range" id="rngCorrect" min="0" max="60" value="38" step="1">
+              </div>
+              <div class="pred-ctrl-row">
+                <div class="pred-ctrl-head">
+                  <div>Questions Incorrect <span>(−0.4 penalty)</span></div>
+                  <b id="lblWrong">10</b>
+                </div>
+                <input type="range" id="rngWrong" min="0" max="60" value="10" step="1">
+              </div>
+              <div class="pred-stats-chips">
+                <span class="pred-chip"><b id="chipCorrect">38</b> Correct</span>
+                <span class="pred-chip"><b id="chipWrong">10</b> Incorrect</span>
+                <span class="pred-chip"><b id="chipBlank">12</b> Blank (0.0)</span>
+              </div>
+              <p class="pred-note">Inside ImatPath, your score is calculated live from your real mock exam results and question bank accuracy.</p>
             </div>
           </div>
         </div>
@@ -814,7 +839,7 @@ footer ul a:hover{color:var(--cream)}
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>2,000+ IMAT-like questions with full explanations</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>20 full mock exams with official scoring</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Progress analytics dashboard &amp; chapter tracker</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Score predictor based on historical cutoffs</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Official IMAT score predictor &amp; negative marking breakdown</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Application guide — EU &amp; non-EU tracks</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Private Telegram group</li>
       </ul>
@@ -1127,24 +1152,41 @@ $$("[data-gtrack]").forEach(b=>b.addEventListener("click",()=>{
 }));
 renderGuide();
 
-/* ---------- PREDICTOR ---------- */
-const UNIS=[
- {n:"Milan \u2014 Statale",c:52},{n:"Bologna",c:48},{n:"Padua",c:46},
- {n:"Turin",c:44},{n:"Naples \u2014 Federico II",c:38},{n:"Messina",c:30}
-];
-const predChips=$("#predChips");
-if(predChips){
-  predChips.innerHTML=UNIS.map((u,i)=>'<div class="u-chip" data-i="'+i+'">'+u.n+'<small>cutoff \u2248 '+u.c+'</small></div>').join("");
-  const rng=$("#predRange");
-  const upd=()=>{
-    const v=+rng.value; $("#predVal").textContent=v;
-    let hits=0;
-    $$("#predChips .u-chip").forEach(ch=>{
-      const hit=v>=UNIS[+ch.dataset.i].c; ch.classList.toggle("hit",hit); if(hit)hits++;
-    });
-    $("#predVerdict").textContent=hits===0?"No universities within reach yet \u2014 keep practicing.":hits+" universit"+(hits>1?"ies":"y")+" within reach at this score";
+/* ---------- SCORE PREDICTOR ---------- */
+const rngCorrect = $("#rngCorrect");
+const rngWrong = $("#rngWrong");
+if (rngCorrect && rngWrong) {
+  const updateScore = () => {
+    let c = +rngCorrect.value;
+    let w = +rngWrong.value;
+    if (c + w > 60) {
+      w = 60 - c;
+      rngWrong.value = w;
+    }
+    const b = Math.max(0, 60 - c - w);
+    const score = Math.max(0, Math.min(90, Math.round((c * 1.5 - w * 0.4) * 10) / 10));
+
+    $("#predVal").textContent = score.toFixed(1);
+    $("#lblCorrect").textContent = c;
+    $("#lblWrong").textContent = w;
+    $("#chipCorrect").textContent = c;
+    $("#chipWrong").textContent = w;
+    $("#chipBlank").textContent = b;
+
+    const earned = (c * 1.5).toFixed(1);
+    const penalty = (w * 0.4).toFixed(1);
+    $("#predMath").innerHTML = `<span><b>+${earned}</b> earned</span> &middot; <span><b>-${penalty}</b> penalty</span>`;
+
+    let verdict = "Developing Tier (Below 40.0)";
+    if (score >= 65) verdict = "Elite Tier (Top 5% Score)";
+    else if (score >= 55) verdict = "High Competitive Tier";
+    else if (score >= 42) verdict = "Competitive Tier (Passing Range)";
+    $("#predVerdict").textContent = verdict;
   };
-  rng.addEventListener("input",upd); upd();
+
+  rngCorrect.addEventListener("input", updateScore);
+  rngWrong.addEventListener("input", updateScore);
+  updateScore();
 }
 
 /* ---------- CHAPTER TRACKER ---------- */
