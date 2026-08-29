@@ -1682,5 +1682,847 @@ const pastPapersData = {
       "section": "Physics and Mathematics",
       "explanation": "Option A was originally the correct answer."
     }
-  ]
+  ],
+  "2023": [
+    {
+        "id": 1,
+        "question": "Preliminary global average temperatures taken so far in June are nearly 1C (1.8F) above levels previously recorded for the same month, going back to 1979. While the month is not yet complete and may not set a new June record, climate scientists say it follows a pattern of strengthening global heating that could see this year named the hottest ever recorded, topping 2016.\nThe long-term warming conditions caused by the burning of fossil fuels will likely receive a further pulse of heat via El Niño, a naturally reoccurring phenomenon where sections of the Pacific Ocean heat up, typically causing temperatures to spike across the world.\nAccording to the text, which one of the following is true?",
+        "options": [
+            "The June temperature this year is consistent with an observed trend.",
+            "This year, June will be the hottest month on record since 1979.",
+            "Temperatures in June are not related to the El Niño phenomenon.",
+            "June 1979 was the hottest month to date.",
+            "The El Niño phenomenon limits the effects of burning fossil fuels."
+        ],
+        "correct": 0,
+        "section": "Reading Skills and Knowledge",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 2,
+        "question": "Which of the following pairs of character/book is wrong?",
+        "options": [
+            "Elizabeth Bennet - Little Women",
+            "Leopold Bloom - Ulysses",
+            "Edmond Dantès - The Count of Monte Cristo",
+            "Gregor Samsa - The Metamorphosis",
+            "Florentino Ariza - Love in the Time of Cholera"
+        ],
+        "correct": 0,
+        "section": "Reading Skills and Knowledge",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 3,
+        "question": "The work known as De Bello Gallico is:",
+        "options": [
+            "Julius Caesar's account of the Gallic war.",
+            "a painting by Eugène Delacroix.",
+            "a sculpture by Auguste Rodin.",
+            "an opera by Richard Wagner.",
+            "a collection of poems on the Gallic war by Horace."
+        ],
+        "correct": 0,
+        "section": "Reading Skills and Knowledge",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 4,
+        "question": "In a parliamentary system of government, the President of the Republic is",
+        "options": [
+            "Head of State but not Head of Government.",
+            "neither Head of State nor Head of Government.",
+            "Head of Government and Head of the High Council of the Judiciary.",
+            "Head of Government but not Head of State.",
+            "Head of State and Head of the High Council of the Judiciary."
+        ],
+        "correct": 0,
+        "section": "Reading Skills and Knowledge",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 5,
+        "question": "You have 1 pair of new-born rabbits (one male and one female) that can breed when they reach maturity. You also have 3 pairs of mature rabbits (3 males and 3 females) that can start breeding immediately. They follow these rules:\n• Each mature pair of rabbits produces one new pair of offspring (one male and one female) at the end of each month\n• Each offspring pair takes one month to mature\nHow many rabbits do you have at the end of the 3rd month?",
+        "options": [
+            "36",
+            "14",
+            "18",
+            "28",
+            "42"
+        ],
+        "correct": 0,
+        "section": "Logical Reasoning and Problem-Solving",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 6,
+        "question": "The half-life of a radioactive element is the time needed for half of the material to decay. You have a certain quantity of a mineral containing two radioactive elements X and Y, whose half-lives are 2 and 3 years, respectively. Also, no physical process can produce elements X or Y.\nIf today the ratio X:Y (mass/mass) is 8:1, what will it be after 6 years?",
+        "options": [
+            "4:1",
+            "1:1",
+            "2:1",
+            "16:1",
+            "32:1"
+        ],
+        "correct": 0,
+        "section": "Logical Reasoning and Problem-Solving",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 7,
+        "question": "You want to buy a sandwich from your favourite store but are on a strict diet, so the sandwich must satisfy these requirements:\n• protein content: at least 20 g\n• fat content: less than 10 g\n• energy: at least 1,300 kJ\nThese are the types of sandwich available:\n<table style=\"border-collapse: collapse; width: 100%; border: 1px solid var(--stone-3);\">\n  <thead>\n    <tr style=\"background-color: var(--stone-2);\">\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Type</th>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Energy (kJ)</th>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Proteins (g)</th>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Fats (g)</th>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Salt equiv (g)</th>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Price (€)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">Tuna</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1578</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">18</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">14</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1.4</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">7.20</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">Beef</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1526</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">22</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">9</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1.5</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">6.90</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">Chicken</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1337</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">23</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">8</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1.1</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">6.80</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">Vegetables</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1106</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">9</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">15</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1.2</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">6.50</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">Salmon</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1628</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">22</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">13</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">2.1</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">7.10</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">Ham</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1154</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">13</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">8</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1.8</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">6.60</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">Turkey</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1213</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">26</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">4</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">1.7</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px;\">6.70</td>\n    </tr>\n  </tbody>\n</table>\nWhat is the minimum that you can spend for your sandwich?",
+        "options": [
+            "6.80 €",
+            "6.70 €",
+            "6.90 €",
+            "6.60 €",
+            "7.10 €"
+        ],
+        "correct": 0,
+        "section": "Logical Reasoning and Problem-Solving",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 8,
+        "question": "Copernicus is the European Earth Observation Programme which was established in 1998 to monitor the many ecosystems of our planet. It uses a constellation of 6 'Sentinel' satellites as well as dozens of third party satellites to protect us from natural and manmade disasters. It collects and makes available accurate environmental data to address climate change, pollution, and deforestation, aiding evidence-based decision-making. Copernicus fuels scientific research and plays a pivotal role in tracing disease outbreaks, tracking marine pollution, determining the quality of air and water, studying ocean levels and evaluating the melting of the arctic polar ice cap. The Copernicus European Observation Programme provides enormous social, environmental and scientific benefits, and it should continue to be funded.\nWhich one of the following, if true, would most strengthen the argument above?",
+        "options": [
+            "The economic benefits derived from the Copernicus programme outweigh its costs.",
+            "Some of Copernicus' benefits can be provided by other means.",
+            "The Copernicus project requires international cooperation to be effective.",
+            "There are a number of similar projects run by other international agencies.",
+            "Social and scientific advances are of equal importance."
+        ],
+        "correct": 0,
+        "section": "Reading Skills and Knowledge",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 9,
+        "question": "There is a commonly held belief, known as the 'Matthew effect', that students who start with poor academic attainment early in school make less progress over time than their higher-achieving peers. But recent research has shed new light on this topic. A study examined patterns of growth in literacy and numeracy among more than 100,000 young people in Australia. Researchers tested pupils regularly between year 3 and year 9. They found that students who began with high achievement in reading and numeracy tests in year 3 were not making the amount of progress to year 9 of which they were capable. On the other hand, students starting with below average test scores made more progress from year 3 to year 9 than students starting above average. This compensatory growth pattern was seen in both reading and numeracy but was especially significant in reading.\nWhich one of the following can be drawn as a conclusion from the above passage?",
+        "options": [
+            "Early promise does not guarantee high achievement in the long-term.",
+            "Numerical skills are harder to improve than language skills.",
+            "Rates of improvement from a low base will always be more rapid than progress from a higher base.",
+            "The 'Matthew effect' is the result of low expectations by teachers.",
+            "It is easier to teach brighter students than those who are below average."
+        ],
+        "correct": 0,
+        "section": "Reading Skills and Knowledge",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 10,
+        "question": "Glucose can feed into the biochemical pathways noted in the options below. Each pathway generates a net yield of ATP molecules per molecule of glucose feeding into the pathway.\nRank the reactions listed below in order of the total number of net ATP molecules produced, ranked from largest to smallest?\n1. Ethyl alcohol fermentation of four molecules of glucose\n2. Lactic acid fermentation of six molecules of glucose\n3. The electron transport chain stage of cellular respiration following the metabolism of a single molecule of glucose through the glycolytic and citric acid cycle stages.\n4. Glycolysis of seven glucose molecules",
+        "options": [
+            "3-4-2-1",
+            "4-2-1-3",
+            "3-4-1-2",
+            "4-2-3-1",
+            "2-1-4-3"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 11,
+        "question": "Duchenne muscular dystrophy (DMD) is a genetic condition marked by the gradual deterioration of muscle tissue. Recent studies have revealed that DMD arises from specific changes in a vital protein called dystrophin, responsible for maintaining the integrity of muscle cells. The gene responsible for producing this protein follows an inheritance pattern known as X-linked recessive.\nWhich of the following statements is wrong according to the above?",
+        "options": [
+            "Women are more likely to suffer from DMD than men.",
+            "DMD is a sex-linked inherited disease.",
+            "The rate at which the mutated allele spreads is influenced by the rate at which the associated X chromosome spreads within the population.",
+            "To develop the condition, a woman must inherit two recessive alleles of this gene.",
+            "To develop the condition, a man must inherit one of the recessive alleles of this gene."
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 12,
+        "question": "In the table below, you can find the minimum, maximum and optimum pH values that are required for enzymes X, Y, Z, W, and Q to function.\n<table style=\"border-collapse: collapse; border: 1px solid var(--stone-3);\">\n  <thead>\n    <tr>\n      <th rowspan=\"2\" style=\"border: 1px solid var(--stone-3); padding: 4px;\">Enzymes</th>\n      <th colspan=\"3\" style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">pH value</th>\n    </tr>\n    <tr>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Minimum</th>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Optimum</th>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Maximum</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">X</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">6.4</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">7.1</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">8.2</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">Y</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">3.9</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">5.3</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">7.2</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">Z</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">4.0</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">6.2</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">8.5</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">W</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">8.0</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">9.1</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">12.1</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">Q</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">1.3</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">5.4</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">9.5</td>\n    </tr>\n  </tbody>\n</table>\nWhich of the pairs of enzymes listed below cannot function together in the same environment?",
+        "options": [
+            "Y and W",
+            "W and Q",
+            "X and Y",
+            "Y and Z",
+            "X and Z"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 13,
+        "question": "Which of the following is absent from the genome of a virus that utilises DNA as its primary molecule?",
+        "options": [
+            "Uracil",
+            "Deoxyribose",
+            "Adenine",
+            "Guanine",
+            "Thymine"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 14,
+        "question": "In which of the following events do hormones secreted by the adrenal gland and pancreas play a role together?\n1. Balancing the amount of calcium in the bone and blood.\n2. Accelerating sodium absorption in the renal tubules.\n3. Balancing the glucose level in the blood.",
+        "options": [
+            "3 only",
+            "1",
+            "1 and 2",
+            "1, 2, and 3",
+            "2 and 3"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 15,
+        "question": "Which of the following examples represent conditions regulated by homeostasis in the body?\n1. Blood glucose concentration\n2. Body temperature\n3. Water levels\n4. Body weight",
+        "options": [
+            "1, 2 and 3",
+            "1 only",
+            "1 and 2",
+            "1 and 4",
+            "4 only"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 16,
+        "question": "Which of the following structures in a plant cell are surrounded by a double membrane?",
+        "options": [
+            "Plastid, Mitochondria, Nucleus",
+            "Golgi Apparatus, Ribosome, Mitochondria",
+            "Plastid, Endoplasmic Reticulum, Vacuole",
+            "Nucleus, Plastid, Golgi Apparatus",
+            "Mitochondria, Vacuole, Golgi Apparatus"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 17,
+        "question": "Listed below are three different families with genotypes related to colour blindness which is an X-linked recessive disorder.\n<table style=\"border-collapse: collapse; border: 1px solid var(--stone-3);\">\n  <thead>\n    <tr>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Family</th>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Mother</th>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Father</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">1</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">X<sup>R</sup>X<sup>r</sup></td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">X<sup>R</sup>Y</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">2</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">X<sup>r</sup>X<sup>r</sup></td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">X<sup>R</sup>Y</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">3</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">X<sup>R</sup>X<sup>r</sup></td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">X<sup>r</sup>Y</td>\n    </tr>\n  </tbody>\n</table>\nAmong the families, which ones can have a colour-blind daughter?",
+        "options": [
+            "3",
+            "1",
+            "2",
+            "1 and 2",
+            "2 and 3"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 18,
+        "question": "Which of the following conditions is necessary for a mutation to play a role in the process of evolution?",
+        "options": [
+            "Occurrence in germ cells",
+            "Having a dominant mutation",
+            "Occurrence in body cells",
+            "Having a recessive mutation",
+            "Formation by the effect of X-rays"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 19,
+        "question": "Redox reactions play a vital role in many cellular processes. Which of the following statements and examples best describes redox reactions in living things?",
+        "options": [
+            "Redox reactions involve the transfer of electrons, where the molecule that gains electrons is reduced, and the molecule that loses electrons is oxidized.",
+            "Redox reactions involve the destruction of molecules, where the molecule that gains fragments is reduced, and the molecule that loses fragments is oxidized.",
+            "Redox reactions involve the formation of covalent bonds, where the molecule that gains bonds is reduced, and the molecule that loses bonds is oxidized.",
+            "Redox reactions involve the absorption of energy, where the molecule that gains energy is reduced, and the molecule that loses energy is oxidized.",
+            "Redox reactions involve the absorption of light, where the molecule that gains light is reduced, and the molecule that loses light is oxidized."
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 20,
+        "question": "Study the following table which shows the genotypes of individuals in a population for a specific genetic trait. The trait is determined by a single gene with two alleles, A and a.\n<table style=\"border-collapse: collapse; border: 1px solid var(--stone-3);\">\n  <thead>\n    <tr>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Individual</th>\n      <th style=\"border: 1px solid var(--stone-3); padding: 4px;\">Genotype</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">1</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">AA</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">2</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">Aa</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">3</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">Aa</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">4</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">aa</td>\n    </tr>\n    <tr>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">5</td>\n      <td style=\"border: 1px solid var(--stone-3); padding: 4px; text-align: center;\">AA</td>\n    </tr>\n  </tbody>\n</table>\nBased on the given data, what is the frequency of the A allele in this population?",
+        "options": [
+            "0.6",
+            "0.2",
+            "0.4",
+            "0.8",
+            "1.0"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 21,
+        "question": "Which of the following anatomical structures is responsible for regulating the circadian rhythm?",
+        "options": [
+            "Pineal gland",
+            "Thalamus",
+            "Corpus callosum",
+            "Amygdala",
+            "Hippocampus"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 22,
+        "question": "Photosynthesis is a vital process in which plants and some other organisms convert light energy into chemical energy. Which of the following represents the balanced equation for the overall reaction of photosynthesis?",
+        "options": [
+            "6CO<sub>2</sub> + 6H<sub>2</sub>O + energy &rarr; C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub>",
+            "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> &rarr; 6CO<sub>2</sub> + 6H<sub>2</sub>O + energy",
+            "6CO<sub>2</sub> + 6H<sub>2</sub>O &rarr; C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> + energy",
+            "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> + energy &rarr; 6CO<sub>2</sub> + 6H<sub>2</sub>O",
+            "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6CO<sub>2</sub> + energy &rarr; 12CO<sub>2</sub> + 6H<sub>2</sub>O"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 23,
+        "question": "What is the correct order of the following events that occur immediately after acetylcholine binds to postsynaptic receptors of a muscle fibre, causing the muscle to contract?\n1. Ca<sup>2+</sup> ions diffuse into the sarcoplasm.\n2. The muscle fibre membrane is depolarised.\n3. The myosin binding site on the actin filament is uncovered.",
+        "options": [
+            "2 - 1 - 3",
+            "2 - 3 - 1",
+            "1 - 2 - 3",
+            "1 - 3 - 2",
+            "3 - 2 - 1"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 24,
+        "question": "What percentage of the three base codons that can be made using the standard genetic code are stop codons?",
+        "options": [
+            "4.7%",
+            "7.8%",
+            "9.4%",
+            "14.1%",
+            "18.8%"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 25,
+        "question": "Which of the following statements accurately describes prokaryotic DNA?",
+        "options": [
+            "Prokaryotic DNA consists of circular chromosomes located within the cytoplasm.",
+            "Prokaryotic DNA is linear, with multiple chromosomes contained within a nuclear membrane.",
+            "Prokaryotic DNA is highly condensed and organized into chromatin fibers.",
+            "Prokaryotic DNA is associated with histone proteins and undergoes meiotic cell division during replication.",
+            "Prokaryotic DNA contains introns and exons within its coding regions."
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 26,
+        "question": "A fragment of double-stranded DNA molecule contains 12 phosphates and 2 adenines. Given this information, what is the total number of purine bases, deoxyribose sugars and hydrogen bonds respectively, present in the described DNA molecule?",
+        "options": [
+            "6, 12, 16",
+            "12, 24, 28",
+            "4, 12, 12",
+            "6, 16, 12",
+            "6, 12, 20"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 27,
+        "question": "Which of the following statements accurately describes the surface area-to-volume ratio and cell growth?",
+        "options": [
+            "The surface area-to-volume ratio decreases as the cell grows larger.",
+            "The surface area-to-volume ratio remains constant during cell growth.",
+            "The surface area-to-volume ratio increases as the cell grows larger.",
+            "The surface area-to-volume ratio varies randomly during cell growth.",
+            "The surface area-to-volume ratio is unrelated to cell growth."
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 28,
+        "question": "Which of the following statements regarding the Golgi apparatus is correct?",
+        "options": [
+            "The Golgi apparatus processes and packages proteins to be exported from the cell.",
+            "The Golgi apparatus processes lipid molecules as they enter the cell.",
+            "Before exiting the cell, the proteins packaged in the Golgi apparatus are transported to the nucleus for translation verification.",
+            "Lysosomes digest the vesicles released from the Golgi apparatus so the proteins can be released from the cell.",
+            "There is no Golgi apparatus in neuronal cells."
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 29,
+        "question": "In which reactions of glycolysis are isomerase enzymes involved?",
+        "options": [
+            "When glucose-6-phosphate is changed to fructose-6-phosphate.",
+            "During the phosphorylation of both glucose and fructose-6-phosphate.",
+            "In the steps in which dehydrogenase enzymes are involved.",
+            "When four enzyme-catalysed reactions convert each triose phosphate molecule to a molecule of pyruvate.",
+            "To convert fructose 1-6-diphosphate to glyceraldehyde 3-phosphate and dihydroxy-acetone phosphate."
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 30,
+        "question": "Given the polynucleotide sequence AUGCCGC, can you tell which is the 5' end?",
+        "options": [
+            "No, unless you know the position of the phosphate group, you cannot differentiate the 3' end from the 5' end.",
+            "No, you cannot tell without the sequence of the complementary strand.",
+            "Yes, the 5' end begins with the start codon AUG.",
+            "There is no difference between the 5' and 3' ends of a single strand of DNA.",
+            "Counting the number of hydrogen bonds between the nitrogenous bases provides sufficient information to determine the 5' end."
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 31,
+        "question": "Which statement or set of statements about oxidative phosphorylation is correct?\n1. Complex I of the electron transport chain transfers electrons from FADH<sub>2</sub> to coenzyme Q.\n2. ATP synthase utilises the energy of the proton gradient to catalyse the conversion of ADP to ATP.\n3. Oxygen serves as an electron acceptor in complex III.\n4. Complex IV receives electrons from NADH.",
+        "options": [
+            "2",
+            "1 and 2",
+            "3",
+            "2, 3 and 4",
+            "4"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 32,
+        "question": "The 19th century monk Gregor Johann Mendel conducted simple hybridisation experiments and established a series of laws of inheritance. Which of the points listed below accurately reflect Mendel's laws?\n1. Alternative forms of genetic characteristics can be inherited from parents.\n2. Specific heritable factors or traits are inherited independently of other heritable factors.\n3. Gametes are created by random segregation.\n4. If one allele is dominant over another allele, the phenotype reflects the dominant allele.\n5. Individuals with heritable traits more suited to the environment will have an increased chance of survival.",
+        "options": [
+            "1, 2, 3 and 4",
+            "1, 2 and 3",
+            "All the statements are correct",
+            "4 and 5",
+            "1 and 5"
+        ],
+        "correct": 0,
+        "section": "Biology",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 33,
+        "question": "A simple ion of element A can be represented:\n<sup>2x+4</sup><sub>x</sub>A<sup>2-</sup>\nHow many electrons are present in this ion?",
+        "options": [
+            "x+2",
+            "x",
+            "x-2",
+            "2x",
+            "2x+4"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 34,
+        "question": "A sample of n moles of an ideal gas is contained in a closed system of fixed volume V m<sup>3</sup> at pressure P Pa and temperature 27.0 °C.\nIf the gas is heated to 327.0 °C, what will be the pressure, in Pa, at this new temperature?\nAssume absolute zero is at -273.0 °C",
+        "options": [
+            "2P",
+            "P / 2",
+            "P",
+            "327 / 27 P",
+            "27 / 327 P"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 35,
+        "question": "A pH meter is used to test 0.1 mol L<sup>-1</sup> aqueous solutions of the following compounds:\n1. CH<sub>3</sub>COOH\n2. NaCl\n3. H<sub>2</sub>SO<sub>4</sub>\n4. Ba(OH)<sub>2</sub>\n5. HNO<sub>3</sub>\nWhich of the following correctly lists these solutions in order of increasing pH?",
+        "options": [
+            "3, 5, 1, 2, 4",
+            "3, 4, 1, 5, 2",
+            "4, 2, 1, 5, 3",
+            "2, 1, 4, 5, 3",
+            "5, 3, 1, 2, 4"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 36,
+        "question": "Which of the following compounds are structural isomers of hexanoic acid?\n1. [Image of propyl propanoate]\n2. [Image of cyclohexane-1,2-diol]\n3. [Image of an unsaturated diol]",
+        "options": [
+            "1, 2 and 3",
+            "1 only",
+            "3 only",
+            "1 and 2 only",
+            "2 and 3 only"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 37,
+        "question": "Consider the reaction:\nH<sub>2</sub>SO<sub>4</sub> + HNO<sub>3</sub> &rarr; HSO<sub>4</sub><sup>-</sup> + H<sub>2</sub>NO<sub>3</sub><sup>+</sup>\nWhich of the following terms describes the role of HNO<sub>3</sub> in this reaction?",
+        "options": [
+            "A base",
+            "An acid",
+            "An oxidising agent",
+            "A reducing agent",
+            "A catalyst"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 38,
+        "question": "Which one of the following is a gaseous compound (at room temperature and pressure) that exists as linear molecules and reacts with water to form an acidic solution?",
+        "options": [
+            "Carbon dioxide",
+            "Silicon dioxide",
+            "Nitrogen dioxide",
+            "Sulfur dioxide",
+            "Sulfur trioxide"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 39,
+        "question": "Which of the following statements about 1 kg of water is correct?",
+        "options": [
+            "Ice has a greater volume than liquid water as the particles are further apart",
+            "Liquid water has a greater volume than ice as the particles are further apart",
+            "Liquid water has a greater volume than ice as the particles have more kinetic energy",
+            "Liquid water and ice have the same volume, which explains why ice partially floats in water",
+            "Ice has a greater volume than liquid water as the particles have more kinetic energy"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 40,
+        "question": "At a given temperature, the K<sub>c</sub> value of a gaseous exothermic reaction is equal to 7 &times; 10<sup>-3</sup> dm<sup>3</sup> mol<sup>-1</sup>.\nWhich one of the following statements is correct?",
+        "options": [
+            "At a lower temperature the value of K<sub>c</sub> will increase",
+            "The position of equilibrium lies over to the right-hand side",
+            "There are more moles on the right-hand side of the equilibrium equation",
+            "An increase in pressure will increase the time taken to reach equilibrium",
+            "Addition of a suitable catalyst will increase the equilibrium yield obtained"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 41,
+        "question": "The structure of paracetamol is shown below:\n[Image of paracetamol structure]\nWhich one of the following functional groups is present in paracetamol?",
+        "options": [
+            "Amide",
+            "Amine",
+            "Carboxylic acid",
+            "Aldehyde",
+            "Ketone"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 42,
+        "question": "The formulae of the five most abundant substances in air are shown:\nN<sub>2</sub>    O<sub>2</sub>    Ar    CO<sub>2</sub>    H<sub>2</sub>O\nHow many of these five substances are elements and how many of these five substances are made of molecules?",
+        "options": [
+            "Elements = 3, molecules = 4",
+            "Elements = 1, molecules = 4",
+            "Elements = 1, molecules = 2",
+            "Elements = 3, molecules = 2",
+            "Elements = 5, molecules = 4"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 43,
+        "question": "Which of these elements has the highest first ionisation energy?",
+        "options": [
+            "Neon (Z = 10)",
+            "Lithium (Z = 3)",
+            "Sodium (Z = 11)",
+            "Argon (Z = 18)",
+            "Potassium (Z = 19)"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 44,
+        "question": "Which of these molecules has an overall dipole moment?",
+        "options": [
+            "PF<sub>3</sub>",
+            "BeF<sub>2</sub>",
+            "CF<sub>4</sub>",
+            "PF<sub>5</sub>",
+            "SF<sub>6</sub>"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 45,
+        "question": "This reaction is used in the extraction of titanium from its ore.\nTiO<sub>2</sub> + 2Cl<sub>2</sub> + 2C &rarr; TiCl<sub>4</sub> + 2CO\nWhich substance(s) is/are the reducing agent(s) in this reaction?",
+        "options": [
+            "C",
+            "TiO<sub>2</sub>",
+            "Cl<sub>2</sub>",
+            "C and Cl<sub>2</sub>",
+            "none of these substances - it is not a redox reaction"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 46,
+        "question": "Iron is made by reduction of iron oxide using carbon monoxide.\nFe<sub>2</sub>O<sub>3</sub> + 3CO &rarr; 2Fe + 3CO<sub>2</sub>\n53 g of iron is made in a reaction from 80 g of iron oxide.\nWhat is the percentage yield of iron in this reaction? (M<sub>r</sub> Fe<sub>2</sub>O<sub>3</sub> = 160, A<sub>r</sub> Fe = 56)",
+        "options": [
+            "(53 / 56) &times; 100",
+            "(53 / 80) &times; 100",
+            "(25 / 80) &times; 100",
+            "((53 / 56) / (80 / 160)) &times; 100",
+            "((25 / 112) / (80 / 160)) &times; 100"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 47,
+        "question": "Which of these is a weak, diprotic acid?",
+        "options": [
+            "HOOC-COOH",
+            "H<sub>2</sub>SO<sub>4</sub>",
+            "HCOOH",
+            "CH<sub>3</sub>COOH",
+            "CH<sub>3</sub>CH<sub>2</sub>COOH"
+        ],
+        "correct": 0,
+        "section": "Chemistry",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 48,
+        "question": "Consider this function, defined for every x >1 (where 'ln' indicates the natural logarithm):\nf(x) = 2ln(x) - 2ln(x - 1). Which of these is an expression for its inverse function f⁻¹(y)?",
+        "options": [
+            "e^(y/2) / (e^(y/2) - 1)  y > 0",
+            "e^(y/2) / (e^(y/2) - 1)  y > 1",
+            "1 / (e^(y/2) - 1)  y > 0",
+            "1 / (e^(y/2) - 1)  y > 1",
+            "1 / (e^(y/2) - 1)  y ≠ 0"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 49,
+        "question": "Find the set of real solutions of this inequation:\n2x² - 5x + 5 > 0",
+        "options": [
+            "R",
+            "Ø",
+            "(-∞, 1) U (2, +∞)",
+            "(1, 2)",
+            "[1, 2]"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 50,
+        "question": "The ratio of sugar to flour in a mixture is 1:5. After 1kg of sugar and 2kg of flour are added to the mixture, the ratio has changed to 2:5.\nA further 1kg of sugar and 2kg of flour are added to the mixture.\nWhat is the new ratio of sugar to flour?",
+        "options": [
+            "11:25",
+            "3:5",
+            "3:7",
+            "4:7",
+            "14:25"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 51,
+        "question": "Two standard six-sided dice numbered 1 to 6 are rolled. What is the probability that the product of the two numbers obtained is the square of a prime?",
+        "options": [
+            "5/36",
+            "3/36",
+            "4/36",
+            "6/36",
+            "7/36"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 52,
+        "question": "How many solutions are there in the range 0° ≤ x ≤ 360° to the equation\nsin^4( (x + 90°) / 10 ) = 1/16 ?",
+        "options": [
+            "1",
+            "2",
+            "4",
+            "20",
+            "40"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 53,
+        "question": "What is the complete set of values of x for which 100 - 99x ≤ 98 - 97x and 96 + 95x > 94 + 93x ?",
+        "options": [
+            "x ≥ 1",
+            "x > -1",
+            "x < 1",
+            "x ≤ -1 or x > 1",
+            "-1 < x ≤ 1"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 54,
+        "question": "What is the minimum distance of the circle given by the equation\nx² - 10x + y² + 12y + 57 = 0 from the coordinate axes?",
+        "options": [
+            "3",
+            "1",
+            "2",
+            "4",
+            "5"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 55,
+        "question": "The expression √((16^4 + 8^6) / (4^8 + 2^14)) simplifies to which of the following?",
+        "options": [
+            "2^4",
+            "2",
+            "(√2)^7",
+            "√(2^17)",
+            "2^14"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 56,
+        "question": "A point mass A with mass m moves at a constant speed v on a horizontal frictionless plane and collides with another point mass B with mass 2m that is at rest. The collision is elastic.\nAfter the collision, point mass A is moving with a speed vA and point mass B with a speed vB.\nWhat are vA and vB, in terms of v?",
+        "options": [
+            "vA = 1/3 v, vB = 2/3 v",
+            "vA = 2/3 v, vB = 1/3 v",
+            "vA = 1/2 v, vB = 1/3 v",
+            "vA = 1/3 v, vB = 1/2 v",
+            "vA = 1/2 v, vB = 1/2 v"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 57,
+        "question": "An ideal gas is trapped in a metal cylinder by a free-moving piston and is at equilibrium in a room at 25°C.\nThe piston is pulled slowly to the right so that the volume of the trapped gas increases isothermally. The piston is now fixed in position.\nThe metal cylinder is then placed in a location where thermal energy is transferred from the trapped gas until the pressure of the gas is halved.\nTo the nearest degree Celsius, what is the final temperature of the gas?",
+        "options": [
+            "-124°C",
+            "-149°C",
+            "25°C",
+            "50°C",
+            "13°C"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 58,
+        "question": "A metal jug of negligible thermal capacity contains a mass M of water at a temperature T1.\nA dry block of ice (specific latent heat of fusion = Lf) of mass m at 0 °C is dropped into the water (specific heat capacity = c) and begins to melt. At thermal equilibrium, there is no ice in the jug and the temperature of all the water is T2.\nThere is no thermal energy transfer between the atmosphere and the water or between the atmosphere and the ice.\nWhich expression is used to calculate m?",
+        "options": [
+            "Mc(T1 - T2) / (Lf + cT2)",
+            "Mc(T1 - T2) / Lf",
+            "McT1 / (Lf + cT2)",
+            "McT1 / Lf",
+            "Mc(T1 - T2) / (Lf + cT1)"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 59,
+        "question": "A vehicle travels east for 6km, then south for 8km without stopping. If the trip takes 15 minutes, what is the magnitude of the average velocity in km/h?",
+        "options": [
+            "40",
+            "20",
+            "8",
+            "14",
+            "56"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    },
+    {
+        "id": 60,
+        "question": "Two perfectly insulating spheres charged respectively with Q<sub>1</sub> and Q<sub>2</sub> and with a respective radius of R<sub>1</sub> and R<sub>2</sub> are placed in contact.<br>What will the charge on the sphere of radius R<sub>1</sub> now be?",
+        "options": [
+            "Q<sub>1</sub>",
+            "Q<sub>2</sub>",
+            "(Q<sub>1</sub>R<sub>1</sub> + Q<sub>2</sub>R<sub>2</sub>) / (R<sub>1</sub> + R<sub>2</sub>)",
+            "(Q<sub>1</sub>R<sub>1</sub><sup>2</sup> + Q<sub>2</sub>R<sub>2</sub><sup>2</sup>) / (R<sub>1</sub><sup>2</sup> + R<sub>2</sub><sup>2</sup>)",
+            "0"
+        ],
+        "correct": 0,
+        "section": "Physics and Mathematics",
+        "explanation": "Option A was originally the correct answer."
+    }
+]
 };
