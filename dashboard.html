@@ -18,7 +18,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="supabase.js"></script>
-<script src="paywall.js"></script>
 <script src="auth-guard.js"></script>
 
 <script>
@@ -257,53 +256,6 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacin
 .f-btns{display:flex;gap:10px}
 .f-thanks{font-size:14px;font-weight:600;color:var(--ok);display:flex;align-items:center;gap:9px}
 
-/* ============ PAYWALL MODAL ============ */
-.paywall-overlay {
-  position: fixed; inset: 0; width: 100vw; height: 100vh;
-  background: rgba(10, 36, 27, 0.82);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  z-index: 9999;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 24px;
-  opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
-}
-.paywall-overlay.active {
-  opacity: 1; pointer-events: all;
-}
-.paywall-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 24px; padding: 40px;
-  max-width: 480px; width: 100%;
-  text-align: center;
-  box-shadow: var(--sh-md);
-  transform: translateY(20px); transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  position: relative;
-}
-.paywall-overlay.active .paywall-card {
-  transform: translateY(0);
-}
-.paywall-badge {
-  display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-  background: var(--gold); color: var(--g900); padding: 5px 14px; border-radius: 999px; margin-bottom: 16px;
-}
-.paywall-title {
-  font-family: var(--serif); font-size: 1.8rem; font-weight: 600; color: var(--ink); margin-bottom: 8px;
-}
-.paywall-desc {
-  font-size: 14px; color: var(--ink-soft); margin-bottom: 24px; line-height: 1.5;
-}
-.paywall-price {
-  font-family: var(--serif); font-size: 2.8rem; font-weight: 600; color: var(--terra); line-height: 1; margin-bottom: 4px;
-}
-.paywall-price-sub { font-size: 12px; color: var(--ink-soft); margin-bottom: 22px; }
-.paywall-feats {
-  text-align: left; margin-bottom: 26px; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px;
-}
-.paywall-feat { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 500; }
-.paywall-feat i { color: var(--ok); font-size: 14px; flex-shrink: 0; }
-
 .overlay{position:fixed;inset:0;background:rgba(10,36,27,.5);z-index:55;opacity:0;pointer-events:none;transition:.3s}
 .overlay.show{opacity:1;pointer-events:auto}
 
@@ -332,28 +284,6 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacin
 
 <div class="overlay" id="overlay"></div>
 
-<!-- ================= PAYWALL OVERLAY ================= -->
-<div class="paywall-overlay" id="paywallOverlay">
-  <div class="paywall-card">
-    <span class="paywall-badge">IMAT 2026 Full Pass</span>
-    <h2 class="paywall-title">Unlock Full Access</h2>
-    <p class="paywall-desc">Get instant unlimited access to the entire question bank, all 20 timed mock exams, and official IMAT past papers.</p>
-    
-    <div class="paywall-price">$10 <span style="font-size:16px;color:var(--ink-soft);font-family:var(--sans)">one-time</span></div>
-    <div class="paywall-price-sub">Lifetime access until your exam on September 29, 2026. No subscriptions.</div>
-    
-    <div class="paywall-feats">
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 2,000+ IMAT practice questions & explanations</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> 20 full timed mock exams with official scoring</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Official 2017–2025 past papers with solutions</div>
-      <div class="paywall-feat"><i class="fas fa-check-circle"></i> Complete Non-EU & EU application guide</div>
-    </div>
-    
-    <!-- PayPal button container -->
-    <div id="paypal-button-container" style="min-height: 45px;"></div>
-  </div>
-</div>
-
 <!-- ================= SIDEBAR ================= -->
 <aside class="sidebar" id="sidebar">
   <a class="logo" href="index.html">Imat<em>Path</em></a>
@@ -380,10 +310,10 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacin
   <div class="sb-spacer"></div>
   
   <!-- Access plan badge in sidebar -->
-  <div class="access-card" id="accessPlanCard" onclick="openPaywallModal()">
-    <span class="ac-l"><i id="accessPulse"></i><span id="accessPlanTitle">Premium Plan</span></span>
-    <b id="accessPlanStatus">Active until IMAT day</b>
-    <span id="accessPlanSub">September 29, 2026 · full access</span>
+  <div class="access-card" id="accessPlanCard">
+    <span class="ac-l"><i id="accessPulse"></i><span id="accessPlanTitle">Free Plan</span></span>
+    <b id="accessPlanStatus">Full access</b>
+    <span id="accessPlanSub">All features included · no payment required</span>
   </div>
   
   <div class="user-row">
@@ -581,7 +511,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacin
         </div>
         <div class="j-ends"><span><b>Today</b> · <span id="journeyToday">Aug 29</span></span><span><b>IMAT</b> · Sep 29, 2026</span></div>
         <div class="j-chips">
-          <span class="p-chip gold" id="journeyPlanChip">Premium Plan</span>
+          <span class="p-chip gold" id="journeyPlanChip">Free Plan</span>
           <span class="p-chip"><span class="days-left-count">31</span> days left</span>
           <span class="p-chip">Access until exam day</span>
         </div>
@@ -674,31 +604,6 @@ window.handleLogout = async function(e) {
   }
 };
 
-/* ── Paywall Modal Triggers ── */
-window.openPaywallModal = async function() {
-  const user = window.ImatAuth ? await window.ImatAuth.getUser() : null;
-  const isPremium = user?.user_metadata?.is_premium === true;
-  if (!isPremium) {
-    const paywall = document.getElementById('paywallOverlay');
-    if (paywall) {
-      paywall.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      if (typeof renderPayPalButtons === 'function') {
-        const session = await window.ImatAuth.getSession();
-        renderPayPalButtons(session);
-      }
-    }
-  }
-};
-
-// Close paywall on overlay click if outside card
-document.getElementById('paywallOverlay')?.addEventListener('click', function(e) {
-  if (e.target === this) {
-    this.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-});
-
 /* ── Sidebar Mobile ── */
 const sb=$("#sidebar"), ov=$("#overlay");
 if ($("#burger")) {
@@ -780,30 +685,21 @@ async function loadLiveDashboardData() {
       if ($('#topUserName')) $('#topUserName').textContent = firstName;
       if ($('#userAvatar')) $('#userAvatar').textContent = initial;
 
-      const isPremium = user?.user_metadata?.is_premium === true;
-      if ($('#accessPlanTitle')) $('#accessPlanTitle').textContent = isPremium ? 'Premium Plan' : 'Free Plan';
-      if ($('#accessPlanStatus')) $('#accessPlanStatus').textContent = isPremium ? 'Active until IMAT day' : 'Upgrade for $10';
-      if ($('#accessPlanSub')) $('#accessPlanSub').textContent = isPremium ? 'September 29, 2026 · full access' : 'Click to unlock all questions & mocks';
-      if ($('#journeyPlanChip')) $('#journeyPlanChip').textContent = isPremium ? 'Premium Plan' : 'Free Plan';
+      if ($('#accessPlanTitle')) $('#accessPlanTitle').textContent = 'Free Plan';
+      if ($('#accessPlanStatus')) $('#accessPlanStatus').textContent = 'Full access';
+      if ($('#accessPlanSub')) $('#accessPlanSub').textContent = 'All features included · no payment required';
+      if ($('#journeyPlanChip')) $('#journeyPlanChip').textContent = 'Free Plan';
 
-      // Telegram VIP Card State
+      // Telegram Community Card
       const tgLink = window.ImatConfig?.TELEGRAM_GROUP_LINK || 'https://t.me/+2JUJEOZ6YzNhNzVk';
       const tgBtn = $('#tgActionBtn');
       const tgTag = $('#tgTagText');
       if (tgBtn && tgTag) {
-        if (isPremium) {
-          tgTag.textContent = 'VIP Member Access';
-          tgBtn.textContent = 'Join Telegram Group';
-          tgBtn.href = tgLink;
-          tgBtn.target = '_blank';
-          tgBtn.onclick = null;
-        } else {
-          tgTag.textContent = 'Premium Members Only';
-          tgBtn.textContent = 'Unlock with Premium';
-          tgBtn.href = 'javascript:void(0)';
-          tgBtn.target = '_self';
-          tgBtn.onclick = () => openPaywallModal();
-        }
+        tgTag.textContent = 'Community Access';
+        tgBtn.textContent = 'Join Telegram Group';
+        tgBtn.href = tgLink;
+        tgBtn.target = '_blank';
+        tgBtn.onclick = null;
       }
     }
   }

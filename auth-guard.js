@@ -19,22 +19,6 @@
   async function initNav() {
     window.ImatAuth.populateNav(session.user);
     
-    // PAYWALL CHECK
-    const isPremium = session.user.user_metadata && session.user.user_metadata.is_premium === true;
-    if (!isPremium) {
-      const paywall = document.getElementById('paywallOverlay');
-      if (paywall) {
-        paywall.classList.add('active');
-        // Prevent scrolling
-        document.body.style.overflow = 'hidden';
-        
-        // Render PayPal buttons if paywall.js is loaded
-        if (typeof renderPayPalButtons === 'function') {
-          renderPayPalButtons(session);
-        }
-      }
-    }
-
     // Migrate any existing localStorage data (once per user)
     window.ImatAuth.migrateLocalStorage();
 

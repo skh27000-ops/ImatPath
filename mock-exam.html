@@ -18,7 +18,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="supabase.js"></script>
-<script src="paywall.js"></script>
 <script src="auth-guard.js"></script>
 
 <script>
@@ -180,19 +179,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spa
 .bd-icon.fail{background:rgba(179,64,46,.15);color:var(--bad);}
 .bd-icon.skip{background:var(--cream-2);color:var(--ink-soft);}
 
-/* ============ PAYWALL MODAL ============ */
-.paywall-overlay {
-  position: fixed; inset: 0; width: 100vw; height: 100vh;
-  background: rgba(10, 36, 27, 0.82);
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 24px; opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
-}
-.paywall-overlay.active { opacity: 1; pointer-events: all; }
-.paywall-card {
-  background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 40px;
-  max-width: 480px; width: 100%; text-align: center; box-shadow: var(--sh-md);
-}
+
 
 .overlay{position:fixed;inset:0;background:rgba(10,36,27,.5);z-index:55;opacity:0;pointer-events:none;transition:.3s}
 .overlay.show{opacity:1;pointer-events:auto}
@@ -212,14 +199,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spa
 
 <div class="overlay" id="overlay"></div>
 
-<!-- ================= PAYWALL OVERLAY ================= -->
-<div class="paywall-overlay" id="paywallOverlay">
-  <div class="paywall-card">
-    <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:var(--g900);padding:5px 14px;border-radius:999px;margin-bottom:16px;">IMAT 2026 Full Pass</span>
-    <h2 style="font-family:var(--serif);font-size:1.8rem;margin-bottom:8px;">Unlock 20 Full Mocks</h2>
-    <p style="font-size:14px;color:var(--ink-soft);margin-bottom:24px;">Practice with 20 complete 100-minute timed mock exams with official IMAT scoring.</p>
-    <div id="paypal-button-container" style="min-height: 45px;"></div>
-  </div>
+
 </div>
 
 <!-- ================= SIDEBAR ================= -->
@@ -247,10 +227,10 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spa
   </nav>
   <div class="sb-spacer"></div>
   
-  <div class="access-card" id="accessPlanCard" onclick="openPaywallModal()">
-    <span class="ac-l"><i></i><span id="accessPlanTitle">Premium Access</span></span>
-    <b id="accessPlanStatus">Active until exam day</b>
-    <span id="accessPlanSub">September 29, 2026 · full access</span>
+  <div class="access-card" id="accessPlanCard" onclick="window.location.href='dashboard.html'">
+    <span class="ac-l"><i></i><span id="accessPlanTitle">Free Plan</span></span>
+    <b id="accessPlanStatus">Full access</b>
+    <span id="accessPlanSub">All features included · no payment required</span>
   </div>
   
   <div class="user-row">

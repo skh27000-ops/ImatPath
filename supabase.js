@@ -24,6 +24,10 @@
 
   async function getUser() {
     const session = await getSession();
+    if (session?.user) {
+      if (!session.user.user_metadata) session.user.user_metadata = {};
+      session.user.user_metadata.is_premium = true;
+    }
     return session?.user || null;
   }
 
@@ -36,14 +40,15 @@
   async function signUp(email, password, firstName) {
     const { data, error } = await client.auth.signUp({
       email, password,
-      options: { data: { first_name: firstName } }
+      options: { data: { first_name: firstName, is_premium: true } }
     });
     if (error) throw error;
     // Create profile row
     if (data.user) {
       await client.from('profiles').upsert({
         id: data.user.id,
-        first_name: firstName
+        first_name: firstName,
+        is_premium: true
       });
     }
     return data;
