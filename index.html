@@ -421,6 +421,15 @@ footer ul{list-style:none;display:grid;gap:10px}
 footer ul a{transition:color .2s;font-size:13.5px}
 footer ul a:hover{color:var(--cream)}
 .foot-bottom{border-top:1px solid #12352a;padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+.foot-social{display:flex;align-items:center;gap:12px;margin-top:18px}
+.social-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(246,241,230,.08);border:1px solid #1c4a39;color:var(--cream);font-size:16px;transition:all .25s ease;text-decoration:none}
+.social-btn:hover{background:var(--terra);border-color:var(--terra);color:#fff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(193,89,31,.35)}
+.nav-social{display:flex;align-items:center;gap:8px}
+.nav-social-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:var(--ink-soft);border:1px solid var(--line);background:var(--card);font-size:15px;transition:all .2s ease;text-decoration:none}
+.nav-social-btn:hover{color:var(--terra);border-color:var(--terra);background:#fff;transform:translateY(-1px);box-shadow:0 2px 8px rgba(21,39,32,.08)}
+.mobile-social{display:flex;gap:12px;padding:12px 4px 6px;border-bottom:1px solid var(--line)}
+.mobile-social a{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--ink-soft);border:1px solid var(--line);padding:8px 14px;border-radius:99px;background:var(--card);text-decoration:none}
+.mobile-social a:hover{color:var(--terra);border-color:var(--terra)}
 
 /* ============ RESPONSIVE ============ */
 @media(max-width:1020px){
@@ -435,7 +444,7 @@ footer ul a:hover{color:var(--cream)}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:760px){
-  .nav-links,.nav-cta .nav-login,.nav-cta .btn{display:none}
+  .nav-links,.nav-cta .nav-login,.nav-cta .btn,.nav-cta .nav-social{display:none}
   .burger{display:flex}
   .pain-grid{grid-template-columns:1fr}
   .s2,.s3,.s6{grid-column:span 6}
@@ -464,6 +473,14 @@ footer ul a:hover{color:var(--cream)}
       <a href="#faq">FAQ</a>
     </div>
     <div class="nav-cta">
+      <div class="nav-social">
+        <a href="https://www.instagram.com/imatpath.app/" target="_blank" rel="noopener noreferrer" class="nav-social-btn" aria-label="Follow us on Instagram" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61590083533551" target="_blank" rel="noopener noreferrer" class="nav-social-btn" aria-label="Follow us on Facebook" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
       <a class="nav-login" href="auth.html">Log in</a>
       <a class="btn btn-primary" href="auth.html">Start for free</a>
       <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -475,6 +492,14 @@ footer ul a:hover{color:var(--cream)}
     <a href="#noneu">Non-EU Guide</a>
     <a href="#pricing">Free Access</a>
     <a href="#faq">FAQ</a>
+    <div class="mobile-social">
+      <a href="https://www.instagram.com/imatpath.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61590083533551" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+    </div>
     <a class="btn btn-primary" href="auth.html">Start for free</a>
   </div>
 </nav>
@@ -865,12 +890,23 @@ footer ul a:hover{color:var(--cream)}
       <div class="foot-brand">
         <a class="logo" href="#top">Imat<em>Path</em></a>
         <p>The structured way to prepare for the IMAT — study plan, question bank, mock exams and application guidance in one place.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/imatpath.app/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow us on Instagram" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61590083533551" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow us on Facebook" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
       </div>
       <div><h5>Product</h5><ul>
         <li><a href="#features">Features</a></li><li><a href="#platform">Platform</a></li><li><a href="#pricing">Free Access</a></li><li><a href="#noneu">Non-EU Guide</a></li>
       </ul></div>
-      <div><h5>Support</h5><ul>
-        <li><a href="#faq">FAQ</a></li><li><a href="mailto:imatpathpro@gmail.com">imatpathpro@gmail.com</a></li>
+      <div><h5>Support &amp; Community</h5><ul>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="mailto:imatpathpro@gmail.com">imatpathpro@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/imatpath.app/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" style="margin-right:7px"></i>Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61590083533551" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" style="margin-right:7px"></i>Facebook</a></li>
       </ul></div>
       <div><h5>Legal</h5><ul>
         <li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Contact</a></li>
