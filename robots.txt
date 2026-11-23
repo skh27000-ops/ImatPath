@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://imat-path.vercel.app/sitemap.xml
+Sitemap: https://imatpath.pages.dev/sitemap.xml
