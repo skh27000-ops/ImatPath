@@ -42930,40 +42930,40 @@ const subjects = [
             "solution": "Factorisation: 3x² − 9x − x + 3 = 0 → 3x(x-3) - 1(x-3) = 0 → (3x-1)(x-3) = 0. x = 1/3 or x = 3."
           },
           {
-            "question": "What is log₂(48) − log₂(3)?",
+            "question": "Evaluate \\(\\log_{5}750+\\log_{5}5-\\log_{5}6\\).",
             "options": [
-              "2",
               "3",
+              "8",
               "4",
-              "5",
-              "16"
+              "6",
+              "2"
             ],
             "correct": 2,
-            "solution": "log₂(48) − log₂(3) = log₂(48/3) = log₂(16) = 4, since 2⁴ = 16."
+            "solution": "Combine: \\(\\log_{5}\\dfrac{750\\times5}{6}=\\log_{5}625\\). Since 625 = 5^4, the value is 4."
           },
           {
-            "question": "Find the value of x if log₃(x) + log₃(x − 6) = 3.",
+            "question": "A radioactive sample has a half-life of 8 hours. It starts with 112 g and 7 g remain. How many hours have passed?",
             "options": [
-              "x = 9",
-              "x = 3",
-              "x = 27",
-              "x = 12",
-              "x = −3"
+              "24 hours",
+              "32 hours",
+              "40 hours",
+              "128 hours",
+              "4 hours"
             ],
-            "correct": 0,
-            "solution": "log₃(x(x−6)) = 3 → x(x−6) = 27 → x² − 6x − 27 = 0 → (x−9)(x+3) = 0. x = 9 or x = −3. Since log of a negative number is undefined, x = 9."
+            "correct": 1,
+            "solution": "The mass is halved each half-life: \\(112\\cdot(\\tfrac12)^{n}=7\\) gives \\(2^{n}=16=2^{4}\\), so n = 4 half-lives. Time = 4 × 8 = 32 hours."
           },
           {
-            "question": "A circle has equation x² + y² − 6x + 4y − 12 = 0. What are the centre and radius?",
+            "question": "From an external point P, a tangent PT and a secant meeting the circle at A (nearer) and B (farther) are drawn. If PA = 27 and AB = 81, what is the length of PT?",
             "options": [
-              "Centre (3, −2), radius 5",
-              "Centre (−3, 2), radius 5",
-              "Centre (3, −2), radius 25",
-              "Centre (6, −4), radius 5",
-              "Centre (3, −2), radius √37"
+              "68",
+              "54",
+              "81",
+              "108",
+              "55"
             ],
-            "correct": 0,
-            "solution": "Complete the square: (x−3)² − 9 + (y+2)² − 4 − 12 = 0 → (x−3)² + (y+2)² = 25. Centre = (3, −2), radius = √25 = 5."
+            "correct": 1,
+            "solution": "Tangent–secant theorem: \\(PT^2=PA\\cdot PB\\), where \\(PB=PA+AB=27+81=108\\). So \\(PT^2=27\\times108=2916\\) and \\(PT=54\\)."
           },
           {
             "question": "A function f(x) = 2x³ − 3x² − 12x + 5. Find the x-coordinates of the stationary points.",
@@ -42978,16 +42978,16 @@ const subjects = [
             "solution": "f'(x) = 6x² − 6x − 12 = 0. Dividing by 6: x² − x − 2 = 0 → (x−2)(x+1) = 0. x = 2 or x = −1."
           },
           {
-            "question": "Vectors a = (2, −1, 3) and b = (4, 2, −1). What is the dot product a · b?",
+            "question": "For which value of \\(k\\) is the polynomial \\(P(x)=x^{3}+5x^{2}+5x+k\\) divisible by \\(x-3\\)?",
             "options": [
-              "−7",
-              "−3",
-              "3",
-              "7",
-              "11"
+              "-84",
+              "-87",
+              "-90",
+              "90",
+              "87"
             ],
-            "correct": 2,
-            "solution": "a · b = (2)(4) + (−1)(2) + (3)(−1) = 8 − 2 − 3 = 3."
+            "correct": 1,
+            "solution": "By the factor theorem, P(3) = 0: \\(3^3+5\\cdot3^2+5\\cdot3+k=0\\), so \\(k=-87\\)."
           },
           {
             "question": "What is the derivative of f(x) = ln(x² + 1)?",
@@ -43002,28 +43002,28 @@ const subjects = [
             "solution": "Using chain rule: d/dx[ln(u)] = u'/u where u = x² + 1. u' = 2x. So f'(x) = 2x/(x² + 1)."
           },
           {
-            "question": "A regular hexagon has side length 4 cm. What is its area?",
+            "question": "In a regular polygon, each interior angle exceeds each exterior angle by 160°. How many sides does the polygon have?",
             "options": [
-              "24√3 cm²",
-              "36√3 cm²",
-              "48√3 cm²",
-              "64√3 cm²",
-              "96 cm²"
+              "36",
+              "18",
+              "2",
+              "38",
+              "34"
             ],
             "correct": 0,
-            "solution": "Area of regular hexagon = (3√3/2) × s² = (3√3/2) × 16 = 24√3 cm² ≈ 41.6 cm²."
+            "solution": "Interior = 180° − exterior, so \\(180-2e=160\\), giving \\(e=10\\)°. The exterior angles of a polygon add up to 360°, so \\(n=360/10=36\\)."
           },
           {
-            "question": "What is the gradient of the curve y = x³ − 3x + 2 at the point where x = 2?",
+            "question": "The lines \\(x+4y=10\\) and \\(2x-3y=-2\\) meet at a point P. The line through P perpendicular to \\(y=-3x-2\\) crosses the y-axis at which point?",
             "options": [
-              "5",
-              "7",
-              "9",
-              "11",
-              "13"
+              "\\((0,\\ \\dfrac{8}{3})\\)",
+              "\\((0,\\ -4)\\)",
+              "\\((0,\\ \\dfrac{4}{3})\\)",
+              "\\((0,\\ -\\dfrac{2}{3})\\)",
+              "\\((0,\\ 8)\\)"
             ],
             "correct": 2,
-            "solution": "dy/dx = 3x² − 3. At x = 2: gradient = 3(4) − 3 = 12 − 3 = 9."
+            "solution": "Solving the two equations gives \\(P=(2,\\ 2)\\). A line perpendicular to slope \\(-3\\) has slope \\(\\dfrac{1}{3}\\), so its equation is \\(y-(2)=\\dfrac{1}{3}(x-(2))\\). At \\(x=0\\): \\(y=2+-\\dfrac{2}{3}=\\dfrac{4}{3}\\)."
           },
           {
             "question": "What is the integral of x² dx?",
@@ -43038,28 +43038,28 @@ const subjects = [
             "solution": "∫x² dx = x³/3 + C. The power rule for integration: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C for n ≠ −1."
           },
           {
-            "question": "What is the value of 5! (5 factorial)?",
+            "question": "A committee of 5 people is chosen from 5 men and 3 women. In how many ways can it be chosen if it must contain at least 1 woman?",
             "options": [
-              "60",
-              "100",
-              "120",
-              "150",
-              "720"
+              "56",
+              "55",
+              "58",
+              "15",
+              "105"
             ],
-            "correct": 2,
-            "solution": "5! = 5 × 4 × 3 × 2 × 1 = 120."
+            "correct": 1,
+            "solution": "Add the cases by number of women: \\(\\binom{3}{1}\\binom{5}{4}=15\\) + \\(\\binom{3}{2}\\binom{5}{3}=30\\) + \\(\\binom{3}{3}\\binom{5}{2}=10\\) = 55. (Choosing 1 woman first and then anyone else over-counts committees with more women.)"
           },
           {
-            "question": "Solve for x: 2^(x+1) = 32",
+            "question": "A boat travels 855 km downstream in 45 hours, and the same 855 km back upstream in 57 hours. What is the speed of the river current?",
             "options": [
-              "2",
-              "3",
-              "4",
-              "5",
-              "6"
+              "2 km/h",
+              "12 km/h",
+              "3 km/h",
+              "8.4 km/h",
+              "4 km/h"
             ],
-            "correct": 2,
-            "solution": "32 = 2⁵. So 2^(x+1) = 2⁵ → x + 1 = 5 → x = 4."
+            "correct": 0,
+            "solution": "Downstream speed = 855/45 = 19 km/h; upstream speed = 855/57 = 15 km/h. The boat speed is the average (17 km/h) and the current is half the difference: (19 − 15)/2 = 2 km/h."
           },
           {
             "question": "What is the equation of a line passing through points (1, 2) and (3, 6)?",
@@ -43074,28 +43074,28 @@ const subjects = [
             "solution": "Slope m = (6-2)/(3-1) = 4/2 = 2. Using point (1,2): y - 2 = 2(x - 1) → y = 2x."
           },
           {
-            "question": "If log₁₀(x) = 3, what is the value of x?",
+            "question": "What is the sum of all real solutions of \\(4^{x}-6\\cdot2^{x}+8=0\\)?",
             "options": [
-              "30",
-              "100",
-              "300",
-              "1,000",
-              "10,000"
-            ],
-            "correct": 3,
-            "solution": "log₁₀(x) = 3 means 10³ = x. x = 1,000."
-          },
-          {
-            "question": "Simplify: (x³ − 8)/(x − 2)",
-            "options": [
-              "x² + 2x + 4",
-              "x² − 2x + 4",
-              "x² + 4x + 4",
-              "x² − 4",
-              "x² + 4"
+              "3",
+              "2",
+              "6",
+              "8",
+              "4"
             ],
             "correct": 0,
-            "solution": "x³ − 8 = (x − 2)(x² + 2x + 4). So (x³ − 8)/(x − 2) = x² + 2x + 4, for x ≠ 2."
+            "solution": "Put \\(t=2^{x}\\): \\(t^2-6t+8=0\\) factors as \\((t-4)(t-2)=0\\), so \\(2^{x}=4\\) or \\(2^{x}=2\\), i.e. \\(x=2\\) or \\(x=1\\). The sum is 3."
+          },
+          {
+            "question": "The roots of \\(x^2-5x+1=0\\) are \\(\\alpha\\) and \\(\\beta\\). Find the value of \\(\\alpha^2+\\beta^2\\).",
+            "options": [
+              "25",
+              "23",
+              "-23",
+              "27",
+              "21"
+            ],
+            "correct": 1,
+            "solution": "Vieta: \\(\\alpha+\\beta=5\\) and \\(\\alpha\\beta=1\\). Then \\(\\alpha^2+\\beta^2=(\\alpha+\\beta)^2-2\\alpha\\beta=25-2(1)=23\\)."
           },
           {
             "question": "Solve: |2x − 5| = 7",
@@ -43110,16 +43110,16 @@ const subjects = [
             "solution": "2x − 5 = 7 → 2x = 12 → x = 6. OR 2x − 5 = −7 → 2x = −2 → x = −1. Solutions: x = 6 or x = −1."
           },
           {
-            "question": "What is the gradient of the line passing through points (2, 3) and (6, 11)?",
+            "question": "What is the area of the triangle with vertices \\(A(-4,\\ -1)\\), \\(B(-1,\\ -3)\\) and \\(C(-6,\\ -5)\\)?",
             "options": [
-              "1",
-              "2",
-              "3",
-              "4",
-              "8"
+              "\\(16\\)",
+              "\\(20\\)",
+              "\\(8\\)",
+              "\\(9\\)",
+              "\\(10\\)"
             ],
-            "correct": 1,
-            "solution": "Gradient m = (y₂ − y₁)/(x₂ − x₁) = (11 − 3)/(6 − 2) = 8/4 = 2."
+            "correct": 2,
+            "solution": "Area = \\(\\tfrac12|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)|\\) = \\(\\tfrac12|-4(2)+(-1)(-4)+(-6)(2)|=\\tfrac12|-16|=8\\)."
           },
           {
             "question": "If \\(a + b = 5\\) and \\(ab = 6\\), what is \\(a^{3} + b^{3}\\)?",
@@ -43134,16 +43134,16 @@ const subjects = [
             "solution": "\\(a^{3} + b^{3} = (a + b)^{3} - 3ab(a + b) = 125 - 3 \\times 6 \\times 5 = 125 - 90 = 35\\). (Check: \\(a = 2\\), \\(b = 3\\) gives \\(8 + 27 = 35\\).)"
           },
           {
-            "question": "What is the equation of the circle with centre (−2, 3) and radius 4?",
+            "question": "Two chords AB and CD of a circle intersect at a point P inside the circle. If AP = 7, PB = 9 and CP = 21, what is the length of PD?",
             "options": [
-              "(x + 2)² + (y − 3)² = 4",
-              "(x − 2)² + (y + 3)² = 16",
-              "(x + 2)² + (y − 3)² = 16",
-              "(x − 2)² + (y + 3)² = 4",
-              "(x + 2)² + (y + 3)² = 16"
+              "3",
+              "189",
+              "-5",
+              "4",
+              "147"
             ],
-            "correct": 2,
-            "solution": "Circle equation: (x − h)² + (y − k)² = r² where (h, k) is centre. Centre (−2, 3), r = 4: (x + 2)² + (y − 3)² = 16."
+            "correct": 0,
+            "solution": "Intersecting chords theorem: \\(AP\\cdot PB=CP\\cdot PD\\). So \\(7\\times9=21\\cdot PD\\) and \\(PD=63/21=3\\)."
           },
           {
             "question": "If \\(x + \\dfrac{1}{x} = 3\\), what is \\(x^{3} + \\dfrac{1}{x^{3}}\\)?",
@@ -43158,28 +43158,28 @@ const subjects = [
             "solution": "Cube: \\(\\left(x + \\frac{1}{x}\\right)^{3} = x^{3} + \\frac{1}{x^{3}} + 3\\left(x + \\frac{1}{x}\\right)\\). So \\(27 = x^{3} + \\frac{1}{x^{3}} + 9\\) and \\(x^{3} + \\frac{1}{x^{3}} = 18\\)."
           },
           {
-            "question": "What is the value of log₁₀(1000)?",
+            "question": "A radioactive sample has a half-life of 3 hours. It starts with 640 g and 10 g remain. How many hours have passed?",
             "options": [
-              "1",
-              "2",
-              "3",
-              "10",
-              "100"
+              "2.953125 hours",
+              "21 hours",
+              "6 hours",
+              "192 hours",
+              "18 hours"
             ],
-            "correct": 2,
-            "solution": "log₁₀(1000) = 3 because 10³ = 1000."
+            "correct": 4,
+            "solution": "The mass is halved each half-life: \\(640\\cdot(\\tfrac12)^{n}=10\\) gives \\(2^{n}=64=2^{6}\\), so n = 6 half-lives. Time = 6 × 3 = 18 hours."
           },
           {
-            "question": "Find the midpoint of the line segment joining points (−4, 2) and (6, −8).",
+            "question": "The lines \\(4x+4y=8\\) and \\(3x-4y=-22\\) meet at a point P. The line through P perpendicular to \\(y=-2x-1\\) crosses the y-axis at which point?",
             "options": [
-              "(1, −3)",
-              "(2, −3)",
-              "(−1, 3)",
-              "(0, 0)",
-              "(1, 3)"
+              "\\((0,\\ 8)\\)",
+              "\\((0,\\ 3)\\)",
+              "\\((0,\\ 5)\\)",
+              "\\((0,\\ 0)\\)",
+              "\\((0,\\ 4)\\)"
             ],
-            "correct": 0,
-            "solution": "Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2) = ((−4+6)/2, (2−8)/2) = (2/2, −6/2) = (1, −3)."
+            "correct": 2,
+            "solution": "Solving the two equations gives \\(P=(-2,\\ 4)\\). A line perpendicular to slope \\(-2\\) has slope \\(\\dfrac{1}{2}\\), so its equation is \\(y-(4)=\\dfrac{1}{2}(x-(-2))\\). At \\(x=0\\): \\(y=4+1=5\\)."
           },
           {
             "question": "Factorise \\(x^{3} - 7x + 6\\).",
@@ -43194,16 +43194,16 @@ const subjects = [
             "solution": "Try \\(x = 1\\): \\(1 - 7 + 6 = 0\\), so \\((x - 1)\\) is a factor. Dividing gives \\(x^{2} + x - 6 = (x - 2)(x + 3)\\). Check the product of the constants: \\((-1)(-2)(3) = 6\\) ✓."
           },
           {
-            "question": "What is the y-intercept of the line y = 3x − 6?",
+            "question": "The polynomial \\(P(x)=x^3+px^2+qx-12\\) is divisible by \\((x+4)(x-3)\\). What is the value of \\(q\\)?",
             "options": [
-              "−6",
-              "−3",
-              "0",
-              "3",
-              "6"
+              "-11",
+              "11",
+              "-2",
+              "2",
+              "-13"
             ],
             "correct": 0,
-            "solution": "The y-intercept occurs when x = 0. y = 3(0) − 6 = −6. The y-intercept is (0, −6)."
+            "solution": "Since P is monic and cubic, \\(P(x)=(x+4)(x-3)(x+1)\\). The constant term gives \\(-(-4)(3)r_3=-12\\), so \\(r_3=-1\\). Then \\(q=r_1r_2+r_1r_3+r_2r_3=-11\\)."
           },
           {
             "question": "Divide \\(2x^{3} - 3x^{2} + x - 5\\) by \\(x - 2\\). What are the quotient and the remainder?",
@@ -43230,16 +43230,16 @@ const subjects = [
             "solution": "Using chain rule: d/dx[e^(3x)] = 3e^(3x)."
           },
           {
-            "question": "Solve: log₅(x) = 3",
+            "question": "Evaluate \\(\\log_{5}3+\\log_{5}250-\\log_{5}6\\).",
             "options": [
-              "5",
-              "15",
-              "25",
-              "125",
-              "625"
+              "6",
+              "4",
+              "3",
+              "2",
+              "5"
             ],
-            "correct": 3,
-            "solution": "log₅(x) = 3 means 5³ = x. x = 125."
+            "correct": 2,
+            "solution": "Combine: \\(\\log_{5}\\dfrac{3\\times250}{6}=\\log_{5}125\\). Since 125 = 5^3, the value is 3."
           },
           {
             "question": "What is the sum of the squares of all the roots of \\(x^{4} - 5x^{2} + 4 = 0\\)?",
@@ -43266,76 +43266,76 @@ const subjects = [
             "solution": "∫(2x + 3)dx = x² + 3x + C, where C is the constant of integration."
           },
           {
-            "question": "A regular hexagon has side length 5 cm. What is its area?",
+            "question": "A right triangle has legs of 9 cm and 12 cm. How much larger is the radius of its circumscribed circle than the radius of its inscribed circle?",
             "options": [
-              "37.5 cm²",
-              "64.95 cm²",
-              "75 cm²",
-              "129.9 cm²",
-              "150 cm²"
-            ],
-            "correct": 1,
-            "solution": "Area of regular hexagon = (3√3/2) × s² = (3√3/2) × 25 = 37.5√3 ≈ 64.95 cm²."
-          },
-          {
-            "question": "Solve: 2^(x+1) = 32",
-            "options": [
-              "x = 3",
-              "x = 4",
-              "x = 5",
-              "x = 6",
-              "x = 7"
-            ],
-            "correct": 1,
-            "solution": "2^(x+1) = 32 = 2^5. Therefore, x + 1 = 5, so x = 4."
-          },
-          {
-            "question": "What is the gradient of the line perpendicular to y = 4x + 7?",
-            "options": [
-              "4",
-              "−4",
-              "1/4",
-              "−1/4",
-              "−7"
-            ],
-            "correct": 3,
-            "solution": "The gradient of y = 4x + 7 is 4. Perpendicular lines have gradients that are negative reciprocals. So the perpendicular gradient = −1/4."
-          },
-          {
-            "question": "Find the equation of the line passing through (2, 5) with gradient 3.",
-            "options": [
-              "y = 3x + 5",
-              "y = 3x − 1",
-              "y = 3x + 1",
-              "y = 3x − 5",
-              "y = 3x + 11"
-            ],
-            "correct": 1,
-            "solution": "Using y − y₁ = m(x − x₁): y − 5 = 3(x − 2) → y − 5 = 3x − 6 → y = 3x − 1."
-          },
-          {
-            "question": "What is the value of 5! (5 factorial)?",
-            "options": [
-              "20",
-              "25",
-              "60",
-              "100",
-              "120"
-            ],
-            "correct": 4,
-            "solution": "5! = 5 × 4 × 3 × 2 × 1 = 120."
-          },
-          {
-            "question": "What is the next number in this sequence: 1, 1, 2, 3, 5, 8, 13, ?",
-            "options": [
-              "18",
-              "20",
-              "21",
-              "23",
-              "26"
+              "\\(3\\text{ cm}\\)",
+              "\\(\\dfrac{15}{2}\\text{ cm}\\)",
+              "\\(\\dfrac{9}{2}\\text{ cm}\\)",
+              "\\(12\\text{ cm}\\)",
+              "\\(\\dfrac{21}{2}\\text{ cm}\\)"
             ],
             "correct": 2,
-            "solution": "Fibonacci sequence: each term is the sum of the two preceding terms. 8 + 13 = 21."
+            "solution": "Hypotenuse \\(=15\\) cm. The circumradius of a right triangle is half the hypotenuse: \\(R=\\dfrac{15}{2}\\). The inradius is \\(r=\\dfrac{a+b-c}2=3\\). Difference \\(\\dfrac{15}{2}-3=\\dfrac{9}{2}\\) cm."
+          },
+          {
+            "question": "How many integers \\(x\\) satisfy \\(|4x+9|<15\\)?",
+            "options": [
+              "8",
+              "9",
+              "30",
+              "7",
+              "6"
+            ],
+            "correct": 3,
+            "solution": "\\(|4x+9|<15\\) means \\(-15<4x+9<15\\), so \\(-6<x<\\dfrac{3}{2}\\). Count the integers strictly between these bounds: 7."
+          },
+          {
+            "question": "The point P lies on the segment from \\(A(6,\\ 1)\\) to \\(B(-1,\\ -2)\\) and divides it so that \\(AP:PB=2:3\\). What are the coordinates of P?",
+            "options": [
+              "\\(\\left(20,\\ 7\\right)\\)",
+              "\\(\\left(\\dfrac{21}{5},\\ -\\dfrac{1}{5}\\right)\\)",
+              "\\(\\left(\\dfrac{5}{2},\\ -\\dfrac{1}{2}\\right)\\)",
+              "\\(\\left(\\dfrac{16}{5},\\ -\\dfrac{1}{5}\\right)\\)",
+              "\\(\\left(\\dfrac{16}{5},\\ \\dfrac{4}{5}\\right)\\)"
+            ],
+            "correct": 3,
+            "solution": "With \\(AP:PB=2:3\\), P is \\(\\dfrac{2}{5}\\) of the way from A to B: \\(P=\\dfrac{3A+2B}{5}=\\left(\\dfrac{16}{5},\\ -\\dfrac{1}{5}\\right)\\)."
+          },
+          {
+            "question": "What is the distance from the point \\((4,\\ 0)\\) to the line \\(-8x+15y-6=0\\)?",
+            "options": [
+              "\\(\\dfrac{44}{17}\\)",
+              "\\(\\dfrac{76}{17}\\)",
+              "\\(\\dfrac{38}{17}\\)",
+              "\\(\\dfrac{38}{23}\\)",
+              "\\(-\\dfrac{38}{17}\\)"
+            ],
+            "correct": 2,
+            "solution": "Distance = \\(\\dfrac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}=\\dfrac{|-8(4)+(15)(0)-6|}{\\sqrt{64+225}}=\\dfrac{38}{17}\\) = \\(\\dfrac{38}{17}\\)."
+          },
+          {
+            "question": "A committee of 5 people is chosen from 6 men and 5 women. In how many ways can it be chosen if it must contain at least 1 woman?",
+            "options": [
+              "75",
+              "461",
+              "1050",
+              "456",
+              "462"
+            ],
+            "correct": 3,
+            "solution": "Add the cases by number of women: \\(\\binom{5}{1}\\binom{6}{4}=75\\) + \\(\\binom{5}{2}\\binom{6}{3}=200\\) + \\(\\binom{5}{3}\\binom{6}{2}=150\\) + \\(\\binom{5}{4}\\binom{6}{1}=30\\) + \\(\\binom{5}{5}\\binom{6}{0}=1\\) = 456. (Choosing 1 woman first and then anyone else over-counts committees with more women.)"
+          },
+          {
+            "question": "The roots of \\(x^2+3x+2=0\\) are \\(\\alpha\\) and \\(\\beta\\). Find the value of \\((\\alpha-\\beta)^2\\).",
+            "options": [
+              "7",
+              "5",
+              "1",
+              "17",
+              "9"
+            ],
+            "correct": 2,
+            "solution": "Vieta: \\(\\alpha+\\beta=-3\\) and \\(\\alpha\\beta=2\\). Then \\((\\alpha-\\beta)^2=(\\alpha+\\beta)^2-4\\alpha\\beta=9-4(2)=1\\)."
           },
           {
             "question": "What is the remainder when \\(x^{4} + 3x^{2} - 2\\) is divided by \\(x + 1\\)?",
@@ -43362,28 +43362,28 @@ const subjects = [
             "solution": "2x − 5 = 7 → 2x = 12 → x = 6. Or 2x − 5 = −7 → 2x = −2 → x = −1. Solutions: x = 6 or x = −1."
           },
           {
-            "question": "What is the value of log₁₀(1000)?",
+            "question": "Solve \\(\\log_2 x+\\log_2 (x-2)=3\\).",
             "options": [
-              "1",
-              "2",
-              "3",
-              "4",
-              "10"
+              "\\(x=6\\)",
+              "\\(x=2\\)",
+              "\\(x=4 \\text{ and } x=-2\\)",
+              "\\(x=-2\\)",
+              "\\(x=4\\)"
             ],
-            "correct": 2,
-            "solution": "log₁₀(1000) = log₁₀(10³) = 3."
+            "correct": 4,
+            "solution": "The logs need \\(x>2\\). Combining: \\(x(x-2)=2^{3}=8\\), i.e. \\(x^2-2x-8=0\\), which factors as \\((x-4)(x+2)=0\\). The root \\(x=-2\\) is outside the domain, so only \\(x=4\\) is a solution."
           },
           {
-            "question": "What is the gradient of the line passing through (1, 2) and (3, 8)?",
+            "question": "What is the distance from the point \\((-1,\\ 2)\\) to the line \\(4x-3y-1=0\\)?",
             "options": [
-              "2",
-              "3",
-              "4",
-              "5",
-              "6"
+              "\\(\\dfrac{11}{7}\\)",
+              "\\(\\dfrac{22}{5}\\)",
+              "\\(\\dfrac{12}{5}\\)",
+              "\\(\\dfrac{11}{5}\\)",
+              "\\(\\dfrac{11}{25}\\)"
             ],
-            "correct": 1,
-            "solution": "Gradient = (y₂ − y₁)/(x₂ − x₁) = (8 − 2)/(3 − 1) = 6/2 = 3."
+            "correct": 3,
+            "solution": "Distance = \\(\\dfrac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}=\\dfrac{|4(-1)+(-3)(2)-1|}{\\sqrt{16+9}}=\\dfrac{11}{5}\\) = \\(\\dfrac{11}{5}\\)."
           },
           {
             "question": "Simplify \\(\\dfrac{x^{2} - 9}{x^{2} + x - 6} \\div \\dfrac{x - 3}{x^{2} - 4}\\).",
@@ -43398,28 +43398,28 @@ const subjects = [
             "solution": "Factorise: \\(\\dfrac{(x - 3)(x + 3)}{(x + 3)(x - 2)} \\times \\dfrac{(x - 2)(x + 2)}{x - 3}\\). Everything cancels except \\((x + 2)\\)."
           },
           {
-            "question": "Solve: 2x + 5 = 3x − 7",
+            "question": "How many integers \\(x\\) satisfy \\(|2x+8|<24\\)?",
             "options": [
-              "x = −12",
-              "x = −2",
-              "x = 2",
-              "x = 12",
-              "x = 24"
+              "48",
+              "22",
+              "24",
+              "23",
+              "25"
             ],
-            "correct": 0,
-            "solution": "2x + 5 = 3x − 7 → 5 + 7 = 3x − 2x → 12 = x."
+            "correct": 3,
+            "solution": "\\(|2x+8|<24\\) means \\(-24<2x+8<24\\), so \\(-16<x<8\\). Count the integers strictly between these bounds: 23."
           },
           {
-            "question": "What is the probability of rolling a prime number on a fair six-sided die?",
+            "question": "A bag holds 6 red, 4 blue and 2 green balls. Two balls are drawn one after the other without replacement. What is the probability that the two balls have the same colour?",
             "options": [
-              "1/2",
-              "1/3",
-              "2/3",
-              "1/6",
-              "5/6"
+              "\\(\\dfrac{15}{44}\\)",
+              "\\(\\dfrac{11}{36}\\)",
+              "\\(\\dfrac{7}{18}\\)",
+              "\\(\\dfrac{2}{3}\\)",
+              "\\(\\dfrac{1}{3}\\)"
             ],
-            "correct": 0,
-            "solution": "Prime numbers on a die: 2, 3, 5 (3 outcomes). Total outcomes = 6. P = 3/6 = 1/2."
+            "correct": 4,
+            "solution": "There are 12×11 = 132 equally likely ordered pairs (the second ball is drawn from the 11 balls left). Counting the favourable ordered pairs gives 44, so the probability is \\(\\dfrac{44}{132}=\\dfrac{1}{3}\\). Using the with-replacement fractions \\(/144\\) is a common mistake."
           },
           {
             "question": "The polynomial \\(x^{3} - 4x^{2} + ax + 6\\) is divisible by \\(x - 2\\). What is \\(a\\)?",
@@ -43434,28 +43434,28 @@ const subjects = [
             "solution": "By the factor theorem \\(p(2) = 0\\): \\(8 - 16 + 2a + 6 = 0\\), so \\(2a = 2\\) and \\(a = 1\\)."
           },
           {
-            "question": "Simplify: (a²b³)² / (a³b)",
+            "question": "For which value of \\(k\\) is the polynomial \\(P(x)=x^{3}+3x^{2}-x+k\\) divisible by \\(x-1\\)?",
             "options": [
-              "a/b",
-              "ab⁵",
-              "a/b⁵",
-              "ab",
-              "a⁴b⁵"
+              "-3",
+              "-4",
+              "3",
+              "4",
+              "-2"
             ],
-            "correct": 1,
-            "solution": "(a²b³)² = a⁴b⁶. Dividing by a³b: a⁴b⁶ / a³b = a^(4-3) × b^(6-1) = a¹b⁵ = ab⁵."
+            "correct": 0,
+            "solution": "By the factor theorem, P(1) = 0: \\(1^3+3\\cdot1^2-1\\cdot1+k=0\\), so \\(k=-3\\)."
           },
           {
-            "question": "What is the next number in this sequence: 2, 6, 18, 54, ?",
+            "question": "If \\(x+\\dfrac1x=3\\), what is the value of \\(x^2+\\dfrac1{x^2}\\)?",
             "options": [
-              "108",
-              "162",
-              "216",
-              "324",
-              "486"
+              "5",
+              "11",
+              "9",
+              "7",
+              "8"
             ],
-            "correct": 1,
-            "solution": "Pattern: ×3: 2×3=6, 6×3=18, 18×3=54. Next: 54×3=162."
+            "correct": 3,
+            "solution": "Square the given relation: \\((x+\\tfrac1x)^2=x^2+2+\\tfrac1{x^2}\\), so \\(x^2+\\tfrac1{x^2}=9-2=7\\)."
           },
           {
             "question": "For which values of the real parameter k does the quadratic equation kx² − 4x + (k − 3) = 0 have two distinct real solutions?",
@@ -43482,16 +43482,16 @@ const subjects = [
             "solution": "By Vieta's formulas, the sum and product of the roots are:\nα + β = −b/a = −(−6)/2 = 3\nαβ = c/a = 1/2\nWe know that α² + β² = (α + β)² − 2αβ.\nSubstituting the values:\nα² + β² = 3² − 2(1/2) = 9 − 1 = 8."
           },
           {
-            "question": "When the polynomial P(x) = 2x³ + ax² − 5x + 6 is divided by (x − 2), the remainder is 16. What is the value of the constant a?",
+            "question": "The roots of \\(x^2-4x+2=0\\) are \\(\\alpha\\) and \\(\\beta\\). Find the value of \\(\\alpha^3+\\beta^3\\).",
             "options": [
-              "−1",
-              "1",
-              "2",
-              "3",
-              "−2"
+              "-40",
+              "40",
+              "64",
+              "88",
+              "58"
             ],
             "correct": 1,
-            "solution": "By the Remainder Theorem, the remainder of P(x) when divided by (x − 2) is equal to P(2).\nP(2) = 2(2)³ + a(2)² − 5(2) + 6 = 2(8) + 4a − 10 + 6 = 16 + 4a − 4 = 12 + 4a.\nSetting P(2) = 16:\n12 + 4a = 16 → 4a = 4 → a = 1."
+            "solution": "Vieta: \\(\\alpha+\\beta=4\\) and \\(\\alpha\\beta=2\\). Then \\(\\alpha^3+\\beta^3=(\\alpha+\\beta)^3-3\\alpha\\beta(\\alpha+\\beta)=64-3(2)(4)=40\\)."
           },
           {
             "question": "What is the domain of \\(f(x) = \\dfrac{\\sqrt{x - 1}}{x - 4}\\)?",
@@ -43542,16 +43542,16 @@ const subjects = [
             "solution": "From x + y = 7, square both sides: (x + y)² = 49 → x² + 2xy + y² = 49.\nSubstitute x² + y² = 25: 25 + 2xy = 49 → 2xy = 24 → xy = 12.\nx and y are roots of t² − 7t + 12 = 0 → (t − 3)(t − 4) = 0.\nThus, the solutions are (x, y) = (3, 4) and (4, 3)."
           },
           {
-            "question": "If x + 1/x = 4, what is the value of x³ + 1/x³?",
+            "question": "For which value of \\(k\\) is the polynomial \\(P(x)=x^{3}+5x^{2}+k\\) divisible by \\(x-1\\)?",
             "options": [
-              "52",
-              "64",
-              "48",
-              "60",
-              "56"
+              "-5",
+              "-7",
+              "7",
+              "6",
+              "-6"
             ],
-            "correct": 0,
-            "solution": "Cube both sides of x + 1/x = 4:\n(x + 1/x)³ = x³ + 3(x)(1/x)(x + 1/x) + 1/x³ = x³ + 1/x³ + 3(x + 1/x).\nSince x + 1/x = 4:\n4³ = x³ + 1/x³ + 3(4)\n64 = x³ + 1/x³ + 12\nx³ + 1/x³ = 64 − 12 = 52."
+            "correct": 4,
+            "solution": "By the factor theorem, P(1) = 0: \\(1^3+5\\cdot1^2+0\\cdot1+k=0\\), so \\(k=-6\\)."
           },
           {
             "question": "The graph of y = f(x) is translated 3 units to the right and 2 units downwards, followed by reflection across the x-axis. What is the equation of the resulting graph?",
@@ -43614,16 +43614,16 @@ const subjects = [
             "solution": "Multiply through by the common denominator (x − 2)(x + 2) = x² − 4 (with restrictions x ≠ 2, −2):\n2x(x + 2) − (x + 1)(x − 2) = x² − 4\n(2x² + 4x) − (x² − x − 2) = x² − 4\n2x² + 4x − x² + x + 2 = x² − 4\nx² + 5x + 2 = x² − 4\nSubtract x² from both sides: 5x + 2 = −4 → 5x = −6 → x = −6/5. Wait! Let's check: 5x = -6 -> x = -6/5.\nLet's re-verify equation: (2x)/(x-2) - (x+1)/(x+2) = 1\nIf x = -6:\n2(-6)/(-8) - (-5)/(-4) = -12/-8 - 5/4 = 3/2 - 5/4 = 1/4 ≠ 1.\nLet's choose options to match exactly: if x = -6/5, that's a fraction. To make an integer root, let's look at 5x = 30 -> x = 6."
           },
           {
-            "question": "Simplify the algebraic expression: (a³ − b³) / (a − b) − 2ab",
+            "question": "If \\(x+\\dfrac1x=5\\), what is the value of \\(x^2+\\dfrac1{x^2}\\)?",
             "options": [
-              "(a − b)²",
-              "(a + b)²",
-              "a² + b²",
-              "a² − b²",
-              "0"
+              "27",
+              "24",
+              "7",
+              "23",
+              "25"
             ],
-            "correct": 0,
-            "solution": "Using the difference of cubes identity: a³ − b³ = (a − b)(a² + ab + b²).\nThus: (a³ − b³) / (a − b) = a² + ab + b².\nSubtracting 2ab:\n(a² + ab + b²) − 2ab = a² − ab + b²? No, (a - b)² = a² - 2ab + b².\nWait! a² + ab + b² - 2ab = a² - ab + b².\nIf the problem is (a³ - b³)/(a - b) - 3ab = a² - 2ab + b² = (a - b)²!\nOr if it is (a + b)² = a² + 2ab + b², adding ab gives a² + 3ab + b².\nLet's verify: (a³ - b³)/(a - b) - 3ab = a² + ab + b² - 3ab = a² - 2ab + b² = (a - b)²."
+            "correct": 3,
+            "solution": "Square the given relation: \\((x+\\tfrac1x)^2=x^2+2+\\tfrac1{x^2}\\), so \\(x^2+\\tfrac1{x^2}=25-2=23\\)."
           },
           {
             "question": "How many solutions does \\(|x^{2} - 4| = 3\\) have?",
@@ -43686,28 +43686,28 @@ const subjects = [
             "solution": "Add Eq(1) [x + y + z = 6] and Eq(3) [x + 2y − z = 2]:\n2x + 3y = 8  (Eq 4)\nSubtract Eq(1) from Eq(2):\n(2x − y + z) − (x + y + z) = 3 − 6 → x − 2y = −3 → x = 2y − 3.\nSubstitute x = 2y − 3 into Eq(4):\n2(2y − 3) + 3y = 8 → 4y − 6 + 3y = 8 → 7y = 14 → y = 2.\nThen x = 2(2) − 3 = 4 − 3 = 1.\n(Check z: 1 + 2 + z = 6 → z = 3; Eq(2): 2(1) - 2 + 3 = 3 ✓). Thus, x = 1."
           },
           {
-            "question": "If x² − 5x + 1 = 0, what is the value of x² + 1/x²?",
+            "question": "If \\(x+\\dfrac1x=4\\), what is the value of \\(x^4+\\dfrac1{x^4}\\)?",
             "options": [
-              "23",
-              "25",
-              "27",
-              "21",
-              "22"
-            ],
-            "correct": 0,
-            "solution": "Divide x² − 5x + 1 = 0 by x (since x ≠ 0):\nx − 5 + 1/x = 0 → x + 1/x = 5.\nSquare both sides:\n(x + 1/x)² = 5² → x² + 2 + 1/x² = 25 → x² + 1/x² = 23."
-          },
-          {
-            "question": "What is the expansion of the expression (3ax − 5ay)²?",
-            "options": [
-              "9a²x² + 25a²y²",
-              "9a²x² − 15axy + 25a²y²",
-              "9a²x² − 25a²y²",
-              "9a²x² − 30x²y² + 25a²y²",
-              "9a²x² − 30a²xy + 25a²y²"
+              "252",
+              "256",
+              "198",
+              "254",
+              "194"
             ],
             "correct": 4,
-            "solution": "Using the identity (u - v)² = u² - 2uv + v²:\n(3ax - 5ay)² = (3ax)² - 2(3ax)(5ay) + (5ay)² = 9a²x² - 30a²xy + 25a²y²."
+            "solution": "First \\(x^2+\\tfrac1{x^2}=14\\). Squaring that: \\(x^4+2+\\tfrac1{x^4}=196\\), so the value is 194."
+          },
+          {
+            "question": "The polynomial \\(P(x)=x^3+px^2+qx-8\\) is divisible by \\((x-1)(x+4)\\). What is the value of \\(q\\)?",
+            "options": [
+              "0",
+              "-2",
+              "-5",
+              "-6",
+              "2"
+            ],
+            "correct": 4,
+            "solution": "Since P is monic and cubic, \\(P(x)=(x-1)(x+4)(x+2)\\). The constant term gives \\(-(1)(-4)r_3=-8\\), so \\(r_3=-2\\). Then \\(q=r_1r_2+r_1r_3+r_2r_3=2\\)."
           },
           {
             "question": "The equation x³ − 2x² − x − 6 = 0 has among its solutions:",
@@ -43764,28 +43764,28 @@ const subjects = [
         "name": "Geometry",
         "questions": [
           {
-            "question": "A right circular cone: base radius 6 cm, slant height 10 cm. Total surface area? (π = 3.14)",
+            "question": "In a regular polygon, each interior angle exceeds each exterior angle by 150°. How many sides does the polygon have?",
             "options": [
-              "113 cm²",
-              "188 cm²",
-              "301 cm²",
-              "314 cm²",
-              "377 cm²"
+              "2",
+              "12",
+              "26",
+              "22",
+              "24"
             ],
-            "correct": 2,
-            "solution": "TSA = πr² + πrl = 3.14 × 36 + 3.14 × 6 × 10 = 113.04 + 188.4 = 301.44 ≈ 301 cm²."
+            "correct": 4,
+            "solution": "Interior = 180° − exterior, so \\(180-2e=150\\), giving \\(e=15\\)°. The exterior angles of a polygon add up to 360°, so \\(n=360/15=24\\)."
           },
           {
-            "question": "In triangle ABC: angle A = 40°, angle B = 65°, side AB = 8 cm. Find side BC.",
+            "question": "In a regular polygon, each interior angle exceeds each exterior angle by 140°. How many sides does the polygon have?",
             "options": [
-              "5.2 cm",
-              "6.1 cm",
-              "7.3 cm",
-              "8.0 cm",
-              "9.8 cm"
+              "20",
+              "16",
+              "18",
+              "36",
+              "3"
             ],
-            "correct": 0,
-            "solution": "Angle C = 180° - 40° - 65° = 75°. Sine rule: BC/sin 40° = AB/sin 75° → BC = 8 × sin 40° / sin 75° ≈ 5.32 cm ≈ 5.2 cm."
+            "correct": 2,
+            "solution": "Interior = 180° − exterior, so \\(180-2e=140\\), giving \\(e=20\\)°. The exterior angles of a polygon add up to 360°, so \\(n=360/20=18\\)."
           },
           {
             "question": "The median from vertex A of a triangle has length 18 cm. How far is the centroid from A?",
@@ -43800,52 +43800,52 @@ const subjects = [
             "solution": "The centroid divides each median in the ratio \\(2 : 1\\) from the vertex. Distance from A \\(= \\tfrac{2}{3} \\times 18 = 12\\) cm (and 6 cm from the midpoint of the side)."
           },
           {
-            "question": "What is the area of a trapezium with parallel sides 8 cm and 12 cm, and height 5 cm?",
+            "question": "In a regular polygon, each interior angle exceeds each exterior angle by 132°. How many sides does the polygon have?",
             "options": [
-              "40 cm²",
-              "50 cm²",
-              "60 cm²",
-              "100 cm²",
-              "120 cm²"
-            ],
-            "correct": 1,
-            "solution": "Area = ½(a + b)h = ½(8 + 12) × 5 = ½ × 20 × 5 = 50 cm²."
-          },
-          {
-            "question": "What is the sum of the interior angles of a regular octagon?",
-            "options": [
-              "720°",
-              "900°",
-              "1,080°",
-              "1,260°",
-              "1,440°"
-            ],
-            "correct": 2,
-            "solution": "Sum of interior angles = (n − 2) × 180° = (8 − 2) × 180° = 6 × 180° = 1,080°."
-          },
-          {
-            "question": "What is the volume of a sphere with radius 3 cm? (π = 3.14)",
-            "options": [
-              "36π cm³",
-              "72π cm³",
-              "108π cm³",
-              "113 cm³",
-              "113.04 cm³"
+              "8",
+              "3",
+              "13",
+              "30",
+              "15"
             ],
             "correct": 4,
-            "solution": "Volume = (4/3)πr³ = (4/3) × 3.14 × 27 = 113.04 cm³."
+            "solution": "Interior = 180° − exterior, so \\(180-2e=132\\), giving \\(e=24\\)°. The exterior angles of a polygon add up to 360°, so \\(n=360/24=15\\)."
           },
           {
-            "question": "What is the perimeter of a rectangle with length 12 cm and width 8 cm?",
+            "question": "In a regular polygon, each interior angle exceeds each exterior angle by 108°. How many sides does the polygon have?",
             "options": [
-              "20 cm",
-              "32 cm",
-              "40 cm",
-              "48 cm",
-              "96 cm²"
+              "20",
+              "10",
+              "3",
+              "8",
+              "12"
             ],
-            "correct": 2,
-            "solution": "Perimeter = 2(length + width) = 2(12 + 8) = 2 × 20 = 40 cm."
+            "correct": 1,
+            "solution": "Interior = 180° − exterior, so \\(180-2e=108\\), giving \\(e=36\\)°. The exterior angles of a polygon add up to 360°, so \\(n=360/36=10\\)."
+          },
+          {
+            "question": "A right triangle has legs of 5 cm and 12 cm. What is the radius of its inscribed circle (incircle)?",
+            "options": [
+              "\\(2\\text{ cm}\\)",
+              "\\(17\\text{ cm}\\)",
+              "\\(15\\text{ cm}\\)",
+              "\\(\\dfrac{13}{2}\\text{ cm}\\)",
+              "\\(1\\text{ cm}\\)"
+            ],
+            "correct": 0,
+            "solution": "The hypotenuse is \\(\\sqrt{5^2+12^2}=13\\) cm. For a right triangle the inradius is \\(r=\\dfrac{a+b-c}2=\\dfrac{5+12-13}2=2\\) cm. (Check with area: \\(A=rs\\) gives \\(\\dfrac{60}{2}=r\\cdot15\\).)"
+          },
+          {
+            "question": "A right triangle has legs of 20 cm and 21 cm. How much larger is the radius of its circumscribed circle than the radius of its inscribed circle?",
+            "options": [
+              "\\(23\\text{ cm}\\)",
+              "\\(\\dfrac{41}{2}\\text{ cm}\\)",
+              "\\(\\dfrac{29}{2}\\text{ cm}\\)",
+              "\\(6\\text{ cm}\\)",
+              "\\(\\dfrac{17}{2}\\text{ cm}\\)"
+            ],
+            "correct": 4,
+            "solution": "Hypotenuse \\(=29\\) cm. The circumradius of a right triangle is half the hypotenuse: \\(R=\\dfrac{29}{2}\\). The inradius is \\(r=\\dfrac{a+b-c}2=6\\). Difference \\(\\dfrac{29}{2}-6=\\dfrac{17}{2}\\) cm."
           },
           {
             "question": "A sector has radius 6 and central angle \\(120^{\\circ}\\). What is its perimeter?",
@@ -43860,16 +43860,16 @@ const subjects = [
             "solution": "The angle is \\(\\tfrac{2\\pi}{3}\\), so the arc is \\(6 \\times \\tfrac{2\\pi}{3} = 4\\pi\\). The perimeter is the arc plus the two radii: \\(4\\pi + 6 + 6 = 12 + 4\\pi\\)."
           },
           {
-            "question": "What is the area of a triangle with base 12 cm and height 8 cm?",
+            "question": "A right triangle has legs of 7 cm and 24 cm. How much larger is the radius of its circumscribed circle than the radius of its inscribed circle?",
             "options": [
-              "48 cm²",
-              "50 cm²",
-              "96 cm²",
-              "100 cm²",
-              "120 cm²"
+              "\\(22\\text{ cm}\\)",
+              "\\(3\\text{ cm}\\)",
+              "\\(\\dfrac{25}{2}\\text{ cm}\\)",
+              "\\(\\dfrac{19}{2}\\text{ cm}\\)",
+              "\\(\\dfrac{31}{2}\\text{ cm}\\)"
             ],
-            "correct": 0,
-            "solution": "Area = ½ × base × height = ½ × 12 × 8 = 48 cm²."
+            "correct": 3,
+            "solution": "Hypotenuse \\(=25\\) cm. The circumradius of a right triangle is half the hypotenuse: \\(R=\\dfrac{25}{2}\\). The inradius is \\(r=\\dfrac{a+b-c}2=3\\). Difference \\(\\dfrac{25}{2}-3=\\dfrac{19}{2}\\) cm."
           },
           {
             "question": "A right triangle has legs 9 and 12. What is the length of the altitude drawn to the hypotenuse?",
@@ -43884,40 +43884,40 @@ const subjects = [
             "solution": "The hypotenuse is \\(\\sqrt{81 + 144} = 15\\). The area is \\(\\tfrac{1}{2}(9)(12) = 54\\), and also \\(\\tfrac{1}{2}(15)h\\). So \\(h = \\dfrac{108}{15} = 7.2\\)."
           },
           {
-            "question": "What is the sum of the interior angles of a regular octagon?",
+            "question": "A right triangle has legs of 6 cm and 8 cm. What is the radius of its inscribed circle (incircle)?",
             "options": [
-              "720°",
-              "900°",
-              "1080°",
-              "1260°",
-              "1440°"
+              "\\(1\\text{ cm}\\)",
+              "\\(2\\text{ cm}\\)",
+              "\\(14\\text{ cm}\\)",
+              "\\(12\\text{ cm}\\)",
+              "\\(5\\text{ cm}\\)"
             ],
-            "correct": 2,
-            "solution": "Sum of interior angles = (n-2) × 180° = (8-2) × 180° = 6 × 180° = 1080°."
+            "correct": 1,
+            "solution": "The hypotenuse is \\(\\sqrt{6^2+8^2}=10\\) cm. For a right triangle the inradius is \\(r=\\dfrac{a+b-c}2=\\dfrac{6+8-10}2=2\\) cm. (Check with area: \\(A=rs\\) gives \\(\\dfrac{48}{2}=r\\cdot12\\).)"
           },
           {
-            "question": "A cylinder has radius 4 cm and height 10 cm. What is its total surface area? (π = 3.14)",
+            "question": "From an external point P, a tangent PT and a secant meeting the circle at A (nearer) and B (farther) are drawn. If PA = 8 and AB = 10, what is the length of PT?",
             "options": [
-              "251.2 cm²",
-              "301.6 cm²",
-              "351.8 cm²",
-              "402.1 cm²",
-              "452.4 cm²"
+              "80",
+              "12",
+              "18",
+              "10",
+              "13"
             ],
-            "correct": 2,
-            "solution": "TSA = 2πr² + 2πrh = 2π × 16 + 2π × 4 × 10 = 32π + 80π = 112π ≈ 112 × 3.14 = 351.68 cm² ≈ 351.8 cm²."
+            "correct": 1,
+            "solution": "Tangent–secant theorem: \\(PT^2=PA\\cdot PB\\), where \\(PB=PA+AB=8+10=18\\). So \\(PT^2=8\\times18=144\\) and \\(PT=12\\)."
           },
           {
-            "question": "What is the volume of a sphere with radius 3 cm? (π = 3.14)",
+            "question": "A right triangle has legs of 8 cm and 15 cm. What is the radius of its inscribed circle (incircle)?",
             "options": [
-              "36π cm³",
-              "48π cm³",
-              "113.04 cm³",
-              "150.72 cm³",
-              "169.56 cm³"
+              "\\(\\dfrac{3}{2}\\text{ cm}\\)",
+              "\\(3\\text{ cm}\\)",
+              "\\(\\dfrac{17}{2}\\text{ cm}\\)",
+              "\\(20\\text{ cm}\\)",
+              "\\(23\\text{ cm}\\)"
             ],
-            "correct": 2,
-            "solution": "Volume = (4/3)πr³ = (4/3) × 3.14 × 27 = 4 × 3.14 × 9 = 113.04 cm³."
+            "correct": 1,
+            "solution": "The hypotenuse is \\(\\sqrt{8^2+15^2}=17\\) cm. For a right triangle the inradius is \\(r=\\dfrac{a+b-c}2=\\dfrac{8+15-17}2=3\\) cm. (Check with area: \\(A=rs\\) gives \\(\\dfrac{120}{2}=r\\cdot20\\).)"
           },
           {
             "question": "ABCD is a cyclic quadrilateral with \\(\\angle A = 70^{\\circ}\\) and \\(\\angle B = 100^{\\circ}\\). What is \\(\\angle D\\)?",
@@ -43932,16 +43932,16 @@ const subjects = [
             "solution": "Opposite angles of a cyclic quadrilateral add to \\(180^{\\circ}\\). \\(\\angle C = 180 - 70 = 110^{\\circ}\\) and \\(\\angle D = 180 - 100 = 80^{\\circ}\\)."
           },
           {
-            "question": "A right triangle has legs of 6 cm and 8 cm. What is the length of the hypotenuse?",
+            "question": "In a regular polygon, each interior angle exceeds each exterior angle by 144°. How many sides does the polygon have?",
             "options": [
-              "10 cm",
-              "12 cm",
-              "14 cm",
-              "15 cm",
-              "20 cm"
+              "10",
+              "18",
+              "22",
+              "3",
+              "20"
             ],
-            "correct": 0,
-            "solution": "Using Pythagoras: c = √(a² + b²) = √(36 + 64) = √100 = 10 cm."
+            "correct": 4,
+            "solution": "Interior = 180° − exterior, so \\(180-2e=144\\), giving \\(e=18\\)°. The exterior angles of a polygon add up to 360°, so \\(n=360/18=20\\)."
           },
           {
             "question": "What is the ratio of the area of the circumscribed circle to the area of the inscribed circle of an equilateral triangle?",
@@ -43968,16 +43968,16 @@ const subjects = [
             "solution": "The distance from the centre to a chord of length \\(2a\\) is \\(\\sqrt{r^2 - a^2}\\). For 16: \\(\\sqrt{100 - 64} = 6\\). For 12: \\(\\sqrt{100 - 36} = 8\\). On opposite sides, add: \\(6 + 8 = 14\\). (On the same side it would be \\(8 - 6 = 2\\).)"
           },
           {
-            "question": "A rectangle has perimeter 30 cm and length 10 cm. What is its width?",
+            "question": "A right triangle has legs of 3 cm and 4 cm. How much larger is the radius of its circumscribed circle than the radius of its inscribed circle?",
             "options": [
-              "3 cm",
-              "4 cm",
-              "5 cm",
-              "6 cm",
-              "7 cm"
+              "\\(1\\text{ cm}\\)",
+              "\\(4\\text{ cm}\\)",
+              "\\(\\dfrac{7}{2}\\text{ cm}\\)",
+              "\\(\\dfrac{3}{2}\\text{ cm}\\)",
+              "\\(\\dfrac{5}{2}\\text{ cm}\\)"
             ],
-            "correct": 2,
-            "solution": "Perimeter = 2(l + w) → 30 = 2(10 + w) → 15 = 10 + w → w = 5 cm."
+            "correct": 3,
+            "solution": "Hypotenuse \\(=5\\) cm. The circumradius of a right triangle is half the hypotenuse: \\(R=\\dfrac{5}{2}\\). The inradius is \\(r=\\dfrac{a+b-c}2=1\\). Difference \\(\\dfrac{5}{2}-1=\\dfrac{3}{2}\\) cm."
           },
           {
             "question": "A triangle has sides 13, 14 and 15. What is the radius of its inscribed circle?",
@@ -44016,16 +44016,16 @@ const subjects = [
             "solution": "First calculate the hypotenuse: c = √(9² + 12²) = √(81 + 144) = √225 = 15 cm.\nFor a right-angled triangle with legs a, b and hypotenuse c, the inradius r is given by:\nr = (a + b − c) / 2.\nr = (9 + 12 − 15) / 2 = (21 − 15) / 2 = 6 / 2 = 3 cm.\n(Alternatively, r = Area / semi-perimeter = (54) / 18 = 3 cm)."
           },
           {
-            "question": "A solid rectangular box (cuboid) has dimensions 3 cm, 4 cm, and 12 cm. What is the length of its internal space diagonal?",
+            "question": "In triangle ABC, a line DE parallel to BC meets AB at D and AC at E, with AD = 4 cm and DB = 3 cm. The area of triangle ADE is 16 cm². What is the area of the trapezoid DBCE?",
             "options": [
-              "13 cm",
-              "14 cm",
-              "15 cm",
-              "19 cm",
-              "√169 cm"
+              "12 cm²",
+              "34 cm²",
+              "49 cm²",
+              "9 cm²",
+              "33 cm²"
             ],
-            "correct": 0,
-            "solution": "The length of the space diagonal d of a cuboid with dimensions a, b, c is:\nd = √(a² + b² + c²) = √(3² + 4² + 12²) = √(9 + 16 + 144) = √169 = 13 cm."
+            "correct": 4,
+            "solution": "Triangles ADE and ABC are similar with ratio \\(AD:AB=4:7\\), so their areas are in ratio \\(16:49\\). Hence \\([ABC]=16\\cdot\\dfrac{49}{16}=49\\) cm². The trapezoid is 49 − 16 = 33 cm²."
           },
           {
             "question": "Two similar polygons have areas of 36 cm² and 81 cm², respectively. If the perimeter of the smaller polygon is 24 cm, what is the perimeter of the larger polygon?",
@@ -44040,28 +44040,28 @@ const subjects = [
             "solution": "For similar figures, the ratio of areas is the square of the ratio of linear dimensions (such as perimeters):\nArea₁ / Area₂ = (P₁ / P₂)²\n36 / 81 = (24 / P₂)²\nTake the square root of both sides: 6 / 9 = 24 / P₂ → 2 / 3 = 24 / P₂.\nP₂ = (24 × 3) / 2 = 36 cm."
           },
           {
-            "question": "An angle inscribed in a circle intercepts an arc of 110°. What is the measure of the inscribed angle in degrees?",
+            "question": "In triangle ABC, a line DE parallel to BC meets AB at D and AC at E, with AD = 3 cm and DB = 2 cm. The area of triangle ADE is 45 cm². What is the area of the trapezoid DBCE?",
             "options": [
-              "55°",
-              "110°",
-              "70°",
-              "35°",
-              "220°"
+              "85 cm²",
+              "30 cm²",
+              "125 cm²",
+              "80 cm²",
+              "20 cm²"
             ],
-            "correct": 0,
-            "solution": "By the Inscribed Angle Theorem, the measure of an inscribed angle is exactly half the measure of the intercepted central angle (or arc).\nInscribed angle = 110° / 2 = 55°."
+            "correct": 3,
+            "solution": "Triangles ADE and ABC are similar with ratio \\(AD:AB=3:5\\), so their areas are in ratio \\(9:25\\). Hence \\([ABC]=45\\cdot\\dfrac{25}{9}=125\\) cm². The trapezoid is 125 − 45 = 80 cm²."
           },
           {
-            "question": "What is the area of a regular hexagon with side length 6 cm?",
+            "question": "In triangle ABC, a line DE parallel to BC meets AB at D and AC at E, with AD = 3 cm and DB = 1 cm. The area of triangle ADE is 45 cm². What is the area of the trapezoid DBCE?",
             "options": [
-              "54√3 cm²",
-              "36√3 cm²",
-              "72√3 cm²",
-              "108 cm²",
-              "48√3 cm²"
+              "15 cm²",
+              "5 cm²",
+              "40 cm²",
+              "35 cm²",
+              "80 cm²"
             ],
-            "correct": 0,
-            "solution": "A regular hexagon of side s consists of 6 congruent equilateral triangles, each of area (s²√3) / 4.\nArea = 6 × [(s²√3) / 4] = (3√3 / 2) s².\nWith s = 6 cm:\nArea = (3√3 / 2) × 6² = (3√3 / 2) × 36 = 3√3 × 18 = 54√3 cm²."
+            "correct": 3,
+            "solution": "Triangles ADE and ABC are similar with ratio \\(AD:AB=3:4\\), so their areas are in ratio \\(9:16\\). Hence \\([ABC]=45\\cdot\\dfrac{16}{9}=80\\) cm². The trapezoid is 80 − 45 = 35 cm²."
           },
           {
             "question": "A right circular cone has a base radius of 5 cm and a height of 12 cm. What is its total surface area (including base)?",
@@ -44076,28 +44076,28 @@ const subjects = [
             "solution": "The slant height l of the cone is: l = √(r² + h²) = √(5² + 12²) = √(25 + 144) = √169 = 13 cm.\nLateral surface area = πrl = π(5)(13) = 65π cm².\nBase area = πr² = π(5²) = 25π cm².\nTotal surface area = 65π + 25π = 90π cm²."
           },
           {
-            "question": "A cylinder and a sphere have the same radius r. If their volumes are equal, what is the height h of the cylinder in terms of r?",
+            "question": "In triangle ABC, a line DE parallel to BC meets AB at D and AC at E, with AD = 4 cm and DB = 2 cm. The area of triangle ADE is 80 cm². What is the area of the trapezoid DBCE?",
             "options": [
-              "h = (4/3)r",
-              "h = (3/4)r",
-              "h = 2r",
-              "h = (2/3)r",
-              "h = (4/3)πr"
+              "20 cm²",
+              "40 cm²",
+              "105 cm²",
+              "100 cm²",
+              "180 cm²"
             ],
-            "correct": 0,
-            "solution": "Volume of cylinder: V_cyl = πr²h.\nVolume of sphere: V_sph = (4/3)πr³.\nSetting them equal: πr²h = (4/3)πr³.\nDivide both sides by πr²: h = (4/3)r."
+            "correct": 3,
+            "solution": "Triangles ADE and ABC are similar with ratio \\(AD:AB=4:6\\), so their areas are in ratio \\(16:36\\). Hence \\([ABC]=80\\cdot\\dfrac{36}{16}=180\\) cm². The trapezoid is 180 − 80 = 100 cm²."
           },
           {
-            "question": "In a triangle ABC, sides AB = 7 cm, BC = 8 cm, and AC = 9 cm. What is the area of triangle ABC?",
+            "question": "In triangle ABC, a line DE parallel to BC meets AB at D and AC at E, with AD = 2 cm and DB = 4 cm. The area of triangle ADE is 8 cm². What is the area of the trapezoid DBCE?",
             "options": [
-              "12√5 cm²",
-              "24 cm²",
-              "14√3 cm²",
-              "18√5 cm²",
-              "16√2 cm²"
+              "72 cm²",
+              "32 cm²",
+              "66 cm²",
+              "16 cm²",
+              "64 cm²"
             ],
-            "correct": 0,
-            "solution": "Use Heron's formula. Semi-perimeter s = (7 + 8 + 9) / 2 = 24 / 2 = 12 cm.\ns − a = 12 − 7 = 5\ns − b = 12 − 8 = 4\ns − c = 12 − 9 = 3\nArea = √[s(s − a)(s − b)(s − c)] = √[12 × 5 × 4 × 3] = √[720] = √(144 × 5) = 12√5 cm²."
+            "correct": 4,
+            "solution": "Triangles ADE and ABC are similar with ratio \\(AD:AB=2:6\\), so their areas are in ratio \\(4:36\\). Hence \\([ABC]=8\\cdot\\dfrac{36}{4}=72\\) cm². The trapezoid is 72 − 8 = 64 cm²."
           },
           {
             "question": "A rhombus has diagonals of lengths 16 cm and 12 cm. What is the perimeter of the rhombus?",
@@ -44112,28 +44112,28 @@ const subjects = [
             "solution": "The diagonals of a rhombus are perpendicular bisectors of each other. They divide the rhombus into 4 congruent right triangles with legs equal to half the diagonals:\nLeg₁ = 16 / 2 = 8 cm, Leg₂ = 12 / 2 = 6 cm.\nEach side length s is the hypotenuse: s = √(8² + 6²) = √(64 + 36) = √100 = 10 cm.\nPerimeter = 4s = 4 × 10 = 40 cm."
           },
           {
-            "question": "What is the sum of the interior angles of a convex octagon (8-sided polygon)?",
+            "question": "From an external point P, a tangent PT and a secant meeting the circle at A (nearer) and B (farther) are drawn. If PA = 9 and AB = 16, what is the length of PT?",
             "options": [
-              "1080°",
-              "900°",
-              "1260°",
-              "720°",
-              "1440°"
+              "25",
+              "16",
+              "144",
+              "15",
+              "17"
             ],
-            "correct": 0,
-            "solution": "The sum of interior angles of an n-sided polygon is given by S = (n − 2) × 180°.\nFor an octagon, n = 8:\nS = (8 − 2) × 180° = 6 × 180° = 1080°."
+            "correct": 3,
+            "solution": "Tangent–secant theorem: \\(PT^2=PA\\cdot PB\\), where \\(PB=PA+AB=9+16=25\\). So \\(PT^2=9\\times25=225\\) and \\(PT=15\\)."
           },
           {
-            "question": "In a circle of radius 6 cm, what is the area of a sector with a central angle of 60°?",
+            "question": "From an external point P, a tangent PT and a secant meeting the circle at A (nearer) and B (farther) are drawn. If PA = 2 and AB = 6, what is the length of PT?",
             "options": [
-              "6π cm²",
-              "12π cm²",
-              "3π cm²",
-              "36π cm²",
-              "4π cm²"
+              "5",
+              "4",
+              "8",
+              "12",
+              "6"
             ],
-            "correct": 0,
-            "solution": "Area of a sector = (θ / 360°) × πr².\nHere θ = 60° and r = 6 cm:\nArea = (60 / 360) × π(6²) = (1/6) × 36π = 6π cm²."
+            "correct": 1,
+            "solution": "Tangent–secant theorem: \\(PT^2=PA\\cdot PB\\), where \\(PB=PA+AB=2+6=8\\). So \\(PT^2=2\\times8=16\\) and \\(PT=4\\)."
           },
           {
             "question": "A line tangent to a circle of radius 5 cm at point T meets a line passing through the center O at point P. If OT = 5 cm and OP = 13 cm, what is the length of the tangent segment PT?",
@@ -44184,40 +44184,40 @@ const subjects = [
             "solution": "Area of square = 10² = 100 cm².\nThe diameter of the inscribed circle equals the side length of the square: 2r = 10 → r = 5 cm.\nArea of circle = πr² = π(5²) = 25π cm².\nGeometric probability P = Area(circle) / Area(square) = 25π / 100 = π / 4 ≈ 0.785."
           },
           {
-            "question": "What is the volume of a sphere whose surface area is 36π cm²?",
+            "question": "In a regular polygon, each interior angle exceeds each exterior angle by 100°. How many sides does the polygon have?",
             "options": [
-              "36π cm³",
-              "18π cm³",
-              "72π cm³",
-              "48π cm³",
-              "12π cm³"
+              "18",
+              "4",
+              "9",
+              "7",
+              "5"
             ],
-            "correct": 0,
-            "solution": "Surface area of sphere: A = 4πr² = 36π → r² = 9 → r = 3 cm.\nVolume of sphere: V = (4/3)πr³ = (4/3)π(3³) = (4/3)π(27) = 36π cm³."
+            "correct": 2,
+            "solution": "Interior = 180° − exterior, so \\(180-2e=100\\), giving \\(e=40\\)°. The exterior angles of a polygon add up to 360°, so \\(n=360/40=9\\)."
           },
           {
-            "question": "In an equilateral triangle of side length s = 4 cm, what is the exact height (altitude)?",
+            "question": "From an external point P, a tangent PT and a secant meeting the circle at A (nearer) and B (farther) are drawn. If PA = 12 and AB = 36, what is the length of PT?",
             "options": [
-              "2√3 cm",
-              "4√3 cm",
-              "2√2 cm",
-              "3√2 cm",
-              "3 cm"
+              "432",
+              "36",
+              "30",
+              "24",
+              "25"
             ],
-            "correct": 0,
-            "solution": "The altitude h of an equilateral triangle of side s is: h = (s√3) / 2.\nWith s = 4 cm: h = (4√3) / 2 = 2√3 cm."
+            "correct": 3,
+            "solution": "Tangent–secant theorem: \\(PT^2=PA\\cdot PB\\), where \\(PB=PA+AB=12+36=48\\). So \\(PT^2=12\\times48=576\\) and \\(PT=24\\)."
           },
           {
-            "question": "A quadrilateral ABCD is cyclic (inscribed in a circle). If ∠A = 74° and ∠B = 105°, what are the measures of angles C and D?",
+            "question": "In triangle ABC, a line DE parallel to BC meets AB at D and AC at E, with AD = 3 cm and DB = 1 cm. The area of triangle ADE is 27 cm². What is the area of the trapezoid DBCE?",
             "options": [
-              "∠C = 106° and ∠D = 75°",
-              "∠C = 75° and ∠D = 106°",
-              "∠C = 106° and ∠D = 105°",
-              "∠C = 96° and ∠D = 85°",
-              "∠C = 114° and ∠D = 65°"
+              "24 cm²",
+              "48 cm²",
+              "21 cm²",
+              "9 cm²",
+              "3 cm²"
             ],
-            "correct": 0,
-            "solution": "In any cyclic quadrilateral, opposite angles are supplementary (their sum is 180°).\n∠A + ∠C = 180° → ∠C = 180° − 74° = 106°.\n∠B + ∠D = 180° → ∠D = 180° − 105° = 75°."
+            "correct": 2,
+            "solution": "Triangles ADE and ABC are similar with ratio \\(AD:AB=3:4\\), so their areas are in ratio \\(9:16\\). Hence \\([ABC]=27\\cdot\\dfrac{16}{9}=48\\) cm². The trapezoid is 48 − 27 = 21 cm²."
           },
           {
             "question": "A right triangle has a hypotenuse of length 10 cm and one acute angle of 30°. What is the area of this triangle?",
@@ -44232,16 +44232,16 @@ const subjects = [
             "solution": "In a 30°-60°-90° right triangle with hypotenuse c = 10 cm:\nOpposite side to 30°: a = c × sin(30°) = 10 × (1/2) = 5 cm.\nAdjacent side to 30°: b = c × cos(30°) = 10 × (√3/2) = 5√3 cm.\nArea = (1/2)ab = (1/2)(5)(5√3) = (25√3) / 2 cm²."
           },
           {
-            "question": "If the radius of a sphere is doubled, by what factor does its volume increase?",
+            "question": "Two chords AB and CD of a circle intersect at a point P inside the circle. If AP = 4, PB = 4 and CP = 8, what is the length of PD?",
             "options": [
+              "2",
+              "0",
+              "3",
               "8",
-              "4",
-              "6",
-              "16",
-              "2"
+              "32"
             ],
             "correct": 0,
-            "solution": "Volume scales with the cube of linear dimension: V ∝ r³.\nIf r is replaced by 2r: V_new = (4/3)π(2r)³ = (4/3)π(8r³) = 8 × V_old.\nThus, the volume increases by a factor of 8 (2³ = 8)."
+            "solution": "Intersecting chords theorem: \\(AP\\cdot PB=CP\\cdot PD\\). So \\(4\\times4=8\\cdot PD\\) and \\(PD=16/8=2\\)."
           },
           {
             "question": "In a circle, a cyclic quadrilateral is inscribed with one internal angle α measuring 130°. What is the measure of the opposite inscribed angle β?",
@@ -44256,16 +44256,16 @@ const subjects = [
             "solution": "In any cyclic quadrilateral (a quadrilateral whose vertices all lie on a single circle), opposite angles are supplementary, summing to 180°. Therefore, β = 180° - α = 180° - 130° = 50°."
           },
           {
-            "question": "What is the ratio between the volume and the total surface area of a cylinder with radius 6 cm and height 12 cm?",
+            "question": "In triangle ABC, a line DE parallel to BC meets AB at D and AC at E, with AD = 3 cm and DB = 4 cm. The area of triangle ADE is 18 cm². What is the area of the trapezoid DBCE?",
             "options": [
-              "4 cm",
-              "1 cm",
-              "2 cm",
-              "1.5 cm",
-              "0.5 cm"
+              "82 cm²",
+              "24 cm²",
+              "80 cm²",
+              "98 cm²",
+              "32 cm²"
             ],
             "correct": 2,
-            "solution": "For a cylinder of radius r = 6 cm and height h = 12 cm:\nVolume V = π · r² · h = π · 6² · 12 = 432π cm³.\nTotal surface area A = 2πr² + 2πrh = 2π(6²) + 2π(6)(12) = 72π + 144π = 216π cm².\nRatio = V / A = (432π cm³) / (216π cm²) = 2 cm."
+            "solution": "Triangles ADE and ABC are similar with ratio \\(AD:AB=3:7\\), so their areas are in ratio \\(9:49\\). Hence \\([ABC]=18\\cdot\\dfrac{49}{9}=98\\) cm². The trapezoid is 98 − 18 = 80 cm²."
           },
           {
             "question": "Given an isosceles trapezoid with the larger base twice the length of the smaller base, add two right triangles to the trapezoid in such a way as to obtain a rectangle having the same height as the trapezoid and the base coinciding with the larger base of the trapezoid. If the sum of the areas of the two added triangles is 20 cm², what is the area of the trapezoid, in square centimeters?",
@@ -44280,16 +44280,16 @@ const subjects = [
             "solution": "Let b be the smaller base, 2b the larger base, and h the height of the isosceles trapezoid.\nThe area of the completed rectangle is Area_rect = 2b × h.\nThe area of the trapezoid is Area_trap = [(2b + b)/2] × h = (3/2) b × h.\nThe two right triangles added to fill out the rectangle have combined area:\nArea_triangles = Area_rect - Area_trap = 2bh - 1.5bh = 0.5bh.\nGiven 0.5bh = 20 cm² ⇒ bh = 40 cm².\nTherefore, Area_trap = 1.5 × 40 = 60 cm²."
           },
           {
-            "question": "What can be said about the perimeter of a square with an area less than 81 m²?",
+            "question": "Two chords AB and CD of a circle intersect at a point P inside the circle. If AP = 6, PB = 6 and CP = 3, what is the length of PD?",
             "options": [
-              "It is equal to 36 m",
-              "It is greater than or equal to 36 m",
-              "It is less than or equal to 9 m",
-              "It is greater than 36 m",
-              "It is always less than 36 m"
+              "33",
+              "18",
+              "13",
+              "12",
+              "9"
             ],
-            "correct": 4,
-            "solution": "If the area of a square is A < 81 m², its side length is s = √A < √81 = 9 m.\nThe perimeter is P = 4s < 4 × 9 = 36 m."
+            "correct": 3,
+            "solution": "Intersecting chords theorem: \\(AP\\cdot PB=CP\\cdot PD\\). So \\(6\\times6=3\\cdot PD\\) and \\(PD=36/3=12\\)."
           },
           {
             "question": "Enea places three circles on a plane so that each of them is tangent to the other two, and their centers form the vertices of a right triangle. Knowing that the radii of the circles are expressed as integers, which of the following triples can represent the radii of the circles?",
@@ -44322,136 +44322,136 @@ const subjects = [
         "name": "Trigonometry",
         "questions": [
           {
-            "question": "If sin θ = 3/5 and θ is in the first quadrant, what is cos θ?",
+            "question": "If \\(\\tan\\theta=-\\dfrac{1}{2}\\), what is the value of \\(\\dfrac{2\\sin\\theta-1\\cos\\theta}{3\\sin\\theta+2\\cos\\theta}\\)?",
             "options": [
-              "1/5",
-              "3/5",
-              "4/5",
-              "5/4",
-              "5/3"
+              "\\(0\\)",
+              "\\(-2\\)",
+              "\\(-4\\)",
+              "\\(\\dfrac{5}{4}\\)",
+              "\\(\\dfrac{1}{5}\\)"
             ],
             "correct": 2,
-            "solution": "Using sin²θ + cos²θ = 1: cos²θ = 1 − (3/5)² = 1 − 9/25 = 16/25. cos θ = 4/5 (positive in first quadrant)."
+            "solution": "Divide numerator and denominator by \\(\\cos\\theta\\) (assumed non-zero): \\(\\dfrac{2\\tan\\theta-1}{3\\tan\\theta+2}=\\dfrac{2(-\\dfrac{1}{2})-1}{3(-\\dfrac{1}{2})+2}=-4\\)."
           },
           {
-            "question": "In how many ways can 6 people be arranged in a line if 2 specific people must always sit together?",
+            "question": "In triangle ABC, AB = 5 cm, AC = 21 cm and the angle at A is 60°. What is the length of BC?",
             "options": [
-              "120",
-              "240",
-              "480",
-              "720",
-              "1,440"
-            ],
-            "correct": 1,
-            "solution": "Treat the 2 people as a single unit. We have 5 units to arrange: 5! = 120. The 2 people can be arranged within their unit in 2! = 2 ways. Total = 120 × 2 = 240."
-          },
-          {
-            "question": "What is the value of tan 45°?",
-            "options": [
-              "0",
-              "0.5",
-              "1",
-              "√2",
-              "√3"
-            ],
-            "correct": 2,
-            "solution": "tan 45° = sin 45° / cos 45° = (√2/2) / (√2/2) = 1."
-          },
-          {
-            "question": "What is the probability of drawing a red card from a standard deck of 52 cards?",
-            "options": [
-              "1/2",
-              "1/4",
-              "1/13",
-              "1/26",
-              "1/52"
-            ],
-            "correct": 0,
-            "solution": "There are 26 red cards (hearts and diamonds) out of 52. P = 26/52 = 1/2."
-          },
-          {
-            "question": "Find the value of cos 120°.",
-            "options": [
-              "−1/2",
-              "−√2/2",
-              "−√3/2",
-              "1/2",
-              "√3/2"
-            ],
-            "correct": 0,
-            "solution": "cos 120° = cos(180° − 60°) = −cos 60° = −1/2. Alternatively, 120° is in the second quadrant where cosine is negative, and reference angle is 60°."
-          },
-          {
-            "question": "Find the value of sin 30° + cos 60°.",
-            "options": [
-              "0",
-              "0.5",
-              "1",
-              "1.5",
-              "2"
-            ],
-            "correct": 2,
-            "solution": "sin 30° = 1/2, cos 60° = 1/2. sin 30° + cos 60° = 1/2 + 1/2 = 1."
-          },
-          {
-            "question": "What is the value of sin 60°?",
-            "options": [
-              "1/2",
-              "√2/2",
-              "√3/2",
-              "1",
-              "√3"
-            ],
-            "correct": 2,
-            "solution": "sin 60° = √3/2 ≈ 0.866. This is a standard trigonometric value."
-          },
-          {
-            "question": "Simplify: (a²b³)⁴",
-            "options": [
-              "a⁶b⁷",
-              "a⁸b¹²",
-              "a⁸b⁷",
-              "a⁶b¹²",
-              "a²b¹²"
-            ],
-            "correct": 1,
-            "solution": "(a²b³)⁴ = a^(2×4) × b^(3×4) = a⁸b¹² using power of a power rule."
-          },
-          {
-            "question": "Find the distance between points (3, 4) and (7, 1).",
-            "options": [
-              "3",
-              "4",
-              "5",
-              "6",
-              "7"
-            ],
-            "correct": 2,
-            "solution": "Distance = √((7−3)² + (1−4)²) = √(16 + 9) = √25 = 5."
-          },
-          {
-            "question": "What is the probability of getting at least one head when tossing two coins?",
-            "options": [
-              "1/4",
-              "1/2",
-              "3/4",
-              "1",
-              "1/8"
-            ],
-            "correct": 2,
-            "solution": "Total outcomes = 4 (HH, HT, TH, TT). At least one head = 3 outcomes (HH, HT, TH). P = 3/4."
-          },
-          {
-            "question": "What is the value of sin 120°?",
-            "options": [
-              "−√3/2",
-              "−1/2",
-              "1/2",
-              "√3/2",
-              "√2/2"
+              "\\(\\sqrt{466}\\text{ cm}\\)",
+              "\\(\\sqrt{571}\\text{ cm}\\)",
+              "\\(26\\text{ cm}\\)",
+              "\\(19\\text{ cm}\\)",
+              "\\(\\sqrt{105}\\text{ cm}\\)"
             ],
             "correct": 3,
-            "solution": "sin 120° = sin(180° − 60°) = sin 60° = √3/2. Since 120° is in the second quadrant where sine is positive, sin 120° = √3/2."
+            "solution": "Law of cosines: \\(BC^2=5^2+21^2-2(5)(21)\\cos60^\\circ\\) = \\(25+441-105=361\\), so \\(BC=19\\) cm."
+          },
+          {
+            "question": "Evaluate \\(\\dfrac{\\sin 90^\\circ+\\cos 120^\\circ\\cdot\\tan 45^\\circ}{\\tan 45^\\circ-\\cos 60^\\circ}\\).",
+            "options": [
+              "\\(\\dfrac{1}{3}\\)",
+              "\\(-\\dfrac{1}{3}\\)",
+              "\\(1\\)",
+              "\\(-1\\)",
+              "\\(3\\)"
+            ],
+            "correct": 2,
+            "solution": "Use the unit circle: \\(\\sin 90^\\circ=1\\), \\(\\cos 120^\\circ=-\\dfrac{1}{2}\\), \\(\\tan 45^\\circ=1\\), \\(\\cos 60^\\circ=\\dfrac{1}{2}\\). Numerator: \\(1+(-\\dfrac{1}{2})(1)=\\dfrac{1}{2}\\). Denominator: \\(1-(\\dfrac{1}{2})=\\dfrac{1}{2}\\). The value is \\(1\\)."
+          },
+          {
+            "question": "If \\(\\tan\\theta=\\dfrac{5}{2}\\), what is the value of \\(\\dfrac{2\\sin\\theta+4\\cos\\theta}{\\sin\\theta+4\\cos\\theta}\\)?",
+            "options": [
+              "\\(\\dfrac{18}{13}\\)",
+              "\\(9\\)",
+              "\\(-6\\)",
+              "\\(\\dfrac{2}{13}\\)",
+              "\\(\\dfrac{6}{5}\\)"
+            ],
+            "correct": 0,
+            "solution": "Divide numerator and denominator by \\(\\cos\\theta\\) (assumed non-zero): \\(\\dfrac{2\\tan\\theta+4}{1\\tan\\theta+4}=\\dfrac{2(\\dfrac{5}{2})+4}{1(\\dfrac{5}{2})+4}=\\dfrac{18}{13}\\)."
+          },
+          {
+            "question": "If \\(\\tan\\theta=\\dfrac{1}{2}\\), what is the value of \\(\\dfrac{5\\sin\\theta-1\\cos\\theta}{4\\sin\\theta+3\\cos\\theta}\\)?",
+            "options": [
+              "\\(-\\dfrac{3}{2}\\)",
+              "\\(\\dfrac{9}{11}\\)",
+              "\\(\\dfrac{7}{10}\\)",
+              "\\(\\dfrac{4}{7}\\)",
+              "\\(\\dfrac{3}{10}\\)"
+            ],
+            "correct": 4,
+            "solution": "Divide numerator and denominator by \\(\\cos\\theta\\) (assumed non-zero): \\(\\dfrac{5\\tan\\theta-1}{4\\tan\\theta+3}=\\dfrac{5(\\dfrac{1}{2})-1}{4(\\dfrac{1}{2})+3}=\\dfrac{3}{10}\\)."
+          },
+          {
+            "question": "Evaluate \\(\\dfrac{\\sin 150^\\circ+\\cos 0^\\circ\\cdot\\tan 225^\\circ}{\\tan 225^\\circ-\\cos 240^\\circ}\\).",
+            "options": [
+              "\\(-3\\)",
+              "\\(-\\dfrac{1}{3}\\)",
+              "\\(1\\)",
+              "\\(3\\)",
+              "\\(\\dfrac{1}{3}\\)"
+            ],
+            "correct": 2,
+            "solution": "Use the unit circle: \\(\\sin 150^\\circ=\\dfrac{1}{2}\\), \\(\\cos 0^\\circ=1\\), \\(\\tan 225^\\circ=1\\), \\(\\cos 240^\\circ=-\\dfrac{1}{2}\\). Numerator: \\(\\dfrac{1}{2}+(1)(1)=\\dfrac{3}{2}\\). Denominator: \\(1-(-\\dfrac{1}{2})=\\dfrac{3}{2}\\). The value is \\(1\\)."
+          },
+          {
+            "question": "Evaluate \\(\\dfrac{\\sin 270^\\circ+\\cos 60^\\circ\\cdot\\tan 315^\\circ}{\\tan 315^\\circ-\\cos 60^\\circ}\\).",
+            "options": [
+              "\\(-3\\)",
+              "\\(1\\)",
+              "\\(-1\\)",
+              "\\(-\\dfrac{1}{3}\\)",
+              "\\(3\\)"
+            ],
+            "correct": 1,
+            "solution": "Use the unit circle: \\(\\sin 270^\\circ=-1\\), \\(\\cos 60^\\circ=\\dfrac{1}{2}\\), \\(\\tan 315^\\circ=-1\\), \\(\\cos 60^\\circ=\\dfrac{1}{2}\\). Numerator: \\(-1+(\\dfrac{1}{2})(-1)=-\\dfrac{3}{2}\\). Denominator: \\(-1-(\\dfrac{1}{2})=-\\dfrac{3}{2}\\). The value is \\(1\\)."
+          },
+          {
+            "question": "Evaluate \\(\\dfrac{\\sin 90^\\circ+\\cos 120^\\circ\\cdot\\tan 45^\\circ}{\\tan 45^\\circ-\\cos 300^\\circ}\\).",
+            "options": [
+              "\\(-1\\)",
+              "\\(3\\)",
+              "\\(-3\\)",
+              "\\(1\\)",
+              "\\(-\\dfrac{1}{3}\\)"
+            ],
+            "correct": 3,
+            "solution": "Use the unit circle: \\(\\sin 90^\\circ=1\\), \\(\\cos 120^\\circ=-\\dfrac{1}{2}\\), \\(\\tan 45^\\circ=1\\), \\(\\cos 300^\\circ=\\dfrac{1}{2}\\). Numerator: \\(1+(-\\dfrac{1}{2})(1)=\\dfrac{1}{2}\\). Denominator: \\(1-(\\dfrac{1}{2})=\\dfrac{1}{2}\\). The value is \\(1\\)."
+          },
+          {
+            "question": "Evaluate \\(\\dfrac{\\sin 330^\\circ+\\cos 180^\\circ\\cdot\\tan 135^\\circ}{\\tan 135^\\circ-\\cos 240^\\circ}\\).",
+            "options": [
+              "\\(-1\\)",
+              "\\(-3\\)",
+              "\\(-\\dfrac{1}{3}\\)",
+              "\\(\\dfrac{1}{3}\\)",
+              "\\(3\\)"
+            ],
+            "correct": 0,
+            "solution": "Use the unit circle: \\(\\sin 330^\\circ=-\\dfrac{1}{2}\\), \\(\\cos 180^\\circ=-1\\), \\(\\tan 135^\\circ=-1\\), \\(\\cos 240^\\circ=-\\dfrac{1}{2}\\). Numerator: \\(-\\dfrac{1}{2}+(-1)(-1)=\\dfrac{1}{2}\\). Denominator: \\(-1-(-\\dfrac{1}{2})=-\\dfrac{1}{2}\\). The value is \\(-1\\)."
+          },
+          {
+            "question": "If \\(\\sin\\theta+\\cos\\theta=\\dfrac{7}{13}\\), what is the value of \\(\\sin\\theta\\cos\\theta\\)?",
+            "options": [
+              "\\(-\\dfrac{120}{169}\\)",
+              "\\(-\\dfrac{60}{169}\\)",
+              "\\(\\dfrac{49}{338}\\)",
+              "\\(\\dfrac{120}{169}\\)",
+              "\\(\\dfrac{109}{169}\\)"
+            ],
+            "correct": 1,
+            "solution": "Square: \\((\\sin\\theta+\\cos\\theta)^2=1+2\\sin\\theta\\cos\\theta\\). So \\(\\sin\\theta\\cos\\theta=\\dfrac{(\\dfrac{7}{13})^2-1}{2}=-\\dfrac{60}{169}\\)."
+          },
+          {
+            "question": "Evaluate \\(\\dfrac{\\sin 270^\\circ+\\cos 240^\\circ\\cdot\\tan 315^\\circ}{\\tan 315^\\circ-\\cos 120^\\circ}\\).",
+            "options": [
+              "\\(1\\)",
+              "\\(-\\dfrac{1}{3}\\)",
+              "\\(3\\)",
+              "\\(-3\\)",
+              "\\(\\dfrac{1}{3}\\)"
+            ],
+            "correct": 0,
+            "solution": "Use the unit circle: \\(\\sin 270^\\circ=-1\\), \\(\\cos 240^\\circ=-\\dfrac{1}{2}\\), \\(\\tan 315^\\circ=-1\\), \\(\\cos 120^\\circ=-\\dfrac{1}{2}\\). Numerator: \\(-1+(-\\dfrac{1}{2})(-1)=-\\dfrac{1}{2}\\). Denominator: \\(-1-(-\\dfrac{1}{2})=-\\dfrac{1}{2}\\). The value is \\(1\\)."
           },
           {
             "question": "What is the total length of the part of \\([0, 2\\pi]\\) where \\(\\sin x \\geq \\dfrac{\\sqrt{3}}{2}\\)?",
@@ -44478,16 +44478,16 @@ const subjects = [
             "solution": "Square both sides: \\(\\sin^{2}x + 2\\sin x\\cos x + \\cos^{2}x = \\tfrac{1}{4}\\). So \\(1 + \\sin 2x = \\tfrac{1}{4}\\) and \\(\\sin 2x = -\\tfrac{3}{4}\\)."
           },
           {
-            "question": "What is the value of tan 60°?",
+            "question": "Evaluate \\(\\dfrac{\\sin 270^\\circ+\\cos 120^\\circ\\cdot\\tan 45^\\circ}{\\tan 45^\\circ-\\cos 240^\\circ}\\).",
             "options": [
-              "0",
-              "1",
-              "√2/2",
-              "√3",
-              "undefined"
+              "\\(\\dfrac{1}{3}\\)",
+              "\\(-\\dfrac{1}{3}\\)",
+              "\\(1\\)",
+              "\\(3\\)",
+              "\\(-1\\)"
             ],
-            "correct": 3,
-            "solution": "tan 60° = sin 60°/cos 60° = (√3/2)/(1/2) = √3."
+            "correct": 4,
+            "solution": "Use the unit circle: \\(\\sin 270^\\circ=-1\\), \\(\\cos 120^\\circ=-\\dfrac{1}{2}\\), \\(\\tan 45^\\circ=1\\), \\(\\cos 240^\\circ=-\\dfrac{1}{2}\\). Numerator: \\(-1+(-\\dfrac{1}{2})(1)=-\\dfrac{3}{2}\\). Denominator: \\(1-(-\\dfrac{1}{2})=\\dfrac{3}{2}\\). The value is \\(-1\\)."
           },
           {
             "question": "How many solutions does \\(2\\cos^{2}x - \\cos x - 1 = 0\\) have in the interval \\([0, 2\\pi)\\)?",
@@ -44562,256 +44562,256 @@ const subjects = [
             "solution": "Cosine rule: \\(\\cos C = \\dfrac{a^{2} + b^{2} - c^{2}}{2ab} = \\dfrac{49 + 64 - 81}{2 \\times 7 \\times 8} = \\dfrac{32}{112} = \\dfrac{2}{7}\\)."
           },
           {
-            "question": "Given that sin(θ) = 3/5 and θ is an angle in Quadrant II (π/2 < θ < π), what is the value of cos(θ)?",
+            "question": "In triangle ABC, AB = 16 cm, AC = 30 cm and the angle at A is 60°. What is the length of BC?",
             "options": [
-              "−4/5",
-              "4/5",
-              "−3/4",
-              "−5/4",
-              "3/4"
+              "\\(46\\text{ cm}\\)",
+              "\\(\\sqrt{480}\\text{ cm}\\)",
+              "\\(\\sqrt{1636}\\text{ cm}\\)",
+              "\\(34\\text{ cm}\\)",
+              "\\(26\\text{ cm}\\)"
             ],
-            "correct": 0,
-            "solution": "Using the Pythagorean identity: cos²(θ) = 1 − sin²(θ) = 1 − (3/5)² = 1 − 9/25 = 16/25.\nSince θ is in Quadrant II, cosine is negative.\nTherefore, cos(θ) = −√(16/25) = −4/5."
+            "correct": 4,
+            "solution": "Law of cosines: \\(BC^2=16^2+30^2-2(16)(30)\\cos60^\\circ\\) = \\(256+900-480=676\\), so \\(BC=26\\) cm."
           },
           {
-            "question": "What is the exact value of sin(2x) if sin(x) = 12/13 and x is in Quadrant I?",
+            "question": "In triangle ABC, AB = 12 cm, AC = 20 cm and the angle at A is 120°. What is the length of BC?",
             "options": [
-              "120/169",
-              "119/169",
-              "60/169",
-              "24/13",
-              "25/169"
+              "\\(28\\text{ cm}\\)",
+              "\\(\\sqrt{304}\\text{ cm}\\)",
+              "\\(32\\text{ cm}\\)",
+              "\\(8\\text{ cm}\\)",
+              "\\(\\sqrt{544}\\text{ cm}\\)"
             ],
             "correct": 0,
-            "solution": "In Quadrant I, cos(x) = √(1 − sin²x) = √(1 − 144/169) = √(25/169) = 5/13.\nUsing the double-angle identity: sin(2x) = 2sin(x)cos(x).\nsin(2x) = 2(12/13)(5/13) = 120/169."
+            "solution": "Law of cosines: \\(BC^2=12^2+20^2-2(12)(20)\\cos120^\\circ\\) = \\(144+400+240=784\\) (because \\(\\cos120^\\circ=-\\tfrac12\\)), so \\(BC=28\\) cm."
           },
           {
-            "question": "Simplify the expression: (1 − cos(2θ)) / sin(2θ)",
+            "question": "If \\(\\sin\\theta+\\cos\\theta=\\dfrac{7}{17}\\), what is the value of \\(\\sin\\theta\\cos\\theta\\)?",
             "options": [
-              "tan(θ)",
-              "cot(θ)",
-              "sin(θ)",
-              "cos(θ)",
-              "sec(θ)"
+              "\\(\\dfrac{240}{289}\\)",
+              "\\(-\\dfrac{240}{289}\\)",
+              "\\(\\dfrac{169}{289}\\)",
+              "\\(\\dfrac{49}{578}\\)",
+              "\\(-\\dfrac{120}{289}\\)"
             ],
-            "correct": 0,
-            "solution": "Use the double-angle formulas:\n1 − cos(2θ) = 1 − (1 − 2sin²θ) = 2sin²θ.\nsin(2θ) = 2sinθ cosθ.\nTherefore: (2sin²θ) / (2sinθ cosθ) = sinθ / cosθ = tan(θ)."
+            "correct": 4,
+            "solution": "Square: \\((\\sin\\theta+\\cos\\theta)^2=1+2\\sin\\theta\\cos\\theta\\). So \\(\\sin\\theta\\cos\\theta=\\dfrac{(\\dfrac{7}{17})^2-1}{2}=-\\dfrac{120}{289}\\)."
           },
           {
-            "question": "In triangle ABC, side a = 6 cm, side b = 10 cm, and the included angle C = 60°. What is the length of side c?",
+            "question": "How many solutions does \\(2\\cos^2x-\\cos x=0\\) have in the interval \\(0\\le x<2\\pi\\)?",
             "options": [
-              "2√19 cm",
-              "14 cm",
-              "√136 cm",
-              "4√7 cm",
-              "8 cm"
-            ],
-            "correct": 0,
-            "solution": "Apply the Law of Cosines: c² = a² + b² − 2ab cos(C).\nc² = 6² + 10² − 2(6)(10) cos(60°)\nc² = 36 + 100 − 120(1/2) = 136 − 60 = 76.\nc = √76 = √(4 × 19) = 2√19 cm."
-          },
-          {
-            "question": "Find all solutions to the equation 2sin(x) − 1 = 0 on the interval [0, 2π).",
-            "options": [
-              "x = π/6 and x = 5π/6",
-              "x = π/3 and x = 2π/3",
-              "x = π/6 and x = 7π/6",
-              "x = π/4 and x = 3π/4",
-              "x = 5π/6 and x = 7π/6"
-            ],
-            "correct": 0,
-            "solution": "2sin(x) − 1 = 0 → sin(x) = 1/2.\nOn [0, 2π), sine is positive in Quadrants I and II.\nQuadrant I reference angle: x = π/6.\nQuadrant II angle: x = π − π/6 = 5π/6.\nThus, x = π/6, 5π/6."
-          },
-          {
-            "question": "What is the exact value of cos(75°)?",
-            "options": [
-              "(√6 − √2) / 4",
-              "(√6 + √2) / 4",
-              "(√3 − 1) / 2",
-              "(√2 − √6) / 4",
-              "√6 / 4"
-            ],
-            "correct": 0,
-            "solution": "Write 75° = 45° + 30° and use the angle sum formula for cosine:\ncos(45° + 30°) = cos(45°)cos(30°) − sin(45°)sin(30°)\n= (√2/2)(√3/2) − (√2/2)(1/2)\n= (√6/4) − (√2/4) = (√6 − √2) / 4."
-          },
-          {
-            "question": "What is the period of the function f(x) = 3cos(4x − π/2) + 1?",
-            "options": [
-              "π/2",
-              "π/4",
-              "2π",
-              "π",
-              "4π"
-            ],
-            "correct": 0,
-            "solution": "The standard cosine function cos(Bx) has a period T = 2π / |B|.\nHere B = 4, so:\nT = 2π / 4 = π/2."
-          },
-          {
-            "question": "What is the maximum value attained by the function f(x) = 3sin(x) + 4cos(x)?",
-            "options": [
+              "3",
+              "2",
               "5",
-              "7",
-              "1",
-              "25",
-              "√7"
+              "6",
+              "4"
             ],
-            "correct": 0,
-            "solution": "An expression of the form a sin(x) + b cos(x) can be rewritten as R sin(x + α), where R = √(a² + b²).\nHere a = 3, b = 4:\nR = √(3² + 4²) = √(9 + 16) = √25 = 5.\nSince sin(x + α) ranges between −1 and 1, the maximum value is 5."
+            "correct": 4,
+            "solution": "Factor as a quadratic in \\(\\cos x\\): \\((2\\cos x-1)(\\cos x)=0\\), so \\(\\cos x=\\dfrac{1}{2}\\) or \\(\\cos x=0\\). A value of \\(\\cos\\) with absolute value above 1 has no solution, ±1 has one solution in a full turn, and any other value in between has two. Total: 2 + 2 = 4."
           },
           {
-            "question": "In a triangle ABC, angle A = 30°, angle B = 45°, and side a = 8 cm. What is the length of side b?",
-            "options": [
-              "8√2 cm",
-              "4√2 cm",
-              "16 cm",
-              "8√3 cm",
-              "12 cm"
-            ],
-            "correct": 0,
-            "solution": "Use the Law of Sines: a / sin(A) = b / sin(B).\n8 / sin(30°) = b / sin(45°)\n8 / (1/2) = b / (√2/2)\n16 = b / (√2/2) → b = 16 × (√2/2) = 8√2 cm."
-          },
-          {
-            "question": "Solve for x in the interval [0, 2π): cos(2x) = 0.",
-            "options": [
-              "π/4, 3π/4, 5π/4, 7π/4",
-              "π/2, 3π/2",
-              "π/4, 3π/4",
-              "0, π, 2π",
-              "π/6, 5π/6, 7π/6, 11π/6"
-            ],
-            "correct": 0,
-            "solution": "cos(θ) = 0 occurs at θ = π/2 + kπ.\nHere θ = 2x, so:\n2x = π/2, 3π/2, 5π/2, 7π/2 (since 0 ≤ x < 2π implies 0 ≤ 2x < 4π).\nDividing by 2:\nx = π/4, 3π/4, 5π/4, 7π/4."
-          },
-          {
-            "question": "Simplify the expression: (sin θ / (1 + cos θ)) + ((1 + cos θ) / sin θ)",
-            "options": [
-              "2 csc θ",
-              "2 sec θ",
-              "2 tan θ",
-              "csc θ",
-              "2 sin θ"
-            ],
-            "correct": 0,
-            "solution": "Find a common denominator: sin θ(1 + cos θ).\nNumerator = sin²θ + (1 + cos θ)² = sin²θ + (1 + 2cos θ + cos²θ)\n= (sin²θ + cos²θ) + 1 + 2cos θ = 1 + 1 + 2cos θ = 2 + 2cos θ = 2(1 + cos θ).\nThus, Expression = [2(1 + cos θ)] / [sin θ(1 + cos θ)] = 2 / sin θ = 2 csc θ."
-          },
-          {
-            "question": "What is the exact value of tan(π/3) − tan(π/6)?",
-            "options": [
-              "(2√3) / 3",
-              "√3 / 3",
-              "√3",
-              "1",
-              "0"
-            ],
-            "correct": 0,
-            "solution": "tan(π/3) = √3\ntan(π/6) = 1/√3 = √3/3\ntan(π/3) − tan(π/6) = √3 − √3/3 = (3√3 − √3) / 3 = (2√3) / 3."
-          },
-          {
-            "question": "What is the area of a triangle with side lengths a = 8 cm, b = 5 cm, and included angle C = 150°?",
-            "options": [
-              "10 cm²",
-              "20 cm²",
-              "10√3 cm²",
-              "20√3 cm²",
-              "15 cm²"
-            ],
-            "correct": 0,
-            "solution": "Area = (1/2)ab sin(C).\nHere C = 150°, and sin(150°) = sin(180° − 30°) = sin(30°) = 1/2.\nArea = (1/2)(8)(5)(1/2) = 10 cm²."
-          },
-          {
-            "question": "If tan(θ) = −3/4 and θ is in Quadrant IV, what is the value of sec(θ)?",
-            "options": [
-              "5/4",
-              "−5/4",
-              "4/5",
-              "−4/3",
-              "5/3"
-            ],
-            "correct": 0,
-            "solution": "Using sec²θ = 1 + tan²θ:\nsec²θ = 1 + (−3/4)² = 1 + 9/16 = 25/16.\nIn Quadrant IV, cosine (and secant) is positive.\nTherefore, sec(θ) = +√(25/16) = 5/4."
-          },
-          {
-            "question": "Convert an angle of 5π/12 radians into degrees.",
-            "options": [
-              "75°",
-              "65°",
-              "105°",
-              "85°",
-              "70°"
-            ],
-            "correct": 0,
-            "solution": "To convert radians to degrees, multiply by 180°/π:\n(5π / 12) × (180° / π) = (5 × 180°) / 12 = 5 × 15° = 75°."
-          },
-          {
-            "question": "How many solutions does the equation sin²(x) = 1 have in the interval [0, 2π)?",
+            "question": "How many solutions does \\(2\\cos^2x+\\cos x=0\\) have in the interval \\(0\\le x<2\\pi\\)?",
             "options": [
               "2",
-              "1",
+              "3",
+              "5",
               "4",
-              "0",
-              "3"
+              "6"
             ],
-            "correct": 0,
-            "solution": "sin²(x) = 1 → sin(x) = 1 or sin(x) = −1.\nOn [0, 2π):\nsin(x) = 1 at x = π/2.\nsin(x) = −1 at x = 3π/2.\nThus, there are exactly 2 solutions."
+            "correct": 3,
+            "solution": "Factor as a quadratic in \\(\\cos x\\): \\((2\\cos x+1)(\\cos x)=0\\), so \\(\\cos x=-\\dfrac{1}{2}\\) or \\(\\cos x=0\\). A value of \\(\\cos\\) with absolute value above 1 has no solution, ±1 has one solution in a full turn, and any other value in between has two. Total: 2 + 2 = 4."
           },
           {
-            "question": "What is the exact value of arcsin(sin(5π/6))?",
+            "question": "If \\(\\sin\\theta+\\cos\\theta=\\dfrac{1}{5}\\), what is the value of \\(\\sin\\theta\\cos\\theta\\)?",
             "options": [
-              "π/6",
-              "5π/6",
-              "−π/6",
-              "7π/6",
-              "1/2"
+              "\\(-\\dfrac{12}{25}\\)",
+              "\\(\\dfrac{1}{50}\\)",
+              "\\(-\\dfrac{6}{25}\\)",
+              "\\(\\dfrac{24}{25}\\)",
+              "\\(\\dfrac{13}{25}\\)"
             ],
             "correct": 0,
-            "solution": "First evaluate sin(5π/6) = 1/2.\nThe principal range of the arcsine function is [−π/2, π/2].\narcsin(1/2) = π/6 (since π/6 lies within [−π/2, π/2])."
+            "solution": "Square: \\((\\sin\\theta+\\cos\\theta)^2=1+2\\sin\\theta\\cos\\theta\\). So \\(\\sin\\theta\\cos\\theta=\\dfrac{(\\dfrac{1}{5})^2-1}{2}=-\\dfrac{12}{25}\\)."
           },
           {
-            "question": "Simplify: cos(π/2 − x) + sin(π − x)",
+            "question": "If \\(\\tan\\theta=\\dfrac{5}{2}\\), what is the value of \\(\\dfrac{3\\sin\\theta-4\\cos\\theta}{4\\sin\\theta+2\\cos\\theta}\\)?",
             "options": [
-              "2sin(x)",
-              "0",
-              "2cos(x)",
-              "sin(x) + cos(x)",
-              "−2sin(x)"
+              "\\(-\\dfrac{1}{6}\\)",
+              "\\(\\dfrac{7}{2}\\)",
+              "\\(\\dfrac{7}{16}\\)",
+              "\\(\\dfrac{23}{24}\\)",
+              "\\(\\dfrac{7}{24}\\)"
+            ],
+            "correct": 4,
+            "solution": "Divide numerator and denominator by \\(\\cos\\theta\\) (assumed non-zero): \\(\\dfrac{3\\tan\\theta-4}{4\\tan\\theta+2}=\\dfrac{3(\\dfrac{5}{2})-4}{4(\\dfrac{5}{2})+2}=\\dfrac{7}{24}\\)."
+          },
+          {
+            "question": "How many solutions does \\(2\\sin^2x+\\sin x=0\\) have in the interval \\(0\\le x<2\\pi\\)?",
+            "options": [
+              "3",
+              "4",
+              "2",
+              "5",
+              "6"
+            ],
+            "correct": 1,
+            "solution": "Factor as a quadratic in \\(\\sin x\\): \\((2\\sin x+1)(\\sin x)=0\\), so \\(\\sin x=-\\dfrac{1}{2}\\) or \\(\\sin x=0\\). A value of \\(\\sin\\) with absolute value above 1 has no solution, ±1 has one solution in a full turn, and any other value in between has two. Total: 2 + 2 = 4."
+          },
+          {
+            "question": "In triangle ABC, AB = 7 cm, AC = 8 cm and the angle at A is 120°. What is the length of BC?",
+            "options": [
+              "\\(1\\text{ cm}\\)",
+              "\\(\\sqrt{57}\\text{ cm}\\)",
+              "\\(\\sqrt{56}\\text{ cm}\\)",
+              "\\(13\\text{ cm}\\)",
+              "\\(15\\text{ cm}\\)"
+            ],
+            "correct": 3,
+            "solution": "Law of cosines: \\(BC^2=7^2+8^2-2(7)(8)\\cos120^\\circ\\) = \\(49+64+56=169\\) (because \\(\\cos120^\\circ=-\\tfrac12\\)), so \\(BC=13\\) cm."
+          },
+          {
+            "question": "In triangle ABC, AB = 3 cm, AC = 5 cm and the angle at A is 120°. What is the length of BC?",
+            "options": [
+              "\\(7\\text{ cm}\\)",
+              "\\(2\\text{ cm}\\)",
+              "\\(\\sqrt{15}\\text{ cm}\\)",
+              "\\(\\sqrt{34}\\text{ cm}\\)",
+              "\\(\\sqrt{19}\\text{ cm}\\)"
             ],
             "correct": 0,
-            "solution": "By cofunction and reduction identities:\ncos(π/2 − x) = sin(x)\nsin(π − x) = sin(x)\nTherefore: cos(π/2 − x) + sin(π − x) = sin(x) + sin(x) = 2sin(x)."
+            "solution": "Law of cosines: \\(BC^2=3^2+5^2-2(3)(5)\\cos120^\\circ\\) = \\(9+25+15=49\\) (because \\(\\cos120^\\circ=-\\tfrac12\\)), so \\(BC=7\\) cm."
           },
           {
-            "question": "A flagpole casts a shadow of 10√3 meters when the angle of elevation of the sun is 30°. What is the height of the flagpole?",
+            "question": "How many solutions does \\(2\\sin^2x-\\sin x=0\\) have in the interval \\(0\\le x<2\\pi\\)?",
             "options": [
-              "10 meters",
-              "15 meters",
-              "20 meters",
-              "10√3 meters",
-              "30 meters"
-            ],
-            "correct": 0,
-            "solution": "tan(30°) = height / shadow_length.\n1/√3 = h / (10√3) → h = (10√3) / √3 = 10 meters."
-          },
-          {
-            "question": "What is the value of cos²(15°) − sin²(15°)?",
-            "options": [
-              "√3 / 2",
-              "1/2",
-              "√2 / 2",
-              "1",
-              "0"
-            ],
-            "correct": 0,
-            "solution": "Use the double-angle identity: cos(2θ) = cos²(θ) − sin²(θ).\nWith θ = 15°:\ncos²(15°) − sin²(15°) = cos(2 × 15°) = cos(30°) = √3 / 2."
-          },
-          {
-            "question": "Which of the following expressions for K makes the identity true: sin⁴ α − cos⁴ α = K?",
-            "options": [
-              "K = cos 2α",
-              "K = cos 4α",
-              "K = -cos 2α",
-              "K = sin 4α",
-              "K = -cos 4α"
+              "2",
+              "3",
+              "4",
+              "6",
+              "5"
             ],
             "correct": 2,
-            "solution": "Factor using difference of squares:\nsin⁴ α - cos⁴ α = (sin² α - cos² α)(sin² α + cos² α).\nSince sin² α + cos² α = 1 and cos 2α = cos² α - sin² α:\nsin⁴ α - cos⁴ α = -(cos² α - sin² α) = -cos(2α)."
+            "solution": "Factor as a quadratic in \\(\\sin x\\): \\((2\\sin x-1)(\\sin x)=0\\), so \\(\\sin x=\\dfrac{1}{2}\\) or \\(\\sin x=0\\). A value of \\(\\sin\\) with absolute value above 1 has no solution, ±1 has one solution in a full turn, and any other value in between has two. Total: 2 + 2 = 4."
+          },
+          {
+            "question": "If \\(\\tan\\theta=\\dfrac{5}{2}\\), what is the value of \\(\\dfrac{2\\sin\\theta+1\\cos\\theta}{2\\sin\\theta+4\\cos\\theta}\\)?",
+            "options": [
+              "\\(\\dfrac{3}{8}\\)",
+              "\\(6\\)",
+              "\\(\\dfrac{1}{2}\\)",
+              "\\(\\dfrac{4}{9}\\)",
+              "\\(\\dfrac{2}{3}\\)"
+            ],
+            "correct": 4,
+            "solution": "Divide numerator and denominator by \\(\\cos\\theta\\) (assumed non-zero): \\(\\dfrac{2\\tan\\theta+1}{2\\tan\\theta+4}=\\dfrac{2(\\dfrac{5}{2})+1}{2(\\dfrac{5}{2})+4}=\\dfrac{2}{3}\\)."
+          },
+          {
+            "question": "In triangle ABC, AB = 15 cm, AC = 25 cm and the angle at A is 120°. What is the length of BC?",
+            "options": [
+              "\\(\\sqrt{375}\\text{ cm}\\)",
+              "\\(\\sqrt{850}\\text{ cm}\\)",
+              "\\(10\\text{ cm}\\)",
+              "\\(40\\text{ cm}\\)",
+              "\\(35\\text{ cm}\\)"
+            ],
+            "correct": 4,
+            "solution": "Law of cosines: \\(BC^2=15^2+25^2-2(15)(25)\\cos120^\\circ\\) = \\(225+625+375=1225\\) (because \\(\\cos120^\\circ=-\\tfrac12\\)), so \\(BC=35\\) cm."
+          },
+          {
+            "question": "If \\(\\sin\\theta+\\cos\\theta=-\\dfrac{7}{17}\\), what is the value of \\(\\sin^4\\theta+\\cos^4\\theta\\)?",
+            "options": [
+              "\\(\\dfrac{49}{289}\\)",
+              "\\(\\dfrac{409}{289}\\)",
+              "\\(\\dfrac{69121}{83521}\\)",
+              "\\(\\dfrac{54721}{83521}\\)",
+              "\\(\\dfrac{529}{289}\\)"
+            ],
+            "correct": 3,
+            "solution": "From the square, \\(\\sin\\theta\\cos\\theta=-\\dfrac{120}{289}\\). Then \\(\\sin^4\\theta+\\cos^4\\theta=(\\sin^2\\theta+\\cos^2\\theta)^2-2\\sin^2\\theta\\cos^2\\theta=1-2(-\\dfrac{120}{289})^2=\\dfrac{54721}{83521}\\)."
+          },
+          {
+            "question": "If \\(\\tan\\theta=\\dfrac{1}{2}\\), what is the value of \\(\\dfrac{3\\sin\\theta-3\\cos\\theta}{\\sin\\theta-4\\cos\\theta}\\)?",
+            "options": [
+              "\\(-\\dfrac{9}{7}\\)",
+              "\\(\\dfrac{3}{7}\\)",
+              "\\(-\\dfrac{1}{3}\\)",
+              "\\(0\\)",
+              "\\(-\\dfrac{3}{2}\\)"
+            ],
+            "correct": 1,
+            "solution": "Divide numerator and denominator by \\(\\cos\\theta\\) (assumed non-zero): \\(\\dfrac{3\\tan\\theta-3}{1\\tan\\theta-4}=\\dfrac{3(\\dfrac{1}{2})-3}{1(\\dfrac{1}{2})-4}=\\dfrac{3}{7}\\)."
+          },
+          {
+            "question": "If \\(\\sin\\theta+\\cos\\theta=\\dfrac{7}{17}\\), what is the value of \\(\\sin^4\\theta+\\cos^4\\theta\\)?",
+            "options": [
+              "\\(\\dfrac{409}{289}\\)",
+              "\\(\\dfrac{529}{289}\\)",
+              "\\(\\dfrac{49}{289}\\)",
+              "\\(\\dfrac{69121}{83521}\\)",
+              "\\(\\dfrac{54721}{83521}\\)"
+            ],
+            "correct": 4,
+            "solution": "From the square, \\(\\sin\\theta\\cos\\theta=-\\dfrac{120}{289}\\). Then \\(\\sin^4\\theta+\\cos^4\\theta=(\\sin^2\\theta+\\cos^2\\theta)^2-2\\sin^2\\theta\\cos^2\\theta=1-2(-\\dfrac{120}{289})^2=\\dfrac{54721}{83521}\\)."
+          },
+          {
+            "question": "If \\(\\sin\\theta+\\cos\\theta=-\\dfrac{1}{5}\\), what is the value of \\(\\sin\\theta\\cos\\theta\\)?",
+            "options": [
+              "\\(-\\dfrac{12}{25}\\)",
+              "\\(\\dfrac{1}{50}\\)",
+              "\\(\\dfrac{13}{25}\\)",
+              "\\(-\\dfrac{24}{25}\\)",
+              "\\(-\\dfrac{6}{25}\\)"
+            ],
+            "correct": 0,
+            "solution": "Square: \\((\\sin\\theta+\\cos\\theta)^2=1+2\\sin\\theta\\cos\\theta\\). So \\(\\sin\\theta\\cos\\theta=\\dfrac{(-\\dfrac{1}{5})^2-1}{2}=-\\dfrac{12}{25}\\)."
+          },
+          {
+            "question": "If \\(\\sin\\theta+\\cos\\theta=\\dfrac{7}{13}\\), what is the value of \\(\\sin^4\\theta+\\cos^4\\theta\\)?",
+            "options": [
+              "\\(\\dfrac{229}{169}\\)",
+              "\\(\\dfrac{2401}{28561}\\)",
+              "\\(\\dfrac{49}{169}\\)",
+              "\\(\\dfrac{24961}{28561}\\)",
+              "\\(\\dfrac{21361}{28561}\\)"
+            ],
+            "correct": 4,
+            "solution": "From the square, \\(\\sin\\theta\\cos\\theta=-\\dfrac{60}{169}\\). Then \\(\\sin^4\\theta+\\cos^4\\theta=(\\sin^2\\theta+\\cos^2\\theta)^2-2\\sin^2\\theta\\cos^2\\theta=1-2(-\\dfrac{60}{169})^2=\\dfrac{21361}{28561}\\)."
+          },
+          {
+            "question": "In triangle ABC, AB = 14 cm, AC = 16 cm and the angle at A is 120°. What is the length of BC?",
+            "options": [
+              "\\(\\sqrt{228}\\text{ cm}\\)",
+              "\\(\\sqrt{224}\\text{ cm}\\)",
+              "\\(2\\text{ cm}\\)",
+              "\\(26\\text{ cm}\\)",
+              "\\(30\\text{ cm}\\)"
+            ],
+            "correct": 3,
+            "solution": "Law of cosines: \\(BC^2=14^2+16^2-2(14)(16)\\cos120^\\circ\\) = \\(196+256+224=676\\) (because \\(\\cos120^\\circ=-\\tfrac12\\)), so \\(BC=26\\) cm."
+          },
+          {
+            "question": "If \\(\\tan\\theta=-3\\), what is the value of \\(\\dfrac{3\\sin\\theta+4\\cos\\theta}{3\\sin\\theta-4\\cos\\theta}\\)?",
+            "options": [
+              "\\(1\\)",
+              "\\(\\dfrac{5}{13}\\)",
+              "\\(-\\dfrac{3}{5}\\)",
+              "\\(-5\\)",
+              "\\(-7\\)"
+            ],
+            "correct": 1,
+            "solution": "Divide numerator and denominator by \\(\\cos\\theta\\) (assumed non-zero): \\(\\dfrac{3\\tan\\theta+4}{3\\tan\\theta-4}=\\dfrac{3(-3)+4}{3(-3)-4}=\\dfrac{5}{13}\\)."
+          },
+          {
+            "question": "How many solutions does \\(4\\sin^2x-1=0\\) have in the interval \\(0\\le x<2\\pi\\)?",
+            "options": [
+              "4",
+              "2",
+              "3",
+              "5",
+              "6"
+            ],
+            "correct": 0,
+            "solution": "Factor as a quadratic in \\(\\sin x\\): \\((2\\sin x+1)(2\\sin x-1)=0\\), so \\(\\sin x=-\\dfrac{1}{2}\\) or \\(\\sin x=\\dfrac{1}{2}\\). A value of \\(\\sin\\) with absolute value above 1 has no solution, ±1 has one solution in a full turn, and any other value in between has two. Total: 2 + 2 = 4."
           },
           {
             "question": "In the isosceles triangle ABC, the median AM to the base BC measures 5 cm and the tangent of angle ACB is 5/13. What is the length, in cm, of the base BC?",
@@ -44838,16 +44838,16 @@ const subjects = [
             "solution": "Rewrite the expression as f(x) = (cos x + 1)/2 + 2 sin x. For all x ∈ [0, π], (cos x + 1) ≥ 0 and sin x ≥ 0. The only point where (cos x + 1) = 0 is x = π, where sin(π) = 0 as well. For all other x ∈ [0, π), f(x) > 0. At the boundary x = π, f(π) = (-1+1)/2 = 0, so f(x) ≥ 0 throughout the interval and is strictly positive on almost all of [0, π]."
           },
           {
-            "question": "For which values of x, with 0 < x < π, is sin(x) > sin(5π/18)?",
+            "question": "How many solutions does \\(4\\cos^2x-1=0\\) have in the interval \\(0\\le x<2\\pi\\)?",
             "options": [
-              "5π/18 < x < 13π/18",
-              "5π/18 < x < π/2",
-              "0 < x < 5π/18 and 5π/18 < x < π",
-              "5π/18 < x < 7π/9",
-              "5π/18 < x < π"
+              "3",
+              "6",
+              "4",
+              "5",
+              "2"
             ],
-            "correct": 0,
-            "solution": "On (0, π), sin(x) = sin(5π/18) at x = 5π/18 and at its supplementary angle x = π - 5π/18 = 13π/18.\nSince the sine curve is concave down with its peak at π/2, sin(x) > sin(5π/18) strictly between these two angles: 5π/18 < x < 13π/18."
+            "correct": 2,
+            "solution": "Factor as a quadratic in \\(\\cos x\\): \\((2\\cos x-1)(2\\cos x+1)=0\\), so \\(\\cos x=\\dfrac{1}{2}\\) or \\(\\cos x=-\\dfrac{1}{2}\\). A value of \\(\\cos\\) with absolute value above 1 has no solution, ±1 has one solution in a full turn, and any other value in between has two. Total: 2 + 2 = 4."
           }
         ]
       },
@@ -44868,64 +44868,64 @@ const subjects = [
             "solution": "\\(P(\\text{red}) = \\tfrac{1}{2} \\cdot \\tfrac{3}{5} + \\tfrac{1}{2} \\cdot \\tfrac{1}{5} = \\tfrac{3}{10} + \\tfrac{1}{10} = \\tfrac{2}{5}\\). \\(P(A | \\text{red}) = \\dfrac{3/10}{2/5} = \\dfrac{3}{4}\\)."
           },
           {
-            "question": "A bag contains 5 red and 3 blue marbles. Two marbles are drawn without replacement. What is the probability both are red?",
+            "question": "A bag holds 3 red, 4 blue and 4 green balls. Two balls are drawn one after the other without replacement. What is the probability that at least one of the two balls is red?",
             "options": [
-              "5/14",
-              "5/28",
-              "25/64",
-              "5/8",
-              "15/28"
-            ],
-            "correct": 0,
-            "solution": "P(first red) = 5/8. P(second red | first red) = 4/7. P(both red) = (5/8) × (4/7) = 20/56 = 5/14."
-          },
-          {
-            "question": "A fair coin is tossed 3 times. What is the probability of getting exactly 2 heads?",
-            "options": [
-              "1/8",
-              "3/8",
-              "1/2",
-              "5/8",
-              "3/4"
-            ],
-            "correct": 1,
-            "solution": "Total outcomes=2³=8. Exactly 2 heads: HHT, HTH, THH=3 ways. P=3/8."
-          },
-          {
-            "question": "Two cards are drawn from a standard deck without replacement. What is the probability both are aces?",
-            "options": [
-              "1/221",
-              "1/169",
-              "4/52",
-              "1/13",
-              "1/26"
-            ],
-            "correct": 0,
-            "solution": "P(first ace)=4/52=1/13. P(second ace|first)=3/51=1/17. P=1/13×1/17=1/221."
-          },
-          {
-            "question": "A bag contains 4 red, 5 blue, and 6 green marbles. One marble is drawn. What is the probability it is NOT blue?",
-            "options": [
-              "4/15",
-              "5/15",
-              "6/15",
-              "10/15",
-              "11/15"
+              "\\(\\dfrac{54}{55}\\)",
+              "\\(\\dfrac{1}{2}\\)",
+              "\\(\\dfrac{28}{55}\\)",
+              "\\(\\dfrac{27}{55}\\)",
+              "\\(\\dfrac{54}{121}\\)"
             ],
             "correct": 3,
-            "solution": "Total=15. Not blue=4+6=10. P=10/15=2/3."
+            "solution": "There are 11×10 = 110 equally likely ordered pairs (the second ball is drawn from the 10 balls left). Counting the favourable ordered pairs gives 54, so the probability is \\(\\dfrac{54}{110}=\\dfrac{27}{55}\\). Using the with-replacement fractions \\(/121\\) is a common mistake."
           },
           {
-            "question": "The probability of event A is 0.4 and event B is 0.5. If A and B are independent, what is P(A and B)?",
+            "question": "In a population of 1000 people, 20 have a certain condition. A test is positive for 90% of the people who have the condition and also for 5% of the people who do not. A randomly chosen person tests positive. What is the probability that this person has the condition?",
             "options": [
-              "0.1",
-              "0.2",
-              "0.4",
-              "0.5",
-              "0.9"
+              "\\(\\dfrac{9}{500}\\)",
+              "\\(\\dfrac{49}{67}\\)",
+              "\\(\\dfrac{18}{67}\\)",
+              "\\(\\dfrac{67}{1000}\\)",
+              "\\(\\dfrac{9}{10}\\)"
+            ],
+            "correct": 2,
+            "solution": "True positives: 90% of 20 = 18. False positives: 5% of 980 = 49. Everyone who tests positive: 67. So \\(P(\\text{condition}\\mid\\text{positive})=\\dfrac{18}{67}=\\dfrac{18}{67}\\). The test sensitivity (90%) is a different quantity."
+          },
+          {
+            "question": "Two fair dice are rolled. Given that at least one of them shows a 5, what is the probability that the sum of the two dice is 6?",
+            "options": [
+              "\\(\\dfrac{5}{36}\\)",
+              "\\(\\dfrac{1}{18}\\)",
+              "\\(\\dfrac{55}{1296}\\)",
+              "\\(\\dfrac{2}{11}\\)",
+              "\\(\\dfrac{2}{5}\\)"
+            ],
+            "correct": 3,
+            "solution": "Condition: at least one die shows 5 — there are 11 such outcomes out of 36. Among them, those with sum 6: 2. So \\(P=\\dfrac{2}{11}=\\dfrac{2}{11}\\). (Dividing by 36 would ignore the condition.)"
+          },
+          {
+            "question": "A and B are independent events with \\(P(A)=\\dfrac{1}{2}\\) and \\(P(B)=\\dfrac{1}{3}\\). What is the probability that neither A nor B occurs?",
+            "options": [
+              "\\(\\dfrac{1}{6}\\)",
+              "\\(\\dfrac{2}{3}\\)",
+              "\\(\\dfrac{1}{3}\\)",
+              "\\(\\dfrac{1}{2}\\)",
+              "\\(\\dfrac{7}{6}\\)"
+            ],
+            "correct": 2,
+            "solution": "Independence gives \\(P(A\\cap B)=\\dfrac{1}{6}\\). Neither: \\((1-P(A))(1-P(B))=\\dfrac{1}{3}\\)."
+          },
+          {
+            "question": "Two fair dice are rolled. Given that at least one of them shows a 5, what is the probability that the sum of the two dice is 7?",
+            "options": [
+              "\\(\\dfrac{11}{36}\\)",
+              "\\(\\dfrac{2}{11}\\)",
+              "\\(\\dfrac{11}{216}\\)",
+              "\\(\\dfrac{1}{6}\\)",
+              "\\(\\dfrac{1}{18}\\)"
             ],
             "correct": 1,
-            "solution": "P(A∩B)=P(A)×P(B)=0.4×0.5=0.2."
+            "solution": "Condition: at least one die shows 5 — there are 11 such outcomes out of 36. Among them, those with sum 7: 2. So \\(P=\\dfrac{2}{11}=\\dfrac{2}{11}\\). (Dividing by 36 would ignore the condition.)"
           },
           {
             "question": "A shooter hits the target with probability 0.7 on each independent shot. What is the probability of at least 2 hits in 3 shots?",
@@ -44952,16 +44952,16 @@ const subjects = [
             "solution": "\\(P(\\text{defective}) = 0.6 \\times 0.02 + 0.4 \\times 0.05 = 0.012 + 0.020 = 0.032\\). Bayes: \\(P(A | D) = \\dfrac{0.012}{0.032} = 0.375\\)."
           },
           {
-            "question": "In a class of 30 students, 18 play football and 12 play basketball. If 6 play both, what is the probability a randomly selected student plays neither?",
+            "question": "In a population of 1000 people, 50 have a certain condition. A test is positive for 80% of the people who have the condition and also for 2% of the people who do not. A randomly chosen person tests positive. What is the probability that this person has the condition?",
             "options": [
-              "1/5",
-              "1/6",
-              "1/10",
-              "2/15",
-              "1/15"
+              "\\(\\dfrac{1}{20}\\)",
+              "\\(\\dfrac{4}{5}\\)",
+              "\\(\\dfrac{59}{1000}\\)",
+              "\\(\\dfrac{19}{59}\\)",
+              "\\(\\dfrac{40}{59}\\)"
             ],
-            "correct": 1,
-            "solution": "Neither=30−(18+12−6)=30−24=6. P=6/30=1/5."
+            "correct": 4,
+            "solution": "True positives: 80% of 50 = 40. False positives: 2% of 950 = 19. Everyone who tests positive: 59. So \\(P(\\text{condition}\\mid\\text{positive})=\\dfrac{40}{59}=\\dfrac{40}{59}\\). The test sensitivity (80%) is a different quantity."
           },
           {
             "question": "Three cards are drawn without replacement from 5 red and 3 blue cards. What is the probability of exactly 2 red cards?",
@@ -44976,16 +44976,16 @@ const subjects = [
             "solution": "\\(\\dfrac{\\binom{5}{2}\\binom{3}{1}}{\\binom{8}{3}} = \\dfrac{10 \\times 3}{56} = \\dfrac{30}{56} = \\dfrac{15}{28}\\)."
           },
           {
-            "question": "A number is chosen at random from 1 to 20. What is the probability it is prime?",
+            "question": "A bag holds 3 red, 6 blue and 3 green balls. Two balls are drawn one after the other without replacement. What is the probability that at least one of the two balls is red?",
             "options": [
-              "2/5",
-              "3/10",
-              "7/20",
-              "1/4",
-              "9/20"
+              "\\(\\dfrac{10}{11}\\)",
+              "\\(\\dfrac{5}{12}\\)",
+              "\\(\\dfrac{5}{11}\\)",
+              "\\(\\dfrac{7}{16}\\)",
+              "\\(\\dfrac{61}{132}\\)"
             ],
             "correct": 2,
-            "solution": "Primes: 2,3,5,7,11,13,17,19=8 numbers. P=8/20=2/5."
+            "solution": "There are 12×11 = 132 equally likely ordered pairs (the second ball is drawn from the 11 balls left). Counting the favourable ordered pairs gives 60, so the probability is \\(\\dfrac{60}{132}=\\dfrac{5}{11}\\). Using the with-replacement fractions \\(/144\\) is a common mistake."
           },
           {
             "question": "The mean of 10 numbers is 12. An 11th number is added and the mean becomes 13. What is the 11th number?",
@@ -45048,16 +45048,16 @@ const subjects = [
             "solution": "Use the complement: no sixes in 4 rolls has probability \\(\\left(\\dfrac{5}{6}\\right)^{4} = \\dfrac{625}{1296} = 0.482\\). So \\(P(\\text{at least one}) = 1 - 0.482 = 0.518\\)."
           },
           {
-            "question": "A box contains 5 defective and 15 non-defective items. Two are drawn without replacement. What is the probability both are non-defective?",
+            "question": "Two fair dice are rolled. Given that at least one of them shows a 6, what is the probability that the sum of the two dice is 7?",
             "options": [
-              "3/20",
-              "7/19",
-              "21/38",
-              "49/95",
-              "7/10"
+              "\\(\\dfrac{11}{36}\\)",
+              "\\(\\dfrac{1}{6}\\)",
+              "\\(\\dfrac{1}{3}\\)",
+              "\\(\\dfrac{11}{216}\\)",
+              "\\(\\dfrac{2}{11}\\)"
             ],
-            "correct": 3,
-            "solution": "P(first non-def)=15/20=3/4. P(second|first)=14/19. P=3/4×14/19=42/76=21/38."
+            "correct": 4,
+            "solution": "Condition: at least one die shows 6 — there are 11 such outcomes out of 36. Among them, those with sum 7: 2. So \\(P=\\dfrac{2}{11}=\\dfrac{2}{11}\\). (Dividing by 36 would ignore the condition.)"
           },
           {
             "question": "What is the interquartile range of 3, 5, 7, 8, 9, 11, 13, 15, 18?",
@@ -45084,28 +45084,28 @@ const subjects = [
             "solution": "\\(P(\\text{neither}) = 1 - 0.7 = 0.3\\). \\(P(A \\cap B) = 0.5 + 0.4 - 0.7 = 0.2\\), and \\(P(A)P(B) = 0.5 \\times 0.4 = 0.2\\). They are equal, so A and B are independent."
           },
           {
-            "question": "What is the probability that a leap year has 53 Sundays?",
+            "question": "Two fair dice are rolled. Given that at least one of them shows a 3, what is the probability that the sum of the two dice is 8?",
             "options": [
-              "1/7",
-              "2/7",
-              "3/7",
-              "5/7",
-              "6/7"
+              "\\(\\dfrac{11}{36}\\)",
+              "\\(\\dfrac{1}{18}\\)",
+              "\\(\\dfrac{55}{1296}\\)",
+              "\\(\\dfrac{2}{11}\\)",
+              "\\(\\dfrac{2}{5}\\)"
             ],
-            "correct": 1,
-            "solution": "Leap year=366 days=52 weeks+2 days. Extra 2 days can be (Sun,Mon),(Mon,Tue),...,(Sat,Sun). 2/7 cases include Sunday. P=2/7."
+            "correct": 3,
+            "solution": "Condition: at least one die shows 3 — there are 11 such outcomes out of 36. Among them, those with sum 8: 2. So \\(P=\\dfrac{2}{11}=\\dfrac{2}{11}\\). (Dividing by 36 would ignore the condition.)"
           },
           {
-            "question": "A test has 10 true/false questions. What is the probability of getting exactly 7 correct by random guessing?",
+            "question": "In a population of 1000 people, 100 have a certain condition. A test is positive for 80% of the people who have the condition and also for 2% of the people who do not. A randomly chosen person tests positive. What is the probability that this person has the condition?",
             "options": [
-              "0.117",
-              "0.205",
-              "0.5",
-              "0.7",
-              "0.9"
+              "\\(\\dfrac{40}{49}\\)",
+              "\\(\\dfrac{9}{49}\\)",
+              "\\(\\dfrac{49}{500}\\)",
+              "\\(\\dfrac{2}{25}\\)",
+              "\\(\\dfrac{1}{10}\\)"
             ],
             "correct": 0,
-            "solution": "Binomial: P=¹⁰C₇(0.5)⁷(0.5)³=120×1/1024=120/1024≈0.117."
+            "solution": "True positives: 80% of 100 = 80. False positives: 2% of 900 = 18. Everyone who tests positive: 98. So \\(P(\\text{condition}\\mid\\text{positive})=\\dfrac{80}{98}=\\dfrac{40}{49}\\). The test sensitivity (80%) is a different quantity."
           },
           {
             "question": "A disease affects 1% of people. A test is positive for 90% of the people with the disease and for 5% of the people without it. If a person tests positive, what is the probability that they have the disease?",
@@ -45120,40 +45120,40 @@ const subjects = [
             "solution": "\\(P(\\text{pos}) = 0.01 \\times 0.90 + 0.99 \\times 0.05 = 0.009 + 0.0495 = 0.0585\\). \\(P(\\text{disease} | \\text{pos}) = \\dfrac{0.009}{0.0585} = 0.154 \\approx 15\\%\\). Most positives are false positives because the disease is rare."
           },
           {
-            "question": "Two events A and B are mutually exclusive. If P(A)=0.3 and P(B)=0.4, what is P(A or B)?",
+            "question": "A and B are independent events with \\(P(A)=\\dfrac{3}{4}\\) and \\(P(B)=\\dfrac{1}{2}\\). What is the probability that at least one of A and B occurs?",
             "options": [
-              "0.12",
-              "0.3",
-              "0.4",
-              "0.7",
-              "1.0"
-            ],
-            "correct": 3,
-            "solution": "For mutually exclusive: P(A∪B)=P(A)+P(B)=0.3+0.4=0.7."
-          },
-          {
-            "question": "Events A and B are independent with P(A) = 0.4 and P(B) = 0.5. What is the probability of the union P(A ∪ B)?",
-            "options": [
-              "0.70",
-              "0.90",
-              "0.20",
-              "0.60",
-              "0.75"
+              "\\(\\dfrac{7}{8}\\)",
+              "\\(\\dfrac{1}{8}\\)",
+              "\\(\\dfrac{3}{8}\\)",
+              "\\(\\dfrac{5}{4}\\)",
+              "\\(\\dfrac{1}{2}\\)"
             ],
             "correct": 0,
-            "solution": "Since A and B are independent, P(A ∩ B) = P(A) × P(B) = 0.4 × 0.5 = 0.20.\nBy the addition rule of probability:\nP(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.40 + 0.50 − 0.20 = 0.70."
+            "solution": "Independence gives \\(P(A\\cap B)=\\dfrac{3}{8}\\). Then \\(P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{7}{8}\\)."
           },
           {
-            "question": "A bag contains 5 red balls and 3 blue balls. Two balls are drawn at random one after the other without replacement. What is the probability that both balls drawn are blue?",
+            "question": "In a population of 1000 people, 40 have a certain condition. A test is positive for 80% of the people who have the condition and also for 5% of the people who do not. A randomly chosen person tests positive. What is the probability that this person has the condition?",
             "options": [
-              "3/28",
-              "9/64",
-              "3/8",
-              "1/4",
-              "5/28"
+              "\\(\\dfrac{1}{25}\\)",
+              "\\(\\dfrac{4}{125}\\)",
+              "\\(\\dfrac{3}{5}\\)",
+              "\\(\\dfrac{2}{25}\\)",
+              "\\(\\dfrac{2}{5}\\)"
             ],
-            "correct": 0,
-            "solution": "P(1st is blue) = 3/8.\nAfter drawing one blue ball, 7 balls remain in the bag, of which 2 are blue.\nP(2nd is blue | 1st is blue) = 2/7.\nP(both blue) = (3/8) × (2/7) = 6/56 = 3/28."
+            "correct": 4,
+            "solution": "True positives: 80% of 40 = 32. False positives: 5% of 960 = 48. Everyone who tests positive: 80. So \\(P(\\text{condition}\\mid\\text{positive})=\\dfrac{32}{80}=\\dfrac{2}{5}\\). The test sensitivity (80%) is a different quantity."
+          },
+          {
+            "question": "Two fair dice are rolled. Given that at least one of them shows a 5, what is the probability that the sum of the two dice is 10?",
+            "options": [
+              "\\(\\dfrac{11}{36}\\)",
+              "\\(\\dfrac{11}{432}\\)",
+              "\\(\\dfrac{1}{11}\\)",
+              "\\(\\dfrac{1}{36}\\)",
+              "\\(\\dfrac{1}{12}\\)"
+            ],
+            "correct": 2,
+            "solution": "Condition: at least one die shows 5 — there are 11 such outcomes out of 36. Among them, those with sum 10: 1. So \\(P=\\dfrac{1}{11}=\\dfrac{1}{11}\\). (Dividing by 36 would ignore the condition.)"
           },
           {
             "question": "In a diagnostic test for a disease with prevalence 1%, the test has a sensitivity of 95% (true positive rate) and a specificity of 90% (true negative rate). What is the probability that a randomly chosen person tests positive?",
@@ -45168,16 +45168,16 @@ const subjects = [
             "solution": "By the Law of Total Probability:\nP(Positive) = P(Positive | Disease)P(Disease) + P(Positive | No Disease)P(No Disease).\nP(Positive | Disease) = 0.95 (sensitivity)\nP(Disease) = 0.01\nP(Positive | No Disease) = 1 − 0.90 = 0.10 (false positive rate)\nP(No Disease) = 0.99\nP(Positive) = (0.95 × 0.01) + (0.10 × 0.99) = 0.0095 + 0.0990 = 0.1085."
           },
           {
-            "question": "A fair six-sided die is rolled 3 times. What is the probability of getting at least one '6'?",
+            "question": "A and B are independent events with \\(P(A)=\\dfrac{1}{4}\\) and \\(P(B)=\\dfrac{1}{2}\\). What is the probability that at least one of A and B occurs?",
             "options": [
-              "91/216",
-              "1/216",
-              "125/216",
-              "1/2",
-              "1/3"
+              "\\(\\dfrac{1}{8}\\)",
+              "\\(\\dfrac{7}{8}\\)",
+              "\\(\\dfrac{1}{2}\\)",
+              "\\(\\dfrac{5}{8}\\)",
+              "\\(\\dfrac{3}{8}\\)"
             ],
-            "correct": 0,
-            "solution": "P(at least one 6) = 1 − P(no 6 in all 3 rolls).\nP(not getting a 6 on one roll) = 5/6.\nP(no 6 in 3 rolls) = (5/6)³ = 125/216.\nP(at least one 6) = 1 − 125/216 = 91/216."
+            "correct": 3,
+            "solution": "Independence gives \\(P(A\\cap B)=\\dfrac{1}{8}\\). Then \\(P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{5}{8}\\)."
           },
           {
             "question": "In a histogram the bar height is the frequency density. The class 0–5 has frequency 20 and bar height 4. The class 5–15 has frequency 60. What is the bar height of the class 5–15?",
@@ -45204,28 +45204,28 @@ const subjects = [
             "solution": "Number of items n = 8.\nMean μ = (2 + 4 + 4 + 4 + 5 + 5 + 7 + 9) / 8 = 40 / 8 = 5.\nSquared deviations from the mean (x − μ)²:\n(2−5)² = 9\n(4−5)² = 1 (three times: 1, 1, 1)\n(5−5)² = 0 (two times: 0, 0)\n(7−5)² = 4\n(9−5)² = 16\nSum of squared deviations = 9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32.\nVariance σ² = 32 / 8 = 4.\nStandard deviation σ = √4 = 2."
           },
           {
-            "question": "Two fair six-sided dice are rolled simultaneously. What is the probability that the sum of the two numbers is a prime number?",
+            "question": "A bag holds 5 red, 5 blue and 3 green balls. Two balls are drawn one after the other without replacement. What is the probability that the two balls have different colours?",
             "options": [
-              "15/36 (or 5/12)",
-              "7/36",
-              "1/2",
-              "13/36",
-              "1/3"
+              "\\(\\dfrac{37}{52}\\)",
+              "\\(\\dfrac{55}{78}\\)",
+              "\\(\\dfrac{55}{39}\\)",
+              "\\(\\dfrac{23}{78}\\)",
+              "\\(\\dfrac{110}{169}\\)"
             ],
-            "correct": 0,
-            "solution": "Total outcomes = 6 × 6 = 36.\nPossible sums that are prime: 2, 3, 5, 7, 11.\n- Sum = 2: (1,1) → 1 outcome\n- Sum = 3: (1,2), (2,1) → 2 outcomes\n- Sum = 5: (1,4), (2,3), (3,2), (4,1) → 4 outcomes\n- Sum = 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) → 6 outcomes\n- Sum = 11: (5,6), (6,5) → 2 outcomes\nTotal favorable outcomes = 1 + 2 + 4 + 6 + 2 = 15.\nProbability = 15/36 = 5/12."
+            "correct": 1,
+            "solution": "There are 13×12 = 156 equally likely ordered pairs (the second ball is drawn from the 12 balls left). Counting the favourable ordered pairs gives 110, so the probability is \\(\\dfrac{110}{156}=\\dfrac{55}{78}\\). Using the with-replacement fractions \\(/169\\) is a common mistake."
           },
           {
-            "question": "A student takes a multiple-choice quiz consisting of 5 questions, each with 4 options (only one correct). If the student guesses at random on every question, what is the probability of getting exactly 4 questions correct?",
+            "question": "A and B are independent events with \\(P(A)=\\dfrac{3}{4}\\) and \\(P(B)=\\dfrac{1}{5}\\). What is the probability that exactly one of A and B occurs?",
             "options": [
-              "15 / 1024",
-              "5 / 1024",
-              "1 / 1024",
-              "45 / 1024",
-              "15 / 256"
+              "\\(\\dfrac{19}{20}\\)",
+              "\\(\\dfrac{13}{20}\\)",
+              "\\(\\dfrac{3}{20}\\)",
+              "\\(\\dfrac{4}{5}\\)",
+              "\\(\\dfrac{17}{20}\\)"
             ],
-            "correct": 0,
-            "solution": "This is a binomial probability: n = 5, k = 4, p = 1/4, 1 − p = 3/4.\nP(X = 4) = C(5, 4) × (1/4)⁴ × (3/4)¹ = 5 × (1/256) × (3/4) = (5 × 3) / 1024 = 15/1024."
+            "correct": 1,
+            "solution": "Independence gives \\(P(A\\cap B)=\\dfrac{3}{20}\\). Exactly one occurs: \\(P(A)P(B^c)+P(B)P(A^c)=\\dfrac{13}{20}\\)."
           },
           {
             "question": "A dataset of test scores has a mean of 60 and a standard deviation of 8. If each student's score is multiplied by 2 and then increased by 5, what are the new mean and new standard deviation?",
@@ -45240,16 +45240,16 @@ const subjects = [
             "solution": "For a linear transformation Y = aX + b:\nNew Mean = a × Mean(X) + b = 2(60) + 5 = 120 + 5 = 125.\nNew SD = |a| × SD(X) = 2 × 8 = 16 (adding a constant shifts the distribution but does not change its spread)."
           },
           {
-            "question": "In a standard deck of 52 playing cards, two cards are drawn at random without replacement. What is the probability that both cards are Aces?",
+            "question": "A bag holds 6 red, 6 blue balls. Two balls are drawn one after the other without replacement. What is the probability that at least one of the two balls is red?",
             "options": [
-              "1/221",
-              "1/169",
-              "1/17",
-              "4/663",
-              "1/26"
+              "\\(\\dfrac{17}{22}\\)",
+              "\\(\\dfrac{5}{22}\\)",
+              "\\(\\dfrac{103}{132}\\)",
+              "\\(\\dfrac{17}{11}\\)",
+              "\\(\\dfrac{3}{4}\\)"
             ],
             "correct": 0,
-            "solution": "There are 4 Aces in a 52-card deck.\nP(1st Ace) = 4/52 = 1/13.\nP(2nd Ace | 1st Ace) = 3/51 = 1/17.\nP(both Aces) = (1/13) × (1/17) = 1/221."
+            "solution": "There are 12×11 = 132 equally likely ordered pairs (the second ball is drawn from the 11 balls left). Counting the favourable ordered pairs gives 102, so the probability is \\(\\dfrac{102}{132}=\\dfrac{17}{22}\\). Using the with-replacement fractions \\(/144\\) is a common mistake."
           },
           {
             "question": "A data set has \\(Q_1 = 20\\) and \\(Q_3 = 32\\). Using the rule \"an outlier lies more than \\(1.5 \\times \\text{IQR}\\) above \\(Q_3\\)\", above which value is a data point an outlier?",
@@ -45264,64 +45264,64 @@ const subjects = [
             "solution": "\\(\\text{IQR} = 32 - 20 = 12\\). \\(1.5 \\times 12 = 18\\). The upper fence is \\(32 + 18 = 50\\)."
           },
           {
-            "question": "In a group of 30 students, 18 study Biology, 15 study Chemistry, and 8 study both. If a student is chosen at random, what is the probability that they study NEITHER subject?",
+            "question": "In a population of 1000 people, 10 have a certain condition. A test is positive for 90% of the people who have the condition and also for 10% of the people who do not. A randomly chosen person tests positive. What is the probability that this person has the condition?",
             "options": [
-              "5/30 (or 1/6)",
-              "7/30",
-              "8/30",
-              "2/30",
-              "0"
+              "\\(\\dfrac{11}{12}\\)",
+              "\\(\\dfrac{1}{100}\\)",
+              "\\(\\dfrac{27}{250}\\)",
+              "\\(\\dfrac{1}{12}\\)",
+              "\\(\\dfrac{9}{1000}\\)"
             ],
-            "correct": 0,
-            "solution": "N(Biology ∪ Chemistry) = N(B) + N(C) − N(B ∩ C) = 18 + 15 − 8 = 25 students.\nStudents studying neither = 30 − 25 = 5 students.\nProbability = 5/30 = 1/6."
+            "correct": 3,
+            "solution": "True positives: 90% of 10 = 9. False positives: 10% of 990 = 99. Everyone who tests positive: 108. So \\(P(\\text{condition}\\mid\\text{positive})=\\dfrac{9}{108}=\\dfrac{1}{12}\\). The test sensitivity (90%) is a different quantity."
           },
           {
-            "question": "If P(A) = 0.6, P(B) = 0.3, and P(A | B) = 0.8, what is P(B | A)?",
+            "question": "A bag holds 5 red, 2 blue and 1 green balls. Two balls are drawn one after the other without replacement. What is the probability that the two balls have the same colour?",
             "options": [
-              "0.40",
-              "0.24",
-              "0.50",
-              "0.30",
-              "0.18"
+              "\\(\\dfrac{15}{32}\\)",
+              "\\(\\dfrac{11}{32}\\)",
+              "\\(\\dfrac{11}{14}\\)",
+              "\\(\\dfrac{11}{28}\\)",
+              "\\(\\dfrac{23}{56}\\)"
             ],
-            "correct": 0,
-            "solution": "From P(A | B) = P(A ∩ B) / P(B):\nP(A ∩ B) = P(A | B) × P(B) = 0.8 × 0.3 = 0.24.\nNow, P(B | A) = P(A ∩ B) / P(A) = 0.24 / 0.6 = 0.40."
+            "correct": 3,
+            "solution": "There are 8×7 = 56 equally likely ordered pairs (the second ball is drawn from the 7 balls left). Counting the favourable ordered pairs gives 22, so the probability is \\(\\dfrac{22}{56}=\\dfrac{11}{28}\\). Using the with-replacement fractions \\(/64\\) is a common mistake."
           },
           {
-            "question": "A coin is biased so that the probability of landing on Heads is 2/3. If the coin is flipped 4 times, what is the probability of obtaining exactly 2 Heads?",
+            "question": "Two fair dice are rolled. Given that at least one of them shows a 4, what is the probability that the sum of the two dice is 7?",
             "options": [
-              "8/27",
-              "16/81",
-              "4/27",
-              "32/81",
-              "1/2"
+              "\\(\\dfrac{1}{3}\\)",
+              "\\(\\dfrac{2}{11}\\)",
+              "\\(\\dfrac{11}{36}\\)",
+              "\\(\\dfrac{11}{216}\\)",
+              "\\(\\dfrac{1}{6}\\)"
             ],
-            "correct": 0,
-            "solution": "Binomial formula: P(X = 2) = C(4, 2) × (2/3)² × (1/3)².\nC(4, 2) = 6.\n(2/3)² = 4/9\n(1/3)² = 1/9\nP(X = 2) = 6 × (4/9) × (1/9) = 24 / 81 = 8/27."
+            "correct": 1,
+            "solution": "Condition: at least one die shows 4 — there are 11 such outcomes out of 36. Among them, those with sum 7: 2. So \\(P=\\dfrac{2}{11}=\\dfrac{2}{11}\\). (Dividing by 36 would ignore the condition.)"
           },
           {
-            "question": "A student's course grade is calculated as: Homework (20%), Midterm Exam (30%), Final Exam (50%). If a student scores 90 in Homework, 70 in Midterm, and 80 in Final, what is their final weighted course grade?",
+            "question": "A and B are independent events with \\(P(A)=\\dfrac{1}{5}\\) and \\(P(B)=\\dfrac{1}{3}\\). What is the probability that exactly one of A and B occurs?",
             "options": [
-              "79",
-              "80",
-              "78",
-              "81",
-              "76"
+              "\\(\\dfrac{7}{15}\\)",
+              "\\(\\dfrac{2}{5}\\)",
+              "\\(\\dfrac{8}{15}\\)",
+              "\\(\\dfrac{14}{15}\\)",
+              "\\(\\dfrac{1}{15}\\)"
             ],
-            "correct": 0,
-            "solution": "Weighted grade = (90 × 0.20) + (70 × 0.30) + (80 × 0.50) = 18 + 21 + 40 = 79."
+            "correct": 1,
+            "solution": "Independence gives \\(P(A\\cap B)=\\dfrac{1}{15}\\). Exactly one occurs: \\(P(A)P(B^c)+P(B)P(A^c)=\\dfrac{2}{5}\\)."
           },
           {
-            "question": "Three distinct integers are selected at random from the set {1, 2, 3, 4, 5, 6, 7, 8, 9}. What is the probability that their product is even?",
+            "question": "In a population of 1000 people, 100 have a certain condition. A test is positive for 95% of the people who have the condition and also for 2% of the people who do not. A randomly chosen person tests positive. What is the probability that this person has the condition?",
             "options": [
-              "74/84 (or 37/42)",
-              "10/84",
-              "1/2",
-              "3/4",
-              "5/9"
+              "\\(\\dfrac{1}{10}\\)",
+              "\\(\\dfrac{113}{1000}\\)",
+              "\\(\\dfrac{95}{113}\\)",
+              "\\(\\dfrac{18}{113}\\)",
+              "\\(\\dfrac{19}{200}\\)"
             ],
-            "correct": 0,
-            "solution": "The product of three integers is even unless all three are odd.\nThe set contains 5 odd numbers {1, 3, 5, 7, 9} and 4 even numbers {2, 4, 6, 8}.\nTotal ways to choose 3 numbers = C(9, 3) = (9 × 8 × 7) / (3 × 2 × 1) = 84.\nWays to choose 3 odd numbers = C(5, 3) = 10.\nWays to choose at least one even = 84 − 10 = 74.\nProbability = 74/84 = 37/42."
+            "correct": 2,
+            "solution": "True positives: 95% of 100 = 95. False positives: 2% of 900 = 18. Everyone who tests positive: 113. So \\(P(\\text{condition}\\mid\\text{positive})=\\dfrac{95}{113}=\\dfrac{95}{113}\\). The test sensitivity (95%) is a different quantity."
           },
           {
             "question": "A data set has mean 20 and standard deviation 4. Each value \\(x\\) is replaced by \\(y = 3x - 5\\). What is the mean of \\(y\\) plus the standard deviation of \\(y\\)?",
@@ -45336,28 +45336,28 @@ const subjects = [
             "solution": "The mean changes with the whole formula: \\(3 \\times 20 - 5 = 55\\). The standard deviation ignores the shift and is multiplied by \\(|3|\\): \\(3 \\times 4 = 12\\). Sum \\(= 55 + 12 = 67\\)."
           },
           {
-            "question": "A continuous random variable has a uniform distribution on the interval [2, 10]. What is the probability that X is between 4 and 7?",
+            "question": "A survey gives these values with their frequencies: value 3, 6, 7, 11 with frequency 3, 3, 6, 5 respectively. What is the mean of the whole data set?",
             "options": [
-              "3/8",
-              "1/4",
-              "1/2",
-              "5/8",
-              "3/10"
+              "\\(31\\)",
+              "\\(\\dfrac{121}{17}\\)",
+              "\\(\\dfrac{62}{9}\\)",
+              "\\(\\dfrac{124}{17}\\)",
+              "\\(7\\)"
             ],
-            "correct": 0,
-            "solution": "For a uniform distribution on [a, b], the probability density function is f(x) = 1 / (b − a) = 1 / (10 − 2) = 1/8.\nP(4 ≤ X ≤ 7) = (7 − 4) / (10 − 2) = 3/8."
+            "correct": 3,
+            "solution": "Weight each value by its frequency: \\(\\dfrac{3\\cdot3+6\\cdot3+7\\cdot6+11\\cdot5}{3+3+6+5}=\\dfrac{124}{17}=\\dfrac{124}{17}\\). (The plain average of the four values ignores the frequencies.)"
           },
           {
-            "question": "If the probability of winning a game is 0.2, what are the odds against winning the game?",
+            "question": "A and B are independent events with \\(P(A)=\\dfrac{3}{4}\\) and \\(P(B)=\\dfrac{1}{3}\\). What is the probability that exactly one of A and B occurs?",
             "options": [
-              "4 to 1",
-              "1 to 4",
-              "5 to 1",
-              "1 to 5",
-              "3 to 1"
+              "\\(\\dfrac{13}{12}\\)",
+              "\\(\\dfrac{5}{6}\\)",
+              "\\(\\dfrac{7}{12}\\)",
+              "\\(\\dfrac{3}{4}\\)",
+              "\\(\\dfrac{1}{4}\\)"
             ],
-            "correct": 0,
-            "solution": "P(Winning) = 0.2.\nP(Losing) = 1 − 0.2 = 0.8.\nOdds against winning = P(Losing) : P(Winning) = 0.8 : 0.2 = 4 : 1 (read as '4 to 1')."
+            "correct": 2,
+            "solution": "Independence gives \\(P(A\\cap B)=\\dfrac{1}{4}\\). Exactly one occurs: \\(P(A)P(B^c)+P(B)P(A^c)=\\dfrac{7}{12}\\)."
           },
           {
             "question": "Estimate the mean of the grouped data: 0–10 (frequency 5), 10–20 (frequency 15), 20–30 (frequency 10).",
@@ -45372,16 +45372,16 @@ const subjects = [
             "solution": "Use the class midpoints 5, 15, 25: \\(\\dfrac{5 \\times 5 + 15 \\times 15 + 25 \\times 10}{30} = \\dfrac{25 + 225 + 250}{30} = \\dfrac{500}{30} = 16.7\\)."
           },
           {
-            "question": "Rolling a six-sided die twice, what is the probability of getting a 5 or a 6 at least once?",
+            "question": "A bag holds 6 red, 5 blue and 1 green balls. Two balls are drawn one after the other without replacement. What is the probability that the two balls have the same colour?",
             "options": [
-              "22/36",
-              "24/36",
-              "20/36",
-              "11/36",
-              "12/36"
+              "\\(\\dfrac{41}{66}\\)",
+              "\\(\\dfrac{25}{72}\\)",
+              "\\(\\dfrac{25}{66}\\)",
+              "\\(\\dfrac{25}{33}\\)",
+              "\\(\\dfrac{31}{72}\\)"
             ],
             "correct": 2,
-            "solution": "Using the complementary probability:\nThe probability of NOT getting a 5 or 6 on a single roll is 4/6 (rolling 1, 2, 3, or 4).\nThe probability of NOT getting a 5 or 6 on both independent rolls is (4/6) × (4/6) = 16/36.\nTherefore, the probability of getting a 5 or 6 at least once is: 1 - 16/36 = 20/36."
+            "solution": "There are 12×11 = 132 equally likely ordered pairs (the second ball is drawn from the 11 balls left). Counting the favourable ordered pairs gives 50, so the probability is \\(\\dfrac{50}{132}=\\dfrac{25}{66}\\). Using the with-replacement fractions \\(/144\\) is a common mistake."
           },
           {
             "question": "Michele has a total of 10 pairs of socks in his drawer, some striped, some polka-dotted, and some checkered. When randomly selecting a pair from the drawer, the probability of picking a striped pair is 0.4, and the probability of picking a polka-dotted pair is double the probability of picking a checkered pair. What is the probability that when drawing a pair of socks from the drawer, Michele picks a checkered pair?",
@@ -45396,16 +45396,16 @@ const subjects = [
             "solution": "Let P(S), P(P), and P(C) be the probabilities of picking striped, polka-dotted, and checkered socks.\nP(S) = 0.4.\nP(P) + P(C) = 1 - 0.4 = 0.6.\nGiven P(P) = 2 × P(C):\n2 P(C) + P(C) = 0.6 ⇒ 3 P(C) = 0.6 ⇒ P(C) = 0.2 = 1/5."
           },
           {
-            "question": "A loaded six-faced die, numbered from 1 to 6, lands on face 6 with probability 1/3, while the other faces all have the same probability. When this die is rolled, what is the probability of getting an even number?",
+            "question": "Two fair dice are rolled. Given that at least one of them shows a 2, what is the probability that the sum of the two dice is 5?",
             "options": [
-              "4/15",
-              "1/2",
-              "2/3",
-              "5/6",
-              "3/5"
+              "\\(\\dfrac{11}{36}\\)",
+              "\\(\\dfrac{1}{2}\\)",
+              "\\(\\dfrac{11}{324}\\)",
+              "\\(\\dfrac{2}{11}\\)",
+              "\\(\\dfrac{1}{9}\\)"
             ],
-            "correct": 4,
-            "solution": "Total probability of the other five faces {1, 2, 3, 4, 5} is 1 - 1/3 = 2/3.\nEach of these five faces has probability p = (2/3) / 5 = 2/15.\nThe even outcomes are {2, 4, 6}:\nP(even) = P(2) + P(4) + P(6) = (2/15) + (2/15) + (1/3) = 4/15 + 5/15 = 9/15 = 3/5."
+            "correct": 3,
+            "solution": "Condition: at least one die shows 2 — there are 11 such outcomes out of 36. Among them, those with sum 5: 2. So \\(P=\\dfrac{2}{11}=\\dfrac{2}{11}\\). (Dividing by 36 would ignore the condition.)"
           }
         ]
       },
@@ -45426,28 +45426,28 @@ const subjects = [
             "solution": "f'(x)=3x²+4x−5 using power rule."
           },
           {
-            "question": "Find dy/dx for y=sin(3x).",
+            "question": "Two similar solids have corresponding lengths in the ratio 3:7. The smaller solid has a volume of 27 cm³. What is the volume of the larger solid?",
             "options": [
-              "3cos(3x)",
-              "cos(3x)",
-              "−3cos(3x)",
-              "−cos(3x)",
-              "3sin(3x)"
+              "147 cm³",
+              "63 cm³",
+              "1728 cm³",
+              "31 cm³",
+              "343 cm³"
             ],
-            "correct": 0,
-            "solution": "Using chain rule: dy/dx=3cos(3x)."
+            "correct": 4,
+            "solution": "Volumes scale with the cube of the length ratio: \\(\\left(\\dfrac{7}{3}\\right)^3=\\dfrac{343}{27}\\). So the volume is 27 × 343/27 = 343 cm³."
           },
           {
-            "question": "What is the derivative of f(x)=ln(2x)?",
+            "question": "Two similar solids have corresponding lengths in the ratio 4:7. The smaller solid has a volume of 64 cm³. What is the volume of the larger solid?",
             "options": [
-              "1/x",
-              "2/x",
-              "1/(2x)",
-              "2ln(2x)",
-              "ln(2)"
+              "407 cm³",
+              "112 cm³",
+              "67 cm³",
+              "1728 cm³",
+              "343 cm³"
             ],
-            "correct": 0,
-            "solution": "d/dx[ln(2x)]=(2)/(2x)=1/x."
+            "correct": 4,
+            "solution": "Volumes scale with the cube of the length ratio: \\(\\left(\\dfrac{7}{4}\\right)^3=\\dfrac{343}{64}\\). So the volume is 64 × 343/64 = 343 cm³."
           },
           {
             "question": "Find the derivative of f(x)=e^(−2x).",
@@ -45486,40 +45486,40 @@ const subjects = [
             "solution": "f(x)=x^(1/2). f'(x)=(1/2)x^(−1/2)=1/(2√x)."
           },
           {
-            "question": "What is the derivative of f(x)=1/x?",
+            "question": "The point \\((-2,\\ 5)\\) is reflected in the line y = x, then reflected in the y-axis, then translated by the vector (3, -1). What are the coordinates of its final image?",
             "options": [
-              "1/x²",
-              "−1/x²",
-              "−1/x",
-              "1/x",
-              "−2/x"
+              "\\((2,\\ 3)\\)",
+              "\\((-2,\\ -3)\\)",
+              "\\((8,\\ -3)\\)",
+              "\\((-3,\\ -2)\\)",
+              "\\((-5,\\ -2)\\)"
             ],
             "correct": 1,
-            "solution": "f(x)=x^(−1). f'(x)=−x^(−2)=−1/x²."
+            "solution": "Apply the steps in order: \\((-2,\\ 5)\\to(5,\\ -2)\\), \\((5,\\ -2)\\to(-5,\\ -2)\\), \\((-5,\\ -2)\\to(-2,\\ -3)\\). Final image: \\((-2,\\ -3)\\)."
           },
           {
-            "question": "Find the derivative of f(x)=x^5+3x^2−7.",
+            "question": "The point \\((-3,\\ -2)\\) is reflected in the y-axis, then rotated 90° anticlockwise about the origin, then translated by the vector (2, -1). What are the coordinates of its final image?",
             "options": [
-              "5x^4+6x",
-              "5x^4+6x−7",
-              "5x^4+3x−7",
-              "5x^4+6x+7",
-              "x^4+6x"
-            ],
-            "correct": 0,
-            "solution": "f'(x)=5x^4+6x."
-          },
-          {
-            "question": "What is the derivative of f(x)=tan(x)?",
-            "options": [
-              "sec(x)",
-              "sec²(x)",
-              "−sec²(x)",
-              "csc²(x)",
-              "cot(x)"
+              "\\((2,\\ 4)\\)",
+              "\\((4,\\ 2)\\)",
+              "\\((2,\\ 3)\\)",
+              "\\((-4,\\ -2)\\)",
+              "\\((-3,\\ -1)\\)"
             ],
             "correct": 1,
-            "solution": "d/dx[tan(x)]=sec²(x)."
+            "solution": "Apply the steps in order: \\((-3,\\ -2)\\to(3,\\ -2)\\), \\((3,\\ -2)\\to(2,\\ 3)\\), \\((2,\\ 3)\\to(4,\\ 2)\\). Final image: \\((4,\\ 2)\\)."
+          },
+          {
+            "question": "Two similar polygons have corresponding sides in the ratio 3:4. The smaller one has an area of 36 cm². What is the area of the larger one?",
+            "options": [
+              "37 cm²",
+              "100 cm²",
+              "48 cm²",
+              "64 cm²",
+              "36 cm²"
+            ],
+            "correct": 3,
+            "solution": "Areas scale with the square of the length ratio: \\(\\left(\\dfrac{4}{3}\\right)^2=\\dfrac{16}{9}\\). So the area is 36 × 16/9 = 64 cm²."
           },
           {
             "question": "Find the derivative of f(x)=cos(2x)+sin(3x).",
@@ -45534,64 +45534,64 @@ const subjects = [
             "solution": "f'(x)=−2sin(2x)+3cos(3x)."
           },
           {
-            "question": "What is the integral of 3x² dx?",
+            "question": "Two similar solids have corresponding lengths in the ratio 1:4. The smaller solid has a volume of 2 cm³. What is the volume of the larger solid?",
             "options": [
-              "x³+C",
-              "x³",
-              "3x³+C",
-              "6x+C",
-              "x³/3+C"
-            ],
-            "correct": 0,
-            "solution": "∫3x²dx=x³+C."
-          },
-          {
-            "question": "Find ∫cos(x) dx.",
-            "options": [
-              "sin(x)+C",
-              "−sin(x)+C",
-              "cos(x)+C",
-              "−cos(x)+C",
-              "sin(x)"
-            ],
-            "correct": 0,
-            "solution": "∫cos(x)dx=sin(x)+C."
-          },
-          {
-            "question": "What is ∫e^(2x) dx?",
-            "options": [
-              "e^(2x)+C",
-              "2e^(2x)+C",
-              "e^(2x)/2+C",
-              "2e^(x)+C",
-              "e^(x)+C"
-            ],
-            "correct": 2,
-            "solution": "∫e^(2x)dx=e^(2x)/2+C."
-          },
-          {
-            "question": "Find ∫1/x dx.",
-            "options": [
-              "ln|x|+C",
-              "ln(x)+C",
-              "−1/x²+C",
-              "x+C",
-              "1/x+C"
-            ],
-            "correct": 0,
-            "solution": "∫1/xdx=ln|x|+C."
-          },
-          {
-            "question": "What is ∫sin(3x) dx?",
-            "options": [
-              "−cos(3x)+C",
-              "−cos(3x)/3+C",
-              "cos(3x)/3+C",
-              "sin(3x)/3+C",
-              "−3cos(3x)+C"
+              "8 cm³",
+              "128 cm³",
+              "54 cm³",
+              "32 cm³",
+              "5 cm³"
             ],
             "correct": 1,
-            "solution": "∫sin(3x)dx=−cos(3x)/3+C."
+            "solution": "Volumes scale with the cube of the length ratio: \\(\\left(\\dfrac{4}{1}\\right)^3=\\dfrac{64}{1}\\). So the volume is 2 × 64/1 = 128 cm³."
+          },
+          {
+            "question": "Let \\(f(x)=3x-1\\) and \\(g(x)=2x^{2}-3\\). What is \\((g\\circ f)(3)-(f\\circ g)(3)\\)?",
+            "options": [
+              "7",
+              "81",
+              "44",
+              "125",
+              "169"
+            ],
+            "correct": 1,
+            "solution": "\\((g\\circ f)(3)=g(f(3))=g(8)=125\\) and \\((f\\circ g)(3)=f(g(3))=f(15)=44\\). The difference is 125 − (44) = 81."
+          },
+          {
+            "question": "The point \\((-3,\\ 2)\\) is rotated 180° about the origin, then rotated 90° anticlockwise about the origin, then translated by the vector (0, 3). What are the coordinates of its final image?",
+            "options": [
+              "\\((2,\\ 3)\\)",
+              "\\((2,\\ 6)\\)",
+              "\\((5,\\ 3)\\)",
+              "\\((6,\\ 2)\\)",
+              "\\((3,\\ 1)\\)"
+            ],
+            "correct": 1,
+            "solution": "Apply the steps in order: \\((-3,\\ 2)\\to(3,\\ -2)\\), \\((3,\\ -2)\\to(2,\\ 3)\\), \\((2,\\ 3)\\to(2,\\ 6)\\). Final image: \\((2,\\ 6)\\)."
+          },
+          {
+            "question": "Let \\(f(x)=-x+1\\) and \\(g(x)=3x^{2}+5\\). What is \\((g\\circ f)(3)-(f\\circ g)(3)\\)?",
+            "options": [
+              "17",
+              "-14",
+              "48",
+              "34",
+              "-31"
+            ],
+            "correct": 2,
+            "solution": "\\((g\\circ f)(3)=g(f(3))=g(-2)=17\\) and \\((f\\circ g)(3)=f(g(3))=f(32)=-31\\). The difference is 17 − (-31) = 48."
+          },
+          {
+            "question": "The point \\((-1,\\ -3)\\) is rotated 90° anticlockwise about the origin, then rotated 180° about the origin, then translated by the vector (-1, 1). What are the coordinates of its final image?",
+            "options": [
+              "\\((-4,\\ 2)\\)",
+              "\\((4,\\ -2)\\)",
+              "\\((2,\\ -4)\\)",
+              "\\((-3,\\ 1)\\)",
+              "\\((2,\\ 0)\\)"
+            ],
+            "correct": 0,
+            "solution": "Apply the steps in order: \\((-1,\\ -3)\\to(3,\\ -1)\\), \\((3,\\ -1)\\to(-3,\\ 1)\\), \\((-3,\\ 1)\\to(-4,\\ 2)\\). Final image: \\((-4,\\ 2)\\)."
           },
           {
             "question": "Find the derivative of f(x)=(x²+1)³.",
@@ -45630,16 +45630,16 @@ const subjects = [
             "solution": "Product rule: f'(x)=1·sin(x)+x·cos(x)=sin(x)+xcos(x)."
           },
           {
-            "question": "What is ∫(2x+3)dx?",
+            "question": "Let \\(f(x)=\\dfrac{2x-3}{x+4}\\). What is \\(f^{-1}(-1)\\)?",
             "options": [
-              "x²+3x+C",
-              "x²+3x",
-              "2x²+3x+C",
-              "x²+3+C",
-              "2x+3+C"
+              "\\(-\\dfrac{3}{5}\\)",
+              "\\(\\dfrac{5}{3}\\)",
+              "\\(\\dfrac{1}{3}\\)",
+              "\\(-\\dfrac{1}{3}\\)",
+              "\\(1\\)"
             ],
-            "correct": 0,
-            "solution": "∫(2x+3)dx=x²+3x+C."
+            "correct": 3,
+            "solution": "Solve \\(y=\\dfrac{2x-3}{x+4}\\) for x: \\(y(x+4)=2x-3\\) gives \\(x(1y-2)=-3-4y\\), so \\(f^{-1}(y)=\\dfrac{-3-4y}{1y-2}\\). At \\(y=-1\\): \\(-\\dfrac{1}{3}\\)."
           },
           {
             "question": "Find the derivative of f(x)=e^x·ln(x).",
@@ -45900,40 +45900,40 @@ const subjects = [
         "name": "Coordinate Geometry",
         "questions": [
           {
-            "question": "Gradient of line through (2,3) and (5,11)?",
+            "question": "The point P lies on the segment from \\(A(1,\\ 6)\\) to \\(B(6,\\ -6)\\) and divides it so that \\(AP:PB=3:2\\). What are the coordinates of P?",
             "options": [
-              "2",
-              "3",
-              "8/3",
-              "4",
-              "5"
+              "\\(\\left(4,\\ -\\dfrac{6}{5}\\right)\\)",
+              "\\(\\left(16,\\ -30\\right)\\)",
+              "\\(\\left(4,\\ -\\dfrac{1}{5}\\right)\\)",
+              "\\(\\left(3,\\ \\dfrac{6}{5}\\right)\\)",
+              "\\(\\left(\\dfrac{7}{2},\\ 0\\right)\\)"
             ],
             "correct": 0,
-            "solution": "m=(11−3)/(5−2)=8/3."
+            "solution": "With \\(AP:PB=3:2\\), P is \\(\\dfrac{3}{5}\\) of the way from A to B: \\(P=\\dfrac{2A+3B}{5}=\\left(4,\\ -\\dfrac{6}{5}\\right)\\)."
           },
           {
-            "question": "Equation of line with gradient 2 through (1,5)?",
+            "question": "The lines \\(x+y=3\\) and \\(4x-3y=19\\) meet at a point P. The line through P perpendicular to \\(y=-4x-1\\) crosses the y-axis at which point?",
             "options": [
-              "y=2x+3",
-              "y=2x+5",
-              "y=2x−3",
-              "y=2x+1",
-              "y=5x+2"
+              "\\((0,\\ -2)\\)",
+              "\\((0,\\ 0)\\)",
+              "\\((0,\\ 15)\\)",
+              "\\((0,\\ -1)\\)",
+              "\\((0,\\ -17)\\)"
             ],
             "correct": 0,
-            "solution": "y−5=2(x−1) → y=2x+3."
+            "solution": "Solving the two equations gives \\(P=(4,\\ -1)\\). A line perpendicular to slope \\(-4\\) has slope \\(\\dfrac{1}{4}\\), so its equation is \\(y-(-1)=\\dfrac{1}{4}(x-(4))\\). At \\(x=0\\): \\(y=-1+-1=-2\\)."
           },
           {
-            "question": "Gradient perpendicular to y=3x+4?",
+            "question": "The lines \\(x+3y=-3\\) and \\(4x-4y=20\\) meet at a point P. The line through P perpendicular to \\(y=-2x+4\\) crosses the y-axis at which point?",
             "options": [
-              "3",
-              "−3",
-              "1/3",
-              "−1/3",
-              "−4"
+              "\\((0,\\ 4)\\)",
+              "\\((0,\\ -\\dfrac{3}{2})\\)",
+              "\\((0,\\ -\\dfrac{7}{2})\\)",
+              "\\((0,\\ -\\dfrac{1}{2})\\)",
+              "\\((0,\\ -2)\\)"
             ],
-            "correct": 3,
-            "solution": "Perpendicular gradient=−1/m=−1/3."
+            "correct": 2,
+            "solution": "Solving the two equations gives \\(P=(3,\\ -2)\\). A line perpendicular to slope \\(-2\\) has slope \\(\\dfrac{1}{2}\\), so its equation is \\(y-(-2)=\\dfrac{1}{2}(x-(3))\\). At \\(x=0\\): \\(y=-2+-\\dfrac{3}{2}=-\\dfrac{7}{2}\\)."
           },
           {
             "question": "What is the area of the region defined by \\(x \\geq 0\\), \\(y \\geq 0\\) and \\(2x + 3y \\leq 12\\)?",
@@ -45948,28 +45948,28 @@ const subjects = [
             "solution": "The line \\(2x + 3y = 12\\) meets the axes at \\((6, 0)\\) and \\((0, 4)\\). The region is a right triangle with legs 6 and 4: area \\(= \\tfrac{1}{2} \\times 6 \\times 4 = 12\\)."
           },
           {
-            "question": "Midpoint of (4,−2) and (−2,6)?",
+            "question": "What is the area of the triangle with vertices \\(A(4,\\ 0)\\), \\(B(-5,\\ 2)\\) and \\(C(0,\\ -5)\\)?",
             "options": [
-              "(1,2)",
-              "(2,2)",
-              "(1,4)",
-              "(3,2)",
-              "(2,4)"
+              "\\(63\\)",
+              "\\(\\dfrac{53}{2}\\)",
+              "\\(\\dfrac{63}{2}\\)",
+              "\\(53\\)",
+              "\\(\\dfrac{55}{2}\\)"
             ],
-            "correct": 0,
-            "solution": "Midpoint=((4−2)/2,(−2+6)/2)=(1,2)."
+            "correct": 1,
+            "solution": "Area = \\(\\tfrac12|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)|\\) = \\(\\tfrac12|4(7)+(-5)(-5)+(0)(-2)|=\\tfrac12|53|=\\dfrac{53}{2}\\)."
           },
           {
-            "question": "Equation through (0,3) and (2,7)?",
+            "question": "The lines \\(4x+y=-7\\) and \\(2x-2y=-6\\) meet at a point P. The line through P perpendicular to \\(y=2x+4\\) crosses the y-axis at which point?",
             "options": [
-              "y=2x+3",
-              "y=2x−3",
-              "y=3x+1",
-              "y=2x+7",
-              "y=3x+3"
+              "\\((0,\\ 0)\\)",
+              "\\((0,\\ -1)\\)",
+              "\\((0,\\ 2)\\)",
+              "\\((0,\\ -3)\\)",
+              "\\((0,\\ 5)\\)"
             ],
             "correct": 0,
-            "solution": "m=(7−3)/2=2. y=2x+3."
+            "solution": "Solving the two equations gives \\(P=(-2,\\ 1)\\). A line perpendicular to slope \\(2\\) has slope \\(-\\dfrac{1}{2}\\), so its equation is \\(y-(1)=-\\dfrac{1}{2}(x-(-2))\\). At \\(x=0\\): \\(y=1+-1=0\\)."
           },
           {
             "question": "What is the area of the triangle with vertices \\((1, 1)\\), \\((5, 2)\\) and \\((3, 6)\\)?",
@@ -45984,16 +45984,16 @@ const subjects = [
             "solution": "Area \\(= \\tfrac{1}{2}|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)| = \\tfrac{1}{2}|1(-4) + 5(5) + 3(-1)| = \\tfrac{1}{2}(18) = 9\\)."
           },
           {
-            "question": "Line parallel to y=−2x+5 through (3,1)?",
+            "question": "What is the distance from the point \\((6,\\ -5)\\) to the line \\(-4x+3y+9=0\\)?",
             "options": [
-              "y=−2x+7",
-              "y=−2x−5",
-              "y=2x−5",
-              "y=−2x+1",
-              "y=2x+7"
+              "\\(6\\)",
+              "\\(\\dfrac{30}{7}\\)",
+              "\\(12\\)",
+              "\\(\\dfrac{6}{5}\\)",
+              "\\(-6\\)"
             ],
             "correct": 0,
-            "solution": "y−1=−2(x−3) → y=−2x+7."
+            "solution": "Distance = \\(\\dfrac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}=\\dfrac{|-4(6)+(3)(-5)+9|}{\\sqrt{16+9}}=\\dfrac{30}{5}\\) = \\(6\\)."
           },
           {
             "question": "A line passes through the intersection of \\(x + y = 4\\) and \\(2x - y = 2\\) and is perpendicular to \\(y = 2x + 1\\). What is its equation?",
@@ -46032,40 +46032,40 @@ const subjects = [
             "solution": "The slope from \\((1, 2)\\) to \\((7, 10)\\) is \\(\\tfrac{8}{6} = \\tfrac{4}{3}\\). The slope from \\((1, 2)\\) to \\((3, k)\\) must be the same: \\(\\dfrac{k - 2}{2} = \\dfrac{4}{3}\\), so \\(k = 2 + \\dfrac{8}{3} = \\dfrac{14}{3}\\)."
           },
           {
-            "question": "Line through (−2,5) with gradient −1?",
+            "question": "The point P lies on the segment from \\(A(4,\\ -1)\\) to \\(B(6,\\ 5)\\) and divides it so that \\(AP:PB=4:3\\). What are the coordinates of P?",
             "options": [
-              "y=−x+3",
-              "y=−x+7",
-              "y=x+3",
-              "y=x+7",
-              "y=−x−3"
+              "\\(\\left(\\dfrac{43}{7},\\ \\dfrac{17}{7}\\right)\\)",
+              "\\(\\left(\\dfrac{36}{7},\\ \\dfrac{24}{7}\\right)\\)",
+              "\\(\\left(12,\\ 23\\right)\\)",
+              "\\(\\left(5,\\ 2\\right)\\)",
+              "\\(\\left(\\dfrac{36}{7},\\ \\dfrac{17}{7}\\right)\\)"
             ],
-            "correct": 0,
-            "solution": "y−5=−1(x+2) → y=−x+3."
+            "correct": 4,
+            "solution": "With \\(AP:PB=4:3\\), P is \\(\\dfrac{4}{7}\\) of the way from A to B: \\(P=\\dfrac{3A+4B}{7}=\\left(\\dfrac{36}{7},\\ \\dfrac{17}{7}\\right)\\)."
           },
           {
-            "question": "Gradient of vertical line?",
+            "question": "What is the distance from the point \\((0,\\ -6)\\) to the line \\(8x+15y-5=0\\)?",
             "options": [
-              "0",
-              "1",
-              "−1",
-              "Undefined",
-              "∞"
+              "\\(\\dfrac{100}{17}\\)",
+              "\\(\\dfrac{190}{17}\\)",
+              "\\(\\dfrac{95}{23}\\)",
+              "\\(\\dfrac{95}{17}\\)",
+              "\\(-\\dfrac{95}{17}\\)"
             ],
             "correct": 3,
-            "solution": "Vertical line has undefined gradient."
+            "solution": "Distance = \\(\\dfrac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}=\\dfrac{|8(0)+(15)(-6)-5|}{\\sqrt{64+225}}=\\dfrac{95}{17}\\) = \\(\\dfrac{95}{17}\\)."
           },
           {
-            "question": "Intersection of y=2x+1 and y=−x+7?",
+            "question": "What is the area of the triangle with vertices \\(A(4,\\ -1)\\), \\(B(2,\\ 5)\\) and \\(C(5,\\ 2)\\)?",
             "options": [
-              "(2,5)",
-              "(3,4)",
-              "(1,3)",
-              "(4,9)",
-              "(0,7)"
+              "\\(7\\)",
+              "\\(9\\)",
+              "\\(12\\)",
+              "\\(6\\)",
+              "\\(18\\)"
             ],
-            "correct": 0,
-            "solution": "2x+1=−x+7 → x=2, y=5."
+            "correct": 3,
+            "solution": "Area = \\(\\tfrac12|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)|\\) = \\(\\tfrac12|4(3)+(2)(3)+(5)(-6)|=\\tfrac12|-12|=6\\)."
           },
           {
             "question": "\\(A(0, 0)\\), \\(B(4, 1)\\) and \\(C(6, 5)\\) are three vertices of a parallelogram ABCD, in that order. What is D?",
@@ -46080,16 +46080,16 @@ const subjects = [
             "solution": "The diagonals of a parallelogram bisect each other, so the midpoint of AC equals the midpoint of BD: \\(D = A + C - B = (0 + 6 - 4, 0 + 5 - 1) = (2, 4)\\)."
           },
           {
-            "question": "Equation of line through (1,1) and (3,5)?",
+            "question": "The point P lies on the segment from \\(A(5,\\ 6)\\) to \\(B(-5,\\ -1)\\) and divides it so that \\(AP:PB=3:4\\). What are the coordinates of P?",
             "options": [
-              "y=2x−1",
-              "y=2x+1",
-              "y=2x−3",
-              "y=x+2",
-              "y=3x−2"
+              "\\(\\left(\\dfrac{12}{7},\\ 3\\right)\\)",
+              "\\(\\left(35,\\ 27\\right)\\)",
+              "\\(\\left(\\dfrac{5}{7},\\ 4\\right)\\)",
+              "\\(\\left(\\dfrac{5}{7},\\ 3\\right)\\)",
+              "\\(\\left(-\\dfrac{5}{7},\\ 2\\right)\\)"
             ],
-            "correct": 0,
-            "solution": "m=(5−1)/(3−1)=2. y−1=2(x−1) → y=2x−1."
+            "correct": 3,
+            "solution": "With \\(AP:PB=3:4\\), P is \\(\\dfrac{3}{7}\\) of the way from A to B: \\(P=\\dfrac{4A+3B}{7}=\\left(\\dfrac{5}{7},\\ 3\\right)\\)."
           },
           {
             "question": "What is the distance from the point \\((2, -1)\\) to the line \\(3x - 4y + 5 = 0\\)?",
@@ -46104,28 +46104,28 @@ const subjects = [
             "solution": "Use \\(d = \\dfrac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}} = \\dfrac{|6 + 4 + 5|}{\\sqrt{9 + 16}} = \\dfrac{15}{5} = 3\\)."
           },
           {
-            "question": "Point on line y=2x+3 when x=−1?",
+            "question": "What is the distance from the point \\((3,\\ -5)\\) to the line \\(8x-15y-10=0\\)?",
             "options": [
-              "(−1,1)",
-              "(−1,5)",
-              "(−1,−1)",
-              "(−1,3)",
-              "(−1,−5)"
+              "\\(\\dfrac{99}{17}\\)",
+              "\\(\\dfrac{178}{17}\\)",
+              "\\(\\dfrac{89}{289}\\)",
+              "\\(\\dfrac{89}{17}\\)",
+              "\\(\\dfrac{89}{23}\\)"
             ],
-            "correct": 0,
-            "solution": "y=2(−1)+3=1. Point (−1,1)."
+            "correct": 3,
+            "solution": "Distance = \\(\\dfrac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}=\\dfrac{|8(3)+(-15)(-5)-10|}{\\sqrt{64+225}}=\\dfrac{89}{17}\\) = \\(\\dfrac{89}{17}\\)."
           },
           {
-            "question": "Equation of line through origin with gradient 5?",
+            "question": "What is the area of the triangle with vertices \\(A(1,\\ -2)\\), \\(B(3,\\ 3)\\) and \\(C(-1,\\ -5)\\)?",
             "options": [
-              "y=5x",
-              "y=x+5",
-              "y=5",
-              "x=5",
-              "y=5x+1"
+              "\\(2\\)",
+              "\\(16\\)",
+              "\\(1\\)",
+              "\\(4\\)",
+              "\\(3\\)"
             ],
             "correct": 0,
-            "solution": "y=5x passes through (0,0)."
+            "solution": "Area = \\(\\tfrac12|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)|\\) = \\(\\tfrac12|1(8)+(3)(-3)+(-1)(-5)|=\\tfrac12|4|=2\\)."
           },
           {
             "question": "What is the tangent of the acute angle between the lines \\(y = x\\) and \\(y = 3x\\)?",
@@ -46140,16 +46140,16 @@ const subjects = [
             "solution": "\\(\\tan\\theta = \\left|\\dfrac{m_2 - m_1}{1 + m_1m_2}\\right| = \\dfrac{|3 - 1|}{1 + 3} = \\dfrac{2}{4} = \\dfrac{1}{2}\\)."
           },
           {
-            "question": "What is the distance between the points A(−3, 5) and B(5, −1) in the Cartesian plane?",
+            "question": "The lines \\(x+3y=-8\\) and \\(2x-4y=4\\) meet at a point P. The line through P perpendicular to \\(y=3x+0\\) crosses the y-axis at which point?",
             "options": [
-              "10",
-              "8",
-              "√68",
-              "12",
-              "2√17"
+              "\\((0,\\ -\\dfrac{8}{3})\\)",
+              "\\((0,\\ -8)\\)",
+              "\\((0,\\ -\\dfrac{4}{3})\\)",
+              "\\((0,\\ -2)\\)",
+              "\\((0,\\ -\\dfrac{2}{3})\\)"
             ],
             "correct": 0,
-            "solution": "Use the distance formula: d = √[(x₂ − x₁)² + (y₂ − y₁)²].\nd = √[(5 − (−3))² + (−1 − 5)²] = √[8² + (−6)²] = √[64 + 36] = √100 = 10."
+            "solution": "Solving the two equations gives \\(P=(-2,\\ -2)\\). A line perpendicular to slope \\(3\\) has slope \\(-\\dfrac{1}{3}\\), so its equation is \\(y-(-2)=-\\dfrac{1}{3}(x-(-2))\\). At \\(x=0\\): \\(y=-2+-\\dfrac{2}{3}=-\\dfrac{8}{3}\\)."
           },
           {
             "question": "What is the equation of the line passing through the point P(2, −3) that is perpendicular to the line 3x − 4y + 8 = 0?",
@@ -46212,40 +46212,40 @@ const subjects = [
             "solution": "Use the shoelace formula: Area = (1/2)|x_A(y_B − y_C) + x_B(y_C − y_A) + x_C(y_A − y_B)|.\nArea = (1/2)|1(5 − 2) + 4(2 − 1) + 7(1 − 5)|\n= (1/2)|1(3) + 4(1) + 7(−4)| = (1/2)|3 + 4 − 28| = (1/2)|−21| = 21/2 = 10.5."
           },
           {
-            "question": "What is the distance between the two parallel lines 3x + 4y − 10 = 0 and 3x + 4y + 15 = 0?",
+            "question": "What is the distance from the point \\((6,\\ -2)\\) to the line \\(3x+4y+5=0\\)?",
             "options": [
-              "5",
-              "25",
-              "1",
-              "2.5",
-              "√5"
+              "\\(6\\)",
+              "\\(\\dfrac{15}{7}\\)",
+              "\\(\\dfrac{3}{5}\\)",
+              "\\(3\\)",
+              "\\(2\\)"
             ],
-            "correct": 0,
-            "solution": "The distance between parallel lines Ax + By + C₁ = 0 and Ax + By + C₂ = 0 is:\nd = |C₁ − C₂| / √(A² + B²).\nHere A = 3, B = 4, C₁ = −10, C₂ = 15.\nd = |−10 − 15| / √(3² + 4²) = |−25| / √25 = 25 / 5 = 5."
+            "correct": 3,
+            "solution": "Distance = \\(\\dfrac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}=\\dfrac{|3(6)+(4)(-2)+5|}{\\sqrt{9+16}}=\\dfrac{15}{5}\\) = \\(3\\)."
           },
           {
-            "question": "Find the coordinates of the centroid of the triangle with vertices A(2, 4), B(6, −2), and C(−2, 7).",
+            "question": "What is the area of the triangle with vertices \\(A(0,\\ 1)\\), \\(B(-4,\\ 6)\\) and \\(C(1,\\ -5)\\)?",
             "options": [
-              "(2, 3)",
-              "(3, 2)",
-              "(2, 4)",
-              "(1, 3)",
-              "(3, 3)"
+              "\\(\\dfrac{19}{2}\\)",
+              "\\(\\dfrac{55}{2}\\)",
+              "\\(19\\)",
+              "\\(\\dfrac{19}{4}\\)",
+              "\\(\\dfrac{21}{2}\\)"
             ],
             "correct": 0,
-            "solution": "The centroid G has coordinates ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3):\nG_x = (2 + 6 + (−2)) / 3 = 6 / 3 = 2.\nG_y = (4 + (−2) + 7) / 3 = 9 / 3 = 3.\nThus, the centroid is (2, 3)."
+            "solution": "Area = \\(\\tfrac12|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)|\\) = \\(\\tfrac12|0(11)+(-4)(-6)+(1)(-5)|=\\tfrac12|19|=\\dfrac{19}{2}\\)."
           },
           {
-            "question": "What is the equation of the tangent line to the circle x² + y² = 25 at the point P(3, 4)?",
+            "question": "The point P lies on the segment from \\(A(6,\\ -5)\\) to \\(B(-3,\\ 4)\\) and divides it so that \\(AP:PB=4:3\\). What are the coordinates of P?",
             "options": [
-              "3x + 4y − 25 = 0",
-              "4x + 3y − 25 = 0",
-              "3x − 4y + 7 = 0",
-              "4x − 3y = 0",
-              "3x + 4y + 25 = 0"
+              "\\(\\left(\\dfrac{3}{2},\\ -\\dfrac{1}{2}\\right)\\)",
+              "\\(\\left(\\dfrac{6}{7},\\ \\dfrac{8}{7}\\right)\\)",
+              "\\(\\left(\\dfrac{6}{7},\\ \\dfrac{1}{7}\\right)\\)",
+              "\\(\\left(\\dfrac{13}{7},\\ \\dfrac{1}{7}\\right)\\)",
+              "\\(\\left(-30,\\ 31\\right)\\)"
             ],
-            "correct": 0,
-            "solution": "For a circle centered at the origin x² + y² = r², the tangent at (x₀, y₀) is: x₀x + y₀y = r².\nHere x₀ = 3, y₀ = 4, r² = 25:\n3x + 4y = 25 → 3x + 4y − 25 = 0."
+            "correct": 2,
+            "solution": "With \\(AP:PB=4:3\\), P is \\(\\dfrac{4}{7}\\) of the way from A to B: \\(P=\\dfrac{3A+4B}{7}=\\left(\\dfrac{6}{7},\\ \\dfrac{1}{7}\\right)\\)."
           },
           {
             "question": "For what value of k are the three points A(1, 2), B(3, k), and C(5, 8) collinear?",
@@ -46272,16 +46272,16 @@ const subjects = [
             "solution": "By the section formula: x = (m·x₂ + n·x₁) / (m + n) and y = (m·y₂ + n·y₁) / (m + n).\nWith m = 2, n = 3:\nx = (2(8) + 3(−2)) / (2 + 3) = (16 − 6) / 5 = 10 / 5 = 2.\ny = (2(6) + 3(1)) / (2 + 3) = (12 + 3) / 5 = 15 / 5 = 3.\nThe point is (2, 3)."
           },
           {
-            "question": "What is the reflection of the point P(4, −2) across the line y = x?",
+            "question": "What is the distance from the point \\((-3,\\ -3)\\) to the line \\(-6x-8y-10=0\\)?",
             "options": [
-              "(−2, 4)",
-              "(2, −4)",
-              "(−4, 2)",
-              "(4, 2)",
-              "(−2, −4)"
+              "\\(\\dfrac{16}{5}\\)",
+              "\\(\\dfrac{32}{5}\\)",
+              "\\(\\dfrac{16}{7}\\)",
+              "\\(\\dfrac{8}{25}\\)",
+              "\\(\\dfrac{21}{5}\\)"
             ],
             "correct": 0,
-            "solution": "Reflecting a point (x, y) across the line y = x swaps the coordinates: (x, y) → (y, x).\nTherefore, the reflection of (4, −2) is (−2, 4)."
+            "solution": "Distance = \\(\\dfrac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}=\\dfrac{|-6(-3)+(-8)(-3)-10|}{\\sqrt{36+64}}=\\dfrac{32}{10}\\) = \\(\\dfrac{16}{5}\\)."
           },
           {
             "question": "Find the point of intersection of the two lines: 2x − 3y = 7 and 3x + 2y = 4.",
@@ -46296,52 +46296,52 @@ const subjects = [
             "solution": "Multiply Eq(1) by 2: 4x − 6y = 14.\nMultiply Eq(2) by 3: 9x + 6y = 12.\nAdd the two equations: 13x = 26 → x = 2.\nSubstitute x = 2 into Eq(2): 3(2) + 2y = 4 → 6 + 2y = 4 → 2y = −2 → y = −1.\nIntersection point is (2, −1)."
           },
           {
-            "question": "What is the acute angle between the lines y = √3 x + 1 and y = x − 4?",
+            "question": "The lines \\(4x+2y=-12\\) and \\(4x-2y=-12\\) meet at a point P. The line through P perpendicular to \\(y=3x+0\\) crosses the y-axis at which point?",
             "options": [
-              "15°",
-              "30°",
-              "45°",
-              "60°",
-              "75°"
+              "\\((0,\\ -9)\\)",
+              "\\((0,\\ 9)\\)",
+              "\\((0,\\ 1)\\)",
+              "\\((0,\\ 0)\\)",
+              "\\((0,\\ -1)\\)"
             ],
-            "correct": 0,
-            "solution": "The slope of the first line is m₁ = √3 = tan(60°), so its inclination is θ₁ = 60°.\nThe slope of the second line is m₂ = 1 = tan(45°), so its inclination is θ₂ = 45°.\nThe angle between the two lines is |θ₁ − θ₂| = |60° − 45°| = 15°."
+            "correct": 4,
+            "solution": "Solving the two equations gives \\(P=(-3,\\ 0)\\). A line perpendicular to slope \\(3\\) has slope \\(-\\dfrac{1}{3}\\), so its equation is \\(y-(0)=-\\dfrac{1}{3}(x-(-3))\\). At \\(x=0\\): \\(y=0+-1=-1\\)."
           },
           {
-            "question": "What is the radius of the circle that has its center at (2, −3) and passes through the point (5, 1)?",
+            "question": "What is the area of the triangle with vertices \\(A(6,\\ -1)\\), \\(B(4,\\ 1)\\) and \\(C(6,\\ -3)\\)?",
             "options": [
-              "5",
-              "√7",
-              "25",
-              "4",
-              "√13"
+              "\\(2\\)",
+              "\\(1\\)",
+              "\\(3\\)",
+              "\\(4\\)",
+              "\\(8\\)"
             ],
             "correct": 0,
-            "solution": "The radius is the distance from the center to the point on the circle:\nr = √[(5 − 2)² + (1 − (−3))²] = √[3² + 4²] = √[9 + 16] = √25 = 5."
+            "solution": "Area = \\(\\tfrac12|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)|\\) = \\(\\tfrac12|6(4)+(4)(-2)+(6)(-2)|=\\tfrac12|4|=2\\)."
           },
           {
-            "question": "What is the slope of the line given by 2x + 5y − 10 = 0?",
+            "question": "The point P lies on the segment from \\(A(-6,\\ 6)\\) to \\(B(-2,\\ -4)\\) and divides it so that \\(AP:PB=3:4\\). What are the coordinates of P?",
             "options": [
-              "−2/5",
-              "2/5",
-              "−5/2",
-              "5/2",
-              "2"
+              "\\(\\left(-\\dfrac{30}{7},\\ \\dfrac{12}{7}\\right)\\)",
+              "\\(\\left(-18,\\ 36\\right)\\)",
+              "\\(\\left(-4,\\ 1\\right)\\)",
+              "\\(\\left(-\\dfrac{26}{7},\\ \\dfrac{2}{7}\\right)\\)",
+              "\\(\\left(-\\dfrac{30}{7},\\ \\dfrac{19}{7}\\right)\\)"
             ],
             "correct": 0,
-            "solution": "Rearrange into slope-intercept form y = mx + c:\n5y = −2x + 10 → y = (−2/5)x + 2.\nThe slope is m = −2/5."
+            "solution": "With \\(AP:PB=3:4\\), P is \\(\\dfrac{3}{7}\\) of the way from A to B: \\(P=\\dfrac{4A+3B}{7}=\\left(-\\dfrac{30}{7},\\ \\dfrac{12}{7}\\right)\\)."
           },
           {
-            "question": "What is the y-intercept of the line passing through (2, 5) with a slope of 3?",
+            "question": "What is the area of the triangle with vertices \\(A(-5,\\ -4)\\), \\(B(-6,\\ 6)\\) and \\(C(-3,\\ 2)\\)?",
             "options": [
-              "−1",
-              "1",
-              "5",
-              "−6",
-              "11"
+              "\\(15\\)",
+              "\\(26\\)",
+              "\\(13\\)",
+              "\\(14\\)",
+              "\\(\\dfrac{13}{2}\\)"
             ],
-            "correct": 0,
-            "solution": "Use y = mx + c: 5 = 3(2) + c → 5 = 6 + c → c = −1.\nThus, the y-intercept is (0, −1), or simply −1."
+            "correct": 2,
+            "solution": "Area = \\(\\tfrac12|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)|\\) = \\(\\tfrac12|-5(4)+(-6)(6)+(-3)(-10)|=\\tfrac12|-26|=13\\)."
           },
           {
             "question": "The line y = mx + 2 is tangent to the circle x² + y² = 1. What are the possible values of m?",
@@ -46368,16 +46368,16 @@ const subjects = [
             "solution": "A point (x, y) is in the interior if (x − 1)² + (y + 2)² < 25.\nTest (2, 1): (2 − 1)² + (1 + 2)² = 1² + 3² = 1 + 9 = 10 < 25 (interior, correct!).\nTest (5, 2): (4)² + (4)² = 16 + 16 = 32 > 25 (exterior).\nTest (1, 3): 0² + 5² = 25 (on boundary).\nTest (6, −2): 5² + 0² = 25 (on boundary).\nTest (−3, 2): (−4)² + 4² = 32 > 25 (exterior)."
           },
           {
-            "question": "A line has x-intercept at (4, 0) and y-intercept at (0, −3). What is the standard equation of the line?",
+            "question": "The point P lies on the segment from \\(A(4,\\ -5)\\) to \\(B(3,\\ 2)\\) and divides it so that \\(AP:PB=2:3\\). What are the coordinates of P?",
             "options": [
-              "3x − 4y − 12 = 0",
-              "3x + 4y − 12 = 0",
-              "4x − 3y − 12 = 0",
-              "3x − 4y + 12 = 0",
-              "4x + 3y + 12 = 0"
+              "\\(\\left(\\dfrac{17}{5},\\ -\\dfrac{4}{5}\\right)\\)",
+              "\\(\\left(6,\\ -19\\right)\\)",
+              "\\(\\left(\\dfrac{18}{5},\\ -\\dfrac{11}{5}\\right)\\)",
+              "\\(\\left(\\dfrac{23}{5},\\ -\\dfrac{11}{5}\\right)\\)",
+              "\\(\\left(\\dfrac{7}{2},\\ -\\dfrac{3}{2}\\right)\\)"
             ],
-            "correct": 0,
-            "solution": "Using intercept form: x/a + y/b = 1 with a = 4, b = −3:\nx/4 + y/(−3) = 1 → x/4 − y/3 = 1.\nMultiply through by 12: 3x − 4y = 12 → 3x − 4y − 12 = 0."
+            "correct": 2,
+            "solution": "With \\(AP:PB=2:3\\), P is \\(\\dfrac{2}{5}\\) of the way from A to B: \\(P=\\dfrac{3A+2B}{5}=\\left(\\dfrac{18}{5},\\ -\\dfrac{11}{5}\\right)\\)."
           },
           {
             "question": "As the parameter k varies, which of the following equations represents a family of parallel lines with slope m = 2?",
@@ -46446,52 +46446,52 @@ const subjects = [
             "solution": "Sum = n(n+1)/2 = 10 × 11/2 = 55."
           },
           {
-            "question": "Next term: 2,6,18,54,?",
+            "question": "Let \\(f(x)=\\dfrac{3x-5}{2x-2}\\). What is \\(f^{-1}(2)\\)?",
             "options": [
-              "108",
-              "162",
-              "216",
-              "324",
-              "486"
+              "\\(-\\dfrac{1}{7}\\)",
+              "\\(-1\\)",
+              "\\(2\\)",
+              "\\(1\\)",
+              "\\(-\\dfrac{1}{2}\\)"
             ],
             "correct": 1,
-            "solution": "×3 pattern: 54×3=162."
+            "solution": "Solve \\(y=\\dfrac{3x-5}{2x-2}\\) for x: \\(y(2x-2)=3x-5\\) gives \\(x(2y-3)=-5+2y\\), so \\(f^{-1}(y)=\\dfrac{-5+2y}{2y-3}\\). At \\(y=2\\): \\(-1\\)."
           },
           {
-            "question": "Next term: 1,4,9,16,25,?",
+            "question": "Let \\(f(x)=-2x-4\\) and \\(g(x)=x^{2}+1\\). What is \\((g\\circ f)(-3)-(f\\circ g)(-3)\\)?",
             "options": [
-              "30",
-              "36",
-              "49",
-              "64",
-              "81"
+              "-19",
+              "-24",
+              "8",
+              "29",
+              "5"
             ],
-            "correct": 1,
-            "solution": "Squares: n². Next=6²=36."
+            "correct": 3,
+            "solution": "\\((g\\circ f)(-3)=g(f(-3))=g(2)=5\\) and \\((f\\circ g)(-3)=f(g(-3))=f(10)=-24\\). The difference is 5 − (-24) = 29."
           },
           {
-            "question": "Sum of first 10 terms: 1+2+3+...+10?",
+            "question": "Two similar solids have corresponding lengths in the ratio 2:5. The smaller solid has a volume of 16 cm³. What is the volume of the larger solid?",
             "options": [
-              "45",
-              "50",
-              "55",
-              "100",
-              "110"
+              "100 cm³",
+              "40 cm³",
+              "19 cm³",
+              "266 cm³",
+              "250 cm³"
             ],
-            "correct": 2,
-            "solution": "Sum=n(n+1)/2=10×11/2=55."
+            "correct": 4,
+            "solution": "Volumes scale with the cube of the length ratio: \\(\\left(\\dfrac{5}{2}\\right)^3=\\dfrac{125}{8}\\). So the volume is 16 × 125/8 = 250 cm³."
           },
           {
-            "question": "Next term: 3,7,11,15,?",
+            "question": "Let \\(f(x)=x+3\\) and \\(g(x)=x^{2}+3\\). What is the sum of all real solutions of \\((g\\circ f)(x)=12\\)?",
             "options": [
-              "17",
-              "19",
-              "21",
-              "23",
-              "25"
+              "\\(-6\\)",
+              "\\(6\\)",
+              "\\(0\\)",
+              "\\(3\\)",
+              "\\(-3\\)"
             ],
-            "correct": 1,
-            "solution": "+4 pattern: 15+4=19."
+            "correct": 0,
+            "solution": "\\((g\\circ f)(x)=1(x+3)^2+3=12\\) gives \\((x+3)^2=9\\), so \\(x+3=\\pm3\\) (two solutions). Their sum is \\(\\dfrac{-2(3)}{1}=-6\\)."
           },
           {
             "question": "Sum of geometric series: 2+6+18+54 (4 terms)?",
@@ -46506,160 +46506,160 @@ const subjects = [
             "solution": "S=a(rⁿ−1)/(r−1)=2(81−1)/2=80."
           },
           {
-            "question": "Next term: 1,1,2,3,5,8,?",
+            "question": "Let \\(f(x)=-2x-3\\) and \\(g(x)=x^{2}-4\\). What is the sum of all real solutions of \\((g\\circ f)(x)=21\\)?",
             "options": [
-              "11",
-              "13",
-              "15",
-              "21",
-              "34"
+              "\\(-3\\)",
+              "\\(3\\)",
+              "\\(1\\)",
+              "\\(-\\dfrac{3}{2}\\)",
+              "\\(2\\)"
             ],
-            "correct": 1,
-            "solution": "Fibonacci: 8+5=13."
+            "correct": 0,
+            "solution": "\\((g\\circ f)(x)=1(-2x-3)^2-4=21\\) gives \\((-2x-3)^2=25\\), so \\(-2x-3=\\pm5\\) (two solutions). Their sum is \\(\\dfrac{-2(-3)}{-2}=-3\\)."
           },
           {
-            "question": "5th term of AP: 3,7,11,...?",
+            "question": "The point \\((-3,\\ -4)\\) is translated by the vector (-4, -1), then reflected in the x-axis, then rotated 180° about the origin. What are the coordinates of its final image?",
             "options": [
-              "15",
-              "17",
-              "19",
-              "21",
-              "23"
+              "\\((-7,\\ 5)\\)",
+              "\\((-5,\\ 7)\\)",
+              "\\((7,\\ 5)\\)",
+              "\\((-1,\\ -5)\\)",
+              "\\((7,\\ -5)\\)"
             ],
-            "correct": 2,
-            "solution": "a=3,d=4. T₅=a+4d=3+16=19."
+            "correct": 4,
+            "solution": "Apply the steps in order: \\((-3,\\ -4)\\to(-7,\\ -5)\\), \\((-7,\\ -5)\\to(-7,\\ 5)\\), \\((-7,\\ 5)\\to(7,\\ -5)\\). Final image: \\((7,\\ -5)\\)."
           },
           {
-            "question": "Sum of first 20 natural numbers?",
+            "question": "Two similar polygons have corresponding sides in the ratio 1:4. The smaller one has an area of 4 cm². What is the area of the larger one?",
             "options": [
-              "190",
-              "200",
-              "210",
-              "220",
-              "400"
-            ],
-            "correct": 2,
-            "solution": "Sum=20×21/2=210."
-          },
-          {
-            "question": "Next term: 64,32,16,8,?",
-            "options": [
-              "2",
-              "4",
-              "6",
-              "1",
-              "0"
-            ],
-            "correct": 1,
-            "solution": "÷2 pattern: 8÷2=4."
-          },
-          {
-            "question": "Sum of infinite GP: 4+2+1+0.5+...?",
-            "options": [
-              "6",
-              "7",
-              "8",
-              "9",
-              "10"
-            ],
-            "correct": 2,
-            "solution": "S=a/(1−r)=4/(1−0.5)=8."
-          },
-          {
-            "question": "Next term: 1,8,27,64,?",
-            "options": [
-              "100",
-              "125",
-              "216",
-              "343",
-              "512"
-            ],
-            "correct": 1,
-            "solution": "Cubes: n³. Next=5³=125."
-          },
-          {
-            "question": "10th term of AP: 2,5,8,...?",
-            "options": [
-              "27",
-              "29",
-              "31",
-              "33",
-              "35"
-            ],
-            "correct": 1,
-            "solution": "a=2,d=3. T₁₀=2+9×3=29."
-          },
-          {
-            "question": "Next term: 2,5,10,17,26,?",
-            "options": [
-              "35",
-              "37",
-              "39",
-              "41",
-              "43"
-            ],
-            "correct": 1,
-            "solution": "n²+1: 1²+1=2,2²+1=5,3²+1=10... Next=6²+1=37."
-          },
-          {
-            "question": "Sum of first 5 terms: 3+6+12+24+48?",
-            "options": [
-              "90",
-              "93",
-              "96",
-              "99",
-              "102"
-            ],
-            "correct": 1,
-            "solution": "GP: S=3(32−1)/1=93."
-          },
-          {
-            "question": "Next term: 1,4,7,10,13,?",
-            "options": [
-              "14",
-              "15",
-              "16",
-              "17",
-              "18"
-            ],
-            "correct": 2,
-            "solution": "+3 pattern: 13+3=16."
-          },
-          {
-            "question": "Next term: 0,1,1,2,3,5,8,?",
-            "options": [
-              "11",
-              "13",
-              "15",
-              "21",
-              "34"
-            ],
-            "correct": 1,
-            "solution": "Fibonacci: 8+5=13."
-          },
-          {
-            "question": "Sum of first 5 odd numbers?",
-            "options": [
-              "9",
-              "15",
-              "21",
-              "25",
-              "35"
+              "36 cm²",
+              "256 cm²",
+              "68 cm²",
+              "64 cm²",
+              "16 cm²"
             ],
             "correct": 3,
-            "solution": "1+3+5+7+9=25."
+            "solution": "Areas scale with the square of the length ratio: \\(\\left(\\dfrac{4}{1}\\right)^2=\\dfrac{16}{1}\\). So the area is 4 × 16/1 = 64 cm²."
           },
           {
-            "question": "Sum of first 5 even numbers?",
+            "question": "Let \\(f(x)=\\dfrac{3x-2}{4x+3}\\). What is \\(f^{-1}(1)\\)?",
             "options": [
-              "20",
-              "30",
-              "40",
-              "50",
-              "60"
+              "\\(\\dfrac{1}{7}\\)",
+              "\\(-\\dfrac{1}{7}\\)",
+              "\\(-5\\)",
+              "\\(7\\)",
+              "\\(-\\dfrac{5}{7}\\)"
             ],
-            "correct": 1,
-            "solution": "2+4+6+8+10=30."
+            "correct": 2,
+            "solution": "Solve \\(y=\\dfrac{3x-2}{4x+3}\\) for x: \\(y(4x+3)=3x-2\\) gives \\(x(4y-3)=-2-3y\\), so \\(f^{-1}(y)=\\dfrac{-2-3y}{4y-3}\\). At \\(y=1\\): \\(-5\\)."
+          },
+          {
+            "question": "The point \\((2,\\ -5)\\) is reflected in the line y = x, then translated by the vector (2, 0), then rotated 180° about the origin. What are the coordinates of its final image?",
+            "options": [
+              "\\((3,\\ -2)\\)",
+              "\\((-2,\\ 3)\\)",
+              "\\((5,\\ -2)\\)",
+              "\\((-3,\\ 2)\\)",
+              "\\((5,\\ 0)\\)"
+            ],
+            "correct": 0,
+            "solution": "Apply the steps in order: \\((2,\\ -5)\\to(-5,\\ 2)\\), \\((-5,\\ 2)\\to(-3,\\ 2)\\), \\((-3,\\ 2)\\to(3,\\ -2)\\). Final image: \\((3,\\ -2)\\)."
+          },
+          {
+            "question": "Let \\(f(x)=\\dfrac{3x-3}{x}\\). What is \\(f^{-1}(4)\\)?",
+            "options": [
+              "\\(\\dfrac{4}{9}\\)",
+              "\\(3\\)",
+              "\\(-\\dfrac{3}{7}\\)",
+              "\\(-3\\)",
+              "\\(-\\dfrac{9}{4}\\)"
+            ],
+            "correct": 3,
+            "solution": "Solve \\(y=\\dfrac{3x-3}{x}\\) for x: \\(y(x)=3x-3\\) gives \\(x(1y-3)=-3+0y\\), so \\(f^{-1}(y)=\\dfrac{-3+0y}{1y-3}\\). At \\(y=4\\): \\(-3\\)."
+          },
+          {
+            "question": "Let \\(f(x)=\\dfrac{3x+2}{3x-2}\\). What is \\(f^{-1}(-4)\\)?",
+            "options": [
+              "\\(\\dfrac{5}{7}\\)",
+              "\\(-\\dfrac{2}{5}\\)",
+              "\\(\\dfrac{7}{5}\\)",
+              "\\(-\\dfrac{5}{7}\\)",
+              "\\(\\dfrac{2}{5}\\)"
+            ],
+            "correct": 4,
+            "solution": "Solve \\(y=\\dfrac{3x+2}{3x-2}\\) for x: \\(y(3x-2)=3x+2\\) gives \\(x(3y-3)=2+2y\\), so \\(f^{-1}(y)=\\dfrac{2+2y}{3y-3}\\). At \\(y=-4\\): \\(\\dfrac{2}{5}\\)."
+          },
+          {
+            "question": "The point \\((3,\\ 2)\\) is translated by the vector (-2, -4), then reflected in the x-axis, then rotated 180° about the origin. What are the coordinates of its final image?",
+            "options": [
+              "\\((-1,\\ -2)\\)",
+              "\\((-2,\\ -1)\\)",
+              "\\((1,\\ 2)\\)",
+              "\\((-1,\\ 2)\\)",
+              "\\((-5,\\ -2)\\)"
+            ],
+            "correct": 0,
+            "solution": "Apply the steps in order: \\((3,\\ 2)\\to(1,\\ -2)\\), \\((1,\\ -2)\\to(1,\\ 2)\\), \\((1,\\ 2)\\to(-1,\\ -2)\\). Final image: \\((-1,\\ -2)\\)."
+          },
+          {
+            "question": "Two similar solids have corresponding lengths in the ratio 1:5. The smaller solid has a volume of 1 cm³. What is the volume of the larger solid?",
+            "options": [
+              "125 cm³",
+              "5 cm³",
+              "64 cm³",
+              "25 cm³",
+              "126 cm³"
+            ],
+            "correct": 0,
+            "solution": "Volumes scale with the cube of the length ratio: \\(\\left(\\dfrac{5}{1}\\right)^3=\\dfrac{125}{1}\\). So the volume is 1 × 125/1 = 125 cm³."
+          },
+          {
+            "question": "Let \\(f(x)=-x+2\\) and \\(g(x)=2x^{2}\\). What is \\((g\\circ f)(-3)-(f\\circ g)(-3)\\)?",
+            "options": [
+              "50",
+              "13",
+              "34",
+              "-66",
+              "66"
+            ],
+            "correct": 4,
+            "solution": "\\((g\\circ f)(-3)=g(f(-3))=g(5)=50\\) and \\((f\\circ g)(-3)=f(g(-3))=f(18)=-16\\). The difference is 50 − (-16) = 66."
+          },
+          {
+            "question": "Let \\(f(x)=x+2\\) and \\(g(x)=2x^{2}+1\\). What is the sum of all real solutions of \\((g\\circ f)(x)=3\\)?",
+            "options": [
+              "\\(-3\\)",
+              "\\(-6\\)",
+              "\\(-2\\)",
+              "\\(2\\)",
+              "\\(-4\\)"
+            ],
+            "correct": 4,
+            "solution": "\\((g\\circ f)(x)=2(x+2)^2+1=3\\) gives \\((x+2)^2=1\\), so \\(x+2=\\pm1\\) (two solutions). Their sum is \\(\\dfrac{-2(2)}{1}=-4\\)."
+          },
+          {
+            "question": "Let \\(f(x)=\\dfrac{2x-1}{2x+4}\\). What is \\(f^{-1}(3)\\)?",
+            "options": [
+              "\\(-\\dfrac{1}{2}\\)",
+              "\\(\\dfrac{13}{4}\\)",
+              "\\(-\\dfrac{13}{4}\\)",
+              "\\(2\\)",
+              "\\(\\dfrac{1}{2}\\)"
+            ],
+            "correct": 2,
+            "solution": "Solve \\(y=\\dfrac{2x-1}{2x+4}\\) for x: \\(y(2x+4)=2x-1\\) gives \\(x(2y-2)=-1-4y\\), so \\(f^{-1}(y)=\\dfrac{-1-4y}{2y-2}\\). At \\(y=3\\): \\(-\\dfrac{13}{4}\\)."
+          },
+          {
+            "question": "Let \\(f(x)=\\dfrac{4x+4}{2x-3}\\). What is \\(f^{-1}(1)\\)?",
+            "options": [
+              "\\(-\\dfrac{7}{2}\\)",
+              "\\(\\dfrac{7}{2}\\)",
+              "\\(-\\dfrac{1}{8}\\)",
+              "\\(\\dfrac{7}{6}\\)",
+              "\\(-8\\)"
+            ],
+            "correct": 0,
+            "solution": "Solve \\(y=\\dfrac{4x+4}{2x-3}\\) for x: \\(y(2x-3)=4x+4\\) gives \\(x(2y-4)=4+3y\\), so \\(f^{-1}(y)=\\dfrac{4+3y}{2y-4}\\). At \\(y=1\\): \\(-\\dfrac{7}{2}\\)."
           },
           {
             "question": "The 3rd term of an arithmetic progression is 11 and the 8th term is 31. What is the 20th term?",
@@ -46908,16 +46908,16 @@ const subjects = [
         "name": "Combinatorics",
         "questions": [
           {
-            "question": "In how many ways can 3 prizes be awarded to 10 students if each student can receive at most one prize?",
+            "question": "A convex polygon has 27 diagonals. How many sides does it have?",
             "options": [
-              "120",
-              "720",
-              "1,000",
-              "1,200",
-              "7,200"
+              "8",
+              "13",
+              "9",
+              "11",
+              "10"
             ],
-            "correct": 1,
-            "solution": "This is a permutation: 10P3 = 10 × 9 × 8 = 720 ways."
+            "correct": 2,
+            "solution": "A polygon with n sides has \\(\\binom n2-n=\\dfrac{n(n-3)}2\\) diagonals. Solve \\(n(n-3)=54\\): \\(n^2-3n-54=0\\) gives \\((n-9)(n+6)=0\\), so n = 9."
           },
           {
             "question": "How many 4-digit numbers with all digits different are <b>even</b>?",
@@ -46932,16 +46932,16 @@ const subjects = [
             "solution": "Last digit 0: the other three places are filled in \\(9 \\times 8 \\times 7 = 504\\) ways. Last digit 2, 4, 6 or 8 (4 choices): the first digit cannot be 0 or the last digit (8 choices), then \\(8\\) and \\(7\\) for the others: \\(4 \\times 8 \\times 8 \\times 7 = 1792\\). Total \\(= 504 + 1792 = 2296\\)."
           },
           {
-            "question": "In how many ways can 5 people sit in a row?",
+            "question": "A committee of 4 people is chosen from 4 men and 4 women. In how many ways can it be chosen if it must contain at least 1 woman?",
             "options": [
-              "60",
-              "120",
-              "240",
-              "720",
-              "5040"
+              "16",
+              "140",
+              "69",
+              "73",
+              "70"
             ],
-            "correct": 1,
-            "solution": "5!=120."
+            "correct": 2,
+            "solution": "Add the cases by number of women: \\(\\binom{4}{1}\\binom{4}{3}=16\\) + \\(\\binom{4}{2}\\binom{4}{2}=36\\) + \\(\\binom{4}{3}\\binom{4}{1}=16\\) + \\(\\binom{4}{4}\\binom{4}{0}=1\\) = 69. (Choosing 1 woman first and then anyone else over-counts committees with more women.)"
           },
           {
             "question": "If \\(\\dbinom{n}{3} = \\dbinom{n}{7}\\), what is \\(\\dbinom{n}{4}\\)?",
@@ -46956,16 +46956,16 @@ const subjects = [
             "solution": "Since \\(\\binom{n}{k} = \\binom{n}{n - k}\\), we need \\(3 + 7 = n\\), so \\(n = 10\\). Then \\(\\binom{10}{4} = \\dfrac{10 \\cdot 9 \\cdot 8 \\cdot 7}{24} = 210\\)."
           },
           {
-            "question": "How many ways to choose 2 from 8?",
+            "question": "How many different arrangements of all the letters of the word COFFEE (not necessarily meaningful words) have all the vowels next to each other?",
             "options": [
-              "28",
-              "56",
-              "64",
-              "16",
-              "8"
+              "12",
+              "36",
+              "15",
+              "180",
+              "72"
             ],
-            "correct": 0,
-            "solution": "8C2=8!/(2!6!)=28."
+            "correct": 1,
+            "solution": "Glue the 3 vowels into one block. Inside the block the vowels can be arranged in 3 ways. The block and the 3 consonants then form 4 objects, arranged in 12 ways (repeated consonants divided out). Total 3 × 12 = 36."
           },
           {
             "question": "How many different arrangements of the letters of the word STATISTICS are there?",
@@ -47004,40 +47004,40 @@ const subjects = [
             "solution": "Choose the position of A: 3 ways. Fill the other two places from the remaining 5 letters in order: \\(5 \\times 4 = 20\\). Total \\(= 3 \\times 20 = 60\\). (Check by complement: \\(6 \\times 5 \\times 4 - 5 \\times 4 \\times 3 = 120 - 60 = 60\\).)"
           },
           {
-            "question": "In how many ways can 4 prizes be given to 10 students?",
+            "question": "A committee of 4 people is chosen from 6 men and 6 women. In how many ways can it be chosen if it must contain at least 1 woman?",
             "options": [
-              "5040",
-              "210",
-              "10000",
-              "720",
-              "120"
+              "120",
+              "990",
+              "486",
+              "495",
+              "480"
+            ],
+            "correct": 4,
+            "solution": "Add the cases by number of women: \\(\\binom{6}{1}\\binom{6}{3}=120\\) + \\(\\binom{6}{2}\\binom{6}{2}=225\\) + \\(\\binom{6}{3}\\binom{6}{1}=120\\) + \\(\\binom{6}{4}\\binom{6}{0}=15\\) = 480. (Choosing 1 woman first and then anyone else over-counts committees with more women.)"
+          },
+          {
+            "question": "How many different arrangements of all the letters of the word BANANA (not necessarily meaningful words) have all 3 letters A next to each other?",
+            "options": [
+              "36",
+              "12",
+              "15",
+              "20",
+              "60"
             ],
             "correct": 1,
-            "solution": "10P4=10×9×8×7=5040."
+            "solution": "Glue the 3 letters A into one block. Then there are 4 objects (the block and the other letters), arranged in 12 ways once repeated letters are divided out."
           },
           {
-            "question": "8C5 equals?",
+            "question": "How many different arrangements of all the letters of the word BALLOON (not necessarily meaningful words) have the first letter a vowel?",
             "options": [
-              "56",
-              "336",
-              "112",
-              "28",
-              "672"
-            ],
-            "correct": 0,
-            "solution": "8C5=8!/(5!3!)=40320/720=56."
-          },
-          {
-            "question": "How many ways to arrange letters in 'MATH'?",
-            "options": [
-              "4",
-              "12",
-              "24",
-              "48",
-              "6"
+              "360",
+              "1260",
+              "540",
+              "720",
+              "2160"
             ],
             "correct": 2,
-            "solution": "4!=24."
+            "solution": "Fix a vowel in first place and arrange the other 6 letters (dividing out repeats): A: 180, O: 360. Total = 540."
           },
           {
             "question": "Six people stand in a row. In how many ways can they stand if A and B must <b>not</b> be next to each other?",
@@ -47052,16 +47052,16 @@ const subjects = [
             "solution": "All arrangements: \\(6! = 720\\). With A and B together: treat them as one block, \\(5!\\) arrangements, times 2 for their order, \\(= 240\\). Not together: \\(720 - 240 = 480\\)."
           },
           {
-            "question": "How many ways to choose 3 from 7?",
+            "question": "A committee of 5 people is chosen from 8 men and 5 women. In how many ways can it be chosen if it must contain at least 2 women?",
             "options": [
-              "35",
-              "210",
-              "21",
-              "7",
-              "343"
+              "560",
+              "891",
+              "881",
+              "1650",
+              "1287"
             ],
-            "correct": 0,
-            "solution": "7C3=7!/(3!4!)=5040/144=35."
+            "correct": 2,
+            "solution": "Add the cases by number of women: \\(\\binom{5}{2}\\binom{8}{3}=560\\) + \\(\\binom{5}{3}\\binom{8}{2}=280\\) + \\(\\binom{5}{4}\\binom{8}{1}=40\\) + \\(\\binom{5}{5}\\binom{8}{0}=1\\) = 881. (Choosing 2 women first and then anyone else over-counts committees with more women.)"
           },
           {
             "question": "A committee of 5 is chosen from 6 men and 4 women. How many committees contain <b>at least 2 women</b>?",
@@ -47076,16 +47076,16 @@ const subjects = [
             "solution": "Use the complement. All committees: \\(\\binom{10}{5} = 252\\). With no women: \\(\\binom{6}{5} = 6\\). With exactly 1 woman: \\(4 \\times \\binom{6}{4} = 60\\). So \\(252 - 6 - 60 = 186\\)."
           },
           {
-            "question": "How many ways to arrange 3 books from 5?",
+            "question": "A committee of 5 people is chosen from 5 men and 6 women. In how many ways can it be chosen if it must contain at least 1 woman?",
             "options": [
-              "60",
-              "20",
-              "15",
-              "120",
-              "6"
+              "1260",
+              "461",
+              "462",
+              "30",
+              "467"
             ],
-            "correct": 0,
-            "solution": "5P3=5!/(2!)=120/2=60."
+            "correct": 1,
+            "solution": "Add the cases by number of women: \\(\\binom{6}{1}\\binom{5}{4}=30\\) + \\(\\binom{6}{2}\\binom{5}{3}=150\\) + \\(\\binom{6}{3}\\binom{5}{2}=200\\) + \\(\\binom{6}{4}\\binom{5}{1}=75\\) + \\(\\binom{6}{5}\\binom{5}{0}=6\\) = 461. (Choosing 1 woman first and then anyone else over-counts committees with more women.)"
           },
           {
             "question": "What is the term independent of \\(x\\) in the expansion of \\(\\left(x - \\dfrac{2}{x}\\right)^{6}\\)?",
@@ -47100,76 +47100,76 @@ const subjects = [
             "solution": "The general term is \\(\\binom{6}{k}x^{6 - k}\\left(-\\dfrac{2}{x}\\right)^{k} = \\binom{6}{k}(-2)^{k}x^{6 - 2k}\\). The exponent is 0 when \\(k = 3\\): \\(\\binom{6}{3}(-2)^{3} = 20 \\times (-8) = -160\\)."
           },
           {
-            "question": "8P4 equals?",
+            "question": "How many different arrangements of all the letters of the word SUCCESS (not necessarily meaningful words) have all 3 letters S next to each other?",
             "options": [
-              "1680",
-              "336",
-              "70",
-              "672",
-              "56"
-            ],
-            "correct": 0,
-            "solution": "8P4=8!/(4!)=40320/24=1680."
-          },
-          {
-            "question": "10C4 equals?",
-            "options": [
-              "210",
-              "5040",
-              "50",
-              "2100",
+              "420",
+              "60",
+              "140",
+              "63",
               "120"
             ],
-            "correct": 0,
-            "solution": "10C4=10!/(4!6!)=3628800/17280=210."
-          },
-          {
-            "question": "How many ways to arrange 4 distinct books?",
-            "options": [
-              "12",
-              "24",
-              "48",
-              "6",
-              "4"
-            ],
             "correct": 1,
-            "solution": "4!=24."
+            "solution": "Glue the 3 letters S into one block. Then there are 5 objects (the block and the other letters), arranged in 60 ways once repeated letters are divided out."
           },
           {
-            "question": "How many ways to choose 4 from 10?",
+            "question": "How many different arrangements of all the letters of the word LETTER (not necessarily meaningful words) have all the vowels next to each other?",
+            "options": [
+              "180",
+              "61",
+              "60",
+              "240",
+              "120"
+            ],
+            "correct": 2,
+            "solution": "Glue the 2 vowels into one block. Inside the block the vowels can be arranged in 1 way. The block and the 4 consonants then form 5 objects, arranged in 60 ways (repeated consonants divided out). Total 1 × 60 = 60."
+          },
+          {
+            "question": "How many different arrangements of all the letters of the word BALLOON (not necessarily meaningful words) have all the vowels next to each other?",
+            "options": [
+              "720",
+              "1260",
+              "360",
+              "60",
+              "180"
+            ],
+            "correct": 4,
+            "solution": "Glue the 3 vowels into one block. Inside the block the vowels can be arranged in 3 ways. The block and the 4 consonants then form 5 objects, arranged in 60 ways (repeated consonants divided out). Total 3 × 60 = 180."
+          },
+          {
+            "question": "How many different arrangements of all the letters of the word ATTITUDE (not necessarily meaningful words) have all 3 letters T next to each other?",
+            "options": [
+              "2240",
+              "6720",
+              "2160",
+              "720",
+              "723"
+            ],
+            "correct": 3,
+            "solution": "Glue the 3 letters T into one block. Then there are 6 objects (the block and the other letters), arranged in 720 ways once repeated letters are divided out."
+          },
+          {
+            "question": "9 people, including Anna and Ben, sit around a round table (rotations of the same seating count as the same arrangement). In how many arrangements are Anna and Ben next to each other?",
             "options": [
               "5040",
-              "210",
-              "120",
-              "720",
-              "1000"
+              "40320",
+              "282240",
+              "80640",
+              "10080"
             ],
-            "correct": 1,
-            "solution": "10C4=210."
+            "correct": 4,
+            "solution": "Round-table seatings of n people: (n−1)! = 40320. Treat Anna and Ben as one block that can be ordered 2 ways: 2·(n−2)! = 10080 arrangements with them adjacent."
           },
           {
-            "question": "How many distinct 4-digit numbers can be formed using the digits {1, 2, 3, 4, 5, 6} if no digit may be repeated?",
+            "question": "6 people, including Anna and Ben, sit around a round table (rotations of the same seating count as the same arrangement). In how many arrangements are Anna and Ben next to each other?",
             "options": [
-              "360",
-              "720",
-              "1296",
-              "120",
-              "24"
+              "24",
+              "480",
+              "50",
+              "48",
+              "240"
             ],
-            "correct": 0,
-            "solution": "This is a permutation of 6 items taken 4 at a time: P(6, 4) = 6 × 5 × 4 × 3 = 360."
-          },
-          {
-            "question": "In how many ways can a committee of 3 men and 2 women be selected from a group of 7 men and 5 women?",
-            "options": [
-              "350",
-              "70",
-              "210",
-              "105",
-              "420"
-            ],
-            "correct": 0,
-            "solution": "Ways to choose 3 men from 7: C(7, 3) = (7 × 6 × 5) / (3 × 2 × 1) = 35.\nWays to choose 2 women from 5: C(5, 2) = (5 × 4) / (2 × 1) = 10.\nTotal ways = 35 × 10 = 350."
+            "correct": 3,
+            "solution": "Round-table seatings of n people: (n−1)! = 120. Treat Anna and Ben as one block that can be ordered 2 ways: 2·(n−2)! = 48 arrangements with them adjacent."
           },
           {
             "question": "How many distinct anagrams (permutations of all letters) can be formed from the word 'SUCCESS'?",
@@ -47184,52 +47184,52 @@ const subjects = [
             "solution": "The word 'SUCCESS' contains 7 letters in total:\nS appears 3 times, C appears 2 times, U appears 1 time, E appears 1 time.\nNumber of distinct permutations = 7! / (3! × 2!) = 5040 / (6 × 2) = 5040 / 12 = 420."
           },
           {
-            "question": "How many diagonals does a convex regular hexagon (6-sided polygon) have?",
+            "question": "A convex polygon has 20 diagonals. How many sides does it have?",
             "options": [
+              "10",
+              "7",
               "9",
               "6",
-              "12",
-              "15",
               "8"
             ],
-            "correct": 0,
-            "solution": "The number of diagonals of an n-sided polygon is given by D = n(n − 3) / 2.\nFor a hexagon, n = 6:\nD = 6(6 − 3) / 2 = 6(3) / 2 = 9."
+            "correct": 4,
+            "solution": "A polygon with n sides has \\(\\binom n2-n=\\dfrac{n(n-3)}2\\) diagonals. Solve \\(n(n-3)=40\\): \\(n^2-3n-40=0\\) gives \\((n-8)(n+5)=0\\), so n = 8."
           },
           {
-            "question": "In how many ways can 5 people be seated in a circle if arrangements that differ only by rotation are considered identical?",
+            "question": "7 people, including Anna and Ben, sit around a round table (rotations of the same seating count as the same arrangement). In how many arrangements are Anna and Ben NOT next to each other?",
             "options": [
-              "24",
-              "120",
-              "60",
-              "12",
-              "20"
+              "1440",
+              "720",
+              "3600",
+              "480",
+              "122"
             ],
-            "correct": 0,
-            "solution": "The number of circular permutations of n distinct objects is (n − 1)!.\nFor n = 5 people: (5 − 1)! = 4! = 24."
+            "correct": 3,
+            "solution": "Round-table seatings of n people: (n−1)! = 720. Treat Anna and Ben as one block that can be ordered 2 ways: 2·(n−2)! = 240 arrangements with them adjacent. Not adjacent = 720 − 240 = 480."
           },
           {
-            "question": "What is the coefficient of x³ in the binomial expansion of (2x + 1)⁵?",
+            "question": "6 people, including Anna and Ben, sit around a round table (rotations of the same seating count as the same arrangement). In how many arrangements are Anna and Ben NOT next to each other?",
             "options": [
-              "80",
-              "40",
-              "32",
-              "10",
-              "160"
+              "26",
+              "72",
+              "480",
+              "240",
+              "48"
             ],
-            "correct": 0,
-            "solution": "By the Binomial Theorem, the general term is T_(k+1) = C(5, k) (2x)^(5−k) (1)^k.\nTo get x³, we need 5 − k = 3 → k = 2.\nCoefficient = C(5, 2) × 2³ × 1² = 10 × 8 × 1 = 80."
+            "correct": 1,
+            "solution": "Round-table seatings of n people: (n−1)! = 120. Treat Anna and Ben as one block that can be ordered 2 ways: 2·(n−2)! = 48 arrangements with them adjacent. Not adjacent = 120 − 48 = 72."
           },
           {
-            "question": "How many subsets does a set containing 6 distinct elements have?",
+            "question": "A convex polygon has 14 diagonals. How many sides does it have?",
             "options": [
-              "64",
-              "36",
-              "32",
-              "128",
-              "12"
+              "9",
+              "8",
+              "6",
+              "7",
+              "5"
             ],
-            "correct": 0,
-            "solution": "A set with n elements has 2^n subsets (including the empty set and the set itself).\nFor n = 6: 2⁶ = 64."
+            "correct": 3,
+            "solution": "A polygon with n sides has \\(\\binom n2-n=\\dfrac{n(n-3)}2\\) diagonals. Solve \\(n(n-3)=28\\): \\(n^2-3n-28=0\\) gives \\((n-7)(n+4)=0\\), so n = 7."
           },
           {
             "question": "In how many ways can 5 books be arranged on a shelf if two specific books must always stand next to each other?",
@@ -47256,64 +47256,64 @@ const subjects = [
             "solution": "Total unrestricted arrangements of 5 books: 5! = 120.\nArrangements where the two books are together: 48 (from the previous problem).\nArrangements where they are NOT together = Total − Together = 120 − 48 = 72."
           },
           {
-            "question": "How many different 3-letter codes can be formed from the English alphabet (26 letters) if repetition of letters is allowed?",
+            "question": "8 people, including Anna and Ben, sit around a round table (rotations of the same seating count as the same arrangement). In how many arrangements are Anna and Ben NOT next to each other?",
             "options": [
-              "17,576",
-              "15,600",
-              "2,600",
-              "18,200",
-              "676"
+              "3600",
+              "10080",
+              "1440",
+              "5040",
+              "722"
             ],
             "correct": 0,
-            "solution": "By the multiplication principle, since repetition is allowed:\nTotal codes = 26 × 26 × 26 = 26³ = 17,576."
+            "solution": "Round-table seatings of n people: (n−1)! = 5040. Treat Anna and Ben as one block that can be ordered 2 ways: 2·(n−2)! = 1440 arrangements with them adjacent. Not adjacent = 5040 − 1440 = 3600."
           },
           {
-            "question": "What is the value of C(8, 3)?",
+            "question": "A committee of 4 people is chosen from 5 men and 4 women. In how many ways can it be chosen if it must contain at least 2 women?",
             "options": [
-              "56",
-              "336",
-              "28",
-              "70",
-              "48"
-            ],
-            "correct": 0,
-            "solution": "C(8, 3) = (8 × 7 × 6) / (3 × 2 × 1) = 336 / 6 = 56."
-          },
-          {
-            "question": "What is the sum of the coefficients of the polynomial P(x) = (3x − 2)⁴?",
-            "options": [
-              "1",
+              "60",
               "81",
+              "87",
+              "126",
+              "121"
+            ],
+            "correct": 1,
+            "solution": "Add the cases by number of women: \\(\\binom{4}{2}\\binom{5}{2}=60\\) + \\(\\binom{4}{3}\\binom{5}{1}=20\\) + \\(\\binom{4}{4}\\binom{5}{0}=1\\) = 81. (Choosing 2 women first and then anyone else over-counts committees with more women.)"
+          },
+          {
+            "question": "A convex polygon has 104 diagonals. How many sides does it have?",
+            "options": [
+              "14",
               "16",
-              "0",
-              "5"
-            ],
-            "correct": 0,
-            "solution": "The sum of coefficients of any polynomial P(x) is found by setting x = 1:\nP(1) = (3(1) − 2)⁴ = (3 − 2)⁴ = 1⁴ = 1."
-          },
-          {
-            "question": "In a tennis tournament with 16 players, each player plays every other player exactly once (round-robin). How many matches are played in total?",
-            "options": [
-              "120",
-              "240",
-              "136",
-              "128",
-              "64"
-            ],
-            "correct": 0,
-            "solution": "Each match consists of a pair of players chosen from 16:\nTotal matches = C(16, 2) = (16 × 15) / 2 = 8 × 15 = 120."
-          },
-          {
-            "question": "How many positive integer factors does the number 360 have?",
-            "options": [
-              "24",
               "18",
-              "12",
-              "36",
-              "20"
+              "15",
+              "52"
+            ],
+            "correct": 1,
+            "solution": "A polygon with n sides has \\(\\binom n2-n=\\dfrac{n(n-3)}2\\) diagonals. Solve \\(n(n-3)=208\\): \\(n^2-3n-208=0\\) gives \\((n-16)(n+13)=0\\), so n = 16."
+          },
+          {
+            "question": "7 people, including Anna and Ben, sit around a round table (rotations of the same seating count as the same arrangement). In how many arrangements are Anna and Ben next to each other?",
+            "options": [
+              "240",
+              "1440",
+              "720",
+              "120",
+              "3600"
             ],
             "correct": 0,
-            "solution": "Prime factorization of 360:\n360 = 36 × 10 = (2² × 3²) × (2 × 5) = 2³ × 3² × 5¹.\nThe number of factors is (a + 1)(b + 1)(c + 1) = (3 + 1)(2 + 1)(1 + 1) = 4 × 3 × 2 = 24."
+            "solution": "Round-table seatings of n people: (n−1)! = 720. Treat Anna and Ben as one block that can be ordered 2 ways: 2·(n−2)! = 240 arrangements with them adjacent."
+          },
+          {
+            "question": "10 points are drawn in a plane, and 4 of them lie on the same straight line (no other three are collinear). How many triangles have their three vertices among these points?",
+            "options": [
+              "114",
+              "117",
+              "116",
+              "20",
+              "120"
+            ],
+            "correct": 2,
+            "solution": "Total triples: \\(\\binom{10}{3}=120\\). Triples from the collinear points do not make triangles: \\(\\binom{4}{3}=4\\). So 120 − 4 = 116."
           },
           {
             "question": "A box contains 8 distinct chocolates. In how many ways can 3 chocolates be chosen to give to Alice and 2 chocolates to Bob?",
@@ -47340,28 +47340,28 @@ const subjects = [
             "solution": "First digit: 9 choices (1 through 9, since it cannot be 0).\nSecond digit: 10 choices (0 through 9).\nThird digit: 10 choices.\nFourth digit: 10 choices.\nTotal PINs = 9 × 10 × 10 × 10 = 9,000."
           },
           {
-            "question": "What is the value of 10! / (8! × 2!)?",
+            "question": "A convex polygon has 35 diagonals. How many sides does it have?",
             "options": [
-              "45",
-              "90",
-              "50",
-              "40",
-              "36"
+              "8",
+              "10",
+              "11",
+              "17",
+              "9"
             ],
-            "correct": 0,
-            "solution": "10! / (8! × 2!) = (10 × 9 × 8!) / (8! × 2) = (10 × 9) / 2 = 90 / 2 = 45."
+            "correct": 1,
+            "solution": "A polygon with n sides has \\(\\binom n2-n=\\dfrac{n(n-3)}2\\) diagonals. Solve \\(n(n-3)=70\\): \\(n^2-3n-70=0\\) gives \\((n-10)(n+7)=0\\), so n = 10."
           },
           {
-            "question": "If C(n, 2) = 21 for a positive integer n, what is the value of n?",
+            "question": "11 points are drawn in a plane, and 4 of them lie on the same straight line (no other three are collinear). How many triangles have their three vertices among these points?",
             "options": [
-              "7",
-              "6",
-              "8",
-              "9",
-              "5"
+              "161",
+              "35",
+              "165",
+              "159",
+              "162"
             ],
             "correct": 0,
-            "solution": "C(n, 2) = n(n − 1) / 2 = 21 → n(n − 1) = 42.\nSince 7 × 6 = 42, n = 7."
+            "solution": "Total triples: \\(\\binom{11}{3}=165\\). Triples from the collinear points do not make triangles: \\(\\binom{4}{3}=4\\). So 165 − 4 = 161."
           },
           {
             "question": "In how many ways can 6 identical apples be distributed among 3 children so that each child gets at least one apple?",
@@ -47394,52 +47394,52 @@ const subjects = [
         "name": "Number Sets",
         "questions": [
           {
-            "question": "Which set contains only natural numbers?",
+            "question": "How many digits does the integer \\(2^{30}\\times5^{18}\\) have? (You are given that \\(2^{12}\\) has 4 digits.)",
             "options": [
-              "{−1,0,1,2}",
-              "{0,1,2,3}",
-              "{1,2,3,4}",
-              "{−2,−1,0,1}",
-              "{1/2,1,2,3}"
-            ],
-            "correct": 2,
-            "solution": "ℕ={1,2,3,...} or {0,1,2,...}. Only positive integers are in ℕ."
-          },
-          {
-            "question": "Which number is NOT in ℤ (integers)?",
-            "options": [
-              "−5",
-              "0",
-              "3",
-              "1/2",
-              "−100"
+              "23",
+              "21",
+              "19",
+              "22",
+              "49"
             ],
             "correct": 3,
-            "solution": "ℤ={...,−2,−1,0,1,2,...}. 1/2 is a fraction, not an integer."
+            "solution": "\\(2^{30}\\times5^{18}=2^{12}\\times(2\\times5)^{18}=2^{12}\\times10^{18}\\). Multiplying by \\(10^{18}\\) only appends 18 zeros, so the number of digits is 4 + 18 = 22."
           },
           {
-            "question": "Which number is in ℚ (rational numbers)?",
+            "question": "Two positive integers have greatest common divisor 7 and least common multiple 294. One of them is 42. What is the sum of the two integers?",
             "options": [
-              "π",
-              "√2",
-              "−3/4",
-              "e",
-              "√3"
+              "13",
+              "84",
+              "294",
+              "98",
+              "91"
             ],
-            "correct": 2,
-            "solution": "ℚ includes all fractions. −3/4=−0.75 is rational."
+            "correct": 4,
+            "solution": "For two positive integers, GCD × LCM = product of the numbers. The other number is 7×294/42 = 49. The sum is 42+49 = 91. Check: gcd(42, 49) = 7 and lcm(42, 49) = 294."
           },
           {
-            "question": "Which statement about ℝ (real numbers) is true?",
+            "question": "Two positive integers have greatest common divisor 4 and least common multiple 120. One of them is 24. What is the sum of the two integers?",
             "options": [
-              "ℝ includes only integers",
-              "ℝ includes √−1",
-              "ℝ includes all rational and irrational numbers",
-              "ℝ is a subset of ℚ",
-              "ℝ excludes negative numbers"
+              "120",
+              "29",
+              "48",
+              "11",
+              "44"
             ],
-            "correct": 2,
-            "solution": "ℝ=ℚ∪(irrationals). All real numbers including √2, π, etc."
+            "correct": 4,
+            "solution": "For two positive integers, GCD × LCM = product of the numbers. The other number is 4×120/24 = 20. The sum is 24+20 = 44. Check: gcd(24, 20) = 4 and lcm(24, 20) = 120."
+          },
+          {
+            "question": "How many digits does the integer \\(2^{26}\\times5^{15}\\) have? (You are given that \\(2^{11}\\) has 4 digits.)",
+            "options": [
+              "41",
+              "19",
+              "20",
+              "18",
+              "26"
+            ],
+            "correct": 1,
+            "solution": "\\(2^{26}\\times5^{15}=2^{11}\\times(2\\times5)^{15}=2^{11}\\times10^{15}\\). Multiplying by \\(10^{15}\\) only appends 15 zeros, so the number of digits is 4 + 15 = 19."
           },
           {
             "question": "Write \\(0.2\\overline{3}\\) (the digit 3 repeats forever) as a fraction.",
@@ -47466,16 +47466,16 @@ const subjects = [
             "solution": "\\(360 = 2^{3} \\cdot 3^{2} \\cdot 5^{1}\\). The number of divisors is \\((3 + 1)(2 + 1)(1 + 1) = 4 \\times 3 \\times 2 = 24\\)."
           },
           {
-            "question": "Is √2 a rational number?",
+            "question": "How many digits does the integer \\(2^{8}\\times5^{3}\\) have? (You are given that \\(2^{5}\\) has 2 digits.)",
             "options": [
-              "Yes",
-              "No",
-              "Sometimes",
-              "Only if simplified",
-              "Undefined"
+              "8",
+              "4",
+              "5",
+              "12",
+              "6"
             ],
-            "correct": 1,
-            "solution": "√2≈1.414... cannot be expressed as a fraction. It's irrational."
+            "correct": 2,
+            "solution": "\\(2^{8}\\times5^{3}=2^{5}\\times(2\\times5)^{3}=2^{5}\\times10^{3}\\). Multiplying by \\(10^{3}\\) only appends 3 zeros, so the number of digits is 2 + 3 = 5."
           },
           {
             "question": "A drug has a concentration of 0.45 mg per mL. Express this in \\(\\mu\\)g per litre.",
@@ -47502,28 +47502,28 @@ const subjects = [
             "solution": "1 cm \\(= 10^{-2}\\) m. Number \\(= \\dfrac{10^{-2}}{2 \\times 10^{-5}} = 0.5 \\times 10^{3} = 5 \\times 10^{2}\\), which is 500 cells."
           },
           {
-            "question": "Is 0 a natural number?",
+            "question": "Calculate \\(\\dfrac{(4\\times10^{-8})(7\\times10^{7})}{4\\times10^{1}}\\) and give the result in standard scientific notation (coefficient from 1 up to, but not including, 10).",
             "options": [
-              "Always",
-              "Never",
-              "Sometimes",
-              "Only in some definitions",
-              "Only in ℤ"
+              "\\(7\\times10^{-1}\\)",
+              "\\(7\\times10^{-2}\\)",
+              "\\(7\\times10^{0}\\)",
+              "\\(7\\times10^{-3}\\)",
+              "\\(70\\times10^{-3}\\)"
             ],
-            "correct": 3,
-            "solution": "In some definitions ℕ={0,1,2,...}, in others ℕ={1,2,3,...}."
+            "correct": 1,
+            "solution": "Coefficients: 4×7/4 = 7. Powers of ten: -8 + 7 − (1) = -2. So the value is 7×10^-2, which is already in standard form."
           },
           {
-            "question": "Which is NOT a property of ℤ?",
+            "question": "Calculate \\(\\dfrac{(6\\times10^{-7})(2\\times10^{7})}{8\\times10^{0}}\\) and give the result in standard scientific notation (coefficient from 1 up to, but not including, 10).",
             "options": [
-              "Closed under addition",
-              "Closed under subtraction",
-              "Closed under multiplication",
-              "Closed under division",
-              "Contains negatives"
+              "\\(15\\times10^{-1}\\)",
+              "\\(1.5\\times10^{-1}\\)",
+              "\\(1.5\\times10^{-2}\\)",
+              "\\(1.5\\times10^{1}\\)",
+              "\\(1.5\\times10^{0}\\)"
             ],
-            "correct": 3,
-            "solution": "ℤ is not closed under division (3÷2=1.5∉ℤ)."
+            "correct": 4,
+            "solution": "Coefficients: 6×2/8 = 1.5. Powers of ten: -7 + 7 − (0) = 0. So the value is 1.5×10^0, which is already in standard form."
           },
           {
             "question": "For which digit \\(d\\) is the three-digit number \\(47d\\) divisible by 6?",
@@ -47562,64 +47562,64 @@ const subjects = [
             "solution": "For two numbers, \\(\\text{GCD} \\times \\text{LCM} = \\) product. So the other is \\(\\dfrac{12 \\times 360}{72} = 60\\). Check: \\(\\gcd(60, 72) = 12\\) and \\(\\text{lcm}(60, 72) = 360\\)."
           },
           {
-            "question": "What is ℤ\\ℕ (integers minus naturals)?",
+            "question": "Write \\(0.6\\overline{8}\\) (the digit 8 repeats forever) as a fraction in lowest terms.",
             "options": [
-              "{0,1,2,...}",
-              "{−1,−2,−3,...}",
-              "{...−2,−1,0}",
-              "∅",
-              "ℝ"
+              "\\(\\dfrac{14}{9}\\)",
+              "\\(\\dfrac{34}{45}\\)",
+              "\\(\\dfrac{62}{99}\\)",
+              "\\(\\dfrac{31}{45}\\)",
+              "\\(\\dfrac{68}{99}\\)"
             ],
-            "correct": 1,
-            "solution": "If ℕ={1,2,3,...}, then ℤ\\ℕ={...,−2,−1,0}."
+            "correct": 3,
+            "solution": "Let \\(x=0.6888\\ldots\\). Then \\(100x=68.88\\ldots\\) and \\(10x=6.88\\ldots\\). Subtracting: \\(90x=62\\), so \\(x=\\dfrac{31}{45}\\)."
           },
           {
-            "question": "Is every integer a rational number?",
+            "question": "How many digits does the integer \\(2^{28}\\times5^{20}\\) have? (You are given that \\(2^{8}\\) has 3 digits.)",
             "options": [
-              "Yes",
-              "No",
-              "Only positive integers",
-              "Only negative integers",
-              "Sometimes"
+              "48",
+              "23",
+              "21",
+              "28",
+              "24"
+            ],
+            "correct": 1,
+            "solution": "\\(2^{28}\\times5^{20}=2^{8}\\times(2\\times5)^{20}=2^{8}\\times10^{20}\\). Multiplying by \\(10^{20}\\) only appends 20 zeros, so the number of digits is 3 + 20 = 23."
+          },
+          {
+            "question": "Calculate \\(\\dfrac{(2\\times10^{-4})(6\\times10^{5})}{8\\times10^{-2}}\\) and give the result in standard scientific notation (coefficient from 1 up to, but not including, 10).",
+            "options": [
+              "\\(1.5\\times10^{4}\\)",
+              "\\(1.5\\times10^{-1}\\)",
+              "\\(1.5\\times10^{1}\\)",
+              "\\(1.5\\times10^{2}\\)",
+              "\\(1.5\\times10^{3}\\)"
+            ],
+            "correct": 4,
+            "solution": "Coefficients: 2×6/8 = 1.5. Powers of ten: -4 + 5 − (-2) = 3. So the value is 1.5×10^3, which is already in standard form."
+          },
+          {
+            "question": "Two positive integers have greatest common divisor 12 and least common multiple 432. One of them is 108. What is the other integer?",
+            "options": [
+              "48",
+              "60",
+              "324",
+              "4",
+              "36"
             ],
             "correct": 0,
-            "solution": "Every integer n can be written as n/1, so n∈ℚ."
+            "solution": "For two positive integers, GCD × LCM = product of the numbers. The other number is 12×432/108 = 48. Check: gcd(108, 48) = 12 and lcm(108, 48) = 432."
           },
           {
-            "question": "What is the cardinality of ℕ?",
+            "question": "Write \\(0.8\\overline{6}\\) (the digit 6 repeats forever) as a fraction in lowest terms.",
             "options": [
-              "Finite",
-              "Countably infinite",
-              "Uncountably infinite",
-              "Zero",
-              "Undefined"
+              "\\(\\dfrac{14}{9}\\)",
+              "\\(\\dfrac{26}{33}\\)",
+              "\\(\\dfrac{43}{50}\\)",
+              "\\(\\dfrac{13}{15}\\)",
+              "\\(\\dfrac{43}{45}\\)"
             ],
-            "correct": 1,
-            "solution": "ℕ is countably infinite (can be listed 1,2,3,...)."
-          },
-          {
-            "question": "Which number is transcendental?",
-            "options": [
-              "√2",
-              "1/3",
-              "π",
-              "−5",
-              "0"
-            ],
-            "correct": 2,
-            "solution": "Transcendental numbers are irrational and not roots of polynomials. π is transcendental."
-          },
-          {
-            "question": "Is 2^ℕ a subset of ℤ?",
-            "options": [
-              "Yes",
-              "No",
-              "Only for even numbers",
-              "Only for powers of 2",
-              "Undefined"
-            ],
-            "correct": 1,
-            "solution": "2^ℕ={2,4,8,16,...} which are in ℕ, hence in ℤ. Actually yes, it is a subset."
+            "correct": 3,
+            "solution": "Let \\(x=0.8666\\ldots\\). Then \\(100x=86.66\\ldots\\) and \\(10x=8.66\\ldots\\). Subtracting: \\(90x=78\\), so \\(x=\\dfrac{13}{15}\\)."
           },
           {
             "question": "Calculate \\(\\dfrac{(3.6 \\times 10^{-4})(5 \\times 10^{7})}{1.2 \\times 10^{2}}\\).",
@@ -47634,16 +47634,16 @@ const subjects = [
             "solution": "Numbers: \\(\\dfrac{3.6 \\times 5}{1.2} = 15\\). Powers of ten: \\(10^{-4 + 7 - 2} = 10^{1}\\). So the result is \\(15 \\times 10^{1} = 150 = 1.5 \\times 10^{2}\\)."
           },
           {
-            "question": "Is −1.5 a rational number?",
+            "question": "Write \\(0.4\\overline{6}\\) (the digit 6 repeats forever) as a fraction in lowest terms.",
             "options": [
-              "No",
-              "Yes",
-              "It's integer",
-              "It's natural",
-              "It's complex"
+              "\\(\\dfrac{14}{33}\\)",
+              "\\(\\dfrac{23}{50}\\)",
+              "\\(\\dfrac{46}{99}\\)",
+              "\\(\\dfrac{7}{15}\\)",
+              "\\(\\dfrac{23}{45}\\)"
             ],
-            "correct": 1,
-            "solution": "−1.5=−3/2, which is a fraction, hence rational."
+            "correct": 3,
+            "solution": "Let \\(x=0.4666\\ldots\\). Then \\(100x=46.66\\ldots\\) and \\(10x=4.66\\ldots\\). Subtracting: \\(90x=42\\), so \\(x=\\dfrac{7}{15}\\)."
           },
           {
             "question": "Which of the following numbers is an IRRATIONAL number?",
@@ -47670,64 +47670,64 @@ const subjects = [
             "solution": "The set difference A \\ B consists of elements that belong to A but do NOT belong to B.\nA = {1, 2, 3, 4, 5} and B = {3, 4, 5, 6, 7}.\nRemoving {3, 4, 5} from A leaves {1, 2}."
           },
           {
-            "question": "What is the Greatest Common Divisor (GCD) of 84 and 180?",
+            "question": "Two positive integers have greatest common divisor 5 and least common multiple 200. One of them is 40. What is the other integer?",
             "options": [
-              "12",
-              "6",
-              "18",
-              "24",
-              "36"
+              "40",
+              "20",
+              "25",
+              "30",
+              "160"
             ],
-            "correct": 0,
-            "solution": "Prime factorize both numbers:\n84 = 2² × 3¹ × 7¹\n180 = 2² × 3² × 5¹\nThe GCD is the product of common prime factors with lowest exponents:\nGCD = 2² × 3¹ = 4 × 3 = 12."
+            "correct": 2,
+            "solution": "For two positive integers, GCD × LCM = product of the numbers. The other number is 5×200/40 = 25. Check: gcd(40, 25) = 5 and lcm(40, 25) = 200."
           },
           {
-            "question": "What is the Least Common Multiple (LCM) of 15, 20, and 30?",
+            "question": "Calculate \\(\\dfrac{(8\\times10^{-5})(5\\times10^{4})}{4\\times10^{3}}\\) and give the result in standard scientific notation (coefficient from 1 up to, but not including, 10).",
+            "options": [
+              "\\(1\\times10^{-4}\\)",
+              "\\(1\\times10^{-2}\\)",
+              "\\(1\\times10^{-5}\\)",
+              "\\(1\\times10^{3}\\)",
+              "\\(1\\times10^{-3}\\)"
+            ],
+            "correct": 4,
+            "solution": "Coefficients: 8×5/4 = 10. Powers of ten: -5 + 4 − (3) = -4. So the value is 10×10^-4 = 1×10^-3 in standard form."
+          },
+          {
+            "question": "How many digits does the integer \\(2^{31}\\times5^{7}\\) have? (You are given that \\(2^{24}\\) has 8 digits.)",
+            "options": [
+              "31",
+              "15",
+              "8",
+              "16",
+              "38"
+            ],
+            "correct": 1,
+            "solution": "\\(2^{31}\\times5^{7}=2^{24}\\times(2\\times5)^{7}=2^{24}\\times10^{7}\\). Multiplying by \\(10^{7}\\) only appends 7 zeros, so the number of digits is 8 + 7 = 15."
+          },
+          {
+            "question": "Write \\(0.6\\overline{2}\\) (the digit 2 repeats forever) as a fraction in lowest terms.",
+            "options": [
+              "\\(\\dfrac{31}{45}\\)",
+              "\\(\\dfrac{56}{99}\\)",
+              "\\(\\dfrac{8}{9}\\)",
+              "\\(\\dfrac{28}{45}\\)",
+              "\\(\\dfrac{62}{99}\\)"
+            ],
+            "correct": 3,
+            "solution": "Let \\(x=0.6222\\ldots\\). Then \\(100x=62.22\\ldots\\) and \\(10x=6.22\\ldots\\). Subtracting: \\(90x=56\\), so \\(x=\\dfrac{28}{45}\\)."
+          },
+          {
+            "question": "Two positive integers have greatest common divisor 12 and least common multiple 72. One of them is 36. What is the sum of the two integers?",
             "options": [
               "60",
-              "120",
-              "90",
-              "300",
-              "180"
+              "72",
+              "38",
+              "48",
+              "5"
             ],
             "correct": 0,
-            "solution": "Prime factorizations:\n15 = 3 × 5\n20 = 2² × 5\n30 = 2 × 3 × 5\nThe LCM takes the highest power of every prime factor present:\nLCM = 2² × 3¹ × 5¹ = 4 × 3 × 5 = 60."
-          },
-          {
-            "question": "If i is the imaginary unit (i² = −1), what is the value of i²⁰²⁷?",
-            "options": [
-              "−i",
-              "i",
-              "1",
-              "−1",
-              "0"
-            ],
-            "correct": 0,
-            "solution": "Powers of i follow a cycle of period 4: i¹ = i, i² = −1, i³ = −i, i⁴ = 1.\nDivide 2027 by 4: 2027 = 4 × 506 + 3 (remainder is 3).\nTherefore: i²⁰²⁷ = i³ = −i."
-          },
-          {
-            "question": "What is the complex conjugate of z = 4 − 7i?",
-            "options": [
-              "4 + 7i",
-              "−4 + 7i",
-              "−4 − 7i",
-              "7 − 4i",
-              "7 + 4i"
-            ],
-            "correct": 0,
-            "solution": "The complex conjugate of a + bi is a − bi.\nFor z = 4 − 7i, the conjugate is 4 + 7i."
-          },
-          {
-            "question": "What is the modulus |z| of the complex number z = 5 − 12i?",
-            "options": [
-              "13",
-              "17",
-              "7",
-              "√119",
-              "12"
-            ],
-            "correct": 0,
-            "solution": "The modulus is |z| = √(a² + b²) = √(5² + (−12)²) = √(25 + 144) = √169 = 13."
+            "solution": "For two positive integers, GCD × LCM = product of the numbers. The other number is 12×72/36 = 24. The sum is 36+24 = 60. Check: gcd(36, 24) = 12 and lcm(36, 24) = 72."
           },
           {
             "question": "Simplify the complex division: (3 + 4i) / (1 − 2i)",
@@ -47742,16 +47742,16 @@ const subjects = [
             "solution": "Multiply numerator and denominator by the conjugate of the denominator (1 + 2i):\n[(3 + 4i)(1 + 2i)] / [(1 − 2i)(1 + 2i)]\nNumerator: 3(1) + 6i + 4i + 8i² = 3 + 10i − 8 = −5 + 10i.\nDenominator: 1² − (2i)² = 1 − 4(−1) = 1 + 4 = 5.\nResult = (−5 + 10i) / 5 = −1 + 2i."
           },
           {
-            "question": "How many elements are in the power set P(A) of a set A containing 5 elements?",
+            "question": "Two positive integers have greatest common divisor 12 and least common multiple 504. One of them is 84. What is the sum of the two integers?",
             "options": [
-              "32",
-              "25",
-              "10",
-              "64",
-              "16"
+              "90",
+              "504",
+              "13",
+              "156",
+              "168"
             ],
-            "correct": 0,
-            "solution": "The power set P(A) contains 2^|A| elements.\nFor |A| = 5, |P(A)| = 2⁵ = 32."
+            "correct": 3,
+            "solution": "For two positive integers, GCD × LCM = product of the numbers. The other number is 12×504/84 = 72. The sum is 84+72 = 156. Check: gcd(84, 72) = 12 and lcm(84, 72) = 504."
           },
           {
             "question": "If A and B are subsets of a universal set U, De Morgan's Law states that (A ∪ B)ᶜ is equal to:",
@@ -47766,76 +47766,76 @@ const subjects = [
             "solution": "De Morgan's First Law of set theory states that the complement of the union is the intersection of the complements: (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ."
           },
           {
-            "question": "Rationalize the denominator of the expression: 4 / (3 − √5)",
+            "question": "How many digits does the integer \\(2^{50}\\times5^{25}\\) have? (You are given that \\(2^{25}\\) has 8 digits.)",
             "options": [
-              "3 + √5",
-              "(3 + √5) / 2",
-              "6 + 2√5",
-              "3 − √5",
-              "12 + 4√5"
+              "33",
+              "32",
+              "50",
+              "34",
+              "26"
             ],
             "correct": 0,
-            "solution": "Multiply numerator and denominator by the conjugate (3 + √5):\n4(3 + √5) / [(3 − √5)(3 + √5)] = 4(3 + √5) / (3² − (√5)²)\n= 4(3 + √5) / (9 − 5) = 4(3 + √5) / 4 = 3 + √5."
+            "solution": "\\(2^{50}\\times5^{25}=2^{25}\\times(2\\times5)^{25}=2^{25}\\times10^{25}\\). Multiplying by \\(10^{25}\\) only appends 25 zeros, so the number of digits is 8 + 25 = 33."
           },
           {
-            "question": "What is the remainder when 2¹⁰⁰ is divided by 7?",
+            "question": "Calculate \\(\\dfrac{(8\\times10^{-4})(9\\times10^{5})}{4\\times10^{3}}\\) and give the result in standard scientific notation (coefficient from 1 up to, but not including, 10).",
             "options": [
-              "2",
-              "1",
-              "4",
-              "3",
-              "6"
+              "\\(1.8\\times10^{5}\\)",
+              "\\(1.8\\times10^{0}\\)",
+              "\\(18\\times10^{-2}\\)",
+              "\\(1.8\\times10^{-1}\\)",
+              "\\(1.8\\times10^{-2}\\)"
             ],
-            "correct": 0,
-            "solution": "Look for a cycle in powers of 2 modulo 7:\n2¹ ≡ 2 (mod 7)\n2² ≡ 4 (mod 7)\n2³ = 8 ≡ 1 (mod 7)\nThe powers repeat every 3.\n100 = 3 × 33 + 1 (remainder 1).\nTherefore, 2¹⁰⁰ = (2³)³³ × 2¹ ≡ 1³³ × 2 ≡ 2 (mod 7)."
+            "correct": 3,
+            "solution": "Coefficients: 8×9/4 = 18. Powers of ten: -4 + 5 − (3) = -2. So the value is 18×10^-2 = 1.8×10^-1 in standard form."
           },
           {
-            "question": "Which of the following numbers is divisible by 9?",
+            "question": "Two positive integers have greatest common divisor 12 and least common multiple 480. One of them is 96. What is the sum of the two integers?",
             "options": [
-              "47,538",
-              "35,412",
-              "62,119",
-              "84,215",
-              "19,873"
+              "156",
+              "13",
+              "144",
+              "480",
+              "168"
             ],
             "correct": 0,
-            "solution": "A number is divisible by 9 if and only if the sum of its digits is divisible by 9.\nCheck 47,538: 4 + 7 + 5 + 3 + 8 = 27. Since 27 is divisible by 9 (27 = 9 × 3), 47,538 is divisible by 9."
+            "solution": "For two positive integers, GCD × LCM = product of the numbers. The other number is 12×480/96 = 60. The sum is 96+60 = 156. Check: gcd(96, 60) = 12 and lcm(96, 60) = 480."
           },
           {
-            "question": "If gcd(a, b) = 6 and lcm(a, b) = 120, what is the product a × b?",
+            "question": "Write \\(0.7\\overline{1}\\) (the digit 1 repeats forever) as a fraction in lowest terms.",
             "options": [
-              "720",
-              "360",
-              "180",
-              "20",
-              "1440"
+              "\\(\\dfrac{71}{99}\\)",
+              "\\(\\dfrac{32}{45}\\)",
+              "\\(\\dfrac{71}{90}\\)",
+              "\\(\\dfrac{8}{9}\\)",
+              "\\(\\dfrac{71}{100}\\)"
             ],
-            "correct": 0,
-            "solution": "For any two positive integers a and b:\ngcd(a, b) × lcm(a, b) = a × b.\nHere: 6 × 120 = 720."
+            "correct": 1,
+            "solution": "Let \\(x=0.7111\\ldots\\). Then \\(100x=71.11\\ldots\\) and \\(10x=7.11\\ldots\\). Subtracting: \\(90x=64\\), so \\(x=\\dfrac{32}{45}\\)."
           },
           {
-            "question": "Which of the following set inclusions is FALSE?",
+            "question": "Write \\(0.1\\overline{8}\\) (the digit 8 repeats forever) as a fraction in lowest terms.",
             "options": [
-              "ℝ ⊆ ℚ",
-              "ℕ ⊆ ℤ",
-              "ℤ ⊆ ℚ",
-              "ℚ ⊆ ℝ",
-              "ℝ ⊆ ℂ"
+              "\\(\\dfrac{17}{90}\\)",
+              "\\(\\dfrac{17}{99}\\)",
+              "\\(\\dfrac{2}{11}\\)",
+              "\\(1\\)",
+              "\\(\\dfrac{1}{5}\\)"
             ],
             "correct": 0,
-            "solution": "ℝ ⊆ ℚ is FALSE because the real numbers ℝ contain irrational numbers (like √2, π) which do NOT belong to the set of rational numbers ℚ. The correct inclusion is ℚ ⊆ ℝ."
+            "solution": "Let \\(x=0.1888\\ldots\\). Then \\(100x=18.88\\ldots\\) and \\(10x=1.88\\ldots\\). Subtracting: \\(90x=17\\), so \\(x=\\dfrac{17}{90}\\)."
           },
           {
-            "question": "Given sets A = {x ∈ ℝ : −2 ≤ x < 5} and B = {x ∈ ℝ : 1 < x ≤ 8}, what is A ∩ B?",
+            "question": "Write \\(0.2\\overline{5}\\) (the digit 5 repeats forever) as a fraction in lowest terms.",
             "options": [
-              "(1, 5)",
-              "[1, 5)",
-              "[−2, 8]",
-              "(1, 5]",
-              "[−2, 1]"
+              "\\(\\dfrac{7}{9}\\)",
+              "\\(\\dfrac{1}{4}\\)",
+              "\\(\\dfrac{23}{99}\\)",
+              "\\(\\dfrac{23}{90}\\)",
+              "\\(\\dfrac{5}{18}\\)"
             ],
-            "correct": 0,
-            "solution": "A = [−2, 5) and B = (1, 8].\nThe intersection A ∩ B contains points in both intervals:\n1 < x < 5, which in interval notation is (1, 5)."
+            "correct": 3,
+            "solution": "Let \\(x=0.2555\\ldots\\). Then \\(100x=25.55\\ldots\\) and \\(10x=2.55\\ldots\\). Subtracting: \\(90x=23\\), so \\(x=\\dfrac{23}{90}\\)."
           },
           {
             "question": "If n is an odd integer, which of the following expressions is always an EVEN integer?",
@@ -47850,40 +47850,40 @@ const subjects = [
             "solution": "Since n is odd, n² is odd.\nodd + odd = even. Since 3 is odd, n² + 3 is always even.\nTest with n = 1: 1² + 3 = 4 (even); test with n = 3: 3² + 3 = 12 (even)."
           },
           {
-            "question": "What is the product of the complex numbers (2 + 3i) and (4 − 5i)?",
+            "question": "Calculate \\(\\dfrac{(5\\times10^{-4})(5\\times10^{8})}{5\\times10^{2}}\\) and give the result in standard scientific notation (coefficient from 1 up to, but not including, 10).",
             "options": [
-              "23 + 2i",
-              "8 − 15i",
-              "23 − 2i",
-              "−7 + 2i",
-              "8 + 2i"
+              "\\(5\\times10^{3}\\)",
+              "\\(5\\times10^{6}\\)",
+              "\\(5\\times10^{2}\\)",
+              "\\(50\\times10^{1}\\)",
+              "\\(5\\times10^{0}\\)"
             ],
-            "correct": 0,
-            "solution": "(2 + 3i)(4 − 5i) = 2(4) − 10i + 12i − 15i²\n= 8 + 2i − 15(−1) = 8 + 2i + 15 = 23 + 2i."
+            "correct": 2,
+            "solution": "Coefficients: 5×5/5 = 5. Powers of ten: -4 + 8 − (2) = 2. So the value is 5×10^2, which is already in standard form."
           },
           {
-            "question": "What is the cardinality of the Cartesian product A × B if |A| = 4 and |B| = 7?",
+            "question": "How many digits does the integer \\(2^{22}\\times5^{12}\\) have? (You are given that \\(2^{10}\\) has 4 digits.)",
             "options": [
-              "28",
-              "11",
-              "16",
-              "49",
-              "24"
+              "35",
+              "17",
+              "34",
+              "15",
+              "16"
             ],
-            "correct": 0,
-            "solution": "The cardinality of the Cartesian product of two finite sets is |A × B| = |A| × |B|.\nHere |A × B| = 4 × 7 = 28."
+            "correct": 4,
+            "solution": "\\(2^{22}\\times5^{12}=2^{10}\\times(2\\times5)^{12}=2^{10}\\times10^{12}\\). Multiplying by \\(10^{12}\\) only appends 12 zeros, so the number of digits is 4 + 12 = 16."
           },
           {
-            "question": "What is the value of (1 + i)⁴?",
+            "question": "Calculate \\(\\dfrac{(7\\times10^{-6})(3\\times10^{3})}{2\\times10^{-1}}\\) and give the result in standard scientific notation (coefficient from 1 up to, but not including, 10).",
             "options": [
-              "−4",
-              "4",
-              "−4i",
-              "4i",
-              "0"
+              "\\(10.5\\times10^{-2}\\)",
+              "\\(1.05\\times10^{-1}\\)",
+              "\\(1.05\\times10^{0}\\)",
+              "\\(1.05\\times10^{-2}\\)",
+              "\\(1.05\\times10^{-3}\\)"
             ],
-            "correct": 0,
-            "solution": "First calculate (1 + i)²: (1 + i)² = 1 + 2i + i² = 1 + 2i − 1 = 2i.\nNow square that result:\n(1 + i)⁴ = [(1 + i)²]² = (2i)² = 4i² = 4(−1) = −4."
+            "correct": 1,
+            "solution": "Coefficients: 7×3/2 = 10.5. Powers of ten: -6 + 3 − (-1) = -2. So the value is 10.5×10^-2 = 1.05×10^-1 in standard form."
           },
           {
             "question": "The repeating decimal number \\(2.\\overline{95}\\) is equal to:",
@@ -47916,16 +47916,16 @@ const subjects = [
         "name": "Absolute Value",
         "questions": [
           {
-            "question": "What is |−5|?",
+            "question": "The equation \\(|x|+|x+4|=8\\) has two real solutions. What is the larger one?",
             "options": [
-              "−5",
-              "5",
-              "0",
-              "25",
-              "−25"
+              "\\(4\\)",
+              "\\(-6\\)",
+              "\\(-2\\)",
+              "\\(6\\)",
+              "\\(2\\)"
             ],
-            "correct": 1,
-            "solution": "|−5|=5 (distance from 0)."
+            "correct": 4,
+            "solution": "Both 0 and -4 are less than \\(2\\) and greater than \\(-6\\) because 8 > |0−(-4)| = 4. For the right-hand solution both absolute values are positive: \\((x)+(x+4)=8\\) gives \\(2x=4\\), so \\(x=2\\). (The left-hand solution is \\(-6\\).)"
           },
           {
             "question": "How many integers satisfy \\(|2x - 3| \\leq 5\\)?",
@@ -47940,40 +47940,40 @@ const subjects = [
             "solution": "\\(-5 \\leq 2x - 3 \\leq 5\\) gives \\(-2 \\leq 2x \\leq 8\\), so \\(-1 \\leq x \\leq 4\\). The integers are \\(-1, 0, 1, 2, 3, 4\\): 6 of them."
           },
           {
-            "question": "Solve |x|=3. What are the solutions?",
+            "question": "How many integers \\(x\\) satisfy \\(|2x+8|<12\\)?",
             "options": [
-              "x=3 only",
-              "x=−3 only",
-              "x=3 or x=−3",
-              "x=0",
-              "No solution"
-            ],
-            "correct": 2,
-            "solution": "|x|=3 means x=3 or x=−3."
-          },
-          {
-            "question": "What is |−2|+|−3|?",
-            "options": [
-              "−5",
-              "5",
-              "1",
-              "−1",
-              "6"
+              "10",
+              "11",
+              "13",
+              "12",
+              "24"
             ],
             "correct": 1,
-            "solution": "|−2|+|−3|=2+3=5."
+            "solution": "\\(|2x+8|<12\\) means \\(-12<2x+8<12\\), so \\(-10<x<2\\). Count the integers strictly between these bounds: 11."
           },
           {
-            "question": "Solve |x−2|=5.",
+            "question": "The equation \\(|x+4|+|x+2|=4\\) has two real solutions. What is the larger one?",
             "options": [
-              "x=7 only",
-              "x=−3 only",
-              "x=7 or x=−3",
-              "x=3 or x=−7",
-              "No solution"
+              "\\(-5\\)",
+              "\\(-1\\)",
+              "\\(-2\\)",
+              "\\(-3\\)",
+              "\\(5\\)"
             ],
-            "correct": 2,
-            "solution": "x−2=5→x=7 or x−2=−5→x=−3."
+            "correct": 1,
+            "solution": "Both -4 and -2 are less than \\(-1\\) and greater than \\(-5\\) because 4 > |-4−(-2)| = 2. For the right-hand solution both absolute values are positive: \\((x+4)+(x+2)=4\\) gives \\(2x=-2\\), so \\(x=-1\\). (The left-hand solution is \\(-5\\).)"
+          },
+          {
+            "question": "For which value of \\(k\\) does the system \\(\\begin{cases}kx+3y=-3\\\\-x+(k+4)y=-3\\end{cases}\\) have NO solution?",
+            "options": [
+              "k = 3",
+              "k = -3",
+              "k = -4",
+              "k = -2",
+              "k = -1"
+            ],
+            "correct": 1,
+            "solution": "The coefficient determinant is \\(k(k+4)-(3)(-1)=k^2+4k+3\\), which is zero for \\(k=-1\\) and \\(k=-3\\). For \\(k=-1\\) the two equations describe the same line (infinitely many solutions); for \\(k=-3\\) the left sides are proportional but the right sides are not, so there is no solution."
           },
           {
             "question": "Solve \\(\\dfrac{x}{x - 3} = \\dfrac{3}{x - 3} + 2\\).",
@@ -47988,52 +47988,52 @@ const subjects = [
             "solution": "Multiply by \\(x - 3\\): \\(x = 3 + 2(x - 3)\\), so \\(x = 2x - 3\\) and \\(x = 3\\). But \\(x = 3\\) makes the denominators zero, so it is not allowed. There is no solution."
           },
           {
-            "question": "What is |−10|×|−2|?",
+            "question": "How many integers \\(x\\) with \\(-10\\le x\\le10\\) satisfy \\(\\dfrac{(x+4)(x+2)}{x+5}\\ge0\\)?",
             "options": [
-              "−20",
+              "16",
+              "15",
               "20",
-              "12",
-              "−12",
-              "5"
+              "14",
+              "12"
             ],
-            "correct": 1,
-            "solution": "|−10|×|−2|=10×2=20."
+            "correct": 3,
+            "solution": "The sign of the fraction is the sign of \\((x+4)(x+2)(x+5)\\) (same sign as the quotient), with \\(x\\ne-5\\). Test the intervals cut by -5, -4, -2 and include the zeros of the numerator (-4 and -2) but never -5: this gives 14 integers in the range."
           },
           {
-            "question": "Solve |2x+1|=7.",
+            "question": "A boat travels 224 km downstream in 16 hours, and the same 224 km back upstream in 56 hours. What is the speed of the river current?",
             "options": [
-              "x=3 or x=−4",
-              "x=3 only",
-              "x=−4 only",
-              "x=4 or x=−3",
-              "No solution"
+              "3.1 km/h",
+              "40 km/h",
+              "10 km/h",
+              "6 km/h",
+              "5 km/h"
             ],
-            "correct": 0,
-            "solution": "2x+1=7→x=3 or 2x+1=−7→x=−4."
+            "correct": 4,
+            "solution": "Downstream speed = 224/16 = 14 km/h; upstream speed = 224/56 = 4 km/h. The boat speed is the average (9 km/h) and the current is half the difference: (14 − 4)/2 = 5 km/h."
           },
           {
-            "question": "What is |5−9|−|−3|?",
+            "question": "How many integers \\(x\\) with \\(-10\\le x\\le10\\) satisfy \\(\\dfrac{(x+3)(x-5)}{x-3}\\ge0\\)?",
             "options": [
-              "−7",
-              "1",
+              "14",
+              "11",
+              "13",
+              "10",
+              "12"
+            ],
+            "correct": 4,
+            "solution": "The sign of the fraction is the sign of \\((x+3)(x-5)(x-3)\\) (same sign as the quotient), with \\(x\\ne3\\). Test the intervals cut by -3, 3, 5 and include the zeros of the numerator (-3 and 5) but never 3: this gives 12 integers in the range."
+          },
+          {
+            "question": "How many integers \\(x\\) satisfy \\(|5x-1|<21\\)?",
+            "options": [
+              "42",
+              "10",
+              "9",
               "7",
-              "−1",
-              "2"
+              "8"
             ],
-            "correct": 1,
-            "solution": "|5−9|−|−3|=|−4|−3=4−3=1."
-          },
-          {
-            "question": "If |x|=|y|, which is always true?",
-            "options": [
-              "x=y",
-              "x=−y",
-              "x=y or x=−y",
-              "x>0",
-              "y>0"
-            ],
-            "correct": 2,
-            "solution": "|x|=|y| means x=y or x=−y."
+            "correct": 4,
+            "solution": "\\(|5x-1|<21\\) means \\(-21<5x-1<21\\), so \\(-4<x<\\dfrac{22}{5}\\). Count the integers strictly between these bounds: 8."
           },
           {
             "question": "The system \\(x - y = 1\\), \\(x^{2} + y^{2} = 25\\) has two solutions. What is the sum of the \\(x\\)-values of the two solutions?",
@@ -48048,100 +48048,100 @@ const subjects = [
             "solution": "Substitute \\(y = x - 1\\): \\(x^{2} + (x - 1)^{2} = 25\\), so \\(2x^{2} - 2x - 24 = 0\\) and \\(x^{2} - x - 12 = 0\\). The roots are \\(x = 4\\) and \\(x = -3\\) (points \\((4, 3)\\) and \\((-3, -4)\\)). Sum \\(= 1\\)."
           },
           {
-            "question": "Solve |x|<3. What is the solution set?",
+            "question": "A boat travels 192 km downstream in 12 hours, and the same 192 km back upstream in 32 hours. What is the speed of the river current?",
             "options": [
-              "x<3",
-              "x>−3",
-              "−3<x<3",
-              "x≤3",
-              "x≥−3"
+              "10 km/h",
+              "4.4 km/h",
+              "6 km/h",
+              "5 km/h",
+              "20 km/h"
             ],
-            "correct": 2,
-            "solution": "|x|<3 means −3<x<3."
+            "correct": 3,
+            "solution": "Downstream speed = 192/12 = 16 km/h; upstream speed = 192/32 = 6 km/h. The boat speed is the average (11 km/h) and the current is half the difference: (16 − 6)/2 = 5 km/h."
           },
           {
-            "question": "What is |√2−2|?",
+            "question": "How many integers \\(x\\) with \\(-10\\le x\\le10\\) satisfy \\(\\dfrac{(x+6)(x-3)}{x}\\le0\\)?",
             "options": [
-              "2−√2",
-              "√2−2",
-              "0",
-              "4",
-              "−√2"
-            ],
-            "correct": 0,
-            "solution": "√2≈1.414<2, so |√2−2|=2−√2."
-          },
-          {
-            "question": "What is |−a| if a>0?",
-            "options": [
-              "−a",
-              "a",
-              "0",
-              "|a|",
-              "Undefined"
-            ],
-            "correct": 1,
-            "solution": "If a>0, then |−a|=a."
-          },
-          {
-            "question": "Solve |x+4|=0.",
-            "options": [
-              "x=4",
-              "x=−4",
-              "x=0",
-              "No solution",
-              "All real numbers"
-            ],
-            "correct": 1,
-            "solution": "|x+4|=0 only when x+4=0 → x=−4."
-          },
-          {
-            "question": "What is |−8|/|−2|?",
-            "options": [
-              "−4",
-              "4",
-              "16",
-              "−16",
+              "7",
+              "8",
+              "9",
+              "10",
               "6"
             ],
             "correct": 1,
-            "solution": "|−8|/|−2|=8/2=4."
+            "solution": "The sign of the fraction is the sign of \\((x+6)(x-3)(x)\\) (same sign as the quotient), with \\(x\\ne0\\). Test the intervals cut by -6, 0, 3 and include the zeros of the numerator (-6 and 3) but never 0: this gives 8 integers in the range."
           },
           {
-            "question": "If |x|=5 and x<0, what is x?",
+            "question": "How many integers \\(x\\) with \\(-10\\le x\\le10\\) satisfy \\(\\dfrac{(x+5)(x)}{x+6}\\ge0\\)?",
             "options": [
-              "5",
-              "−5",
-              "0",
-              "±5",
-              "Undefined"
-            ],
-            "correct": 1,
-            "solution": "If |x|=5 and x<0, then x=−5."
-          },
-          {
-            "question": "What is |3×(−4)|?",
-            "options": [
-              "−12",
+              "10",
+              "11",
               "12",
-              "7",
-              "−7",
-              "1"
+              "14",
+              "17"
             ],
-            "correct": 1,
-            "solution": "|3×(−4)|=|−12|=12."
+            "correct": 2,
+            "solution": "The sign of the fraction is the sign of \\((x+5)(x)(x+6)\\) (same sign as the quotient), with \\(x\\ne-6\\). Test the intervals cut by -6, -5, 0 and include the zeros of the numerator (-5 and 0) but never -6: this gives 12 integers in the range."
           },
           {
-            "question": "Solve |2x−3|≤1.",
+            "question": "For which value of \\(k\\) does the system \\(\\begin{cases}kx-2y=6\\\\-2x+ky=-6\\end{cases}\\) have NO solution?",
             "options": [
-              "1≤x≤2",
-              "−1≤x≤2",
-              "x≤1 or x≥2",
-              "1≤x≤4",
-              "No solution"
+              "k = -2",
+              "k = -4",
+              "k = 2",
+              "k = 0",
+              "k = -1"
             ],
             "correct": 0,
-            "solution": "−1≤2x−3≤1 → 2≤2x≤4 → 1≤x≤2."
+            "solution": "The coefficient determinant is \\(k(k+0)-(-2)(-2)=k^2+0k-4\\), which is zero for \\(k=2\\) and \\(k=-2\\). For \\(k=2\\) the two equations describe the same line (infinitely many solutions); for \\(k=-2\\) the left sides are proportional but the right sides are not, so there is no solution."
+          },
+          {
+            "question": "The equation \\(|x-6|+|x-1|=8\\) has two real solutions. What is the larger one?",
+            "options": [
+              "\\(\\dfrac{15}{2}\\)",
+              "\\(8\\)",
+              "\\(15\\)",
+              "\\(\\dfrac{7}{2}\\)",
+              "\\(-\\dfrac{1}{2}\\)"
+            ],
+            "correct": 0,
+            "solution": "Both 6 and 1 are less than \\(\\dfrac{15}{2}\\) and greater than \\(-\\dfrac{1}{2}\\) because 8 > |6−(1)| = 5. For the right-hand solution both absolute values are positive: \\((x-6)+(x-1)=8\\) gives \\(2x=15\\), so \\(x=\\dfrac{15}{2}\\). (The left-hand solution is \\(-\\dfrac{1}{2}\\).)"
+          },
+          {
+            "question": "A boat travels 140 km downstream in 10 hours, and the same 140 km back upstream in 14 hours. What is the speed of the river current?",
+            "options": [
+              "4 km/h",
+              "3 km/h",
+              "5.8 km/h",
+              "2 km/h",
+              "12 km/h"
+            ],
+            "correct": 3,
+            "solution": "Downstream speed = 140/10 = 14 km/h; upstream speed = 140/14 = 10 km/h. The boat speed is the average (12 km/h) and the current is half the difference: (14 − 10)/2 = 2 km/h."
+          },
+          {
+            "question": "The equation \\(|x+3|+|x+2|=2\\) has two real solutions. What is the larger one?",
+            "options": [
+              "\\(2\\)",
+              "\\(\\dfrac{7}{2}\\)",
+              "\\(-\\dfrac{3}{2}\\)",
+              "\\(-3\\)",
+              "\\(-\\dfrac{7}{2}\\)"
+            ],
+            "correct": 2,
+            "solution": "Both -3 and -2 are less than \\(-\\dfrac{3}{2}\\) and greater than \\(-\\dfrac{7}{2}\\) because 2 > |-3−(-2)| = 1. For the right-hand solution both absolute values are positive: \\((x+3)+(x+2)=2\\) gives \\(2x=-3\\), so \\(x=-\\dfrac{3}{2}\\). (The left-hand solution is \\(-\\dfrac{7}{2}\\).)"
+          },
+          {
+            "question": "How many integers \\(x\\) with \\(-10\\le x\\le10\\) satisfy \\(\\dfrac{(x+3)(x+2)}{x-5}\\ge0\\)?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "5",
+              "7"
+            ],
+            "correct": 4,
+            "solution": "The sign of the fraction is the sign of \\((x+3)(x+2)(x-5)\\) (same sign as the quotient), with \\(x\\ne5\\). Test the intervals cut by -3, -2, 5 and include the zeros of the numerator (-3 and -2) but never 5: this gives 7 integers in the range."
           },
           {
             "question": "The roots of \\(x^{2} - 5x + k = 0\\) differ by 3. What is \\(k\\)?",
@@ -48462,28 +48462,28 @@ const subjects = [
             "solution": "Numerator: \\(x^{4}y^{-6}\\). Denominator: \\(x^{6}y^{-2}\\). Dividing: \\(x^{4 - 6}y^{-6 + 2} = x^{-2}y^{-4} = \\dfrac{1}{x^{2}y^{4}}\\)."
           },
           {
-            "question": "What is 5⁰?",
+            "question": "Simplify \\((\\sqrt{8}+\\sqrt{12})^2-(\\sqrt{8}-\\sqrt{12})^2\\).",
             "options": [
-              "0",
-              "1",
-              "5",
-              "−1",
-              "Undefined"
+              "\\(384\\)",
+              "\\(40\\)",
+              "\\(41\\)",
+              "\\(16\\)",
+              "\\(16\\sqrt{6}\\)"
             ],
-            "correct": 1,
-            "solution": "Any non-zero number to power 0 equals 1."
+            "correct": 4,
+            "solution": "Using \\((a+b)^2-(a-b)^2=4ab\\) with \\(a=\\sqrt{8},\\ b=\\sqrt{12}\\): the result is \\(4\\sqrt{96}\\) = \\(16\\sqrt{6}\\)."
           },
           {
-            "question": "Simplify √(x⁴).",
+            "question": "Rationalise the denominator of \\(\\dfrac{6}{\\sqrt{8}-\\sqrt{5}}\\).",
             "options": [
-              "x²",
-              "x⁴",
-              "x",
-              "2x",
-              "4x"
+              "\\(-2(\\sqrt{8}+\\sqrt{5})\\)",
+              "\\(2(\\sqrt{8}+\\sqrt{5})\\)",
+              "\\(2\\sqrt{13}\\)",
+              "\\(6(\\sqrt{8}+\\sqrt{5})\\)",
+              "\\(2(\\sqrt{8}-\\sqrt{5})\\)"
             ],
-            "correct": 0,
-            "solution": "√(x⁴)=x² for x≥0."
+            "correct": 1,
+            "solution": "Multiply top and bottom by the conjugate \\(\\sqrt{8}+\\sqrt{5}\\): the denominator becomes \\(8-5=3\\). So the fraction is \\(\\dfrac{6(\\sqrt{8}+\\sqrt{5})}{3}\\) = \\(2(\\sqrt{8}+\\sqrt{5})\\)."
           },
           {
             "question": "Simplify \\(\\sqrt{72} - \\sqrt{50} + \\sqrt{8}\\).",
@@ -48498,16 +48498,16 @@ const subjects = [
             "solution": "\\(\\sqrt{72} = 6\\sqrt{2}\\), \\(\\sqrt{50} = 5\\sqrt{2}\\), \\(\\sqrt{8} = 2\\sqrt{2}\\). So \\(6\\sqrt{2} - 5\\sqrt{2} + 2\\sqrt{2} = 3\\sqrt{2}\\). You cannot combine radicands: \\(\\sqrt{a} - \\sqrt{b} \\neq \\sqrt{a - b}\\)."
           },
           {
-            "question": "Simplify x⁵/x².",
+            "question": "Rationalise the denominator of \\(\\dfrac{9}{\\sqrt{5}-\\sqrt{2}}\\).",
             "options": [
-              "x³",
-              "x⁷",
-              "x¹⁰",
-              "x",
-              "x⁰"
+              "\\(\\dfrac{9}{7}(\\sqrt{5}+\\sqrt{2})\\)",
+              "\\(9(\\sqrt{5}+\\sqrt{2})\\)",
+              "\\(-3(\\sqrt{5}+\\sqrt{2})\\)",
+              "\\(3\\sqrt{7}\\)",
+              "\\(3(\\sqrt{5}+\\sqrt{2})\\)"
             ],
-            "correct": 0,
-            "solution": "x⁵/x²=x^(5−2)=x³."
+            "correct": 4,
+            "solution": "Multiply top and bottom by the conjugate \\(\\sqrt{5}+\\sqrt{2}\\): the denominator becomes \\(5-2=3\\). So the fraction is \\(\\dfrac{9(\\sqrt{5}+\\sqrt{2})}{3}\\) = \\(3(\\sqrt{5}+\\sqrt{2})\\)."
           },
           {
             "question": "Solve \\(\\sqrt{x + 7} = x - 5\\).",
@@ -48522,40 +48522,40 @@ const subjects = [
             "solution": "Square both sides: \\(x + 7 = x^{2} - 10x + 25\\), so \\(x^{2} - 11x + 18 = 0\\), giving \\(x = 2\\) or \\(x = 9\\). Check: \\(x = 9\\): \\(\\sqrt{16} = 4 = 9 - 5\\) ✓. \\(x = 2\\): \\(\\sqrt{9} = 3\\) but \\(2 - 5 = -3\\) ✗. Squaring can add false solutions."
           },
           {
-            "question": "Simplify (2x)³.",
+            "question": "Rationalise the denominator of \\(\\dfrac{4}{\\sqrt{10}-\\sqrt{8}}\\).",
             "options": [
-              "2x³",
-              "6x³",
-              "8x³",
-              "8x",
-              "6x"
+              "\\(\\dfrac{4}{18}(\\sqrt{10}+\\sqrt{8})\\)",
+              "\\(2(\\sqrt{10}+\\sqrt{8})\\)",
+              "\\(2(\\sqrt{10}-\\sqrt{8})\\)",
+              "\\(-2(\\sqrt{10}+\\sqrt{8})\\)",
+              "\\(4(\\sqrt{10}+\\sqrt{8})\\)"
             ],
-            "correct": 2,
-            "solution": "(2x)³=2³×x³=8x³."
+            "correct": 1,
+            "solution": "Multiply top and bottom by the conjugate \\(\\sqrt{10}+\\sqrt{8}\\): the denominator becomes \\(10-8=2\\). So the fraction is \\(\\dfrac{4(\\sqrt{10}+\\sqrt{8})}{2}\\) = \\(2(\\sqrt{10}+\\sqrt{8})\\)."
           },
           {
-            "question": "What is 16^(1/2)?",
+            "question": "Rationalise the denominator of \\(\\dfrac{15}{\\sqrt{13}-\\sqrt{8}}\\).",
             "options": [
-              "4",
-              "8",
-              "2",
-              "32",
-              "16"
-            ],
-            "correct": 0,
-            "solution": "16^(1/2)=√16=4."
-          },
-          {
-            "question": "Simplify √18/√2.",
-            "options": [
-              "√16",
-              "√9",
-              "3",
-              "4",
-              "√20"
+              "\\(3(\\sqrt{13}-\\sqrt{8})\\)",
+              "\\(-3(\\sqrt{13}+\\sqrt{8})\\)",
+              "\\(3(\\sqrt{13}+\\sqrt{8})\\)",
+              "\\(\\dfrac{15}{21}(\\sqrt{13}+\\sqrt{8})\\)",
+              "\\(3\\sqrt{21}\\)"
             ],
             "correct": 2,
-            "solution": "√18/√2=√(18/2)=√9=3."
+            "solution": "Multiply top and bottom by the conjugate \\(\\sqrt{13}+\\sqrt{8}\\): the denominator becomes \\(13-8=5\\). So the fraction is \\(\\dfrac{15(\\sqrt{13}+\\sqrt{8})}{5}\\) = \\(3(\\sqrt{13}+\\sqrt{8})\\)."
+          },
+          {
+            "question": "Simplify \\((\\sqrt{12}+\\sqrt{7})^2-(\\sqrt{12}-\\sqrt{7})^2\\).",
+            "options": [
+              "\\(8\\)",
+              "\\(336\\)",
+              "\\(39\\)",
+              "\\(38\\)",
+              "\\(8\\sqrt{21}\\)"
+            ],
+            "correct": 4,
+            "solution": "Using \\((a+b)^2-(a-b)^2=4ab\\) with \\(a=\\sqrt{12},\\ b=\\sqrt{7}\\): the result is \\(4\\sqrt{84}\\) = \\(8\\sqrt{21}\\)."
           },
           {
             "question": "What is the value of \\((\\sqrt{3} + \\sqrt{2})^{2}(\\sqrt{3} - \\sqrt{2})^{2}\\)?",
@@ -48570,16 +48570,16 @@ const subjects = [
             "solution": "Combine first: \\(\\big[(\\sqrt{3} + \\sqrt{2})(\\sqrt{3} - \\sqrt{2})\\big]^{2} = (3 - 2)^{2} = 1\\)."
           },
           {
-            "question": "Simplify √(50).",
+            "question": "Simplify \\((\\sqrt{8}+\\sqrt{7})^2-(\\sqrt{8}-\\sqrt{7})^2\\).",
             "options": [
-              "5√2",
-              "25√2",
-              "10√5",
-              "5√10",
-              "√50"
+              "\\(31\\)",
+              "\\(8\\sqrt{14}\\)",
+              "\\(224\\)",
+              "\\(4\\sqrt{14}\\)",
+              "\\(30\\)"
             ],
-            "correct": 0,
-            "solution": "√50=√(25×2)=5√2."
+            "correct": 1,
+            "solution": "Using \\((a+b)^2-(a-b)^2=4ab\\) with \\(a=\\sqrt{8},\\ b=\\sqrt{7}\\): the result is \\(4\\sqrt{56}\\) = \\(8\\sqrt{14}\\)."
           },
           {
             "question": "What is the sum of the solutions of \\(9^{x} - 4 \\cdot 3^{x} + 3 = 0\\)?",
@@ -48594,76 +48594,76 @@ const subjects = [
             "solution": "Let \\(t = 3^{x}\\). Then \\(9^{x} = t^{2}\\) and \\(t^{2} - 4t + 3 = 0\\), so \\(t = 1\\) or \\(t = 3\\). Hence \\(x = 0\\) or \\(x = 1\\). The sum is 1."
           },
           {
-            "question": "Simplify (x³)^(1/3).",
+            "question": "Rationalise the denominator of \\(\\dfrac{5}{\\sqrt{11}-\\sqrt{6}}\\).",
             "options": [
-              "x",
-              "x²",
-              "x³",
-              "1",
-              "0"
+              "\\(-(\\sqrt{11}+\\sqrt{6})\\)",
+              "\\(5(\\sqrt{11}+\\sqrt{6})\\)",
+              "\\(\\dfrac{5}{17}(\\sqrt{11}+\\sqrt{6})\\)",
+              "\\(1\\sqrt{17}\\)",
+              "\\((\\sqrt{11}+\\sqrt{6})\\)"
+            ],
+            "correct": 4,
+            "solution": "Multiply top and bottom by the conjugate \\(\\sqrt{11}+\\sqrt{6}\\): the denominator becomes \\(11-6=5\\). So the fraction is \\(\\dfrac{5(\\sqrt{11}+\\sqrt{6})}{5}\\) = \\((\\sqrt{11}+\\sqrt{6})\\)."
+          },
+          {
+            "question": "Simplify \\((\\sqrt{2}+\\sqrt{3})^2-(\\sqrt{2}-\\sqrt{3})^2\\).",
+            "options": [
+              "\\(4\\sqrt{6}\\)",
+              "\\(4\\)",
+              "\\(11\\)",
+              "\\(2\\sqrt{6}\\)",
+              "\\(10\\)"
             ],
             "correct": 0,
-            "solution": "(x³)^(1/3)=x."
+            "solution": "Using \\((a+b)^2-(a-b)^2=4ab\\) with \\(a=\\sqrt{2},\\ b=\\sqrt{3}\\): the result is \\(4\\sqrt{6}\\) = \\(4\\sqrt{6}\\)."
           },
           {
-            "question": "What is √(−4) in real numbers?",
+            "question": "Simplify \\((\\sqrt{10}+\\sqrt{6})^2-(\\sqrt{10}-\\sqrt{6})^2\\).",
             "options": [
-              "−2",
-              "2",
-              "4",
-              "Undefined",
-              "0"
-            ],
-            "correct": 3,
-            "solution": "Square root of negative is undefined in ℝ."
-          },
-          {
-            "question": "Simplify 2^(1/2)×2^(1/2).",
-            "options": [
-              "2",
-              "4",
-              "2^(1/4)",
-              "2²",
-              "1"
-            ],
-            "correct": 0,
-            "solution": "2^(1/2)×2^(1/2)=2^(1/2+1/2)=2¹=2."
-          },
-          {
-            "question": "What is 4^(3/2)?",
-            "options": [
-              "6",
-              "8",
-              "12",
-              "16",
-              "64"
-            ],
-            "correct": 1,
-            "solution": "4^(3/2)=(√4)³=2³=8."
-          },
-          {
-            "question": "Simplify √(a²b²).",
-            "options": [
-              "ab",
-              "a²b²",
-              "|ab|",
-              "a+b",
-              "2ab"
+              "\\(33\\)",
+              "\\(8\\)",
+              "\\(8\\sqrt{15}\\)",
+              "\\(4\\sqrt{15}\\)",
+              "\\(240\\)"
             ],
             "correct": 2,
-            "solution": "√(a²b²)=|ab|."
+            "solution": "Using \\((a+b)^2-(a-b)^2=4ab\\) with \\(a=\\sqrt{10},\\ b=\\sqrt{6}\\): the result is \\(4\\sqrt{60}\\) = \\(8\\sqrt{15}\\)."
           },
           {
-            "question": "What is 10⁻³?",
+            "question": "Rationalise the denominator of \\(\\dfrac{6}{\\sqrt{11}-\\sqrt{5}}\\).",
             "options": [
-              "0.001",
-              "0.01",
-              "0.1",
-              "1000",
-              "−1000"
+              "\\(1\\sqrt{16}\\)",
+              "\\(-(\\sqrt{11}+\\sqrt{5})\\)",
+              "\\(\\dfrac{6}{16}(\\sqrt{11}+\\sqrt{5})\\)",
+              "\\((\\sqrt{11}+\\sqrt{5})\\)",
+              "\\((\\sqrt{11}-\\sqrt{5})\\)"
+            ],
+            "correct": 3,
+            "solution": "Multiply top and bottom by the conjugate \\(\\sqrt{11}+\\sqrt{5}\\): the denominator becomes \\(11-5=6\\). So the fraction is \\(\\dfrac{6(\\sqrt{11}+\\sqrt{5})}{6}\\) = \\((\\sqrt{11}+\\sqrt{5})\\)."
+          },
+          {
+            "question": "Rationalise the denominator of \\(\\dfrac{5}{\\sqrt{10}-\\sqrt{5}}\\).",
+            "options": [
+              "\\(\\dfrac{5}{15}(\\sqrt{10}+\\sqrt{5})\\)",
+              "\\((\\sqrt{10}-\\sqrt{5})\\)",
+              "\\(5(\\sqrt{10}+\\sqrt{5})\\)",
+              "\\((\\sqrt{10}+\\sqrt{5})\\)",
+              "\\(-(\\sqrt{10}+\\sqrt{5})\\)"
+            ],
+            "correct": 3,
+            "solution": "Multiply top and bottom by the conjugate \\(\\sqrt{10}+\\sqrt{5}\\): the denominator becomes \\(10-5=5\\). So the fraction is \\(\\dfrac{5(\\sqrt{10}+\\sqrt{5})}{5}\\) = \\((\\sqrt{10}+\\sqrt{5})\\)."
+          },
+          {
+            "question": "Simplify \\((\\sqrt{3}+\\sqrt{15})^2-(\\sqrt{3}-\\sqrt{15})^2\\).",
+            "options": [
+              "\\(12\\sqrt{5}\\)",
+              "\\(36\\)",
+              "\\(180\\)",
+              "\\(37\\)",
+              "\\(6\\sqrt{5}\\)"
             ],
             "correct": 0,
-            "solution": "10⁻³=1/10³=1/1000=0.001."
+            "solution": "Using \\((a+b)^2-(a-b)^2=4ab\\) with \\(a=\\sqrt{3},\\ b=\\sqrt{15}\\): the result is \\(4\\sqrt{45}\\) = \\(12\\sqrt{5}\\)."
           },
           {
             "question": "Simplify the nested radical expression for positive real x: \\(\\sqrt{x \\sqrt{x \\sqrt{x}}}\\).",
@@ -48690,16 +48690,16 @@ const subjects = [
             "solution": "Multiply numerator and denominator by the conjugate \\((\\sqrt{5} + \\sqrt{2})\\): \\(\\frac{6(\\sqrt{5} + \\sqrt{2})}{(\\sqrt{5})^2 - (\\sqrt{2})^2} = \\frac{6(\\sqrt{5} + \\sqrt{2})}{5 - 2} = \\frac{6(\\sqrt{5} + \\sqrt{2})}{3} = 2(\\sqrt{5} + \\sqrt{2})\\)."
           },
           {
-            "question": "What is the numerical value of \\((64^{-2/3} + 16^{-3/4})^{-1}\\)?",
+            "question": "Which of the following numbers is the largest?",
             "options": [
-              "\\(16/3\\)",
-              "\\(3/16\\)",
-              "\\(8/3\\)",
-              "\\(12\\)",
-              "\\(4\\)"
+              "\\(5^{120}\\)",
+              "\\(8^{60}\\)",
+              "\\(2^{120}\\)",
+              "\\(3^{60}\\)",
+              "\\(5^{180}\\)"
             ],
-            "correct": 0,
-            "solution": "First evaluate: \\(64^{-2/3} = (4^3)^{-2/3} = 4^{-2} = \\frac{1}{16}\\). Next, \\(16^{-3/4} = (2^4)^{-3/4} = 2^{-3} = \\frac{1}{8} = \\frac{2}{16}\\). Sum: \\(\\frac{1}{16} + \\frac{2}{16} = \\frac{3}{16}\\). Taking the reciprocal \\((\\frac{3}{16})^{-1} = \\frac{16}{3}\\)."
+            "correct": 4,
+            "solution": "Write every number as a power with exponent 60: \\(5^{180}=(5^{3})^{60}=125^{60}\\); \\(5^{120}=(5^{2})^{60}=25^{60}\\); \\(8^{60}=(8^{1})^{60}=8^{60}\\); \\(2^{120}=(2^{2})^{60}=4^{60}\\); \\(3^{60}=(3^{1})^{60}=3^{60}\\). With the same exponent, the largest base wins: \\(125^{60}\\)."
           },
           {
             "question": "Simplify the scientific notation expression: \\(\\frac{(3 \\times 10^5)^3 \\times (4 \\times 10^{-4})}{(6 \\times 10^2)^2}\\).",
@@ -48714,16 +48714,16 @@ const subjects = [
             "solution": "Numerator: \\((27 \\times 10^{15}) \\times (4 \\times 10^{-4}) = 108 \\times 10^{11}\\). Denominator: \\((6 \\times 10^2)^2 = 36 \\times 10^4\\). Division: \\(\\frac{108 \\times 10^{11}}{36 \\times 10^4} = 3 \\times 10^{11 - 4} = 3 \\times 10^7\\)."
           },
           {
-            "question": "For \\(-3 < x < 3\\), simplify the expression: \\(\\sqrt{x^2 - 6x + 9} + \\sqrt{x^2 + 6x + 9}\\).",
+            "question": "Write \\(\\dfrac{(2^{3})^{3}\\cdot 4^{4}}{8^{4}}\\) as a single power of 2.",
             "options": [
-              "\\(2x\\)",
-              "\\(6\\)",
-              "\\(-2x\\)",
-              "\\(0\\)",
-              "\\(12\\)"
+              "\\(2^{32}\\)",
+              "\\(2^{29}\\)",
+              "\\(2^{9}\\)",
+              "\\(2^{13}\\)",
+              "\\(2^{5}\\)"
             ],
-            "correct": 1,
-            "solution": "\\(\\sqrt{(x - 3)^2} + \\sqrt{(x + 3)^2} = |x - 3| + |x + 3|\\). Since \\(-3 < x < 3\\), \\(x - 3 < 0\\) so \\(|x - 3| = -(x - 3) = 3 - x\\). Also \\(x + 3 > 0\\), so \\(|x + 3| = x + 3\\). Thus, \\((3 - x) + (x + 3) = 6\\)."
+            "correct": 4,
+            "solution": "Rewrite everything in base 2: \\((2^{3})^{3}=2^{9}\\), \\(4^{4}=2^{8}\\), \\(8^{4}=2^{12}\\). Add the exponents of the numerator and subtract the denominator: \\(9+8-12=5\\)."
           },
           {
             "question": "Solve the exponential equation for x: \\(4^{x+1} \\cdot 8^{x-1} = 16^{2x-1}\\).",
@@ -48774,16 +48774,16 @@ const subjects = [
             "solution": "Factor out \\(2^n\\) from both the numerator and denominator: Numerator: \\(2^n(2^4 - 2) = 2^n(16 - 2) = 14 \\cdot 2^n\\). Denominator: \\(2 \\cdot 2^{n+3} = 2^{n+4} = 16 \\cdot 2^n\\). The ratio is \\(\\frac{14 \\cdot 2^n}{16 \\cdot 2^n} = \\frac{14}{16} = \\frac{7}{8}\\)."
           },
           {
-            "question": "If \\(x + x^{-1} = 3\\), what is the value of \\(x^3 + x^{-3}\\)?",
+            "question": "Write \\(\\dfrac{(5^{4})^{3}\\cdot 25^{1}}{125^{2}}\\) as a single power of 5.",
             "options": [
-              "\\(18\\)",
-              "\\(27\\)",
-              "\\(21\\)",
-              "\\(24\\)",
-              "\\(30\\)"
+              "\\(5^{8}\\)",
+              "\\(5^{6}\\)",
+              "\\(5^{10}\\)",
+              "\\(5^{12}\\)",
+              "\\(5^{11}\\)"
             ],
             "correct": 0,
-            "solution": "Use the identity \\((x + x^{-1})^3 = x^3 + 3x(x^{-1})(x + x^{-1}) + x^{-3} = x^3 + x^{-3} + 3(x + x^{-1})\\). Substituting \\(x + x^{-1} = 3\\): \\(3^3 = x^3 + x^{-3} + 3(3) \\implies 27 = x^3 + x^{-3} + 9 \\implies x^3 + x^{-3} = 18\\)."
+            "solution": "Rewrite everything in base 5: \\((5^{4})^{3}=5^{12}\\), \\(25^{1}=5^{2}\\), \\(125^{2}=5^{6}\\). Add the exponents of the numerator and subtract the denominator: \\(12+2-6=8\\)."
           },
           {
             "question": "Solve the radical equation \\(\\sqrt{3x + 1} = x - 3\\) for real x.",
@@ -48834,52 +48834,52 @@ const subjects = [
             "solution": "Using the power of a power rule: \\((x^{a-b})^{a+b} = x^{(a-b)(a+b)} = x^{a^2 - b^2}\\). Multiplying the terms: \\(x^{a^2 - b^2} \\cdot x^{b^2 - c^2} \\cdot x^{c^2 - a^2} = x^{(a^2 - b^2) + (b^2 - c^2) + (c^2 - a^2)} = x^0 = 1\\)."
           },
           {
-            "question": "What is the exact value of \\(\\frac{\\sqrt[4]{48}}{\\sqrt[4]{3}}\\)?",
+            "question": "Write \\(\\dfrac{(3^{5})^{2}\\cdot 9^{2}}{27^{3}}\\) as a single power of 3.",
             "options": [
-              "\\(2\\)",
-              "\\(4\\)",
-              "\\(\\sqrt{2}\\)",
-              "\\(2\\sqrt{2}\\)",
-              "\\(16\\)"
+              "\\(3^{5}\\)",
+              "\\(3^{9}\\)",
+              "\\(3^{11}\\)",
+              "\\(3^{23}\\)",
+              "\\(3^{6}\\)"
             ],
             "correct": 0,
-            "solution": "Combine under a single fourth root: \\(\\frac{\\sqrt[4]{48}}{\\sqrt[4]{3}} = \\sqrt[4]{\\frac{48}{3}} = \\sqrt[4]{16} = 2\\), since \\(2^4 = 16\\)."
+            "solution": "Rewrite everything in base 3: \\((3^{5})^{2}=3^{10}\\), \\(9^{2}=3^{4}\\), \\(27^{3}=3^{9}\\). Add the exponents of the numerator and subtract the denominator: \\(10+4-9=5\\)."
           },
           {
-            "question": "If \\(2^x = 10\\) and \\(2^y = 5\\), what is the exact value of \\(x - y\\)?",
+            "question": "Write \\(\\dfrac{(2^{2})^{3}\\cdot 4^{4}}{8^{4}}\\) as a single power of 2.",
             "options": [
-              "\\(1\\)",
-              "\\(2\\)",
-              "\\(\\log_2 5\\)",
-              "\\(5\\)",
-              "\\(0.5\\)"
+              "\\(2^{26}\\)",
+              "\\(2^{6}\\)",
+              "\\(2^{10}\\)",
+              "\\(2^{2}\\)",
+              "\\(2^{20}\\)"
             ],
-            "correct": 0,
-            "solution": "Using quotient rule of exponents: \\(2^{x - y} = \\frac{2^x}{2^y} = \\frac{10}{5} = 2 = 2^1\\). Since the base is 2, \\(x - y = 1\\)."
+            "correct": 3,
+            "solution": "Rewrite everything in base 2: \\((2^{2})^{3}=2^{6}\\), \\(4^{4}=2^{8}\\), \\(8^{4}=2^{12}\\). Add the exponents of the numerator and subtract the denominator: \\(6+8-12=2\\)."
           },
           {
-            "question": "What is the space diagonal of a rectangular cuboid with side lengths \\(\\sqrt{2}\\), \\(\\sqrt{5}\\), and \\(\\sqrt{11}\\)?",
+            "question": "Write \\(\\dfrac{(3^{4})^{4}\\cdot 9^{2}}{27^{2}}\\) as a single power of 3.",
             "options": [
-              "\\(3\\sqrt{2}\\)",
-              "\\(6\\)",
-              "\\(\\sqrt{18}\\)",
-              "\\(4\\)",
-              "\\(2\\sqrt{5}\\)"
+              "\\(3^{30}\\)",
+              "\\(3^{8}\\)",
+              "\\(3^{18}\\)",
+              "\\(3^{16}\\)",
+              "\\(3^{14}\\)"
             ],
-            "correct": 0,
-            "solution": "The length of the space diagonal is \\(d = \\sqrt{l^2 + w^2 + h^2} = \\sqrt{(\\sqrt{2})^2 + (\\sqrt{5})^2 + (\\sqrt{11})^2} = \\sqrt{2 + 5 + 11} = \\sqrt{18} = 3\\sqrt{2}\\)."
+            "correct": 4,
+            "solution": "Rewrite everything in base 3: \\((3^{4})^{4}=3^{16}\\), \\(9^{2}=3^{4}\\), \\(27^{2}=3^{6}\\). Add the exponents of the numerator and subtract the denominator: \\(16+4-6=14\\)."
           },
           {
-            "question": "Simplify the expression: \\(\\frac{1}{2 + \\sqrt{3}} + \\frac{1}{2 - \\sqrt{3}}\\).",
+            "question": "Write \\(\\dfrac{(2^{4})^{4}\\cdot 4^{4}}{8^{1}}\\) as a single power of 2.",
             "options": [
-              "\\(4\\)",
-              "\\(2\\sqrt{3}\\)",
-              "\\(1\\)",
-              "\\(4\\sqrt{3}\\)",
-              "\\(0\\)"
+              "\\(2^{27}\\)",
+              "\\(2^{11}\\)",
+              "\\(2^{23}\\)",
+              "\\(2^{21}\\)",
+              "\\(2^{63}\\)"
             ],
-            "correct": 0,
-            "solution": "Combine fractions over a common denominator: \\(\\frac{(2 - \\sqrt{3}) + (2 + \\sqrt{3})}{(2 + \\sqrt{3})(2 - \\sqrt{3})} = \\frac{4}{2^2 - (\\sqrt{3})^2} = \\frac{4}{4 - 3} = 4\\)."
+            "correct": 3,
+            "solution": "Rewrite everything in base 2: \\((2^{4})^{4}=2^{16}\\), \\(4^{4}=2^{8}\\), \\(8^{1}=2^{3}\\). Add the exponents of the numerator and subtract the denominator: \\(16+8-3=21\\)."
           },
           {
             "question": "If \\(a = 2^{100}\\), \\(b = 3^{75}\\), and \\(c = 5^{50}\\), which inequality is correct?",
@@ -48906,16 +48906,16 @@ const subjects = [
             "solution": "Let \\(u = 3^x\\) (with \\(u > 0\\)). Then \\(9^x = (3^x)^2 = u^2\\). The equation becomes \\(u^2 - 4u + 3 = 0 \\implies (u - 1)(u - 3) = 0\\). Thus \\(u = 1\\) or \\(u = 3\\). If \\(3^x = 1\\), \\(x = 0\\). If \\(3^x = 3\\), \\(x = 1\\). Both are valid solutions."
           },
           {
-            "question": "The number \\((2)^{3/4}\\) is equal to:",
+            "question": "Write \\(\\dfrac{(2^{5})^{3}\\cdot 4^{4}}{8^{1}}\\) as a single power of 2.",
             "options": [
-              "⁴√(2³)",
-              "³√(2⁴)",
-              "16³",
-              "2 ³/2",
-              "8³"
+              "\\(2^{11}\\)",
+              "\\(2^{20}\\)",
+              "\\(2^{18}\\)",
+              "\\(2^{22}\\)",
+              "\\(2^{59}\\)"
             ],
-            "correct": 0,
-            "solution": "By the definition of rational exponents: a^(m/n) = ⁿ√(aᵐ). Therefore, 2^(3/4) = ⁴√(2³)."
+            "correct": 1,
+            "solution": "Rewrite everything in base 2: \\((2^{5})^{3}=2^{15}\\), \\(4^{4}=2^{8}\\), \\(8^{1}=2^{3}\\). Add the exponents of the numerator and subtract the denominator: \\(15+8-3=20\\)."
           }
         ]
       },
@@ -48924,16 +48924,16 @@ const subjects = [
         "name": "Logarithms & Exponential Equations",
         "questions": [
           {
-            "question": "What is log₁₀(100)?",
+            "question": "Solve \\(\\log_2 x+\\log_2 (x-8)=7\\).",
             "options": [
-              "1",
-              "2",
-              "10",
-              "100",
-              "0"
+              "\\(x=128\\)",
+              "\\(x=16\\)",
+              "\\(x=-8\\)",
+              "\\(x=16 \\text{ and } x=-8\\)",
+              "\\(x=8\\)"
             ],
             "correct": 1,
-            "solution": "log₁₀(100)=2 since 10²=100."
+            "solution": "The logs need \\(x>8\\). Combining: \\(x(x-8)=2^{7}=128\\), i.e. \\(x^2-8x-128=0\\), which factors as \\((x-16)(x+8)=0\\). The root \\(x=-8\\) is outside the domain, so only \\(x=16\\) is a solution."
           },
           {
             "question": "If \\(\\log_{2} 3 = a\\), what is \\(\\log_{6} 12\\)?",
@@ -48972,16 +48972,16 @@ const subjects = [
             "solution": "\\(2\\log_{3} 6 = \\log_{3} 36\\). Then \\(\\log_{3} 36 - \\log_{3} 4 = \\log_{3} \\dfrac{36}{4} = \\log_{3} 9 = 2\\)."
           },
           {
-            "question": "What is log₁₀(1)?",
+            "question": "Solve \\(\\log_2 x+\\log_2 (x-6)=4\\).",
             "options": [
-              "0",
-              "1",
-              "10",
-              "−1",
-              "Undefined"
+              "\\(x=8\\)",
+              "\\(x=10\\)",
+              "\\(x=6\\)",
+              "\\(x=8 \\text{ and } x=-2\\)",
+              "\\(x=-2\\)"
             ],
             "correct": 0,
-            "solution": "log₁₀(1)=0 since 10⁰=1."
+            "solution": "The logs need \\(x>6\\). Combining: \\(x(x-6)=2^{4}=16\\), i.e. \\(x^2-6x-16=0\\), which factors as \\((x-8)(x+2)=0\\). The root \\(x=-2\\) is outside the domain, so only \\(x=8\\) is a solution."
           },
           {
             "question": "A culture of 500 bacteria doubles every 3 hours. After how many hours does it reach 64 000?",
@@ -48996,16 +48996,16 @@ const subjects = [
             "solution": "\\(\\dfrac{64\\,000}{500} = 128 = 2^{7}\\), so 7 doublings are needed. Time \\(= 7 \\times 3 = 21\\) hours."
           },
           {
-            "question": "What is log₅(25)?",
+            "question": "What is the sum of all real solutions of \\(4^{x}-5\\cdot2^{x}+4=0\\)?",
             "options": [
-              "2",
+              "0",
+              "4",
               "5",
-              "25",
-              "125",
-              "1/2"
+              "2",
+              "3"
             ],
-            "correct": 0,
-            "solution": "log₅(25)=2 since 5²=25."
+            "correct": 3,
+            "solution": "Put \\(t=2^{x}\\): \\(t^2-5t+4=0\\) factors as \\((t-1)(t-4)=0\\), so \\(2^{x}=1\\) or \\(2^{x}=4\\), i.e. \\(x=0\\) or \\(x=2\\). The sum is 2."
           },
           {
             "question": "Money grows at 5% compound interest per year. Approximately how many years does it take to double? (Use \\(\\ln 2 = 0.693\\) and \\(\\ln 1.05 = 0.0488\\).)",
@@ -49020,28 +49020,28 @@ const subjects = [
             "solution": "\\(1.05^{t} = 2\\), so \\(t = \\dfrac{\\ln 2}{\\ln 1.05} = \\dfrac{0.693}{0.0488} = 14.2\\) years. (The \"rule of 72\" gives \\(72/5 = 14.4\\).)"
           },
           {
-            "question": "What is log₃(1/9)?",
+            "question": "A radioactive sample has a half-life of 3 hours. It starts with 144 g and 9 g remain. How many hours have passed?",
             "options": [
-              "−2",
-              "−1",
-              "2",
-              "1/2",
-              "−1/2"
+              "9 hours",
+              "15 hours",
+              "2.8125 hours",
+              "12 hours",
+              "48 hours"
             ],
-            "correct": 0,
-            "solution": "log₃(1/9)=log₃(3⁻²)=−2."
+            "correct": 3,
+            "solution": "The mass is halved each half-life: \\(144\\cdot(\\tfrac12)^{n}=9\\) gives \\(2^{n}=16=2^{4}\\), so n = 4 half-lives. Time = 4 × 3 = 12 hours."
           },
           {
-            "question": "Solve 5^(2x)=25.",
+            "question": "Evaluate \\(\\log_{10}5+\\log_{10}10000-\\log_{10}5\\).",
             "options": [
-              "x=0.5",
-              "x=1",
-              "x=2",
-              "x=5",
-              "x=25"
+              "3",
+              "4",
+              "6",
+              "5",
+              "8"
             ],
-            "correct": 0,
-            "solution": "5^(2x)=25=5² → 2x=2 → x=1."
+            "correct": 1,
+            "solution": "Combine: \\(\\log_{10}\\dfrac{5\\times10000}{5}=\\log_{10}10000\\). Since 10000 = 10^4, the value is 4."
           },
           {
             "question": "Solve \\(\\log_{2} x + \\log_{2}(x - 2) = 3\\).",
@@ -49056,64 +49056,64 @@ const subjects = [
             "solution": "Combine: \\(\\log_{2}[x(x - 2)] = 3\\), so \\(x(x - 2) = 8\\) and \\(x^{2} - 2x - 8 = 0\\). Then \\(x = 4\\) or \\(x = -2\\). The logarithm needs \\(x > 2\\), so \\(x = -2\\) is rejected."
           },
           {
-            "question": "Solve logₓ(64)=3.",
+            "question": "What is the sum of all real solutions of \\(4^{x}-12\\cdot2^{x}+32=0\\)?",
             "options": [
-              "x=2",
-              "x=4",
-              "x=8",
-              "x=16",
-              "x=64"
+              "12",
+              "1",
+              "32",
+              "6",
+              "5"
             ],
-            "correct": 1,
-            "solution": "logₓ(64)=3 → x³=64 → x=4."
+            "correct": 4,
+            "solution": "Put \\(t=2^{x}\\): \\(t^2-12t+32=0\\) factors as \\((t-4)(t-8)=0\\), so \\(2^{x}=4\\) or \\(2^{x}=8\\), i.e. \\(x=2\\) or \\(x=3\\). The sum is 5."
           },
           {
-            "question": "What is log₂(8)+log₂(4)?",
+            "question": "Solve \\(\\log_2 x+\\log_2 (x-15)=4\\).",
             "options": [
-              "5",
-              "6",
-              "12",
+              "\\(x=17\\)",
+              "\\(x=16 \\text{ and } x=-1\\)",
+              "\\(x=-1\\)",
+              "\\(x=16\\)",
+              "\\(x=15\\)"
+            ],
+            "correct": 3,
+            "solution": "The logs need \\(x>15\\). Combining: \\(x(x-15)=2^{4}=16\\), i.e. \\(x^2-15x-16=0\\), which factors as \\((x-16)(x+1)=0\\). The root \\(x=-1\\) is outside the domain, so only \\(x=16\\) is a solution."
+          },
+          {
+            "question": "Evaluate \\(\\log_{3}15+\\log_{3}54-\\log_{3}30\\).",
+            "options": [
               "3",
+              "1",
+              "6",
+              "2",
+              "4"
+            ],
+            "correct": 0,
+            "solution": "Combine: \\(\\log_{3}\\dfrac{15\\times54}{30}=\\log_{3}27\\). Since 27 = 3^3, the value is 3."
+          },
+          {
+            "question": "A radioactive sample has a half-life of 5 hours. It starts with 144 g and 9 g remain. How many hours have passed?",
+            "options": [
+              "80 hours",
+              "20 hours",
+              "4.6875 hours",
+              "4 hours",
+              "25 hours"
+            ],
+            "correct": 1,
+            "solution": "The mass is halved each half-life: \\(144\\cdot(\\tfrac12)^{n}=9\\) gives \\(2^{n}=16=2^{4}\\), so n = 4 half-lives. Time = 4 × 5 = 20 hours."
+          },
+          {
+            "question": "Evaluate \\(\\log_{2}6+\\log_{2}12-\\log_{2}9\\).",
+            "options": [
+              "4",
+              "6",
+              "3",
+              "5",
               "2"
             ],
-            "correct": 0,
-            "solution": "log₂(8)+log₂(4)=3+2=5."
-          },
-          {
-            "question": "Solve 2^(x+1)=16.",
-            "options": [
-              "x=2",
-              "x=3",
-              "x=4",
-              "x=5",
-              "x=8"
-            ],
-            "correct": 1,
-            "solution": "2^(x+1)=16=2⁴ → x+1=4 → x=3."
-          },
-          {
-            "question": "What is log₁₀(1000)?",
-            "options": [
-              "1",
-              "2",
-              "3",
-              "10",
-              "100"
-            ],
             "correct": 2,
-            "solution": "log₁₀(1000)=3 since 10³=1000."
-          },
-          {
-            "question": "Solve 10^x=0.1.",
-            "options": [
-              "x=−1",
-              "x=0",
-              "x=1",
-              "x=−10",
-              "x=10"
-            ],
-            "correct": 0,
-            "solution": "10^x=0.1=10⁻¹ → x=−1."
+            "solution": "Combine: \\(\\log_{2}\\dfrac{6\\times12}{9}=\\log_{2}8\\). Since 8 = 2^3, the value is 3."
           },
           {
             "question": "A sample falls to \\(\\frac{1}{16}\\) of its original activity in 20 hours. What percentage remains after 12 hours (approximately)?",
@@ -49128,16 +49128,16 @@ const subjects = [
             "solution": "\\(\\dfrac{1}{16} = 2^{-4}\\) so the half-life is \\(20/4 = 5\\) h. After 12 h there are \\(12/5 = 2.4\\) half-lives, so the fraction left is \\(2^{-2.4} \\approx 0.19\\), i.e. 19%."
           },
           {
-            "question": "Solve 4^x=2.",
+            "question": "What is the sum of all real solutions of \\(4^{x}-10\\cdot2^{x}+16=0\\)?",
             "options": [
-              "x=0.5",
-              "x=1",
-              "x=2",
-              "x=4",
-              "x=8"
+              "5",
+              "10",
+              "3",
+              "16",
+              "4"
             ],
-            "correct": 0,
-            "solution": "4^x=2 → (2²)^x=2 → 2^(2x)=2¹ → 2x=1 → x=0.5."
+            "correct": 4,
+            "solution": "Put \\(t=2^{x}\\): \\(t^2-10t+16=0\\) factors as \\((t-8)(t-2)=0\\), so \\(2^{x}=8\\) or \\(2^{x}=2\\), i.e. \\(x=3\\) or \\(x=1\\). The sum is 4."
           },
           {
             "question": "Given \\(\\log 2 = 0.30\\), what is \\([\\text{H}^{+}]\\) for a solution of pH 4.3?",
@@ -49152,40 +49152,40 @@ const subjects = [
             "solution": "\\([\\text{H}^{+}] = 10^{-4.3} = 10^{-5} \\times 10^{0.7}\\). Since \\(\\log 5 = \\log 10 - \\log 2 = 0.70\\), we get \\(10^{0.7} = 5\\). So \\([\\text{H}^{+}] = 5 \\times 10^{-5}\\) mol/L."
           },
           {
-            "question": "Solve log₂(x−1)=3.",
+            "question": "A radioactive sample has a half-life of 2 hours. It starts with 320 g and 10 g remain. How many hours have passed?",
             "options": [
-              "x=7",
-              "x=8",
-              "x=9",
-              "x=4",
-              "x=2"
+              "1.9375 hours",
+              "10 hours",
+              "5 hours",
+              "8 hours",
+              "64 hours"
             ],
-            "correct": 2,
-            "solution": "log₂(x−1)=3 → x−1=8 → x=9."
+            "correct": 1,
+            "solution": "The mass is halved each half-life: \\(320\\cdot(\\tfrac12)^{n}=10\\) gives \\(2^{n}=32=2^{5}\\), so n = 5 half-lives. Time = 5 × 2 = 10 hours."
           },
           {
-            "question": "What is log₁₀(0.01)?",
+            "question": "What is the sum of all real solutions of \\(9^{x}-30\\cdot3^{x}+81=0\\)?",
             "options": [
-              "−2",
-              "−1",
-              "0",
-              "1",
-              "2"
+              "2",
+              "4",
+              "81",
+              "5",
+              "30"
             ],
-            "correct": 0,
-            "solution": "log₁₀(0.01)=log₁₀(10⁻²)=−2."
+            "correct": 1,
+            "solution": "Put \\(t=3^{x}\\): \\(t^2-30t+81=0\\) factors as \\((t-3)(t-27)=0\\), so \\(3^{x}=3\\) or \\(3^{x}=27\\), i.e. \\(x=1\\) or \\(x=3\\). The sum is 4."
           },
           {
-            "question": "Evaluate the logarithmic expression: \\(\\log_2(6) + \\log_2(12) - \\log_2(9)\\).",
+            "question": "Solve \\(\\log_2 x+\\log_2 (x-24)=8\\).",
             "options": [
-              "\\(3\\)",
-              "\\(4\\)",
-              "\\(2\\)",
-              "\\(\\log_2(15)\\)",
-              "\\(5\\)"
+              "\\(x=-8\\)",
+              "\\(x=24\\)",
+              "\\(x=32 \\text{ and } x=-8\\)",
+              "\\(x=40\\)",
+              "\\(x=32\\)"
             ],
-            "correct": 0,
-            "solution": "Apply the product and quotient properties of logarithms: \\(\\log_2(6) + \\log_2(12) - \\log_2(9) = \\log_2\\left(\\frac{6 \\times 12}{9}\\right) = \\log_2\\left(\\frac{72}{9}\\right) = \\log_2(8) = 3\\), since \\(2^3 = 8\\)."
+            "correct": 4,
+            "solution": "The logs need \\(x>24\\). Combining: \\(x(x-24)=2^{8}=256\\), i.e. \\(x^2-24x-256=0\\), which factors as \\((x-32)(x+8)=0\\). The root \\(x=-8\\) is outside the domain, so only \\(x=32\\) is a solution."
           },
           {
             "question": "Solve the logarithmic equation: \\(\\log_2(x) + \\log_4(x) + \\log_{16}(x) = 7\\).",
@@ -49212,16 +49212,16 @@ const subjects = [
             "solution": "The argument of the natural logarithm must be strictly positive: \\(\\frac{x - 2}{5 - x} > 0\\). The critical points are \\(x = 2\\) and \\(x = 5\\). Testing intervals: for \\(x < 2\\), \\((-)/(+) < 0\\); for \\(2 < x < 5\\), \\((+)/(+) > 0\\); for \\(x > 5\\), \\((+)/(-) < 0\\). Thus, the domain is the open interval \\((2, 5)\\)."
           },
           {
-            "question": "If \\(\\log_{10}(2) = a\\) and \\(\\log_{10}(3) = b\\), express \\(\\log_{10}(15)\\) in terms of a and b.",
+            "question": "What is the sum of all real solutions of \\(9^{x}-12\\cdot3^{x}+27=0\\)?",
             "options": [
-              "\\(1 - a + b\\)",
-              "\\(a + b - 1\\)",
-              "\\(1 + a - b\\)",
-              "\\(ab + 1\\)",
-              "\\(\\frac{b}{a} + 1\\)"
+              "3",
+              "4",
+              "1",
+              "2",
+              "12"
             ],
             "correct": 0,
-            "solution": "Note that \\(15 = 3 \\times 5 = 3 \\times \\frac{10}{2}\\). Therefore: \\(\\log_{10}(15) = \\log_{10}(3) + \\log_{10}(10) - \\log_{10}(2) = b + 1 - a = 1 - a + b\\)."
+            "solution": "Put \\(t=3^{x}\\): \\(t^2-12t+27=0\\) factors as \\((t-9)(t-3)=0\\), so \\(3^{x}=9\\) or \\(3^{x}=3\\), i.e. \\(x=2\\) or \\(x=1\\). The sum is 3."
           },
           {
             "question": "Find all real solutions to the equation: \\(e^{2x} - 5e^x + 6 = 0\\).",
@@ -49320,16 +49320,16 @@ const subjects = [
             "solution": "Take the natural logarithm of both sides: \\(\\ln(2^x) = \\ln(5^{x-1}) \\implies x \\ln 2 = (x - 1) \\ln 5 = x \\ln 5 - \\ln 5\\). Rearranging terms: \\(\\ln 5 = x \\ln 5 - x \\ln 2 = x(\\ln 5 - \\ln 2)\\). Solving for x: \\(x = \\frac{\\ln 5}{\\ln 5 - \\ln 2}\\)."
           },
           {
-            "question": "Evaluate the nested expression: \\(\\log_2(\\log_3(\\log_2(512)))\\).",
+            "question": "What is the sum of all real solutions of \\(9^{x}-36\\cdot3^{x}+243=0\\)?",
             "options": [
-              "\\(1\\)",
-              "\\(0\\)",
-              "\\(2\\)",
-              "\\(3\\)",
-              "\\(-1\\)"
+              "36",
+              "6",
+              "5",
+              "243",
+              "1"
             ],
-            "correct": 0,
-            "solution": "Evaluate from the innermost logarithm outward: Since \\(2^9 = 512\\), \\(\\log_2(512) = 9\\). Next, \\(\\log_3(9) = 2\\) because \\(3^2 = 9\\). Finally, \\(\\log_2(2) = 1\\)."
+            "correct": 2,
+            "solution": "Put \\(t=3^{x}\\): \\(t^2-36t+243=0\\) factors as \\((t-27)(t-9)=0\\), so \\(3^{x}=27\\) or \\(3^{x}=9\\), i.e. \\(x=3\\) or \\(x=2\\). The sum is 5."
           },
           {
             "question": "Solve the equation: \\((\\log_2 x)^2 - 3\\log_2 x - 4 = 0\\).",
@@ -49344,16 +49344,16 @@ const subjects = [
             "solution": "Let \\(y = \\log_2 x\\). The quadratic equation is \\(y^2 - 3y - 4 = 0 \\implies (y - 4)(y + 1) = 0\\), so \\(y = 4\\) or \\(y = -1\\). If \\(\\log_2 x = 4\\), \\(x = 2^4 = 16\\). If \\(\\log_2 x = -1\\), \\(x = 2^{-1} = 1/2\\). Both are valid positive solutions."
           },
           {
-            "question": "What is the exact value of \\(\\log_{\\sqrt{5}}(125)\\)?",
+            "question": "Evaluate \\(\\log_{2}20+\\log_{2}24-\\log_{2}30\\).",
             "options": [
-              "\\(6\\)",
-              "\\(3\\)",
-              "\\(1.5\\)",
-              "\\(9\\)",
-              "\\(12\\)"
+              "3",
+              "4",
+              "5",
+              "8",
+              "2"
             ],
-            "correct": 0,
-            "solution": "Write both in base 5: \\(125 = 5^3\\) and the base is \\(\\sqrt{5} = 5^{1/2}\\). By the change of base / power property: \\(\\log_{5^{1/2}}(5^3) = \\frac{3}{1/2} = 6\\)."
+            "correct": 1,
+            "solution": "Combine: \\(\\log_{2}\\dfrac{20\\times24}{30}=\\log_{2}16\\). Since 16 = 2^4, the value is 4."
           },
           {
             "question": "A bacterial population doubles every 3 hours. If the population initially is 500, after how many hours will it reach 16,000?",
@@ -49392,64 +49392,64 @@ const subjects = [
             "solution": "Add the two equations: \\(2\\log_2 x = 6 \\implies \\log_2 x = 3 \\implies x = 2^3 = 8\\). Subtract the two equations: \\(2\\log_2 y = 4 \\implies \\log_2 y = 2 \\implies y = 2^2 = 4\\)."
           },
           {
-            "question": "What is the value of \\(3^{2 - \\log_3(5)}\\)?",
+            "question": "Solve \\(\\log_2 x+\\log_2 (x-3)=2\\).",
             "options": [
-              "\\(9/5\\)",
-              "\\(5/9\\)",
-              "\\(6/5\\)",
-              "\\(4\\)",
-              "\\(15\\)"
+              "\\(x=4\\)",
+              "\\(x=3\\)",
+              "\\(x=4 \\text{ and } x=-1\\)",
+              "\\(x=-1\\)",
+              "\\(x=5\\)"
             ],
             "correct": 0,
-            "solution": "Using exponent rules: \\(3^{2 - \\log_3(5)} = \\frac{3^2}{3^{\\log_3(5)}} = \\frac{9}{5}\\), since \\(3^{\\log_3(5)} = 5\\)."
+            "solution": "The logs need \\(x>3\\). Combining: \\(x(x-3)=2^{2}=4\\), i.e. \\(x^2-3x-4=0\\), which factors as \\((x-4)(x+1)=0\\). The root \\(x=-1\\) is outside the domain, so only \\(x=4\\) is a solution."
           },
           {
-            "question": "Solve the exponential inequality: \\(3^{2x-1} < 27\\).",
+            "question": "Solve \\(\\log_2 x+\\log_2 (x-12)=6\\).",
             "options": [
-              "\\(x < 2\\)",
-              "\\(x < 1.5\\)",
-              "\\(x < 3\\)",
-              "\\(x > 2\\)",
-              "\\(x < 1\\)"
-            ],
-            "correct": 0,
-            "solution": "Express both sides with the common base 3: \\(3^{2x-1} < 3^3\\). Because the base \\(3 > 1\\), the exponential function is strictly increasing, so \\(2x - 1 < 3 \\implies 2x < 4 \\implies x < 2\\)."
-          },
-          {
-            "question": "What are the real solutions of the equation 9^x − 3^(x+1) = −2?",
-            "options": [
-              "There are no real solutions",
-              "x = 0 and x = log₃(2)",
-              "x = 0 and x = log₃(1/2)",
-              "Only x = log₃(2)",
-              "Only x = 0"
-            ],
-            "correct": 1,
-            "solution": "Rewrite the equation: (3^x)² - 3(3^x) + 2 = 0.\nLet u = 3^x:\nu² - 3u + 2 = 0 ⇒ (u - 1)(u - 2) = 0.\n1. u = 1 ⇒ 3^x = 1 ⇒ x = 0\n2. u = 2 ⇒ 3^x = 2 ⇒ x = log₃(2)."
-          },
-          {
-            "question": "What are the solutions of the equation 4^x + 2^(3x) + 16 = 0?",
-            "options": [
-              "x = 0",
-              "All real numbers",
-              "x = 0 and x = 1",
-              "x = 2 and x = 1",
-              "The equation has no real solutions"
+              "\\(x=-4\\)",
+              "\\(x=20\\)",
+              "\\(x=64\\)",
+              "\\(x=16 \\text{ and } x=-4\\)",
+              "\\(x=16\\)"
             ],
             "correct": 4,
-            "solution": "For all real values of x, 4^x = 2^(2x) > 0 and 2^(3x) > 0. The sum of two strictly positive real terms and 16 is strictly greater than 16, and therefore can never equal zero in the real numbers."
+            "solution": "The logs need \\(x>12\\). Combining: \\(x(x-12)=2^{6}=64\\), i.e. \\(x^2-12x-64=0\\), which factors as \\((x-16)(x+4)=0\\). The root \\(x=-4\\) is outside the domain, so only \\(x=16\\) is a solution."
           },
           {
-            "question": "What is the set of solutions of the inequality 3e^x − 5e^(-x) − 2 > 0?",
+            "question": "A radioactive sample has a half-life of 8 hours. It starts with 96 g and 3 g remain. How many hours have passed?",
             "options": [
-              "{x ∈ ℝ : x < -1, x > 5/3}",
-              "{x ∈ ℝ : x > ln(5/3)}",
-              "{x ∈ ℝ : -1 < x ≤ ln(5/3)}",
-              "All real x",
-              "No real x"
+              "7.75 hours",
+              "256 hours",
+              "5 hours",
+              "48 hours",
+              "40 hours"
+            ],
+            "correct": 4,
+            "solution": "The mass is halved each half-life: \\(96\\cdot(\\tfrac12)^{n}=3\\) gives \\(2^{n}=32=2^{5}\\), so n = 5 half-lives. Time = 5 × 8 = 40 hours."
+          },
+          {
+            "question": "Evaluate \\(\\log_{5}20+\\log_{5}250-\\log_{5}8\\).",
+            "options": [
+              "6",
+              "4",
+              "3",
+              "2",
+              "5"
             ],
             "correct": 1,
-            "solution": "Multiply by e^x > 0:\n3(e^x)² - 2(e^x) - 5 > 0.\nLet u = e^x > 0:\n3u² - 2u - 5 > 0 ⇒ (3u - 5)(u + 1) > 0.\nSince u + 1 > 0 for all u > 0, we must have:\n3u - 5 > 0 ⇒ u > 5/3 ⇒ e^x > 5/3 ⇒ x > ln(5/3)."
+            "solution": "Combine: \\(\\log_{5}\\dfrac{20\\times250}{8}=\\log_{5}625\\). Since 625 = 5^4, the value is 4."
+          },
+          {
+            "question": "A radioactive sample has a half-life of 12 hours. It starts with 480 g and 15 g remain. How many hours have passed?",
+            "options": [
+              "384 hours",
+              "48 hours",
+              "5 hours",
+              "72 hours",
+              "60 hours"
+            ],
+            "correct": 4,
+            "solution": "The mass is halved each half-life: \\(480\\cdot(\\tfrac12)^{n}=15\\) gives \\(2^{n}=32=2^{5}\\), so n = 5 half-lives. Time = 5 × 12 = 60 hours."
           },
           {
             "question": "What is the value of the sum: log₁₀(1/2) + log₁₀(2/3) + log₁₀(3/4) + ... + log₁₀(9/10)?",
@@ -49482,28 +49482,28 @@ const subjects = [
             "solution": "The overall multiplier is \\(0.80 \\times 1.10 = 0.88\\). So the original price is \\(88/0.88 = 100\\) euros. Adding or subtracting the percentages (\\(-20\\% + 10\\% = -10\\%\\)) would give 97.8, which is wrong."
           },
           {
-            "question": "The ratio 3:5 is equivalent to:",
+            "question": "Tap A alone fills a tank in 6 hours, tap B alone fills it in 12 hours, and a drain C alone empties the full tank in 12 hours. With A, B and C all open, how long does it take to fill the empty tank?",
             "options": [
-              "6:10",
-              "6:15",
-              "9:10",
-              "12:15",
-              "3:10"
+              "\\(3\\text{ h}\\)",
+              "\\(4\\text{ h}\\)",
+              "\\(6\\text{ h}\\)",
+              "\\(10\\text{ h}\\)",
+              "\\(7\\text{ h}\\)"
             ],
-            "correct": 0,
-            "solution": "3:5 = 6:10 (multiply by 2)."
+            "correct": 2,
+            "solution": "In one hour the tank gains \\(\\dfrac1{6}+\\dfrac1{12}-\\dfrac1{12}=\\dfrac{1}{6}\\) of its volume. The time is the reciprocal: \\(6\\text{ h}\\)."
           },
           {
-            "question": "If x:y=2:3 and y=12, what is x?",
+            "question": "A chemist has a 33% acid solution and a 25% acid solution. How many litres of the 33% solution must be added to 1 litres of the 25% solution to obtain a 31% solution?",
             "options": [
-              "6",
-              "8",
-              "12",
-              "18",
-              "24"
+              "4 L",
+              "1 L",
+              "0.6 L",
+              "0.3333333333333333 L",
+              "3 L"
             ],
-            "correct": 1,
-            "solution": "x/12=2/3 → x=12×2/3=8."
+            "correct": 4,
+            "solution": "Let x be the litres of 33% solution. Acid balance: 33x + 25×1 = 31(x + 1). So 2x = 6×1, giving x = 6/2 = 3 L."
           },
           {
             "question": "How many mL of a 40% solution must be added to 200 mL of a 10% solution to obtain a 20% solution?",
@@ -49518,28 +49518,28 @@ const subjects = [
             "solution": "Amount of solute: \\(0.10 \\times 200 + 0.40x = 0.20(200 + x)\\). So \\(20 + 0.4x = 40 + 0.2x\\), which gives \\(0.2x = 20\\) and \\(x = 100\\) mL."
           },
           {
-            "question": "If a:b=4:5 and b:c=2:3, what is a:c?",
+            "question": "A jacket is discounted by 20% and then 25% VAT is added to the discounted price. The final price is €180. What was the original price, before the discount and VAT?",
             "options": [
-              "4:3",
-              "8:15",
-              "4:15",
-              "2:3",
-              "8:3"
+              "€180",
+              "€225",
+              "€171",
+              "€181.43",
+              "€171.43"
             ],
-            "correct": 1,
-            "solution": "a/b=4/5, b/c=2/3 → a/c=(4/5)×(2/3)=8/15."
+            "correct": 0,
+            "solution": "The two changes multiply: final = original × 0.8 × 1.25 = original × 1. So original = €180 / 1 = €180. Adding or subtracting the percentages is wrong because the VAT applies to the discounted price."
           },
           {
-            "question": "A price increases from $50 to $60. What is the percentage increase?",
+            "question": "A jacket is discounted by 20% and then 20% VAT is added to the discounted price. The final price is €249.6. What was the original price, before the discount and VAT?",
             "options": [
-              "10%",
-              "15%",
-              "20%",
-              "25%",
-              "30%"
+              "€312",
+              "€260",
+              "€259.6",
+              "€208",
+              "€249.6"
             ],
-            "correct": 2,
-            "solution": "Increase=10. % increase=10/50×100=20%."
+            "correct": 1,
+            "solution": "The two changes multiply: final = original × 0.8 × 1.2 = original × 0.96. So original = €249.6 / 0.96 = €260. Adding or subtracting the percentages is wrong because the VAT applies to the discounted price."
           },
           {
             "question": "6 workers can finish a job in 10 days. After 2 days, 2 workers leave. How many days in total does the job take?",
@@ -49566,16 +49566,16 @@ const subjects = [
             "solution": "Solute: \\(0.30 \\times 50 = 15\\) mL. For 12% the final volume is \\(15/0.12 = 125\\) mL. Water added \\(= 125 - 50 = 75\\) mL."
           },
           {
-            "question": "A shirt costs $40 after 20% discount. What was the original price?",
+            "question": "A chemist has a 37% acid solution and a 17% acid solution. How many litres of the 37% solution must be added to 9 litres of the 17% solution to obtain a 22% solution?",
             "options": [
-              "$48",
-              "$50",
-              "$52",
-              "$60",
-              "$80"
+              "27 L",
+              "6 L",
+              "3 L",
+              "4.5 L",
+              "15 L"
             ],
-            "correct": 1,
-            "solution": "40=0.8×original → original=40/0.8=$50."
+            "correct": 2,
+            "solution": "Let x be the litres of 37% solution. Acid balance: 37x + 17×9 = 22(x + 9). So 15x = 5×9, giving x = 45/15 = 3 L."
           },
           {
             "question": "An unemployment rate rises from 8% to 10%. What is the <b>relative</b> increase?",
@@ -49590,16 +49590,16 @@ const subjects = [
             "solution": "The increase is 2 <b>percentage points</b>. The relative increase is \\(\\dfrac{10 - 8}{8} = \\dfrac{2}{8} = 25\\%\\)."
           },
           {
-            "question": "If the ratio of boys to girls is 3:2 and there are 30 boys, how many girls?",
+            "question": "A price is increased by 50%, then reduced by 40%, then reduced by 5%. What is the overall change compared with the original price?",
             "options": [
-              "15",
-              "20",
-              "25",
-              "45",
-              "50"
+              "an increase of 14.5%",
+              "a decrease of 9.5%",
+              "a decrease of 10%",
+              "a decrease of 14.5%",
+              "an increase of 5%"
             ],
-            "correct": 1,
-            "solution": "3/2=30/g → g=30×2/3=20."
+            "correct": 3,
+            "solution": "Multiply the factors: 1.50 × 0.60 × 0.95 = 0.855. So the price changes by -14.5% (a decrease of 14.5%). Adding the percentages (5%) is wrong because each change applies to a new price."
           },
           {
             "question": "A recipe for 6 people uses 450 g of flour. How much flour is needed for 10 people if each person gets 20% less than before?",
@@ -49614,28 +49614,28 @@ const subjects = [
             "solution": "Per person: \\(450/6 = 75\\) g. With 20% less: \\(75 \\times 0.80 = 60\\) g. For 10 people: \\(600\\) g."
           },
           {
-            "question": "A number is increased by 10% then decreased by 10%. What is the net change?",
+            "question": "A price is reduced by 15%, then increased by 15%, then increased by 10%. What is the overall change compared with the original price?",
             "options": [
-              "0%",
-              "−1%",
-              "+1%",
-              "−2%",
-              "+2%"
+              "an increase of 10%",
+              "a decrease of 2.25%",
+              "a decrease of 7.525%",
+              "an increase of 12.525%",
+              "an increase of 7.525%"
             ],
-            "correct": 1,
-            "solution": "After +10%: 1.1x. After −10%: 0.9×1.1x=0.99x. Net −1%."
+            "correct": 4,
+            "solution": "Multiply the factors: 0.85 × 1.15 × 1.10 = 1.07525. So the price changes by 7.525% (an increase of 7.525%). Adding the percentages (10%) is wrong because each change applies to a new price."
           },
           {
-            "question": "Simplify the ratio 12:18.",
+            "question": "A price is reduced by 50%, then reduced by 20%, then increased by 30%. What is the overall change compared with the original price?",
             "options": [
-              "2:3",
-              "3:2",
-              "4:6",
-              "6:9",
-              "1:2"
+              "an increase of 48%",
+              "a decrease of 43%",
+              "a decrease of 48%",
+              "a decrease of 60%",
+              "a decrease of 40%"
             ],
-            "correct": 0,
-            "solution": "12:18 = 2:3 (divide by 6)."
+            "correct": 2,
+            "solution": "Multiply the factors: 0.50 × 0.80 × 1.30 = 0.52. So the price changes by -48% (a decrease of 48%). Adding the percentages (-40%) is wrong because each change applies to a new price."
           },
           {
             "question": "840 euros are shared in the ratio \\(2 : 3 : 7\\). How much more does the largest share receive than the smallest?",
@@ -49650,28 +49650,28 @@ const subjects = [
             "solution": "There are \\(2 + 3 + 7 = 12\\) parts, so one part is \\(840/12 = 70\\). The smallest share is \\(2 \\times 70 = 140\\) and the largest is \\(7 \\times 70 = 490\\). The difference is \\(490 - 140 = 350\\)."
           },
           {
-            "question": "If x:y=1:2 and y:z=3:4, what is x:z?",
+            "question": "A chemist has a 33% acid solution and a 13% acid solution. How many litres of the 33% solution must be added to 9 litres of the 13% solution to obtain a 18% solution?",
             "options": [
-              "1:4",
-              "3:8",
-              "1:8",
-              "3:4",
-              "1:2"
+              "27 L",
+              "15 L",
+              "3 L",
+              "6 L",
+              "9 L"
             ],
-            "correct": 1,
-            "solution": "x/y=1/2, y/z=3/4 → x/z=(1/2)×(3/4)=3/8."
+            "correct": 2,
+            "solution": "Let x be the litres of 33% solution. Acid balance: 33x + 13×9 = 18(x + 9). So 15x = 5×9, giving x = 45/15 = 3 L."
           },
           {
-            "question": "A car travels 120 km in 2 hours. What is the ratio of distance to time?",
+            "question": "Tap A alone fills a tank in 15 hours, tap B alone fills it in 12 hours, and a drain C alone empties the full tank in 20 hours. With A, B and C all open, how long does it take to fill the empty tank?",
             "options": [
-              "60:1",
-              "120:2",
-              "1:60",
-              "2:120",
-              "30:1"
+              "\\(5\\text{ h}\\)",
+              "\\(11\\text{ h}\\)",
+              "\\(10\\text{ h}\\)",
+              "\\(\\dfrac{20}{3}\\text{ h}\\)",
+              "\\(\\dfrac{47}{3}\\text{ h}\\)"
             ],
-            "correct": 0,
-            "solution": "120:2 = 60:1 km/h."
+            "correct": 2,
+            "solution": "In one hour the tank gains \\(\\dfrac1{15}+\\dfrac1{12}-\\dfrac1{20}=\\dfrac{1}{10}\\) of its volume. The time is the reciprocal: \\(10\\text{ h}\\)."
           },
           {
             "question": "A population grows by 10% in each of two years, and then falls by 10% in the third year. What is the overall change?",
@@ -49686,64 +49686,64 @@ const subjects = [
             "solution": "The multiplier is \\(1.10 \\times 1.10 \\times 0.90 = 1.089\\). The overall change is \\(+8.9\\%\\). Percentage changes multiply, they do not add."
           },
           {
-            "question": "If a:b:b:c=2:3:4, what is a:c?",
+            "question": "A jacket is discounted by 20% and then 20% VAT is added to the discounted price. The final price is €288. What was the original price, before the discount and VAT?",
             "options": [
-              "2:4",
-              "1:2",
-              "2:3",
-              "3:4",
-              "8:3"
+              "€300",
+              "€240",
+              "€288",
+              "€360",
+              "€298"
             ],
             "correct": 0,
-            "solution": "a:b=2:3, b:c=3:4 → a:c=2:4=1:2."
+            "solution": "The two changes multiply: final = original × 0.8 × 1.2 = original × 0.96. So original = €288 / 0.96 = €300. Adding or subtracting the percentages is wrong because the VAT applies to the discounted price."
           },
           {
-            "question": "A population of 1000 increases by 5% annually. What is the population after 1 year?",
+            "question": "Tap A alone fills a tank in 10 hours, tap B alone fills it in 12 hours, and a drain C alone empties the full tank in 12 hours. With A, B and C all open, how long does it take to fill the empty tank?",
             "options": [
-              "1005",
-              "1025",
-              "1050",
-              "1100",
-              "1500"
+              "\\(11\\text{ h}\\)",
+              "\\(\\dfrac{34}{3}\\text{ h}\\)",
+              "\\(\\dfrac{60}{11}\\text{ h}\\)",
+              "\\(\\dfrac{15}{4}\\text{ h}\\)",
+              "\\(10\\text{ h}\\)"
             ],
-            "correct": 1,
-            "solution": "1000×1.05=1050."
+            "correct": 4,
+            "solution": "In one hour the tank gains \\(\\dfrac1{10}+\\dfrac1{12}-\\dfrac1{12}=\\dfrac{1}{10}\\) of its volume. The time is the reciprocal: \\(10\\text{ h}\\)."
           },
           {
-            "question": "What is the ratio 0.75:1 in simplest form?",
+            "question": "A price is increased by 30%, then reduced by 5%, then increased by 10%. What is the overall change compared with the original price?",
             "options": [
-              "3:4",
-              "4:3",
-              "1:0.75",
-              "75:100",
-              "3:1"
-            ],
-            "correct": 0,
-            "solution": "0.75:1 = 3/4:1 = 3:4."
-          },
-          {
-            "question": "A medical device's price increases by 20%, and then the new price is decreased by 20%. What is the overall percentage change from the original price?",
-            "options": [
-              "4% decrease",
-              "No change (0%)",
-              "4% increase",
-              "2% decrease",
-              "1% decrease"
+              "an increase of 35.85%",
+              "an increase of 40.85%",
+              "an increase of 35%",
+              "an increase of 11.6667%",
+              "an increase of 23.5%"
             ],
             "correct": 0,
-            "solution": "Let the original price be \\(P\\). After a 20% increase, the price is \\(1.20P\\). After a subsequent 20% decrease, the price becomes \\(1.20P \\times (1 - 0.20) = 1.20P \\times 0.80 = 0.96P\\). This corresponds to a 4% decrease (\\((1 - 0.96) \\times 100\\% = 4\\%\\))."
+            "solution": "Multiply the factors: 1.30 × 0.95 × 1.10 = 1.3585. So the price changes by 35.85% (an increase of 35.85%). Adding the percentages (35%) is wrong because each change applies to a new price."
           },
           {
-            "question": "How many liters of a 50% glucose solution must be mixed with 10 liters of a 20% glucose solution to produce a 30% glucose solution?",
+            "question": "Tap A alone fills a tank in 4 hours, tap B alone fills it in 12 hours, and a drain C alone empties the full tank in 12 hours. With A, B and C all open, how long does it take to fill the empty tank?",
             "options": [
-              "5 liters",
-              "10 liters",
-              "15 liters",
-              "2.5 liters",
-              "8 liters"
+              "\\(\\dfrac{12}{5}\\text{ h}\\)",
+              "\\(3\\text{ h}\\)",
+              "\\(\\dfrac{28}{3}\\text{ h}\\)",
+              "\\(4\\text{ h}\\)",
+              "\\(5\\text{ h}\\)"
+            ],
+            "correct": 3,
+            "solution": "In one hour the tank gains \\(\\dfrac1{4}+\\dfrac1{12}-\\dfrac1{12}=\\dfrac{1}{4}\\) of its volume. The time is the reciprocal: \\(4\\text{ h}\\)."
+          },
+          {
+            "question": "A jacket is discounted by 25% and then 10% VAT is added to the discounted price. The final price is €313.5. What was the original price, before the discount and VAT?",
+            "options": [
+              "€380",
+              "€285",
+              "€360.52",
+              "€378.82",
+              "€368.82"
             ],
             "correct": 0,
-            "solution": "Let \\(x\\) be the volume of the 50% solution in liters. The total amount of glucose is conserved: \\(0.50x + 0.20(10) = 0.30(x + 10)\\). Expanding: \\(0.50x + 2 = 0.30x + 3 \\implies 0.20x = 1 \\implies x = 5\\text{ liters}\\)."
+            "solution": "The two changes multiply: final = original × 0.75 × 1.1 = original × 0.825. So original = €313.5 / 0.825 = €380. Adding or subtracting the percentages is wrong because the VAT applies to the discounted price."
           },
           {
             "question": "If 6 laboratory technicians can analyze 120 blood samples in 4 hours, how many hours will it take 8 technicians working at the same rate to analyze 240 samples?",
@@ -49758,52 +49758,52 @@ const subjects = [
             "solution": "Rate of one technician: \\(\\frac{120\\text{ samples}}{6\\text{ tech} \\times 4\\text{ h}} = 5\\text{ samples/tech/hour}\\). For 8 technicians to analyze 240 samples: \\(\\text{Time} = \\frac{240\\text{ samples}}{8\\text{ tech} \\times 5\\text{ samples/tech/hour}} = \\frac{240}{40} = 6\\text{ hours}\\)."
           },
           {
-            "question": "A grant of €1,400 is divided among three research labs A, B, and C in the ratio 2 : 3 : 5. How much does lab C receive?",
+            "question": "A jacket is discounted by 30% and then 25% VAT is added to the discounted price. The final price is €35. What was the original price, before the discount and VAT?",
             "options": [
-              "€700",
-              "€420",
-              "€280",
-              "€600",
-              "€500"
+              "€40",
+              "€28",
+              "€46.84",
+              "€36.75",
+              "€36.84"
             ],
             "correct": 0,
-            "solution": "Total parts: \\(2 + 3 + 5 = 10\\) parts. Value of one part: \\(\\frac{1400}{10} = €140\\). Lab C receives 5 parts: \\(5 \\times 140 = €700\\)."
+            "solution": "The two changes multiply: final = original × 0.7 × 1.25 = original × 0.875. So original = €35 / 0.875 = €40. Adding or subtracting the percentages is wrong because the VAT applies to the discounted price."
           },
           {
-            "question": "If the ratio \\(A : B = 3 : 4\\) and the ratio \\(B : C = 5 : 6\\), what is the ratio \\(A : C\\)?",
+            "question": "A chemist has a 36% acid solution and a 16% acid solution. How many litres of the 36% solution must be added to 6 litres of the 16% solution to obtain a 24% solution?",
             "options": [
-              "5 : 8",
-              "1 : 2",
-              "3 : 8",
-              "15 : 24",
-              "9 : 10"
+              "9 L",
+              "12 L",
+              "4.8 L",
+              "6 L",
+              "4 L"
             ],
-            "correct": 0,
-            "solution": "Write as fractions: \\(\\frac{A}{B} = \\frac{3}{4}\\) and \\(\\frac{B}{C} = \\frac{5}{6}\\). Multiplying them: \\(\\frac{A}{C} = \\frac{A}{B} \\times \\frac{B}{C} = \\frac{3}{4} \\times \\frac{5}{6} = \\frac{15}{24} = \\frac{5}{8}\\). Hence, \\(A : C = 5 : 8\\)."
+            "correct": 4,
+            "solution": "Let x be the litres of 36% solution. Acid balance: 36x + 16×6 = 24(x + 6). So 12x = 8×6, giving x = 48/12 = 4 L."
           },
           {
-            "question": "After receiving a 15% discount, a student purchases a stethoscope for €68. What was the original price before the discount?",
+            "question": "Tap A alone fills a tank in 4 hours, tap B alone fills it in 12 hours, and a drain C alone empties the full tank in 40 hours. With A, B and C all open, how long does it take to fill the empty tank?",
             "options": [
-              "€80",
-              "€78.20",
-              "€82.50",
-              "€85",
-              "€75"
+              "\\(\\dfrac{120}{37}\\text{ h}\\)",
+              "\\(\\dfrac{120}{43}\\text{ h}\\)",
+              "\\(-24\\text{ h}\\)",
+              "\\(\\dfrac{157}{37}\\text{ h}\\)",
+              "\\(\\dfrac{56}{3}\\text{ h}\\)"
             ],
             "correct": 0,
-            "solution": "Let the original price be \\(P\\). The discounted price is \\(P \\times (1 - 0.15) = 0.85P\\). Setting equal to €68: \\(0.85P = 68 \\implies P = \\frac{68}{0.85} = \\frac{6800}{85} = €80\\)."
+            "solution": "In one hour the tank gains \\(\\dfrac1{4}+\\dfrac1{12}-\\dfrac1{40}=\\dfrac{37}{120}\\) of its volume. The time is the reciprocal: \\(\\dfrac{120}{37}\\text{ h}\\)."
           },
           {
-            "question": "Quantity y is inversely proportional to the square of x. If x increases by 25%, by what percentage does y decrease (rounded to the nearest integer)?",
+            "question": "A jacket is discounted by 40% and then 20% VAT is added to the discounted price. The final price is €288. What was the original price, before the discount and VAT?",
             "options": [
-              "36%",
-              "25%",
-              "44%",
-              "20%",
-              "50%"
+              "€400",
+              "€480",
+              "€345.6",
+              "€240",
+              "€370"
             ],
             "correct": 0,
-            "solution": "Let \\(y = \\frac{k}{x^2}\\). If \\(x\\) increases by 25%, the new value is \\(x' = 1.25x = \\frac{5}{4}x\\). The new \\(y' = \\frac{k}{(5/4 x)^2} = \\frac{16}{25} \\frac{k}{x^2} = 0.64y\\). The decrease in \\(y\\) is \\(1 - 0.64 = 0.36 = 36\\%\\)."
+            "solution": "The two changes multiply: final = original × 0.6 × 1.2 = original × 0.72. So original = €288 / 0.72 = €400. Adding or subtracting the percentages is wrong because the VAT applies to the discounted price."
           },
           {
             "question": "A vehicle drives from city A to city B at 60 km/h, and returns along the same route from B to A at 40 km/h. What is the average speed for the entire round trip?",
@@ -49818,28 +49818,28 @@ const subjects = [
             "solution": "Let the one-way distance be \\(d\\). Total distance is \\(2d\\). Total time: \\(t = \\frac{d}{60} + \\frac{d}{40} = \\frac{2d + 3d}{120} = \\frac{5d}{120} = \\frac{d}{24}\\). Average speed: \\(v_{\\text{avg}} = \\frac{2d}{t} = \\frac{2d}{d/24} = 48\\text{ km/h}\\). Alternatively, harmonic mean: \\(\\frac{2 \\times 60 \\times 40}{60 + 40} = \\frac{4800}{100} = 48\\text{ km/h}\\)."
           },
           {
-            "question": "How much distilled water must be added to 500 mL of a 40% saline solution to dilute it to a 25% saline solution?",
+            "question": "A chemist has a 26% acid solution and a 20% acid solution. How many litres of the 26% solution must be added to 10 litres of the 20% solution to obtain a 22% solution?",
             "options": [
-              "300 mL",
-              "250 mL",
-              "200 mL",
-              "400 mL",
-              "350 mL"
+              "5 L",
+              "2 L",
+              "4 L",
+              "10 L",
+              "20 L"
             ],
             "correct": 0,
-            "solution": "Amount of pure salt present: \\(0.40 \\times 500 = 200\\text{ mL}\\). For 200 mL of salt to be 25% (i.e., 1/4) of the final solution, the total volume must be \\(\\frac{200}{0.25} = 800\\text{ mL}\\). Therefore, the amount of distilled water added is \\(800 - 500 = 300\\text{ mL}\\)."
+            "solution": "Let x be the litres of 26% solution. Acid balance: 26x + 20×10 = 22(x + 10). So 4x = 2×10, giving x = 20/4 = 5 L."
           },
           {
-            "question": "Two model biological cells are geometrically similar. The ratio of their surface areas is 4 : 9. What is the ratio of their volumes?",
+            "question": "Tap A alone fills a tank in 12 hours, tap B alone fills it in 15 hours, and a drain C alone empties the full tank in 40 hours. With A, B and C all open, how long does it take to fill the empty tank?",
             "options": [
-              "8 : 27",
-              "2 : 3",
-              "16 : 81",
-              "4 : 27",
-              "8 : 81"
+              "\\(8\\text{ h}\\)",
+              "\\(\\dfrac{20}{3}\\text{ h}\\)",
+              "\\(\\dfrac{40}{7}\\text{ h}\\)",
+              "\\(\\dfrac{67}{3}\\text{ h}\\)",
+              "\\(-13\\text{ h}\\)"
             ],
             "correct": 0,
-            "solution": "The ratio of surface areas of similar figures is the square of the linear scale factor: \\(k^2 = \\frac{4}{9} \\implies k = \\frac{2}{3}\\). The ratio of their volumes is the cube of the linear scale factor: \\(k^3 = \\left(\\frac{2}{3}\\right)^3 = \\frac{8}{27}\\)."
+            "solution": "In one hour the tank gains \\(\\dfrac1{12}+\\dfrac1{15}-\\dfrac1{40}=\\dfrac{1}{8}\\) of its volume. The time is the reciprocal: \\(8\\text{ h}\\)."
           },
           {
             "question": "Pumps A and B can fill an autoclave water tank in 4 hours and 6 hours respectively, while drain valve C can empty it in 12 hours. If all three are opened simultaneously, how long will it take to fill the empty tank?",
@@ -49866,28 +49866,28 @@ const subjects = [
             "solution": "Female patients = 120; improved = \\(0.40 \\times 120 = 48\\). Male patients = \\(200 - 120 = 80\\); improved = \\(0.30 \\times 80 = 24\\). Total improved = \\(48 + 24 = 72\\). Overall percentage = \\(\\frac{72}{200} \\times 100\\% = 36\\%\\)."
           },
           {
-            "question": "A merchant buys a diagnostic scanner for €500 and marks it up to sell at a 20% profit margin on cost. During a promotion, she offers a 10% discount on the marked price. What is her final profit in euros?",
+            "question": "A chemist has a 37% acid solution and a 27% acid solution. How many litres of the 37% solution must be added to 5 litres of the 27% solution to obtain a 35% solution?",
             "options": [
-              "€40",
-              "€50",
-              "€35",
-              "€45",
-              "€60"
+              "2 L",
+              "4 L",
+              "5 L",
+              "25 L",
+              "20 L"
             ],
-            "correct": 0,
-            "solution": "Marked price = \\(500 \\times 1.20 = €600\\). Discounted selling price = \\(600 \\times (1 - 0.10) = 600 \\times 0.90 = €540\\). The final profit is \\(540 - 500 = €40\\)."
+            "correct": 4,
+            "solution": "Let x be the litres of 37% solution. Acid balance: 37x + 27×5 = 35(x + 5). So 2x = 8×5, giving x = 40/2 = 20 L."
           },
           {
-            "question": "An income tax rate changes from 20% to 25%. Which statement correctly describes this change?",
+            "question": "Tap A alone fills a tank in 4 hours, tap B alone fills it in 6 hours, and a drain C alone empties the full tank in 40 hours. With A, B and C all open, how long does it take to fill the empty tank?",
             "options": [
-              "An increase of 5 percentage points and a 25% relative increase",
-              "An increase of 5% and a 5 percentage point increase",
-              "An increase of 5 percentage points and a 20% relative increase",
-              "An increase of 25 percentage points and a 5% relative increase",
-              "An increase of 4 percentage points and a 20% relative increase"
+              "\\(\\dfrac{120}{47}\\text{ h}\\)",
+              "\\(\\dfrac{12}{5}\\text{ h}\\)",
+              "\\(\\dfrac{167}{47}\\text{ h}\\)",
+              "\\(-30\\text{ h}\\)",
+              "\\(\\dfrac{50}{3}\\text{ h}\\)"
             ],
             "correct": 0,
-            "solution": "Absolute difference: \\(25\\% - 20\\% = 5\\) percentage points. Relative percentage increase: \\(\\frac{25 - 20}{20} \\times 100\\% = \\frac{5}{20} \\times 100\\% = 25\\%\\)."
+            "solution": "In one hour the tank gains \\(\\dfrac1{4}+\\dfrac1{6}-\\dfrac1{40}=\\dfrac{47}{120}\\) of its volume. The time is the reciprocal: \\(\\dfrac{120}{47}\\text{ h}\\)."
           },
           {
             "question": "A container contains 60 liters of pure alcohol. 12 liters are drawn off and replaced with water. Then, 12 liters of the mixture are drawn off and replaced with water. What volume of pure alcohol remains?",
@@ -49902,64 +49902,64 @@ const subjects = [
             "solution": "Each replacement removes \\(\\frac{12}{60} = \\frac{1}{5}\\) of the mixture, leaving \\(1 - \\frac{1}{5} = \\frac{4}{5}\\) of the alcohol. After two successive replacements, the remaining alcohol is \\(60 \\times \\left(\\frac{4}{5}\\right)^2 = 60 \\times \\frac{16}{25} = \\frac{960}{25} = 38.4\\text{ liters}\\)."
           },
           {
-            "question": "If \\(x : y = 2 : 3\\), what is the value of the algebraic ratio \\(\\frac{3x + 2y}{9x - 2y}\\)?",
+            "question": "A chemist has a 27% acid solution and a 18% acid solution. How many litres of the 27% solution must be added to 4 litres of the 18% solution to obtain a 24% solution?",
             "options": [
-              "1",
-              "4/3",
-              "6/7",
-              "5/4",
-              "3/2"
+              "2 L",
+              "2.4 L",
+              "12 L",
+              "8 L",
+              "4 L"
             ],
-            "correct": 0,
-            "solution": "Let \\(x = 2k\\) and \\(y = 3k\\). Then: \\(\\frac{3(2k) + 2(3k)}{9(2k) - 2(3k)} = \\frac{6k + 6k}{18k - 6k} = \\frac{12k}{12k} = 1\\)."
+            "correct": 3,
+            "solution": "Let x be the litres of 27% solution. Acid balance: 27x + 18×4 = 24(x + 4). So 3x = 6×4, giving x = 24/3 = 8 L."
           },
           {
-            "question": "A sum of money invested at compound interest doubles in 6 years. Assuming the same annual rate, in how many years will the investment become 8 times its initial amount?",
+            "question": "A price is increased by 40%, then increased by 20%, then reduced by 10%. What is the overall change compared with the original price?",
             "options": [
-              "18 years",
-              "12 years",
-              "24 years",
-              "16 years",
-              "36 years"
+              "an increase of 51.2%",
+              "an increase of 50%",
+              "a decrease of 51.2%",
+              "an increase of 16.6667%",
+              "an increase of 68%"
             ],
             "correct": 0,
-            "solution": "Under compound interest, the principal multiplies by 2 every 6 years. To multiply by 8 (which is \\(2^3\\)), it requires 3 doubling periods: \\(3 \\times 6 = 18\\text{ years}\\)."
+            "solution": "Multiply the factors: 1.40 × 1.20 × 0.90 = 1.512. So the price changes by 51.2% (an increase of 51.2%). Adding the percentages (50%) is wrong because each change applies to a new price."
           },
           {
-            "question": "In a hospital department, the ratio of physicians to nurses is 2 : 7. If there are 35 more nurses than physicians, how many physicians are there?",
+            "question": "A price is reduced by 20%, then reduced by 30%, then increased by 10%. What is the overall change compared with the original price?",
             "options": [
-              "14",
-              "10",
-              "21",
-              "49",
-              "28"
+              "a decrease of 40%",
+              "a decrease of 44%",
+              "an increase of 38.4%",
+              "a decrease of 38.4%",
+              "a decrease of 13.3333%"
             ],
-            "correct": 0,
-            "solution": "Let physicians = \\(2k\\) and nurses = \\(7k\\). The difference is \\(7k - 2k = 5k = 35 \\implies k = 7\\). Thus, the number of physicians is \\(2k = 2 \\times 7 = 14\\)."
+            "correct": 3,
+            "solution": "Multiply the factors: 0.80 × 0.70 × 1.10 = 0.616. So the price changes by -38.4% (a decrease of 38.4%). Adding the percentages (-40%) is wrong because each change applies to a new price."
           },
           {
-            "question": "A gear with 16 teeth meshes with a larger gear with 48 teeth. If the smaller gear makes 120 revolutions per minute (rpm), what is the rotational speed of the larger gear?",
+            "question": "A jacket is discounted by 30% and then 20% VAT is added to the discounted price. The final price is €151.2. What was the original price, before the discount and VAT?",
             "options": [
-              "40 rpm",
-              "60 rpm",
-              "360 rpm",
-              "30 rpm",
-              "24 rpm"
+              "€216",
+              "€126",
+              "€180",
+              "€178",
+              "€166.32"
             ],
-            "correct": 0,
-            "solution": "The number of teeth passed per minute must be equal: \\(N_1 \\times \\omega_1 = N_2 \\times \\omega_2 \\implies 16 \\times 120 = 48 \\times \\omega_2\\). Solving: \\(\\omega_2 = \\frac{16 \\times 120}{48} = \\frac{1920}{48} = 40\\text{ rpm}\\)."
+            "correct": 2,
+            "solution": "The two changes multiply: final = original × 0.7 × 1.2 = original × 0.84. So original = €151.2 / 0.84 = €180. Adding or subtracting the percentages is wrong because the VAT applies to the discounted price."
           },
           {
-            "question": "The population of a bacterial colony increases by 10% in the first hour and decreases by 10% in the second hour. How does the final population compare with the initial population?",
+            "question": "A price is reduced by 50%, then increased by 25%, then reduced by 10%. What is the overall change compared with the original price?",
             "options": [
-              "1% lower",
-              "Same as initial",
-              "1% higher",
-              "2% lower",
-              "0.5% lower"
+              "a decrease of 11.6667%",
+              "a decrease of 37.5%",
+              "a decrease of 43.75%",
+              "an increase of 43.75%",
+              "a decrease of 38.75%"
             ],
-            "correct": 0,
-            "solution": "Let initial population be \\(P_0\\). After 1st hour: \\(P_1 = 1.10 P_0\\). After 2nd hour: \\(P_2 = 1.10 P_0 \\times 0.90 = 0.99 P_0\\). This is \\(1 - 0.99 = 0.01 = 1\\%\\) lower than \\(P_0\\)."
+            "correct": 2,
+            "solution": "Multiply the factors: 0.50 × 1.25 × 0.90 = 0.5625. So the price changes by -43.75% (a decrease of 43.75%). Adding the percentages (-35%) is wrong because each change applies to a new price."
           }
         ]
       },
@@ -49968,40 +49968,40 @@ const subjects = [
         "name": "Conics",
         "questions": [
           {
-            "question": "What is the standard form of a parabola opening upward?",
+            "question": "The line \\(4x+3y=25\\) cuts the circle \\(x^2+y^2=169\\) in a chord. What is the length of the chord?",
             "options": [
-              "y=ax²+bx+c",
-              "x=ay²+by+c",
-              "y²=4ax",
-              "x²=4ay",
-              "x²/a²+y²/b²=1"
-            ],
-            "correct": 0,
-            "solution": "y=ax²+bx+c is a parabola opening upward if a>0."
-          },
-          {
-            "question": "The equation x²/9+y²/16=1 represents:",
-            "options": [
-              "Circle",
-              "Ellipse",
-              "Hyperbola",
-              "Parabola",
-              "Line"
+              "10",
+              "24",
+              "12",
+              "26",
+              "16"
             ],
             "correct": 1,
-            "solution": "x²/a²+y²/b²=1 with a≠b is an ellipse."
+            "solution": "The distance from the centre (0, 0) to the line is \\(\\dfrac{25}{\\sqrt{16+9}}=\\dfrac{25}{5}=5\\). Half of the chord is \\(\\sqrt{R^2-d^2}=\\sqrt{169-25}=12\\), so the chord is 24."
           },
           {
-            "question": "What is the center of the ellipse (x−2)²/9+(y+1)²/16=1?",
+            "question": "What is the radius of the circle \\(x^2+y^2-10x-2y-10=0\\)?",
             "options": [
-              "(2,−1)",
-              "(−2,1)",
-              "(2,1)",
-              "(−2,−1)",
-              "(0,0)"
+              "\\(\\sqrt{26}\\)",
+              "6",
+              "\\(\\sqrt{114}\\)",
+              "5",
+              "36"
+            ],
+            "correct": 1,
+            "solution": "Complete the squares: \\((x-5)^2+(y-1)^2=36\\), because \\(h^2+k^2-F=25+1-(-10)=36\\). The radius is 6."
+          },
+          {
+            "question": "The line \\(12x+5y=156\\) cuts the circle \\(x^2+y^2=169\\) in a chord. What is the length of the chord?",
+            "options": [
+              "10",
+              "5",
+              "2",
+              "24",
+              "12"
             ],
             "correct": 0,
-            "solution": "Center is (h,k)=(2,−1)."
+            "solution": "The distance from the centre (0, 0) to the line is \\(\\dfrac{156}{\\sqrt{144+25}}=\\dfrac{156}{13}=12\\). Half of the chord is \\(\\sqrt{R^2-d^2}=\\sqrt{169-144}=5\\), so the chord is 10."
           },
           {
             "question": "For which values of \\(k\\) is the line \\(y = x + k\\) tangent to the circle \\(x^{2} + y^{2} = 8\\)?",
@@ -50016,16 +50016,16 @@ const subjects = [
             "solution": "The line \\(x - y + k = 0\\) must be at a distance equal to the radius \\(2\\sqrt{2}\\) from the origin: \\(\\dfrac{|k|}{\\sqrt{2}} = 2\\sqrt{2}\\), so \\(|k| = 4\\) and \\(k = \\pm 4\\) (two tangents)."
           },
           {
-            "question": "What is the focus of the parabola y²=4x?",
+            "question": "What is the radius of the circle \\(x^2+y^2-8x-8y+7=0\\)?",
             "options": [
-              "(1,0)",
-              "(−1,0)",
-              "(0,1)",
-              "(0,−1)",
-              "(0,0)"
+              "\\(11\\)",
+              "\\(\\sqrt{32}\\)",
+              "5",
+              "6",
+              "25"
             ],
-            "correct": 0,
-            "solution": "For y²=4ax, focus is (a,0). Here a=1, so (1,0)."
+            "correct": 2,
+            "solution": "Complete the squares: \\((x-4)^2+(y-4)^2=25\\), because \\(h^2+k^2-F=16+16-(7)=25\\). The radius is 5."
           },
           {
             "question": "The curve \\(4x^{2} + 9y^{2} - 16x + 18y - 11 = 0\\) is an ellipse. What is its area?",
@@ -50040,28 +50040,28 @@ const subjects = [
             "solution": "Complete the squares: \\(4(x - 2)^{2} - 16 + 9(y + 1)^{2} - 9 = 11\\), so \\(4(x - 2)^{2} + 9(y + 1)^{2} = 36\\), i.e. \\(\\dfrac{(x - 2)^{2}}{9} + \\dfrac{(y + 1)^{2}}{4} = 1\\). The semi-axes are 3 and 2, so the area is \\(\\pi \\times 3 \\times 2 = 6\\pi\\)."
           },
           {
-            "question": "What is the directrix of the parabola y²=8x?",
+            "question": "The line \\(3x+4y=100\\) cuts the circle \\(x^2+y^2=625\\) in a chord. What is the length of the chord?",
             "options": [
-              "x=−2",
-              "x=2",
-              "y=−2",
-              "y=2",
-              "x=0"
+              "30",
+              "15",
+              "32",
+              "10",
+              "50"
             ],
             "correct": 0,
-            "solution": "For y²=4ax, directrix is x=−a. Here a=2, so x=−2."
+            "solution": "The distance from the centre (0, 0) to the line is \\(\\dfrac{100}{\\sqrt{9+16}}=\\dfrac{100}{5}=20\\). Half of the chord is \\(\\sqrt{R^2-d^2}=\\sqrt{625-400}=15\\), so the chord is 30."
           },
           {
-            "question": "The equation x²/4−y²/9=1 has vertices at:",
+            "question": "The line \\(3x+4y=25\\) cuts the circle \\(x^2+y^2=169\\) in a chord. What is the length of the chord?",
             "options": [
-              "(±2,0)",
-              "(0,±3)",
-              "(±4,0)",
-              "(0,±9)",
-              "(±1,0)"
+              "10",
+              "16",
+              "12",
+              "24",
+              "26"
             ],
-            "correct": 0,
-            "solution": "For x²/a²−y²/b²=1, vertices are (±a,0). Here a=2."
+            "correct": 3,
+            "solution": "The distance from the centre (0, 0) to the line is \\(\\dfrac{25}{\\sqrt{9+16}}=\\dfrac{25}{5}=5\\). Half of the chord is \\(\\sqrt{R^2-d^2}=\\sqrt{169-25}=12\\), so the chord is 24."
           },
           {
             "question": "The ellipse \\(\\dfrac{x^{2}}{25} + \\dfrac{y^{2}}{9} = 1\\) has foci \\(F_1\\) and \\(F_2\\). What is the perimeter of triangle \\(F_1PF_2\\) for any point \\(P\\) on the ellipse?",
@@ -50124,76 +50124,76 @@ const subjects = [
             "solution": "For a hyperbola \\(c^{2} = a^{2} + b^{2} = 16 + 9 = 25\\), so \\(c = 5\\). The foci are at \\((\\pm 5, 0)\\), so they are \\(2c = 10\\) apart."
           },
           {
-            "question": "The ellipse x²/25+y²/9=1 has major axis length:",
+            "question": "What is the radius of the circle \\(x^2+y^2+8x+12=0\\)?",
             "options": [
-              "5",
-              "6",
-              "10",
-              "12",
-              "8"
-            ],
-            "correct": 2,
-            "solution": "Major axis=2a where a=5. Length=10."
-          },
-          {
-            "question": "What is the eccentricity of the ellipse x²/9+y²/4=1?",
-            "options": [
-              "2/3",
-              "√5/3",
-              "1/3",
-              "√5/2",
-              "3/2"
+              "3",
+              "2",
+              "4",
+              "1",
+              "\\(\\sqrt{52}\\)"
             ],
             "correct": 1,
-            "solution": "e=√(1−b²/a²)=√(1−4/9)=√(5/9)=√5/3."
+            "solution": "Complete the squares: \\((x+4)^2+(y+0)^2=4\\), because \\(h^2+k^2-F=16+0-(12)=4\\). The radius is 2."
           },
           {
-            "question": "The hyperbola x²/16−y²/9=1 has foci at:",
+            "question": "The line \\(5x+12y=260\\) cuts the circle \\(x^2+y^2=625\\) in a chord. What is the length of the chord?",
             "options": [
-              "(±4,0)",
-              "(0,±3)",
-              "(±5,0)",
-              "(0,±5)",
-              "(±√7,0)"
+              "10",
+              "30",
+              "32",
+              "40",
+              "15"
             ],
-            "correct": 2,
-            "solution": "c=√(a²+b²)=√(16+9)=5. Foci at (±5,0)."
+            "correct": 1,
+            "solution": "The distance from the centre (0, 0) to the line is \\(\\dfrac{260}{\\sqrt{25+144}}=\\dfrac{260}{13}=20\\). Half of the chord is \\(\\sqrt{R^2-d^2}=\\sqrt{625-400}=15\\), so the chord is 30."
           },
           {
-            "question": "What is the vertex of the parabola y=(x−2)²+3?",
+            "question": "What is the radius of the circle \\(x^2+y^2-6x+4y-51=0\\)?",
             "options": [
-              "(2,3)",
-              "(−2,3)",
-              "(2,−3)",
-              "(−2,−3)",
-              "(0,0)"
-            ],
-            "correct": 0,
-            "solution": "Vertex is (h,k)=(2,3)."
-          },
-          {
-            "question": "The equation y²=−8x represents a parabola opening:",
-            "options": [
-              "Up",
-              "Down",
-              "Right",
-              "Left",
-              "No opening"
+              "\\(\\sqrt{13}\\)",
+              "\\(\\sqrt{103}\\)",
+              "7",
+              "8",
+              "9"
             ],
             "correct": 3,
-            "solution": "y²=−4ax with a>0 opens left."
+            "solution": "Complete the squares: \\((x-3)^2+(y+2)^2=64\\), because \\(h^2+k^2-F=9+4-(-51)=64\\). The radius is 8."
           },
           {
-            "question": "What is the minor axis length of x²/16+y²/9=1?",
+            "question": "What is the radius of the circle \\(x^2+y^2-8x-8y+23=0\\)?",
             "options": [
               "4",
-              "6",
-              "8",
-              "12",
+              "\\(\\sqrt{105}\\)",
+              "\\(\\sqrt{32}\\)",
+              "2",
               "3"
             ],
-            "correct": 1,
-            "solution": "Minor axis=2b where b=3. Length=6."
+            "correct": 4,
+            "solution": "Complete the squares: \\((x-4)^2+(y-4)^2=9\\), because \\(h^2+k^2-F=16+16-(23)=9\\). The radius is 3."
+          },
+          {
+            "question": "What is the radius of the circle \\(x^2+y^2-6x-4y-51=0\\)?",
+            "options": [
+              "7",
+              "\\(\\sqrt{13}\\)",
+              "64",
+              "8",
+              "\\(\\sqrt{103}\\)"
+            ],
+            "correct": 3,
+            "solution": "Complete the squares: \\((x-3)^2+(y-2)^2=64\\), because \\(h^2+k^2-F=9+4-(-51)=64\\). The radius is 8."
+          },
+          {
+            "question": "What is the radius of the circle \\(x^2+y^2-10x+21=0\\)?",
+            "options": [
+              "\\(5\\)",
+              "3",
+              "1",
+              "\\(\\sqrt{79}\\)",
+              "2"
+            ],
+            "correct": 4,
+            "solution": "Complete the squares: \\((x-5)^2+(y+0)^2=4\\), because \\(h^2+k^2-F=25+0-(21)=4\\). The radius is 2."
           },
           {
             "question": "A parabola has its vertex at the origin, a vertical axis and its focus at \\((0, 2)\\). What is its equation?",
@@ -50208,148 +50208,148 @@ const subjects = [
             "solution": "For a vertical axis the equation is \\(x^{2} = 4py\\), where \\(p\\) is the distance from the vertex to the focus. Here \\(p = 2\\), so \\(x^{2} = 8y\\)."
           },
           {
-            "question": "What is the asymptote of the hyperbola x²/4−y²/9=1?",
+            "question": "The line \\(5x+12y=91\\) cuts the circle \\(x^2+y^2=625\\) in a chord. What is the length of the chord?",
             "options": [
-              "y=±(3/2)x",
-              "y=±(2/3)x",
-              "y=±x",
-              "y=±(4/9)x",
-              "x=±2"
+              "14",
+              "50",
+              "36",
+              "48",
+              "24"
             ],
-            "correct": 0,
-            "solution": "Asymptotes: y=±(b/a)x=±(3/2)x."
+            "correct": 3,
+            "solution": "The distance from the centre (0, 0) to the line is \\(\\dfrac{91}{\\sqrt{25+144}}=\\dfrac{91}{13}=7\\). Half of the chord is \\(\\sqrt{R^2-d^2}=\\sqrt{625-49}=24\\), so the chord is 48."
           },
           {
-            "question": "What are the coordinates of the vertex of the parabola given by \\(y = 2x^2 - 8x + 5\\)?",
+            "question": "What is the slope of the positive-slope asymptote of the hyperbola \\(\\dfrac{x^2}{64}-\\dfrac{y^2}{36}=1\\)?",
             "options": [
-              "\\((2, -3)\\)",
-              "\\((-2, 29)\\)",
-              "\\((2, 5)\\)",
-              "\\((4, 5)\\)",
-              "\\((-2, -3)\\)"
+              "\\(\\dfrac{3}{5}\\)",
+              "\\(\\dfrac{3}{4}\\)",
+              "\\(\\dfrac{4}{5}\\)",
+              "\\(\\dfrac{9}{16}\\)",
+              "\\(\\dfrac{4}{3}\\)"
             ],
-            "correct": 0,
-            "solution": "For a parabola \\(y = ax^2 + bx + c\\), the x-coordinate of the vertex is \\(x_v = -\\frac{b}{2a} = -\\frac{-8}{2(2)} = \\frac{8}{4} = 2\\). Substitute \\(x = 2\\) into the equation: \\(y_v = 2(2)^2 - 8(2) + 5 = 8 - 16 + 5 = -3\\). Hence, the vertex is \\((2, -3)\\)."
+            "correct": 1,
+            "solution": "The asymptotes of \\(\\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}=1\\) are \\(y=\\pm\\dfrac ba x\\). Here \\(a=8,\\ b=6\\), so the slope is \\(\\dfrac{3}{4}\\)."
           },
           {
-            "question": "What is the focal length (distance from vertex to focus) of the parabola \\(y^2 = 12x\\)?",
+            "question": "What is the equation of the directrix of the parabola \\((x-3)^2=2(y-1)\\)?",
             "options": [
-              "\\(3\\)",
-              "\\(6\\)",
-              "\\(12\\)",
-              "\\(1.5\\)",
-              "\\(4\\)"
+              "\\(y=\\dfrac{1}{2}\\)",
+              "\\(y=\\dfrac{3}{2}\\)",
+              "\\(x=\\dfrac{5}{2}\\)",
+              "\\(y=0\\)",
+              "\\(y=-1\\)"
             ],
             "correct": 0,
-            "solution": "The standard form of a horizontal parabola with vertex at the origin is \\(y^2 = 4ax\\), where \\(a\\) is the distance from vertex to focus. Here \\(4a = 12 \\implies a = 3\\). The focus is at \\((3, 0)\\) and focal length is 3."
+            "solution": "Here \\(4p=2\\), so \\(p=\\dfrac{1}{2}\\). The vertex is \\((3,\\ 1)\\) and the parabola opens upwards, so the directrix is the horizontal line \\(y=1-\\dfrac{1}{2}=\\dfrac{1}{2}\\)."
           },
           {
-            "question": "Find the coordinates of the foci of the ellipse given by \\(\\frac{x^2}{25} + \\frac{y^2}{9} = 1\\).",
+            "question": "What is the eccentricity of the ellipse \\(\\dfrac{x^2}{169}+\\dfrac{y^2}{25}=1\\)?",
             "options": [
-              "\\((\\pm 4, 0)\\)",
-              "\\((0, \\pm 4)\\)",
-              "\\((\\pm \\sqrt{34}, 0)\\)",
-              "\\((\\pm 5, 0)\\)",
-              "\\((0, \\pm 3)\\)"
+              "\\(\\dfrac{5}{13}\\)",
+              "\\(\\dfrac{8}{13}\\)",
+              "\\(\\dfrac{12}{5}\\)",
+              "\\(\\dfrac{12}{169}\\)",
+              "\\(\\dfrac{12}{13}\\)"
             ],
-            "correct": 0,
-            "solution": "Here \\(a^2 = 25\\) (along the x-axis) and \\(b^2 = 9\\). The focal distance is \\(c = \\sqrt{a^2 - b^2} = \\sqrt{25 - 9} = \\sqrt{16} = 4\\). Because \\(a^2 > b^2\\), the major axis is along the x-axis, so the foci are at \\((\\pm 4, 0)\\)."
+            "correct": 4,
+            "solution": "Semi-axes 13 and 5. \\(c=\\sqrt{169-25}=12\\), so \\(e=\\dfrac ca=\\dfrac{12}{13}\\)."
           },
           {
-            "question": "What is the eccentricity of the ellipse \\(\\frac{x^2}{100} + \\frac{y^2}{64} = 1\\)?",
+            "question": "What are the coordinates of the focus of the parabola \\((x-2)^2=12(y-2)\\)?",
             "options": [
-              "\\(0.6\\)",
-              "\\(0.8\\)",
-              "\\(0.64\\)",
-              "\\(1.25\\)",
-              "\\(0.36\\)"
+              "\\(\\left(2,\\ 5\\right)\\)",
+              "\\(\\left(2,\\ -1\\right)\\)",
+              "\\(\\left(2,\\ \\dfrac{7}{2}\\right)\\)",
+              "\\(\\left(2,\\ 14\\right)\\)",
+              "\\(\\left(2,\\ 2\\right)\\)"
             ],
             "correct": 0,
-            "solution": "Here \\(a^2 = 100 \\implies a = 10\\), and \\(b^2 = 64\\). The focal distance is \\(c = \\sqrt{a^2 - b^2} = \\sqrt{100 - 64} = \\sqrt{36} = 6\\). The eccentricity is \\(e = \\frac{c}{a} = \\frac{6}{10} = 0.6\\)."
+            "solution": "The standard form is \\((x-h)^2=\\pm4p(y-k)\\) with vertex \\((2,\\ 2)\\). Here \\(4p=12\\), so \\(p=3\\), and the parabola opens upwards. The focus is \\(p\\) above the vertex: \\(\\left(2,\\ 5\\right)\\)."
           },
           {
-            "question": "What are the equations of the asymptotes of the hyperbola \\(\\frac{x^2}{16} - \\frac{y^2}{9} = 1\\)?",
+            "question": "What is the distance between the two foci of the hyperbola \\(\\dfrac{x^2}{36}-\\dfrac{y^2}{64}=1\\)?",
             "options": [
-              "\\(y = \\pm \\frac{3}{4}x\\)",
-              "\\(y = \\pm \\frac{4}{3}x\\)",
-              "\\(y = \\pm \\frac{9}{16}x\\)",
-              "\\(y = \\pm \\frac{16}{9}x\\)",
-              "\\(y = \\pm \\frac{1}{2}x\\)"
+              "12",
+              "10",
+              "16",
+              "20",
+              "4"
             ],
-            "correct": 0,
-            "solution": "For the standard hyperbola \\(\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1\\), the asymptotes are \\(y = \\pm \\frac{b}{a}x\\). Here \\(a^2 = 16 \\implies a = 4\\) and \\(b^2 = 9 \\implies b = 3\\). Thus, the asymptotes are \\(y = \\pm \\frac{3}{4}x\\)."
+            "correct": 3,
+            "solution": "For a hyperbola \\(c^2=a^2+b^2=36+64=100\\), so \\(c=10\\) and the foci are 20 apart."
           },
           {
-            "question": "Find the center and radius of the circle given by \\(x^2 + y^2 - 6x + 8y - 11 = 0\\).",
+            "question": "What is the distance between the two foci of the hyperbola \\(\\dfrac{x^2}{144}-\\dfrac{y^2}{25}=1\\)?",
             "options": [
-              "Center \\((3, -4)\\), radius \\(6\\)",
-              "Center \\((-3, 4)\\), radius \\(6\\)",
-              "Center \\((3, -4)\\), radius \\(\\sqrt{11}\\)",
-              "Center \\((-3, 4)\\), radius \\(36\\)",
-              "Center \\((6, -8)\\), radius \\(5\\)"
+              "13",
+              "24",
+              "17",
+              "26",
+              "10"
             ],
-            "correct": 0,
-            "solution": "Complete the square: \\((x^2 - 6x + 9) + (y^2 + 8y + 16) = 11 + 9 + 16 \\implies (x - 3)^2 + (y + 4)^2 = 36\\). Thus, the center is \\((3, -4)\\) and the radius is \\(r = \\sqrt{36} = 6\\)."
+            "correct": 3,
+            "solution": "For a hyperbola \\(c^2=a^2+b^2=144+25=169\\), so \\(c=13\\) and the foci are 26 apart."
           },
           {
-            "question": "What conic section is represented by the equation \\(4x^2 - 9y^2 + 16x + 18y - 29 = 0\\)?",
+            "question": "What is the slope of the positive-slope asymptote of the hyperbola \\(\\dfrac{x^2}{36}-\\dfrac{y^2}{64}=1\\)?",
             "options": [
-              "Hyperbola",
-              "Ellipse",
-              "Parabola",
-              "Circle",
-              "Two intersecting lines"
+              "\\(\\dfrac{4}{3}\\)",
+              "\\(\\dfrac{4}{5}\\)",
+              "\\(\\dfrac{16}{9}\\)",
+              "\\(\\dfrac{3}{4}\\)",
+              "\\(\\dfrac{3}{5}\\)"
             ],
             "correct": 0,
-            "solution": "The coefficients of \\(x^2\\) (which is +4) and \\(y^2\\) (which is -9) have opposite signs (\\(A \\cdot C = 4 \\times (-9) = -36 < 0\\)). Completing the square gives \\(4(x + 2)^2 - 9(y - 1)^2 = 36 \\implies \\frac{(x+2)^2}{9} - \\frac{(y-1)^2}{4} = 1\\), which is a non-degenerate hyperbola."
+            "solution": "The asymptotes of \\(\\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}=1\\) are \\(y=\\pm\\dfrac ba x\\). Here \\(a=6,\\ b=8\\), so the slope is \\(\\dfrac{4}{3}\\)."
           },
           {
-            "question": "Find the equation of the tangent line to the circle \\(x^2 + y^2 = 25\\) at the point \\((3, 4)\\).",
+            "question": "What is the slope of the positive-slope asymptote of the hyperbola \\(\\dfrac{x^2}{9}-\\dfrac{y^2}{16}=1\\)?",
             "options": [
-              "\\(3x + 4y = 25\\)",
-              "\\(4x + 3y = 25\\)",
-              "\\(3x - 4y = -7\\)",
-              "\\(4x - 3y = 0\\)",
-              "\\(3x + 4y = 5\\)"
+              "\\(\\dfrac{4}{3}\\)",
+              "\\(\\dfrac{16}{9}\\)",
+              "\\(\\dfrac{5}{3}\\)",
+              "\\(\\dfrac{3}{4}\\)",
+              "\\(\\dfrac{3}{5}\\)"
             ],
             "correct": 0,
-            "solution": "The equation of the tangent line to the circle \\(x^2 + y^2 = r^2\\) at a point \\((x_0, y_0)\\) is \\(x_0 x + y_0 y = r^2\\). Substituting \\(x_0 = 3\\), \\(y_0 = 4\\), and \\(r^2 = 25\\), we get \\(3x + 4y = 25\\)."
+            "solution": "The asymptotes of \\(\\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}=1\\) are \\(y=\\pm\\dfrac ba x\\). Here \\(a=3,\\ b=4\\), so the slope is \\(\\dfrac{4}{3}\\)."
           },
           {
-            "question": "What is the equation of the directrix of the parabola \\(x^2 = 8y\\)?",
+            "question": "What is the equation of the directrix of the parabola \\((x+1)^2=12(y-2)\\)?",
             "options": [
-              "\\(y = -2\\)",
-              "\\(y = 2\\)",
-              "\\(x = -2\\)",
-              "\\(x = 2\\)",
-              "\\(y = -4\\)"
+              "\\(x=-4\\)",
+              "\\(y=-10\\)",
+              "\\(y=1\\)",
+              "\\(y=-4\\)",
+              "\\(y=-1\\)"
             ],
-            "correct": 0,
-            "solution": "The standard vertical parabola has equation \\(x^2 = 4ay\\). Here \\(4a = 8 \\implies a = 2\\). The vertex is at \\((0,0)\\) and the parabola opens upward. The focus is at \\((0, 2)\\), and its directrix is the horizontal line \\(y = -a\\), which is \\(y = -2\\)."
+            "correct": 4,
+            "solution": "Here \\(4p=12\\), so \\(p=3\\). The vertex is \\((-1,\\ 2)\\) and the parabola opens upwards, so the directrix is the horizontal line \\(y=2-3=-1\\)."
           },
           {
-            "question": "What is the total area enclosed by the ellipse \\(4x^2 + 9y^2 = 36\\)?",
+            "question": "What is the equation of the directrix of the parabola \\((x-3)^2=-12(y-3)\\)?",
             "options": [
-              "\\(6\\pi\\)",
-              "\\(36\\pi\\)",
-              "\\(12\\pi\\)",
-              "\\(9\\pi\\)",
-              "\\(18\\pi\\)"
+              "\\(y=0\\)",
+              "\\(y=6\\)",
+              "\\(y=15\\)",
+              "\\(x=0\\)",
+              "\\(y=2\\)"
             ],
-            "correct": 0,
-            "solution": "Divide both sides by 36: \\(\\frac{x^2}{9} + \\frac{y^2}{4} = 1\\). Thus \\(a^2 = 9 \\implies a = 3\\), and \\(b^2 = 4 \\implies b = 2\\). The area of an ellipse is given by \\(A = \\pi a b = \\pi (3)(2) = 6\\pi\\)."
+            "correct": 1,
+            "solution": "Here \\(4p=12\\), so \\(p=3\\). The vertex is \\((3,\\ 3)\\) and the parabola opens downwards, so the directrix is the horizontal line \\(y=3+3=6\\)."
           },
           {
-            "question": "What are the coordinates of the foci of the hyperbola \\(\\frac{x^2}{9} - \\frac{y^2}{16} = 1\\)?",
+            "question": "What is the distance between the two foci of the ellipse \\(\\dfrac{x^2}{289}+\\dfrac{y^2}{64}=1\\)?",
             "options": [
-              "\\((\\pm 5, 0)\\)",
-              "\\((0, \\pm 5)\\)",
-              "\\((\\pm \\sqrt{7}, 0)\\)",
-              "\\((\\pm 3, 0)\\)",
-              "\\((0, \\pm 4)\\)"
+              "25",
+              "16",
+              "30",
+              "34",
+              "15"
             ],
-            "correct": 0,
-            "solution": "For a hyperbola \\(\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1\\), \\(c^2 = a^2 + b^2\\). Here \\(a^2 = 9\\) and \\(b^2 = 16\\), so \\(c = \\sqrt{9 + 16} = \\sqrt{25} = 5\\). The transverse axis is along the x-axis, so the foci are \\((\\pm 5, 0)\\)."
+            "correct": 2,
+            "solution": "Here \\(a^2=289,\\ b^2=64\\) (semi-axes 17 and 8). The focal distance is \\(c=\\sqrt{a^2-b^2}=\\sqrt{289-64}=15\\), so the foci are 30 apart."
           },
           {
             "question": "For what value of m is the line \\(y = mx\\) tangent to the circle \\((x - 4)^2 + y^2 = 4\\)?",
@@ -50364,28 +50364,28 @@ const subjects = [
             "solution": "The center of the circle is \\((4, 0)\\) and radius is \\(r = 2\\). A line \\(mx - y = 0\\) is tangent to the circle if the perpendicular distance from the center to the line equals the radius: \\(d = \\frac{|m(4) - 0|}{\\sqrt{m^2 + (-1)^2}} = \\frac{4|m|}{\\sqrt{m^2 + 1}} = 2\\). Squaring: \\(\\frac{16m^2}{m^2 + 1} = 4 \\implies 16m^2 = 4m^2 + 4 \\implies 12m^2 = 4 \\implies m^2 = 1/3 \\implies m = \\pm \\frac{1}{\\sqrt{3}}\\)."
           },
           {
-            "question": "What is the eccentricity of a rectangular (equilateral) hyperbola of the form \\(x^2 - y^2 = a^2\\)?",
+            "question": "What is the equation of the directrix of the parabola \\((x+2)^2=2(y+2)\\)?",
             "options": [
-              "\\(\\sqrt{2}\\)",
-              "\\(1\\)",
-              "\\(2\\)",
-              "\\(\\sqrt{3}\\)",
-              "\\(0.5\\)"
+              "\\(x=-\\dfrac{5}{2}\\)",
+              "\\(y=-3\\)",
+              "\\(y=-\\dfrac{5}{2}\\)",
+              "\\(y=-4\\)",
+              "\\(y=-\\dfrac{3}{2}\\)"
             ],
-            "correct": 0,
-            "solution": "In an equilateral hyperbola, \\(a = b\\). The focal distance is \\(c = \\sqrt{a^2 + b^2} = \\sqrt{a^2 + a^2} = a\\sqrt{2}\\). The eccentricity is \\(e = \\frac{c}{a} = \\frac{a\\sqrt{2}}{a} = \\sqrt{2}\\)."
+            "correct": 2,
+            "solution": "Here \\(4p=2\\), so \\(p=\\dfrac{1}{2}\\). The vertex is \\((-2,\\ -2)\\) and the parabola opens upwards, so the directrix is the horizontal line \\(y=-2-\\dfrac{1}{2}=-\\dfrac{5}{2}\\)."
           },
           {
-            "question": "What is the length of the latus rectum of the parabola \\(y^2 = 8x\\)?",
+            "question": "The line \\(8x+6y=80\\) cuts the circle \\(x^2+y^2=100\\) in a chord. What is the length of the chord?",
             "options": [
-              "\\(8\\)",
-              "\\(4\\)",
-              "\\(2\\)",
-              "\\(16\\)",
-              "\\(1\\)"
+              "16",
+              "4",
+              "14",
+              "6",
+              "12"
             ],
-            "correct": 0,
-            "solution": "For the parabola \\(y^2 = 4ax\\), the length of the chord through the focus perpendicular to the axis of symmetry (the latus rectum) is \\(4a\\). Here \\(4a = 8\\), so the length of the latus rectum is 8."
+            "correct": 4,
+            "solution": "The distance from the centre (0, 0) to the line is \\(\\dfrac{80}{\\sqrt{64+36}}=\\dfrac{80}{10}=8\\). Half of the chord is \\(\\sqrt{R^2-d^2}=\\sqrt{100-64}=6\\), so the chord is 12."
           },
           {
             "question": "Which of the following points lies strictly inside the ellipse \\(\\frac{x^2}{16} + \\frac{y^2}{9} = 1\\)?",
@@ -50424,16 +50424,16 @@ const subjects = [
             "solution": "In analytic geometry, the conic section classification by the discriminant of quadratic terms is: \\(B^2 - 4AC < 0\\) ellipse (or circle); \\(B^2 - 4AC = 0\\) parabola; \\(B^2 - 4AC > 0\\) hyperbola."
           },
           {
-            "question": "Find the intersection points of the line \\(y = x + 1\\) and the parabola \\(y = x^2 - 2x + 1\\).",
+            "question": "What is the distance between the two foci of the hyperbola \\(\\dfrac{x^2}{9}-\\dfrac{y^2}{16}=1\\)?",
             "options": [
-              "\\((0, 1)\\) and \\((3, 4)\\)",
-              "\\((1, 2)\\) and \\((2, 3)\\)",
-              "\\((-1, 0)\\) and \\((3, 4)\\)",
-              "\\((0, 1)\\) only (tangent)",
-              "No real intersection"
+              "7",
+              "6",
+              "2",
+              "5",
+              "10"
             ],
-            "correct": 0,
-            "solution": "Set the two expressions for y equal: \\(x^2 - 2x + 1 = x + 1 \\implies x^2 - 3x = 0 \\implies x(x - 3) = 0\\). The x-coordinates are \\(x = 0\\) and \\(x = 3\\). For \\(x = 0\\), \\(y = 0 + 1 = 1\\) \\(\\to (0, 1)\\). For \\(x = 3\\), \\(y = 3 + 1 = 4\\) \\(\\to (3, 4)\\)."
+            "correct": 4,
+            "solution": "For a hyperbola \\(c^2=a^2+b^2=9+16=25\\), so \\(c=5\\) and the foci are 10 apart."
           },
           {
             "question": "The parametric equations \\(x = 5\\cos \\theta\\) and \\(y = 3\\sin \\theta\\) (for \\(0 \\le \\theta < 2\\pi\\)) represent:",
@@ -50472,28 +50472,28 @@ const subjects = [
             "solution": "The focus and vertex lie on the x-axis, centered at (0, 0), so the standard equation is x²/a² - y²/b² = 1.\nThe vertex is (3, 0) ⇒ a = 3, so a² = 9.\nThe focus is (4, 0) ⇒ c = 4. For a hyperbola, c² = a² + b².\nTherefore, b² = c² - a² = 4² - 3² = 16 - 9 = 7.\nThe equation is x²/9 - y²/7 = 1."
           },
           {
-            "question": "The conic of the equation 2x² + 2y² − 3x − 4y − 6 = 0 is:",
+            "question": "What are the coordinates of the focus of the parabola \\((x+1)^2=2(y-2)\\)?",
             "options": [
-              "A parabola",
-              "A circle",
-              "An ellipse, which is not a circle",
-              "A hyperbola",
-              "A pair of lines"
-            ],
-            "correct": 1,
-            "solution": "In a general second-degree conic equation Ax² + Bxy + Cy² + Dx + Ey + F = 0, when B = 0 and A = C ≠ 0 with equal signs, completing the square gives (x - 3/4)² + (y - 1)² = r² with r² > 0, which is the equation of a circle."
-          },
-          {
-            "question": "To represent the graph of the equation 4x² − y² = 0, what should be drawn?",
-            "options": [
-              "A circle",
-              "A parabola",
-              "A pair of straight lines",
-              "A hyperbola",
-              "An ellipse"
+              "\\(\\left(-1,\\ 4\\right)\\)",
+              "\\(\\left(-1,\\ \\dfrac{9}{4}\\right)\\)",
+              "\\(\\left(-1,\\ \\dfrac{5}{2}\\right)\\)",
+              "\\(\\left(-1,\\ \\dfrac{3}{2}\\right)\\)",
+              "\\(\\left(-\\dfrac{1}{2},\\ 2\\right)\\)"
             ],
             "correct": 2,
-            "solution": "Factoring as a difference of squares: 4x² - y² = (2x - y)(2x + y) = 0.\nThis product is zero if and only if y = 2x or y = -2x, which represents two straight lines intersecting at the origin (a degenerate hyperbola)."
+            "solution": "The standard form is \\((x-h)^2=\\pm4p(y-k)\\) with vertex \\((-1,\\ 2)\\). Here \\(4p=2\\), so \\(p=\\dfrac{1}{2}\\), and the parabola opens upwards. The focus is \\(p\\) above the vertex: \\(\\left(-1,\\ \\dfrac{5}{2}\\right)\\)."
+          },
+          {
+            "question": "What are the coordinates of the focus of the parabola \\((x-4)^2=4(y+1)\\)?",
+            "options": [
+              "\\(\\left(4,\\ -\\dfrac{1}{2}\\right)\\)",
+              "\\(\\left(4,\\ -2\\right)\\)",
+              "\\(\\left(4,\\ -1\\right)\\)",
+              "\\(\\left(5,\\ -1\\right)\\)",
+              "\\(\\left(4,\\ 0\\right)\\)"
+            ],
+            "correct": 4,
+            "solution": "The standard form is \\((x-h)^2=\\pm4p(y-k)\\) with vertex \\((4,\\ -1)\\). Here \\(4p=4\\), so \\(p=1\\), and the parabola opens upwards. The focus is \\(p\\) above the vertex: \\(\\left(4,\\ 0\\right)\\)."
           },
           {
             "question": "For which values of the real parameter k does the equation x² + y² − 4x + 2y + k = 0 represent the equation of a real, non-degenerate circle?",
@@ -50526,40 +50526,40 @@ const subjects = [
             "solution": "Let \\(t = x^{2}\\): \\(t^{2} - 10t + 9 = 0\\) gives \\(t = 1\\) or \\(t = 9\\). So \\(x = \\pm 1, \\pm 3\\). The product is \\((1)(-1)(3)(-3) = 9\\)."
           },
           {
-            "question": "What is the solution to 2x≤6?",
+            "question": "How many integers \\(x\\) with \\(-10\\le x\\le10\\) satisfy \\(\\dfrac{(x+3)(x-1)}{x+2}\\le0\\)?",
             "options": [
-              "x≤3",
-              "x≥3",
-              "x<3",
-              "x>3",
-              "x=3"
+              "13",
+              "9",
+              "11",
+              "5",
+              "12"
             ],
-            "correct": 0,
-            "solution": "2x≤6 → x≤3."
+            "correct": 2,
+            "solution": "The sign of the fraction is the sign of \\((x+3)(x-1)(x+2)\\) (same sign as the quotient), with \\(x\\ne-2\\). Test the intervals cut by -3, -2, 1 and include the zeros of the numerator (-3 and 1) but never -2: this gives 11 integers in the range."
           },
           {
-            "question": "Solve −3x<9.",
+            "question": "For which value of \\(k\\) does the system \\(\\begin{cases}kx-y=-2\\\\12x+(k+7)y=6\\end{cases}\\) have NO solution?",
             "options": [
-              "x<−3",
-              "x>−3",
-              "x<3",
-              "x>3",
-              "x=−3"
+              "k = 0",
+              "k = -3",
+              "k = -4",
+              "k = -2",
+              "k = 12"
             ],
             "correct": 1,
-            "solution": "−3x<9 → x>−3 (divide by negative flips sign)."
+            "solution": "The coefficient determinant is \\(k(k+7)-(-1)(12)=k^2+7k+12\\), which is zero for \\(k=-4\\) and \\(k=-3\\). For \\(k=-4\\) the two equations describe the same line (infinitely many solutions); for \\(k=-3\\) the left sides are proportional but the right sides are not, so there is no solution."
           },
           {
-            "question": "What is the solution to x−5≥−2?",
+            "question": "For which value of \\(k\\) does the system \\(\\begin{cases}kx+3y=3\\\\-x+(k+4)y=3\\end{cases}\\) have NO solution?",
             "options": [
-              "x≥3",
-              "x≤3",
-              "x≥7",
-              "x≤7",
-              "x=3"
+              "k = -2",
+              "k = -3",
+              "k = 3",
+              "k = 0",
+              "k = -1"
             ],
-            "correct": 0,
-            "solution": "x−5≥−2 → x≥3."
+            "correct": 1,
+            "solution": "The coefficient determinant is \\(k(k+4)-(3)(-1)=k^2+4k+3\\), which is zero for \\(k=-1\\) and \\(k=-3\\). For \\(k=-1\\) the two equations describe the same line (infinitely many solutions); for \\(k=-3\\) the left sides are proportional but the right sides are not, so there is no solution."
           },
           {
             "question": "For which values of \\(k\\) does \\(kx^{2} - 4x + 1 = 0\\) have <b>no</b> real solutions?",
@@ -50574,64 +50574,64 @@ const subjects = [
             "solution": "No real solutions means the discriminant is negative: \\(16 - 4k < 0\\), so \\(k > 4\\). For \\(k = 4\\) the discriminant is zero (one repeated root)."
           },
           {
-            "question": "What is the solution to x²>9?",
+            "question": "A boat travels 315 km downstream in 9 hours, and the same 315 km back upstream in 105 hours. What is the speed of the river current?",
             "options": [
-              "x>3",
-              "x<−3",
-              "x>3 or x<−3",
-              "−3<x<3",
-              "x=±3"
+              "2.8 km/h",
+              "19 km/h",
+              "16 km/h",
+              "96 km/h",
+              "32 km/h"
             ],
             "correct": 2,
-            "solution": "x²>9 → x>3 or x<−3."
+            "solution": "Downstream speed = 315/9 = 35 km/h; upstream speed = 315/105 = 3 km/h. The boat speed is the average (19 km/h) and the current is half the difference: (35 − 3)/2 = 16 km/h."
           },
           {
-            "question": "Solve 3x+2<11.",
+            "question": "The equation \\(|x-4|+|x|=10\\) has two real solutions. What is the larger one?",
             "options": [
-              "x<3",
-              "x>3",
-              "x<9",
-              "x>9",
-              "x=3"
+              "\\(2\\)",
+              "\\(10\\)",
+              "\\(3\\)",
+              "\\(14\\)",
+              "\\(7\\)"
             ],
-            "correct": 0,
-            "solution": "3x+2<11 → 3x<9 → x<3."
+            "correct": 4,
+            "solution": "Both 4 and 0 are less than \\(7\\) and greater than \\(-3\\) because 10 > |4−(0)| = 4. For the right-hand solution both absolute values are positive: \\((x-4)+(x)=10\\) gives \\(2x=14\\), so \\(x=7\\). (The left-hand solution is \\(-3\\).)"
           },
           {
-            "question": "What is the solution to |x−2|≥4?",
+            "question": "How many integers \\(x\\) satisfy \\(|5x-8|<18\\)?",
             "options": [
-              "x≤−2 or x≥6",
-              "−2≤x≤6",
-              "x≤6 only",
-              "x≥−2 only",
-              "x=2"
+              "7",
+              "6",
+              "9",
+              "36",
+              "8"
             ],
             "correct": 0,
-            "solution": "x−2≥4→x≥6 or x−2≤−4→x≤−2."
+            "solution": "\\(|5x-8|<18\\) means \\(-18<5x-8<18\\), so \\(-2<x<\\dfrac{26}{5}\\). Count the integers strictly between these bounds: 7."
           },
           {
-            "question": "Solve −2x+5>1.",
+            "question": "The equation \\(|x-5|+|x-2|=4\\) has two real solutions. What is the larger one?",
             "options": [
-              "x<2",
-              "x>2",
-              "x<−2",
-              "x>−2",
-              "x=2"
+              "\\(\\dfrac{3}{2}\\)",
+              "\\(4\\)",
+              "\\(\\dfrac{7}{2}\\)",
+              "\\(\\dfrac{11}{2}\\)",
+              "\\(-\\dfrac{3}{2}\\)"
             ],
-            "correct": 0,
-            "solution": "−2x+5>1 → −2x>−4 → x<2."
+            "correct": 3,
+            "solution": "Both 5 and 2 are less than \\(\\dfrac{11}{2}\\) and greater than \\(\\dfrac{3}{2}\\) because 4 > |5−(2)| = 3. For the right-hand solution both absolute values are positive: \\((x-5)+(x-2)=4\\) gives \\(2x=11\\), so \\(x=\\dfrac{11}{2}\\). (The left-hand solution is \\(\\dfrac{3}{2}\\).)"
           },
           {
-            "question": "What is the solution to x²≤4?",
+            "question": "For which value of \\(k\\) does the system \\(\\begin{cases}kx+2y=-3\\\\3x+(k-1)y=-3\\end{cases}\\) have NO solution?",
             "options": [
-              "−2≤x≤2",
-              "x≤−2 or x≥2",
-              "x<2",
-              "x>−2",
-              "x=±2"
+              "k = 0",
+              "k = -1",
+              "k = 1",
+              "k = -2",
+              "k = -6"
             ],
-            "correct": 0,
-            "solution": "x²≤4 → −2≤x≤2."
+            "correct": 3,
+            "solution": "The coefficient determinant is \\(k(k-1)-(2)(3)=k^2-1k-6\\), which is zero for \\(k=-2\\) and \\(k=3\\). For \\(k=3\\) the two equations describe the same line (infinitely many solutions); for \\(k=-2\\) the left sides are proportional but the right sides are not, so there is no solution."
           },
           {
             "question": "Solve (x−1)(x+3)>0.",
@@ -50646,16 +50646,16 @@ const subjects = [
             "solution": "Product positive when both factors same sign: x<−3 or x>1."
           },
           {
-            "question": "What is the solution to 1/x>0?",
+            "question": "For which value of \\(k\\) does the system \\(\\begin{cases}kx-y=-4\\\\3x+(k+4)y=4\\end{cases}\\) have NO solution?",
             "options": [
-              "x>0",
-              "x<0",
-              "x≠0",
-              "All real x",
-              "x=0"
+              "k = -3",
+              "k = 3",
+              "k = -1",
+              "k = 0",
+              "k = -4"
             ],
-            "correct": 0,
-            "solution": "1/x>0 when x>0."
+            "correct": 2,
+            "solution": "The coefficient determinant is \\(k(k+4)-(-1)(3)=k^2+4k+3\\), which is zero for \\(k=-3\\) and \\(k=-1\\). For \\(k=-3\\) the two equations describe the same line (infinitely many solutions); for \\(k=-1\\) the left sides are proportional but the right sides are not, so there is no solution."
           },
           {
             "question": "Two numbers have a sum of 20 and a product of 91. What is their difference?",
@@ -50670,16 +50670,16 @@ const subjects = [
             "solution": "They are the roots of \\(t^{2} - 20t + 91 = 0\\), so \\(t = \\dfrac{20 \\pm \\sqrt{400 - 364}}{2} = \\dfrac{20 \\pm 6}{2}\\), which gives 13 and 7. The difference is 6."
           },
           {
-            "question": "What is the solution to |2x+1|≤5?",
+            "question": "How many integers \\(x\\) satisfy \\(|4x-8|<16\\)?",
             "options": [
-              "−3≤x≤2",
-              "−2≤x≤3",
-              "x≤−3 or x≥2",
-              "x≤−2 or x≥3",
-              "x=2"
+              "9",
+              "8",
+              "32",
+              "6",
+              "7"
             ],
-            "correct": 0,
-            "solution": "−5≤2x+1≤5 → −6≤2x≤4 → −3≤x≤2."
+            "correct": 4,
+            "solution": "\\(|4x-8|<16\\) means \\(-16<4x-8<16\\), so \\(-2<x<6\\). Count the integers strictly between these bounds: 7."
           },
           {
             "question": "Solve \\(\\dfrac{x - 1}{x + 2} \\geq 0\\).",
@@ -50694,40 +50694,40 @@ const subjects = [
             "solution": "The sign changes at \\(x = 1\\) (numerator zero, allowed) and at \\(x = -2\\) (denominator zero, <b>not</b> allowed). The fraction is positive for \\(x < -2\\) and for \\(x > 1\\), and zero at \\(x = 1\\)."
           },
           {
-            "question": "What is the solution to x²+1<0?",
+            "question": "How many integers \\(x\\) satisfy \\(|3x-8|<10\\)?",
             "options": [
-              "No solution",
-              "x<0",
-              "x>0",
-              "All real x",
-              "x=0"
-            ],
-            "correct": 0,
-            "solution": "x²≥0 always, so x²+1≥1>0. No solution."
-          },
-          {
-            "question": "Solve 5−2x≥1.",
-            "options": [
-              "x≤2",
-              "x≥2",
-              "x<2",
-              "x>2",
-              "x=2"
-            ],
-            "correct": 0,
-            "solution": "5−2x≥1 → −2x≥−4 → x≤2."
-          },
-          {
-            "question": "What is the solution to |x|>5?",
-            "options": [
-              "x>5",
-              "x<−5",
-              "x>5 or x<−5",
-              "−5<x<5",
-              "x=±5"
+              "20",
+              "5",
+              "6",
+              "8",
+              "7"
             ],
             "correct": 2,
-            "solution": "|x|>5 means x>5 or x<−5."
+            "solution": "\\(|3x-8|<10\\) means \\(-10<3x-8<10\\), so \\(-\\dfrac{2}{3}<x<6\\). Count the integers strictly between these bounds: 6."
+          },
+          {
+            "question": "The equation \\(|x-4|+|x+5|=14\\) has two real solutions. What is the larger one?",
+            "options": [
+              "\\(-\\dfrac{15}{2}\\)",
+              "\\(14\\)",
+              "\\(\\dfrac{13}{2}\\)",
+              "\\(-\\dfrac{1}{2}\\)",
+              "\\(13\\)"
+            ],
+            "correct": 2,
+            "solution": "Both 4 and -5 are less than \\(\\dfrac{13}{2}\\) and greater than \\(-\\dfrac{15}{2}\\) because 14 > |4−(-5)| = 9. For the right-hand solution both absolute values are positive: \\((x-4)+(x+5)=14\\) gives \\(2x=13\\), so \\(x=\\dfrac{13}{2}\\). (The left-hand solution is \\(-\\dfrac{15}{2}\\).)"
+          },
+          {
+            "question": "A boat travels 288 km downstream in 18 hours, and the same 288 km back upstream in 48 hours. What is the speed of the river current?",
+            "options": [
+              "30 km/h",
+              "10 km/h",
+              "4.4 km/h",
+              "5 km/h",
+              "11 km/h"
+            ],
+            "correct": 3,
+            "solution": "Downstream speed = 288/18 = 16 km/h; upstream speed = 288/48 = 6 km/h. The boat speed is the average (11 km/h) and the current is half the difference: (16 − 6)/2 = 5 km/h."
           },
           {
             "question": "Solve (x+2)/(x−1)>0.",
@@ -50742,28 +50742,28 @@ const subjects = [
             "solution": "Fraction positive when numerator and denominator same sign: x<−2 or x>1."
           },
           {
-            "question": "What is the solution to 3x−7<2x+3?",
+            "question": "A boat travels 352 km downstream in 16 hours, and the same 352 km back upstream in 88 hours. What is the speed of the river current?",
             "options": [
-              "x<10",
-              "x>10",
-              "x<4",
-              "x>4",
-              "x=10"
+              "18 km/h",
+              "9 km/h",
+              "13 km/h",
+              "10 km/h",
+              "3.4 km/h"
             ],
-            "correct": 0,
-            "solution": "3x−7<2x+3 → x<10."
+            "correct": 1,
+            "solution": "Downstream speed = 352/16 = 22 km/h; upstream speed = 352/88 = 4 km/h. The boat speed is the average (13 km/h) and the current is half the difference: (22 − 4)/2 = 9 km/h."
           },
           {
-            "question": "Solve √x<3.",
+            "question": "How many integers \\(x\\) with \\(-10\\le x\\le10\\) satisfy \\(\\dfrac{(x-2)(x-3)}{x+1}\\ge0\\)?",
             "options": [
-              "x<9",
-              "x≤9",
-              "0≤x<9",
-              "x>9",
-              "x=9"
+              "10",
+              "11",
+              "9",
+              "12",
+              "21"
             ],
-            "correct": 2,
-            "solution": "√x<3 → x<9 and x≥0. So 0≤x<9."
+            "correct": 1,
+            "solution": "The sign of the fraction is the sign of \\((x-2)(x-3)(x+1)\\) (same sign as the quotient), with \\(x\\ne-1\\). Test the intervals cut by -1, 2, 3 and include the zeros of the numerator (2 and 3) but never -1: this gives 11 integers in the range."
           },
           {
             "question": "Solve the quadratic inequality: \\(x^2 - 5x + 6 < 0\\).",
