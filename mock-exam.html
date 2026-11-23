@@ -200,6 +200,10 @@
 
 </style>
 <script src="exam-date.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script defer src="math-render.js"></script>
 </head>
 <body>
 <div class="noise" aria-hidden="true"></div>
@@ -401,6 +405,7 @@
   </div>
 </main>
 
+<script src="mocks-data.js"></script>
 <script>
 (function(){
 "use strict";
@@ -450,80 +455,8 @@ function tickCd(){
 }
 tickCd();setInterval(tickCd,1000);
 
-/* ============ 60-QUESTION POOL (Official IMAT Distribution) ============ */
-const POOL=[
-/* BIOLOGY · 23 */
-{s:'Biology',q:'Which organelle is the primary site of ATP production through oxidative phosphorylation?',o:['Golgi apparatus','Mitochondrion','Lysosome','Nucleolus','Ribosome'],a:1,e:'Oxidative phosphorylation runs on the inner mitochondrial membrane (cristae).'},
-{s:'Biology',q:'The structure that controls what enters and leaves the cell is the:',o:['cell wall','nuclear envelope','plasma membrane','cytoskeleton','capsule'],a:2,e:'The phospholipid bilayer is selectively permeable with embedded transport proteins.'},
-{s:'Biology',q:'In which mitotic phase do chromosomes align at the cell equator?',o:['Prophase','Metaphase','Anaphase','Telophase','Interphase'],a:1,e:'Metaphase = middle alignment along the metaphase plate.'},
-{s:'Biology',q:'The synthesis of mRNA from a DNA template is called:',o:['translation','replication','transcription','reverse transcription','splicing'],a:2,e:'RNA polymerase builds mRNA complementary to the DNA template strand.'},
-{s:'Biology',q:'How many chromosomes are in a normal human gamete?',o:['46','44','23','22','24'],a:2,e:'Gametes are haploid (n = 23 chromosomes), formed via meiosis.'},
-{s:'Biology',q:'Aa × Aa (complete dominance) gives which phenotypic ratio?',o:['1 : 1','3 : 1','1 : 2 : 1','9 : 3 : 3 : 1','2 : 1'],a:1,e:'Three dominant phenotype offspring to one recessive (3 : 1). Genotypic ratio is 1:2:1.'},
-{s:'Biology',q:'The molecule that delivers amino acids to the ribosome during translation is:',o:['mRNA','rRNA','tRNA','DNA','ligase'],a:2,e:'The tRNA anticodon base-pairs with the mRNA codon and carries the corresponding amino acid.'},
-{s:'Biology',q:'Vessels that carry oxygenated or deoxygenated blood away from the heart are:',o:['veins','capillaries','arteries','venules','valves'],a:2,e:'Arteries carry blood away from the heart ventricles; veins return blood to the atria.'},
-{s:'Biology',q:'Gas exchange in the human lungs occurs across the walls of the:',o:['bronchi','trachea','alveoli','pleura','diaphragm'],a:2,e:'Thin-walled alveoli provide a massive surface area directly adjacent to pulmonary capillaries.'},
-{s:'Biology',q:'The enzyme that unwinds the DNA double helix during replication is:',o:['ligase','helicase','polymerase','primase','topoisomerase'],a:1,e:'Helicase breaks the hydrogen bonds connecting complementary base pairs.'},
-{s:'Biology',q:'Which human cell type typically contains the highest density of mitochondria?',o:['skin epithelial cell','skeletal muscle fiber','adipocyte','mature red blood cell','osteocyte'],a:1,e:'Skeletal muscle fibers require rapid, constant ATP turnover for contraction.'},
-{s:'Biology',q:'Water moving down its concentration gradient across a semipermeable membrane is:',o:['simple diffusion','active transport','osmosis','endocytosis','exocytosis'],a:2,e:'Osmosis is the passive net movement of solvent molecules across a selectively permeable barrier.'},
-{s:'Biology',q:'Which organelle/structure is present in plant cells but absent from animal cells?',o:['mitochondrion','cell wall','ribosome','plasma membrane','Golgi apparatus'],a:1,e:'Cellulose cell walls, chloroplasts, and large central vacuoles are characteristic of plant cells.'},
-{s:'Biology',q:'The theory of evolution by natural selection is primarily credited to:',o:['Gregor Mendel','Charles Darwin','Louis Pasteur','James Watson','Carl Linnaeus'],a:1,e:'Charles Darwin published On the Origin of Species in 1859.'},
-{s:'Biology',q:'Oxygen is transported in human blood primarily by:',o:['blood plasma','hemoglobin','serum albumin','platelets','fibrinogen'],a:1,e:'Hemoglobin inside erythrocytes binds up to four oxygen molecules cooperatively.'},
-{s:'Biology',q:'The part of a multipolar neuron that conducts electrical impulses away from the cell body is the:',o:['dendrite','axon','soma','synapse','myelin sheath'],a:1,e:'Axons transmit action potentials outward to target synapses; dendrites receive input.'},
-{s:'Biology',q:'Which endocrine hormone lowers blood glucose concentrations?',o:['glucagon','insulin','cortisol','adrenaline','thyroxine'],a:1,e:'Beta cells of pancreatic islets secrete insulin, facilitating cellular glucose uptake.'},
-{s:'Biology',q:'Oxygenic photosynthesis uses light energy, water, and CO₂ to produce glucose and:',o:['carbon monoxide','oxygen','nitrogen','methane','ozone'],a:1,e:'6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂.'},
-{s:'Biology',q:'Alternative nucleotide sequences of the same gene occupying the same locus are:',o:['chromatids','alleles','operons','karyotypes','codons'],a:1,e:'Alleles represent sequence variants of a specific gene.'},
-{s:'Biology',q:'Bile is synthesized by the liver and stored/concentrated in the:',o:['gallbladder','pancreas','duodenum','stomach','spleen'],a:0,e:'The hepatocytes produce bile; the gallbladder concentrates and stores it until release.'},
-{s:'Biology',q:'Active immunization through vaccination provides which type of immunity?',o:['natural active','artificial active','natural passive','artificial passive','innate non-specific'],a:1,e:'Vaccination introduces antigens to induce host antibody and memory cell production (artificial active).'},
-{s:'Biology',q:'How many teeth are present in a complete adult permanent dentition?',o:['28','30','32','34','36'],a:2,e:'Adults normally have 32 teeth (8 incisors, 4 canines, 8 premolars, 12 molars).'},
-{s:'Biology',q:'Which heart chamber pumps oxygenated blood into the systemic aorta?',o:['right atrium','right ventricle','left atrium','left ventricle','pulmonary trunk'],a:3,e:'The thick muscular left ventricle drives oxygenated blood into the aorta.'},
-
-/* CHEMISTRY · 14 */
-{s:'Chemistry',q:'What is the oxidation state of sulfur in H₂SO₄?',o:['−2','+2','+4','+6','0'],a:3,e:'H = +1 (×2 = +2) and O = −2 (×4 = −8). Total is 0, so S = +6.'},
-{s:'Chemistry',q:'Complete stoichiometric combustion of 2 mol of propane (C₃H₈) yields how many moles of CO₂?',o:['2','3','4','6','8'],a:3,e:'C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. 2 mol propane × 3 = 6 mol CO₂.'},
-{s:'Chemistry',q:'What is the pH of an aqueous solution with [H⁺] = 1.0 × 10⁻³ mol/L?',o:['1','3','7','10','11'],a:1,e:'pH = −log₁₀[H⁺] = −log₁₀(10⁻³) = 3.'},
-{s:'Chemistry',q:'A chemical bond formed by the electrostatic sharing of electron pairs is:',o:['ionic bond','covalent bond','metallic bond','hydrogen bond','London dispersion force'],a:1,e:'Covalent bonds involve shared electron pairs between nonmetal atoms.'},
-{s:'Chemistry',q:'The ground-state electronic configuration 1s² 2s² 2p⁶ 3s¹ belongs to:',o:['Neon (Z=10)','Sodium (Z=11)','Magnesium (Z=12)','Potassium (Z=19)','Fluorine (Z=9)'],a:1,e:'11 electrons in total corresponds to neutral sodium (Na).'},
-{s:'Chemistry',q:'Molecules with identical molecular formulas but different structural connectivity are:',o:['isotopes','structural isomers','allotropes','polymers','enantiomers'],a:1,e:'Constitutional/structural isomers differ in the connectivity of their atoms.'},
-{s:'Chemistry',q:'During the electrolysis of acidified water, which gas is evolved at the cathode?',o:['oxygen','hydrogen','chlorine','ozone','steam'],a:1,e:'Reduction occurs at the cathode: 2H⁺ + 2e⁻ → H₂(g).'},
-{s:'Chemistry',q:'Molarity (M) expresses the concentration of a solution in moles of solute per:',o:['kilogram of solvent','liter of solution','liter of solvent','100 g of solution','mole of solvent'],a:1,e:'Molarity = mol of solute / liters of total solution.'},
-{s:'Chemistry',q:'The functional group –COOH is characteristic of which family of organic compounds?',o:['alcohol','aldehyde','ketone','carboxylic acid','ester'],a:3,e:'–COOH represents the carboxyl group defining carboxylic acids.'},
-{s:'Chemistry',q:'According to Le Chatelier’s principle, adding extra reactant to an equilibrium mixture causes the system to:',o:['shift toward reactants','shift toward products','remain unchanged','freeze reaction kinetics','decrease equilibrium constant K'],a:1,e:'The equilibrium shifts toward products to consume added reactant.'},
-{s:'Chemistry',q:'In organic chemistry, a neutral carbon atom typically forms how many covalent bonds?',o:['1','2','3','4','6'],a:3,e:'Carbon has four valence electrons and forms four covalent bonds (tetravalent).'},
-{s:'Chemistry',q:'In aqueous solution, a strong Brønsted acid:',o:['ionizes partially','ionizes completely','does not ionize','reacts only at 100°C','forms only insoluble salts'],a:1,e:'Strong acids dissociate completely into H⁺ (H₃O⁺) and conjugate bases.'},
-{s:'Chemistry',q:'According to modern chemical definitions, oxidation is fundamentally the:',o:['gain of electrons','loss of electrons','gain of protons','loss of neutrons','addition of hydrogen'],a:1,e:'OIL RIG: Oxidation Is Loss of electrons, Reduction Is Gain.'},
-{s:'Chemistry',q:'The IUPAC name for CH₃–CH₂–OH is:',o:['methanol','ethanol','propan-1-ol','ethanal','ethanoic acid'],a:1,e:'Two carbon chain with single hydroxyl group = ethanol.'},
-
-/* PHYSICS · 7 */
-{s:'Physics',q:'A resultant net force imparts an acceleration of 3.0 m/s² to a 2.0 kg mass. What is the force?',o:['1.5 N','5.0 N','6.0 N','9.0 N','12.0 N'],a:2,e:'Newton’s second law: F = ma = 2.0 kg × 3.0 m/s² = 6.0 N.'},
-{s:'Physics',q:'The approximate speed of light in vacuum is:',o:['3.0 × 10⁶ m/s','3.0 × 10⁸ m/s','3.0 × 10⁵ m/s','3.0 × 10¹⁰ m/s','3.0 × 10⁷ m/s'],a:1,e:'c ≈ 3.0 × 10⁸ m/s (300,000 km/s).'},
-{s:'Physics',q:'The SI derived unit of power is the:',o:['joule','watt','newton','pascal','volt'],a:1,e:'Power is energy transferred per unit time: 1 Watt = 1 Joule/second.'},
-{s:'Physics',q:'What is the uniform density of a 200 g solid object occupying 100 cm³?',o:['0.5 g/cm³','1.0 g/cm³','2.0 g/cm³','20 g/cm³','200 g/cm³'],a:2,e:'Density ρ = m / V = 200 g / 100 cm³ = 2.0 g/cm³.'},
-{s:'Physics',q:'What current flows through a 4.0 Ω resistor connected across a 12 V potential difference?',o:['0.33 A','3.0 A','48 A','8.0 A','16 A'],a:1,e:'Ohm’s law: I = V / R = 12 V / 4.0 Ω = 3.0 A.'},
-{s:'Physics',q:'The gravitational potential energy of a 2.0 kg block elevated 5.0 m (g = 10 m/s²) is:',o:['10 J','50 J','100 J','200 J','1000 J'],a:2,e:'Ep = mgh = 2.0 × 10 × 5.0 = 100 J.'},
-{s:'Physics',q:'A wave has frequency f = 50 Hz and wavelength λ = 2.0 m. Its propagation speed is:',o:['25 m/s','52 m/s','100 m/s','200 m/s','48 m/s'],a:2,e:'Wave speed v = f × λ = 50 × 2.0 = 100 m/s.'},
-
-/* MATH · 7 */
-{s:'Math',q:'Solve for x: 2x − 5 = 11',o:['3','6','8','13','16'],a:2,e:'2x = 11 + 5 = 16 → x = 8.'},
-{s:'Math',q:'Two fair standard coins are tossed simultaneously. What is P(both show heads)?',o:['1/2','1/3','1/4','1/6','1/8'],a:2,e:'Independent events: 1/2 × 1/2 = 1/4.'},
-{s:'Math',q:'Compute the value of 3² + 4²:',o:['7','12','24','25','49'],a:3,e:'3² = 9 and 4² = 16 → 9 + 16 = 25.'},
-{s:'Math',q:'If x² = 49 and x > 0, then x equals:',o:['6','7','8','9','49'],a:1,e:'The positive square root of 49 is 7.'},
-{s:'Math',q:'What is the arithmetic mean of the dataset {2, 4, 6, 8, 10}?',o:['5','6','7','8','10'],a:1,e:'Sum = 30; count = 5. Mean = 30 / 5 = 6.'},
-{s:'Math',q:'Identify the next term in the geometric progression: 3, 6, 12, 24, …',o:['30','36','42','48','96'],a:3,e:'Common ratio r = 2. 24 × 2 = 48.'},
-{s:'Math',q:'What is the area of a right-angled triangle with base 10 cm and height 6 cm?',o:['16 cm²','30 cm²','60 cm²','36 cm²','26 cm²'],a:1,e:'Area = (base × height) / 2 = (10 × 6) / 2 = 30 cm².'},
-
-/* LOGIC · 5 */
-{s:'Logic',q:'Find the next number in the pattern: 2, 6, 12, 20, 30, …',o:['36','40','42','44','48'],a:2,e:'Differences increase by 2: +4, +6, +8, +10, so next is +12 → 30 + 12 = 42.'},
-{s:'Logic',q:'All medical students study human anatomy. Giulia studies human anatomy. Therefore:',o:['Giulia is definitely a medical student','Giulia is not a medical student','no valid deductive conclusion can be drawn','everyone who studies human anatomy is a medical student','Giulia will pass the IMAT'],a:2,e:'Affirming the consequent is a formal fallacy. Non-medical students can also study anatomy.'},
-{s:'Logic',q:'Which integer does not belong: 3, 5, 7, 9, 11?',o:['3','5','7','9','11'],a:3,e:'9 is a composite number (3 × 3), whereas all others are prime numbers.'},
-{s:'Logic',q:'All B are F. Some F are Q. Which statement is necessarily true?',o:['Some Q are B','All B are Q','No B are Q','none of these is necessarily true','All F are B'],a:3,e:'The subset of F that are Q might have zero overlap with B.'},
-{s:'Logic',q:'Find the next letter in the series: A, C, F, J, O, …',o:['P','Q','R','S','U'],a:4,e:'Alphabet position gaps increase: +2 (C), +3 (F), +4 (J), +5 (O), +6 → U (21st letter).'},
-
-/* GENERAL KNOWLEDGE · 4 */
-{s:'General Knowledge',q:'Founded in 1088, which is recognized as the world’s oldest continuously operating university?',o:['University of Padua','University of Bologna','University of Pisa','Sapienza University of Rome','University of Turin'],a:1,e:'The Alma Mater Studiorum – University of Bologna was founded in 1088.'},
-{s:'General Knowledge',q:'The constitutional capital and seat of government of the Italian Republic is:',o:['Milan','Rome','Florence','Venice','Naples'],a:1,e:'Rome is the capital city of Italy.'},
-{s:'General Knowledge',q:'The official nationwide IMAT 2027 test date is scheduled for:',o:['September 14, 2027','September 28, 2027','October 2, 2027','August 31, 2027','September 21, 2027'],a:1,e:'The national single examination sits in late September 2027.'},
-{s:'General Knowledge',q:'Which of the following bodies of water does NOT border the Italian peninsula?',o:['Adriatic Sea','Tyrrhenian Sea','Ionian Sea','Baltic Sea','Ligurian Sea'],a:3,e:'The Baltic Sea is located in Northern Europe.'}
-];
+/* ============ MOCKS: 20 different exams, loaded from mocks-data.js ============ */
+let POOL=MOCKS[0];
 
 /* ============ CATALOG ============ */
 let best={};
@@ -595,6 +528,7 @@ $('#backBtn1').addEventListener('click',()=>show('vCatalog'));
 $('#beginBtn').addEventListener('click',startExam);
 
 function startExam(){
+  POOL=MOCKS[Math.max(0,Math.min(MOCKS.length-1,mockId-1))];
   order=shuffle(POOL.map((_,i)=>i));
   ans=Array(60).fill(null);
   flags=new Set();
@@ -633,7 +567,7 @@ function renderQ(){
   const q=POOL[order[cur]];
   $('#qSubj').textContent=q.s;
   $('#runCount').textContent='Question '+(cur+1)+' / 60';
-  $('#qText').textContent=q.q;
+  $('#qText').innerHTML=q.q;
   const box=$('#qOpts');box.innerHTML='';
   q.o.forEach((opt,i)=>{
     const b=document.createElement('button');
@@ -767,7 +701,7 @@ function renderRev(){
   const q=POOL[order[curRev]];
   $('#revSubj').textContent=q.s;
   $('#revCount').textContent='Question '+(curRev+1)+' / 60 (Review)';
-  $('#revText').textContent=q.q;
+  $('#revText').innerHTML=q.q;
   
   const userChoice=ans[curRev];
   const isCorrect = userChoice === q.a;
@@ -797,7 +731,7 @@ function renderRev(){
   });
 
   const expBox=$('#revExp');
-  $('#revExpText').textContent=q.e;
+  $('#revExpText').innerHTML=q.e;
   expBox.style.display='block';
 
   $('#revPrevBtn').style.visibility=curRev===0?'hidden':'visible';

@@ -7871,7 +7871,7 @@ const subjects = [
               "$47M",
               "$57M",
               "$50M",
-              "$57M",
+              "$52M",
               "$45M"
             ],
             "correct": 1,
@@ -10047,16 +10047,16 @@ const subjects = [
             "solution": "A peptide bond forms when the carboxyl group of one molecule reacts with the amino group of another, releasing a molecule of water in a condensation reaction."
           },
           {
-            "question": "Which molecule is an example of a monosaccharide?",
+            "question": "How many water molecules are released in the formation of two triglyceride molecules from glycerol and fatty acids?",
             "options": [
-              "Sucrose",
-              "Glycogen",
-              "Galactose",
-              "Cellulose",
-              "Starch"
+              "6",
+              "2",
+              "3",
+              "4",
+              "9"
             ],
-            "correct": 2,
-            "solution": "Galactose is a monosaccharide (a simple sugar). Sucrose is a disaccharide, while glycogen, cellulose, and starch are polysaccharides."
+            "correct": 0,
+            "solution": "Each triglyceride has 3 ester bonds, and each bond forms by condensation with the release of 1 water: \\(3\\) per triglyceride. For two: \\(2 \\times 3 = 6\\)."
           },
           {
             "question": "What is the primary structural difference between saturated and unsaturated fatty acids?",
@@ -10119,88 +10119,88 @@ const subjects = [
             "solution": "A triglyceride consists of one glycerol molecule joined to three fatty acid molecules via ester linkages. They function mainly in long-term energy storage."
           },
           {
-            "question": "Which of the following describes the basic building block of a carbohydrate?",
+            "question": "How many of these molecules are steroids: oestrogen, testosterone, insulin, cortisol, adrenaline?",
             "options": [
-              "Amino acid",
-              "Nucleotide",
-              "Fatty acid",
-              "Monosaccharide",
-              "Glycerol"
+              "2",
+              "4",
+              "5",
+              "3",
+              "1"
             ],
             "correct": 3,
-            "solution": "A monosaccharide is the simplest form of carbohydrate, serving as the building block for more complex sugars."
+            "solution": "Oestrogen, testosterone and cortisol are steroids (made from cholesterol, with four fused rings). Insulin is a protein hormone and adrenaline is derived from the amino acid tyrosine."
           },
           {
-            "question": "What type of bond links two amino acids together in a protein?",
+            "question": "In sickle cell disease, a single amino acid (glutamic acid) is replaced by valine. Which level of protein structure is changed directly by the mutation, and which bonds stabilise an α helix?",
             "options": [
-              "Glycosidic bond",
-              "Phosphodiester bond",
-              "Peptide bond",
-              "Ester bond",
-              "Hydrogen bond"
+              "Secondary structure; disulfide bridges",
+              "Tertiary structure; peptide bonds",
+              "Quaternary structure; ionic bonds",
+              "Primary structure; ester bonds",
+              "Primary structure; hydrogen bonds between backbone groups"
             ],
-            "correct": 2,
-            "solution": "A peptide bond covalently joins the carboxyl group of one amino acid to the amino group of another, forming a protein."
+            "correct": 4,
+            "solution": "The mutation changes the amino acid sequence, which is the primary structure. The α helix (secondary structure) is held by hydrogen bonds between the C=O and N–H groups of the backbone, not by side chains."
           },
           {
-            "question": "Glycogen is an example of which type of molecule?",
+            "question": "Why can humans digest starch but not cellulose, although both are polymers of glucose?",
             "options": [
-              "Carbohydrate",
-              "Lipid",
-              "Protein",
-              "Nucleic acid",
-              "Vitamin"
-            ],
-            "correct": 0,
-            "solution": "Glycogen is a highly branched polysaccharide, which is a complex carbohydrate used for energy storage in animals."
-          },
-          {
-            "question": "Which element is found in all proteins but not in typical carbohydrates or lipids?",
-            "options": [
-              "Carbon",
-              "Hydrogen",
-              "Oxygen",
-              "Nitrogen",
-              "Phosphorus"
+              "Cellulose is made of fructose",
+              "Starch is a protein",
+              "Cellulose is too small to be digested",
+              "Humans lack an enzyme that hydrolyses the β-1,4 linkages in cellulose",
+              "Cellulose contains peptide bonds"
             ],
             "correct": 3,
-            "solution": "Nitrogen is a key component of the amino group in every amino acid, making it essential for every protein."
+            "solution": "Starch has α-glucose linked by α-glycosidic bonds, which amylase can break. Cellulose has β-glucose with β-1,4 bonds, which need cellulase, an enzyme humans do not make. Cellulose still works as dietary fibre."
           },
           {
-            "question": "A saturated fatty acid contains how many double bonds between its carbon atoms?",
+            "question": "A sample gives a negative Benedict's test. After boiling with dilute hydrochloric acid and neutralising, it gives a brick-red precipitate with Benedict's reagent. Which carbohydrate is it?",
             "options": [
-              "Zero",
-              "One",
-              "Two",
-              "Three",
-              "Many"
-            ],
-            "correct": 0,
-            "solution": "A saturated fatty acid has no double bonds, meaning it is 'saturated' with hydrogen atoms. This is a type of lipid."
-          },
-          {
-            "question": "What is the primary function of a triglyceride?",
-            "options": [
-              "Catalyzing reactions",
-              "Forming cell membranes",
-              "Long-term energy storage",
-              "Carrying genetic information",
-              "Transporting oxygen"
-            ],
-            "correct": 2,
-            "solution": "A triglyceride is a lipid composed of glycerol and three fatty acids, primarily used for long-term energy storage."
-          },
-          {
-            "question": "Which of the following is considered a simple sugar or monosaccharide?",
-            "options": [
-              "Glycogen",
-              "Starch",
+              "Sucrose",
+              "Glucose",
+              "Maltose",
               "Fructose",
-              "Cellulose",
-              "Chitin"
+              "Lactose"
+            ],
+            "correct": 0,
+            "solution": "Glucose, fructose, maltose and lactose are reducing sugars and would give a positive result at once. Sucrose is a non-reducing disaccharide. Acid hydrolysis splits it into glucose and fructose, which are reducing."
+          },
+          {
+            "question": "An amino acid in solution at pH 7 is mostly present as:",
+            "options": [
+              "A neutral molecule with –NH<sub>2</sub> and –COOH",
+              "A zwitterion, with –NH<sub>3</sub><sup>+</sup> and –COO<sup>-</sup>",
+              "A cation, with –NH<sub>3</sub><sup>+</sup> and –COOH",
+              "An anion, with –NH<sub>2</sub> and –COO<sup>-</sup>",
+              "A molecule with –NH<sub>2</sub> and –COO<sup>-</sup> only"
+            ],
+            "correct": 1,
+            "solution": "At neutral pH the carboxyl group gives up a proton and the amino group accepts one, giving a molecule with both a positive and a negative charge (net charge zero)."
+          },
+          {
+            "question": "Fat provides about 9 kcal per gram and carbohydrate about 4 kcal per gram. What mass of carbohydrate gives the same energy as 50 g of fat?",
+            "options": [
+              "22.2 g",
+              "50 g",
+              "112.5 g",
+              "200 g",
+              "450 g"
             ],
             "correct": 2,
-            "solution": "Fructose is a monosaccharide, a fundamental building block."
+            "solution": "Energy from fat \\(= 50 \\times 9 = 450\\) kcal. Carbohydrate needed \\(= 450/4 = 112.5\\) g. Fat is a more compact energy store."
+          },
+          {
+            "question": "A polypeptide of 150 amino acids is made in a ribosome. How many peptide bonds and how many water molecules are produced?",
+            "options": [
+              "150 bonds and 150 water molecules",
+              "149 bonds and 149 water molecules",
+              "149 bonds and 150 water molecules",
+              "151 bonds and 149 water molecules",
+              "75 bonds and 75 water molecules"
+            ],
+            "correct": 1,
+            "solution": "Each peptide bond is made by a condensation reaction that releases one water. Joining \\(n\\) amino acids in a chain needs \\(n - 1\\) bonds, so \\(150 - 1 = 149\\)."
           },
           {
             "question": "What is a biofilm?",
@@ -10251,16 +10251,16 @@ const subjects = [
             "solution": "A triglyceride is synthesized via the condensation of one glycerol molecule (which has three hydroxyl -OH groups) with three fatty acid molecules (each bearing a carboxyl -COOH group). Each condensation reaction yields one ester linkage and releases one water molecule, totaling 3 water molecules and 3 ester bonds."
           },
           {
-            "question": "Phospholipids self-assemble spontaneously into bilayers in aqueous solution primarily because:",
+            "question": "A protein solution is boiled and loses its activity. Which interactions remain intact?",
             "options": [
-              "Covalent disulfide bonds cross-link adjacent fatty acid tails.",
-              "Hydrophobic interactions drive fatty acid hydrocarbon chains away from water, while hydrophilic heads face the aqueous phase.",
-              "Hydrogen bonds form between the nonpolar hydrocarbon tails.",
-              "Ionic attractions pull choline groups directly toward each other.",
-              "Peptide linkages polymerize the glycerol backbones into a rigid lattice."
+              "Peptide bonds",
+              "Hydrogen bonds",
+              "Ionic interactions",
+              "Hydrophobic interactions",
+              "Van der Waals forces"
             ],
-            "correct": 1,
-            "solution": "Phospholipids are amphipathic. In water, the thermodynamic tendency to minimize disruption of the water hydrogen-bonding network (the hydrophobic effect) causes the nonpolar hydrophobic fatty acid tails to aggregate inward, while the charged/polar phosphate-containing heads form electrostatic and hydrogen bonds with water molecules on both surfaces."
+            "correct": 0,
+            "solution": "Heat breaks the weak interactions that hold the secondary, tertiary and quaternary structure. The covalent peptide bonds of the primary structure are much stronger and remain, so the protein unfolds but is not broken into amino acids."
           },
           {
             "question": "At physiological pH (~7.4), an amino acid with a neutral nonpolar side chain exists predominantly as a:",
@@ -10299,16 +10299,16 @@ const subjects = [
             "solution": "Disulfide bonds (-S-S-) form through the oxidation of the sulfhydryl (-SH) thiol groups of two cysteine residues. They are true covalent bonds (bond energy ~250 kJ/mol), making them substantially stronger and more heat-resistant than non-covalent salt bridges, hydrogen bonds, or hydrophobic interactions."
           },
           {
-            "question": "A sample of double-stranded DNA is analyzed and found to contain 34% cytosine. According to Chargaff's rules, what percentage of adenine is present in this DNA?",
+            "question": "Why do chromosomes become shorter at their ends after each round of replication in cells without telomerase?",
             "options": [
-              "34%",
-              "16%",
-              "32%",
-              "68%",
-              "18%"
+              "The ends are digested by lysosomes",
+              "The leading strand is made in the wrong direction",
+              "Telomeres are made of RNA",
+              "DNA polymerase cannot fully replace the RNA primer at the end of the lagging strand",
+              "Ligase removes the ends"
             ],
-            "correct": 1,
-            "solution": "In double-stranded DNA, %C = %G and %A = %T. If C = 34%, then G = 34%, so G + C = 68%. The remaining bases must be A + T = 100% - 68% = 32%. Because %A = %T, adenine constitutes 32% / 2 = 16%."
+            "correct": 3,
+            "solution": "DNA polymerase adds nucleotides only to a 3' end, so the last primer at the 5' end of the new strand cannot be replaced. Each replication leaves a short gap. Telomerase adds repeats to the template to avoid the shortening."
           },
           {
             "question": "What is the structural basis for the high free energy released (ΔG°' ≈ -30.5 kJ/mol) upon hydrolysis of ATP to ADP and Pi?",
@@ -10335,16 +10335,16 @@ const subjects = [
             "solution": "Carbonic anhydrase contains a catalytic Zinc (Zn2+) ion coordinated by three histidine residues at its active site. The zinc ion polarizes a coordinated water molecule, generating a nucleophilic hydroxide ion that attacks carbon dioxide at physiological rates exceeding 10^6 reactions per second."
           },
           {
-            "question": "In the human blood bicarbonate buffer system (CO2 + H2O ⇌ H2CO3 ⇌ H+ + HCO3-), what is the immediate physiological response to hyperventilation?",
+            "question": "Someone skips a meal and blood glucose falls. Which sequence describes the body's response?",
             "options": [
-              "CO2 decreases, shifting the equilibrium to the left, decreasing [H+] and raising blood pH (respiratory alkalosis).",
-              "CO2 increases, shifting the equilibrium to the right, increasing [H+] and lowering blood pH (respiratory acidosis).",
-              "Bicarbonate is excreted by the kidneys within seconds to neutralize excess acid.",
-              "Hemoglobin releases protons into the plasma, lowering blood pH.",
-              "Lactic acid accumulates, offsetting any change in carbon dioxide levels."
+              "Insulin is released, and the liver stores glucose as glycogen",
+              "Glucagon is released, and the liver breaks down glycogen to release glucose",
+              "Glucagon is released, and the liver stores glucose as glycogen",
+              "Insulin is released, and glucose enters cells faster",
+              "Adrenaline lowers glucose by stopping glycogen breakdown"
             ],
-            "correct": 0,
-            "solution": "Hyperventilation excessively blows off arterial CO2 (hypocapnia). According to Le Chatelier's principle, the reduction in CO2 pulls the carbonic acid equilibrium to the left: H+ + HCO3- → H2CO3 → CO2 + H2O. This consumes H+ ions, leading to an increase in blood pH above 7.45 (respiratory alkalosis)."
+            "correct": 1,
+            "solution": "α cells of the pancreas release glucagon when glucose is low. Glucagon stimulates glycogenolysis in the liver, and the glucose is released into the blood, restoring the set point."
           },
           {
             "question": "Which of the following molecules contains purine nitrogenous bases?",
@@ -10551,16 +10551,16 @@ const subjects = [
             "solution": "A triglyceride (triacylglycerol) is composed of a glycerol molecule esterified with three fatty acid chains. These three fatty acids can be identical or different, and a single triglyceride molecule can contain a combination of saturated and unsaturated fatty acids (mixed triglycerides)."
           },
           {
-            "question": "The examples listed below are determined by weak interactions EXCEPT ONE, which one?",
+            "question": "A DNA fragment has 20 base pairs, of which 8 are G–C and 12 are A–T. How many hydrogen bonds hold the two strands together?",
             "options": [
-              "Primary structure of proteins",
-              "Antigen–antibody binding",
-              "Secondary structure of proteins",
-              "Codon–anticodon pairing",
-              "Passage of H₂O through aquaporins"
+              "40",
+              "28",
+              "60",
+              "48",
+              "36"
             ],
-            "correct": 0,
-            "solution": "The primary structure of a protein is established by strong covalent peptide bonds between amino acid residues. In contrast, antigen-antibody binding, secondary structures (hydrogen bonds), codon-anticodon pairing, and passage through aquaporins are mediated by non-covalent weak interactions."
+            "correct": 3,
+            "solution": "A–T pairs have 2 hydrogen bonds and G–C pairs have 3. \\(12 \\times 2 + 8 \\times 3 = 24 + 24 = 48\\)."
           },
           {
             "question": "Which of the following statements regarding carbohydrates is FALSE?",
@@ -10605,16 +10605,16 @@ const subjects = [
         "name": "Cell Structure & Organelles",
         "questions": [
           {
-            "question": "What is the role of histones in eukaryotic chromosomes?",
+            "question": "A region of the nucleus stains darkly and the genes in it are rarely transcribed. What is it?",
             "options": [
-              "To synthesise proteins",
-              "To package DNA into nucleosomes",
-              "To replicate DNA",
-              "To transcribe RNA",
-              "To splice mRNA"
+              "Heterochromatin",
+              "Euchromatin",
+              "The nucleolus",
+              "A plasmid",
+              "A telomere"
             ],
-            "correct": 1,
-            "solution": "Histones are proteins around which DNA wraps to form nucleosomes, the basic structural units of chromatin. This packaging allows long DNA molecules to fit inside the nucleus and regulates gene expression by controlling DNA accessibility."
+            "correct": 0,
+            "solution": "Heterochromatin is tightly packed, so RNA polymerase cannot reach the genes, and it is transcriptionally inactive. Euchromatin is loosely packed and active. The inactive X chromosome (Barr body) is an example of heterochromatin."
           },
           {
             "question": "What is the function of the sarcoplasmic reticulum in muscle cells?",
@@ -10737,124 +10737,124 @@ const subjects = [
             "solution": "The Golgi apparatus is the organelle that modifies, sorts, and packages proteins for delivery."
           },
           {
-            "question": "Which organelle contains digestive enzymes?",
+            "question": "A person lacks one lysosomal enzyme. What is the most likely cellular result?",
             "options": [
-              "Ribosome",
-              "Lysosome",
-              "Mitochondria",
-              "Nucleus",
-              "Smooth ER"
+              "The cell cannot make ATP",
+              "The substrate of that enzyme is not broken down and builds up inside lysosomes",
+              "The cell cannot make proteins",
+              "The nuclear envelope breaks down",
+              "The Golgi apparatus stops working"
             ],
             "correct": 1,
-            "solution": "The lysosome is an organelle containing hydrolytic enzymes for intracellular digestion."
+            "solution": "Lysosomes digest macromolecules with hydrolytic enzymes. A missing enzyme means its substrate accumulates, as in Tay-Sachs disease (a lipid builds up in neurons)."
           },
           {
-            "question": "Which of the following cells would be classified as a prokaryote?",
+            "question": "How many of these statements about prokaryotic cells are true? (1) They have a nucleoid. (2) They divide by mitosis. (3) They can carry plasmids. (4) Their wall contains peptidoglycan. (5) They have membrane-bound organelles.",
             "options": [
-              "Human neuron",
-              "Plant leaf cell",
-              "Fungal yeast",
-              "Escherichia coli bacterium",
-              "Amoeba"
-            ],
-            "correct": 3,
-            "solution": "Bacteria are classified as prokaryote organisms, lacking a nucleus and other organelles."
-          },
-          {
-            "question": "Which structure acts as the packaging center of the cell?",
-            "options": [
-              "Lysosome",
-              "Golgi apparatus",
-              "Ribosome",
-              "Nucleolus",
-              "Cytoplasm"
+              "2",
+              "3",
+              "4",
+              "5",
+              "1"
             ],
             "correct": 1,
-            "solution": "The golgi apparatus packages cellular products."
+            "solution": "True: (1) nucleoid, (3) plasmids, (4) peptidoglycan wall. False: (2) they divide by binary fission, not mitosis, and (5) they have no membrane-bound organelles."
           },
           {
-            "question": "Which structure contains digestive enzymes to break down waste?",
+            "question": "Which pairing of cell type and organelle is <b>most</b> likely to be correct?",
             "options": [
-              "Ribosome",
-              "Nucleolus",
-              "Lysosome",
-              "Cytosol",
-              "Vesicle"
+              "Liver cell detoxifying drugs: abundant smooth ER",
+              "Muscle cell: very few mitochondria",
+              "Pancreatic enzyme cell: abundant smooth ER but no rough ER",
+              "Macrophage that engulfs bacteria: few lysosomes",
+              "Red blood cell: large nucleus and many ribosomes"
+            ],
+            "correct": 0,
+            "solution": "Smooth ER contains enzymes that detoxify drugs. Muscle cells need many mitochondria, enzyme-secreting cells have a lot of rough ER, macrophages have many lysosomes, and mature red blood cells have no nucleus."
+          },
+          {
+            "question": "Where in the mitochondrion do the Krebs cycle and the electron transport chain take place?",
+            "options": [
+              "Both in the matrix",
+              "Krebs cycle in the inner membrane, electron transport chain in the matrix",
+              "Krebs cycle in the matrix, electron transport chain in the inner membrane",
+              "Both in the intermembrane space",
+              "Krebs cycle in the cytosol, electron transport chain in the matrix"
             ],
             "correct": 2,
-            "solution": "The lysosome is the waste disposal system."
+            "solution": "The Krebs cycle enzymes are dissolved in the matrix. The electron transport chain and ATP synthase are in the inner membrane, whose folds (cristae) increase the surface area."
           },
           {
-            "question": "Which cell type completely lacks a true nucleus?",
+            "question": "Which observation is evidence for the endosymbiotic origin of mitochondria?",
             "options": [
-              "Fungus",
-              "Plant",
-              "Animal",
-              "Prokaryote",
-              "Protist"
+              "They have linear DNA and 80S ribosomes",
+              "They have a single membrane and a nucleus",
+              "They make proteins using the cell's 80S ribosomes only",
+              "They have circular DNA and 70S ribosomes",
+              "They are formed by the Golgi apparatus"
             ],
             "correct": 3,
-            "solution": "A prokaryote lacks a true nucleus."
+            "solution": "Mitochondria resemble bacteria: a circular chromosome, 70S ribosomes, a double membrane, and they divide by fission. Their own DNA and ribosomes support the idea that they descend from engulfed bacteria."
           },
           {
-            "question": "Which cell type contains a true nucleus?",
+            "question": "After the Gram stain a bacterium appears pink. What does this tell you?",
             "options": [
-              "Bacterium",
-              "Archaea",
-              "Eukaryote",
-              "Virus",
-              "Viroid"
-            ],
-            "correct": 2,
-            "solution": "A eukaryote possesses a true nucleus."
-          },
-          {
-            "question": "Which of the following is considered the control center of the cell?",
-            "options": [
-              "Lysosome",
-              "Golgi",
-              "Nucleus",
-              "Vacuole",
-              "Centriole"
-            ],
-            "correct": 2,
-            "solution": "The nucleus controls cellular activities."
-          },
-          {
-            "question": "What is an organelle?",
-            "options": [
-              "A type of cell",
-              "A specialized subunit within a cell",
-              "A tissue",
-              "An organism",
-              "A protein"
+              "It has a thick peptidoglycan wall (Gram-positive)",
+              "It has a thin peptidoglycan wall and an outer membrane, so it did not keep the violet dye (Gram-negative)",
+              "It has no cell wall at all",
+              "It is a eukaryote",
+              "It has a nucleus"
             ],
             "correct": 1,
-            "solution": "An organelle is a specialized subunit."
+            "solution": "Gram-positive bacteria have a thick peptidoglycan layer that holds the crystal violet (purple). Gram-negative bacteria have a thin layer and an outer membrane, lose the violet during decolourising and take up the pink counterstain."
           },
           {
-            "question": "Which component is heavily involved in synthesizing proteins?",
+            "question": "Colchicine prevents microtubules from assembling. What happens to dividing cells treated with it?",
             "options": [
-              "Lysosome",
-              "Golgi",
-              "Rough endoplasmic reticulum",
-              "Smooth endoplasmic reticulum",
-              "Nucleolus"
+              "DNA replication stops in S phase",
+              "The nuclear envelope never forms again",
+              "Cytokinesis occurs but mitosis does not",
+              "Chromosomes cannot condense",
+              "The spindle cannot form, so chromosomes cannot be separated and cells arrest in metaphase"
             ],
-            "correct": 2,
-            "solution": "The rough endoplasmic reticulum synthesizes proteins."
+            "correct": 4,
+            "solution": "The spindle is made of microtubules. Without it, chromosomes line up but cannot be pulled apart, so cells stay in metaphase. This is why colchicine is used to collect cells for karyotypes."
           },
           {
-            "question": "Which of these is absent in a prokaryote?",
+            "question": "Which sequence describes the path of a secreted protein, such as insulin?",
             "options": [
-              "Cytoplasm",
-              "Ribosome",
-              "Genetic material",
-              "Mitochondria",
-              "Cell wall"
+              "Nucleus, Golgi apparatus, rough ER, lysosome, plasma membrane",
+              "Ribosome on rough ER, ER lumen, transport vesicle, Golgi apparatus, secretory vesicle, plasma membrane",
+              "Free ribosome, cytosol, nucleus, plasma membrane",
+              "Rough ER, lysosome, Golgi apparatus, mitochondrion",
+              "Golgi apparatus, rough ER, secretory vesicle, nucleus"
+            ],
+            "correct": 1,
+            "solution": "The protein is made on a ribosome attached to the rough ER and enters the ER lumen. A vesicle takes it to the Golgi apparatus, which modifies and sorts it. A secretory vesicle then fuses with the plasma membrane (exocytosis)."
+          },
+          {
+            "question": "A mitochondrion is 2 µm long. In a micrograph it measures 4 cm. What is the magnification?",
+            "options": [
+              "× 2000",
+              "× 200 000",
+              "× 8000",
+              "× 20 000",
+              "× 200"
             ],
             "correct": 3,
-            "solution": "Mitochondria are absent in a prokaryote."
+            "solution": "4 cm \\(= 40\\,000\\) µm. Magnification \\(= 40\\,000/2 = 20\\,000\\)."
+          },
+          {
+            "question": "Which set of structures is found in a plant cell but <b>not</b> in an animal cell?",
+            "options": [
+              "Chloroplasts, cellulose cell wall, large central vacuole",
+              "Mitochondria, nucleus, ribosomes",
+              "Lysosomes, centrioles, plasma membrane",
+              "Cell wall, ribosomes, nucleus",
+              "Rough ER, Golgi apparatus, mitochondria"
+            ],
+            "correct": 0,
+            "solution": "Plant cells have chloroplasts (photosynthesis), a rigid cellulose wall and a large central vacuole. Mitochondria, nucleus, ribosomes, ER and Golgi are found in both."
           },
           {
             "question": "Which of the following features is present in BOTH prokaryotic cells and eukaryotic cells?",
@@ -11109,16 +11109,16 @@ const subjects = [
             "solution": "Approximate diameters:\n- Ribosome: ~20–30 nm (macromolecular complex)\n- Mitochondrion: ~0.5–2 µm (500–2,000 nm)\n- Platelet: ~2–3 µm\n- Red blood cell: ~7–8 µm\n- Human ovum: ~100 µm (0.1 mm).\nThe ribosome is by far the smallest."
           },
           {
-            "question": "The cell wall of fungi is composed mainly of:",
+            "question": "A resistant strain of bacteria passes antibiotic resistance to a non-resistant strain through direct contact. Which structure is most likely used to transfer the plasmid?",
             "options": [
-              "peptidoglycans",
-              "cellulose",
-              "chitin",
-              "phospholipids",
-              "glycogen"
+              "A sex pilus",
+              "A flagellum",
+              "A capsule",
+              "A ribosome",
+              "The nucleoid"
             ],
-            "correct": 2,
-            "solution": "Fungal cell walls are predominantly composed of chitin, a polymer of N-acetylglucosamine. In contrast, plant cell walls are made of cellulose, and bacterial cell walls are made of peptidoglycan."
+            "correct": 0,
+            "solution": "In conjugation a sex pilus joins two bacteria, and a copy of a plasmid (such as one carrying a resistance gene) passes through the connection. The flagellum is for movement and the capsule is a protective layer."
           },
           {
             "question": "Which of the following cellular structures is NOT present in prokaryotic cells?",
@@ -11133,16 +11133,16 @@ const subjects = [
             "solution": "Prokaryotes lack membrane-bound organelles such as mitochondria, chloroplasts, the Golgi apparatus, and an endoplasmic reticulum. They carry out cellular respiration across their plasma membrane."
           },
           {
-            "question": "The average diameter of eukaryotic cells can approximately range between:",
+            "question": "A micrograph shows a cell that measures 45 mm across. The real cell is 15 µm across. What is the magnification?",
             "options": [
-              "10-100 mm",
-              "10-100 nm",
-              "10-100 pm",
-              "10-100 µm",
-              "10-100 dm"
+              "× 300",
+              "× 3000",
+              "× 30 000",
+              "× 675",
+              "× 0.003"
             ],
-            "correct": 3,
-            "solution": "Most eukaryotic cells typically measure between 10 and 100 micrometers (µm) in diameter, whereas prokaryotic cells are typically 1 to 5 µm."
+            "correct": 1,
+            "solution": "Convert to the same unit: 45 mm \\(= 45\\,000\\) µm. Magnification \\(= \\dfrac{\\text{image size}}{\\text{real size}} = \\dfrac{45\\,000}{15} = 3000\\)."
           },
           {
             "question": "Indicate which of the following statements about mitochondrial DNA is true.",
@@ -11319,16 +11319,16 @@ const subjects = [
             "solution": "The Na⁺/K⁺-ATPase pump actively transports 3 sodium ions out of the cell and 2 potassium ions into the cell against their concentration gradients, using ATP. This creates the electrochemical gradient essential for nerve impulse transmission, secondary active transport, and osmotic balance."
           },
           {
-            "question": "What is the role of ATP synthase in cellular respiration?",
+            "question": "Which statement explains why ATP is not suitable as a long-term energy store?",
             "options": [
-              "To pump protons across the mitochondrial membrane",
-              "To synthesise ATP using the proton gradient",
-              "To break down glucose",
-              "To transport electrons",
-              "To produce NADH"
+              "It is a protein that denatures",
+              "It is too large to be stored in cells",
+              "It is unstable and small amounts are continually recycled; fats and glycogen store energy better",
+              "It contains no energy",
+              "It can only be made in the nucleus"
             ],
-            "correct": 1,
-            "solution": "ATP synthase uses the proton motive force (proton gradient across the inner mitochondrial membrane) to synthesise ATP from ADP and inorganic phosphate. Protons flow through ATP synthase, driving rotation of the enzyme and ATP synthesis."
+            "correct": 2,
+            "solution": "A cell contains only a few seconds' supply of ATP at any time. It is hydrolysed and rebuilt from ADP and P<sub>i</sub> constantly. Glycogen and fat store much more energy in a stable form."
           },
           {
             "question": "Which of the following correctly describes the structure of a phospholipid?",
@@ -11499,16 +11499,16 @@ const subjects = [
             "solution": "Channel proteins form hydrophilic pores through the membrane allowing specific ions or molecules to pass quickly. Carrier proteins bind specific molecules and undergo conformational changes to transport them across. Channels are generally faster but less selective than carriers."
           },
           {
-            "question": "What is plasmolysis?",
+            "question": "In familial hypercholesterolaemia, LDL cholesterol stays high in the blood because cells do not take it up. Which process is defective?",
             "options": [
-              "Swelling of a plant cell in a hypotonic solution",
-              "Shrinkage of the cell membrane away from the cell wall in a hypertonic solution",
-              "Division of a plant cell",
-              "Breakdown of the plasma membrane",
-              "Formation of a new cell wall"
+              "Receptor-mediated endocytosis",
+              "Simple diffusion",
+              "Osmosis",
+              "Exocytosis",
+              "Active transport by the Na<sup>+</sup>/K<sup>+</sup> pump"
             ],
-            "correct": 1,
-            "solution": "Plasmolysis occurs when a plant cell is placed in a hypertonic solution. Water leaves the cell by osmosis, causing the cytoplasm and cell membrane to shrink away from the rigid cell wall. The cell becomes flaccid. This is reversible if the cell is returned to a hypotonic solution."
+            "correct": 0,
+            "solution": "LDL binds to LDL receptors on the cell surface and is taken in by receptor-mediated endocytosis. If the receptors are missing or faulty, LDL cannot be cleared from the blood."
           },
           {
             "question": "Which of the following substances can pass directly through the phospholipid bilayer without transport proteins?",
@@ -11559,16 +11559,16 @@ const subjects = [
             "solution": "Receptor-mediated endocytosis is a specific form of endocytosis where molecules bind to complementary receptors on the cell surface. The receptor-ligand complexes cluster in coated pits, which invaginate to form coated vesicles. This allows selective uptake of specific molecules like LDL cholesterol."
           },
           {
-            "question": "Which of the following is an example of an antiport transport protein?",
+            "question": "Potato cores are weighed before and after 1 hour in sucrose solutions. Results: 0.0 M gives +10%, 0.2 M gives 0%, 0.4 M gives −8%. What is the approximate solute concentration of the potato cells?",
             "options": [
-              "Aquaporin",
-              "GLUT1 glucose transporter",
-              "Na⁺/K⁺-ATPase",
-              "Voltage-gated sodium channel",
-              "Gap junction"
+              "0.0 M",
+              "0.2 M",
+              "0.4 M",
+              "0.1 M",
+              "0.3 M"
             ],
-            "correct": 2,
-            "solution": "The Na⁺/K⁺-ATPase is an antiport pump — it moves Na⁺ out and K⁺ in (opposite directions) across the membrane. Symport moves two substances in the same direction. Uniport moves a single substance. Aquaporins are channels, not antiports."
+            "correct": 1,
+            "solution": "No change in mass means no net movement of water, so the solution is isotonic to the cells. This happens at 0.2 M. In weaker solutions the cells gain water, and in stronger ones they lose it."
           },
           {
             "question": "What would happen to a plant cell placed in a hypotonic solution?",
@@ -11595,16 +11595,16 @@ const subjects = [
             "solution": "The cell membrane is selectively permeable because its lipid bilayer structure allows small nonpolar molecules to pass freely while restricting large, polar, or charged molecules. Transport proteins provide regulated pathways for specific molecules that cannot cross the lipid bilayer directly."
           },
           {
-            "question": "What drives osmosis across a semipermeable membrane?",
+            "question": "A plant cell has a water potential of −0.8 MPa. It is placed in a solution of water potential −0.5 MPa. What happens?",
             "options": [
-              "ATP hydrolysis",
-              "A difference in water potential (solute concentration) across the membrane",
-              "Electrical current",
-              "Enzymatic activity",
-              "Temperature gradients only"
+              "Water leaves the cell",
+              "There is no net movement of water",
+              "Solutes enter the cell by osmosis",
+              "Water enters the cell, because it moves to the lower (more negative) water potential",
+              "The cell wall dissolves"
             ],
-            "correct": 1,
-            "solution": "Osmosis is the net movement of water across a selectively permeable membrane from a region of higher water potential (lower solute concentration) to a region of lower water potential (higher solute concentration). It is a passive process requiring no ATP."
+            "correct": 3,
+            "solution": "Water moves from a higher water potential (−0.5) to a lower one (−0.8 MPa). The cell takes up water and becomes turgid until the wall pressure balances the difference."
           },
           {
             "question": "What is glomerular filtration?",
@@ -11943,16 +11943,16 @@ const subjects = [
             "solution": "The central vacuole is a large, membrane-bound organelle found in mature plant cells. It stores water, nutrients, and waste, and provides hydrostatic pressure to maintain the cell's rigid structure."
           },
           {
-            "question": "In a prokaryote, where is the genetic material located?",
+            "question": "A cell is found to contain abundant rough ER, a large Golgi apparatus and many vesicles near the membrane. What is its most likely function?",
             "options": [
-              "Nucleus",
-              "Nucleoid region",
-              "Nucleolus",
-              "Plasmids only",
-              "Mitochondria"
+              "Contracting to produce movement",
+              "Storing fat",
+              "Detoxifying drugs",
+              "Making and secreting proteins, such as digestive enzymes",
+              "Absorbing light for photosynthesis"
             ],
-            "correct": 1,
-            "solution": "A prokaryote lacks a membrane-bound nucleus. Instead, its main chromosome is located in an irregularly shaped region of the cytoplasm called the nucleoid."
+            "correct": 3,
+            "solution": "Rough ER makes proteins, the Golgi modifies and packages them, and vesicles carry them to the membrane for secretion. This is typical of a pancreatic enzyme-secreting cell. Muscle cells have many mitochondria and a lot of smooth ER; detoxifying cells have a lot of smooth ER."
           },
           {
             "question": "Which organelle is bound by a double membrane with pores?",
@@ -12003,16 +12003,16 @@ const subjects = [
             "solution": "The pressure-flow hypothesis states that sugars are actively loaded into the phloem at the source, causing water to enter by osmosis. This creates high hydrostatic pressure that pushes the sap towards the sink, where sugars are unloaded."
           },
           {
-            "question": "Which lipid is a major component of all cell membranes?",
+            "question": "Red blood cells are placed in a 2% NaCl solution. Blood plasma is about 0.9% NaCl. What happens to the cells?",
             "options": [
-              "Triglyceride",
-              "Phospholipid",
-              "Steroid",
-              "Wax",
-              "Cholesterol"
+              "They swell and burst",
+              "They shrink, because water leaves by osmosis",
+              "They stay the same size",
+              "They swell slightly, then recover",
+              "They shrink, because sodium ions diffuse out"
             ],
             "correct": 1,
-            "solution": "A phospholipid is an amphipathic lipid that forms the bilayer of cell membranes."
+            "solution": "The 2% solution has a higher solute concentration (it is hypertonic). Water moves out of the cells, down its water potential gradient, so the cells shrink (crenate)."
           },
           {
             "question": "Which organelle is considered the command center of a eukaryotic cell?",
@@ -12027,40 +12027,40 @@ const subjects = [
             "solution": "The nucleus is the membrane-bound organelle that houses the cell's genetic material."
           },
           {
-            "question": "What is a defining characteristic of a prokaryote?",
+            "question": "A cell has a nuclear envelope and 80S ribosomes in the cytoplasm. It also contains small organelles that have their own circular DNA and 70S ribosomes. What can you conclude?",
             "options": [
-              "Presence of a nucleus",
-              "Presence of mitochondria",
-              "Absence of membrane-bound organelles",
-              "Linear DNA",
-              "Presence of a Golgi apparatus"
+              "It is a prokaryotic cell with a nucleus",
+              "It is a virus-infected bacterium",
+              "It is a eukaryotic cell, and the small organelles are probably mitochondria or chloroplasts",
+              "It is a prokaryote, because it has 70S ribosomes",
+              "The small organelles must be the nucleolus"
             ],
             "correct": 2,
-            "solution": "A prokaryote lacks a true nucleus and other membrane-bound organelles."
+            "solution": "A nuclear envelope and 80S ribosomes mean eukaryote. Organelles with circular DNA and 70S ribosomes are mitochondria or chloroplasts (descended from bacteria by endosymbiosis)."
           },
           {
-            "question": "A typical eukaryote contains which of the following?",
+            "question": "One bacterium doubles every 30 minutes. How many cells are there after 6 hours?",
             "options": [
-              "Circular DNA only",
-              "A nucleoid region",
-              "Membrane-bound organelles",
-              "No ribosomes",
-              "No plasma membrane"
+              "144",
+              "2048",
+              "8192",
+              "720",
+              "4096"
             ],
-            "correct": 2,
-            "solution": "A eukaryote is defined by the presence of a nucleus and other membrane-bound organelles."
+            "correct": 4,
+            "solution": "6 hours \\(= 12\\) generations of 30 min. \\(2^{12} = 4096\\)."
           },
           {
-            "question": "Which of the following is NOT an organelle?",
+            "question": "Hydrogen peroxide is a toxic by-product of some reactions in the cell. Which organelle breaks it down using the enzyme catalase?",
             "options": [
-              "Mitochondria",
-              "Nucleus",
-              "Ribosome",
-              "Cytoplasm",
-              "Lysosome"
+              "Peroxisome",
+              "Lysosome",
+              "Golgi apparatus",
+              "Nucleolus",
+              "Rough ER"
             ],
-            "correct": 3,
-            "solution": "The cytoplasm is the jelly-like substance filling the cell, not a discrete membrane-bound organelle."
+            "correct": 0,
+            "solution": "Peroxisomes contain oxidases that produce H<sub>2</sub>O<sub>2</sub> and catalase that converts it to water and oxygen: \\(2\\text{H}_2\\text{O}_2 \\to 2\\text{H}_2\\text{O} + \\text{O}_2\\)."
           },
           {
             "question": "Which of the following best describes the complement system?",
@@ -12351,52 +12351,52 @@ const subjects = [
             "solution": "Cell membranes are composed of phospholipids, sterols (cholesterol in animals), glycolipids, and glycoproteins/proteins. Nitrogenous bases (adenine, guanine, cytosine, thymine, uracil) are constituent parts of nucleotides and nucleic acids, not structural membrane components."
           },
           {
-            "question": "Which of the following mechanisms is identified as PASSIVE transport?",
+            "question": "The Na<sup>+</sup>/K<sup>+</sup> pump moves 3 Na<sup>+</sup> out and 2 K<sup>+</sup> in for every ATP used. How many ions of each type are moved by 10 ATP?",
             "options": [
-              "Uniport",
-              "Endocytosis",
-              "Diffusion",
-              "Symport",
-              "Exocytosis"
-            ],
-            "correct": 2,
-            "solution": "Diffusion (including simple and facilitated diffusion) is passive transport because it occurs spontaneously down a concentration gradient without the expenditure of cellular metabolic energy (ATP)."
-          },
-          {
-            "question": "What is the process called whereby molecules flow from an area of higher concentration to an area of lower concentration?",
-            "options": [
-              "Dialysis",
-              "Transfusion",
-              "Respiration",
-              "Diffusion",
-              "Primary active transport"
+              "10 Na<sup>+</sup> out, 10 K<sup>+</sup> in",
+              "20 Na<sup>+</sup> out, 30 K<sup>+</sup> in",
+              "30 Na<sup>+</sup> out, 30 K<sup>+</sup> in",
+              "30 Na<sup>+</sup> out, 20 K<sup>+</sup> in",
+              "15 Na<sup>+</sup> out, 10 K<sup>+</sup> in"
             ],
             "correct": 3,
-            "solution": "Diffusion is the passive net movement of particles down their concentration gradient from an area of higher concentration to an area of lower concentration."
+            "solution": "10 pump cycles: \\(10 \\times 3 = 30\\) Na<sup>+</sup> out and \\(10 \\times 2 = 20\\) K<sup>+</sup> in. The net movement is 10 positive charges out, which helps make the inside of the cell negative."
           },
           {
-            "question": "Which of the following statements is NOT correct?",
+            "question": "Which membrane is most likely to stay fluid at the lowest temperature?",
             "options": [
-              "Glycolipids are the main constituents of cell membranes",
-              "Glycerol is an organic compound containing three hydroxyl groups",
-              "Glycogen is a polysaccharide with an energy storage function",
-              "Glyceraldehyde is a three-carbon carbohydrate",
-              "Glyphosate is a substance with herbicidal action"
+              "One with only saturated fatty acids",
+              "One with a very high proportion of saturated fatty acids and no cholesterol",
+              "One with a high proportion of unsaturated fatty acids in its phospholipids",
+              "One made only of cholesterol",
+              "One with very long saturated tails"
             ],
-            "correct": 0,
-            "solution": "Phospholipids (not glycolipids) are the predominant structural lipid constituents of biological membranes, forming the continuous phospholipid bilayer."
+            "correct": 2,
+            "solution": "Unsaturated fatty acids have kinks (double bonds) that stop the tails packing closely, so the membrane stays fluid when cold. Saturated tails pack tightly and make the membrane more rigid."
           },
           {
-            "question": "Which of the following modes of transport across the plasma membrane normally requires ATP hydrolysis?",
+            "question": "The rate of glucose uptake into a cell rises with the glucose concentration, then levels off. The rate is not changed by a poison that stops ATP production. Which process is it?",
             "options": [
-              "Ion pump",
-              "Diffusion of O₂",
-              "Facilitated diffusion via protein channels",
-              "Diffusion through ion channels",
-              "Osmosis"
+              "Facilitated diffusion through carrier proteins",
+              "Simple diffusion through the lipid bilayer",
+              "Active transport",
+              "Osmosis",
+              "Phagocytosis"
             ],
             "correct": 0,
-            "solution": "Ion pumps (such as the Na⁺/K⁺-ATPase pump) perform primary active transport, moving ions against their electrochemical gradient directly powered by the hydrolysis of ATP."
+            "solution": "The levelling off (saturation) shows that a limited number of carrier proteins are used. No effect of the ATP poison means no ATP is needed, so it is passive: facilitated diffusion. Simple diffusion would keep rising in proportion to the concentration."
+          },
+          {
+            "question": "The rate of diffusion is proportional to (surface area × concentration gradient) ÷ thickness. A membrane has a rate of 40 units. The surface area is tripled and the thickness is doubled, with the gradient unchanged. What is the new rate?",
+            "options": [
+              "120 units",
+              "80 units",
+              "40 units",
+              "20 units",
+              "60 units"
+            ],
+            "correct": 4,
+            "solution": "New rate \\(= 40 \\times 3 \\times \\dfrac{1}{2} = 60\\) units. Tripling the area triples the rate, and doubling the thickness halves it."
           },
           {
             "question": "Anthocyanin pigments make vacuoles in certain flower petal cells visible in fresh samples. If two slides are prepared, one with a hypotonic solution and one with a hypertonic solution, the vacuole swells in the first and shrinks in the second. This phenomenon is due to:",
@@ -12429,28 +12429,28 @@ const subjects = [
         "name": "Cellular Respiration (Glycolysis & Krebs)",
         "questions": [
           {
-            "question": "Which process converts glucose to pyruvate in the cytoplasm?",
+            "question": "One glucose is completely oxidised to CO<sub>2</sub> in a cell. In which stages is the CO<sub>2</sub> released, and how many CO<sub>2</sub> molecules are produced?",
             "options": [
-              "Krebs cycle",
-              "Glycolysis",
-              "Electron transport chain",
-              "Calvin cycle",
-              "Fermentation"
+              "In glycolysis only; 2",
+              "In the link reaction and the Krebs cycle; 6",
+              "In the electron transport chain; 6",
+              "In the link reaction only; 2",
+              "In glycolysis and the link reaction; 4"
             ],
             "correct": 1,
-            "solution": "Glycolysis is the metabolic pathway that converts glucose into pyruvate in the cytoplasm, producing ATP and NADH. It occurs in both aerobic and anaerobic conditions."
+            "solution": "Glycolysis makes no CO<sub>2</sub>. The link reaction releases 2 (one per pyruvate) and the Krebs cycle releases 4 (two per turn, two turns). Total: 6 CO<sub>2</sub>, one per carbon of glucose."
           },
           {
-            "question": "During aerobic respiration, where in the cell does the Krebs cycle occur?",
+            "question": "Oligomycin blocks ATP synthase. What happens to oxygen consumption in isolated mitochondria?",
             "options": [
-              "Cytoplasm",
-              "Inner mitochondrial membrane",
-              "Mitochondrial matrix",
-              "Outer mitochondrial membrane",
-              "Nucleus"
+              "It rises, because ATP cannot be made",
+              "It stays the same",
+              "It falls, because the proton gradient builds up and electron transport slows",
+              "It stops only after 10 minutes because glucose is used up",
+              "It rises, because protons flow back freely"
             ],
             "correct": 2,
-            "solution": "The Krebs cycle (citric acid cycle) occurs in the mitochondrial matrix. Glycolysis occurs in the cytoplasm, and the electron transport chain occurs on the inner mitochondrial membrane."
+            "solution": "If protons cannot flow through ATP synthase, the gradient becomes very steep and the pumps cannot work against it. Electron transport slows, so less oxygen is reduced to water."
           },
           {
             "question": "Which of the following is a characteristic of anaerobic respiration in humans?",
@@ -12465,16 +12465,16 @@ const subjects = [
             "solution": "Anaerobic respiration in humans (glycolysis followed by lactic acid fermentation) occurs in the cytoplasm when oxygen is limited. It produces lactic acid as a byproduct and generates much less ATP (2 ATP per glucose) compared to aerobic respiration (30-32 ATP per glucose)."
           },
           {
-            "question": "In the electron transport chain, what is the final electron acceptor?",
+            "question": "In the reaction lactate + NAD<sup>+</sup> → pyruvate + NADH + H<sup>+</sup>, which statement is correct?",
             "options": [
-              "NAD+",
-              "FAD",
-              "Oxygen",
-              "Carbon dioxide",
-              "Water"
+              "Lactate is reduced and NAD<sup>+</sup> is oxidised",
+              "Lactate is oxidised and NAD<sup>+</sup> is reduced",
+              "Both are oxidised",
+              "Both are reduced",
+              "Neither changes oxidation state"
             ],
-            "correct": 2,
-            "solution": "Oxygen is the final electron acceptor in the electron transport chain. It accepts electrons and combines with protons to form water. Without oxygen, the chain cannot function, and cells switch to anaerobic respiration."
+            "correct": 1,
+            "solution": "Lactate loses hydrogen (and electrons) to become pyruvate: oxidation. NAD<sup>+</sup> gains them to become NADH: reduction. Whenever one substance is oxidised, another is reduced."
           },
           {
             "question": "Which of the following is a characteristic of facultative anaerobes?",
@@ -12489,124 +12489,124 @@ const subjects = [
             "solution": "Facultative anaerobes can switch between aerobic respiration (when oxygen is available) and anaerobic respiration or fermentation (when oxygen is absent). Examples include E. coli and yeast."
           },
           {
-            "question": "Which molecule is the main energy currency of the cell?",
+            "question": "Dinitrophenol makes the inner mitochondrial membrane leaky to protons. What happens to ATP production, heat production and oxygen consumption?",
             "options": [
-              "NADH",
-              "FADH₂",
-              "ATP",
-              "GTP",
-              "Glucose"
+              "ATP falls, heat rises, and oxygen consumption continues or rises",
+              "ATP rises, heat falls, oxygen consumption falls",
+              "ATP falls, heat falls, oxygen consumption falls",
+              "ATP is unchanged, heat rises, oxygen consumption falls",
+              "ATP rises, heat rises, oxygen consumption rises"
             ],
-            "correct": 2,
-            "solution": "ATP (adenosine triphosphate) is the primary energy currency. Energy is released when ATP is hydrolysed to ADP and inorganic phosphate. While NADH and FADH₂ carry energy, they transfer it to the electron transport chain to produce ATP."
+            "correct": 0,
+            "solution": "The proton gradient is dissipated without passing through ATP synthase, so little ATP is made. The energy is released as heat. The electron transport chain keeps running (or speeds up) trying to restore the gradient, so oxygen is still used."
           },
           {
-            "question": "How many net ATP molecules are produced during glycolysis from one molecule of glucose?",
+            "question": "Yeast ferments 10 mol of glucose in the absence of oxygen. How many moles of CO<sub>2</sub> and ATP (net) are produced?",
             "options": [
-              "0",
-              "2",
+              "10 mol CO<sub>2</sub> and 20 mol ATP",
+              "20 mol CO<sub>2</sub> and 300 mol ATP",
+              "60 mol CO<sub>2</sub> and 20 mol ATP",
+              "20 mol CO<sub>2</sub> and 20 mol ATP",
+              "20 mol CO<sub>2</sub> and 10 mol ATP"
+            ],
+            "correct": 3,
+            "solution": "Alcoholic fermentation: glucose → 2 ethanol + 2 CO<sub>2</sub>, with a net gain of 2 ATP from glycolysis. For 10 mol of glucose: 20 mol CO<sub>2</sub> and 20 mol ATP."
+          },
+          {
+            "question": "Cyanide blocks the last carrier of the electron transport chain (cytochrome oxidase). What are the immediate consequences?",
+            "options": [
+              "Electron flow speeds up and ATP rises",
+              "Oxygen consumption increases and NADH falls",
+              "The Krebs cycle speeds up",
+              "Electron flow stops, NADH accumulates, oxygen is not used and ATP production falls",
+              "Glycolysis stops and NAD<sup>+</sup> accumulates"
+            ],
+            "correct": 3,
+            "solution": "If electrons cannot pass to oxygen, the carriers stay reduced. NADH is not converted back to NAD<sup>+</sup>, the proton gradient collapses and little ATP is made. The Krebs cycle also slows because it needs NAD<sup>+</sup>."
+          },
+          {
+            "question": "During a sprint, muscle cells convert pyruvate to lactate. What is the main benefit?",
+            "options": [
+              "It regenerates NAD<sup>+</sup>, so glycolysis can continue to make ATP",
+              "It makes a lot of ATP directly",
+              "It produces oxygen",
+              "It stops glycolysis",
+              "It converts lactate into glucose in the muscle"
+            ],
+            "correct": 0,
+            "solution": "Glycolysis needs NAD<sup>+</sup>. When oxygen is limited, reducing pyruvate to lactate uses NADH and restores NAD<sup>+</sup>. The lactate is later carried to the liver and converted to glucose."
+          },
+          {
+            "question": "A cell is deprived of oxygen. Which process can continue, and which stops?",
+            "options": [
+              "The Krebs cycle continues; glycolysis stops",
+              "All stages continue at the same rate",
+              "The electron transport chain continues; glycolysis stops",
+              "Fermentation stops; glycolysis continues",
+              "Glycolysis continues (if NAD<sup>+</sup> is regenerated by fermentation); the Krebs cycle and the electron transport chain stop"
+            ],
+            "correct": 4,
+            "solution": "Without oxygen the chain cannot pass electrons, so NAD<sup>+</sup> is not regenerated and the Krebs cycle stops. Glycolysis can go on because fermentation regenerates NAD<sup>+</sup>, but it makes only 2 ATP per glucose."
+          },
+          {
+            "question": "A fatty acid with 16 carbon atoms is oxidised completely. How many molecules of acetyl-CoA are produced by β-oxidation?",
+            "options": [
+              "16",
               "4",
-              "36",
-              "38"
+              "2",
+              "8",
+              "32"
             ],
-            "correct": 1,
-            "solution": "Glycolysis produces 4 ATP by substrate-level phosphorylation but consumes 2 ATP in the energy investment phase. The net yield is therefore 2 ATP per glucose molecule, plus 2 NADH."
+            "correct": 3,
+            "solution": "β-oxidation removes two carbons at a time as acetyl-CoA, which then enters the Krebs cycle. \\(16/2 = 8\\). This is why fats yield much more ATP than the same mass of carbohydrate."
           },
           {
-            "question": "What is the role of NAD⁺ in cellular respiration?",
-            "options": [
-              "It is the final electron acceptor",
-              "It acts as an electron carrier, accepting electrons to form NADH",
-              "It directly synthesises ATP",
-              "It breaks down glucose",
-              "It transports oxygen"
-            ],
-            "correct": 1,
-            "solution": "NAD⁺ (nicotinamide adenine dinucleotide) is a coenzyme that acts as an electron carrier. It accepts electrons and hydrogen ions during metabolic reactions to form NADH, which then donates these electrons to the electron transport chain for ATP production."
-          },
-          {
-            "question": "Where does oxidative phosphorylation occur in eukaryotic cells?",
-            "options": [
-              "Cytoplasm",
-              "Mitochondrial matrix",
-              "Inner mitochondrial membrane",
-              "Outer mitochondrial membrane",
-              "Nucleus"
-            ],
-            "correct": 2,
-            "solution": "Oxidative phosphorylation occurs at the inner mitochondrial membrane, where the electron transport chain complexes are embedded. Electrons from NADH and FADH₂ pass through these complexes, pumping protons to create a gradient that drives ATP synthase."
-          },
-          {
-            "question": "What is the net equation for aerobic cellular respiration?",
-            "options": [
-              "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂",
-              "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP",
-              "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂",
-              "C₆H₁₂O₆ → 2C₃H₆O₃",
-              "2C₃H₃O₃ + 6O₂ → 6CO₂ + 6H₂O"
-            ],
-            "correct": 1,
-            "solution": "The overall equation for aerobic respiration is: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy (ATP). Glucose is oxidised, oxygen is reduced to water, and approximately 30-32 ATP molecules are produced per glucose."
-          },
-          {
-            "question": "What happens to pyruvate under anaerobic conditions in yeast?",
-            "options": [
-              "It enters the Krebs cycle",
-              "It is converted to lactic acid",
-              "It is converted to ethanol and CO₂",
-              "It is oxidised to acetyl-CoA",
-              "It is stored as glycogen"
-            ],
-            "correct": 2,
-            "solution": "In yeast, pyruvate undergoes alcoholic fermentation under anaerobic conditions. Pyruvate is decarboxylated to acetaldehyde (releasing CO₂), which is then reduced to ethanol by NADH. This regenerates NAD⁺ for continued glycolysis."
-          },
-          {
-            "question": "What is substrate-level phosphorylation?",
-            "options": [
-              "ATP synthesis driven by a proton gradient",
-              "Direct transfer of a phosphate group from a substrate to ADP to form ATP",
-              "Phosphorylation of glucose at the start of glycolysis",
-              "Addition of phosphate to proteins by kinases",
-              "Photophosphorylation in chloroplasts"
-            ],
-            "correct": 1,
-            "solution": "Substrate-level phosphorylation is the direct transfer of a phosphate group from a phosphorylated substrate to ADP, forming ATP. This occurs in glycolysis and the Krebs cycle, unlike oxidative phosphorylation which uses a proton gradient."
-          },
-          {
-            "question": "Which molecule links glycolysis to the Krebs cycle?",
-            "options": [
-              "Glucose",
-              "Pyruvate",
-              "Acetyl-CoA",
-              "Citrate",
-              "Oxaloacetate"
-            ],
-            "correct": 2,
-            "solution": "Pyruvate from glycolysis is converted to acetyl-CoA by pyruvate dehydrogenase in the mitochondrial matrix (link reaction). This involves decarboxylation (releasing CO₂) and reduction of NAD⁺ to NADH. Acetyl-CoA then enters the Krebs cycle."
-          },
-          {
-            "question": "How many turns of the Krebs cycle are needed to fully oxidise one molecule of glucose?",
+            "question": "A reaction in a cell needs 70 kJ per mole. Hydrolysis of one mole of ATP releases 30.5 kJ. How many moles of ATP must be hydrolysed (in whole numbers, and assuming perfect coupling) to drive one mole of this reaction?",
             "options": [
               "1",
-              "2",
               "3",
+              "2",
               "4",
-              "6"
+              "7"
             ],
             "correct": 1,
-            "solution": "One glucose produces 2 pyruvate molecules, which are converted to 2 acetyl-CoA. Each acetyl-CoA enters the Krebs cycle once, so 2 turns are needed per glucose. Each turn produces 3 NADH, 1 FADH₂, 1 GTP (ATP equivalent), and 2 CO₂."
+            "solution": "\\(70/30.5 = 2.3\\). Two ATP would release only 61 kJ, which is not enough, so 3 are needed."
           },
           {
-            "question": "What is the role of FADH₂ in the electron transport chain?",
+            "question": "A person at rest exhales 150 mL of CO<sub>2</sub> per minute and uses 200 mL of O<sub>2</sub> per minute. What is the respiratory quotient, and what does it suggest?",
             "options": [
-              "It acts as the final electron acceptor",
-              "It donates electrons at complex II, producing fewer ATP than NADH",
-              "It pumps protons across the membrane",
-              "It synthesises ATP directly",
-              "It transports oxygen to the mitochondria"
+              "0.75; mostly fat is being used",
+              "1.33; mostly carbohydrate is being used",
+              "0.75; mostly carbohydrate is being used",
+              "1.0; a mixture of fat and protein",
+              "1.33; mostly fat is being used"
+            ],
+            "correct": 0,
+            "solution": "RQ \\(= \\text{CO}_2/\\text{O}_2 = 150/200 = 0.75\\). Carbohydrates give RQ about 1.0 and fats about 0.7, so 0.75 suggests mostly fat, with some carbohydrate."
+          },
+          {
+            "question": "One mole of glucose contains 2870 kJ of energy. If aerobic respiration makes 30 mol of ATP and each mole of ATP stores 30.5 kJ, what is the approximate efficiency?",
+            "options": [
+              "10%",
+              "32%",
+              "50%",
+              "75%",
+              "100%"
             ],
             "correct": 1,
-            "solution": "FADH₂ donates its electrons to complex II (succinate dehydrogenase) of the electron transport chain, bypassing complex I. Because it enters at a later point, fewer protons are pumped, resulting in approximately 1.5 ATP per FADH₂ compared to 2.5 ATP per NADH."
+            "solution": "Energy captured \\(= 30 \\times 30.5 = 915\\) kJ. Efficiency \\(= 915/2870 = 0.32\\), about 32%. The rest is lost as heat."
+          },
+          {
+            "question": "In the light reactions of photosynthesis, which molecule is oxidised and which is reduced?",
+            "options": [
+              "Water is reduced; NADP<sup>+</sup> is oxidised",
+              "CO<sub>2</sub> is oxidised; NADPH is reduced",
+              "Water is oxidised; NADP<sup>+</sup> is reduced",
+              "Oxygen is reduced; glucose is oxidised",
+              "ATP is oxidised; ADP is reduced"
+            ],
+            "correct": 2,
+            "solution": "Water is split, losing electrons (and releasing O<sub>2</sub> and H<sup>+</sup>), so it is oxidised. The electrons pass along the chain and are finally accepted by NADP<sup>+</sup>, forming NADPH (reduced)."
           },
           {
             "question": "What is the oxygen debt (excess post-exercise oxygen consumption)?",
@@ -12657,16 +12657,16 @@ const subjects = [
             "solution": "DNP is an uncoupling agent — it makes the inner mitochondrial membrane permeable to protons, allowing them to flow back into the matrix without passing through ATP synthase. The energy is released as heat instead of being used for ATP synthesis. This was once used dangerously as a weight loss drug."
           },
           {
-            "question": "What is the total approximate ATP yield from the complete aerobic oxidation of one glucose molecule?",
+            "question": "Which of these is an example of substrate-level phosphorylation?",
             "options": [
-              "2 ATP",
-              "4 ATP",
-              "10 ATP",
-              "30-32 ATP",
-              "100 ATP"
+              "The formation of ATP from ADP in glycolysis by transfer of a phosphate group from a substrate",
+              "The formation of ATP by ATP synthase using a proton gradient",
+              "The formation of ATP in the light reactions by a proton gradient",
+              "The formation of ADP from AMP",
+              "The hydrolysis of ATP in muscle"
             ],
-            "correct": 3,
-            "solution": "Complete aerobic oxidation of one glucose yields approximately 30-32 ATP: 2 from glycolysis (substrate-level), 2 from the Krebs cycle (GTP), and ~26-28 from oxidative phosphorylation (from 10 NADH and 2 FADH₂). The exact number varies by shuttle mechanism used."
+            "correct": 0,
+            "solution": "In substrate-level phosphorylation an enzyme transfers a phosphate group directly from a substrate to ADP (as in glycolysis and the Krebs cycle). ATP synthase uses a proton gradient, which is chemiosmosis (oxidative phosphorylation or photophosphorylation)."
           },
           {
             "question": "What is the role of photosystem II (PSII) in the light-dependent reactions?",
@@ -12717,64 +12717,64 @@ const subjects = [
             "solution": "Nitrogen cycle: N₂ fixation (by Rhizobium bacteria or lightning → NH₃/NH₄⁺), nitrification (NH₄⁺ → NO₂⁻ → NO₃⁻ by Nitrosomonas/Nitrobacter), assimilation (plants absorb NO₃⁻ to make amino acids/proteins), ammonification (decomposition releases NH₄⁺), denitrification (NO₃⁻ → N₂ by anaerobic bacteria)."
           },
           {
-            "question": "What is the function of brown adipose tissue, which is abundant in infants?",
+            "question": "A patient has high blood glucose and a very low insulin level. A second patient has high blood glucose and a high insulin level. Which type of diabetes is most likely in each?",
             "options": [
-              "Energy storage in the form of glycogen",
-              "Thermogenesis (heat production)",
-              "Mechanical cushioning of organs",
-              "Secretion of leptin",
-              "Production of red blood cells"
+              "Type 2 in the first, type 1 in the second",
+              "Type 1 in both",
+              "Type 2 in both",
+              "Type 1 in the first, type 2 in the second",
+              "Neither has diabetes"
+            ],
+            "correct": 3,
+            "solution": "In type 1 diabetes the β cells are destroyed (autoimmune), so there is little insulin. In type 2 diabetes, cells respond poorly to insulin (insulin resistance), so the blood has high insulin and high glucose."
+          },
+          {
+            "question": "Why does FADH<sub>2</sub> produce less ATP than NADH?",
+            "options": [
+              "It donates its electrons later in the chain, so fewer protons are pumped",
+              "It carries fewer electrons than NADH",
+              "It is made outside the mitochondrion",
+              "It donates electrons to oxygen directly",
+              "It cannot be oxidised"
+            ],
+            "correct": 0,
+            "solution": "FADH<sub>2</sub> gives electrons to a carrier further along the chain (complex II), bypassing the first proton pump. Fewer protons are pumped per electron pair, so less ATP is made (about 1.5 against 2.5)."
+          },
+          {
+            "question": "Initial rates of an enzyme at different substrate concentrations are: 1 mM: 10, 2 mM: 18, 4 mM: 30, 8 mM: 42, 16 mM: 48, 32 mM: 50 (arbitrary units). Approximately what is K<sub>m</sub>, the substrate concentration at half the maximum rate?",
+            "options": [
+              "About 25 mM",
+              "About 3 mM",
+              "About 1 mM",
+              "About 16 mM",
+              "About 50 mM"
             ],
             "correct": 1,
-            "solution": "Brown adipose tissue contains many mitochondria and uncoupling protein 1 (thermogenin), which uncouples oxidative phosphorylation, releasing energy as heat rather than synthesizing ATP. This is crucial for regulating body temperature in newborns."
+            "solution": "V<sub>max</sub> is about 50. Half of this is 25. The rate is 18 at 2 mM and 30 at 4 mM, so 25 is reached at about 3 mM."
           },
           {
-            "question": "Which organic molecule acts as an electron carrier in cellular respiration, alternating between oxidized and reduced states?",
+            "question": "Which statement fits the modern synthesis?",
             "options": [
-              "ATP",
-              "NAD+",
-              "Coenzyme A",
-              "Cytochrome c",
-              "Hemoglobin"
+              "Populations evolve through changes in allele frequencies, driven by mutation, selection, drift and gene flow",
+              "Individuals evolve during their lifetime",
+              "Evolution requires acquired traits to be inherited",
+              "Genes do not affect natural selection",
+              "Evolution is a change in the ecosystem"
+            ],
+            "correct": 0,
+            "solution": "The modern synthesis combines Darwin's natural selection with Mendelian genetics. Evolution is defined as a change in allele frequencies in a population over generations. Individuals do not evolve."
+          },
+          {
+            "question": "The reaction glucose + P<sub>i</sub> → glucose 6-phosphate needs +13.8 kJ/mol. It is coupled to the hydrolysis of ATP, which releases 30.5 kJ/mol. What is the net free energy change of the coupled reaction?",
+            "options": [
+              "+44.3 kJ/mol",
+              "−16.7 kJ/mol",
+              "−44.3 kJ/mol",
+              "+16.7 kJ/mol",
+              "−13.8 kJ/mol"
             ],
             "correct": 1,
-            "solution": "NAD+ (nicotinamide adenine dinucleotide) is a key coenzyme that acts as an electron carrier. It gets reduced to NADH during glycolysis and the Krebs cycle, carrying high-energy electrons to the electron transport chain."
-          },
-          {
-            "question": "Which class of enzymes is responsible for rearranging the atoms within a molecule to form an isomer?",
-            "options": [
-              "Ligases",
-              "Oxidoreductases",
-              "Isomerases",
-              "Transferases",
-              "Lyases"
-            ],
-            "correct": 2,
-            "solution": "Isomerases catalyze the structural rearrangement of molecules (e.g., converting glucose-6-phosphate to fructose-6-phosphate during glycolysis)."
-          },
-          {
-            "question": "The endosymbiotic theory proposes that mitochondria evolved from:",
-            "options": [
-              "Invaginations of the plasma membrane",
-              "A free-living aerobic prokaryote engulfed by an ancestral eukaryotic cell",
-              "A fragment of the nucleus",
-              "The endoplasmic reticulum",
-              "A viral infection"
-            ],
-            "correct": 1,
-            "solution": "The endosymbiotic theory suggests that mitochondria originated from an aerobic prokaryote that was engulfed by an early ancestor of eukaryotic cells, establishing a mutually beneficial relationship."
-          },
-          {
-            "question": "Which organelle synthesizes ATP through oxidative phosphorylation?",
-            "options": [
-              "Chloroplast",
-              "Golgi apparatus",
-              "Mitochondria",
-              "Lysosome",
-              "Peroxisome"
-            ],
-            "correct": 2,
-            "solution": "Mitochondria are the organelles responsible for generating most of the cell's ATP."
+            "solution": "Add the two values: \\(+13.8 + (-30.5) = -16.7\\) kJ/mol. A negative value means the coupled reaction is spontaneous. This is how ATP drives endergonic reactions."
           },
           {
             "question": "What is the difference between obligate aerobes and obligate anaerobes?",
@@ -12885,16 +12885,16 @@ const subjects = [
             "solution": "Complex I pumps 4 H+, Complex III pumps 4 H+, and Complex IV pumps 2 H+ per electron pair. Complex II (succinate dehydrogenase) has a relatively low free energy change (ΔG) and does not span the membrane in a manner that couples electron transfer to proton translocation, so it pumps 0 protons."
           },
           {
-            "question": "What is the terminal electron acceptor in human aerobic cellular respiration, and what product is formed?",
+            "question": "Per glucose, aerobic respiration forms 10 NADH and 2 FADH<sub>2</sub>. How many electrons do these carriers deliver to the electron transport chain? (Each carrier carries 2 electrons.)",
             "options": [
-              "NAD+; NADH",
-              "Molecular oxygen (O2); Water (H2O)",
-              "Pyruvate; Lactic acid",
-              "Cytochrome c; Reduced cytochrome c",
-              "Carbon dioxide; Glucose"
+              "12",
+              "10",
+              "48",
+              "36",
+              "24"
             ],
-            "correct": 1,
-            "solution": "At Complex IV (cytochrome c oxidase), four electrons from reduced cytochrome c and four protons from the matrix are transferred to one molecule of oxygen: O2 + 4 H+ + 4 e- → 2 H2O. Molecular oxygen is the terminal electron acceptor of aerobic respiration."
+            "correct": 4,
+            "solution": "The number of carriers is \\(10 + 2 = 12\\). Each carries 2 electrons: \\(12 \\times 2 = 24\\) electrons."
           },
           {
             "question": "How does 2,4-dinitrophenol (DNP) act as an uncoupler of oxidative phosphorylation?",
@@ -13083,40 +13083,40 @@ const subjects = [
             "solution": "The endoplasmic reticulum is surrounded by a single phospholipid bilayer. Nucleus, mitochondria, and chloroplasts all have double membranes."
           },
           {
-            "question": "In the light-dependent reactions of photosynthesis, what is the primary electron acceptor?",
+            "question": "A plant carrying out photosynthesis is suddenly moved into darkness. What happens to the amounts of RuBP and 3-PGA in the Calvin cycle?",
             "options": [
-              "NADP+",
-              "ATP synthase",
-              "Plastoquinone",
-              "Cytochrome b6f",
-              "Oxygen"
-            ],
-            "correct": 0,
-            "solution": "NADP+ is the final electron acceptor in the light-dependent reactions. It accepts electrons from photosystem I via ferredoxin to form NADPH, which is used in the Calvin cycle."
-          },
-          {
-            "question": "The Calvin cycle occurs in which part of the chloroplast?",
-            "options": [
-              "Thylakoid membrane",
-              "Stroma",
-              "Granum",
-              "Outer membrane",
-              "Inner membrane"
-            ],
-            "correct": 1,
-            "solution": "The Calvin cycle (light-independent reactions) occurs in the stroma of the chloroplast. The light-dependent reactions occur in the thylakoid membranes."
-          },
-          {
-            "question": "In photosynthesis, what is the primary product of the light-independent reactions (Calvin cycle)?",
-            "options": [
-              "Oxygen",
-              "ATP",
-              "NADPH",
-              "Glucose (G3P)",
-              "Water"
+              "RuBP rises and 3-PGA falls",
+              "Both rise",
+              "Both fall",
+              "RuBP falls and 3-PGA rises",
+              "Neither changes"
             ],
             "correct": 3,
-            "solution": "The Calvin cycle uses ATP and NADPH from the light-dependent reactions to fix CO₂ and produce glyceraldehyde-3-phosphate (G3P), which can be used to synthesise glucose and other carbohydrates."
+            "solution": "In the dark, ATP and NADPH are no longer made. Without them 3-PGA cannot be reduced to G3P and RuBP is not regenerated. CO<sub>2</sub> is still fixed by RuBP, so 3-PGA accumulates and RuBP is used up."
+          },
+          {
+            "question": "Plants are given water containing the heavy isotope <sup>18</sup>O and ordinary CO<sub>2</sub>. In which product will <sup>18</sup>O be found?",
+            "options": [
+              "Glucose only",
+              "Oxygen gas (O<sub>2</sub>)",
+              "Carbon dioxide",
+              "ATP",
+              "NADPH"
+            ],
+            "correct": 1,
+            "solution": "The oxygen released in photosynthesis comes from the <b>splitting of water</b> (photolysis) in photosystem II. Glucose gets its oxygen atoms from CO<sub>2</sub>."
+          },
+          {
+            "question": "Which plant has an advantage in a hot, dry, sunny environment?",
+            "options": [
+              "A C<sub>3</sub> plant, because rubisco never binds O<sub>2</sub>",
+              "A C<sub>4</sub> or CAM plant, because it reduces photorespiration and water loss",
+              "Any plant, because stomata are always open",
+              "A plant with no chloroplasts",
+              "A plant with no stomata"
+            ],
+            "correct": 1,
+            "solution": "In heat, C<sub>3</sub> plants close stomata, CO<sub>2</sub> falls and rubisco wastes energy by binding O<sub>2</sub> (photorespiration). C<sub>4</sub> plants concentrate CO<sub>2</sub> in bundle-sheath cells, and CAM plants open stomata at night, so both lose less water."
           },
           {
             "question": "Which organelle contains its own DNA and ribosomes, supporting the endosymbiotic theory?",
@@ -13143,16 +13143,16 @@ const subjects = [
             "solution": "70S ribosomes are found in prokaryotes and in mitochondria/chloroplasts of eukaryotes (supporting endosymbiotic theory). 80S ribosomes are found in the cytoplasm of eukaryotes. The 'S' refers to Svedberg units, a measure of sedimentation rate, not size."
           },
           {
-            "question": "What is the primary pigment involved in photosynthesis?",
+            "question": "A plant is grown under green light only. Why is photosynthesis very slow?",
             "options": [
-              "Chlorophyll b",
-              "Carotenoid",
-              "Chlorophyll a",
-              "Xanthophyll",
-              "Phycocyanin"
+              "Chlorophyll absorbs green light best",
+              "Green light has too much energy",
+              "Plants cannot see green",
+              "Green light stops the stomata from closing",
+              "Chlorophyll reflects most green light and absorbs mainly red and blue"
             ],
-            "correct": 2,
-            "solution": "Chlorophyll a is the primary photosynthetic pigment found in all photosynthetic organisms. It absorbs mainly blue-violet and red light, reflecting green. Chlorophyll b and carotenoids are accessory pigments that broaden the absorption spectrum."
+            "correct": 4,
+            "solution": "The action spectrum of photosynthesis matches the absorption of chlorophyll a and b: peaks in the blue and red regions. Green light is mostly reflected (which is why leaves look green), so little energy is captured."
           },
           {
             "question": "What is the role of water in the light-dependent reactions?",
@@ -13167,16 +13167,16 @@ const subjects = [
             "solution": "Water is split (photolysis) at photosystem II: 2H₂O → 4H⁺ + 4e⁻ + O₂. The electrons replace those lost from the reaction centre chlorophyll, the protons contribute to the proton gradient, and oxygen is released as a byproduct."
           },
           {
-            "question": "What is the function of RuBisCO in the Calvin cycle?",
+            "question": "A leaf in the light releases 8 mL of oxygen per hour (net). In the dark the same leaf takes up 3 mL of oxygen per hour. What is the rate of gross photosynthesis?",
             "options": [
-              "It splits water molecules",
-              "It transports electrons",
-              "It catalyses the fixation of CO₂ to RuBP, forming two molecules of G3P",
-              "It produces ATP",
-              "It synthesises chlorophyll"
+              "11 mL/h",
+              "5 mL/h",
+              "8 mL/h",
+              "3 mL/h",
+              "24 mL/h"
             ],
-            "correct": 2,
-            "solution": "RuBisCO (ribulose-1,5-bisphosphate carboxylase/oxygenase) catalyses the first step of carbon fixation: CO₂ + RuBP (5C) → 2 molecules of 3-phosphoglycerate (3C). It is the most abundant enzyme on Earth but is relatively slow."
+            "correct": 0,
+            "solution": "In the light, the net release is photosynthesis minus the oxygen used in respiration. Gross photosynthesis \\(= \\text{net} + \\text{respiration} = 8 + 3 = 11\\) mL of O<sub>2</sub> per hour."
           },
           {
             "question": "What are the products of the light-dependent reactions that are used in the Calvin cycle?",
@@ -13563,40 +13563,40 @@ const subjects = [
             "solution": "At current atmospheric levels (~420 ppm / 0.04%), CO2 is the primary rate-limiting factor for C3 photosynthesis because RuBisCO is not saturated with CO2. Increasing atmospheric CO2 elevates the rate of carboxylation and suppresses photorespiration by outcompeting O2 at the RuBisCO active site."
           },
           {
-            "question": "The photolysis of TWO water molecules by Photosystem II yields:",
+            "question": "The rate of photosynthesis rises with light intensity and then levels off. When the CO<sub>2</sub> concentration is raised, the plateau is higher. What does this show?",
             "options": [
-              "2 H+, 2 e-, 1 O2",
-              "4 H+, 4 e-, 1 O2",
-              "4 H+, 2 e-, 2 O2",
-              "1 H+, 1 e-, 1 OH-",
-              "2 H2, 1 O2"
-            ],
-            "correct": 1,
-            "solution": "The oxidation of water at the Oxygen-Evolving Complex (OEC) proceeds according to the equation: 2 H2O → 4 H+ (released into the thylakoid lumen) + 4 e- (transferred sequentially to P680+) + 1 O2 (molecular oxygen gas)."
-          },
-          {
-            "question": "Which of the following terms does NOT correspond to a photosynthetic pigment?",
-            "options": [
-              "Rhodopsin",
-              "Phycoerythrin",
-              "β-carotene",
-              "Phycocyanin",
-              "Xanthophyll"
-            ],
-            "correct": 0,
-            "solution": "Rhodopsin is the visual photopigment found in the rod cells of the vertebrate retina, involved in vision. Phycoerythrin, phycocyanin, β-carotene, and xanthophylls are photosynthetic accessory pigments."
-          },
-          {
-            "question": "Which molecules produced during the light phase of photosynthesis are used in the Calvin cycle?",
-            "options": [
-              "CO₂ and ADP",
-              "Sugars and H₂O",
-              "ATP and NADPH",
-              "NADPH and O₂",
-              "H₂O and O₂"
+              "Light was the limiting factor at the plateau",
+              "Temperature was the limiting factor at the plateau",
+              "CO<sub>2</sub> was the limiting factor at the plateau",
+              "The plant had run out of chlorophyll",
+              "The rate of respiration had increased"
             ],
             "correct": 2,
-            "solution": "The light-dependent reactions generate ATP (chemical energy) and NADPH (reducing power), both of which are required in the stroma to drive the light-independent Calvin cycle (carbon fixation)."
+            "solution": "At the plateau, more light does not help, so light is no longer limiting. The rate rose when CO<sub>2</sub> was added, so CO<sub>2</sub> was limiting. A limiting factor is the one in shortest supply."
+          },
+          {
+            "question": "How many ATP and NADPH are needed in the Calvin cycle to make one molecule of glucose (6 CO<sub>2</sub> fixed)?",
+            "options": [
+              "18 ATP and 12 NADPH",
+              "6 ATP and 6 NADPH",
+              "12 ATP and 18 NADPH",
+              "9 ATP and 6 NADPH",
+              "36 ATP and 24 NADPH"
+            ],
+            "correct": 0,
+            "solution": "Fixing one CO<sub>2</sub> uses 3 ATP and 2 NADPH. For 6 CO<sub>2</sub>: \\(6 \\times 3 = 18\\) ATP and \\(6 \\times 2 = 12\\) NADPH."
+          },
+          {
+            "question": "What does cyclic electron flow around photosystem I produce?",
+            "options": [
+              "ATP, NADPH and O<sub>2</sub>",
+              "NADPH only",
+              "O<sub>2</sub> and NADPH",
+              "ATP only, with no NADPH and no O<sub>2</sub>",
+              "Glucose"
+            ],
+            "correct": 3,
+            "solution": "In cyclic flow, electrons return to photosystem I and pass through the chain again. Protons are pumped, so ATP is made, but photosystem II is not used (so no water is split and no O<sub>2</sub> forms), and no NADP<sup>+</sup> is reduced."
           },
           {
             "question": "The graph shows the photosynthetic activity of a plant as a function of photon flux (net O₂ production vs light intensity). Point Y is the intersection with the horizontal axis (zero net O₂ production), and W is the light saturation point. Which of the following statements is correct?",
@@ -13611,16 +13611,16 @@ const subjects = [
             "solution": "Point Y represents the light compensation point, where the rate of gross photosynthesis matches the rate of cellular respiration. At this point, net oxygen exchange is zero because all oxygen produced by photolysis is consumed by mitochondrial respiration."
           },
           {
-            "question": "Which of the listed processes does not lead to ATP synthesis?",
+            "question": "A cell can make 30 ATP from one glucose by aerobic respiration and 2 ATP by fermentation. How many glucose molecules must be fermented to make as much ATP as one glucose gives aerobically?",
             "options": [
-              "Krebs cycle",
-              "Lactic fermentation of glucose",
-              "Calvin cycle",
-              "Glycolysis",
-              "Electron transport chain"
+              "2",
+              "28",
+              "30",
+              "15",
+              "60"
             ],
-            "correct": 2,
-            "solution": "The Calvin cycle does not produce ATP; rather, it consumes ATP (and NADPH) generated by the light-dependent reactions to reduce CO₂ into carbohydrates."
+            "correct": 3,
+            "solution": "\\(30/2 = 15\\) glucose molecules. This is why cells without oxygen must use much more glucose to meet the same energy demand."
           }
         ]
       },
@@ -13641,16 +13641,16 @@ const subjects = [
             "solution": "In Anaphase I of meiosis, spindle fibres pull homologous chromosome pairs apart to opposite poles of the cell. Sister chromatids remain joined at the centromere. It is not until Anaphase II that sister chromatids separate."
           },
           {
-            "question": "Which type of cell division produces gametes (sperm and egg cells)?",
+            "question": "Which events occur in meiosis I but <b>not</b> in mitosis?",
             "options": [
-              "Mitosis",
-              "Meiosis",
-              "Binary fission",
-              "Budding",
-              "Fragmentation"
+              "Replication of DNA and condensation of chromosomes",
+              "Separation of sister chromatids and formation of a spindle",
+              "Breakdown of the nuclear envelope and cytokinesis",
+              "Pairing of homologous chromosomes and their separation into different cells",
+              "Chromosomes line up on the equator"
             ],
-            "correct": 1,
-            "solution": "Meiosis produces haploid gametes from diploid germ cells. It involves two rounds of division, reducing the chromosome number by half. Mitosis produces genetically identical diploid cells for growth and repair."
+            "correct": 3,
+            "solution": "Only meiosis I has synapsis (homologues pair, with crossing over) and separation of the homologues. Replication, spindle formation, chromosome condensation, equator alignment and cytokinesis occur in both."
           },
           {
             "question": "What is the difference between mitosis and cytokinesis?",
@@ -13737,16 +13737,16 @@ const subjects = [
             "solution": "During prophase I of meiosis, homologous chromosomes pair up (synapsis) to form bivalents, and crossing over (exchange of genetic material between non-sister chromatids) occurs. This creates genetic variation and does not occur in mitosis."
           },
           {
-            "question": "How many chromosomes does a human gamete contain?",
+            "question": "In a test cross of a double heterozygote, 1000 offspring are obtained: 410 and 390 are parental types, and 100 and 100 are recombinant. What is the distance between the two genes?",
             "options": [
-              "46",
-              "44",
-              "23",
-              "92",
-              "12"
+              "10 map units",
+              "20 map units",
+              "80 map units",
+              "50 map units",
+              "100 map units"
             ],
-            "correct": 2,
-            "solution": "Human somatic cells are diploid (2n = 46 chromosomes). Meiosis halves the chromosome number, producing haploid gametes with 23 chromosomes (n = 23). At fertilisation, two gametes fuse to restore the diploid number (46)."
+            "correct": 1,
+            "solution": "Recombination frequency \\(= \\dfrac{100 + 100}{1000} \\times 100 = 20\\%\\). One map unit (cM) equals 1% recombination, so the genes are 20 cM apart."
           },
           {
             "question": "What is the role of the spindle checkpoint during mitosis?",
@@ -13809,16 +13809,16 @@ const subjects = [
             "solution": "The G1 checkpoint (restriction point) is a critical control point in late G1 phase. The cell assesses its size, nutrient availability, growth factor signals, and DNA integrity. If conditions are favourable, the cell proceeds to S phase (DNA replication). If not, the cell may enter G0 (quiescent state)."
           },
           {
-            "question": "What is nondisjunction and what does it cause?",
+            "question": "Two genes are far apart on the same chromosome (more than 50 map units). What recombination frequency will be observed?",
             "options": [
-              "Normal separation of chromosomes during meiosis",
-              "Failure of chromosomes to separate properly during cell division, leading to aneuploidy",
-              "Crossing over between non-homologous chromosomes",
-              "Deletion of a chromosome segment",
-              "DNA replication errors"
+              "100%",
+              "More than 50%",
+              "About 25%",
+              "About 50%, the same as unlinked genes",
+              "0%"
             ],
-            "correct": 1,
-            "solution": "Nondisjunction is the failure of homologous chromosomes (meiosis I) or sister chromatids (meiosis II) to separate properly. This results in gametes with abnormal chromosome numbers (aneuploidy). Examples include trisomy 21 (Down syndrome) from an extra chromosome 21."
+            "correct": 3,
+            "solution": "When genes are far apart, there is almost always at least one crossover between them, so half of the gametes are recombinant. The observed frequency cannot exceed 50%, and the genes appear to assort independently."
           },
           {
             "question": "What are cyclins and CDKs, and what role do they play in cell division?",
@@ -13833,28 +13833,28 @@ const subjects = [
             "solution": "Cyclins are regulatory proteins whose concentrations fluctuate throughout the cell cycle. They activate cyclin-dependent kinases (CDKs), which phosphorylate target proteins to trigger specific cell cycle events. Different cyclin-CDK complexes control progression through G1, S, G2, and M phases."
           },
           {
-            "question": "A cell has 2n = 8 chromosomes. After meiosis I, how many chromosomes does each daughter cell have?",
+            "question": "A karyotype is written 47, XY, +21. How many autosomes does this person have?",
             "options": [
-              "2",
-              "4",
-              "8",
-              "16",
-              "3"
+              "44",
+              "46",
+              "47",
+              "23",
+              "45"
             ],
-            "correct": 1,
-            "solution": "In meiosis I, homologous pairs separate (reductional division). A cell with 2n = 8 has 4 homologous pairs. After meiosis I, each daughter cell has n = 4 chromosomes, each still consisting of two sister chromatids joined at the centromere."
+            "correct": 4,
+            "solution": "Total chromosomes: 47. Two are sex chromosomes (X and Y), so there are \\(47 - 2 = 45\\) autosomes (the normal 44 plus an extra chromosome 21)."
           },
           {
-            "question": "What is the difference between a chromatid and a chromosome?",
+            "question": "A man with an X-linked recessive disease has children with a woman who is homozygous normal. What are the probabilities that a son is affected and that a daughter is a carrier?",
             "options": [
-              "They are identical terms",
-              "A chromatid is one copy of a duplicated chromosome; after centromere separation, each chromatid becomes an individual chromosome",
-              "Chromatids are found only in prokaryotes",
-              "Chromosomes are made of RNA; chromatids of DNA",
-              "Chromatids are longer than chromosomes"
+              "Sons 0, daughters 100% carriers",
+              "Sons 50%, daughters 50% carriers",
+              "Sons 100%, daughters 0",
+              "Sons 0, daughters 0",
+              "Sons 50%, daughters 100% carriers"
             ],
-            "correct": 1,
-            "solution": "After DNA replication (S phase), a chromosome consists of two identical sister chromatids joined at the centromere. During anaphase, when the centromere splits, each chromatid separates and is now called an individual chromosome."
+            "correct": 0,
+            "solution": "Sons receive the Y chromosome from their father and an X from their mother (normal), so no son is affected. Every daughter receives the father's X (carrying the allele) and a normal X from her mother, so all are carriers."
           },
           {
             "question": "Why is meiosis important for maintaining a constant chromosome number across generations?",
@@ -13869,28 +13869,28 @@ const subjects = [
             "solution": "Meiosis reduces the diploid chromosome number (2n) to haploid (n) in gametes. When two haploid gametes fuse at fertilisation, the diploid number is restored. Without meiosis, the chromosome number would double each generation."
           },
           {
-            "question": "What does it mean for two genes to be linked?",
+            "question": "A child inherits a deletion of the chromosome 15q11–q13 region from the father and has Prader-Willi syndrome. If the same deletion came from the mother, the child would have Angelman syndrome. What does this show?",
             "options": [
-              "They are on different chromosomes",
-              "They are on the same chromosome and tend to be inherited together",
-              "They code for the same protein",
-              "They are always dominant",
-              "They are found only in prokaryotes"
+              "Non-disjunction",
+              "Mitochondrial inheritance",
+              "Epistasis",
+              "Incomplete dominance",
+              "Genomic imprinting: the effect of a gene depends on which parent it came from"
             ],
-            "correct": 1,
-            "solution": "Linked genes are located on the same chromosome and tend to be inherited together because they do not assort independently during meiosis. The closer two genes are on a chromosome, the less likely recombination (crossing over) will separate them."
+            "correct": 4,
+            "solution": "In genomic imprinting some genes are silenced (by methylation) depending on the parent of origin. The deletion removes the only active copy, and which genes are active differs between the paternal and maternal chromosome."
           },
           {
-            "question": "In Mendel's law of segregation, what happens to allele pairs during gamete formation?",
+            "question": "A cross AaBB × AaBb is made (independent genes). What fraction of the offspring is AaBb?",
             "options": [
-              "Both alleles go into the same gamete",
-              "Allele pairs separate so each gamete receives only one allele",
-              "Alleles are destroyed during meiosis",
-              "Alleles fuse together",
-              "Only dominant alleles are passed to gametes"
+              "1/4",
+              "1/2",
+              "1/8",
+              "1/16",
+              "3/8"
             ],
-            "correct": 1,
-            "solution": "Mendel's law of segregation states that during gamete formation (meiosis), the two alleles for each gene separate so that each gamete carries only one allele. At fertilisation, offspring receive one allele from each parent, restoring the pair."
+            "correct": 0,
+            "solution": "P(Aa from Aa × Aa) \\(= 1/2\\). P(Bb from BB × Bb) \\(= 1/2\\). Multiply: \\(1/2 \\times 1/2 = 1/4\\)."
           },
           {
             "question": "What is the process of spermatogenesis?",
@@ -14181,28 +14181,28 @@ const subjects = [
             "solution": "FtsZ (Filamenting temperature-sensitive mutant Z) is a bacterial GTPase homologous to eukaryotic tubulin. In dividing bacteria, FtsZ polymerizes into a dynamic ring structure (the Z-ring) at the inner membrane at midcell, recruiting divisome proteins to synthesize the septal peptidoglycan wall and drive binary fission."
           },
           {
-            "question": "If a diploid organism has 2n = 8 chromosomes, how many chromatids are present in a single cell at METAPHASE II of meiosis?",
+            "question": "A test cross gives 46 AB, 44 ab, 4 Ab and 6 aB offspring. What is the distance between genes A and B?",
             "options": [
-              "4",
-              "8",
-              "16",
-              "32",
-              "2"
+              "5 map units",
+              "10 map units",
+              "90 map units",
+              "50 map units",
+              "20 map units"
             ],
             "correct": 1,
-            "solution": "If 2n = 8, the haploid number is n = 4. Following Meiosis I, the daughter cell has n = 4 chromosomes. Each chromosome still consists of two sister chromatids. Therefore, at Metaphase II, the cell contains 4 chromosomes × 2 chromatids = 8 chromatids."
+            "solution": "Recombinants are Ab and aB: \\(4 + 6 = 10\\) out of 100. Recombination frequency \\(= 10\\%\\), so the genes are 10 cM apart."
           },
           {
-            "question": "The process by which the nuclear division of cells occurs is called:",
+            "question": "A non-disjunction of one chromosome pair happens in meiosis II (not meiosis I). What fraction of the four gametes is chromosomally normal for that chromosome?",
             "options": [
-              "Mitosis or karyokinesis",
-              "Interphase",
-              "Anaphase",
-              "Telophase",
-              "Metaphase"
+              "0",
+              "1/4",
+              "3/4",
+              "All of them",
+              "1/2"
             ],
-            "correct": 0,
-            "solution": "Karyokinesis (or mitosis) refers strictly to the division of the cell nucleus, followed typically by cytokinesis, the division of the cytoplasm."
+            "correct": 4,
+            "solution": "In meiosis II, the sister chromatids fail to separate in only <b>one</b> of the two cells. That cell makes one gamete with an extra chromosome (n + 1) and one with a missing chromosome (n − 1). The other cell makes two normal gametes, so half are normal. (In meiosis I non-disjunction, all four are abnormal.)"
           },
           {
             "question": "During meiosis, what does the phenomenon of crossing-over consist of?",
@@ -14217,76 +14217,76 @@ const subjects = [
             "solution": "Crossing-over occurs during prophase I of meiosis (specifically pachytene), wherein non-sister chromatids of homologous chromosomes exchange reciprocal genetic segments, generating genetic variation."
           },
           {
-            "question": "The process of mitosis gives rise to which, and how many, daughter cells?",
+            "question": "In a root tip, 250 cells are counted and 20 are in mitosis. Mitosis lasts 1.5 hours. Approximately how long is the whole cell cycle?",
             "options": [
-              "Two haploid cells",
-              "Four diploid cells",
-              "Two diploid cells",
-              "Four haploid cells",
-              "One diploid cell"
-            ],
-            "correct": 2,
-            "solution": "Mitosis results in two genetically identical diploid (2n) daughter cells from a single diploid parent cell."
-          },
-          {
-            "question": "What happens during the S phase of the cell cycle?",
-            "options": [
-              "The cell enters quiescence",
-              "Nuclear division",
-              "Cell division",
-              "DNA synthesis",
-              "Synthesis of RNA and proteins, but not of DNA"
-            ],
-            "correct": 3,
-            "solution": "The S phase (Synthesis phase) of the eukaryotic cell cycle is the period during interphase when nuclear DNA is completely replicated."
-          },
-          {
-            "question": "The part of the metaphase chromosome that holds the sister chromatids together is:",
-            "options": [
-              "The sarcomere",
-              "The centromere",
-              "The chiasma",
-              "The centriole",
-              "The telomere"
-            ],
-            "correct": 1,
-            "solution": "The centromere is the specialized DNA region that links sister chromatids together and serves as the assembly site for the kinetochore to which mitotic spindle fibers attach."
-          },
-          {
-            "question": "Which of the following processes does NOT occur during mitosis?",
-            "options": [
-              "DNA condensation",
-              "DNA duplication",
-              "Separation of sister chromatids",
-              "Removal of centromeric cohesins",
-              "Fragmentation of the nuclear envelope"
-            ],
-            "correct": 1,
-            "solution": "DNA duplication occurs during the S phase of interphase, before the onset of mitosis (M phase)."
-          },
-          {
-            "question": "In which phase of the cell cycle are adult human heart muscle cells found?",
-            "options": [
-              "G1",
-              "M",
-              "G0",
-              "S",
-              "G2"
-            ],
-            "correct": 2,
-            "solution": "Adult human cardiomyocytes are terminally differentiated, non-dividing cells permanently arrested in the quiescent G0 phase of the cell cycle."
-          },
-          {
-            "question": "At the end of the first meiotic division:",
-            "options": [
-              "Homologous chromosomes separate",
-              "Sister chromatids separate",
-              "Four haploid cells are formed",
-              "DNA replication occurs",
-              "Chromatids are identical to each other"
+              "19 hours",
+              "1.5 hours",
+              "12 hours",
+              "24 hours",
+              "3.75 hours"
             ],
             "correct": 0,
-            "solution": "Meiosis I is the reductional division in which homologous chromosome pairs (bivalents/tetrads) segregate to opposite poles, while sister chromatids remain attached at their centromeres until meiosis II."
+            "solution": "Mitotic index \\(= 20/250 = 0.08\\) (8%). The fraction of time spent in mitosis is about the same, so cycle length \\(= 1.5/0.08 = 18.75 \\approx 19\\) hours."
+          },
+          {
+            "question": "An organism has \\(2n = 10\\). Ignoring crossing over, how many different combinations of chromosomes are possible in its gametes?",
+            "options": [
+              "5",
+              "10",
+              "32",
+              "100",
+              "1024"
+            ],
+            "correct": 2,
+            "solution": "Independent assortment of 5 homologous pairs gives \\(2^{5} = 32\\) combinations. Crossing over increases this even more."
+          },
+          {
+            "question": "Recombination frequencies for three linked genes are: A–B 12%, A–C 5%, B–C 7%. What is the order of the genes on the chromosome?",
+            "options": [
+              "A – B – C",
+              "B – A – C",
+              "C – A – B",
+              "A – C – B",
+              "B – C – A"
+            ],
+            "correct": 3,
+            "solution": "The largest distance (A–B, 12) is between the outer genes. Check the middle one: A–C + C–B \\(= 5 + 7 = 12\\), so C is between A and B. The order is A – C – B (equivalent to B – C – A)."
+          },
+          {
+            "question": "A human cell has 46 chromosomes. How many chromatids are present in a cell at metaphase II of meiosis?",
+            "options": [
+              "23",
+              "46",
+              "92",
+              "184",
+              "69"
+            ],
+            "correct": 1,
+            "solution": "After meiosis I each cell has 23 chromosomes, each still made of 2 chromatids. At metaphase II the 23 chromosomes are lined up: \\(23 \\times 2 = 46\\) chromatids. They separate at anaphase II."
+          },
+          {
+            "question": "How many chromosomes does a human cell contain at anaphase of mitosis?",
+            "options": [
+              "46",
+              "23",
+              "184",
+              "92",
+              "69"
+            ],
+            "correct": 3,
+            "solution": "In anaphase the sister chromatids separate, and each is now counted as a chromosome. Two sets of 46 move to opposite poles, so the cell temporarily contains 92 chromosomes."
+          },
+          {
+            "question": "A cell with damaged DNA passes through the G1/S checkpoint and replicates its DNA. The p53 gene is mutated in this cell. What explains this?",
+            "options": [
+              "p53 normally speeds up the cycle, so it is missing",
+              "The p53 protein normally stops the cycle or triggers apoptosis; without it the damaged cell continues dividing",
+              "p53 normally repairs the spindle",
+              "p53 is needed only in meiosis",
+              "p53 makes the DNA polymerase"
+            ],
+            "correct": 1,
+            "solution": "p53 is a tumour suppressor. When DNA is damaged, p53 halts the cycle for repair or triggers apoptosis. A mutated p53 lets damaged cells divide, which can lead to cancer."
           },
           {
             "question": "Which of the following stages represents prophase I of meiosis?",
@@ -14301,16 +14301,16 @@ const subjects = [
             "solution": "Prophase I of meiosis is uniquely characterized by synapsis of homologous chromosome pairs to form tetrads/bivalents and the formation of chiasmata where genetic crossing-over occurs."
           },
           {
-            "question": "Which of the following events is not present in the division of a prokaryotic cell?",
+            "question": "A cell with \\(2n = 16\\) completes meiosis I. What does each daughter cell contain?",
             "options": [
-              "Cytokinesis",
-              "Growth of the cell",
-              "DNA duplication",
-              "Karyokinesis",
-              "Separation of the daughter DNA molecules"
+              "8 chromosomes, each with 2 chromatids",
+              "16 chromosomes, each with 1 chromatid",
+              "8 chromosomes, each with 1 chromatid",
+              "16 chromosomes, each with 2 chromatids",
+              "4 chromosomes, each with 2 chromatids"
             ],
-            "correct": 3,
-            "solution": "Prokaryotes lack a membrane-bound nucleus and divide by binary fission; therefore, karyokinesis (mitotic nuclear division) does not occur in prokaryotic cell division."
+            "correct": 0,
+            "solution": "Meiosis I separates homologous chromosomes and halves the chromosome number (16 → 8). Each chromosome still has two sister chromatids, which separate in meiosis II."
           },
           {
             "question": "A diploid cell in the G2 phase of the cell cycle has:",
@@ -14337,16 +14337,16 @@ const subjects = [
             "solution": "Accurate chromosome segregation relies on the dynamic assembly and disassembly of spindle microtubules attached to kinetochores."
           },
           {
-            "question": "Which phase of cell division is blocked in order to study the karyotype of an individual?",
+            "question": "A colour-blind man (X<sup>c</sup>Y) and a carrier woman (X<sup>C</sup>X<sup>c</sup>) have a daughter. What is the probability that she is colour-blind?",
             "options": [
-              "Anaphase",
-              "Prophase",
-              "Metaphase",
-              "Telophase",
-              "Cytokinesis"
+              "1/2",
+              "0",
+              "1/4",
+              "1",
+              "3/4"
             ],
-            "correct": 2,
-            "solution": "Metaphase is arrested using spindle-inhibiting agents (such as colchicine) because chromosomes reach their maximum condensation and alignment at this stage, facilitating microscopic karyotyping."
+            "correct": 0,
+            "solution": "The daughter gets X<sup>c</sup> from her father for certain. From her mother she receives X<sup>C</sup> or X<sup>c</sup> with equal chance. She is colour-blind (X<sup>c</sup>X<sup>c</sup>) with probability 1/2."
           },
           {
             "question": "What is the cause of the independent assortment of chromosomes of paternal and maternal origin during meiosis?",
@@ -14391,28 +14391,28 @@ const subjects = [
             "solution": "The rough ER is studded with ribosomes and is the site of protein synthesis for proteins destined for secretion, membrane insertion, or lysosomes. The smooth ER synthesises lipids, detoxifies drugs, and stores calcium."
           },
           {
-            "question": "What is the role of ribosomes in protein synthesis?",
+            "question": "There are 61 sense codons but only 20 amino acids. Why is a change in the third base of a codon often silent?",
             "options": [
-              "To carry amino acids to the ribosome",
-              "To catalyse the formation of peptide bonds between amino acids",
-              "To transcribe DNA into mRNA",
-              "To splice introns from pre-mRNA",
-              "To transport proteins to the Golgi apparatus"
-            ],
-            "correct": 1,
-            "solution": "Ribosomes are the sites of protein synthesis. They have peptidyl transferase activity that catalyses the formation of peptide bonds between amino acids, building the polypeptide chain according to the mRNA sequence."
-          },
-          {
-            "question": "During DNA replication, which enzyme is primarily responsible for unwinding the double helix by breaking hydrogen bonds?",
-            "options": [
-              "DNA polymerase",
-              "DNA ligase",
-              "Helicase",
-              "Primase",
-              "Topoisomerase"
+              "The third base is never read",
+              "tRNA recognises only the first base",
+              "The code is degenerate: several codons code for the same amino acid",
+              "The ribosome skips the third base",
+              "The third base is always removed by splicing"
             ],
             "correct": 2,
-            "solution": "Helicase moves along DNA and separates the two strands by breaking hydrogen bonds between complementary base pairs, creating the replication fork."
+            "solution": "Most amino acids have more than one codon, often differing only in the third base. So a mutation in the third position frequently still gives the same amino acid (a silent mutation)."
+          },
+          {
+            "question": "In the Hershey-Chase experiment phages with <sup>32</sup>P-labelled DNA and phages with <sup>35</sup>S-labelled protein infect bacteria. After blending and centrifuging, where is most radioactivity found in each experiment?",
+            "options": [
+              "<sup>32</sup>P in the supernatant; <sup>35</sup>S in the pellet",
+              "Both isotopes in the pellet",
+              "Both isotopes in the supernatant",
+              "<sup>32</sup>P in the bacterial pellet; <sup>35</sup>S in the supernatant",
+              "<sup>35</sup>S in the pellet, and none anywhere else"
+            ],
+            "correct": 3,
+            "solution": "Only the phage DNA (which contains phosphorus, no sulfur) enters the bacteria, so the pellet is radioactive in the <sup>32</sup>P experiment. The protein coats (which contain sulfur) stay outside and are removed by blending. DNA is the genetic material."
           },
           {
             "question": "Which of the following correctly describes the process of transcription in eukaryotes?",
@@ -14427,16 +14427,16 @@ const subjects = [
             "solution": "In eukaryotes, RNA polymerase transcribes DNA in the nucleus to produce a pre-mRNA (primary transcript). This undergoes 5' capping, 3' poly-A tailing, and splicing of introns before the mature mRNA is exported to the cytoplasm for translation."
           },
           {
-            "question": "What is the role of ribosomes in protein synthesis?",
+            "question": "What is the minimum number of nucleotides in the coding region of a gene (including the stop codon) for a protein of 150 amino acids?",
             "options": [
-              "Transcribe DNA into mRNA",
-              "Translate mRNA into polypeptide chains",
-              "Replicate DNA",
-              "Regulate gene expression",
-              "Modify proteins after translation"
+              "150",
+              "300",
+              "450",
+              "453",
+              "456"
             ],
-            "correct": 1,
-            "solution": "Ribosomes are the site of translation. They read mRNA codons and assemble amino acids into polypeptide chains according to the genetic code. Transcription is carried out by RNA polymerase, not ribosomes."
+            "correct": 3,
+            "solution": "Each amino acid needs one codon (3 nucleotides): \\(150 \\times 3 = 450\\). The stop codon adds 3 more: \\(453\\). The mRNA is longer still because of untranslated regions."
           },
           {
             "question": "Which of the following is a characteristic of prokaryotic cells?",
@@ -14463,16 +14463,16 @@ const subjects = [
             "solution": "Primers are short DNA sequences complementary to the target region. They anneal to the template DNA and provide a free 3'-OH group for DNA polymerase to begin synthesis. Without primers, DNA polymerase cannot initiate DNA synthesis."
           },
           {
-            "question": "In the lac operon of E. coli, what happens when lactose is present and glucose is absent?",
+            "question": "A strain of <i>E. coli</i> has a mutation that destroys the lactose permease (<i>lacY</i>) but leaves the other genes normal. It is placed in a medium containing lactose as the only sugar. What happens?",
             "options": [
-              "The repressor binds to the operator, blocking transcription.",
-              "Lactose binds to the repressor, inactivating it; CAP-cAMP complex activates transcription.",
-              "Lactose binds to the repressor, activating it; CAP-cAMP complex represses transcription.",
-              "Both the repressor and CAP-cAMP complex bind, resulting in no transcription.",
-              "The operon is permanently off regardless of conditions."
+              "It grows normally",
+              "It makes more permease",
+              "It grows by using the repressor",
+              "It grows very poorly, because lactose cannot enter in enough quantity",
+              "It dies because it makes too much β-galactosidase"
             ],
-            "correct": 1,
-            "solution": "When lactose is present, allolactose (derived from lactose) binds to the lac repressor, causing it to detach from the operator. When glucose is absent, cAMP levels rise, forming the CAP-cAMP complex that binds to the promoter, enhancing RNA polymerase binding and transcription."
+            "correct": 3,
+            "solution": "Permease brings lactose into the cell. Without it, almost no lactose enters, so the operon is not induced and the cell cannot use lactose as a source of energy."
           },
           {
             "question": "Which of the following correctly describes the process of translation initiation in prokaryotes?",
@@ -14487,76 +14487,76 @@ const subjects = [
             "solution": "In prokaryotes, the small ribosomal subunit (30S) binds to the Shine-Dalgarno sequence upstream of the start codon (AUG). This positions the ribosome correctly. The initiator tRNA (fMet-tRNA) then binds, followed by the large ribosomal subunit (50S) to form the complete 70S ribosome."
           },
           {
-            "question": "Which of the following is an example of post-transcriptional gene regulation?",
+            "question": "A person inherits one defective copy of a tumour suppressor gene (such as <i>BRCA1</i>). Why is the risk of cancer higher?",
             "options": [
-              "DNA methylation preventing transcription",
-              "Alternative splicing of pre-mRNA",
-              "Histone acetylation opening chromatin",
-              "Promoter methylation",
-              "Transcription factor binding"
-            ],
-            "correct": 1,
-            "solution": "Alternative splicing occurs after transcription but before translation. Different exons can be included or excluded from the mature mRNA, producing different protein isoforms from a single gene. This allows a single gene to encode multiple proteins with different functions."
-          },
-          {
-            "question": "What is the role of telomerase in eukaryotic cells?",
-            "options": [
-              "To remove introns from pre-mRNA",
-              "To replicate the ends of linear chromosomes",
-              "To synthesise primers during DNA replication",
-              "To repair double-strand DNA breaks",
-              "To regulate gene expression through methylation"
-            ],
-            "correct": 1,
-            "solution": "Telomerase is an enzyme that adds telomeric repeats (TTAGGG in humans) to the ends of chromosomes. This counteracts the end-replication problem, where DNA polymerase cannot fully replicate the 3' ends of linear DNA. Telomerase is active in germ cells and stem cells but typically inactive in most somatic cells."
-          },
-          {
-            "question": "In DNA, which nitrogenous base pairs with adenine?",
-            "options": [
-              "Cytosine",
-              "Guanine",
-              "Thymine",
-              "Uracil",
-              "Adenine pairs with itself"
+              "One defective copy always causes cancer",
+              "The defective gene is an oncogene",
+              "Only one more mutation (loss of the second copy) is needed in a cell to lose all function",
+              "The normal copy is switched on by the mutant",
+              "Cancer then needs no further mutations"
             ],
             "correct": 2,
-            "solution": "In DNA, adenine (A) pairs with thymine (T) via two hydrogen bonds. In RNA, adenine pairs with uracil (U) instead of thymine."
+            "solution": "Tumour suppressors act recessively at the cell level: both copies must be lost. A person who starts with one defective copy in every cell needs only one more \"hit\" in a cell to lose both, so cancers appear earlier and more often."
           },
           {
-            "question": "In the context of gene expression, what is the function of a promoter?",
+            "question": "DNA polymerase makes about 1 error per 10<sup>5</sup> bases added. Proofreading reduces errors 100-fold, and mismatch repair a further 100-fold. A diploid human cell has 6 × 10<sup>9</sup> base pairs. About how many errors remain after one complete replication?",
             "options": [
-              "To code for a protein",
-              "To initiate transcription by providing a binding site for RNA polymerase",
-              "To terminate transcription",
-              "To splice introns from pre-mRNA",
-              "To translate mRNA into protein"
+              "About 6",
+              "About 600",
+              "About 60 000",
+              "About 6 × 10<sup>9</sup>",
+              "About 0.06"
+            ],
+            "correct": 0,
+            "solution": "Final error rate \\(= 10^{-5} \\times 10^{-2} \\times 10^{-2} = 10^{-9}\\) per base. For \\(6 \\times 10^{9}\\) bases: \\(6 \\times 10^{9} \\times 10^{-9} = 6\\) errors."
+          },
+          {
+            "question": "A DNA sample contains 22% cytosine. What percentage of the bases is adenine?",
+            "options": [
+              "22%",
+              "28%",
+              "44%",
+              "56%",
+              "78%"
             ],
             "correct": 1,
-            "solution": "A promoter is a DNA sequence upstream of a gene where RNA polymerase binds to initiate transcription. It contains specific sequences that help position the RNA polymerase and determine the direction of transcription."
+            "solution": "By Chargaff's rules \\(G = C = 22\\%\\), so \\(G + C = 44\\%\\). The rest is \\(56\\%\\) shared equally between \\(A\\) and \\(T\\): \\(A = 28\\%\\)."
           },
           {
-            "question": "What is the role of tRNA in protein synthesis?",
+            "question": "A mutant <i>E. coli</i> makes a repressor that cannot bind allolactose. What is the effect on the <i>lac</i> operon?",
             "options": [
-              "To carry genetic information from DNA to the ribosome",
-              "To catalyse the formation of peptide bonds",
-              "To transport amino acids to the ribosome",
-              "To regulate gene expression",
-              "To splice introns from pre-mRNA"
+              "The genes are always on",
+              "The genes are on only when glucose is present",
+              "The operator is deleted",
+              "The genes are never switched on, even when lactose is present",
+              "The genes are on only when tryptophan is present"
             ],
-            "correct": 2,
-            "solution": "tRNA (transfer RNA) molecules carry specific amino acids to the ribosome during translation. Each tRNA has an anticodon that pairs with a codon on mRNA, ensuring the correct amino acid is incorporated into the growing polypeptide chain."
+            "correct": 3,
+            "solution": "Without binding allolactose, the repressor stays attached to the operator all the time and blocks RNA polymerase. The operon cannot be induced. (A mutant repressor that cannot bind the operator would give the opposite effect: constitutive expression.)"
           },
           {
-            "question": "Which of the following correctly describes the structure of DNA?",
+            "question": "A codon in mRNA is 5'–AUG–3'. What is the sequence of the matching tRNA anticodon?",
             "options": [
-              "Single-stranded with ribose sugar",
-              "Double-stranded with deoxyribose sugar",
-              "Triple-stranded with deoxyribose sugar",
-              "Single-stranded with deoxyribose sugar",
-              "Double-stranded with ribose sugar"
+              "5'–UAC–3'",
+              "3'–TAC–5'",
+              "3'–AUG–5'",
+              "5'–AUG–3'",
+              "3'–UAC–5'"
+            ],
+            "correct": 4,
+            "solution": "The anticodon is complementary and antiparallel to the codon: A→U, U→A, G→C. It is written \\(3'\\)-UAC-\\(5'\\). It carries methionine and is the initiator tRNA at the start codon."
+          },
+          {
+            "question": "A DNA segment has 1000 base pairs and 40% of the bases are G or C. How many hydrogen bonds hold the two strands together?",
+            "options": [
+              "2000",
+              "2400",
+              "1000",
+              "3000",
+              "1200"
             ],
             "correct": 1,
-            "solution": "DNA is a double-stranded helix with deoxyribose sugar in its backbone. The two strands are held together by hydrogen bonds between complementary nitrogenous bases (A pairs with T, G pairs with C). RNA is typically single-stranded with ribose sugar."
+            "solution": "2000 bases in total: 40% are G or C, so there are 400 G–C pairs and 600 A–T pairs. G–C pairs have 3 hydrogen bonds, A–T pairs have 2. \\(400 \\times 3 + 600 \\times 2 = 1200 + 1200 = 2400\\)."
           },
           {
             "question": "Which type of muscle tissue is striated and under voluntary control?",
@@ -14583,16 +14583,16 @@ const subjects = [
             "solution": "Enzymes work by providing an alternative reaction pathway with a lower activation energy. They are not consumed, have optimal temperature and pH ranges, and do not change the equilibrium — only the rate at which equilibrium is reached."
           },
           {
-            "question": "Which of the following describes a frameshift mutation?",
+            "question": "Three consecutive nucleotides are deleted from the middle of a gene's coding sequence. What is the likely result?",
             "options": [
-              "A single nucleotide substitution",
-              "Insertion or deletion of nucleotides not divisible by 3",
-              "Duplication of a gene segment",
-              "Inversion of a chromosome segment",
-              "Silent mutation with no effect"
+              "All the amino acids after the deletion change",
+              "The protein is much longer",
+              "A stop codon appears immediately in every case",
+              "The protein loses one amino acid, and the rest of the sequence stays in frame",
+              "There is no change at all in the protein"
             ],
-            "correct": 1,
-            "solution": "Frameshift mutations occur when nucleotides are inserted or deleted in numbers not divisible by 3, shifting the reading frame of codons. This alters all downstream amino acids and usually produces a non-functional protein."
+            "correct": 3,
+            "solution": "A deletion of a multiple of three keeps the reading frame, so one amino acid (or a few) is lost. A deletion of one or two nucleotides shifts the frame (frameshift) and changes every amino acid after it. (The deletion of 3 bases in CFTR causing ΔF508 is an example.)"
           },
           {
             "question": "Which of the following is a characteristic of enzymes?",
@@ -14655,64 +14655,64 @@ const subjects = [
             "solution": "The nucleolus is a dense region within the nucleus where ribosomal RNA (rRNA) is transcribed and ribosomal subunits are partially assembled. These subunits are then exported through nuclear pores to the cytoplasm for complete ribosome assembly."
           },
           {
-            "question": "What is the function of DNA ligase during DNA replication?",
+            "question": "The <i>E. coli</i> chromosome has 4.6 × 10<sup>6</sup> base pairs. Replication starts at one origin, with two forks moving in opposite directions, each adding 1000 nucleotides per second. About how long does replication take?",
             "options": [
-              "To unwind the DNA double helix",
-              "To synthesise RNA primers",
-              "To join Okazaki fragments on the lagging strand",
-              "To add nucleotides to the leading strand",
-              "To remove RNA primers"
+              "About 77 minutes",
+              "About 4.6 seconds",
+              "About 38 minutes",
+              "About 3.8 minutes",
+              "About 5 hours"
             ],
             "correct": 2,
-            "solution": "DNA ligase joins Okazaki fragments on the lagging strand by forming phosphodiester bonds between adjacent nucleotides. After RNA primers are removed and replaced with DNA by DNA polymerase I, ligase seals the remaining nicks."
+            "solution": "Each fork replicates half of the chromosome: \\(2.3 \\times 10^{6}\\) bp. Time \\(= 2.3 \\times 10^{6}/1000 = 2300\\) s \\(\\approx 38\\) minutes."
           },
           {
-            "question": "What is the difference between a missense mutation and a nonsense mutation?",
+            "question": "Huntington disease is caused by repeats of CAG in the <i>HTT</i> gene. In successive generations the repeat tends to expand and the disease starts earlier. What is this called?",
             "options": [
-              "Missense changes one amino acid; nonsense creates a premature stop codon",
-              "Missense creates a stop codon; nonsense changes one amino acid",
-              "Both are silent mutations",
-              "Missense only occurs in introns",
-              "Nonsense mutations always improve protein function"
+              "Genomic imprinting",
+              "Non-disjunction",
+              "Anticipation",
+              "Pleiotropy",
+              "Epistasis"
+            ],
+            "correct": 2,
+            "solution": "Trinucleotide repeats can expand during DNA replication, and a larger repeat is often linked to earlier onset and more severe disease. This progression across generations is called anticipation."
+          },
+          {
+            "question": "In sickle cell disease the codon GAG (glutamic acid) becomes GUG (valine). How is this mutation classified?",
+            "options": [
+              "Silent mutation",
+              "Missense point mutation",
+              "Nonsense mutation",
+              "Frameshift mutation",
+              "Deletion"
+            ],
+            "correct": 1,
+            "solution": "One base is substituted and the codon now codes for a different amino acid, so it is a missense mutation. A silent mutation would still code for glutamic acid, and a nonsense mutation would create a stop codon."
+          },
+          {
+            "question": "A cell lacks DNA ligase. What is the effect on DNA replication?",
+            "options": [
+              "The leading strand cannot start",
+              "Primers cannot be made",
+              "The two strands cannot separate",
+              "Nucleotides cannot be added at all",
+              "Short Okazaki fragments accumulate on the lagging strand and are not joined"
+            ],
+            "correct": 4,
+            "solution": "DNA ligase joins the Okazaki fragments of the lagging strand into a continuous strand. Helicase, primase and DNA polymerase work normally, but the lagging strand stays in pieces."
+          },
+          {
+            "question": "A eukaryotic gene is transcribed into a pre-mRNA of 4500 nucleotides. The mature mRNA has 1500 nucleotides (ignoring cap and tail). What percentage of the pre-mRNA is removed?",
+            "options": [
+              "67%",
+              "33%",
+              "50%",
+              "75%",
+              "25%"
             ],
             "correct": 0,
-            "solution": "A missense mutation changes a codon to specify a different amino acid (e.g., sickle cell: GAG→GTG changes glutamic acid to valine). A nonsense mutation changes a codon to a stop codon, causing premature termination of translation and usually a non-functional truncated protein."
-          },
-          {
-            "question": "What is a silent mutation?",
-            "options": [
-              "A mutation that deletes an entire gene",
-              "A nucleotide change that does not alter the amino acid sequence due to codon degeneracy",
-              "A mutation that always causes disease",
-              "A mutation in a regulatory region",
-              "A mutation that occurs only in non-coding DNA"
-            ],
-            "correct": 1,
-            "solution": "Silent (synonymous) mutations change a codon but, due to the degeneracy of the genetic code (multiple codons encoding the same amino acid), the amino acid sequence remains unchanged. For example, both GCU and GCC code for alanine."
-          },
-          {
-            "question": "What is the role of topoisomerase during DNA replication?",
-            "options": [
-              "To synthesise new DNA strands",
-              "To join Okazaki fragments",
-              "To relieve tension ahead of the replication fork by cutting and re-joining DNA strands",
-              "To add RNA primers",
-              "To proofread newly synthesised DNA"
-            ],
-            "correct": 2,
-            "solution": "As helicase unwinds DNA, it creates positive supercoils (over-winding) ahead of the replication fork. Topoisomerase relieves this torsional strain by making temporary cuts in the DNA backbone, allowing it to unwind, and then resealing the breaks."
-          },
-          {
-            "question": "What is the central dogma of molecular biology?",
-            "options": [
-              "Protein → RNA → DNA",
-              "DNA → RNA → Protein",
-              "RNA → DNA → Protein",
-              "DNA → Protein → RNA",
-              "Protein → DNA → RNA"
-            ],
-            "correct": 1,
-            "solution": "The central dogma states that genetic information flows from DNA → RNA (transcription) → Protein (translation). While exceptions exist (reverse transcription: RNA → DNA by retroviruses; RNA replication by RNA viruses), the general principle holds for cellular life."
+            "solution": "\\(4500 - 1500 = 3000\\) nucleotides (introns) are removed by splicing. \\(3000/4500 = 0.667\\), i.e. 67%."
           },
           {
             "question": "How do vaccines work?",
@@ -14931,16 +14931,16 @@ const subjects = [
             "solution": "Taq polymerase is a thermostable DNA polymerase extracted from the thermophilic bacterium Thermus aquaticus. It remains active during the high-temperature denaturation step of PCR (around 95°C)."
           },
           {
-            "question": "Retroviruses, such as HIV, possess a unique enzyme that allows them to synthesize DNA from an RNA template. What is this enzyme?",
+            "question": "Which feature do HIV and <i>Staphylococcus aureus</i> have in common?",
             "options": [
-              "RNA polymerase",
-              "Reverse transcriptase",
-              "DNA primase",
-              "Topoisomerase",
-              "Endonuclease"
+              "Both contain nucleic acid and can cause disease",
+              "Both have ribosomes",
+              "Both reproduce outside a host cell",
+              "Both are killed by penicillin",
+              "Both have a cell wall"
             ],
-            "correct": 1,
-            "solution": "Reverse transcriptase catalyzes the reverse transcription of the viral RNA genome into complementary DNA (cDNA), which can then be integrated into the host cell's genome."
+            "correct": 0,
+            "solution": "All living organisms and viruses contain nucleic acid as genetic material, and both can cause disease. Only the bacterium has ribosomes, a cell wall and can reproduce on its own; penicillin does not act on a virus."
           },
           {
             "question": "What is the purpose of the 'annealing' step in a PCR cycle?",
@@ -14979,40 +14979,40 @@ const subjects = [
             "solution": "The nucleolus is located inside the nucleus organelle, and is the site of ribosome synthesis."
           },
           {
-            "question": "Which tissue type covers body surfaces and lines hollow organs?",
+            "question": "Why do injuries to cartilage heal very slowly?",
             "options": [
-              "Muscle tissue",
-              "Connective tissue",
-              "Nervous tissue",
-              "Epithelium",
-              "Bone tissue"
+              "Cartilage has too many blood vessels",
+              "Cartilage is made of muscle",
+              "Cartilage has no blood supply, so cells, oxygen and nutrients arrive slowly by diffusion",
+              "Cartilage contains no cells",
+              "Cartilage is made of epithelium"
+            ],
+            "correct": 2,
+            "solution": "Cartilage is avascular. Its cells (chondrocytes) receive nutrients by diffusion through the matrix, and repair cells and growth factors arrive slowly. Tissues with a good blood supply heal faster."
+          },
+          {
+            "question": "DNA fragments of 500, 1500 and 3000 bp are run on an agarose gel. Which statement is correct?",
+            "options": [
+              "The 3000 bp fragment travels the farthest",
+              "The fragments move towards the negative electrode",
+              "The 500 bp fragment travels the farthest, towards the positive electrode",
+              "All fragments move the same distance",
+              "The 500 bp fragment stays nearest to the wells"
+            ],
+            "correct": 2,
+            "solution": "DNA is negatively charged because of its phosphate groups, so it moves towards the positive electrode. Smaller fragments move through the gel matrix more easily, so they travel farther."
+          },
+          {
+            "question": "Which protein is made on <b>free</b> ribosomes in the cytosol?",
+            "options": [
+              "Insulin",
+              "A lysosomal enzyme",
+              "A plasma membrane receptor",
+              "An enzyme of glycolysis",
+              "Collagen"
             ],
             "correct": 3,
-            "solution": "Epithelium (or epithelial tissue) is the tissue that covers external surfaces and lines internal cavities."
-          },
-          {
-            "question": "Which technique is used to exponentially amplify a specific DNA sequence?",
-            "options": [
-              "Gel electrophoresis",
-              "PCR",
-              "Western blotting",
-              "Transformation",
-              "Transduction"
-            ],
-            "correct": 1,
-            "solution": "PCR (Polymerase Chain Reaction) is a foundational biotechnology tool for DNA amplification."
-          },
-          {
-            "question": "Where does ribosome assembly begin?",
-            "options": [
-              "Cytoplasm",
-              "Nucleolus",
-              "Golgi",
-              "Lysosome",
-              "Vacuole"
-            ],
-            "correct": 1,
-            "solution": "The nucleolus is located inside the nucleus and builds ribosomes."
+            "solution": "Proteins that stay in the cytosol are made on free ribosomes. Proteins that are secreted, inserted in membranes or sent to lysosomes are made on ribosomes bound to the rough ER."
           },
           {
             "question": "What is the difference between active and passive immunity?",
@@ -15159,40 +15159,40 @@ const subjects = [
             "solution": "Virtually all eukaryotic nuclear pre-mRNA introns follow the 'GU-AG rule': the 5' splice donor site begins with the invariant dinucleotide GU, while the 3' splice acceptor site terminates with the invariant dinucleotide AG. The branch point sequence contains an invariant adenosine."
           },
           {
-            "question": "What is the consequence of a single-nucleotide substitution that changes a codon from 5'-UAC-3' (tyrosine) to 5'-UAA-3'?",
+            "question": "Xeroderma pigmentosum patients are extremely sensitive to sunlight and develop skin cancers. Which repair system is defective?",
             "options": [
-              "Silent mutation with identical protein sequence",
-              "Missense mutation substituting an acidic amino acid",
-              "Nonsense mutation causing premature translation termination",
-              "Frameshift mutation altering all downstream codons",
-              "Neutral mutation causing read-through into the 3' UTR"
+              "DNA ligase in replication",
+              "Telomerase",
+              "Reverse transcriptase",
+              "The sodium-potassium pump",
+              "Nucleotide excision repair, which removes UV-induced pyrimidine dimers"
             ],
-            "correct": 2,
-            "solution": "UAA (ochre) is one of the three universal stop (nonsense) codons (UAA, UAG, UGA). Changing a sense codon (UAC) to a stop codon (UAA) results in premature termination of polypeptide synthesis, yielding a truncated, usually non-functional protein (nonsense mutation)."
+            "correct": 4,
+            "solution": "UV light joins neighbouring pyrimidines (thymine dimers), distorting the helix. Nucleotide excision repair cuts out the damaged strand and fills the gap. If it is faulty, mutations accumulate and skin cancer develops."
           },
           {
-            "question": "Which of the following RNA polymerases is responsible for transcribing protein-coding messenger RNA (mRNA) in eukaryotic nuclei?",
+            "question": "Which is the correct order of events in the initiation of translation in eukaryotes?",
             "options": [
-              "RNA Polymerase I",
-              "RNA Polymerase II",
-              "RNA Polymerase III",
-              "Mitochondrial RNA polymerase",
-              "Primase"
+              "The large subunit binds first, then the mRNA, then the tRNA",
+              "The small subunit binds the mRNA, the initiator tRNA pairs with AUG, then the large subunit joins",
+              "The tRNA binds the large subunit, then AUG, then the mRNA",
+              "The mRNA binds the large subunit, then the small subunit joins",
+              "The two subunits join, and then the mRNA binds"
             ],
             "correct": 1,
-            "solution": "In eukaryotes: RNA Polymerase I transcribes large rRNAs (28S, 18S, 5.8S); RNA Polymerase II transcribes all protein-coding pre-mRNAs and most snRNAs/miRNAs; RNA Polymerase III transcribes transfer RNAs (tRNAs) and 5S rRNA."
+            "solution": "The small ribosomal subunit with the initiator Met-tRNA binds the 5' end of the mRNA and scans to the start codon AUG. The large subunit then joins to form the complete ribosome, and elongation begins."
           },
           {
-            "question": "Francis Crick's Wobble Hypothesis explains why:",
+            "question": "The toxin α-amanitin blocks RNA polymerase II in eukaryotic cells. What is the long-term effect on protein synthesis?",
             "options": [
-              "DNA polymerases occasionally incorporate mismatched bases.",
-              "A single tRNA species can recognize multiple synonymous codons differing at their 3' third nucleotide.",
-              "Ribosomes can slide along mRNA without translating it.",
-              "Introns are spliced out in a non-linear fashion.",
-              "The genetic code is overlapping in bacterial genomes."
+              "It falls, because no new mRNA is made and existing mRNA is broken down",
+              "It rises, because ribosomes are released",
+              "It is unchanged, because proteins are made from DNA directly",
+              "It stops at once, because ribosomes are destroyed",
+              "Only the tRNA is affected"
             ],
-            "correct": 1,
-            "solution": "The wobble hypothesis states that steric freedom (wobble) at the 5' position of the tRNA anticodon allows non-Watson-Crick base pairing with the 3' position of the mRNA codon (e.g., inosine pairing with U, C, or A). This allows fewer than 61 tRNAs (typically ~31-45) to translate all 61 sense codons."
+            "correct": 0,
+            "solution": "RNA polymerase II makes pre-mRNA. Without new mRNA, translation continues only as long as existing mRNA lasts. It then declines, which is why the toxin damages liver cells so severely."
           },
           {
             "question": "In the regulation of the bacterial lac operon, what molecular state occurs when BOTH glucose and lactose are present in high concentrations in the growth medium?",
@@ -15255,16 +15255,16 @@ const subjects = [
             "solution": "The ribosome has three functional tRNA binding sites: 1) The A site (aminoacyl) binds the incoming cognate aminoacyl-tRNA; 2) The P site (peptidyl) holds the tRNA carrying the growing polypeptide chain; 3) The E site (exit) transiently holds the deacylated tRNA prior to release."
           },
           {
-            "question": "A transition mutation involves the replacement of a:",
+            "question": "A mutation caused by UV light in a skin cell leads to melanoma. Will the mutation be passed to the person's children?",
             "options": [
-              "Purine by a pyrimidine (e.g., A to C)",
-              "Purine by another purine, or a pyrimidine by another pyrimidine (e.g., A to G, or C to T)",
-              "Pyrimidine by a purine (e.g., T to G)",
-              "Single base by a trinucleotide repeat",
-              "Deoxyribose sugar by a ribose sugar"
+              "No, because it is a somatic mutation",
+              "Yes, because all mutations are inherited",
+              "Yes, because skin cells make gametes",
+              "Only if the child has the disease",
+              "Yes, because it is a germline mutation"
             ],
-            "correct": 1,
-            "solution": "Transitions are point mutations that substitute a two-ring purine for another purine (A ↔ G) or a one-ring pyrimidine for another pyrimidine (C ↔ T). Transversions, by contrast, exchange a purine for a pyrimidine or vice versa (e.g. A ↔ C, A ↔ T, G ↔ C, G ↔ T)."
+            "correct": 0,
+            "solution": "Only mutations in the germline (cells that give rise to gametes) are inherited. A mutation in a skin cell is somatic and affects only that cell and its descendants."
           },
           {
             "question": "The enzyme reverse transcriptase possesses which set of enzymatic activities essential for retroviral replication?",
@@ -15279,16 +15279,16 @@ const subjects = [
             "solution": "Reverse transcriptase is a multifunctional enzyme that: 1) Synthesizes a complementary DNA strand from an RNA template (RNA-dependent DNA polymerase); 2) Degrades the viral RNA strand from the RNA-DNA hybrid (RNase H); 3) Synthesizes the second DNA strand using the first DNA strand as template (DNA-dependent DNA polymerase), yielding double-stranded proviral cDNA."
           },
           {
-            "question": "What is the function of the enzyme aminoacyl-tRNA synthetase?",
+            "question": "How does RNA polymerase differ from DNA polymerase?",
             "options": [
-              "Forms peptide bonds between adjacent amino acids in the ribosome",
-              "Covalently links a specific amino acid to its cognate tRNA at the 3'-CCA end using ATP",
-              "Cleaves introns from precursor tRNA molecules",
-              "Translocates the ribosome along the mRNA template during elongation",
-              "Phosphorylates initiation factors to activate protein synthesis"
+              "RNA polymerase reads the template 5' to 3'",
+              "RNA polymerase adds nucleotides to a 5' end",
+              "RNA polymerase makes DNA",
+              "RNA polymerase does not need a primer to start a new chain",
+              "RNA polymerase has proofreading as good as DNA polymerase"
             ],
-            "correct": 1,
-            "solution": "Aminoacyl-tRNA synthetases establish the genetic code by attaching each amino acid to its corresponding tRNA at the 3'-hydroxyl of the terminal adenosine of the CCA-3' stem in a two-step ATP-dependent reaction, forming a high-energy ester linkage (aminoacyl-tRNA)."
+            "correct": 3,
+            "solution": "Both enzymes add nucleotides to the 3' end (the chain grows 5' → 3'), reading the template 3' → 5'. RNA polymerase can start from scratch at a promoter, but DNA polymerase needs an RNA primer."
           },
           {
             "question": "In eukaryotic DNA replication, which protein complex encircles the DNA double helix behind the polymerase, acting as a sliding clamp to ensure high processivity?",
@@ -15339,64 +15339,64 @@ const subjects = [
             "solution": "Telomerase is a specialized reverse transcriptase (TERT) that carries its own intrinsic RNA subunit (TERC / TR). TERC contains a sequence complementary to the telomeric repeat, serving as the template for de novo addition of TTAGGG repeats to the 3' overhang of eukaryotic chromosomes."
           },
           {
-            "question": "What is the primary function of microRNAs (miRNAs) in eukaryotic gene regulation?",
+            "question": "Which pair correctly describes epigenetic changes and their usual effect on transcription?",
             "options": [
-              "Catalyze RNA splicing in spliceosomes",
-              "Bind complementary 3' UTR sequences of target mRNAs to induce translational repression or mRNA degradation via RISC",
-              "Direct histone acetylation at promoter regions",
-              "Transport amino acids to ribosomes",
-              "Act as primers for leading strand DNA replication"
+              "DNA methylation increases transcription; histone acetylation represses it",
+              "DNA methylation at CpG sites represses; histone acetylation increases transcription",
+              "Both DNA methylation and histone acetylation repress transcription",
+              "Both increase transcription",
+              "Neither changes transcription"
             ],
             "correct": 1,
-            "solution": "miRNAs are small non-coding RNAs (~21-23 nucleotides) processed by Drosha and Dicer. As part of the RNA-induced silencing complex (RISC), they bind to complementary sequences in the 3' untranslated regions (3' UTR) of target mRNAs, causing translational repression or mRNA deadenylation and degradation (RNA interference)."
+            "solution": "Methylated CpG islands attract proteins that compact chromatin and silence the gene. Acetylated histones carry less positive charge, so the DNA is loosened and genes are accessible for transcription."
           },
           {
-            "question": "Genomic DNA within the eukaryotic cell is found:",
+            "question": "Dead bacteria release DNA, and a living bacterium takes it up from the environment and incorporates it into its genome. What is this process called?",
             "options": [
-              "in the nucleus, in the form of a single circular strand",
-              "free in the cytoplasm",
-              "in the nucleoid, associated with histone proteins",
-              "in the cytoplasm, in the form of a single circular strand",
-              "in the nucleus, associated with histone proteins"
+              "Conjugation",
+              "Transduction",
+              "Binary fission",
+              "Transformation",
+              "Translation"
             ],
-            "correct": 4,
-            "solution": "Eukaryotic nuclear DNA is linear and tightly packaged with basic proteins called histones to form chromatin within the membrane-bound nucleus."
+            "correct": 3,
+            "solution": "Uptake of naked DNA from the surroundings is transformation (as in Griffith's experiment). Conjugation needs a pilus and living donor cells, and transduction is transfer of DNA by a virus."
           },
           {
-            "question": "An anomaly where there is an extra or missing chromosome compared to normal is called:",
+            "question": "A boy has Klinefelter syndrome (47, XXY). Which statement about the origin of this condition is correct?",
             "options": [
-              "Aneuploidy",
-              "Trisomy",
-              "Monosomy",
-              "Karyotype",
-              "Translocation"
-            ],
-            "correct": 0,
-            "solution": "Aneuploidy is the general term for a chromosomal condition where a cell has an abnormal number of chromosomes that is not an exact multiple of the haploid set (e.g. having 45 or 47 chromosomes instead of 46)."
-          },
-          {
-            "question": "The genetic code:",
-            "options": [
-              "Consists of 64 codons coding for amino acids",
-              "Consists of 64 codons, three of which are STOP codons",
-              "Consists of 64 codons, each coding for a different amino acid",
-              "Is different from one organism to another",
-              "In eukaryotes consists of DNA, while in viruses it consists of RNA"
-            ],
-            "correct": 1,
-            "solution": "The standard genetic code contains 4³ = 64 triplet codons. Of these, 61 code for amino acids (sense codons), and 3 (UAA, UAG, UGA) serve as termination or stop codons."
-          },
-          {
-            "question": "The promoter:",
-            "options": [
-              "Is an RNA sequence necessary to activate translation",
-              "Is an RNA sequence necessary to activate the transcription of a gene",
-              "Is a DNA sequence necessary to regulate the transcription of a gene",
-              "Is the site of the beginning of transcription of a gene",
-              "Is a protein factor necessary to activate the transcription of a gene"
+              "It can only arise from non-disjunction in the mother",
+              "It can only arise from non-disjunction in the father",
+              "It can arise from non-disjunction in either the mother or the father",
+              "It arises from a mutation in the SRY gene",
+              "It arises from fertilisation of one egg by two sperm"
             ],
             "correct": 2,
-            "solution": "A promoter is a specific sequence of DNA upstream of a gene that provides a binding site for RNA polymerase and regulatory transcription factors, regulating the initiation of transcription."
+            "solution": "XXY can result from an egg with XX fertilised by a Y sperm, or an egg with X fertilised by an XY sperm (non-disjunction in meiosis I of the father). Either parent can be the source."
+          },
+          {
+            "question": "The template strand of a gene reads 3'–TACGGACTT–5'. What is the mRNA sequence?",
+            "options": [
+              "5'–UACGGACUU–3'",
+              "5'–AUGCCUGAA–3'",
+              "5'–ATGCCTGAA–3'",
+              "3'–AUGCCUGAA–5'",
+              "5'–TACGGACTT–3'"
+            ],
+            "correct": 1,
+            "solution": "The mRNA is complementary to the template and antiparallel: T→A, A→U, C→G, G→C. \\(3'\\)-TAC GGA CTT-\\(5'\\) gives \\(5'\\)-AUG CCU GAA-\\(3'\\). RNA has uracil, not thymine."
+          },
+          {
+            "question": "In which condition is the <i>lac</i> operon of <i>E. coli</i> expressed at a high level?",
+            "options": [
+              "Lactose absent and glucose present",
+              "Lactose present and glucose absent",
+              "Lactose present and glucose present",
+              "Lactose absent and glucose absent",
+              "Only when tryptophan is present"
+            ],
+            "correct": 1,
+            "solution": "Lactose (as allolactose) removes the repressor from the operator, which allows transcription. When glucose is absent, cAMP and the CAP protein help RNA polymerase bind, giving a high level. If glucose is present, expression stays low even with lactose."
           },
           {
             "question": "Which of the following statements about the karyotype is correct?",
@@ -15447,28 +15447,28 @@ const subjects = [
             "solution": "Proteins contain sulfur (in methionine and cysteine) but virtually no phosphorus, whereas DNA contains phosphorus (in its sugar-phosphate backbone) but no sulfur. Thus, ³⁵S specifically labels capsid proteins and ³²P labels viral DNA."
           },
           {
-            "question": "The nucleotide sequence AUG CCA UGG AAG AGA encodes the amino acids Met–Pro–Trp–Lys–Arg. A mutation replacing the ninth nucleotide guanine with adenine (G → A) would cause:",
+            "question": "The mutation rate in humans is about 1 × 10<sup>-8</sup> per base pair per generation. The diploid genome has 6 × 10<sup>9</sup> base pairs. About how many new mutations does each child carry?",
             "options": [
-              "Substitution of Trp in the protein chain",
-              "Chain termination with Trp due to a stop codon",
-              "No change due to redundancy of the genetic code",
-              "Chain termination with Pro due to a stop codon",
-              "Loss of Lys in the chain"
+              "About 6",
+              "About 60",
+              "About 600",
+              "About 6 × 10<sup>9</sup>",
+              "About 1"
             ],
-            "correct": 3,
-            "solution": "The 9th nucleotide is the third base of the third codon UGG (encoding Trp). Mutating this nucleotide to A converts UGG to UGA, which is a STOP codon. Translation terminates prematurely after the second amino acid (Pro), resulting in chain termination with Pro."
+            "correct": 1,
+            "solution": "\\(6 \\times 10^{9} \\times 10^{-8} = 60\\) new mutations per generation, most of them in non-coding DNA with no effect."
           },
           {
-            "question": "The lac operon in prokaryotes regulates lactose metabolism enzymes (including β-galactosidase). It produces these enzymes:",
+            "question": "A nucleus from a differentiated frog intestine cell is transferred into an egg without its nucleus, and develops into a tadpole. What does this show?",
             "options": [
-              "When lactose synthesis is needed",
-              "When lactose is absent in the medium",
-              "When lactose is present in the medium",
-              "Independently of lactose presence",
-              "When lactose is in excess"
+              "Differentiated cells lose genes they do not use",
+              "The egg cytoplasm is not needed",
+              "Mutations make cells identical",
+              "Tadpoles have no DNA",
+              "Differentiated cells keep all the genes, and differentiation depends on which genes are expressed"
             ],
-            "correct": 2,
-            "solution": "The lac operon is an inducible system: in the presence of lactose, allolactose binds to the Lac repressor protein, causing it to dissociate from the operator and allowing RNA polymerase to transcribe the operon."
+            "correct": 4,
+            "solution": "The nucleus from a specialised cell still contained the complete genome, and the egg cytoplasm reprogrammed it to switch on the genes of an embryo. Cells differ by gene expression, not by gene content."
           },
           {
             "question": "In a double-stranded DNA molecule consisting of 6,000 nucleotides, of which 20% are guanine, what will be the number of adenine nucleotides?",
@@ -15525,28 +15525,28 @@ const subjects = [
         "name": "Mendelian Genetics & Inheritance",
         "questions": [
           {
-            "question": "In a population, the recessive allele frequency is 0.3. Under Hardy-Weinberg equilibrium, what percentage has the recessive phenotype?",
+            "question": "Darwin's finches on the Galápagos have many different beak shapes that evolved from a common ancestor. What is this called?",
             "options": [
-              "9%",
-              "15%",
-              "21%",
-              "30%",
-              "42%"
+              "Convergent evolution",
+              "Adaptive radiation",
+              "Genetic drift",
+              "Artificial selection",
+              "Mass extinction"
             ],
-            "correct": 0,
-            "solution": "Hardy-Weinberg: p² + 2pq + q² = 1. q = 0.3, so q² = 0.09 = 9%. Only homozygous recessive (q²) individuals display the recessive phenotype."
+            "correct": 1,
+            "solution": "When a species reaches a new environment with many empty niches, it diversifies into several species adapted to different resources. This is adaptive radiation."
           },
           {
-            "question": "In a cross between two heterozygous tall pea plants (Tt × Tt), what is the probability that a randomly selected offspring is tall?",
+            "question": "A woman with blood group O has children with a man of blood group AB. Which blood groups are possible for their children?",
             "options": [
-              "25%",
-              "50%",
-              "67%",
-              "75%",
-              "100%"
+              "A, B, AB or O",
+              "O or AB only",
+              "A or B only",
+              "AB only",
+              "A only"
             ],
-            "correct": 3,
-            "solution": "Tt × Tt gives: TT (25%), Tt (50%), tt (25%). Tall phenotype = TT + Tt = 75%. Only tt (25%) is short. Probability of tall = 75%."
+            "correct": 2,
+            "solution": "The mother is \\(ii\\) and always gives \\(i\\). The father is \\(I^{A}I^{B}\\) and gives \\(I^{A}\\) or \\(I^{B}\\). Children are \\(I^{A}i\\) (group A) or \\(I^{B}i\\) (group B). Neither AB nor O is possible."
           },
           {
             "question": "In a population of 500 individuals, 125 are homozygous dominant (AA), 250 are heterozygous (Aa), and 125 are homozygous recessive (aa). What is the frequency of the dominant allele A?",
@@ -15561,124 +15561,124 @@ const subjects = [
             "solution": "Total alleles = 500 × 2 = 1000. A alleles = (125 × 2) + 250 = 500. Frequency = 500/1000 = 0.50."
           },
           {
-            "question": "Which of the following is an example of a homozygous genotype?",
+            "question": "Two plants heterozygous for two independent genes (AaBb × AaBb) are crossed. What is the probability that an offspring shows the dominant trait for A and the recessive trait for B?",
             "options": [
-              "Aa",
-              "Bb",
-              "AB",
-              "AA",
-              "Xa"
+              "9/16",
+              "3/16",
+              "1/16",
+              "6/16",
+              "3/4"
+            ],
+            "correct": 1,
+            "solution": "P(dominant for A) \\(= 3/4\\) and P(recessive for B, bb) \\(= 1/4\\). For independent genes multiply: \\(3/4 \\times 1/4 = 3/16\\)."
+          },
+          {
+            "question": "In an F2 generation of 929 pea plants from a monohybrid cross of purple (dominant) and white flowers, how many white-flowered plants would you expect?",
+            "options": [
+              "About 697",
+              "About 464",
+              "About 310",
+              "About 232",
+              "About 929"
             ],
             "correct": 3,
-            "solution": "Homozygous means having two identical alleles for a gene. AA is homozygous dominant, aa would be homozygous recessive. Aa, Bb, and Xa are heterozygous (different alleles). AB refers to blood type phenotype, not genotype."
+            "solution": "Segregation gives a 3 : 1 ratio, so 1/4 of the plants are white (homozygous recessive): \\(929/4 = 232\\). (Mendel observed 224.)"
           },
           {
-            "question": "What is the difference between dominant and recessive alleles?",
+            "question": "A tall pea plant of unknown genotype is test crossed with a short plant (tt). The 100 offspring are 52 tall and 48 short. What is the genotype of the tall parent?",
             "options": [
-              "Dominant alleles are always more common in populations",
-              "Dominant alleles mask the expression of recessive alleles in heterozygotes",
-              "Recessive alleles are always harmful",
-              "Dominant alleles are always on the X chromosome",
-              "Recessive alleles are always on autosomes"
+              "TT",
+              "tt",
+              "Either TT or Tt",
+              "Tt",
+              "It cannot be determined"
+            ],
+            "correct": 3,
+            "solution": "A 1 : 1 ratio means the unknown parent produced two kinds of gamete in equal numbers, so it is heterozygous. If it were TT, all offspring would be tall."
+          },
+          {
+            "question": "In mice, gene B (black, dominant) and gene A (needed for any colour, aa is albino). AaBb × AaBb gives 9 agouti : 3 black : 4 albino. In 160 offspring, how many albino mice would you expect?",
+            "options": [
+              "10",
+              "30",
+              "90",
+              "40",
+              "60"
+            ],
+            "correct": 3,
+            "solution": "The aa genotype masks the B gene (<b>recessive epistasis</b>), so aaB_ and aabb are both albino: \\(3 + 1 = 4\\) of 16. \\(160 \\times 4/16 = 40\\)."
+          },
+          {
+            "question": "A single gene mutation causes tall stature, long limbs, heart defects and lens dislocation (Marfan syndrome). What is this phenomenon called?",
+            "options": [
+              "Epistasis",
+              "Pleiotropy",
+              "Polygenic inheritance",
+              "Codominance",
+              "Linkage"
             ],
             "correct": 1,
-            "solution": "A dominant allele is expressed phenotypically even when only one copy is present (heterozygous). A recessive allele is only expressed when two copies are present (homozygous recessive). Dominance is about expression, not frequency or harm."
+            "solution": "In pleiotropy one gene affects several traits. Marfan syndrome results from a defect in fibrillin-1, a connective tissue protein found in many organs."
           },
           {
-            "question": "In a dihybrid cross (AaBb × AaBb) with independent assortment, what proportion of offspring will have the genotype AAbb?",
+            "question": "A man with cystic fibrosis (ff) and a woman who is a carrier (Ff) have a child. What is the probability that the child has cystic fibrosis?",
+            "options": [
+              "1/4",
+              "1/2",
+              "3/4",
+              "0",
+              "1"
+            ],
+            "correct": 1,
+            "solution": "ff × Ff gives Ff and ff in equal numbers. The affected genotype is ff, with probability 1/2."
+          },
+          {
+            "question": "AaBbCc × AaBbCc, with three independent genes and complete dominance. What is the probability that an offspring shows the dominant phenotype for all three traits?",
+            "options": [
+              "1/64",
+              "27/64",
+              "9/64",
+              "3/8",
+              "1/8"
+            ],
+            "correct": 1,
+            "solution": "For each gene P(dominant) \\(= 3/4\\). For three independent genes: \\((3/4)^{3} = 27/64\\)."
+          },
+          {
+            "question": "A disease is caused by a mutation in mitochondrial DNA. Which statement about its inheritance is correct?",
+            "options": [
+              "An affected father passes it to all his daughters",
+              "It follows a 3 : 1 ratio in children of carriers",
+              "An affected mother passes it to all her children, an affected father to none",
+              "It appears only in males",
+              "An affected father passes it to all his sons"
+            ],
+            "correct": 2,
+            "solution": "Mitochondria come almost entirely from the egg cytoplasm, so mtDNA is inherited from the mother only. Sperm mitochondria are normally lost after fertilisation."
+          },
+          {
+            "question": "Two carriers of albinism (Aa) have two children. What is the probability that the first is unaffected and the second is albino?",
             "options": [
               "1/16",
-              "1/8",
               "1/4",
-              "3/16",
-              "9/16"
+              "9/16",
+              "3/8",
+              "3/16"
+            ],
+            "correct": 4,
+            "solution": "P(unaffected) \\(= 3/4\\) and P(albino) \\(= 1/4\\). The events are independent: \\(3/4 \\times 1/4 = 3/16\\)."
+          },
+          {
+            "question": "Skin colour is controlled by three genes, each with two alleles that add equally (A, B, C add pigment). Two AaBbCc people have a child. What fraction of their children have exactly three pigment alleles?",
+            "options": [
+              "5/16",
+              "1/64",
+              "20/16",
+              "3/8",
+              "1/8"
             ],
             "correct": 0,
-            "solution": "Probability of AA = 1/4. Probability of bb = 1/4. Since genes assort independently, probability of AAbb = 1/4 × 1/4 = 1/16."
-          },
-          {
-            "question": "What is codominance?",
-            "options": [
-              "One allele completely masks the other",
-              "Both alleles are expressed simultaneously in the phenotype",
-              "One allele is partially expressed",
-              "Neither allele is expressed",
-              "The phenotype is intermediate between two alleles"
-            ],
-            "correct": 1,
-            "solution": "In codominance, both alleles are fully expressed simultaneously in the heterozygote. For example, in the ABO blood group system, an individual with genotype IAIB expresses both A and B antigens, resulting in blood type AB. Neither allele masks the other."
-          },
-          {
-            "question": "What is incomplete dominance?",
-            "options": [
-              "One allele is completely dominant over the other",
-              "The heterozygote shows an intermediate phenotype between the two homozygotes",
-              "Both alleles are fully expressed in the heterozygote",
-              "One allele is always lethal",
-              "The trait skips generations"
-            ],
-            "correct": 1,
-            "solution": "In incomplete dominance, neither allele is completely dominant. The heterozygote phenotype is intermediate between the two homozygotes. For example, in snapdragons: red (RR) × white (rr) → pink (Rr). A cross of two pink plants gives 1 red : 2 pink : 1 white."
-          },
-          {
-            "question": "A colour-blind man marries a woman who is a carrier. What proportion of their sons will be colour-blind?",
-            "options": [
-              "0%",
-              "25%",
-              "50%",
-              "75%",
-              "100%"
-            ],
-            "correct": 2,
-            "solution": "Colour blindness is X-linked recessive. Father: XᵇY. Mother (carrier): XᴮXᵇ. Sons get Y from father and one X from mother. 50% of sons get Xᴮ (normal vision), 50% get Xᵇ (colour-blind). So 50% of sons will be colour-blind."
-          },
-          {
-            "question": "What is a test cross used for?",
-            "options": [
-              "To determine the genotype of an individual with the dominant phenotype",
-              "To create new mutations",
-              "To increase genetic variation",
-              "To determine the chromosome number",
-              "To identify the sex of an organism"
-            ],
-            "correct": 0,
-            "solution": "A test cross involves mating an individual showing the dominant phenotype (unknown genotype: either homozygous dominant or heterozygous) with a homozygous recessive individual. If any offspring show the recessive phenotype, the tested parent must be heterozygous."
-          },
-          {
-            "question": "What is epistasis?",
-            "options": [
-              "One gene masking the expression of another gene at a different locus",
-              "The same gene controlling multiple traits",
-              "Two alleles of the same gene interacting",
-              "A gene linked to the sex chromosomes",
-              "A mutation in a regulatory gene"
-            ],
-            "correct": 0,
-            "solution": "Epistasis occurs when the expression of one gene is modified or masked by one or more other genes. For example, in Labrador coat colour, the E gene is epistatic to the B gene: ee genotype prevents pigment deposition regardless of the B genotype, resulting in a yellow coat."
-          },
-          {
-            "question": "In a cross between a heterozygous tall plant (Tt) and a homozygous short plant (tt), what is the expected phenotypic ratio?",
-            "options": [
-              "All tall",
-              "All short",
-              "1 tall : 1 short",
-              "3 tall : 1 short",
-              "1 tall : 3 short"
-            ],
-            "correct": 2,
-            "solution": "Tt × tt gives: Tt (tall), Tt (tall), tt (short), tt (short). The phenotypic ratio is 1 tall : 1 short (50% tall, 50% short). This is the expected result of a test cross."
-          },
-          {
-            "question": "What is pleiotropy?",
-            "options": [
-              "Multiple genes affecting one trait",
-              "One gene affecting multiple phenotypic traits",
-              "A gene that is always dominant",
-              "A gene located on the Y chromosome",
-              "Codominance of two alleles"
-            ],
-            "correct": 1,
-            "solution": "Pleiotropy occurs when a single gene influences multiple seemingly unrelated phenotypic traits. For example, the sickle cell allele (HbS) affects red blood cell shape, oxygen transport, susceptibility to malaria, and can cause organ damage — all from a single amino acid change in haemoglobin."
+            "solution": "There are 6 alleles in total, each with probability 1/2 of being a pigment allele. \\(P(3\\text{ out of }6) = 20/2^{6} = 20/64 = 5/16\\), where 20 is the number of ways to choose 3 of the 6 alleles. Polygenic traits give a bell-shaped distribution."
           },
           {
             "question": "What is the Hardy-Weinberg equation and what does it describe?",
@@ -15693,16 +15693,16 @@ const subjects = [
             "solution": "The Hardy-Weinberg equation (p² + 2pq + q² = 1) predicts genotype frequencies from allele frequencies in a population not undergoing evolution. p = frequency of dominant allele, q = frequency of recessive allele (p + q = 1). It assumes no mutation, migration, selection, genetic drift, or non-random mating."
           },
           {
-            "question": "In humans, haemophilia is an X-linked recessive disorder. A carrier woman (XᴴXʰ) has children with a normal man (XᴴY). What proportion of ALL children will be affected?",
+            "question": "Why do children with phenylketonuria (PKU) who start a low-phenylalanine diet shortly after birth develop normally?",
             "options": [
-              "0%",
-              "25%",
-              "50%",
-              "75%",
-              "100%"
+              "The diet prevents toxic phenylalanine and its by-products from building up, because the enzyme is missing",
+              "The diet replaces the faulty gene",
+              "The diet makes the missing enzyme",
+              "Phenylalanine is not toxic",
+              "The diet lowers the pH of the blood"
             ],
-            "correct": 1,
-            "solution": "Offspring: XᴴXᴴ (normal girl), XᴴXʰ (carrier girl), XᴴY (normal boy), XʰY (haemophiliac boy). 1 out of 4 children (25%) will be affected — specifically 50% of sons. All daughters will be unaffected (though half will be carriers)."
+            "correct": 0,
+            "solution": "PKU is caused by a defect in phenylalanine hydroxylase. Phenylalanine accumulates and damages the developing brain. Newborn screening and a diet low in this amino acid avoid the damage even though the gene defect remains."
           },
           {
             "question": "What is genetic drift?",
@@ -15717,16 +15717,16 @@ const subjects = [
             "solution": "Genetic drift is the random fluctuation of allele frequencies from generation to generation due to chance sampling effects. It is most significant in small populations where random events can have a large impact. Types include the founder effect and bottleneck effect."
           },
           {
-            "question": "What is the difference between autosomal and sex-linked inheritance?",
+            "question": "Two parents are heterozygous for the sickle cell allele (HbAHbS). What are the probabilities of a child with sickle cell disease and of a child who is a protected carrier?",
             "options": [
-              "There is no difference",
-              "Autosomal genes are on chromosomes 1-22; sex-linked genes are on the X or Y chromosome",
-              "Autosomal genes skip generations; sex-linked do not",
-              "Sex-linked genes are always dominant",
-              "Autosomal genes are only found in males"
+              "1/2 with disease, 1/4 carrier",
+              "1/4 with disease, 1/4 carrier",
+              "3/4 with disease, 1/4 carrier",
+              "1/4 with disease, 1/2 carrier",
+              "0 with disease, 1/2 carrier"
             ],
-            "correct": 1,
-            "solution": "Autosomal inheritance involves genes on autosomes (chromosomes 1-22), affecting males and females equally. Sex-linked inheritance involves genes on the sex chromosomes (usually X-linked). X-linked recessive traits appear more frequently in males because they have only one X chromosome."
+            "correct": 3,
+            "solution": "HbAHbS × HbAHbS gives 1 HbAHbA : 2 HbAHbS : 1 HbSHbS. HbSHbS has the disease (1/4) and HbAHbS are carriers with partial protection from malaria (1/2)."
           },
           {
             "question": "A plant heterozygous for two independently assorting genes (AaBb) is self-crossed. What fraction of offspring will be homozygous for both genes?",
@@ -15741,28 +15741,28 @@ const subjects = [
             "solution": "Homozygous for A gene: AA (1/4) + aa (1/4) = 2/4 = 1/2. Homozygous for B gene: BB (1/4) + bb (1/4) = 2/4 = 1/2. Since genes assort independently: 1/2 × 1/2 = 1/4 = 4/16 of offspring will be homozygous for both genes (AABB, AAbb, aaBB, or aabb)."
           },
           {
-            "question": "What is natural selection?",
+            "question": "Two populations have an allele with a frequency of 0.5. One has 10 individuals and the other 1000. Which is expected to show larger random changes in allele frequency from generation to generation?",
             "options": [
-              "Random changes in allele frequency",
-              "The process by which organisms with favourable traits are more likely to survive and reproduce",
-              "Artificial breeding by humans",
-              "Genetic drift in large populations",
-              "Migration of organisms to new habitats"
+              "The population of 10, because genetic drift is stronger in small populations",
+              "The population of 1000, because it has more mutations",
+              "Both equally",
+              "Neither, because drift needs selection",
+              "The population of 1000, because it has more migration"
             ],
-            "correct": 1,
-            "solution": "Natural selection is the mechanism of evolution where organisms with traits better suited to their environment have higher fitness (survival and reproductive success). Over generations, advantageous alleles increase in frequency. It requires variation, heritability, differential survival, and reproduction."
+            "correct": 0,
+            "solution": "Drift is random sampling of alleles. With few individuals, chance has a large effect on which alleles are passed on, and alleles can be lost or fixed quickly. Large populations average out."
           },
           {
-            "question": "What is the difference between directional and stabilising selection?",
+            "question": "A recessive allele \\(a\\) has a frequency \\(q = 0.2\\). A selection event kills all aa homozygotes before reproduction. What is the frequency of \\(a\\) among the survivors? (Assume random mating before selection.)",
             "options": [
-              "They are the same thing",
-              "Directional selection favours one extreme phenotype; stabilising selection favours the intermediate phenotype",
-              "Directional selection reduces variation; stabilising increases it",
-              "Directional occurs in plants; stabilising in animals",
-              "Both always increase genetic variation"
+              "0.167",
+              "0.20",
+              "0.04",
+              "0.0",
+              "0.36"
             ],
-            "correct": 1,
-            "solution": "Directional selection favours individuals at one extreme of the phenotypic range (shifting the mean). Example: increasing antibiotic resistance. Stabilising selection favours intermediate phenotypes and selects against both extremes (narrowing variation). Example: human birth weight — very small or very large babies have lower survival."
+            "correct": 0,
+            "solution": "Genotype frequencies: AA = 0.64, Aa = 0.32, aa = 0.04. After removing aa the survivors are 0.96 of the population. Alleles \\(a\\) come only from Aa: \\(\\dfrac{0.32/2}{0.96} = \\dfrac{0.16}{0.96} = 0.167\\)."
           },
           {
             "question": "What is the founder effect?",
@@ -15789,16 +15789,16 @@ const subjects = [
             "solution": "The bottleneck effect occurs when a population is dramatically reduced by a catastrophic event (natural disaster, disease). The surviving population has reduced genetic diversity, and allele frequencies may be very different from the original population. Example: cheetahs have very low genetic diversity due to a historical bottleneck."
           },
           {
-            "question": "What determines the ABO blood type of a person?",
+            "question": "Himalayan rabbits have dark fur on the ears, nose and feet. When a patch of white back fur is shaved and kept cold, the new fur is dark. What does this show?",
             "options": [
-              "The type of white blood cells",
-              "The presence or absence of specific antigens (A and B) on red blood cells",
-              "The concentration of haemoglobin",
-              "The size of red blood cells",
-              "The number of platelets"
+              "The fur colour gene mutated",
+              "Fur colour is determined only by temperature",
+              "The rabbit is a different species",
+              "The phenotype depends on the interaction of genotype and environment (temperature)",
+              "The environment has no effect on phenotype"
             ],
-            "correct": 1,
-            "solution": "ABO blood types are determined by glycoprotein antigens on red blood cell surfaces. Type A has A antigens, type B has B antigens, type AB has both, and type O has neither. These are encoded by the ABO gene with three alleles: Iᴬ, Iᴮ (codominant), and i (recessive)."
+            "correct": 3,
+            "solution": "The enzyme that makes the dark pigment is active only at low temperatures. The same genotype gives a different phenotype in a different environment: dark in cold areas, white in warm ones."
           },
           {
             "question": "Taste buds are predominantly found on raised structures on the tongue known as:",
@@ -15825,28 +15825,28 @@ const subjects = [
             "solution": "The bottleneck effect is a type of genetic drift that occurs when the size of a population is severely reduced by a random event. The allele frequencies in the surviving population may differ greatly from the original population."
           },
           {
-            "question": "Which mode of natural selection favors individuals at both extremes of a phenotypic range over intermediate phenotypes?",
+            "question": "Beetles of genotype X leave on average 10 surviving offspring and genotype Y leave 20. What is the relative fitness of X, and the selection coefficient against it?",
             "options": [
-              "Directional selection",
-              "Stabilizing selection",
-              "Disruptive selection",
-              "Artificial selection",
-              "Sexual selection"
+              "Fitness 2.0, selection coefficient 0",
+              "Fitness 0.5, selection coefficient 0.5",
+              "Fitness 0.5, selection coefficient 1.0",
+              "Fitness 10, selection coefficient 20",
+              "Fitness 1.0, selection coefficient 0.5"
             ],
-            "correct": 2,
-            "solution": "Disruptive (or diversifying) selection favors extreme phenotypes over intermediate ones, potentially leading to a bimodal trait distribution and promoting speciation."
+            "correct": 1,
+            "solution": "Relative fitness is measured against the best genotype: \\(10/20 = 0.5\\). The selection coefficient is \\(s = 1 - w = 0.5\\)."
           },
           {
-            "question": "Which mechanism of evolution involves the random fluctuation of allele frequencies over time?",
+            "question": "Two species differ by 12 neutral nucleotide substitutions. Each lineage accumulates 1 substitution per 2 million years. How long ago did they diverge?",
             "options": [
-              "Natural selection",
-              "Gene flow",
-              "Genetic drift",
-              "Mutation",
-              "Non-random mating"
+              "12 million years",
+              "6 million years",
+              "24 million years",
+              "2 million years",
+              "48 million years"
             ],
-            "correct": 2,
-            "solution": "Genetic drift is a random process of evolution that affects population genetics."
+            "correct": 0,
+            "solution": "Substitutions accumulate in <b>both</b> lineages after the split. The total rate is \\(2 \\times 1/2 = 1\\) substitution per million years. \\(12/1 = 12\\) million years."
           },
           {
             "question": "Which immunoglobulin is found in mucous secretions, saliva, tears, and breast milk?",
@@ -15981,28 +15981,28 @@ const subjects = [
             "solution": "Huntington's is caused by an autosomal dominant CAG expansion. The man's father had HD (Hh) and mother was normal (hh), so the man has a 50% prior probability of having inherited the disease allele (Hh). Assuming the man is a carrier (Hh) marrying a homozygous normal woman (hh), the risk of transmission to his child is 50% (1/2)."
           },
           {
-            "question": "Both parents are carriers of cystic fibrosis, an autosomal recessive disease. They already have one child affected with cystic fibrosis. What is the probability that their next TWO children will both be completely healthy (unaffected)?",
+            "question": "A man with Marfan syndrome (autosomal dominant, heterozygous, Mm) and an unaffected woman have two children. What is the probability that both children are affected?",
             "options": [
+              "1/2",
               "1/4",
+              "1/8",
               "3/4",
-              "9/16",
-              "1/16",
-              "1/2"
-            ],
-            "correct": 2,
-            "solution": "For each independent pregnancy of carrier parents (Cc × Cc), the probability of having an unaffected child (CC or Cc) is 3/4 (75%). Since each birth event is mutually independent, the probability that the next two children are both unaffected is (3/4) × (3/4) = 9/16 (~56.25%)."
-          },
-          {
-            "question": "Mitochondrial disorders (such as Leber Hereditary Optic Neuropathy, LHON) are characterized in pedigree charts by:",
-            "options": [
-              "Transmission exclusively from affected fathers to all their daughters",
-              "Transmission from affected mothers to 100% of their children (both sons and daughters), while affected fathers never transmit the trait",
-              "Skipping alternating generations in a sex-dependent manner",
-              "Horizontal distribution affecting only siblings of carrier parents",
-              "Complete male lethality in utero"
+              "1/16"
             ],
             "correct": 1,
-            "solution": "Mitochondria and their circular mtDNA genomes are inherited exclusively through the maternal lineage via the ovum's large cytoplasm (the sperm's mitochondria in the midpiece are ubiquitinated and degraded upon fertilization). Thus, an affected mother transmits the mutation to all of her offspring, while an affected father transmits it to none."
+            "solution": "Mm × mm: each child is Mm (affected) with probability 1/2. For two independent children: \\(1/2 \\times 1/2 = 1/4\\)."
+          },
+          {
+            "question": "Why are females much less often affected by X-linked recessive disorders such as haemophilia A than males?",
+            "options": [
+              "A female needs two copies of the recessive allele, whereas a male has only one X chromosome",
+              "Females do not have an X chromosome",
+              "The allele is on the Y chromosome",
+              "Female cells destroy the allele",
+              "The disease is caused by the Y chromosome"
+            ],
+            "correct": 0,
+            "solution": "Females have two X chromosomes, so a normal allele on the second X usually masks the recessive one (they are carriers). Males have a single X and no second allele, so any recessive allele is expressed."
           },
           {
             "question": "In human genetics, a person with an autosomal dominant disease mutation fails to display any clinical manifestations of the disease throughout their entire lifespan. This phenomenon is defined as:",
@@ -16017,16 +16017,16 @@ const subjects = [
             "solution": "Penetrance refers to the proportion of individuals carrying a specific genotype who manifest the associated clinical phenotype. Incomplete (reduced) penetrance means that some individuals carry the pathogenic mutation yet exhibit no phenotypic signs (penetrance < 100%). Variable expressivity, by contrast, describes differing degrees of symptom severity among individuals who do express the trait."
           },
           {
-            "question": "The progressive worsening of symptom severity and earlier age of onset in successive generations of families affected by myotonic dystrophy or Huntington's disease is termed:",
+            "question": "A heterozygous person with Huntington disease (autosomal dominant) and an unaffected partner have two children. What is the probability that both children are unaffected?",
             "options": [
-              "Genomic imprinting",
-              "Genetic anticipation",
-              "Pleiotropy",
-              "Epistasis",
-              "Heteroplasmy"
+              "1/2",
+              "1/16",
+              "3/4",
+              "1/8",
+              "1/4"
             ],
-            "correct": 1,
-            "solution": "Genetic anticipation is characteristic of trinucleotide repeat expansion disorders (e.g., CAG in Huntington's, CTG in myotonic dystrophy). During gametogenesis, DNA polymerase slippage causes unstable expansion of repeat copy numbers in successive generations, leading to earlier disease onset and increased clinical severity."
+            "correct": 4,
+            "solution": "A heterozygous parent passes the allele to each child with probability 1/2, so each child is unaffected with probability 1/2. For two children: \\(1/2 \\times 1/2 = 1/4\\)."
           },
           {
             "question": "Prader-Willi syndrome and Angelman syndrome are distinct neurodevelopmental disorders that can both arise from identical microdeletions of chromosome 15q11-q13. The differing phenotypes depend on whether the deletion is inherited from the father or mother due to:",
@@ -16101,16 +16101,16 @@ const subjects = [
             "solution": "Consanguineous unions (matings between related individuals) markedly elevate the coefficient of inbreeding (F), increasing the probability that both parents have inherited the identical rare recessive pathogenic allele from a shared common ancestor, thereby producing homozygous affected offspring (autosomal recessive inheritance)."
           },
           {
-            "question": "A man affected by familial hypercholesterolemia, a genetic disease with dominant inheritance, married to a healthy woman, has had an affected son and daughter and a healthy son and daughter. We can deduce that:",
+            "question": "In familial hypercholesterolaemia caused by LDL receptor defects, heterozygotes have about half the normal number of functional receptors. What is the likely consequence?",
             "options": [
-              "the woman is heterozygous",
-              "the disease is X-linked",
-              "the disease is Y-linked",
-              "the man is homozygous",
-              "the man is heterozygous"
+              "Blood cholesterol is very low",
+              "Cells make less cholesterol",
+              "Nothing changes in the blood",
+              "Blood LDL cholesterol is raised and the risk of early heart disease increases",
+              "LDL is destroyed by the kidneys"
             ],
-            "correct": 4,
-            "solution": "Familial hypercholesterolemia is an autosomal dominant disease (D). The healthy mother must be homozygous recessive (dd). Since the father produces both affected children (Dd) and healthy children (dd), he must carry one dominant disease allele and one normal recessive allele, making him heterozygous (Dd)."
+            "correct": 3,
+            "solution": "Fewer receptors mean less LDL is taken up by cells, so more stays in the blood and deposits in artery walls (atherosclerosis). Homozygotes have almost no receptors and are much more severely affected."
           },
           {
             "question": "Following a backcross, offspring are obtained consisting of 50% long-tailed mice (dominant trait) and 50% short-tailed mice (recessive trait). Identify which alternative represents the correct cross.",
@@ -16125,16 +16125,16 @@ const subjects = [
             "solution": "A test cross (or backcross to the homozygous recessive) of a heterozygous individual (Aa) with a homozygous recessive individual (aa) yields a 1:1 ratio (50% Aa dominant phenotype, 50% aa recessive phenotype)."
           },
           {
-            "question": "An organism that is heterozygous for a given trait:",
+            "question": "Snapdragon flower colour shows incomplete dominance: red (RR) × white (rr) gives pink (Rr). A pink plant is crossed with a white plant. What are the expected offspring?",
             "options": [
-              "is a gamete carrying the Y chromosome",
-              "has different alleles for a given gene on homologous chromosomes",
-              "has identical alleles for a given gene on homologous chromosomes",
-              "is the male zygote",
-              "has multiple forms of the same zygote"
+              "1/2 pink and 1/2 white",
+              "All pink",
+              "1/2 red and 1/2 white",
+              "1 red : 2 pink : 1 white",
+              "3/4 pink and 1/4 white"
             ],
-            "correct": 1,
-            "solution": "By definition, an individual is heterozygous for a specific gene when it possesses two different alleles at that locus on homologous chromosomes."
+            "correct": 0,
+            "solution": "Rr × rr gives Rr (pink) and rr (white) in equal numbers."
           },
           {
             "question": "Which of the following statements about the inactivation of one X chromosome in female mammalian cells is correct?",
@@ -16149,16 +16149,16 @@ const subjects = [
             "solution": "During embryonic development in female mammals, X-chromosome inactivation (lyonization) occurs randomly in each cell. As a result, approximately half of the somatic cells express the paternal X chromosome, and the other half express the maternal X chromosome."
           },
           {
-            "question": "Pleiotropy refers to:",
+            "question": "A female heterozygous for two linked genes is crossed with a double recessive male. The offspring are 41.5% of each parental type and 8.5% of each recombinant type. What is the map distance between the genes?",
             "options": [
-              "The control exerted by two or more genes on the same phenotypic trait",
-              "The presence, in a given population, of multiple allelic variants of the same phenotypic trait",
-              "The control exerted by a single gene over multiple phenotypic traits",
-              "The interaction between two genes in which one influences the phenotypic expression of the other",
-              "The phenotypic manifestation in both alleles of a heterozygous individual"
+              "17 map units",
+              "8.5 map units",
+              "83 map units",
+              "41.5 map units",
+              "50 map units"
             ],
-            "correct": 2,
-            "solution": "Pleiotropy occurs when a single gene influences two or more seemingly unrelated phenotypic traits (e.g. the Marfan syndrome mutation in the FBN1 gene affecting skeletal, ocular, and cardiovascular systems)."
+            "correct": 0,
+            "solution": "Recombinants \\(= 8.5 + 8.5 = 17\\%\\). One map unit equals 1% recombination, so the genes are 17 cM apart."
           },
           {
             "question": "The mother of a girl with oculocutaneous albinism type 1 is expecting dizygotic twins. Knowing that neither the father nor the mother are albino and that the TYR gene associated with the condition is located on chromosome 11, what is the probability that both twins will be albino?",
@@ -16209,16 +16209,16 @@ const subjects = [
             "solution": "Francesca's father is color-blind (X^b Y), so Francesca must be a carrier: X^B X^b.\nPaolo is unaffected: X^B Y.\n- For their son (XY): he inherits Y from Paolo and has a 50% chance of inheriting X^b from Francesca → Male probability is 50%.\n- For their daughter (XX): she inherits X^B from Paolo, ensuring she will have normal color vision → Female probability is 0%."
           },
           {
-            "question": "Cystic fibrosis is a genetic disease caused by an autosomal recessive allele. Two healthy parents have one child with cystic fibrosis and two healthy children. What is the probability that the next child will have the disease?",
+            "question": "Tay-Sachs disease is caused by a deficiency of a lysosomal enzyme (hexosaminidase A). Which organelle and which substance accumulate?",
             "options": [
-              "1/2",
-              "0",
-              "1",
-              "1/4",
-              "2/3"
+              "Mitochondria accumulate glucose",
+              "The nucleus accumulates RNA",
+              "Lysosomes accumulate a lipid (GM2 ganglioside) in neurons",
+              "Peroxisomes accumulate cholesterol",
+              "The Golgi apparatus accumulates proteins"
             ],
-            "correct": 3,
-            "solution": "Since the healthy parents have an affected child, both parents are obligate heterozygous carriers (Aa × Aa). Each pregnancy has an independent 1/4 (25%) probability of producing a homozygous recessive child (aa) affected by cystic fibrosis."
+            "correct": 2,
+            "solution": "Without the enzyme, GM2 ganglioside cannot be broken down in lysosomes, so it builds up in nerve cells and gradually destroys them."
           },
           {
             "question": "From a cross between individuals with phenotypes AB and ab, offspring are obtained with 50% of phenotypes Ab and 50% of phenotypes aB. What is the genotype of the parents with phenotype AB?",
@@ -16251,16 +16251,16 @@ const subjects = [
         "name": "Evolution & Population Genetics",
         "questions": [
           {
-            "question": "Which of the following is an example of a vestigial structure in humans?",
+            "question": "Two plant species each have \\(2n = 14\\). They hybridise and the sterile hybrid doubles its chromosome number by an error in meiosis, becoming fertile. How many chromosomes does the new species have?",
             "options": [
-              "Appendix",
-              "Heart",
-              "Lungs",
-              "Brain",
-              "Kidneys"
+              "14",
+              "7",
+              "21",
+              "56",
+              "28"
             ],
-            "correct": 0,
-            "solution": "The appendix is considered a vestigial structure — it has lost most or all of its original function through evolution. It may have been involved in digesting cellulose in herbivorous ancestors but now has minimal function in humans."
+            "correct": 4,
+            "solution": "The hybrid has 14 chromosomes (7 from each parent), which cannot pair properly. Doubling gives 28, so each chromosome has a partner and meiosis works. This is a sympatric speciation by allopolyploidy."
           },
           {
             "question": "Which of the following is an example of convergent evolution?",
@@ -16299,16 +16299,16 @@ const subjects = [
             "solution": "Homologous structures (e.g., human arm, whale flipper, bat wing, cat leg) share the same underlying skeletal plan but are adapted for different functions. This structural similarity despite different uses suggests they were inherited from a common ancestor and modified by natural selection."
           },
           {
-            "question": "What is disruptive selection?",
+            "question": "The proportion of dark peppered moths rises from 2% to 95% as trees become blackened by soot. Which type of selection is this?",
             "options": [
-              "Selection that favours the average phenotype",
-              "Selection that favours individuals at both extremes of the phenotypic range over the intermediate",
-              "Selection that eliminates all variation",
-              "Selection that occurs only in artificial environments",
-              "Selection that has no effect on allele frequencies"
+              "Stabilising selection",
+              "Disruptive selection",
+              "Sexual selection only",
+              "Directional selection",
+              "Genetic drift"
             ],
-            "correct": 1,
-            "solution": "Disruptive (diversifying) selection favours individuals at both extremes of the phenotypic range while selecting against intermediates. This can increase phenotypic variance and may eventually lead to speciation if the two extreme groups become reproductively isolated."
+            "correct": 3,
+            "solution": "One extreme phenotype (dark) is favoured and the population mean moves in that direction. Stabilising selection favours the intermediate, and disruptive favours both extremes."
           },
           {
             "question": "What are analogous structures and what do they indicate?",
@@ -16347,16 +16347,16 @@ const subjects = [
             "solution": "Fossils document the history of life, showing: transitional forms linking major groups (e.g., Tiktaalik between fish and tetrapods), chronological sequences of change, extinct organisms, and the geographic distribution of past life. Radiometric dating establishes the timeline."
           },
           {
-            "question": "What is sexual selection?",
+            "question": "Why does artificial selection of a breed usually reduce genetic variation and increase inherited disease?",
             "options": [
-              "Selection based on survival ability only",
-              "Selection based on mating success, where certain traits increase an organism's chance of attracting mates",
-              "Artificial selection by humans",
-              "Selection that eliminates sexual reproduction",
-              "Random mating without preference"
+              "It creates new harmful alleles by direct mutation",
+              "It increases gene flow",
+              "Only a few selected individuals breed, so recessive harmful alleles become homozygous more often",
+              "It always increases heterozygosity",
+              "It makes mutation rates higher"
             ],
-            "correct": 1,
-            "solution": "Sexual selection is a form of natural selection where certain traits evolve because they increase mating success rather than survival. It includes intrasexual selection (competition between same-sex individuals) and intersexual selection (mate choice). Example: peacock's elaborate tail attracts peahens."
+            "correct": 2,
+            "solution": "Breeding from a small group raises inbreeding. The frequency of homozygous recessive genotypes rises, which is why some purebred dogs have high rates of certain hereditary diseases."
           },
           {
             "question": "What are the five conditions required for Hardy-Weinberg equilibrium?",
@@ -16371,16 +16371,16 @@ const subjects = [
             "solution": "Hardy-Weinberg equilibrium requires: (1) large population (no genetic drift), (2) random mating, (3) no mutation, (4) no migration (gene flow), and (5) no natural selection. In reality, these conditions are rarely met, so populations evolve. The model serves as a null hypothesis."
           },
           {
-            "question": "What is coevolution?",
+            "question": "Sequence differences are: A–B 2, A–C 10, B–C 10. Which statement is correct?",
             "options": [
-              "Two species evolving independently",
-              "Reciprocal evolutionary change between interacting species",
-              "Evolution within a single species",
-              "Extinction of two species at the same time",
-              "Convergent evolution in unrelated species"
+              "A and C are the closest relatives",
+              "B and C are the closest relatives",
+              "All three diverged at the same time",
+              "A and B share a more recent common ancestor with each other than with C",
+              "C is the ancestor of A and B"
             ],
-            "correct": 1,
-            "solution": "Coevolution occurs when two interacting species exert selective pressures on each other, driving reciprocal evolutionary adaptations. Examples include predator-prey arms races, pollinators and flowering plants, and host-parasite interactions."
+            "correct": 3,
+            "solution": "The smaller the difference, the more recent the split. A and B differ only slightly, so they form a branch (clade) that split from C earlier."
           },
           {
             "question": "What type of evidence for evolution is provided by comparing DNA sequences across species?",
@@ -16407,28 +16407,28 @@ const subjects = [
             "solution": "Sympatric speciation occurs without geographic separation. It can result from polyploidy (especially in plants), habitat differentiation, or assortative mating within a population. For example, apple maggot flies diversified into populations specialising on different host fruits within the same area."
           },
           {
-            "question": "What is antibiotic resistance and how does it develop?",
+            "question": "A population of \\(10^{9}\\) bacteria contains resistant mutants at a frequency of 1 in \\(10^{7}\\). How many resistant bacteria are present before exposure to the antibiotic?",
             "options": [
-              "Antibiotics becoming stronger over time",
-              "Bacteria evolving mechanisms to survive antibiotic treatment through natural selection of resistant variants",
-              "Humans becoming immune to antibiotics",
-              "Antibiotics losing their chemical structure",
-              "Viruses becoming resistant to antibiotics"
+              "10",
+              "100",
+              "1000",
+              "10<sup>7</sup>",
+              "1"
             ],
             "correct": 1,
-            "solution": "Antibiotic resistance occurs when bacteria survive antibiotic exposure through mutations or acquired resistance genes (via plasmid transfer). Mechanisms include: enzyme degradation of the antibiotic (beta-lactamase), altered target sites, efflux pumps, and reduced permeability. Overuse of antibiotics accelerates resistance evolution."
+            "solution": "\\(10^{9} \\times 10^{-7} = 100\\). After treatment, the susceptible bacteria die and the 100 resistant cells can multiply, so the population becomes resistant."
           },
           {
-            "question": "Which of the following is a requirement for a population to remain in Hardy-Weinberg equilibrium?",
+            "question": "Two species of frog live in the same pond but breed in different seasons. What type of isolation is this?",
             "options": [
-              "High mutation rate",
-              "Non-random mating",
-              "Small population size",
-              "No natural selection",
-              "Significant gene flow"
+              "Postzygotic (hybrid sterility)",
+              "Geographic isolation",
+              "Prezygotic (temporal isolation)",
+              "Postzygotic (hybrid breakdown)",
+              "Gametic incompatibility only"
             ],
-            "correct": 3,
-            "solution": "Hardy-Weinberg equilibrium requires no mutations, random mating, a very large population size, no gene flow (no migration), and no natural selection."
+            "correct": 2,
+            "solution": "Breeding at different times prevents mating, so no zygote forms: this is a prezygotic barrier. A mule (horse × donkey) shows postzygotic hybrid sterility."
           },
           {
             "question": "What is the term for a structure that has lost all or most of its original function in the course of evolution?",
@@ -16467,28 +16467,28 @@ const subjects = [
             "solution": "Analogous structures arise from convergent evolution, where unrelated organisms independently evolve similar traits to adapt to similar environments or ecological niches."
           },
           {
-            "question": "What is speciation?",
+            "question": "Which pair of structures is <b>analogous</b> (same function, different evolutionary origin)?",
             "options": [
-              "The extinction of a species",
-              "The process by which new distinct species evolve",
-              "The movement of alleles between populations",
-              "The adaptation of an individual",
-              "The mutation of a single gene"
+              "The human arm and the bat wing",
+              "The flipper of a whale and the human arm",
+              "The forelimb of a horse and of a cat",
+              "The wing of a butterfly and the wing of a bird",
+              "The wing of a bat and the flipper of a seal"
             ],
-            "correct": 1,
-            "solution": "Speciation is the evolutionary process leading to the formation of a new species."
+            "correct": 3,
+            "solution": "Insect wings and bird wings have the same function but evolved independently and have different structures. The other pairs are modified versions of the same ancestral tetrapod forelimb (homologous)."
           },
           {
-            "question": "What process describes the formation of a new, distinct species?",
+            "question": "Which statement about giraffe necks is consistent with Darwin's theory?",
             "options": [
-              "Genetic drift",
-              "Speciation",
-              "Gene flow",
-              "Mutation",
-              "Bottleneck"
+              "Giraffes stretched their necks and passed the longer necks on",
+              "Giraffes with longer necks survived and reproduced more, so the trait became more common",
+              "Giraffes needed longer necks, so they grew them",
+              "All giraffes changed in one generation",
+              "Short-necked giraffes became long-necked during their lives"
             ],
             "correct": 1,
-            "solution": "Speciation is the evolutionary process of new species formation."
+            "solution": "Darwin proposed variation among individuals, inheritance and differential survival and reproduction. Lamarck proposed that traits acquired during life are inherited, which is not supported by evidence."
           },
           {
             "question": "In a human population in Hardy-Weinberg equilibrium, the incidence of an autosomal recessive disease (cystic fibrosis, genotype aa) is 1 in 2,500 live births (q² = 0.0004). What is the estimated frequency of healthy heterozygous CARRIERS (2pq) in this population?",
@@ -16743,16 +16743,16 @@ const subjects = [
             "solution": "In regions where Plasmodium falciparum malaria is endemic, the HbS allele confers resistance to malaria in heterozygotes (heterozygote advantage/balancing selection), maintaining high allele frequencies (15–20%), directly contradicting statement C."
           },
           {
-            "question": "Which of the following statements is NOT consistent with Darwin’s theory of evolution by natural selection?",
+            "question": "Male peacocks with larger tails are more attractive to females but are easier for predators to catch. How can the large tail persist?",
             "options": [
-              "The need for adaptation induces heritable variations in individuals of a population",
-              "Populations have a high reproductive potential",
-              "Natural resources are limited",
-              "Natural selection favors traits that improve individuals’ survival and reproductive success",
-              "Individuals in a population show heritable variations independently of environmental needs"
+              "It cannot persist, because natural selection always removes it",
+              "The tail helps the male to fly",
+              "The tail is inherited only by females",
+              "Predators prefer small tails",
+              "The mating advantage outweighs the survival cost, through sexual selection"
             ],
-            "correct": 0,
-            "solution": "Darwinian natural selection acts on existing, randomly generated heritable variation. The idea that environmental need directly induces purposeful heritable adaptations is Lamarckian, not Darwinian."
+            "correct": 4,
+            "solution": "Sexual selection favours traits that increase the number of offspring, even if they lower survival. What counts for fitness is reproductive success, not just survival."
           }
         ]
       },
@@ -16821,16 +16821,16 @@ const subjects = [
             "explanation": "Tendons (connecting muscle to bone) and ligaments (connecting bone to bone) are made of dense regular connective tissue, which consists of tightly packed, parallel collagen fibers providing great tensile strength in one direction."
           },
           {
-            "question": "Adipose tissue is specialized for:",
+            "question": "After a heart attack, the damaged heart muscle is replaced by scar tissue. Why?",
             "options": [
-              "Contraction",
-              "Nerve impulse transmission",
-              "Energy storage and insulation",
-              "Transporting oxygen",
-              "Bone formation"
+              "Cardiac muscle cells have very limited ability to divide, so fibroblasts fill the damage with collagen",
+              "Cardiac muscle cells divide very rapidly",
+              "The heart contains no connective tissue",
+              "The blood makes new muscle",
+              "Scar tissue is a form of cardiac muscle"
             ],
-            "answer": 2,
-            "explanation": "Adipose tissue (fat) is a connective tissue specialized for storing energy in the form of triglycerides, providing thermal insulation, and cushioning organs."
+            "correct": 0,
+            "solution": "Cardiac muscle cells rarely divide, so lost cells are not replaced. Fibroblasts make collagen and form a scar, which does not contract. This reduces the pumping ability of the heart."
           },
           {
             "question": "Which of the following tissues has the highest capacity for regeneration?",
@@ -16917,16 +16917,16 @@ const subjects = [
             "solution": "Areolar tissue is the most widely distributed loose connective tissue in the body. It wraps and cushions organs and holds tissue fluids."
           },
           {
-            "question": "The primary cell type found in cartilage is the:",
+            "question": "Which of these is <b>not</b> a type of connective tissue?",
             "options": [
-              "Osteoblast",
-              "Fibroblast",
-              "Chondrocyte",
-              "Adipocyte",
-              "Macrophage"
+              "Adipose tissue",
+              "Smooth muscle",
+              "Blood",
+              "Bone",
+              "A tendon"
             ],
-            "correct": 2,
-            "solution": "Chondrocytes are the only cells found in healthy cartilage. They produce and maintain the cartilaginous matrix and are located in spaces called lacunae."
+            "correct": 1,
+            "solution": "Connective tissue has cells in an extracellular matrix and includes blood, bone, cartilage, adipose tissue, tendons and ligaments. Smooth muscle is a muscle tissue."
           },
           {
             "question": "Which type of epithelium is highly specialized for stretching and lines the urinary bladder?",
@@ -16953,16 +16953,16 @@ const subjects = [
             "solution": "Xylem is the specialized transport tissue consisting of dead, hollow cells (vessel elements and tracheids) that conduct water and dissolved minerals upwards from the roots via transpiration pull."
           },
           {
-            "question": "Which of the following is a type of cartilage?",
+            "question": "Which type of epithelium lines the alveoli of the lungs, and why?",
             "options": [
-              "Squamous",
-              "Hyaline",
-              "Adipose",
-              "Epithelium",
-              "Fibroblast"
+              "Stratified squamous, because it resists abrasion",
+              "Simple columnar, because it absorbs nutrients",
+              "Stratified cuboidal, because it secretes mucus",
+              "Simple squamous, because a single thin layer allows rapid diffusion of gases",
+              "Pseudostratified ciliated, because it makes bile"
             ],
-            "correct": 1,
-            "solution": "Hyaline cartilage is the most common type of cartilage connective tissue in the body."
+            "correct": 3,
+            "solution": "The exchange of oxygen and carbon dioxide needs a very short diffusion distance. A single layer of flat cells (simple squamous epithelium) is the thinnest barrier. Skin and oesophagus use stratified squamous epithelium for protection."
           },
           {
             "question": "Which plant tissue conducts water and minerals?",
@@ -16989,16 +16989,16 @@ const subjects = [
             "solution": "The phloem is a specialized plant tissue for translocating organic nutrients."
           },
           {
-            "question": "Which cell type is responsible for synthesizing the extracellular matrix and collagen?",
+            "question": "In multiple sclerosis the immune system destroys the myelin sheath around axons of the central nervous system. What is the main effect?",
             "options": [
-              "Macrophage",
-              "Adipocyte",
-              "Fibroblast",
-              "Osteoblast",
-              "Chondrocyte"
+              "Nerve impulses are conducted more slowly or are blocked",
+              "The impulses are faster",
+              "The neurons make more neurotransmitter",
+              "The cell bodies become muscle cells",
+              "Blood flow to the brain stops"
             ],
-            "correct": 2,
-            "solution": "The fibroblast is the most common cell of connective tissue."
+            "correct": 0,
+            "solution": "Myelin insulates axons and allows saltatory conduction (jumping from node to node). Without it, the impulse slows or fails, causing weakness and loss of coordination."
           },
           {
             "question": "Which type of epithelial tissue lines the pulmonary alveoli and the luminal surface of blood vessels (vascular endothelium), providing a minimal diffusion barrier for gas and nutrient exchange?",
@@ -17277,16 +17277,16 @@ const subjects = [
             "solution": "Mucous membranes (mucosae) consist of a surface layer of epithelium resting on an underlying basement membrane and lamina propria of connective tissue."
           },
           {
-            "question": "The epidermis is made up of:",
+            "question": "Which structure allows the muscle cells of the heart to contract almost simultaneously?",
             "options": [
-              "Stratified columnar epithelium",
-              "Simple squamous epithelium",
-              "Simple columnar epithelium",
-              "Stratified squamous epithelium",
-              "Ciliated cuboidal epithelium"
+              "Tight junctions",
+              "Desmosomes only",
+              "Hemidesmosomes",
+              "Plasmodesmata",
+              "Gap junctions in the intercalated discs"
             ],
-            "correct": 3,
-            "solution": "The mammalian epidermis is composed of keratinized stratified squamous epithelium, providing mechanical protection and a waterproof barrier."
+            "correct": 4,
+            "solution": "Gap junctions are channels that let ions pass between cells, so the action potential spreads quickly. Desmosomes in the same discs hold the cells together against the force of contraction."
           },
           {
             "question": "Which of the following organs has an internal lining made up of transitional epithelium?",
@@ -17319,16 +17319,16 @@ const subjects = [
         "name": "Human Physiology: Cardiovascular",
         "questions": [
           {
-            "question": "A woman with blood group AB marries a man with blood group O. What is the probability their first child has blood group A?",
+            "question": "A white-eyed male fly (X<sup>w</sup>Y) is crossed with a homozygous red-eyed female (X<sup>W</sup>X<sup>W</sup>). The F1 flies are crossed with each other. What fraction of the F2 flies are white-eyed?",
             "options": [
-              "0%",
-              "25%",
-              "50%",
-              "75%",
-              "100%"
+              "1/2, all males",
+              "1/4, all males",
+              "1/4, half males and half females",
+              "1/2, both sexes equally",
+              "3/4, mostly males"
             ],
-            "correct": 2,
-            "solution": "Woman (AB): IAIB. Man (O): ii. Offspring: 50% IAi (group A), 50% IBi (group B). Probability of A = 50%."
+            "correct": 1,
+            "solution": "F1: X<sup>W</sup>X<sup>w</sup> females and X<sup>W</sup>Y males (all red-eyed). F2: X<sup>W</sup>X<sup>W</sup>, X<sup>W</sup>X<sup>w</sup>, X<sup>W</sup>Y and X<sup>w</sup>Y in equal numbers. Only X<sup>w</sup>Y is white-eyed: 1/4 of the flies, and all are males."
           },
           {
             "question": "Which correctly describes the cardiac cycle sequence?",
@@ -17343,16 +17343,16 @@ const subjects = [
             "solution": "Atrial systole: atria contract, pushing blood into ventricles. Ventricular systole: ventricles contract, blood ejected. Ventricular diastole: ventricles relax, blood flows passively from atria."
           },
           {
-            "question": "Which hormone is primarily responsible for lowering blood glucose levels?",
+            "question": "Which set of responses occurs when body temperature falls below the set point?",
             "options": [
-              "Glucagon",
-              "Insulin",
-              "Adrenaline",
-              "Thyroxine",
-              "Cortisol"
+              "Vasodilation, sweating and flattened hair",
+              "Vasoconstriction in the skin, shivering and raised body hair",
+              "Vasodilation and shivering",
+              "Vasoconstriction and sweating",
+              "Sweating and shivering"
             ],
             "correct": 1,
-            "solution": "Insulin, secreted by pancreatic beta cells, lowers blood glucose by promoting glucose uptake into cells and glycogen synthesis. Glucagon has the opposite effect — raising blood glucose."
+            "solution": "The hypothalamus detects the fall in temperature. The effectors reduce heat loss (vasoconstriction, hair erection) and increase heat production (shivering, raised metabolic rate). Sweating and vasodilation are responses to heat."
           },
           {
             "question": "What is the primary function of the sinoatrial (SA) node in the heart?",
@@ -17439,16 +17439,16 @@ const subjects = [
             "solution": "The liver receives blood from the hepatic portal vein (from digestive organs) and hepatic artery. It filters, metabolises, and detoxifies substances before blood enters systemic circulation. It also produces bile, stores glycogen, and synthesises plasma proteins."
           },
           {
-            "question": "Which of the following describes the process of osmoregulation in the kidney?",
+            "question": "Which of these is an example of <b>positive</b> feedback?",
             "options": [
-              "Filtration of blood to form urine",
-              "Reabsorption of water and solutes to maintain blood composition",
-              "Secretion of hormones to regulate blood pressure",
-              "Production of red blood cells",
-              "Storage of urine before excretion"
+              "Oxytocin increases uterine contractions, which release more oxytocin during labour",
+              "Insulin lowers blood glucose, which lowers insulin release",
+              "Sweating lowers body temperature, which reduces sweating",
+              "High blood CO<sub>2</sub> increases breathing, which lowers CO<sub>2</sub>",
+              "Low blood calcium releases parathyroid hormone, which raises calcium"
             ],
-            "correct": 1,
-            "solution": "Osmoregulation is the process of maintaining the balance of water and solutes in the blood. The kidney achieves this through selective reabsorption of water and solutes in the nephron, regulated by hormones like ADH and aldosterone."
+            "correct": 0,
+            "solution": "Positive feedback amplifies the change. In labour, contractions push the head against the cervix, which stimulates more oxytocin and stronger contractions until birth. The others are negative feedback loops that restore a set point."
           },
           {
             "question": "Which of the following is a function of the lymphatic system?",
@@ -17691,16 +17691,16 @@ const subjects = [
             "solution": "The thyroid gland produces thyroxine (T4) and triiodothyronine (T3), which regulate basal metabolic rate, body temperature, growth, and development. It also produces calcitonin, which lowers blood calcium. Thyroid function is regulated by TSH from the anterior pituitary."
           },
           {
-            "question": "What is negative feedback in the endocrine system?",
+            "question": "After drinking alcohol, a person produces a large volume of dilute urine. Alcohol inhibits ADH. Why does this happen?",
             "options": [
-              "A mechanism where the output enhances the initial stimulus",
-              "A mechanism where the output inhibits the initial stimulus, maintaining homeostasis",
-              "A type of nerve impulse",
-              "A disease of the endocrine system",
-              "A mechanism that only occurs in plants"
+              "More aquaporins in the collecting duct, so more water is reabsorbed",
+              "The nephron stops filtering",
+              "Fewer aquaporins in the collecting duct, so less water is reabsorbed",
+              "The proximal tubule reabsorbs no water",
+              "The bladder makes more water"
             ],
-            "correct": 1,
-            "solution": "Negative feedback is a regulatory mechanism where the product of a process inhibits the process that produced it, maintaining stability. For example, high blood glucose stimulates insulin release, which lowers glucose, which then reduces insulin secretion. Most hormonal regulation uses negative feedback."
+            "correct": 2,
+            "solution": "ADH inserts aquaporins into the collecting duct wall, so water leaves the filtrate and the urine is concentrated. Without ADH, the duct is less permeable to water, so a large volume of dilute urine is produced."
           },
           {
             "question": "What is the function of the medulla oblongata?",
@@ -17715,16 +17715,16 @@ const subjects = [
             "solution": "The medulla oblongata, located in the brainstem, controls essential involuntary functions: cardiac centre (heart rate), respiratory centre (breathing rate and depth), and vasomotor centre (blood vessel diameter/blood pressure). It also controls reflexes like coughing, sneezing, and swallowing."
           },
           {
-            "question": "How does insulin differ from glucagon in blood glucose regulation?",
+            "question": "Blood pH is given by \\(\\text{pH} = 6.1 + \\log([\\text{HCO}_3^-]/[\\text{CO}_2])\\). With \\([\\text{HCO}_3^-] = 24\\) mmol/L, what is the pH when dissolved CO<sub>2</sub> falls from 1.2 to 0.8 mmol/L (for example in hyperventilation)?",
             "options": [
-              "They have the same function",
-              "Insulin lowers blood glucose by promoting uptake and glycogen synthesis; glucagon raises blood glucose by promoting glycogen breakdown",
-              "Insulin raises blood glucose; glucagon lowers it",
-              "Both are produced by the thyroid",
-              "They do not affect blood glucose"
+              "About 7.4",
+              "About 7.2",
+              "About 6.9",
+              "About 8.4",
+              "About 7.6"
             ],
-            "correct": 1,
-            "solution": "Insulin (from beta cells) lowers blood glucose by promoting glucose uptake into cells and glycogen synthesis (glycogenesis). Glucagon (from alpha cells) raises blood glucose by promoting glycogen breakdown (glycogenolysis) and gluconeogenesis. They work antagonistically to maintain blood glucose homeostasis."
+            "correct": 4,
+            "solution": "At 1.2 mmol/L: \\(\\log 20 = 1.30\\), pH \\(= 7.4\\). At 0.8 mmol/L: ratio \\(= 30\\), \\(\\log 30 = 1.48\\), so pH \\(= 6.1 + 1.48 = 7.58\\). Less CO<sub>2</sub> means less carbonic acid, so the blood becomes more alkaline."
           },
           {
             "question": "What is the inflammatory response?",
@@ -17823,16 +17823,16 @@ const subjects = [
             "explanation": "Endocrine glands are ductless glands that secrete their products (hormones) directly into the interstitial fluid, from where they diffuse into the bloodstream. Exocrine glands secrete into ducts."
           },
           {
-            "question": "The matrix of blood tissue is called:",
+            "question": "Which structure joins a skeletal muscle to a bone, and what is it made of?",
             "options": [
-              "Serum",
-              "Lymph",
-              "Plasma",
-              "Interstitial fluid",
-              "Ground substance"
+              "A ligament, made of smooth muscle",
+              "A tendon, made of simple squamous epithelium",
+              "A ligament, made of bone",
+              "A tendon, made of dense regular connective tissue rich in collagen",
+              "A nerve, made of cartilage"
             ],
-            "answer": 2,
-            "explanation": "Blood is a specialized connective tissue consisting of cells (erythrocytes, leukocytes) and cell fragments (platelets) suspended in a fluid extracellular matrix called plasma."
+            "correct": 3,
+            "solution": "Tendons connect muscle to bone and ligaments connect bone to bone. Both are dense regular connective tissue with parallel collagen fibres to resist pulling in one direction."
           },
           {
             "question": "Which type of cell junction is most prominent in cardiac muscle, allowing for rapid spread of electrical signals?",
@@ -18003,16 +18003,16 @@ const subjects = [
             "solution": "Sertoli cells are large 'nurse' cells found within the seminiferous tubules. They support, protect, and nourish the spermatogenic cells, and form the blood-testis barrier."
           },
           {
-            "question": "What type of tissue is blood classified as?",
+            "question": "Which muscle type has branched cells joined by intercalated discs with gap junctions?",
             "options": [
-              "Epithelium",
-              "Connective tissue",
-              "Muscle tissue",
-              "Nervous tissue",
-              "Glandular tissue"
+              "Skeletal muscle",
+              "Cardiac muscle",
+              "Smooth muscle",
+              "Both skeletal and smooth muscle",
+              "None, because muscle is not a tissue"
             ],
             "correct": 1,
-            "solution": "Blood is a specialized fluid connective tissue."
+            "solution": "Cardiac muscle cells are branched, striated and joined end to end by intercalated discs that allow the electrical signal to pass quickly, so the heart contracts as a unit."
           },
           {
             "question": "What is the inflammatory response?",
@@ -19749,16 +19749,16 @@ const subjects = [
             "solution": "Ethylene is a gas that functions as a plant hormone. It triggers fruit ripening, senescence (aging), and the dropping of leaves and fruits (abscission)."
           },
           {
-            "question": "What is the primary function of the ovary?",
+            "question": "During inhalation, which changes occur?",
             "options": [
-              "Fertilization",
-              "Gestation",
-              "Production of the egg and hormones",
-              "Menstruation",
-              "Sperm storage"
+              "The diaphragm contracts and flattens, thoracic volume increases and the pressure inside falls",
+              "The diaphragm relaxes and rises, volume decreases and pressure rises",
+              "The diaphragm contracts, volume decreases and pressure falls",
+              "The diaphragm relaxes, volume increases and pressure rises",
+              "The diaphragm contracts, volume stays the same"
             ],
-            "correct": 2,
-            "solution": "The ovary is the female gonad responsible for reproduction, producing the egg (ovum) and hormones."
+            "correct": 0,
+            "solution": "The diaphragm moves down and the intercostal muscles lift the ribs. The thoracic volume increases, so the pressure falls below atmospheric pressure and air flows into the lungs."
           },
           {
             "question": "Which hormone is heavily involved in the thickening of the uterine lining prior to ovulation?",
@@ -19965,16 +19965,16 @@ const subjects = [
             "solution": "Type 1 Diabetes Mellitus is an autoimmune disorder in genetically susceptible individuals (associated with HLA-DR3/DR4) characterized by autoreactive CD4+ and CD8+ T-cell infiltration (insulitis) and destruction of insulin-producing pancreatic β-cells, resulting in absolute insulin deficiency, severe hyperglycemia, and ketoacidosis."
           },
           {
-            "question": "Which of the following is a classic example of a POSITIVE feedback endocrine loop in human physiology?",
+            "question": "At the start of a fever a person feels cold and shivers, although their body temperature is above normal. Why?",
             "options": [
-              "Cortisol suppressing CRH and ACTH secretion in the HPA axis",
-              "Thyroid hormones (T3/T4) inhibiting TRH and TSH secretion",
-              "Oxytocin release during parturition (labor), where cervical stretch stimulates uterine contractions that further stimulate oxytocin release (Ferguson reflex)",
-              "Insulin release lowering blood glucose, which in turn reduces insulin release",
-              "High blood calcium stimulating calcitonin to reduce calcium"
+              "The body cannot sense temperature",
+              "The set point is lowered",
+              "Shivering is a response to heat",
+              "The hypothalamic set point has been raised, so the body temperature is below the new set point",
+              "Negative feedback has stopped working"
             ],
-            "correct": 2,
-            "solution": "Most physiological endocrine axes operate via negative feedback to maintain homeostasis. Oxytocin during labor represents positive feedback: fetal pressure on the cervix sends sensory afferents to the hypothalamus, stimulating posterior pituitary oxytocin release, which intensifies myometrial contractions, pushing the fetus further, generating an escalating cycle ending only with delivery."
+            "correct": 3,
+            "solution": "Pyrogens raise the hypothalamic set point. Since the actual temperature is lower than the new set point, the body responds as it would in the cold: vasoconstriction and shivering until the temperature reaches the new set point."
           },
           {
             "question": "Cushing's syndrome caused by prolonged hypercortisolemia characteristically presents with which clinical features?",
@@ -20745,16 +20745,16 @@ const subjects = [
         "name": "Human Physiology: Musculoskeletal",
         "questions": [
           {
-            "question": "In a DNA molecule, what type of bond holds the two strands together?",
+            "question": "Bacteria grown for many generations in heavy nitrogen (<sup>15</sup>N) are moved to light nitrogen (<sup>14</sup>N) and allowed to replicate three times. What fraction of the DNA molecules still contains any <sup>15</sup>N?",
             "options": [
-              "Covalent bonds",
-              "Ionic bonds",
-              "Hydrogen bonds between complementary bases",
-              "Peptide bonds",
-              "Van der Waals forces"
+              "1/4",
+              "1/8",
+              "1/2",
+              "1/3",
+              "All"
             ],
-            "correct": 2,
-            "solution": "The two DNA strands are held together by hydrogen bonds between complementary base pairs: A pairs with T (2 hydrogen bonds), and G pairs with C (3 hydrogen bonds). The sugar-phosphate backbone is connected by covalent bonds."
+            "correct": 0,
+            "solution": "Replication is semi-conservative. Each of the two original <sup>15</sup>N strands ends up in one molecule only. After three replications there are 8 molecules and only 2 contain an original strand: \\(2/8 = 1/4\\) (hybrids with one <sup>15</sup>N strand and one <sup>14</sup>N strand)."
           },
           {
             "question": "Which type of muscle contraction occurs when a muscle shortens while generating force?",
@@ -20973,16 +20973,16 @@ const subjects = [
             "solution": "During accommodation for near vision, the sphincter-like ciliary muscle contracts, reducing tension on the suspensory ligaments (zonules). This allows the elastic lens to bulge and become more spherical, increasing its refractive power."
           },
           {
-            "question": "Vitamins often function in metabolism by acting as:",
+            "question": "In a metabolic pathway A → B → C → D, product D binds to a site on enzyme 1 and reduces its activity. What does this show?",
             "options": [
-              "Enzymes",
-              "Substrates",
-              "Coenzymes or precursors to coenzymes",
-              "Competitive inhibitors",
-              "Allosteric activators only"
+              "Competitive inhibition at the active site",
+              "Denaturation by heat",
+              "A rise in substrate concentration",
+              "The action of a coenzyme",
+              "Feedback (end-product) inhibition by allosteric regulation"
             ],
-            "correct": 2,
-            "solution": "Many water-soluble vitamins (such as the B vitamins) serve as coenzymes or precursors to coenzymes. For example, Niacin (B3) is a precursor to NAD+, and Riboflavin (B2) is a precursor to FAD."
+            "correct": 4,
+            "solution": "When D builds up, it binds to an allosteric site of the first enzyme, changing its shape and slowing the whole pathway. This stops the cell from making more product than needed."
           },
           {
             "question": "The secondary structure of a protein is primarily stabilized by:",
@@ -21057,28 +21057,28 @@ const subjects = [
             "solution": "Restriction enzymes cut the sugar-phosphate backbone of DNA at specific recognition sites, often leaving 'sticky ends' that are crucial for inserting a gene into a plasmid vector."
           },
           {
-            "question": "Which structure connects a muscle to a bone?",
+            "question": "A patient has glucose in the urine. Which explanation is correct for an untreated diabetic?",
             "options": [
-              "Ligament",
-              "Cartilage",
-              "Tendon",
-              "Epithelium",
-              "Adipose"
+              "The kidney makes glucose",
+              "Glucose is not filtered normally",
+              "The collecting duct secretes glucose",
+              "The bladder makes glucose",
+              "The blood glucose is so high that the filtered glucose exceeds the capacity of the transporters in the proximal tubule"
             ],
-            "correct": 2,
-            "solution": "A tendon is a dense regular connective tissue that anchors muscle to bone."
+            "correct": 4,
+            "solution": "Normally all filtered glucose is reabsorbed by carriers in the proximal tubule. When blood glucose is very high, the carriers are saturated, so some glucose stays in the filtrate and is excreted."
           },
           {
-            "question": "In gel electrophoresis, DNA migrates towards the positive electrode because:",
+            "question": "A plasmid has an ampicillin resistance gene and a <i>lacZ</i> gene with a cloning site inside it. Cells are plated on ampicillin and X-gal (which turns blue when cleaved by β-galactosidase). Which colonies contain the recombinant plasmid?",
             "options": [
-              "It is positively charged",
-              "It is negatively charged",
-              "It is neutral",
-              "It is attracted by gravity",
-              "It contains basic amino acids"
+              "Blue colonies that grow on ampicillin",
+              "Colonies that do not grow on ampicillin",
+              "Blue colonies only",
+              "Any colony that grows without ampicillin",
+              "White colonies that grow on ampicillin"
             ],
-            "correct": 1,
-            "solution": "DNA's phosphate backbone is negatively charged, a principle used in gel electrophoresis biotechnology."
+            "correct": 4,
+            "solution": "Growth on ampicillin shows the cell took up a plasmid. Inserting the gene into <i>lacZ</i> destroys β-galactosidase, so the colony stays white. Blue colonies have a plasmid without an insert."
           },
           {
             "question": "Which organ is the primary site of T cell maturation?",
@@ -21519,28 +21519,28 @@ const subjects = [
             "solution": "The stamen is the male reproductive part of a flower. It consists of a stalk called the filament and a terminal sac called the anther, where pollen is produced."
           },
           {
-            "question": "Where are sperm cells produced?",
+            "question": "Which sequence correctly describes a spinal reflex arc?",
             "options": [
-              "Prostate",
-              "Epididymis",
-              "Vas deferens",
-              "Testis",
-              "Seminal vesicle"
+              "Receptor, motor neuron, relay neuron, sensory neuron, effector",
+              "Receptor, sensory neuron, relay neuron in the spinal cord, motor neuron, effector",
+              "Effector, sensory neuron, brain, motor neuron, receptor",
+              "Receptor, relay neuron, effector, sensory neuron",
+              "Sensory neuron, receptor, motor neuron, relay neuron"
             ],
-            "correct": 3,
-            "solution": "Sperm production (spermatogenesis) occurs in the seminiferous tubules of the testis, a key organ of reproduction."
+            "correct": 1,
+            "solution": "The stimulus is detected by a receptor and sent along a sensory neuron to the spinal cord. A relay neuron connects to the motor neuron, which carries the impulse to the effector (a muscle or gland). The brain is not needed for the response."
           },
           {
-            "question": "The fusion of a sperm and an egg is called:",
+            "question": "Why is the second infection with the same pathogen usually milder than the first?",
             "options": [
-              "Ovulation",
-              "Menstruation",
-              "Fertilization",
-              "Implantation",
-              "Gastrulation"
+              "Antibodies from the first infection are never destroyed and make a new pathogen",
+              "The body has more neutrophils",
+              "The pathogen mutates to a weaker form",
+              "Memory B and T cells respond faster and more strongly",
+              "The skin becomes thicker"
             ],
-            "correct": 2,
-            "solution": "Fertilization is the union of male and female gametes (sperm and egg) during reproduction."
+            "correct": 3,
+            "solution": "After the first exposure some B and T cells become long-lived memory cells. On the second exposure they proliferate and make antibodies quickly, so the pathogen is cleared before symptoms appear. Vaccines work in the same way."
           },
           {
             "question": "Which phase of the uterine cycle involves the shedding of the endometrium?",
@@ -21555,28 +21555,28 @@ const subjects = [
             "solution": "The menstrual phase (menstruation) involves the shedding of the uterine lining when reproduction does not occur."
           },
           {
-            "question": "In humans, the male gamete is the:",
+            "question": "A gallstone blocks the bile duct. Which result is most likely?",
             "options": [
-              "Egg",
-              "Zygote",
-              "Sperm",
-              "Embryo",
-              "Fetus"
+              "Poor digestion of fats, because bile salts do not reach the intestine",
+              "No digestion of proteins",
+              "No digestion of starch in the mouth",
+              "The stomach stops making acid",
+              "Blood glucose rises sharply"
             ],
-            "correct": 2,
-            "solution": "The sperm is the haploid male sex cell required for sexual reproduction."
+            "correct": 0,
+            "solution": "Bile (made in the liver, stored in the gallbladder) emulsifies fats in the small intestine, increasing the surface area for lipase. A blocked duct reduces fat digestion and absorption, and stools become pale."
           },
           {
-            "question": "In humans, the female gamete is the:",
+            "question": "The kidneys filter about 180 L of fluid per day and the urine volume is 1.5 L per day. What percentage of the filtrate is reabsorbed?",
             "options": [
-              "Sperm",
-              "Egg",
-              "Zygote",
-              "Morula",
-              "Blastocyst"
+              "About 50%",
+              "About 80%",
+              "About 99%",
+              "About 1%",
+              "About 90%"
             ],
-            "correct": 1,
-            "solution": "The egg (ovum) is the haploid female sex cell required for reproduction."
+            "correct": 2,
+            "solution": "\\((180 - 1.5)/180 = 0.992\\), so about 99% of the filtrate is reabsorbed, mostly in the proximal convoluted tubule, with the water balance fine-tuned by ADH in the collecting duct."
           },
           {
             "question": "What structure transports sperm from the epididymis to the ejaculatory duct?",
@@ -21591,28 +21591,28 @@ const subjects = [
             "solution": "The vas deferens is a duct critical for male reproduction, carrying sperm."
           },
           {
-            "question": "Which organ produces the male gametes?",
+            "question": "A person has a stroke volume of 70 mL and a heart rate of 72 beats per minute. What is the cardiac output?",
             "options": [
-              "Prostate",
-              "Seminal vesicle",
-              "Testis",
-              "Epididymis",
-              "Urethra"
+              "About 0.5 L/min",
+              "About 50 L/min",
+              "About 142 mL/min",
+              "About 5.0 L/min",
+              "About 2.5 L/min"
             ],
-            "correct": 2,
-            "solution": "The testis produces male gametes."
+            "correct": 3,
+            "solution": "Cardiac output \\(=\\) stroke volume \\(\\times\\) heart rate \\(= 70 \\times 72 = 5040\\) mL/min \\(\\approx 5.0\\) L/min."
           },
           {
-            "question": "Which organ produces the female gametes?",
+            "question": "A red blood cell leaves the right ventricle. What is the correct order of the vessels and chambers it passes through before it reaches the aorta?",
             "options": [
-              "Uterus",
-              "Ovary",
-              "Cervix",
-              "Fallopian tube",
-              "Vagina"
+              "Vena cava, lungs, aorta, left ventricle",
+              "Pulmonary artery, lungs, pulmonary vein, left atrium, left ventricle",
+              "Pulmonary vein, lungs, pulmonary artery, left atrium",
+              "Aorta, left atrium, lungs, left ventricle",
+              "Pulmonary artery, left atrium, lungs, left ventricle"
             ],
             "correct": 1,
-            "solution": "The ovary produces female gametes."
+            "solution": "Right ventricle → pulmonary artery → capillaries in the lungs → pulmonary vein → left atrium → left ventricle → aorta. This is the pulmonary circuit followed by the systemic circuit (double circulation)."
           },
           {
             "question": "In the human testes, which cells form the blood-testis barrier via tight junctions, nourish developing spermatogenic cells, and secrete Androgen-Binding Protein (ABP) in response to FSH?",
@@ -21873,16 +21873,16 @@ const subjects = [
         "name": "Sense Organs",
         "questions": [
           {
-            "question": "What is the function of restriction enzymes in biotechnology?",
+            "question": "To make human insulin in bacteria, scientists use cDNA made from mRNA with reverse transcriptase instead of the gene from the genome. Why?",
             "options": [
-              "To join DNA fragments together",
-              "To cut DNA at specific recognition sequences",
-              "To amplify DNA fragments",
-              "To separate DNA by size",
-              "To introduce mutations into DNA"
+              "Bacteria cannot remove introns, and cDNA has none",
+              "Bacteria cannot read DNA",
+              "mRNA is more stable than DNA in bacteria",
+              "Reverse transcriptase makes protein",
+              "The genomic gene is too long for any plasmid"
             ],
-            "correct": 1,
-            "solution": "Restriction enzymes (restriction endonucleases) recognise specific DNA sequences and cut the DNA at or near those sites. This is fundamental to genetic engineering for cutting DNA at precise locations."
+            "correct": 0,
+            "solution": "The human gene contains introns. Bacteria cannot splice them out. The mRNA is already spliced, so the cDNA copy contains only the coding exons and gives the correct protein."
           },
           {
             "question": "Which level of protein structure is determined by the sequence of amino acids?",
@@ -22233,16 +22233,16 @@ const subjects = [
             "solution": "Feedback inhibition occurs when the end product of a metabolic pathway acts as an allosteric inhibitor of an enzyme earlier in the pathway. This prevents the cell from wasting resources producing more product than needed."
           },
           {
-            "question": "Phospholipids are amphipathic molecules. What does this mean?",
+            "question": "Water rises up the xylem of a tall tree, and sweating cools the body. Which properties of water explain these two facts?",
             "options": [
-              "They are entirely hydrophobic",
-              "They are entirely hydrophilic",
-              "They contain both hydrophilic and hydrophobic regions",
-              "They contain a carbohydrate attached to a lipid",
-              "They can act as both acids and bases"
+              "High density; high pH",
+              "Cohesion and adhesion; high heat of vaporisation",
+              "Low surface tension; low specific heat",
+              "High boiling point; very low viscosity",
+              "Polarity; being a non-solvent"
             ],
-            "correct": 2,
-            "solution": "Amphipathic molecules have both a hydrophilic (water-loving) region, like the phosphate head, and a hydrophobic (water-fearing) region, like the fatty acid tails."
+            "correct": 1,
+            "solution": "Hydrogen bonds make water molecules stick to each other (cohesion) and to the xylem walls (adhesion), so a water column is pulled up. The same bonds give water a high heat of vaporisation, so evaporating sweat removes a lot of heat."
           },
           {
             "question": "During phototransduction in vertebrate rod photoreceptors, what is the initial biochemical consequence of light absorption by RHODOPSIN?",
@@ -23409,40 +23409,40 @@ const subjects = [
             "solution": "Peroxisomes contain oxidative enzymes that break down fatty acids (beta-oxidation) and amino acids, producing hydrogen peroxide (H₂O₂) as a byproduct. Catalase within peroxisomes then converts toxic H₂O₂ to water and oxygen."
           },
           {
-            "question": "Enzymes speed up chemical reactions primarily by:",
+            "question": "Which of these is a coenzyme?",
             "options": [
-              "Increasing the temperature of the reaction",
-              "Lowering the activation energy required",
-              "Changing the equilibrium constant of the reaction",
-              "Providing an alternative source of ATP",
-              "Being consumed during the reaction"
+              "Mg<sup>2+</sup>",
+              "Zn<sup>2+</sup>",
+              "ATP synthase",
+              "NAD<sup>+</sup> (made from the vitamin niacin)",
+              "Haemoglobin"
             ],
-            "answer": 1,
-            "explanation": "Enzymes are biological catalysts that increase the rate of a chemical reaction by providing an alternative reaction pathway with a lower activation energy."
+            "correct": 3,
+            "solution": "Coenzymes are organic molecules, often derived from vitamins, that carry chemical groups or electrons between enzymes. Mg<sup>2+</sup> and Zn<sup>2+</sup> are inorganic cofactors (metal ions)."
           },
           {
-            "question": "The specific region of an enzyme that binds to the substrate is called the:",
+            "question": "An enzyme-catalysed reaction doubles in rate for every 10 °C rise (up to its optimum). The rate at 20 °C is 4 units. What is the rate at 40 °C?",
             "options": [
-              "Allosteric site",
-              "Active site",
-              "Catalytic domain",
-              "Cofactor site",
-              "Inhibitory site"
+              "16 units",
+              "8 units",
+              "12 units",
+              "32 units",
+              "80 units"
             ],
-            "answer": 1,
-            "explanation": "The active site is the highly specific cleft or pocket on the enzyme's surface where the substrate molecule binds and undergoes the chemical reaction."
+            "correct": 0,
+            "solution": "From 20 °C to 40 °C there are two steps of 10 °C, so the rate doubles twice: \\(4 \\times 2 \\times 2 = 16\\) units (provided the enzyme is not denatured)."
           },
           {
-            "question": "In competitive inhibition, the inhibitor binds to the:",
+            "question": "An enzyme reaction has reached its maximum rate because all the active sites are occupied. How can the rate be increased?",
             "options": [
-              "Allosteric site",
-              "Substrate",
-              "Product",
-              "Active site",
-              "Coenzyme"
+              "By adding more substrate",
+              "By adding more enzyme",
+              "By adding a competitive inhibitor",
+              "By adding more product",
+              "By lowering the temperature"
             ],
-            "answer": 3,
-            "explanation": "A competitive inhibitor has a similar structure to the normal substrate and competes with it for binding directly to the active site of the enzyme."
+            "correct": 1,
+            "solution": "At saturation the number of enzyme molecules is limiting, so adding substrate has no effect. More enzyme means more active sites, so the maximum rate rises in proportion."
           },
           {
             "question": "Which of the following is true about non-competitive inhibition?",
@@ -23577,28 +23577,28 @@ const subjects = [
             "explanation": "A competitive inhibitor can be outcompeted by adding more substrate. Therefore, the maximum velocity (Vmax) can still be reached. However, because it competes for the active site, it lowers the apparent affinity of the enzyme for the substrate, meaning a higher substrate concentration (higher Km) is required to reach half Vmax."
           },
           {
-            "question": "The energy currency of the cell, ATP, is primarily generated during which type of metabolic reaction?",
+            "question": "Which of these processes does <b>not</b> directly require ATP?",
             "options": [
-              "Anabolic reactions",
-              "Catabolic reactions",
-              "Photosynthetic dark reactions",
-              "Hydrolysis of proteins",
-              "Dehydration synthesis"
+              "Muscle contraction",
+              "Active transport by the Na<sup>+</sup>/K<sup>+</sup> pump",
+              "Synthesis of a polypeptide (activation of amino acids)",
+              "Osmosis",
+              "Exocytosis"
             ],
-            "answer": 1,
-            "explanation": "Catabolic reactions involve the breakdown of complex molecules into simpler ones, a process that releases energy (exergonic). This released energy is often captured to synthesize ATP from ADP and inorganic phosphate."
+            "correct": 3,
+            "solution": "Osmosis is the passive diffusion of water down its water potential gradient. The other processes use ATP (or GTP) for movement, transport, bond formation or vesicle movement."
           },
           {
-            "question": "An enzyme that cleaves a molecule using water is called a:",
+            "question": "With an inhibitor, an enzyme reaction reaches the same maximum rate as without it when the substrate concentration is very high. What type of inhibitor is it?",
             "options": [
-              "Hydrolase",
-              "Lyase",
-              "Ligase",
-              "Oxidoreductase",
-              "Isomerase"
+              "Non-competitive",
+              "Irreversible",
+              "Allosteric inhibitor that changes the shape of the active site",
+              "Competitive",
+              "None, it is a cofactor"
             ],
-            "answer": 0,
-            "explanation": "Hydrolases catalyze hydrolysis reactions, where a chemical bond is broken by the addition of a water molecule. Examples include digestive enzymes like lipases, proteases, and amylases."
+            "correct": 3,
+            "solution": "A competitive inhibitor binds to the active site, so a very high substrate concentration can outcompete it and V<sub>max</sub> is reached. A non-competitive inhibitor lowers V<sub>max</sub> that cannot be overcome by adding more substrate."
           },
           {
             "question": "Enzymes that join two molecules together, often requiring the input of ATP, belong to which class?",
@@ -23709,16 +23709,16 @@ const subjects = [
             "solution": "Enzymes have an optimal pH. Deviations from this pH alter the charge of ionizable amino acid side chains, disrupting the ionic and hydrogen bonds that maintain the enzyme's 3D structure, leading to denaturation and loss of activity."
           },
           {
-            "question": "In a Lineweaver-Burk plot (double reciprocal plot), the x-intercept represents:",
+            "question": "Which statement about enzymes is correct?",
             "options": [
-              "1 / Vmax",
-              "-1 / Km",
-              "Km / Vmax",
-              "Vmax / 2",
-              "The substrate concentration"
+              "They lower the activation energy but do not change the equilibrium or the free energy change of the reaction",
+              "They raise the activation energy and speed up the reverse reaction only",
+              "They are used up in the reaction",
+              "They change the free energy change of the reaction",
+              "They supply energy to the reaction"
             ],
-            "correct": 1,
-            "solution": "In a Lineweaver-Burk plot (1/V vs 1/[S]), the y-intercept is 1/Vmax and the x-intercept is -1/Km. This plot makes it easier to visually distinguish between types of enzyme inhibition."
+            "correct": 0,
+            "solution": "Enzymes speed up the approach to equilibrium by stabilising the transition state. They are not consumed, they do not supply energy, and they do not change \\(\\Delta G\\) or the equilibrium position."
           },
           {
             "question": "Which of the following best explains the 'induced fit' model of enzyme action?",
@@ -23745,16 +23745,16 @@ const subjects = [
             "solution": "A cofactor is a non-protein chemical compound or metallic ion required for an enzyme's activity. If it is an organic molecule, it is specifically called a coenzyme. Tightly bound cofactors are called prosthetic groups."
           },
           {
-            "question": "What is an apoenzyme?",
+            "question": "Pepsin works best at pH 2 in the stomach. What happens if pepsin passes into the small intestine, where the pH is about 8?",
             "options": [
-              "An enzyme that has been denatured by heat",
-              "The protein portion of an enzyme, inactive without its cofactor",
-              "A fully active enzyme complete with its cofactor",
-              "An enzyme that breaks down apoptosis proteins",
-              "A precursor to a hormone"
+              "It works faster, because the pH is higher",
+              "It is converted into trypsin",
+              "It is denatured and loses activity, because the active site changes shape",
+              "It works at the same rate",
+              "It is digested into nucleotides"
             ],
-            "correct": 1,
-            "solution": "An apoenzyme is the inactive protein part of an enzyme. When it binds to its necessary non-protein cofactor or coenzyme, it forms the fully active complex known as the holoenzyme."
+            "correct": 2,
+            "solution": "A pH far from the optimum alters the ionisation of R groups, disrupts hydrogen and ionic bonds and changes the shape of the active site. The enzyme becomes inactive, usually irreversibly."
           },
           {
             "question": "How does uncompetitive inhibition differ from competitive and non-competitive inhibition?",
@@ -23781,16 +23781,16 @@ const subjects = [
             "solution": "Allosteric effectors bind non-covalently (reversibly) to the allosteric site. Covalent modification (like phosphorylation) is a different mechanism of regulation."
           },
           {
-            "question": "Catabolic pathways are characterized by which of the following?",
+            "question": "The Na<sup>+</sup>/K<sup>+</sup> pump is phosphorylated by ATP. What is the effect of attaching the phosphate group?",
             "options": [
-              "They consume energy to build complex molecules.",
-              "They release energy by breaking down complex molecules.",
-              "They always require sunlight.",
-              "They only occur in the absence of oxygen.",
-              "They involve only reduction reactions."
+              "The protein is digested",
+              "The ions are converted into water",
+              "The membrane becomes more permeable to everything",
+              "The phosphate is used to make DNA",
+              "The protein changes shape, which moves ions across the membrane"
             ],
-            "correct": 1,
-            "solution": "Catabolism refers to the metabolic pathways that break down complex molecules into simpler ones, releasing energy (exergonic). Anabolism is the opposite: building complex molecules requiring energy input."
+            "correct": 4,
+            "solution": "Transfer of a phosphate group from ATP changes the conformation of the pump protein. This releases Na<sup>+</sup> outside and lets K<sup>+</sup> bind, so ATP energy is converted into the work of active transport."
           },
           {
             "question": "The standard free energy change (ΔG°) of a reaction is negative. Which of the following is true?",
@@ -24111,16 +24111,16 @@ const subjects = [
             "solution": "Plasmids are small, circular DNA molecules that exist independently of the bacterial chromosome. They can replicate autonomously and are commonly used as vectors to carry foreign genes into host cells during genetic engineering."
           },
           {
-            "question": "What is gene cloning?",
+            "question": "A child's DNA profile shows bands at positions 4 and 9. The mother has bands 4 and 7. Man 1 has bands 9 and 11 and man 2 has bands 5 and 8. Which man could be the father?",
             "options": [
-              "Creating a genetically identical organism",
-              "Inserting a gene into a vector to produce many copies of that gene in a host organism",
-              "Sequencing DNA",
-              "Crossing two organisms",
-              "Deleting a gene"
+              "Man 2",
+              "Both men",
+              "Neither man",
+              "Man 1",
+              "It is impossible to say"
             ],
-            "correct": 1,
-            "solution": "Gene cloning involves inserting a target gene into a vector (typically a plasmid), introducing the recombinant vector into a host cell (usually bacteria), and allowing the host to replicate — producing many copies of the gene and its protein product."
+            "correct": 3,
+            "solution": "Each band in the child comes from one parent. Band 4 comes from the mother, so band 9 must come from the father. Man 1 has band 9. Man 2 has neither 4 nor 9, so he is excluded."
           },
           {
             "question": "What is gel electrophoresis used for?",
@@ -24171,28 +24171,28 @@ const subjects = [
             "solution": "DNA fingerprinting analyses highly variable regions (STRs) in the genome. After PCR amplification and gel electrophoresis, the banding pattern is unique to each individual (except identical twins). Applications: forensic identification, paternity testing, immigration cases, and wildlife conservation."
           },
           {
-            "question": "A plasmid is best defined as:",
+            "question": "What gives the CRISPR-Cas9 system its specificity for a target sequence?",
             "options": [
-              "The main bacterial chromosome",
-              "A virus that infects bacteria",
-              "A small, circular, extrachromosomal DNA molecule that replicates independently",
-              "A protein that wraps around DNA",
-              "An enzyme used to cut DNA"
-            ],
-            "correct": 2,
-            "solution": "Plasmids are small, circular, double-stranded DNA molecules distinct from the chromosomal DNA. They are found naturally in bacteria and are widely used as vectors to carry foreign genetic material into a host cell."
-          },
-          {
-            "question": "Bacteriophages (or phages) are:",
-            "options": [
-              "Bacteria that infect viruses",
-              "Viruses that infect and replicate only within bacterial cells",
-              "White blood cells that engulf bacteria",
-              "Plasmids used in genetic engineering",
-              "Enzymes that destroy bacterial cell walls"
+              "The Cas9 protein recognises any DNA",
+              "The guide RNA, which pairs with the matching DNA sequence",
+              "The DNA ligase",
+              "The ribosome",
+              "The restriction site of EcoRI"
             ],
             "correct": 1,
-            "solution": "A bacteriophage is a type of virus that specifically targets, infects, and replicates within bacteria."
+            "solution": "A guide RNA complementary to the target sequence leads Cas9 to the exact place in the genome, where Cas9 cuts both strands. The cell's repair then disables the gene or inserts a supplied sequence."
+          },
+          {
+            "question": "Why are soaps and alcohol-based disinfectants particularly effective against enveloped viruses?",
+            "options": [
+              "They digest the viral RNA",
+              "They dissolve the lipid envelope, so the virus cannot attach to host cells",
+              "They block reverse transcriptase",
+              "They destroy the viral ribosomes",
+              "They raise the pH of the capsid"
+            ],
+            "correct": 1,
+            "solution": "An envelope is a lipid membrane taken from the host. Soap and alcohol disrupt lipids, damaging the envelope and the proteins embedded in it. Naked viruses (with only a capsid) are more resistant."
           },
           {
             "question": "Which process involves the uptake of naked, exogenous DNA from the surrounding environment by a bacterial cell?",
@@ -24219,76 +24219,76 @@ const subjects = [
             "solution": "In the lysogenic cycle, the viral DNA integrates into the host genome (becoming a prophage or provirus) and is passed on to daughter cells during normal division. It can later be triggered to enter the lytic cycle, which destroys the cell."
           },
           {
-            "question": "What is a virus?",
+            "question": "A patient with a viral infection is given antibiotics, but they do not help. Why?",
             "options": [
-              "A prokaryotic cell",
-              "An infectious agent that can only replicate inside a host cell",
-              "A type of bacterium",
-              "A eukaryotic cell",
-              "A plasmid"
+              "Antibiotics target bacterial structures, such as the cell wall or 70S ribosomes, that viruses do not have",
+              "Viruses are too small to be reached by the antibiotic",
+              "Viruses have a thicker cell wall than bacteria",
+              "Antibiotics work only against eukaryotic cells",
+              "Viruses destroy antibiotics with enzymes"
+            ],
+            "correct": 0,
+            "solution": "Antibiotics block processes that are specific to bacteria. A virus has no cell wall, no ribosomes and no metabolism of its own, so there is nothing for the antibiotic to attack."
+          },
+          {
+            "question": "A circular plasmid has 3 recognition sites for the restriction enzyme EcoRI. How many fragments result from complete digestion?",
+            "options": [
+              "2",
+              "3",
+              "4",
+              "6",
+              "1"
             ],
             "correct": 1,
-            "solution": "A virus is an obligate intracellular parasite that requires a host cell to replicate."
+            "solution": "In a circular molecule each cut opens the circle, but the number of fragments equals the number of cuts: 3 cuts give 3 fragments. (A linear DNA with 3 sites would give 4 fragments.)"
           },
           {
-            "question": "What is a plasmid?",
+            "question": "PCR starts from 5 molecules of target DNA. How many copies are there after 10 cycles, assuming 100% efficiency?",
             "options": [
-              "A viral protein coat",
-              "A bacterial organelle",
-              "A small, circular DNA molecule separate from chromosomal DNA",
-              "A type of RNA",
-              "A restriction enzyme"
+              "5120",
+              "50",
+              "1024",
+              "2560",
+              "10 240"
             ],
-            "correct": 2,
-            "solution": "A plasmid is widely used in biotechnology as a vector to carry recombinant DNA."
+            "correct": 0,
+            "solution": "Each cycle doubles the number of copies. After 10 cycles: \\(5 \\times 2^{10} = 5 \\times 1024 = 5120\\)."
           },
           {
-            "question": "What is recombinant DNA?",
+            "question": "Which order correctly describes the early steps of HIV replication in a helper T cell?",
             "options": [
-              "DNA that has been degraded",
-              "DNA formed by combining genetic material from multiple sources",
-              "RNA that has been reverse transcribed",
-              "Viral DNA only",
-              "DNA found in mitochondria"
-            ],
-            "correct": 1,
-            "solution": "Recombinant DNA is engineered in a lab (biotechnology) by joining sequences from different species."
-          },
-          {
-            "question": "Which type of virus infects bacteria?",
-            "options": [
-              "Retrovirus",
-              "Phage",
-              "Adenovirus",
-              "Lentivirus",
-              "Prion"
+              "Viral DNA is copied into RNA, then reverse transcriptase makes protein",
+              "RNA is copied into DNA by reverse transcriptase, the DNA is integrated into the host chromosome, then viral RNA and proteins are made",
+              "The host makes viral RNA, then the RNA is integrated into the chromosome",
+              "Viral RNA is translated first, then copied into DNA by the host DNA polymerase",
+              "Viral DNA is integrated, then copied into RNA by reverse transcriptase"
             ],
             "correct": 1,
-            "solution": "A bacteriophage (or phage) is a virus that specifically infects bacteria."
+            "solution": "HIV is a retrovirus with an RNA genome. Reverse transcriptase makes a DNA copy, which integrates into the host DNA (as a provirus). The host machinery then transcribes it to make new viral RNA and proteins."
           },
           {
-            "question": "What is the term for a small, circular DNA molecule distinct from chromosomal DNA?",
+            "question": "A stretch of chromatin has 10 nucleosomes. Each nucleosome has 147 bp of DNA wrapped around the histone core, and each is separated by 53 bp of linker DNA. What is the total length of DNA (counting 10 repeats of core + linker)?",
             "options": [
-              "Phage",
-              "Plasmid",
-              "Vector",
-              "Prion",
-              "Viroid"
+              "1470 bp",
+              "2000 bp",
+              "530 bp",
+              "2200 bp",
+              "1000 bp"
             ],
             "correct": 1,
-            "solution": "A plasmid is widely used in biotechnology."
+            "solution": "Each repeat is \\(147 + 53 = 200\\) bp. For 10 repeats: \\(10 \\times 200 = 2000\\) bp."
           },
           {
-            "question": "Which entity relies entirely on a host to replicate?",
+            "question": "Bacteria infected with a phage divide normally, and the viral DNA is found inserted in the bacterial chromosome. Which cycle is this, and what can happen later?",
             "options": [
-              "Bacterium",
-              "Fungus",
-              "Phage",
-              "Protozoan",
-              "Algae"
+              "Lytic cycle; the cell has already burst",
+              "Lysogenic cycle; the viral DNA can never leave",
+              "Lytic cycle; the phage will remain inactive for ever",
+              "Lysogenic cycle; stress may trigger the lytic cycle",
+              "Retroviral cycle; reverse transcriptase makes the DNA"
             ],
-            "correct": 2,
-            "solution": "A phage is an infectious agent that requires a host."
+            "correct": 3,
+            "solution": "In the lysogenic cycle the phage DNA is a prophage copied along with the host chromosome. Stress or damage can switch it to the lytic cycle, when new phages are made and the cell bursts."
           },
           {
             "question": "What is the lytic cycle of a bacteriophage?",
@@ -24303,16 +24303,16 @@ const subjects = [
             "solution": "In the lytic cycle: (1) attachment — phage binds to bacterial surface receptors, (2) penetration — injects nucleic acid, (3) biosynthesis — host machinery replicates phage DNA and synthesises phage proteins, (4) assembly — new phage particles assemble, (5) lysis — cell bursts, releasing ~100-200 new phages."
           },
           {
-            "question": "How do bacteria develop antibiotic resistance?",
+            "question": "Gene flow between two populations of a plant by pollen transfer will tend to:",
             "options": [
-              "Antibiotics directly cause mutations in bacteria",
-              "Through random mutations and horizontal gene transfer (conjugation, transformation, transduction), selected for by antibiotic exposure",
-              "Bacteria choose to become resistant",
-              "Resistance only occurs in hospitals",
-              "Antibiotics make bacteria stronger directly"
+              "Make them more different",
+              "Eliminate mutation",
+              "Have no effect",
+              "Make their allele frequencies more similar",
+              "Increase genetic drift"
             ],
-            "correct": 1,
-            "solution": "Resistance arises from random mutations or acquisition of resistance genes via horizontal gene transfer: conjugation (plasmid transfer), transformation (uptake of free DNA), or transduction (phage-mediated transfer). Antibiotic exposure creates selection pressure — susceptible bacteria die while resistant ones survive and proliferate."
+            "correct": 3,
+            "solution": "Migrants bring alleles with them, so gene flow mixes the gene pools and reduces differences between populations, which counteracts divergence and speciation."
           },
           {
             "question": "What is conjugation in bacteria?",
@@ -24579,28 +24579,28 @@ const subjects = [
             "solution": "Viroids (discovered by Theodor Diener) are the smallest known infectious pathogens. They consist exclusively of short (240-400 nucleotides), naked, circular, single-stranded RNA molecules lacking any protein coat. They do not encode proteins, replicating via host RNA polymerase II rolling-circle transcription, causing disease by RNA silencing in plants."
           },
           {
-            "question": "Which of the following structures is present in \"naked\" viruses?",
+            "question": "The nucleic acid of two viruses is analysed. Virus X: A 24%, G 26%, C 26%, T 24%. Virus Y: A 30%, G 28%, C 22%, U 20%. What can you conclude?",
             "options": [
-              "Lysosomes",
-              "Endoplasmic reticulum",
-              "Golgi apparatus",
-              "Capsid",
-              "Mitochondria"
+              "X has single-stranded RNA; Y has double-stranded DNA",
+              "Both have double-stranded DNA",
+              "Both have single-stranded RNA",
+              "X has double-stranded DNA; Y has single-stranded RNA",
+              "X has single-stranded DNA; Y has double-stranded RNA"
             ],
             "correct": 3,
-            "solution": "A \"naked\" (non-enveloped) virus consists simply of a nucleic acid genome enclosed within a protein coat called a capsid. They lack both cellular organelles and a phospholipid envelope."
+            "solution": "In double-stranded DNA A = T and G = C (24 = 24, 26 = 26), so X is dsDNA. Y contains uracil, so it is RNA, and A ≠ U and G ≠ C suggests it is single-stranded."
           },
           {
-            "question": "Viruses:",
+            "question": "A single phage infects one bacterium and 100 new phages are released. Each of those infects a different bacterium and again releases 100 phages. How many phages are released after three rounds in total (counting only the last round)?",
             "options": [
-              "Can have DNA or RNA genomes",
-              "Can replicate outside host cells",
-              "Are the smallest living organisms",
-              "Do not infect plant cells",
-              "Always kill the cells they infect"
+              "300",
+              "10<sup>3</sup>",
+              "10<sup>5</sup>",
+              "10<sup>9</sup>",
+              "10<sup>6</sup>"
             ],
-            "correct": 0,
-            "solution": "Viruses can possess either DNA or RNA as their genetic material (single-stranded or double-stranded), but never both in the same virion."
+            "correct": 4,
+            "solution": "Round 1: 100 phages. Round 2: \\(100 \\times 100 = 10^{4}\\). Round 3: \\(10^{4} \\times 100 = 10^{6}\\). Growth is exponential."
           },
           {
             "question": "DNA sequencing by the Sanger method requires the preparation of a reaction mixture in which, in addition to DNA, other components must be present; which of the following listed is NOT a necessary component for the reaction?",
@@ -24615,16 +24615,16 @@ const subjects = [
             "solution": "Sanger sequencing requires template DNA, a specific primer, DNA polymerase, dNTPs (dATP, dCTP, dGTP, dTTP), and fluorescently labeled ddNTPs (chain terminators). DNA ligase is not needed."
           },
           {
-            "question": "The capsid is:",
+            "question": "Why is a new influenza vaccine needed almost every year?",
             "options": [
-              "The protein coat of viruses",
-              "The envelope of bacteria",
-              "The protein part of the plasma membrane of eukaryotic cells",
-              "Present only in eukaryotic cells",
-              "The protein part of the nuclear membrane"
+              "The vaccine disappears from the body after a few weeks",
+              "The virus is a bacterium that becomes resistant",
+              "The RNA virus mutates rapidly, so the surface antigens change and old memory cells no longer recognise it",
+              "Antibodies are destroyed by the vaccine",
+              "Humans lose all memory cells after one year"
             ],
-            "correct": 0,
-            "solution": "The viral capsid is the protective protein shell that encloses the viral genetic material (DNA or RNA)."
+            "correct": 2,
+            "solution": "Influenza has an RNA genome copied with no proofreading, so mutations are frequent. Changes in the surface proteins (antigenic drift) mean antibodies and memory cells from earlier infections or vaccines may not match."
           },
           {
             "question": "Restriction enzymes from bacteria are used in recombinant DNA technology. BamHI cuts DNA at:\n5’…G^GATCC…3’\n3’…CCTAG^G…5’\nWhen used to cut the sequence:\n5’…ATGGATCCGGACTAA…3’\n3’…TACCTAGGCCGGATT…5’\nHow many DNA fragments are formed?",
@@ -24651,16 +24651,16 @@ const subjects = [
             "solution": "The initial denaturation step in polymerase chain reaction (typically 94–98°C) breaks the hydrogen bonds between complementary strands, converting double-stranded DNA into single-stranded templates."
           },
           {
-            "question": "Which of the following are not cloning vectors?",
+            "question": "A restriction enzyme recognises a 6 bp sequence. On average, how many sites would you expect in a random DNA of 16 384 base pairs?",
             "options": [
-              "Introns",
-              "Plasmids",
-              "Phages",
-              "Artificial chromosomes",
-              "Cosmids"
+              "1",
+              "16",
+              "64",
+              "4",
+              "2.7"
             ],
-            "correct": 0,
-            "solution": "Introns are non-coding segments of eukaryotic genes removed by RNA splicing, not recombinant DNA vectors."
+            "correct": 3,
+            "solution": "The chance of a given 6 bp sequence at one position is \\((1/4)^{6} = 1/4096\\). In 16 384 positions: \\(16\\,384/4096 = 4\\) sites."
           }
         ]
       },
@@ -25689,28 +25689,28 @@ const subjects = [
             "solution": "In binomial nomenclature, the first part (Homo) is the genus and the second part (sapiens) is the species epithet. The full name represents the species."
           },
           {
-            "question": "What is epigenetics?",
+            "question": "The <i>trp</i> operon is a repressible operon. When tryptophan is abundant, what happens?",
             "options": [
-              "The study of mutations in DNA sequence",
-              "Heritable changes in gene expression that do not involve changes to the DNA sequence",
-              "The study of protein structure",
-              "The process of DNA replication",
-              "The mechanism of natural selection"
+              "Tryptophan binds the repressor, which then blocks transcription",
+              "The repressor leaves the operator and the genes are switched on",
+              "Tryptophan is broken down by the operon enzymes",
+              "RNA polymerase is activated by cAMP",
+              "The operon is deleted"
             ],
-            "correct": 1,
-            "solution": "Epigenetics involves heritable modifications that affect gene expression without altering the DNA sequence. Key mechanisms include DNA methylation (adding methyl groups to cytosine, typically silencing genes) and histone modification (acetylation, methylation affecting chromatin structure)."
+            "correct": 0,
+            "solution": "Tryptophan acts as a co-repressor. It activates the repressor, which binds the operator and switches off the genes for making more tryptophan. This is negative feedback."
           },
           {
-            "question": "What is polygenic inheritance?",
+            "question": "Cystic fibrosis affects 1 in 2500 newborns of a population in Hardy-Weinberg equilibrium. What is the approximate carrier frequency?",
             "options": [
-              "Inheritance controlled by a single gene with multiple alleles",
-              "Inheritance where multiple genes contribute to a single phenotypic trait",
-              "Inheritance of genes on sex chromosomes only",
-              "Inheritance that skips every other generation",
-              "Inheritance where one gene controls many traits"
+              "About 1 in 50 (2%)",
+              "About 1 in 26 (3.9%)",
+              "About 1 in 2500",
+              "About 1 in 10 (10%)",
+              "About 1 in 100 (1%)"
             ],
             "correct": 1,
-            "solution": "Polygenic inheritance involves multiple genes (often on different chromosomes) each contributing a small additive effect to a single phenotypic trait. Examples include height, skin colour, and intelligence. Polygenic traits typically show continuous variation and a normal distribution in the population."
+            "solution": "\\(q^{2} = 1/2500\\), so \\(q = 0.02\\) and \\(p = 0.98\\). Carriers \\(= 2pq = 2 \\times 0.98 \\times 0.02 = 0.039\\), about 1 in 26."
           },
           {
             "question": "What is adaptive radiation?",
@@ -26181,16 +26181,16 @@ const subjects = [
             "solution": "Homologous structures share a common developmental and evolutionary origin derived from an ancestral trait, regardless of their current functional divergence (divergent evolution). The pentadactyl limb of mammals is a classic homology inherited from an ancestral lobe-finned fish/early tetrapod. In contrast, analogous structures share similar function due to convergent evolution under similar selective pressures but have distinct evolutionary origins (e.g., bat wing vs butterfly wing)."
           },
           {
-            "question": "Which of the following physiological processes is governed by a POSITIVE homeostatic feedback loop rather than a negative feedback loop?",
+            "question": "In the regulation of body temperature, which of the following correctly names the sensor, the control centre and an effector?",
             "options": [
-              "Regulation of blood glucose concentration by insulin and glucagon",
-              "Thermoregulatory sweating and vasodilation in response to elevated core body temperature",
-              "Osmoregulation of blood osmolarity via antidiuretic hormone (ADH) secretion",
-              "Uterine contractions during parturition (childbirth) stimulated by oxytocin release",
-              "Blood pressure regulation by the arterial baroreceptor reflex"
+              "Thermoreceptors in the skin and hypothalamus; the hypothalamus; sweat glands",
+              "Sweat glands; the hypothalamus; thermoreceptors",
+              "The hypothalamus; sweat glands; thermoreceptors",
+              "Thermoreceptors; sweat glands; the hypothalamus",
+              "The pancreas; the liver; the kidney"
             ],
-            "correct": 3,
-            "solution": "Most physiological systems maintain stability (homeostasis) via negative feedback, which counters and reverses deviations from a set point (e.g., glucose, temperature, blood pressure, osmolarity). In contrast, positive feedback amplifies and reinforces a directional change until a climactic endpoint is achieved. During childbirth (Ferguson reflex), uterine contractions push the fetus against the cervix; stretch receptors signal the posterior pituitary to secrete more oxytocin, which stimulates stronger contractions, driving further cervical stretch until delivery occurs."
+            "correct": 0,
+            "solution": "A feedback loop has a sensor (detects the change), a control centre (compares it with the set point) and effectors (carry out the response). In thermoregulation the hypothalamus is the control centre and sweat glands, skin blood vessels and muscles are effectors."
           },
           {
             "question": "Water possesses unique physicochemical properties that are indispensable for terrestrial and aquatic life. Which property of water allows aquatic organisms to survive under frozen lakes in winter?",
@@ -26292,28 +26292,28 @@ const subjects = [
         "name": "Atomic Structure & Periodicity",
         "questions": [
           {
-            "question": "What is the electron configuration of the Fe²⁺ ion (Fe, Z = 26)?",
+            "question": "Which set of ions has the same electron configuration as argon?",
             "options": [
-              "[Ar] 3d⁶",
-              "[Ar] 3d⁵ 4s¹",
-              "[Ar] 3d⁴ 4s²",
-              "[Ar] 3d⁶ 4s²",
-              "[Ar] 3d⁸"
+              "O<sup>2-</sup>, F<sup>-</sup>, Na<sup>+</sup>, Mg<sup>2+</sup>",
+              "S<sup>2-</sup>, Cl<sup>-</sup>, Na<sup>+</sup>, Mg<sup>2+</sup>",
+              "S<sup>2-</sup>, Cl<sup>-</sup>, K<sup>+</sup>, Ca<sup>2+</sup>",
+              "Cl<sup>-</sup>, K<sup>+</sup>, Ca<sup>2+</sup>, Sc<sup>2+</sup>",
+              "P<sup>3-</sup>, S<sup>-</sup>, Cl<sup>-</sup>, K<sup>+</sup>"
             ],
-            "correct": 0,
-            "solution": "Neutral Fe: [Ar] 3d⁶ 4s². When forming Fe²⁺, electrons are removed from the highest principal quantum number first. 4s has n=4 > 3d's n=3, so both electrons leave the 4s orbital. Fe²⁺: [Ar] 3d⁶."
+            "correct": 2,
+            "solution": "Argon has 18 electrons. S<sup>2-</sup> (\\(16 + 2\\)), Cl<sup>-</sup> (\\(17 + 1\\)), K<sup>+</sup> (\\(19 - 1\\)) and Ca<sup>2+</sup> (\\(20 - 2\\)) all have 18. The other sets contain ions with 10 electrons or with a wrong charge."
           },
           {
-            "question": "Which statement about the periodic table is correct?",
+            "question": "The successive ionisation energies of an element in period 3 are 578, 1817, 2745, 11 577 and 14 842 kJ/mol. Which element is it?",
             "options": [
-              "Atomic radius increases left to right across a period.",
-              "First ionisation energy decreases down Group 2.",
-              "Electronegativity increases down Group 17.",
-              "The most reactive metals are found in the top-left.",
-              "Melting points increase down Group 7."
+              "Aluminium",
+              "Magnesium",
+              "Sodium",
+              "Silicon",
+              "Phosphorus"
             ],
-            "correct": 1,
-            "solution": "Descending Group 2, each element has an additional electron shell. Outer electrons are further from nucleus and more shielded, so less energy is needed to remove them."
+            "correct": 0,
+            "solution": "The big jump comes after the 3rd electron (2745 → 11 577), because the 4th electron has to come from an inner shell. So there are 3 valence electrons: group 13, which is aluminium in period 3."
           },
           {
             "question": "Which statement correctly describes the difference between a nucleophile and an electrophile?",
@@ -26340,28 +26340,28 @@ const subjects = [
             "solution": "Na goes from 0 to +1 (loses electrons, oxidised). H in H₂O goes from +1 to 0 in H₂ (gains electrons, reduced)."
           },
           {
-            "question": "Which of the following pairs are isotopes?",
+            "question": "An ion is written <sup>56</sup><sub>26</sub>Fe<sup>3+</sup>. How many more neutrons than electrons does it contain?",
             "options": [
-              "¹²C and ¹³C",
-              "¹²C and ¹⁴N",
-              "¹⁴N and ¹⁶O",
-              "¹⁶O and ¹⁸O",
-              "Both A and D"
-            ],
-            "correct": 4,
-            "solution": "Isotopes have the same atomic number (same element) but different mass numbers. ¹²C and ¹³C are isotopes (both carbon). ¹⁶O and ¹⁸O are isotopes (both oxygen)."
-          },
-          {
-            "question": "What is the shape of the ammonia molecule (NH₃)?",
-            "options": [
-              "Linear",
-              "Trigonal planar",
-              "Tetrahedral",
-              "Trigonal pyramidal",
-              "Octahedral"
+              "4",
+              "30",
+              "3",
+              "7",
+              "10"
             ],
             "correct": 3,
-            "solution": "NH₃ has three bonding pairs and one lone pair around nitrogen. The electron geometry is tetrahedral, but the molecular shape is trigonal pyramidal with bond angles of approximately 107°."
+            "solution": "Protons = 26. Neutrons \\(= 56 - 26 = 30\\). Electrons \\(= 26 - 3 = 23\\) (the ion has lost 3). Neutrons minus electrons \\(= 30 - 23 = 7\\)."
+          },
+          {
+            "question": "Neon is 90.5% <sup>20</sup>Ne, 0.3% <sup>21</sup>Ne and 9.2% <sup>22</sup>Ne. What is its relative atomic mass?",
+            "options": [
+              "21.0",
+              "20.0",
+              "20.9",
+              "20.2",
+              "22.0"
+            ],
+            "correct": 3,
+            "solution": "\\(A_r = (20 \\times 90.5 + 21 \\times 0.3 + 22 \\times 9.2)/100 = (1810 + 6.3 + 202.4)/100 = 20.2\\)."
           },
           {
             "question": "Which of the following is an example of a redox reaction?",
@@ -26376,40 +26376,40 @@ const subjects = [
             "solution": "In 2Na + Cl₂ → 2NaCl, sodium is oxidised (0 → +1) and chlorine is reduced (0 → -1). This involves electron transfer, making it a redox reaction. The others are precipitation, acid-base, acid-base, and decomposition reactions respectively."
           },
           {
-            "question": "Which of the following elements has the highest electronegativity?",
+            "question": "Which order lists the ions N<sup>3-</sup>, O<sup>2-</sup>, F<sup>-</sup>, Na<sup>+</sup> and Mg<sup>2+</sup> from the largest radius to the smallest?",
             "options": [
-              "Carbon",
-              "Nitrogen",
-              "Oxygen",
-              "Fluorine",
-              "Neon"
+              "Mg<sup>2+</sup> > Na<sup>+</sup> > F<sup>-</sup> > O<sup>2-</sup> > N<sup>3-</sup>",
+              "Na<sup>+</sup> > Mg<sup>2+</sup> > N<sup>3-</sup> > O<sup>2-</sup> > F<sup>-</sup>",
+              "N<sup>3-</sup> > O<sup>2-</sup> > F<sup>-</sup> > Na<sup>+</sup> > Mg<sup>2+</sup>",
+              "N<sup>3-</sup> > O<sup>2-</sup> > Na<sup>+</sup> > F<sup>-</sup> > Mg<sup>2+</sup>",
+              "F<sup>-</sup> > O<sup>2-</sup> > N<sup>3-</sup> > Mg<sup>2+</sup> > Na<sup>+</sup>"
             ],
-            "correct": 3,
-            "solution": "Fluorine is the most electronegative element (Pauling scale: 4.0). Electronegativity generally increases across a period and decreases down a group. Neon is a noble gas and does not typically have an electronegativity value as it rarely forms bonds."
+            "correct": 2,
+            "solution": "All five have 10 electrons, so they have the same shielding. The more protons, the stronger the pull on those electrons and the <b>smaller</b> the ion: Mg<sup>2+</sup> (12 protons) is the smallest, N<sup>3-</sup> (7 protons) the largest."
           },
           {
-            "question": "Which of the following is a characteristic of transition metals?",
+            "question": "How many of these four mixtures show a chemical reaction: chlorine water + sodium bromide, bromine water + sodium chloride, iodine solution + potassium bromide, bromine water + potassium iodide?",
             "options": [
-              "They have low melting points",
-              "They form coloured compounds",
-              "They are always in the +1 oxidation state",
-              "They do not form complex ions",
-              "They are poor conductors of electricity"
+              "1",
+              "2",
+              "3",
+              "4",
+              "0"
             ],
             "correct": 1,
-            "solution": "Transition metals typically form coloured compounds due to d-d electron transitions. They also have high melting points, variable oxidation states, form complex ions, and are good conductors of electricity."
+            "solution": "A more reactive halogen displaces a less reactive halide. Cl<sub>2</sub> displaces Br<sup>-</sup> (reaction), and Br<sub>2</sub> displaces I<sup>-</sup> (reaction). Br<sub>2</sub> cannot displace Cl<sup>-</sup>, and I<sub>2</sub> cannot displace Br<sup>-</sup>. Total: 2."
           },
           {
-            "question": "What is the electron configuration of the Cl⁻ ion (Cl, Z = 17)?",
+            "question": "How many unpaired electrons are in an Fe<sup>3+</sup> ion in its ground state? (Fe: \\(Z = 26\\))",
             "options": [
-              "[Ne] 3s² 3p⁵",
-              "[Ne] 3s² 3p⁶",
-              "[Ar] 4s² 4p⁶",
-              "[Ne] 3s² 3p⁴",
-              "[Ar] 3d¹⁰ 4s² 4p⁶"
+              "4",
+              "5",
+              "3",
+              "6",
+              "1"
             ],
             "correct": 1,
-            "solution": "Neutral Cl: [Ne] 3s² 3p⁵. Cl⁻ gains one electron to achieve noble gas configuration: [Ne] 3s² 3p⁶, which is isoelectronic with argon ([Ar])."
+            "solution": "Fe is [Ar]3d<sup>6</sup>4s<sup>2</sup>. The 4s electrons leave first, then one 3d: Fe<sup>3+</sup> is [Ar]3d<sup>5</sup>. The five d electrons occupy five orbitals singly (Hund), so 5 are unpaired."
           },
           {
             "question": "Which of the following is a property of metals?",
@@ -26424,28 +26424,28 @@ const subjects = [
             "solution": "Metals are good conductors, malleable (not brittle), have high melting points, and lose electrons to form positive cations. Non-metals tend to gain electrons to form negative anions."
           },
           {
-            "question": "What is the shape of the water molecule (H₂O)?",
+            "question": "How many of these pairs are isotopes of the same element: (\\(^{12}\\)C, \\(^{14}\\)C), (\\(^{14}\\)C, \\(^{14}\\)N), (\\(^{35}\\)Cl, \\(^{37}\\)Cl), (\\(^{16}\\)O, \\(^{18}\\)O)?",
             "options": [
-              "Linear",
-              "Trigonal planar",
-              "Bent (104.5°)",
-              "Tetrahedral",
-              "Trigonal pyramidal"
+              "3",
+              "1",
+              "2",
+              "4",
+              "0"
             ],
-            "correct": 2,
-            "solution": "H₂O has two bonding pairs and two lone pairs around oxygen. The electron geometry is tetrahedral, but the molecular shape is bent with bond angles of approximately 104.5° due to lone pair repulsion."
+            "correct": 0,
+            "solution": "Isotopes have the <b>same atomic number</b> and different mass numbers. (\\(^{12}\\)C, \\(^{14}\\)C), (\\(^{35}\\)Cl, \\(^{37}\\)Cl) and (\\(^{16}\\)O, \\(^{18}\\)O) qualify. \\(^{14}\\)C and \\(^{14}\\)N have the same mass number but different atomic numbers, so they are not isotopes."
           },
           {
-            "question": "Which of the following elements is a halogen?",
+            "question": "Which order lists these period 3 elements from the smallest atomic radius to the largest?",
             "options": [
-              "Sodium",
-              "Magnesium",
-              "Chlorine",
-              "Argon",
-              "Calcium"
+              "Na, Mg, Al, S, Cl",
+              "Cl, S, Al, Mg, Na",
+              "Cl, S, Al, Na, Mg",
+              "S, Cl, Al, Mg, Na",
+              "Al, Cl, S, Mg, Na"
             ],
-            "correct": 2,
-            "solution": "Chlorine (Cl) is in Group 17 (VIIA) of the periodic table, which contains the halogens. Halogens are highly reactive non-metals that readily gain one electron to form -1 ions."
+            "correct": 1,
+            "solution": "Across a period the nuclear charge increases while the electrons enter the same shell, so the atoms get <b>smaller</b>. The radius is smallest for Cl and largest for Na."
           },
           {
             "question": "Which of the following is the correct order of increasing bond strength?",
@@ -26484,16 +26484,16 @@ const subjects = [
             "solution": "In ethene, each carbon forms 3 sigma bonds (2 C-H and 1 C-C) and 1 pi bond. This requires 3 hybrid orbitals for sigma bonding, which is sp² hybridisation. The remaining unhybridised p orbital forms the pi bond."
           },
           {
-            "question": "Which of the following is a property of transition metals?",
+            "question": "A period 3 oxide is insoluble in water, has a very high melting point and reacts with hot concentrated NaOH but not with hydrochloric acid. What is it?",
             "options": [
-              "They have low melting points",
-              "They form coloured compounds",
-              "They are poor conductors of electricity",
-              "They have fixed oxidation states",
-              "They are found in Group 1"
+              "Al<sub>2</sub>O<sub>3</sub>",
+              "MgO",
+              "P<sub>4</sub>O<sub>10</sub>",
+              "SO<sub>2</sub>",
+              "SiO<sub>2</sub>"
             ],
-            "correct": 1,
-            "solution": "Transition metals form coloured compounds due to d-d electron transitions. They also have high melting points, are good conductors, have variable oxidation states, and are found in the d-block (Groups 3-12)."
+            "correct": 4,
+            "solution": "SiO<sub>2</sub> has a giant covalent structure (very high melting point, insoluble) and is <b>acidic</b>: it reacts with bases. Al<sub>2</sub>O<sub>3</sub> is amphoteric (it would also react with the acid). MgO is basic. P<sub>4</sub>O<sub>10</sub> and SO<sub>2</sub> dissolve in water."
           },
           {
             "question": "Which of the following is a correct statement about isotopes?",
@@ -26508,28 +26508,28 @@ const subjects = [
             "solution": "Isotopes are atoms of the same element (same number of protons) with different numbers of neutrons. They have similar chemical properties because chemical behaviour depends on electron configuration, which is determined by proton number."
           },
           {
-            "question": "In the reaction Zn + CuSO₄ → ZnSO₄ + Cu, which species is oxidised?",
+            "question": "Copper has two isotopes, <sup>63</sup>Cu and <sup>65</sup>Cu, and its relative atomic mass is 63.55. What is the percentage abundance of <sup>63</sup>Cu?",
             "options": [
-              "Zn",
-              "Cu",
-              "CuSO₄",
-              "ZnSO₄",
-              "None"
+              "27.5%",
+              "72.5%",
+              "63.55%",
+              "55%",
+              "50%"
             ],
-            "correct": 0,
-            "solution": "Oxidation is loss of electrons. Zn goes from Zn⁰ to Zn²⁺, losing 2 electrons. Therefore, Zn is oxidised. Cu²⁺ is reduced to Cu⁰."
+            "correct": 1,
+            "solution": "Let \\(x\\) be the fraction of \\(^{63}\\)Cu: \\(63x + 65(1 - x) = 63.55\\), so \\(65 - 2x = 63.55\\) and \\(x = 0.725\\). The abundance is 72.5% (and 27.5% for \\(^{65}\\)Cu)."
           },
           {
-            "question": "Which of the following pairs are isotopes?",
+            "question": "How many of these species have exactly 10 electrons: Na<sup>+</sup>, Mg<sup>2+</sup>, O<sup>2-</sup>, F<sup>-</sup>, K<sup>+</sup>, Al<sup>3+</sup>, Ar?",
             "options": [
-              "¹²C and ¹⁴N",
-              "²³⁵U and ²³⁸U",
-              "¹⁶O and ¹⁸O",
-              "³⁵Cl and ³⁷Cl",
-              "Both B and C"
+              "4",
+              "6",
+              "7",
+              "3",
+              "5"
             ],
             "correct": 4,
-            "solution": "Isotopes are atoms of the same element with different numbers of neutrons. ²³⁵U and ²³⁸U are isotopes of uranium. ¹⁶O and ¹⁸O are isotopes of oxygen. Both pairs are isotopes."
+            "solution": "Na<sup>+</sup> (\\(11 - 1\\)), Mg<sup>2+</sup> (\\(12 - 2\\)), O<sup>2-</sup> (\\(8 + 2\\)), F<sup>-</sup> (\\(9 + 1\\)) and Al<sup>3+</sup> (\\(13 - 3\\)) all have 10. K<sup>+</sup> (\\(19 - 1 = 18\\)) and Ar (18) do not."
           },
           {
             "question": "Which of the following is a property of ionic compounds?",
@@ -26544,16 +26544,16 @@ const subjects = [
             "solution": "Ionic compounds have high melting points, conduct electricity when molten or dissolved (ions are free to move), and are formed by electrostatic attraction between oppositely charged ions, not electron sharing."
           },
           {
-            "question": "What is the hybridisation of carbon in diamond?",
+            "question": "Bromine has two isotopes, <sup>79</sup>Br and <sup>81</sup>Br. Its relative atomic mass is 79.9. Which percentage abundance is closest to that of <sup>81</sup>Br?",
             "options": [
-              "sp",
-              "sp²",
-              "sp³",
-              "sp³d",
-              "sp³d²"
+              "45%",
+              "55%",
+              "90%",
+              "10%",
+              "25%"
             ],
-            "correct": 2,
-            "solution": "In diamond, each carbon atom is bonded to four other carbon atoms in a tetrahedral arrangement. This requires sp³ hybridisation, giving four equivalent sp³ hybrid orbitals."
+            "correct": 0,
+            "solution": "Let \\(x\\) be the fraction of \\(^{81}\\)Br: \\(79 + 2x = 79.9\\), so \\(x = 0.45\\). The abundance is 45%. (The relative atomic mass sits a bit closer to 79 than to 81, so more than half is \\(^{79}\\)Br.)"
           },
           {
             "question": "Which of the following is a correct statement about electronegativity?",
@@ -26568,28 +26568,28 @@ const subjects = [
             "solution": "Electronegativity increases across a period (left to right) and decreases down a group. Fluorine is the most electronegative element (Pauling scale: 4.0). Noble gases are generally not assigned electronegativity values as they rarely form bonds."
           },
           {
-            "question": "Which of the following compounds is aromatic?",
+            "question": "Chlorine is 75% <sup>35</sup>Cl and 25% <sup>37</sup>Cl. In the mass spectrum of Cl<sub>2</sub> molecules there are three peaks at \\(m/z\\) = 70, 72 and 74. What are their relative heights?",
             "options": [
-              "Cyclohexane",
-              "Cyclohexene",
-              "Benzene",
-              "Cyclopentadiene",
-              "Cyclooctatetraene"
+              "3 : 2 : 1",
+              "1 : 2 : 1",
+              "9 : 6 : 1",
+              "3 : 1 : 1",
+              "1 : 1 : 1"
             ],
             "correct": 2,
-            "solution": "Benzene is aromatic with a planar ring structure, 6 π electrons (Hückel's rule: 4n+2 where n=1), and delocalised π bonding. The other compounds are non-aromatic."
+            "solution": "Probabilities: \\(^{35}\\)Cl\\(^{35}\\)Cl (70) \\(= 0.75^2 = 0.5625\\). \\(^{35}\\)Cl\\(^{37}\\)Cl (72) \\(= 2 \\times 0.75 \\times 0.25 = 0.375\\). \\(^{37}\\)Cl\\(^{37}\\)Cl (74) \\(= 0.25^2 = 0.0625\\). The ratio is 9 : 6 : 1."
           },
           {
-            "question": "Which of the following is a property of transition metal complexes?",
+            "question": "Which of these ions is expected to form coloured compounds in water?",
             "options": [
-              "They are always colourless",
-              "They often exhibit colour due to d-d transitions",
-              "They have fixed coordination numbers only",
-              "They cannot form chelates",
-              "They are always diamagnetic"
+              "Zn<sup>2+</sup>",
+              "Sc<sup>3+</sup>",
+              "Ca<sup>2+</sup>",
+              "Cu<sup>2+</sup>",
+              "K<sup>+</sup>"
             ],
-            "correct": 1,
-            "solution": "Transition metal complexes often exhibit colour due to d-d electron transitions. The energy difference between d orbitals corresponds to visible light wavelengths, giving the complexes their characteristic colours."
+            "correct": 3,
+            "solution": "Colour needs a <b>partly filled</b> \\(d\\) subshell. Cu<sup>2+</sup> is 3d<sup>9</sup>. Zn<sup>2+</sup> is 3d<sup>10</sup> (full) and Sc<sup>3+</sup> is [Ar] (empty \\(d\\)), so both are colourless. Ca<sup>2+</sup> and K<sup>+</sup> have no \\(d\\) electrons."
           },
           {
             "question": "What is the ground-state electron configuration of a neutral chromium atom (Cr, Z = 24)?",
@@ -26652,16 +26652,16 @@ const subjects = [
             "solution": "Although electronegativity increases up Group 17, chlorine has a higher first electron affinity than fluorine (-349 kJ/mol vs -328 kJ/mol). Fluorine's 2p subshell is extremely compact, causing significant inter-electronic repulsion when an incoming electron is added, whereas chlorine's larger 3p orbitals accommodate the added electron with less repulsion."
           },
           {
-            "question": "What is the total number of orbitals in the principal energy level n = 4?",
+            "question": "Which ion has the greatest number of unpaired electrons in its ground state?",
             "options": [
-              "16",
-              "32",
-              "8",
-              "9",
-              "4"
+              "Fe<sup>2+</sup>",
+              "Mn<sup>2+</sup>",
+              "Co<sup>2+</sup>",
+              "Cu<sup>2+</sup>",
+              "Zn<sup>2+</sup>"
             ],
-            "correct": 0,
-            "solution": "The total number of orbitals in a principal energy level n is given by n². For n = 4, the number of orbitals is 4² = 16 (one 4s, three 4p, five 4d, and seven 4f orbitals). The maximum number of electrons is 2n² = 32."
+            "correct": 1,
+            "solution": "Mn<sup>2+</sup> is 3d<sup>5</sup>: 5 unpaired. Fe<sup>2+</sup> is 3d<sup>6</sup> (4), Co<sup>2+</sup> is 3d<sup>7</sup> (3), Cu<sup>2+</sup> is 3d<sup>9</sup> (1) and Zn<sup>2+</sup> is 3d<sup>10</sup> (0)."
           },
           {
             "question": "An element X has successive ionization energies of: IE₁ = 738 kJ/mol, IE₂ = 1451 kJ/mol, IE₃ = 7733 kJ/mol, IE₄ = 10540 kJ/mol. In which group of the periodic table is element X located?",
@@ -26676,16 +26676,16 @@ const subjects = [
             "solution": "There is a massive jump between IE₂ (1451 kJ/mol) and IE₃ (7733 kJ/mol). This indicates that the third electron is removed from a noble-gas core (an inner principal energy level). Therefore, element X possesses exactly 2 valence electrons and belongs to Group 2."
           },
           {
-            "question": "What is the maximum number of electrons that can occupy subshell 4d?",
+            "question": "An element has the valence configuration 4s<sup>2</sup>4p<sup>3</sup>. What is its atomic number?",
             "options": [
-              "10",
-              "14",
-              "6",
-              "2",
-              "8"
+              "15",
+              "35",
+              "23",
+              "31",
+              "33"
             ],
-            "correct": 0,
-            "solution": "For any d subshell (l = 2), there are 2l + 1 = 5 individual orbitals (m_l = -2, -1, 0, +1, +2). Since each orbital can hold at most 2 electrons with opposite spins, the maximum capacity is 5 × 2 = 10 electrons."
+            "correct": 4,
+            "solution": "The full configuration is [Ar]3d<sup>10</sup>4s<sup>2</sup>4p<sup>3</sup>. Count: \\(18 + 10 + 2 + 3 = 33\\). The element is arsenic (group 15, period 4)."
           },
           {
             "question": "Naturally occurring chlorine consists of two isotopes: ³⁵Cl (atomic mass 35.0 u) and ³⁷Cl (atomic mass 37.0 u). If the relative atomic mass of chlorine is 35.5 u, what is the percent abundance of ³⁵Cl?",
@@ -26724,16 +26724,16 @@ const subjects = [
             "solution": "Across a period from left to right, protons are added to the nucleus while electrons enter the same valence shell. This increases the effective nuclear charge (Z_eff) without increasing shielding, pulling the valence electrons closer and decreasing the atomic radius."
           },
           {
-            "question": "What is the ground-state electron configuration of the sulfide ion (S²⁻, Z = 16)?",
+            "question": "In a ground-state phosphorus atom (\\(Z = 15\\)), how many orbitals are <b>completely filled</b> with two electrons?",
             "options": [
-              "1s² 2s² 2p⁶ 3s² 3p⁶",
-              "1s² 2s² 2p⁶ 3s² 3p⁴",
-              "1s² 2s² 2p⁶ 3s² 3p²",
-              "1s² 2s² 2p⁶ 4s²",
-              "[Ne] 3s² 3d⁴"
+              "5",
+              "7",
+              "8",
+              "6",
+              "9"
             ],
-            "correct": 0,
-            "solution": "A neutral sulfur atom has 16 electrons: 1s² 2s² 2p⁶ 3s² 3p⁴. The S²⁻ ion gains 2 electrons to complete its valence octet, resulting in 18 electrons: 1s² 2s² 2p⁶ 3s² 3p⁶ (isoelectronic with argon)."
+            "correct": 3,
+            "solution": "P is 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>3</sup>. Full orbitals: 1s, 2s, three 2p and 3s \\(= 6\\). The three 3p electrons are in three separate orbitals (Hund), so those orbitals are half-filled."
           },
           {
             "question": "Which of the following elements has the lowest electronegativity on the Pauling scale?",
@@ -26748,16 +26748,16 @@ const subjects = [
             "solution": "Electronegativity decreases down a group and from right to left across a period. Francium and Cesium have the lowest electronegativity values (~0.79 on the Pauling scale) because of their large atomic radii and low effective nuclear charge on valence electrons."
           },
           {
-            "question": "How many nodal planes (angular nodes) are present in any 3d atomic orbital?",
+            "question": "How many electrons in a chloride ion, Cl<sup>-</sup> (\\(Z = 17\\)), are in \\(p\\) orbitals?",
             "options": [
-              "2",
-              "1",
-              "0",
-              "3",
-              "5"
+              "12",
+              "11",
+              "5",
+              "6",
+              "17"
             ],
             "correct": 0,
-            "solution": "The number of angular nodes (nodal planes) in an atomic orbital is determined solely by the azimuthal quantum number l. For a d orbital, l = 2, so every d orbital contains exactly 2 angular nodes."
+            "solution": "Cl<sup>-</sup> has 18 electrons: 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>. The \\(p\\) electrons are \\(6 + 6 = 12\\)."
           },
           {
             "question": "Which species is diamagnetic in its ground state?",
@@ -26772,16 +26772,16 @@ const subjects = [
             "solution": "Zn (Z = 28) has configuration [Ar] 3d¹⁰ 4s². Zn²⁺ loses both 4s electrons, leaving [Ar] 3d¹⁰. All 10 electrons in the 3d subshell are paired into 5 orbitals, meaning Zn²⁺ has no unpaired electrons and is diamagnetic. The other ions all have partially filled d subshells containing unpaired electrons (paramagnetic)."
           },
           {
-            "question": "What is the principal quantum number (n) and azimuthal quantum number (l) of an electron in a 5f orbital?",
+            "question": "Which is the correct ground-state electron configuration of the copper(II) ion, Cu<sup>2+</sup>? (\\(Z = 29\\))",
             "options": [
-              "n = 5, l = 3",
-              "n = 5, l = 2",
-              "n = 5, l = 4",
-              "n = 4, l = 3",
-              "n = 6, l = 3"
+              "[Ar]3d<sup>9</sup>",
+              "[Ar]3d<sup>10</sup>4s<sup>1</sup>",
+              "[Ar]3d<sup>8</sup>4s<sup>1</sup>",
+              "[Ar]3d<sup>9</sup>4s<sup>2</sup>",
+              "[Ar]3d<sup>10</sup>"
             ],
             "correct": 0,
-            "solution": "The number '5' designates the principal quantum number n = 5. The letter 'f' designates the azimuthal quantum number l = 3 (where s corresponds to 0, p to 1, d to 2, and f to 3)."
+            "solution": "Cu is [Ar]3d<sup>10</sup>4s<sup>1</sup> (an exception). To make Cu<sup>2+</sup> remove the 4s electron and one 3d electron: [Ar]3d<sup>9</sup>. It has one unpaired electron."
           },
           {
             "question": "Which element has the highest second ionization energy (IE₂)?",
@@ -26820,16 +26820,16 @@ const subjects = [
             "solution": "Metallic character increases down a group (due to increasing atomic radius and easier electron loss) and decreases across a period (due to increasing electronegativity and ionization energy). Among the given elements, potassium (Group 1, Period 4) loses its valence electron most readily, giving it the greatest metallic character."
           },
           {
-            "question": "What is the relative order of atomic radius for the elements O, F, S, and Cl?",
+            "question": "Compared with potassium, calcium has:",
             "options": [
-              "F < O < Cl < S",
-              "O < F < S < Cl",
-              "F < Cl < O < S",
-              "S < Cl < O < F",
-              "F < O < S < Cl"
+              "A smaller atomic radius and a higher first ionisation energy",
+              "A larger atomic radius and a higher first ionisation energy",
+              "A smaller atomic radius and a lower first ionisation energy",
+              "A larger atomic radius and a lower first ionisation energy",
+              "The same radius and a higher first ionisation energy"
             ],
             "correct": 0,
-            "solution": "Atomic radius increases down a group and decreases across a period. Period 2 elements (O, F) are smaller than Period 3 elements (S, Cl). Within Period 2, F < O. Within Period 3, Cl < S. Therefore, the overall order of increasing atomic radius is F < O < Cl < S."
+            "solution": "K and Ca are in the same period (4), with Ca one place to the right. One more proton pulls the same shell closer, so the radius is smaller and the electron is harder to remove."
           },
           {
             "question": "Which of the following elements has the highest first ionization energy?",
@@ -26868,16 +26868,16 @@ const subjects = [
             "solution": "Hund's rule of maximum multiplicity states that when electrons occupy degenerate orbitals (orbitals of equal energy, such as the three p orbitals or five d orbitals), they occupy them singly with parallel spins before doubly occupying any orbital."
           },
           {
-            "question": "Which of the following chemical elements is an alkaline earth metal?",
+            "question": "The first ionisation energies (kJ/mol) are: Mg 738, Al 578, P 1012, S 1000. Which pair of explanations accounts for <b>both</b> dips (Al below Mg, S below P)?",
             "options": [
-              "Barium",
-              "Boron",
-              "Potassium",
-              "Lithium",
-              "Sulfur"
+              "Al has a smaller nuclear charge than Mg. S has a larger radius than P.",
+              "The Al electron is in a 3s subshell. S has more shielding than P.",
+              "Al has more shells than Mg. S has fewer protons than P.",
+              "The Al electron is in a higher-energy 3p subshell. In S, two electrons are paired in one 3p orbital and repel.",
+              "Mg has a stronger metallic bond. P has a stronger covalent bond."
             ],
-            "correct": 0,
-            "solution": "The alkaline earth metals are the elements of Group 2 (Be, Mg, Ca, Sr, Ba, Ra). Barium (Ba) is an alkaline earth metal. Lithium and potassium are alkali metals (Group 1)."
+            "correct": 3,
+            "solution": "Mg loses a 3s electron, but Al loses a 3p electron, which has higher energy and is slightly shielded by the 3s electrons. In S the electron removed comes from an orbital with two electrons, and their repulsion makes it easier to remove than a single electron in P."
           },
           {
             "question": "Which of the following statements about quantum numbers is NOT correct?",
@@ -26904,16 +26904,16 @@ const subjects = [
             "solution": "The highest principal quantum number in both configurations is n = 4, which means both elements belong to the 4th period of the periodic table (Zinc with Z=30 and Selenium with Z=34)."
           },
           {
-            "question": "The electron configuration of the Li⁺ ion is represented as:",
+            "question": "How many unpaired electrons does a chromium atom (\\(Z = 24\\)) have in its ground state?",
             "options": [
-              "1s¹",
-              "1s² 2s¹",
-              "1s¹ 2s²",
-              "1s²",
-              "1s¹ 2s¹ 2p¹"
+              "4",
+              "5",
+              "2",
+              "6",
+              "0"
             ],
             "correct": 3,
-            "solution": "Neutral lithium (Z = 3) has electron configuration 1s² 2s¹. Losing its single valence electron gives the cation Li⁺ with the stable helium noble gas configuration 1s²."
+            "solution": "Chromium is an exception: [Ar]3d<sup>5</sup>4s<sup>1</sup>, because a half-filled d subshell is especially stable. Five 3d electrons and one 4s electron are all unpaired: 6."
           },
           {
             "question": "Examining electron configurations of 2p subshells:\n1. 1s² 2s² 2p: [↑↓][ ][ ] (violates Hund's rule)\n2. 1s² 2s² 2p: [↑][↑][↑] (singly occupied with parallel spins)\n3. 1s² 2s² 2p: [↑↓][↑↓][ ] (violates Hund's rule)\n4. 1s² 2s¹ 2p: [↓][↑][↑] (opposite spins)\n5. 1s² 2s² 2p⁶ 3s¹: [↑↓][↑↓][↑↓] (completely filled degenerate subshell)\nWhich of the following statements is always true?",
@@ -26970,16 +26970,16 @@ const subjects = [
         "name": "Chemical Bonding & Structure",
         "questions": [
           {
-            "question": "Which compound contains both ionic and covalent bonding?",
+            "question": "How many of NH<sub>4</sub><sup>+</sup>, H<sub>3</sub>O<sup>+</sup>, CH<sub>4</sub>, CO and NH<sub>3</sub> contain at least one coordinate (dative) bond?",
             "options": [
-              "Sodium chloride (NaCl)",
-              "Carbon dioxide (CO₂)",
-              "Ammonium nitrate (NH₄NO₃)",
-              "Magnesium oxide (MgO)",
-              "Chlorine gas (Cl₂)"
+              "2",
+              "4",
+              "5",
+              "1",
+              "3"
             ],
-            "correct": 2,
-            "solution": "Ammonium nitrate has both: ionic bonding between NH₄⁺ and NO₃⁻ ions, and covalent bonding within NH₄⁺ (N-H bonds) and within NO₃⁻ (N-O bonds)."
+            "correct": 4,
+            "solution": "NH<sub>4</sub><sup>+</sup> (N donates a lone pair to H<sup>+</sup>), H<sub>3</sub>O<sup>+</sup> (O donates a lone pair to H<sup>+</sup>) and CO (O donates a lone pair to C) each have a dative bond. CH<sub>4</sub> and NH<sub>3</sub> have only ordinary covalent bonds."
           },
           {
             "question": "Which of the following molecules has a tetrahedral shape and a bond angle of approximately 109.5°?",
@@ -26994,28 +26994,28 @@ const subjects = [
             "solution": "CH₄ has four bonding pairs and no lone pairs around the central carbon, giving a perfect tetrahedral geometry with bond angles of 109.5°. NH₃ is trigonal pyramidal (~107°), H₂O is bent (~104.5°), BF₃ is trigonal planar (120°), and SO₂ is bent."
           },
           {
-            "question": "What is the correct IUPAC name for CH₃CH₂CH₂CH=CH₂?",
+            "question": "Which molecule has the smallest bond angle?",
             "options": [
-              "1-pentene",
-              "2-pentene",
-              "Pent-1-ene",
-              "Pent-2-ene",
-              "1-pentene (both A and C are acceptable)"
+              "H<sub>2</sub>O",
+              "NH<sub>3</sub>",
+              "CH<sub>4</sub>",
+              "BF<sub>3</sub>",
+              "CO<sub>2</sub>"
             ],
-            "correct": 2,
-            "solution": "The IUPAC name uses the suffix -ene for alkenes. The double bond is between carbons 1 and 2, so the locant is 1. The preferred IUPAC name is pent-1-ene."
+            "correct": 0,
+            "solution": "Lone pairs repel more than bonding pairs. H<sub>2</sub>O has two lone pairs (104.5°), NH<sub>3</sub> has one (107°), CH<sub>4</sub> has none (109.5°). BF<sub>3</sub> is 120° and CO<sub>2</sub> is 180°."
           },
           {
-            "question": "Which of the following is the correct order of increasing bond length?",
+            "question": "How many of these six molecules are <b>polar</b>: CO<sub>2</sub>, BF<sub>3</sub>, CCl<sub>4</sub>, NH<sub>3</sub>, H<sub>2</sub>O, CHCl<sub>3</sub>?",
             "options": [
-              "C-C < C=C < C≡C",
-              "C≡C < C=C < C-C",
-              "C=C < C-C < C≡C",
-              "C-C < C≡C < C=C",
-              "C≡C < C-C < C=C"
+              "2",
+              "4",
+              "3",
+              "5",
+              "6"
             ],
-            "correct": 1,
-            "solution": "Triple bonds are the shortest (highest bond order, strongest), followed by double bonds, then single bonds. So C≡C < C=C < C-C."
+            "correct": 2,
+            "solution": "CO<sub>2</sub> (linear), BF<sub>3</sub> (trigonal planar) and CCl<sub>4</sub> (tetrahedral) are symmetrical, so their bond dipoles cancel. NH<sub>3</sub>, H<sub>2</sub>O and CHCl<sub>3</sub> are not symmetrical, so they are polar: 3."
           },
           {
             "question": "Which of the following statements about ideal gases is correct?",
@@ -27042,16 +27042,16 @@ const subjects = [
             "solution": "Carbon in methane forms four sigma bonds with hydrogen. To accommodate four bonding pairs with minimal repulsion, carbon undergoes sp³ hybridisation, giving a tetrahedral geometry with 109.5° bond angles."
           },
           {
-            "question": "Which type of bond is strongest?",
+            "question": "MgO melts at about 2850 °C and NaCl at about 800 °C. Which explanation is correct?",
             "options": [
-              "Single covalent bond",
-              "Double covalent bond",
-              "Triple covalent bond",
-              "Ionic bond",
-              "Hydrogen bond"
+              "The ions in MgO have a higher charge and a smaller radius, so the electrostatic attraction is stronger.",
+              "MgO is covalent, so it has stronger bonds than NaCl.",
+              "Mg has more electrons than Na, so it has stronger London forces.",
+              "MgO has a larger lattice, so more ions must be separated.",
+              "Mg<sup>2+</sup> is bigger than Na<sup>+</sup>, so it attracts more strongly."
             ],
-            "correct": 2,
-            "solution": "Triple bonds have the highest bond order and are the strongest covalent bonds. For example, the C≡C triple bond is stronger than C=C or C-C bonds. Ionic bonds can be strong but vary widely depending on the ions involved."
+            "correct": 0,
+            "solution": "The attraction between ions grows with the charges (2+ and 2− against 1+ and 1−) and falls as the ions get larger. Mg<sup>2+</sup> and O<sup>2-</sup> have higher charges and the Mg<sup>2+</sup> ion is smaller than Na<sup>+</sup>."
           },
           {
             "question": "Which of the following is a property of ionic compounds?",
@@ -27114,28 +27114,28 @@ const subjects = [
             "solution": "Addition reactions involve adding atoms across a double or triple bond. Bromine adds across the double bond in ethene (C₂H₄ + Br₂ → C₂H₄Br₂), converting it to 1,2-dibromoethane."
           },
           {
-            "question": "What is the molecular formula of butanoic acid?",
+            "question": "How many ions are present in one formula unit of aluminium sulfate?",
             "options": [
-              "C₃H₆O₂",
-              "C₄H₈O₂",
-              "C₅H₁₀O₂",
-              "C₄H₆O₂",
-              "C₃H₈O₂"
+              "2",
+              "5",
+              "3",
+              "6",
+              "17"
             ],
             "correct": 1,
-            "solution": "Butanoic acid has 4 carbon atoms (but- prefix), 8 hydrogen atoms (saturated carboxylic acid: CₙH₂ₙO₂), and 2 oxygen atoms (carboxyl group). Formula: C₄H₈O₂."
+            "solution": "Al<sup>3+</sup> and SO<sub>4</sub><sup>2-</sup> combine as Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>: 2 Al<sup>3+</sup> and 3 SO<sub>4</sub><sup>2-</sup>, so 5 ions (the sulfate ion counts as one particle)."
           },
           {
-            "question": "What is the shape of the PCl₅ molecule?",
+            "question": "How many lone pairs are there in total in the carbonate ion, CO<sub>3</sub><sup>2-</sup>?",
             "options": [
-              "Linear",
-              "Trigonal planar",
-              "Tetrahedral",
-              "Trigonal bipyramidal",
-              "Octahedral"
+              "6",
+              "9",
+              "10",
+              "8",
+              "12"
             ],
             "correct": 3,
-            "solution": "PCl₅ has 5 bonding pairs and no lone pairs around the central phosphorus atom. This gives a trigonal bipyramidal geometry with bond angles of 90° and 120°."
+            "solution": "Valence electrons: \\(4 + 3 \\times 6 + 2 = 24\\), i.e. 12 pairs. The structure has 4 bonding pairs (three single bonds plus one extra for the double bond), so \\(12 - 4 = 8\\) lone pairs. They sit on the oxygen atoms."
           },
           {
             "question": "What is the molecular geometry of sulfur tetrafluoride (SF₄) according to VSEPR theory?",
@@ -27246,16 +27246,16 @@ const subjects = [
             "solution": "Bond polarity is determined by the electronegativity difference (ΔEN) between the bonded atoms. Fluorine is the most electronegative element (4.0) and hydrogen has an electronegativity of 2.1. ΔEN = 4.0 - 2.1 = 1.9, which is the largest difference among the options."
           },
           {
-            "question": "What is the expected H-C-H bond angle in the carbocation methyl cation (CH₃⁺)?",
+            "question": "Four solids have these properties. W: very high melting point, hard, does not conduct. X: high melting point, conducts only when molten. Y: conducts when solid, malleable. Z: low melting point, does not conduct. Which row matches W, X, Y, Z?",
             "options": [
-              "120°",
-              "109.5°",
-              "180°",
-              "90°",
-              "104.5°"
+              "Ionic, giant covalent, metallic, simple molecular",
+              "Giant covalent, metallic, ionic, simple molecular",
+              "Simple molecular, ionic, metallic, giant covalent",
+              "Giant covalent, ionic, metallic, simple molecular",
+              "Metallic, ionic, giant covalent, simple molecular"
             ],
-            "correct": 0,
-            "solution": "The carbon atom in CH₃⁺ has 3 bonding pairs and 0 lone pairs (steric number 3). Its hybridization is sp², which adopts a trigonal planar geometry with bond angles of 120°."
+            "correct": 3,
+            "solution": "W (very hard, high mp, no free charges) is giant covalent. X conducts only when its ions are free to move, so it is ionic. Y has delocalised electrons in the solid, so it is metallic. Z has weak forces between molecules, so it is simple molecular."
           },
           {
             "question": "Which of the following species violates the octet rule by possessing an incomplete octet on its central atom?",
@@ -27342,16 +27342,16 @@ const subjects = [
             "solution": "The central oxygen atom in O₃ is bonded to two terminal oxygen atoms and possesses 1 lone pair (steric number 3). Its electron geometry is trigonal planar, and with 1 lone pair, its molecular shape is bent with a bond angle of approximately 117° (slightly less than 120° due to lone pair-bonding pair repulsion)."
           },
           {
-            "question": "Which of the following compounds has the highest normal boiling point?",
+            "question": "Propane (−42 °C), dimethyl ether CH<sub>3</sub>OCH<sub>3</sub> (−24 °C) and ethanol (78 °C) have similar molar masses (44, 46 and 46). Which explains the order of boiling points?",
             "options": [
-              "Butan-1-ol (CH₃CH₂CH₂CH₂OH)",
-              "Diethyl ether (CH₃CH₂OCH₂CH₃)",
-              "Butane (CH₃CH₂CH₂CH₃)",
-              "Butanal (CH₃CH₂CH₂CHO)",
-              "2-methylpropane (CH(CH₃)₃)"
+              "Propane has the most electrons, so the strongest London forces",
+              "Propane has only London forces, the ether adds dipole-dipole forces, and ethanol has hydrogen bonds",
+              "All three have hydrogen bonds, but ethanol has the most",
+              "Ethanol has the strongest covalent bonds",
+              "The ether has hydrogen bonds because it contains oxygen"
             ],
-            "correct": 0,
-            "solution": "All of these compounds have similar molecular weights (~58 to 74 g/mol). Butan-1-ol can form strong intermolecular hydrogen bonds via its -OH group, resulting in a boiling point of ~117 °C. The other compounds only exhibit dipole-dipole forces (diethyl ether, butanal) or weak London dispersion forces (butane, 2-methylpropane)."
+            "correct": 1,
+            "solution": "The molar masses are almost the same, so London forces are similar. The ether is polar (C–O–C is bent): dipole-dipole forces. Ethanol has an O–H group, which forms hydrogen bonds. The ether has no H bonded to O, so it cannot <b>donate</b> a hydrogen bond."
           },
           {
             "question": "What is the resonance hybrid structure of the carbonate ion (CO₃²⁻)?",
@@ -27438,16 +27438,16 @@ const subjects = [
             "solution": "In NF₃, nitrogen shares three electron pairs with fluorine atoms and holds one lone pair, completing its valence shell with 8 electrons (octet satisfied). BF₃ is incomplete (6 electrons), PF₅ has an expanded valence (10 electrons), and NO and BrO₂ are odd-electron free radicals."
           },
           {
-            "question": "For which of these molecules can we predict an octahedral geometry?",
+            "question": "Use the average bond energies (kJ/mol): H–H 436, Cl–Cl 243, H–Cl 432. What is \\(\\Delta H\\) for H<sub>2</sub> + Cl<sub>2</sub> → 2HCl?",
             "options": [
-              "PF₅",
-              "BrF₃",
-              "SeF₆",
-              "SF₄",
-              "BF₃"
+              "+185 kJ",
+              "-185 kJ",
+              "-247 kJ",
+              "+247 kJ",
+              "-864 kJ"
             ],
-            "correct": 2,
-            "solution": "Selenium hexafluoride (SeF₆) has 6 bonding pairs and 0 lone pairs around the central selenium atom (AX₆ VSEPR notation), producing a regular octahedral geometry with 90° bond angles."
+            "correct": 1,
+            "solution": "\\(\\Delta H = \\sum\\)(bonds broken) \\(- \\sum\\)(bonds formed) \\(= (436 + 243) - 2(432) = 679 - 864 = -185\\) kJ. The negative sign means the reaction is exothermic."
           },
           {
             "question": "In which of the following pairs do both species have a trigonal planar structure according to VSEPR theory, and their central atoms have the same number of valence electrons?",
@@ -27516,16 +27516,16 @@ const subjects = [
             "solution": "There are 4 moles of gas on the left (1 + 3) and 2 moles on the right. Increasing pressure shifts equilibrium towards the side with fewer moles of gas — the right. More NH₃ is produced (Le Chatelier's principle)."
           },
           {
-            "question": "Which of the following is the correct product of the complete combustion of propane (C₃H₈)?",
+            "question": "How many of these four mixtures show a reaction: Zn + CuSO<sub>4</sub>, Cu + ZnSO<sub>4</sub>, Mg + FeCl<sub>2</sub>, Fe + MgCl<sub>2</sub>?",
             "options": [
-              "C₃H₆ + H₂O",
-              "CO + H₂O",
-              "CO₂ + H₂O",
-              "C₃H₆O + H₂",
-              "CO₂ + H₂"
+              "1",
+              "2",
+              "3",
+              "4",
+              "0"
             ],
-            "correct": 2,
-            "solution": "Complete combustion of a hydrocarbon in excess oxygen produces CO₂ and H₂O. C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. Incomplete combustion would produce CO instead of CO₂."
+            "correct": 1,
+            "solution": "A more reactive metal displaces a less reactive one. Zn displaces Cu (reaction). Mg displaces Fe (reaction). Cu cannot displace Zn, and Fe cannot displace Mg."
           },
           {
             "question": "A 250 cm³ solution contains 0.73 g of HCl (Mr = 36.5). What is the concentration of the solution in mol/dm³?",
@@ -27540,16 +27540,16 @@ const subjects = [
             "solution": "Moles of HCl = 0.73 ÷ 36.5 = 0.02 mol. Volume = 250 cm³ = 0.25 dm³. Concentration = 0.02 ÷ 0.25 = 0.08 mol/dm³."
           },
           {
-            "question": "What is the oxidation state of sulfur in H₂SO₄?",
+            "question": "What mass of CaCO<sub>3</sub> is needed to make 1.00 tonne of CaO (\\(M = 56\\)) if the process has a yield of 80%? (\\(M(\\text{CaCO}_3) = 100\\))",
             "options": [
-              "+2",
-              "+4",
-              "+6",
-              "−2",
-              "0"
+              "2.23 tonnes",
+              "1.79 tonnes",
+              "1.43 tonnes",
+              "0.7 tonnes",
+              "1.25 tonnes"
             ],
-            "correct": 2,
-            "solution": "H has oxidation state +1 (×2 = +2). O has oxidation state −2 (×4 = −8). For neutral molecule: +2 + S − 8 = 0 → S = +6."
+            "correct": 0,
+            "solution": "Theoretical: \\(100/56 = 1.786\\) t of CaCO<sub>3</sub> for 1.00 t of CaO. With an 80% yield you must start with more: \\(1.786/0.80 = 2.23\\) t."
           },
           {
             "question": "What is the empirical formula of a compound with 40% carbon, 6.7% hydrogen, and 53.3% oxygen by mass?",
@@ -27564,40 +27564,40 @@ const subjects = [
             "solution": "Assume 100g: C = 40g ÷ 12 = 3.33 mol, H = 6.7g ÷ 1 = 6.7 mol, O = 53.3g ÷ 16 = 3.33 mol. Divide by smallest (3.33): C:H:O = 1:2:1. Empirical formula = CH₂O."
           },
           {
-            "question": "What is the mass of 0.5 moles of CaCO₃? (Ca = 40, C = 12, O = 16)",
+            "question": "20.0 cm<sup>3</sup> of sulfuric acid are neutralised by 25.0 cm<sup>3</sup> of 0.100 mol/L NaOH. What is the concentration of the acid?",
             "options": [
-              "25 g",
-              "50 g",
-              "75 g",
-              "100 g",
-              "125 g"
+              "0.125 mol/L",
+              "0.0500 mol/L",
+              "0.250 mol/L",
+              "0.0625 mol/L",
+              "0.0313 mol/L"
             ],
-            "correct": 1,
-            "solution": "Mr of CaCO₃ = 40 + 12 + 48 = 100 g/mol. 0.5 moles = 0.5 × 100 = 50 g."
+            "correct": 3,
+            "solution": "\\(n(\\text{NaOH}) = 0.0250 \\times 0.100 = 2.50 \\times 10^{-3}\\) mol. The acid is diprotic: 1 mol of H<sub>2</sub>SO<sub>4</sub> reacts with 2 mol of NaOH, so \\(n(\\text{acid}) = 1.25 \\times 10^{-3}\\) mol. \\(c = 1.25 \\times 10^{-3}/0.0200 = 0.0625\\) mol/L."
           },
           {
-            "question": "What is the pH of a 0.01 mol/dm³ solution of HCl?",
+            "question": "What is the sum of the smallest whole-number coefficients when butane burns completely: C<sub>4</sub>H<sub>10</sub> + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O?",
             "options": [
-              "1",
-              "2",
-              "3",
-              "4",
-              "5"
-            ],
-            "correct": 1,
-            "solution": "HCl is a strong acid, fully dissociated. [H⁺] = 0.01 mol/dm³ = 10⁻² M. pH = -log(10⁻²) = 2."
-          },
-          {
-            "question": "What is the mass of 2.5 moles of water (H₂O)? (H = 1, O = 16)",
-            "options": [
-              "18 g",
-              "36 g",
-              "45 g",
-              "54 g",
-              "90 g"
+              "19",
+              "23",
+              "33",
+              "29",
+              "37"
             ],
             "correct": 2,
-            "solution": "Mr of H₂O = 2 + 16 = 18 g/mol. 2.5 moles = 2.5 × 18 = 45 g."
+            "solution": "2C<sub>4</sub>H<sub>10</sub> + 13O<sub>2</sub> → 8CO<sub>2</sub> + 10H<sub>2</sub>O. Check C: 8 = 8; H: 20 = 20; O: 26 = 16 + 10. The sum is \\(2 + 13 + 8 + 10 = 33\\)."
+          },
+          {
+            "question": "2.4 g of magnesium (\\(A_r = 24\\)) are added to 100 cm<sup>3</sup> of 1.0 mol/L hydrochloric acid. What volume of hydrogen forms at STP?",
+            "options": [
+              "1.12 L",
+              "2.24 L",
+              "4.48 L",
+              "0.56 L",
+              "22.4 L"
+            ],
+            "correct": 0,
+            "solution": "Mg + 2HCl → MgCl<sub>2</sub> + H<sub>2</sub>. \\(n(\\text{Mg}) = 0.10\\) mol and \\(n(\\text{HCl}) = 0.100 \\times 1.0 = 0.10\\) mol. 0.10 mol of Mg needs 0.20 mol of HCl, so the acid is limiting. \\(n(\\text{H}_2) = 0.10/2 = 0.050\\) mol, \\(V = 0.050 \\times 22.4 = 1.12\\) L."
           },
           {
             "question": "What is the concentration of a solution made by dissolving 5.85 g of NaCl (Mr = 58.5) in water to make 500 cm³ of solution?",
@@ -27708,16 +27708,16 @@ const subjects = [
             "solution": "Magnesium has a +2 charge, oxygen has a -2 charge. The formula is MgO, giving a neutral compound."
           },
           {
-            "question": "What is the mass of 1 mole of carbon dioxide (CO₂)? (C = 12, O = 16)",
+            "question": "10.0 g of calcium carbonate are heated: CaCO<sub>3</sub> → CaO + CO<sub>2</sub>. The mass of CaO obtained is 3.8 g. What is the percentage yield? (\\(A_r\\): Ca 40, C 12, O 16)",
             "options": [
-              "28 g",
-              "32 g",
-              "44 g",
-              "56 g",
-              "88 g"
+              "38%",
+              "147%",
+              "86.4%",
+              "67.9%",
+              "33.9%"
             ],
-            "correct": 2,
-            "solution": "Mr of CO₂ = 12 + 32 = 44 g/mol. 1 mole = 44 g."
+            "correct": 3,
+            "solution": "\\(n(\\text{CaCO}_3) = 10.0/100 = 0.100\\) mol, so the theoretical yield is \\(0.100 \\times 56 = 5.6\\) g of CaO. Percentage yield \\(= 3.8/5.6 \\times 100 = 67.9\\%\\)."
           },
           {
             "question": "In a titration, what colour does phenolphthalein turn in a basic solution?",
@@ -27804,28 +27804,28 @@ const subjects = [
             "solution": "Boiling point elevation depends on the van't Hoff factor (i), which is the number of particles per formula unit. NaCl: i≈2, MgCl₂: i≈3, AlCl₃: i≈4, Glucose: i=1, Urea: i=1. AlCl₃ produces the most particles, so it has the highest boiling point elevation."
           },
           {
-            "question": "What is the pH of a 0.01 mol/dm³ solution of HCl?",
+            "question": "0.46 g of a compound containing only C, H and O burn to give 0.88 g of CO<sub>2</sub> and 0.54 g of H<sub>2</sub>O. What is its empirical formula?",
             "options": [
-              "1",
-              "2",
-              "3",
-              "4",
-              "5"
+              "CH<sub>3</sub>O",
+              "C<sub>2</sub>H<sub>4</sub>O",
+              "C<sub>3</sub>H<sub>8</sub>O",
+              "CH<sub>2</sub>O",
+              "C<sub>2</sub>H<sub>6</sub>O"
             ],
-            "correct": 1,
-            "solution": "HCl is a strong acid that completely dissociates. [H⁺] = 0.01 mol/dm³. pH = -log(0.01) = 2."
+            "correct": 4,
+            "solution": "C: \\(0.88/44 = 0.020\\) mol, mass \\(0.24\\) g. H: \\(0.54/18 = 0.030\\) mol of H<sub>2</sub>O, so 0.060 mol of H, mass 0.060 g. O by difference: \\(0.46 - 0.24 - 0.060 = 0.16\\) g \\(= 0.010\\) mol. Ratio C : H : O \\(= 2 : 6 : 1\\)."
           },
           {
-            "question": "What is the mass of 0.5 moles of water (H₂O)? (H = 1, O = 16)",
+            "question": "25.0 cm<sup>3</sup> of 0.200 mol/L BaCl<sub>2</sub> are mixed with 25.0 cm<sup>3</sup> of 0.300 mol/L Na<sub>2</sub>SO<sub>4</sub>. What mass of BaSO<sub>4</sub> (\\(M = 233\\) g/mol) precipitates?",
             "options": [
-              "9 g",
-              "10 g",
-              "18 g",
-              "20 g",
-              "36 g"
+              "1.75 g",
+              "1.17 g",
+              "2.33 g",
+              "0.58 g",
+              "0.0050 g"
             ],
-            "correct": 0,
-            "solution": "Mr of H₂O = (2 × 1) + 16 = 18 g/mol. 0.5 moles = 0.5 × 18 = 9 g."
+            "correct": 1,
+            "solution": "Ba<sup>2+</sup>: \\(0.0250 \\times 0.200 = 5.00 \\times 10^{-3}\\) mol. SO<sub>4</sub><sup>2-</sup>: \\(0.0250 \\times 0.300 = 7.50 \\times 10^{-3}\\) mol. The ratio is 1 : 1, so Ba<sup>2+</sup> is limiting. Mass \\(= 5.00 \\times 10^{-3} \\times 233 = 1.17\\) g."
           },
           {
             "question": "What is the volume occupied by 2 moles of gas at STP (22.4 dm³/mol)?",
@@ -27852,28 +27852,28 @@ const subjects = [
             "solution": "Nylon is a condensation polymer formed by the reaction between diamines and dicarboxylic acids, with the elimination of water molecules. Polyethene, polypropene, PVC, and polystyrene are addition polymers."
           },
           {
-            "question": "What is the pH of a solution with [H⁺] = 1 × 10⁻⁸ mol/dm³?",
+            "question": "28 g of nitrogen react with 10 g of hydrogen: N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub>. What mass of ammonia can form? (\\(A_r\\): N 14, H 1)",
             "options": [
-              "6",
-              "7",
-              "8",
-              "9",
-              "10"
+              "38 g",
+              "34 g",
+              "57 g",
+              "17 g",
+              "68 g"
             ],
-            "correct": 2,
-            "solution": "pH = -log[H⁺] = -log(1 × 10⁻⁸) = 8."
+            "correct": 1,
+            "solution": "\\(n(\\text{N}_2) = 28/28 = 1.0\\) mol. \\(n(\\text{H}_2) = 10/2 = 5.0\\) mol. 1.0 mol of N<sub>2</sub> needs 3.0 mol of H<sub>2</sub>, so N<sub>2</sub> is the <b>limiting</b> reagent. It forms 2.0 mol of NH<sub>3</sub> \\(= 2.0 \\times 17 = 34\\) g."
           },
           {
-            "question": "How many moles of oxygen gas (O₂) are required for the complete combustion of 2.0 moles of propane (C₃H₈)?",
+            "question": "Silver nitrate solution is mixed with sodium chromate solution and a red precipitate of Ag<sub>2</sub>CrO<sub>4</sub> forms. What is the sum of the coefficients of the <b>net ionic equation</b>?",
             "options": [
-              "10.0 moles",
-              "5.0 moles",
-              "6.0 moles",
-              "8.0 moles",
-              "2.5 moles"
+              "3",
+              "5",
+              "8",
+              "4",
+              "9"
             ],
-            "correct": 0,
-            "solution": "The balanced chemical equation for the combustion of propane is: C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. The stoichiometric ratio is 1 mole of C₃H₈ to 5 moles of O₂. Therefore, for 2.0 moles of propane: 2.0 × 5 = 10.0 moles of O₂ are required."
+            "correct": 3,
+            "solution": "\\(2\\text{Ag}^+ + \\text{CrO}_4^{2-} \\to \\text{Ag}_2\\text{CrO}_4\\). Na<sup>+</sup> and NO<sub>3</sub><sup>-</sup> are spectator ions and are left out. Sum: \\(2 + 1 + 1 = 4\\)."
           },
           {
             "question": "What is the mass of sodium hydroxide (NaOH, molar mass = 40.0 g/mol) required to prepare 250 mL of a 0.20 M aqueous solution?",
@@ -28080,16 +28080,16 @@ const subjects = [
             "solution": "Mass of soluble NaCl = 10.0 g - 4.5 g = 5.5 g. Mass percentage = (5.5 g / 10.0 g) × 100% = 55%."
           },
           {
-            "question": "How many moles of gas are present in a 44.8 L container at STP (0 °C, 1 atm)?",
+            "question": "An oxide of iron contains 70.0% iron by mass. What is its empirical formula? (\\(A_r\\): Fe 56, O 16)",
             "options": [
-              "2.0 moles",
-              "1.0 mole",
-              "0.50 moles",
-              "4.0 moles",
-              "22.4 moles"
+              "Fe<sub>2</sub>O<sub>3</sub>",
+              "FeO",
+              "Fe<sub>3</sub>O<sub>4</sub>",
+              "FeO<sub>2</sub>",
+              "Fe<sub>3</sub>O<sub>2</sub>"
             ],
             "correct": 0,
-            "solution": "At STP, 1 mole of any ideal gas occupies 22.4 L. Therefore, n = 44.8 L / 22.4 L/mol = 2.0 moles."
+            "solution": "In 100 g: Fe \\(= 70.0/56 = 1.25\\) mol and O \\(= 30.0/16 = 1.875\\) mol. Ratio \\(= 1 : 1.5\\), so multiply by 2 to get whole numbers: \\(2 : 3\\). The formula is Fe<sub>2</sub>O<sub>3</sub>."
           },
           {
             "question": "If 28.0 g of nitrogen gas (N₂) reacts completely with excess hydrogen gas (H₂) to form ammonia (NH₃), what mass of NH₃ is produced? (Atomic masses: N = 14.0, H = 1.0)",
@@ -28230,16 +28230,16 @@ const subjects = [
             "solution": "Converting an alkene (C=C) to an alkane (C-C) by adding hydrogen is a hydrogenation reaction, which is a type of addition reaction."
           },
           {
-            "question": "A solution has pH = 3. What is the pOH of the solution at 25°C?",
+            "question": "The acids HA, HB and HC have \\(K_a\\) values of \\(1 \\times 10^{-3}\\), \\(1 \\times 10^{-5}\\) and \\(1 \\times 10^{-9}\\). Which statement is correct?",
             "options": [
-              "3",
-              "7",
-              "10",
-              "11",
-              "14"
+              "A<sup>-</sup> is the strongest base, and HB has p\\(K_a\\) = 9",
+              "C<sup>-</sup> is the strongest base, and HB has p\\(K_a\\) = 5",
+              "C<sup>-</sup> is the strongest base, and HB has p\\(K_a\\) = 1",
+              "HC is the strongest acid, and B<sup>-</sup> is the weakest base",
+              "A<sup>-</sup> is the strongest base, and HC has p\\(K_a\\) = 3"
             ],
-            "correct": 2,
-            "solution": "At 25°C, pH + pOH = 14. If pH = 3, then pOH = 14 − 3 = 11."
+            "correct": 1,
+            "solution": "The weaker the acid, the stronger its conjugate base. HC has the smallest \\(K_a\\), so C<sup>-</sup> is the strongest base. \\(\\text{p}K_a(\\text{HB}) = -\\log(1 \\times 10^{-5}) = 5\\)."
           },
           {
             "question": "What is the product when ethanol undergoes oxidation with acidified potassium dichromate?",
@@ -28314,76 +28314,76 @@ const subjects = [
             "solution": "Ethanol is first oxidised to ethanal (acetaldehyde) and then to ethanoic acid (acetic acid) with strong oxidising agents. With controlled oxidation, ethanal is the primary product."
           },
           {
-            "question": "What is the pH of a 0.001 mol/dm³ solution of HNO₃?",
+            "question": "A 0.10 mol/L solution of a weak acid HA has a pH of 3.0. What is the acid dissociation constant \\(K_a\\)?",
             "options": [
-              "1",
-              "2",
-              "3",
-              "4",
-              "5"
+              "1.0 × 10<sup>-3</sup>",
+              "1.0 × 10<sup>-6</sup>",
+              "1.0 × 10<sup>-4</sup>",
+              "1.0 × 10<sup>-7</sup>",
+              "1.0 × 10<sup>-5</sup>"
             ],
-            "correct": 2,
-            "solution": "HNO₃ is a strong acid. [H⁺] = 0.001 M = 10⁻³ M. pH = -log(10⁻³) = 3."
+            "correct": 4,
+            "solution": "\\([\\text{H}^+] = [\\text{A}^-] = 10^{-3}\\) mol/L, and \\([\\text{HA}] = 0.10 - 0.001 \\approx 0.10\\). \\(K_a = (10^{-3})^2/0.10 = 1.0 \\times 10^{-5}\\). Only 1% of the acid is ionised."
           },
           {
-            "question": "Which of the following is a weak base?",
+            "question": "Equal volumes of 0.10 mol/L HCl and 0.10 mol/L CH<sub>3</sub>COOH are compared. Which statement is correct?",
             "options": [
-              "NaOH",
-              "KOH",
-              "NH₃",
-              "Ca(OH)₂",
-              "LiOH"
-            ],
-            "correct": 2,
-            "solution": "NH₃ (ammonia) is a weak base that only partially dissociates in water. The others are strong bases."
-          },
-          {
-            "question": "What is the conjugate base of H₂SO₄?",
-            "options": [
-              "HSO₄⁻",
-              "SO₄²⁻",
-              "H⁺",
-              "OH⁻",
-              "H₂O"
+              "Both need the same volume of NaOH to neutralise, but HCl has the lower pH",
+              "HCl needs more NaOH, and has the lower pH",
+              "Both need the same volume of NaOH, and have the same pH",
+              "CH<sub>3</sub>COOH needs more NaOH, because it is weaker",
+              "HCl needs less NaOH, because it is stronger"
             ],
             "correct": 0,
-            "solution": "The conjugate base is formed by removing one H⁺. H₂SO₄ → HSO₄⁻ + H⁺."
+            "solution": "Neutralisation depends on the <b>amount</b> of acid (0.10 mol/L in both, one H<sup>+</sup> each), not on strength. But HCl is completely ionised, so \\([\\text{H}^+] = 0.10\\) (pH 1), while CH<sub>3</sub>COOH is only slightly ionised (pH about 2.9)."
           },
           {
-            "question": "A solution has [OH⁻] = 1 × 10⁻⁴ mol/dm³. What is the pH?",
+            "question": "Equal volumes of hydrochloric acid of pH 1.00 and pH 3.00 are mixed. What is the pH of the mixture?",
             "options": [
-              "4",
-              "6",
-              "8",
-              "10",
-              "12"
+              "1.30",
+              "2.00",
+              "1.00",
+              "2.30",
+              "0.70"
             ],
-            "correct": 2,
-            "solution": "pOH = -log(10⁻⁴) = 4. pH = 14 - pOH = 10."
+            "correct": 0,
+            "solution": "\\([\\text{H}^+] = 0.100\\) and \\(0.0010\\) mol/L. Mixing equal volumes gives the mean: \\((0.100 + 0.0010)/2 = 0.0505\\) mol/L. \\(\\text{pH} = -\\log 0.0505 = 1.30\\). Averaging the pH values (2.00) is wrong because pH is logarithmic."
           },
           {
-            "question": "Which indicator changes colour at pH ≈ 7?",
+            "question": "50.0 cm<sup>3</sup> of 0.100 mol/L HCl are mixed with 30.0 cm<sup>3</sup> of 0.100 mol/L NaOH. What is the pH of the mixture?",
             "options": [
-              "Methyl orange",
-              "Phenolphthalein",
-              "Bromothymol blue",
-              "Litmus",
-              "Thymol blue"
+              "7.00",
+              "1.00",
+              "1.60",
+              "2.60",
+              "1.30"
             ],
             "correct": 2,
-            "solution": "Bromothymol blue changes from yellow to blue around pH 7, making it suitable for neutralisation titrations."
+            "solution": "Acid: \\(0.0500 \\times 0.100 = 5.00 \\times 10^{-3}\\) mol. Base: \\(3.00 \\times 10^{-3}\\) mol. Excess H<sup>+</sup> \\(= 2.00 \\times 10^{-3}\\) mol in 0.0800 L \\(= 0.0250\\) mol/L. \\(\\text{pH} = -\\log 0.0250 = 1.60\\)."
           },
           {
-            "question": "What is the pH of pure water at 25°C?",
+            "question": "A buffer contains 0.20 mol/L NH<sub>3</sub> and 0.10 mol/L NH<sub>4</sub>Cl. The p\\(K_a\\) of NH<sub>4</sub><sup>+</sup> is 9.25. What is the pH?",
             "options": [
-              "0",
-              "5",
-              "7",
-              "10",
-              "14"
+              "9.25",
+              "9.55",
+              "8.95",
+              "9.85",
+              "4.45"
             ],
-            "correct": 2,
-            "solution": "Pure water is neutral with [H⁺] = [OH⁻] = 10⁻⁷ M, giving pH = 7."
+            "correct": 1,
+            "solution": "Use \\(\\text{pH} = \\text{p}K_a + \\log([\\text{base}]/[\\text{acid}])\\). The base is NH<sub>3</sub> and the acid is NH<sub>4</sub><sup>+</sup>: \\(9.25 + \\log(0.20/0.10) = 9.25 + 0.30 = 9.55\\)."
+          },
+          {
+            "question": "What is the pH of a 0.050 mol/L solution of a weak acid with \\(K_a = 1.8 \\times 10^{-5}\\)?",
+            "options": [
+              "1.3",
+              "4.74",
+              "6.05",
+              "3.02",
+              "11"
+            ],
+            "correct": 3,
+            "solution": "\\([\\text{H}^+] \\approx \\sqrt{K_a c} = \\sqrt{1.8 \\times 10^{-5} \\times 0.050} = 9.5 \\times 10^{-4}\\) mol/L. \\(\\text{pH} = -\\log(9.5 \\times 10^{-4}) = 3.02\\)."
           },
           {
             "question": "Which of the following salts will produce an acidic solution?",
@@ -28410,28 +28410,28 @@ const subjects = [
             "solution": "For a conjugate acid-base pair, Ka × Kb = Kw (the ion product of water, 10⁻¹⁴ at 25°C)."
           },
           {
-            "question": "Which of the following is amphoteric?",
+            "question": "A solution has a pH of 9.5 at 25 °C. What is the concentration of hydroxide ions?",
             "options": [
-              "HCl",
-              "NaOH",
-              "Al(OH)₃",
-              "CH₃COOH",
-              "NH₃"
+              "3.2 × 10<sup>-10</sup> mol/L",
+              "3.2 × 10<sup>-9</sup> mol/L",
+              "4.5 mol/L",
+              "3.2 × 10<sup>-5</sup> mol/L",
+              "1.0 × 10<sup>-5</sup> mol/L"
             ],
-            "correct": 2,
-            "solution": "Al(OH)₃ is amphoteric - it can act as both an acid and a base, reacting with both acids and bases."
+            "correct": 3,
+            "solution": "\\(\\text{pOH} = 14 - 9.5 = 4.5\\). \\([\\text{OH}^-] = 10^{-4.5} = 3.2 \\times 10^{-5}\\) mol/L. (The \\([\\text{H}^+]\\) is \\(3.2 \\times 10^{-10}\\).)"
           },
           {
-            "question": "What happens to the pH of a buffer solution when a small amount of acid is added?",
+            "question": "100 cm<sup>3</sup> of a buffer contain 0.10 mol/L CH<sub>3</sub>COOH and 0.10 mol/L CH<sub>3</sub>COONa (p\\(K_a\\) = 4.76). 10 cm<sup>3</sup> of 0.10 mol/L HCl are added. What is the new pH?",
             "options": [
-              "Changes dramatically",
-              "Changes slightly",
-              "Remains constant",
-              "Increases",
-              "Cannot be determined"
+              "4.76",
+              "4.85",
+              "2.05",
+              "4.67",
+              "4.58"
             ],
-            "correct": 1,
-            "solution": "Buffers resist pH changes. Adding a small amount of acid causes only a slight change in pH."
+            "correct": 3,
+            "solution": "Start: \\(0.0100\\) mol of each. The added H<sup>+</sup> (0.0010 mol) converts 0.0010 mol of ethanoate into acid: base \\(0.0090\\) mol, acid \\(0.0110\\) mol. \\(\\text{pH} = 4.76 + \\log(0.0090/0.0110) = 4.76 - 0.09 = 4.67\\). The volume cancels in the ratio."
           },
           {
             "question": "Which of the following is the strongest acid?",
@@ -28446,16 +28446,16 @@ const subjects = [
             "solution": "HI is the strongest hydrogen halide acid because the H-I bond is weakest and I⁻ is the most stable anion (largest, most polarizable)."
           },
           {
-            "question": "What is the pKa of an acid with Ka = 1 × 10⁻⁵?",
+            "question": "What is the pH of 0.020 mol/L barium hydroxide, Ba(OH)<sub>2</sub>? Assume complete dissociation.",
             "options": [
-              "3",
-              "5",
-              "7",
-              "9",
-              "11"
+              "12.3",
+              "12.6",
+              "1.4",
+              "1.7",
+              "12.0"
             ],
             "correct": 1,
-            "solution": "pKa = -log(Ka) = -log(10⁻⁵) = 5."
+            "solution": "\\([\\text{OH}^-] = 2 \\times 0.020 = 0.040\\) mol/L. \\(\\text{pOH} = -\\log 0.040 = 1.40\\). \\(\\text{pH} = 14 - 1.40 = 12.6\\)."
           },
           {
             "question": "What is the pH of a 0.0050 M aqueous solution of barium hydroxide, Ba(OH)₂, at 25 °C?",
@@ -28482,28 +28482,28 @@ const subjects = [
             "solution": "For a weak acid with degree of dissociation < 5%: [H⁺] ≈ √(Ka · C) = √((1.0 × 10⁻⁵)(0.10)) = √(1.0 × 10⁻⁶) = 1.0 × 10⁻³ M. Therefore, pH = -log₁₀(1.0 × 10⁻³) = 3.0."
           },
           {
-            "question": "Which of the following conjugate acid-base pairs can be used to prepare a buffer solution with effective buffering capacity around pH 4.7?",
+            "question": "How many of these five 0.1 mol/L salt solutions have a pH <b>above</b> 7? NaNO<sub>3</sub>, KF, NH<sub>4</sub>Br, Na<sub>2</sub>CO<sub>3</sub>, CH<sub>3</sub>COONa",
             "options": [
-              "CH₃COOH and CH₃COONa (pKa of CH₃COOH = 4.76)",
-              "HCl and NaCl",
-              "NH₃ and NH₄Cl (pKa of NH₄⁺ = 9.25)",
-              "H₂CO₃ and NaHCO₃ (pKa₁ = 6.35)",
-              "NaOH and NaCl"
+              "1",
+              "2",
+              "4",
+              "5",
+              "3"
             ],
-            "correct": 0,
-            "solution": "A buffer solution functions most effectively in the range pH = pKa ± 1. Since acetic acid has a pKa of 4.76, an equimolar mixture of acetic acid (weak acid) and sodium acetate (its conjugate base) provides maximum buffer capacity at pH ≈ 4.76."
+            "correct": 4,
+            "solution": "F<sup>-</sup>, CO<sub>3</sub><sup>2-</sup> and CH<sub>3</sub>COO<sup>-</sup> are conjugate bases of weak acids, so they hydrolyse to give OH<sup>-</sup>. NaNO<sub>3</sub> comes from a strong acid and strong base (neutral). NH<sub>4</sub>Br is acidic because NH<sub>4</sub><sup>+</sup> is a weak acid."
           },
           {
-            "question": "What is the pH of a buffer solution prepared by mixing 0.20 M sodium acetate (CH₃COONa) and 0.10 M acetic acid (CH₃COOH)? (pKa of acetic acid = 4.76; log₁₀(2) ≈ 0.30)",
+            "question": "A buffer with a pH of 5.06 is to be made from ethanoic acid (p\\(K_a\\) = 4.76) and sodium ethanoate. What must the ratio [ethanoate]/[ethanoic acid] be?",
             "options": [
-              "5.06",
-              "4.46",
-              "4.76",
-              "5.36",
-              "3.76"
+              "2.0",
+              "0.50",
+              "1.0",
+              "1.3",
+              "10"
             ],
             "correct": 0,
-            "solution": "Use the Henderson-Hasselbalch equation: pH = pKa + log₁₀([A⁻]/[HA]) = 4.76 + log₁₀(0.20 / 0.10) = 4.76 + log₁₀(2) = 4.76 + 0.30 = 5.06."
+            "solution": "\\(5.06 = 4.76 + \\log(\\text{ratio})\\), so \\(\\log(\\text{ratio}) = 0.30\\) and the ratio \\(= 10^{0.30} = 2.0\\)."
           },
           {
             "question": "Which of the following aqueous salt solutions will have a pH > 7 at 25 °C?",
@@ -28638,16 +28638,16 @@ const subjects = [
             "solution": "NH₄NO₃ is formed from a weak base (NH₃) and a strong acid (HNO₃). The ammonium ion acts as a weak acid in water: NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺, lowering the pH below 7."
           },
           {
-            "question": "What happens to the pH of a buffer solution composed of equal concentrations of HA and A⁻ when a small amount of solid NaOH is added?",
+            "question": "25.0 cm<sup>3</sup> of 0.100 mol/L of a weak acid HA are titrated with 0.100 mol/L NaOH. The pH is 4.76 after 12.5 cm<sup>3</sup> have been added. What is \\(K_a\\) of the acid?",
             "options": [
-              "The pH increases very slightly",
-              "The pH decreases dramatically",
-              "The pH remains exactly constant with zero change",
-              "The pH drops below the pKa",
-              "The buffer is destroyed instantly"
+              "1.74 × 10<sup>-3</sup>",
+              "1.74 × 10<sup>-5</sup>",
+              "1.74 × 10<sup>-9</sup>",
+              "4.76 × 10<sup>-5</sup>",
+              "1.0 × 10<sup>-7</sup>"
             ],
-            "correct": 0,
-            "solution": "The added OH⁻ reacts with the weak acid HA: HA + OH⁻ → A⁻ + H₂O. This converts a small amount of HA into A⁻, slightly increasing the ratio [A⁻]/[HA]. According to Henderson-Hasselbalch, the pH increases, but only very slightly because the buffer resists large changes in pH."
+            "correct": 1,
+            "solution": "12.5 cm<sup>3</sup> is exactly half of the volume needed to reach equivalence (25.0 cm<sup>3</sup>). At half-equivalence \\([\\text{HA}] = [\\text{A}^-]\\), so \\(\\text{pH} = \\text{p}K_a = 4.76\\). \\(K_a = 10^{-4.76} = 1.74 \\times 10^{-5}\\)."
           },
           {
             "question": "What is the relationship between the acid dissociation constant Ka of a weak acid and the base dissociation constant Kb of its conjugate base at 25 °C?",
@@ -28758,16 +28758,16 @@ const subjects = [
             "solution": "pH = 12 ⇒ pOH = 14 - 12 = 2 ⇒ [OH⁻] = 10⁻² M = 0.01 M.\nStrontium hydroxide is a strong base that completely dissociates: Sr(OH)₂ → Sr²⁺ + 2 OH⁻.\n[Sr(OH)₂] = [OH⁻] / 2 = 0.01 / 2 = 0.005 M = 5 × 10⁻³ M."
           },
           {
-            "question": "The pH of a buffer solution containing 0.4 M formic acid and 1.0 M sodium formate is 4.15. What will be the pH of the same solution if it is diluted 10-fold?",
+            "question": "What is the pH of a 0.10 mol/L solution of sodium ethanoate? (\\(K_a\\) of ethanoic acid \\(= 1.74 \\times 10^{-5}\\))",
             "options": [
-              "4.15",
-              "5.15",
-              "3.15",
-              "0.415",
-              "4.05"
+              "7.00",
+              "2.88",
+              "8.88",
+              "5.13",
+              "13.0"
             ],
-            "correct": 0,
-            "solution": "According to the Henderson–Hasselbalch equation: pH = pKa + log([A⁻] / [HA]). A 10-fold dilution reduces both conjugate base [A⁻] and weak acid [HA] concentrations by the same factor (10), leaving their ratio unchanged. Therefore, the pH remains 4.15."
+            "correct": 2,
+            "solution": "Ethanoate is a weak base. \\(K_b = K_w/K_a = 5.7 \\times 10^{-10}\\). \\([\\text{OH}^-] = \\sqrt{K_b c} = \\sqrt{5.7 \\times 10^{-11}} = 7.5 \\times 10^{-6}\\) mol/L. \\(\\text{pOH} = 5.12\\), so \\(\\text{pH} = 8.88\\)."
           },
           {
             "question": "Which of the following statements regarding a buffer solution is correct?",
@@ -28800,16 +28800,16 @@ const subjects = [
         "name": "Redox Reactions & Electrochemistry",
         "questions": [
           {
-            "question": "What is the oxidation state of sulfur in H₂SO₄?",
+            "question": "In respiration, glucose (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>) is oxidised completely to carbon dioxide. How many electrons are lost per glucose molecule?",
             "options": [
-              "+2",
-              "+4",
-              "+6",
-              "-2",
-              "0"
+              "24",
+              "4",
+              "6",
+              "12",
+              "48"
             ],
-            "correct": 2,
-            "solution": "H is +1 (each), O is -2 (each). Let x be oxidation state of S. 2(+1) + x + 4(-2) = 0 → 2 + x - 8 = 0 → x = +6."
+            "correct": 0,
+            "solution": "In glucose: \\(6x + 12 - 12 = 0\\) gives \\(x = 0\\) for carbon. In CO<sub>2</sub> carbon is +4. Six carbon atoms each rise by 4, so \\(6 \\times 4 = 24\\) electrons are lost."
           },
           {
             "question": "What is the oxidation state of oxygen in H₂O₂?",
@@ -28836,28 +28836,28 @@ const subjects = [
             "solution": "Fe³⁺ gains an electron to become Fe²⁺ (reduction). Sn²⁺ loses electrons to become Sn⁴⁺ (oxidation)."
           },
           {
-            "question": "What is the oxidation number of manganese in KMnO₄?",
+            "question": "Permanganate oxidises sulfite in acid: MnO<sub>4</sub><sup>-</sup> → Mn<sup>2+</sup> and SO<sub>3</sub><sup>2-</sup> → SO<sub>4</sub><sup>2-</sup>. What is the sum of all coefficients in the balanced equation (smallest whole numbers)?",
             "options": [
-              "+2",
-              "+4",
-              "+6",
-              "+7",
-              "-1"
-            ],
-            "correct": 3,
-            "solution": "K is +1, O is -2 (×4 = -8). For neutrality: +1 + Mn - 8 = 0 → Mn = +7."
-          },
-          {
-            "question": "Which of the following is an oxidising agent?",
-            "options": [
-              "Na",
-              "Fe²⁺",
-              "Cl₂",
-              "H₂",
-              "C"
+              "17",
+              "19",
+              "23",
+              "21",
+              "28"
             ],
             "correct": 2,
-            "solution": "Cl₂ is an oxidising agent because it gains electrons (is reduced) in redox reactions."
+            "solution": "Reduction: MnO<sub>4</sub><sup>-</sup> + 8H<sup>+</sup> + 5e<sup>-</sup> → Mn<sup>2+</sup> + 4H<sub>2</sub>O. Oxidation: SO<sub>3</sub><sup>2-</sup> + H<sub>2</sub>O → SO<sub>4</sub><sup>2-</sup> + 2H<sup>+</sup> + 2e<sup>-</sup>. Multiply by 2 and 5 to cancel the electrons: 2MnO<sub>4</sub><sup>-</sup> + 5SO<sub>3</sub><sup>2-</sup> + 6H<sup>+</sup> → 2Mn<sup>2+</sup> + 5SO<sub>4</sub><sup>2-</sup> + 3H<sub>2</sub>O. Sum \\(= 2 + 5 + 6 + 2 + 5 + 3 = 23\\)."
+          },
+          {
+            "question": "In the reaction 2Fe<sub>2</sub>O<sub>3</sub> + 3C → 4Fe + 3CO<sub>2</sub>, how many electrons are transferred according to the balanced equation?",
+            "options": [
+              "3",
+              "4",
+              "6",
+              "24",
+              "12"
+            ],
+            "correct": 4,
+            "solution": "Carbon goes from 0 to +4: 3 C atoms lose \\(3 \\times 4 = 12\\) electrons. Iron goes from +3 to 0: 4 Fe atoms gain \\(4 \\times 3 = 12\\) electrons. The electrons lost and gained are equal."
           },
           {
             "question": "In a galvanic cell, electrons flow from:",
@@ -28872,28 +28872,28 @@ const subjects = [
             "solution": "In a galvanic cell, electrons flow from the anode (oxidation) to the cathode (reduction)."
           },
           {
-            "question": "What is the product when magnesium reacts with oxygen?",
+            "question": "Which species can act <b>both</b> as an oxidising agent and as a reducing agent?",
             "options": [
-              "MgO",
-              "MgO₂",
-              "Mg₂O",
-              "Mg(OH)₂",
-              "Mg₃O₂"
+              "CO<sub>2</sub>",
+              "H<sub>2</sub>O<sub>2</sub>",
+              "Mg",
+              "MnO<sub>4</sub><sup>-</sup>",
+              "Na<sup>+</sup>"
             ],
-            "correct": 0,
-            "solution": "2Mg + O₂ → 2MgO. Magnesium forms MgO with Mg in +2 oxidation state."
+            "correct": 1,
+            "solution": "Oxygen in H<sub>2</sub>O<sub>2</sub> is at −1, between −2 and 0, so it can be reduced (to −2) or oxidised (to 0). C in CO<sub>2</sub> (+4), Mn in MnO<sub>4</sub><sup>-</sup> (+7) and Na<sup>+</sup> (+1) are at their highest oxidation number, so they can only be reduced. Mg (0) can only be oxidised."
           },
           {
-            "question": "Which of the following is a reducing agent?",
+            "question": "Chlorine reacts with cold sodium hydroxide: Cl<sub>2</sub> + 2NaOH → NaCl + NaClO + H<sub>2</sub>O. What kind of reaction is this?",
             "options": [
-              "O₂",
-              "F₂",
-              "KMnO₄",
-              "Na",
-              "H₂O₂"
+              "Disproportionation: chlorine goes from 0 to −1 and to +1",
+              "Reduction only: chlorine goes from 0 to −1",
+              "Oxidation only: chlorine goes from 0 to +1",
+              "A neutralisation with no change in oxidation numbers",
+              "Disproportionation: oxygen goes from −2 to 0 and to −1"
             ],
-            "correct": 3,
-            "solution": "Na is a strong reducing agent because it readily loses electrons (is oxidised)."
+            "correct": 0,
+            "solution": "In NaCl chlorine is −1 (reduced). In NaClO it is +1 (oxidised). The same element is both oxidised and reduced, which is <b>disproportionation</b>. Sodium (+1), oxygen (−2) and hydrogen (+1) do not change."
           },
           {
             "question": "What happens at the anode during electrolysis of aqueous NaCl?",
@@ -28908,16 +28908,16 @@ const subjects = [
             "solution": "At the anode, Cl⁻ is oxidised to Cl₂ gas (2Cl⁻ → Cl₂ + 2e⁻)."
           },
           {
-            "question": "What is the oxidation state of carbon in CO₂?",
+            "question": "25.0 cm<sup>3</sup> of an iron(II) solution need 20.0 cm<sup>3</sup> of 0.0200 mol/L KMnO<sub>4</sub> in acid to reach the end point: MnO<sub>4</sub><sup>-</sup> + 5Fe<sup>2+</sup> + 8H<sup>+</sup> → Mn<sup>2+</sup> + 5Fe<sup>3+</sup> + 4H<sub>2</sub>O. What is the concentration of Fe<sup>2+</sup>?",
             "options": [
-              "-4",
-              "-2",
-              "0",
-              "+2",
-              "+4"
+              "0.0160 mol/L",
+              "0.0800 mol/L",
+              "0.0200 mol/L",
+              "0.400 mol/L",
+              "0.0100 mol/L"
             ],
-            "correct": 4,
-            "solution": "O is -2 (×2 = -4). For neutrality: C - 4 = 0 → C = +4."
+            "correct": 1,
+            "solution": "\\(n(\\text{MnO}_4^-) = 0.0200 \\times 0.0200 = 4.00 \\times 10^{-4}\\) mol. The ratio MnO<sub>4</sub><sup>-</sup> : Fe<sup>2+</sup> is 1 : 5, so \\(n(\\text{Fe}^{2+}) = 2.00 \\times 10^{-3}\\) mol. \\(c = 2.00 \\times 10^{-3}/0.0250 = 0.0800\\) mol/L."
           },
           {
             "question": "Which of the following reactions is a disproportionation reaction?",
@@ -28944,28 +28944,28 @@ const subjects = [
             "solution": "The salt bridge allows ion flow to maintain electrical neutrality in the half-cells as electrons flow through the external circuit."
           },
           {
-            "question": "Which metal is most easily oxidised?",
+            "question": "Ethanol (C<sub>2</sub>H<sub>5</sub>OH) is oxidised to ethanoic acid (CH<sub>3</sub>COOH) in the liver. How many electrons does one molecule lose?",
             "options": [
-              "Gold",
-              "Silver",
-              "Copper",
-              "Zinc",
-              "Sodium"
+              "2",
+              "3",
+              "6",
+              "4",
+              "8"
             ],
-            "correct": 4,
-            "solution": "Sodium has the most negative reduction potential, meaning it is most easily oxidised (most reactive metal listed)."
+            "correct": 3,
+            "solution": "Average oxidation number of carbon: in C<sub>2</sub>H<sub>5</sub>OH \\(2x + 6 - 2 = 0\\) gives \\(x = -2\\). In C<sub>2</sub>H<sub>4</sub>O<sub>2</sub>: \\(2x + 4 - 4 = 0\\) gives \\(x = 0\\). Each of 2 carbons rises by 2, so 4 electrons are lost."
           },
           {
-            "question": "What is the oxidation state of nitrogen in NH₃?",
+            "question": "How many moles of Fe<sup>2+</sup> are oxidised to Fe<sup>3+</sup> by 0.010 mol of dichromate, Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup>, which is reduced to Cr<sup>3+</sup>?",
             "options": [
-              "-3",
-              "-1",
-              "0",
-              "+1",
-              "+3"
+              "0.010 mol",
+              "0.020 mol",
+              "0.030 mol",
+              "0.060 mol",
+              "0.120 mol"
             ],
-            "correct": 0,
-            "solution": "H is +1 (×3 = +3). For neutrality: N + 3 = 0 → N = -3."
+            "correct": 3,
+            "solution": "Each Cr goes from +6 to +3, gaining 3 electrons. Two Cr atoms per ion: 6 electrons per Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup>. Each Fe<sup>2+</sup> gives 1 electron, so \\(0.010 \\times 6 = 0.060\\) mol of Fe<sup>2+</sup>."
           },
           {
             "question": "In the reaction Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag, what is oxidised?",
@@ -29334,28 +29334,28 @@ const subjects = [
             "solution": "Longest chain = 4 carbons → butane. Cl is on carbon 2 from either end. Result: 2-chlorobutane."
           },
           {
-            "question": "Which functional group is present in propanal?",
+            "question": "A compound X has the formula C<sub>3</sub>H<sub>6</sub>O. It gives an orange precipitate with 2,4-dinitrophenylhydrazine but no silver mirror with Tollens' reagent. What is X?",
             "options": [
-              "Alcohol",
-              "Aldehyde",
-              "Ketone",
-              "Carboxylic acid",
-              "Ester"
+              "Propanone",
+              "Propanal",
+              "Propan-1-ol",
+              "Prop-2-en-1-ol",
+              "Propanoic acid"
             ],
-            "correct": 1,
-            "solution": "Propanal (CH₃CH₂CHO) contains the -CHO aldehyde group at the end of the carbon chain."
+            "correct": 0,
+            "solution": "The orange precipitate shows a C=O group (aldehyde or ketone). No silver mirror rules out an aldehyde, so X is a ketone: propanone, CH<sub>3</sub>COCH<sub>3</sub>. Alcohols do not react with 2,4-DNPH, and propanoic acid has the formula C<sub>3</sub>H<sub>6</sub>O<sub>2</sub>."
           },
           {
-            "question": "What is the IUPAC name for CH₃CH₂CH₂OH?",
+            "question": "A saturated, acyclic compound has the formula C<sub>4</sub>H<sub>10</sub>O. What is the formula of the corresponding aldehyde or ketone with four carbon atoms?",
             "options": [
-              "Methanol",
-              "Ethanol",
-              "Propanol",
-              "Butanol",
-              "Pentanol"
+              "C<sub>4</sub>H<sub>10</sub>O<sub>2</sub>",
+              "C<sub>4</sub>H<sub>6</sub>O",
+              "C<sub>4</sub>H<sub>10</sub>O",
+              "C<sub>4</sub>H<sub>8</sub>O",
+              "C<sub>4</sub>H<sub>8</sub>O<sub>2</sub>"
             ],
-            "correct": 2,
-            "solution": "The longest carbon chain has 3 carbons → propyl. The -OH group is on carbon 1. The name is propan-1-ol or simply propanol."
+            "correct": 3,
+            "solution": "Oxidising an alcohol to a carbonyl compound removes 2 H. A C=O double bond adds one degree of unsaturation, so C<sub>4</sub>H<sub>10</sub>O becomes C<sub>4</sub>H<sub>8</sub>O (butanal or butanone)."
           },
           {
             "question": "What is the correct IUPAC name for CH₃CH₂CH₂OH?",
@@ -29370,16 +29370,16 @@ const subjects = [
             "solution": "The compound has 3 carbon atoms (prop- prefix) and an -OH group (ol suffix). The -OH is on carbon 1. Name: propan-1-ol or simply propanol."
           },
           {
-            "question": "What is the IUPAC name for CH₃CH₂CH(CH₃)CH₂CH₃?",
+            "question": "An alkane has a molar mass of 86 g/mol. How many covalent bonds does one molecule contain in total?",
             "options": [
-              "2-methylpentane",
-              "3-methylpentane",
-              "2-ethylbutane",
-              "1,1-dimethylbutane",
-              "Isopentane"
+              "14",
+              "19",
+              "17",
+              "20",
+              "21"
             ],
-            "correct": 0,
-            "solution": "Longest chain = 5 carbons (pentane). Methyl group on carbon 2. Name: 2-methylpentane."
+            "correct": 1,
+            "solution": "C<sub>n</sub>H<sub>2n+2</sub>: \\(14n + 2 = 86\\) gives \\(n = 6\\), so the alkane is hexane, C<sub>6</sub>H<sub>14</sub>. It has \\(6 - 1 = 5\\) C–C bonds and 14 C–H bonds: \\(5 + 14 = 19\\)."
           },
           {
             "question": "Which of the following is a secondary alcohol?",
@@ -29394,76 +29394,76 @@ const subjects = [
             "solution": "2-propanol (isopropanol) has the -OH group on a carbon bonded to two other carbons (secondary carbon)."
           },
           {
-            "question": "What is the product when ethene undergoes hydration?",
+            "question": "What is the IUPAC name of (CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH(CH<sub>3</sub>)CH<sub>2</sub>CH<sub>3</sub>?",
             "options": [
-              "Ethane",
-              "Ethanol",
-              "Ethanal",
-              "Ethanoic acid",
-              "Diethyl ether"
+              "2,4-dimethylhexane",
+              "3,5-dimethylhexane",
+              "2,4,4-trimethylpentane",
+              "2-ethyl-4-methylpentane",
+              "2,4-dimethylheptane"
             ],
-            "correct": 1,
-            "solution": "Ethene + H₂O (with acid catalyst) → ethanol. This is the hydration of an alkene."
+            "correct": 0,
+            "solution": "The longest chain has 6 carbons (hexane): CH<sub>3</sub>–CH(CH<sub>3</sub>)–CH<sub>2</sub>–CH(CH<sub>3</sub>)–CH<sub>2</sub>–CH<sub>3</sub>. Numbering from the left puts the methyl groups on carbons 2 and 4 (from the right they would be 3 and 5, which is a higher set)."
           },
           {
-            "question": "Which functional group is present in CH₃COCH₃?",
+            "question": "Ethanol, phenol and ethanoic acid are tested with sodium hydrogencarbonate solution. Which gives bubbles of carbon dioxide, and what is the order of acidity?",
             "options": [
-              "Alcohol",
-              "Aldehyde",
-              "Ketone",
-              "Carboxylic acid",
-              "Ester"
-            ],
-            "correct": 2,
-            "solution": "CH₃COCH₃ (acetone) contains the C=O ketone group in the middle of the carbon chain."
-          },
-          {
-            "question": "What is the IUPAC name for CH₃CH₂C≡CH?",
-            "options": [
-              "1-butyne",
-              "2-butyne",
-              "But-1-yne",
-              "But-2-yne",
-              "Butyne"
-            ],
-            "correct": 2,
-            "solution": "4-carbon chain with triple bond at position 1. IUPAC name: but-1-yne."
-          },
-          {
-            "question": "Which of the following undergoes nucleophilic addition?",
-            "options": [
-              "Alkane",
-              "Alkene",
-              "Alkyne",
-              "Aldehyde",
-              "Aromatic"
+              "Only phenol. Acidity: ethanol < ethanoic acid < phenol",
+              "Phenol and ethanoic acid. Acidity: ethanol < phenol < ethanoic acid",
+              "Only ethanoic acid. Acidity: ethanoic acid < phenol < ethanol",
+              "Only ethanoic acid. Acidity: ethanol < phenol < ethanoic acid",
+              "All three. Acidity: ethanol < phenol < ethanoic acid"
             ],
             "correct": 3,
-            "solution": "Aldehydes have a polar C=O bond and undergo nucleophilic addition reactions at the carbonyl carbon."
+            "solution": "Carboxylic acids (\\(\\text{p}K_a\\) about 4.8) are strong enough to release CO<sub>2</sub> from hydrogencarbonate. Phenol (\\(\\text{p}K_a\\) about 10) is weaker than carbonic acid, so it does not. Ethanol (\\(\\text{p}K_a\\) about 16) is the weakest."
           },
           {
-            "question": "What is the product when ethanol undergoes dehydration?",
+            "question": "How many sigma (σ) and pi (π) bonds are in acrylonitrile, CH<sub>2</sub>=CH–C≡N?",
             "options": [
-              "Ethane",
-              "Ethene",
-              "Ethanal",
-              "Ethanoic acid",
-              "Diethyl ether"
+              "6 σ and 4 π",
+              "6 σ and 3 π",
+              "5 σ and 3 π",
+              "7 σ and 2 π",
+              "8 σ and 1 π"
             ],
             "correct": 1,
-            "solution": "Dehydration of ethanol with concentrated H₂SO₄ at 170°C produces ethene (C₂H₄)."
+            "solution": "σ bonds: C=C (1), C–C (1), C≡N (1), three C–H (3) \\(= 6\\). π bonds: one in C=C and two in C≡N \\(= 3\\). A double bond is one σ plus one π, a triple bond is one σ plus two π."
           },
           {
-            "question": "Which of the following is an isomer of butane?",
+            "question": "Which of these hydrocarbons has the highest percentage of carbon by mass?",
             "options": [
-              "Pentane",
-              "Propane",
-              "2-methylpropane",
-              "Cyclobutane",
-              "Butene"
+              "C<sub>2</sub>H<sub>2</sub>",
+              "C<sub>2</sub>H<sub>6</sub>",
+              "C<sub>3</sub>H<sub>8</sub>",
+              "C<sub>4</sub>H<sub>10</sub>",
+              "C<sub>2</sub>H<sub>4</sub>"
             ],
-            "correct": 2,
-            "solution": "2-methylpropane (isobutane) is a structural isomer of butane (both C₄H₁₀)."
+            "correct": 0,
+            "solution": "C<sub>2</sub>H<sub>2</sub>: \\(24/26 = 92.3\\%\\). C<sub>2</sub>H<sub>4</sub>: 85.7%. C<sub>3</sub>H<sub>8</sub>: 81.8%. C<sub>4</sub>H<sub>10</sub>: 82.8%. C<sub>2</sub>H<sub>6</sub>: 80.0%. The fewer hydrogen atoms per carbon, the higher the carbon percentage."
+          },
+          {
+            "question": "In propyne, CH<sub>3</sub>–C≡C–H, how many atoms lie on one straight line?",
+            "options": [
+              "2",
+              "3",
+              "5",
+              "6",
+              "4"
+            ],
+            "correct": 4,
+            "solution": "A triple bond makes the two carbons and the two atoms attached to them linear: the CH<sub>3</sub> carbon, the two sp carbons and the terminal H. The three H atoms of CH<sub>3</sub> point away (tetrahedral), so they are not on the line."
+          },
+          {
+            "question": "How many of these five compounds have a chiral (asymmetric) carbon atom: butan-2-ol, propan-2-ol, 3-methylhexane, 2-methylbutane, 3-methylpentane?",
+            "options": [
+              "1",
+              "3",
+              "4",
+              "2",
+              "5"
+            ],
+            "correct": 3,
+            "solution": "Butan-2-ol: C2 carries H, OH, CH<sub>3</sub> and C<sub>2</sub>H<sub>5</sub> (chiral). 3-Methylhexane: C3 carries H, CH<sub>3</sub>, ethyl and propyl (chiral). Propan-2-ol has two CH<sub>3</sub>; 2-methylbutane has two CH<sub>3</sub> on C2; 3-methylpentane has two ethyl groups on C3. None of these three is chiral."
           },
           {
             "question": "What type of reaction is the conversion of an alcohol to an alkene?",
@@ -29490,16 +29490,16 @@ const subjects = [
             "solution": "CH₃COOH (ethanoic acid) contains the -COOH carboxylic acid functional group."
           },
           {
-            "question": "What is the IUPAC name for CH₃CH₂CH₂COOH?",
+            "question": "An acyclic hydrocarbon has the formula C<sub>6</sub>H<sub>8</sub> and contains one triple bond. How many C=C double bonds does it contain?",
             "options": [
-              "Butanoic acid",
-              "Propanoic acid",
-              "Pentanoic acid",
-              "Butyric acid",
-              "Propionic acid"
+              "0",
+              "2",
+              "3",
+              "1",
+              "4"
             ],
-            "correct": 0,
-            "solution": "4-carbon chain with carboxylic acid group. IUPAC name: butanoic acid."
+            "correct": 3,
+            "solution": "A saturated acyclic C<sub>6</sub> hydrocarbon is C<sub>6</sub>H<sub>14</sub>. C<sub>6</sub>H<sub>8</sub> has 6 fewer H, which is 3 degrees of unsaturation. A triple bond counts for 2, so one more is needed: 1 C=C."
           },
           {
             "question": "Which of the following is a primary alcohol?",
@@ -29526,28 +29526,28 @@ const subjects = [
             "solution": "Reduction of an aldehyde (propanal) with NaBH₄ or LiAlH₄ produces the corresponding primary alcohol (propanol)."
           },
           {
-            "question": "Which of the following compounds is an ester?",
+            "question": "4.6 g of ethanol (\\(M = 46\\)) and 6.0 g of ethanoic acid (\\(M = 60\\)) react: CH<sub>3</sub>COOH + C<sub>2</sub>H<sub>5</sub>OH ⇌ CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub> + H<sub>2</sub>O. If 67% of the reactants are converted at equilibrium, what mass of ethyl ethanoate (\\(M = 88\\)) forms?",
             "options": [
-              "CH₃COOH",
-              "CH₃COOCH₃",
-              "CH₃CH₂OH",
-              "CH₃CHO",
-              "CH₃COCH₃"
+              "8.8 g",
+              "4.0 g",
+              "3.9 g",
+              "5.9 g",
+              "13 g"
             ],
-            "correct": 1,
-            "solution": "CH₃COOCH₃ (methyl ethanoate) contains the -COO- ester functional group."
+            "correct": 3,
+            "solution": "Both reactants are 0.10 mol (a 1 : 1 ratio), so the maximum is 0.10 mol, or 8.8 g. At 67%: \\(0.67 \\times 8.8 = 5.9\\) g."
           },
           {
-            "question": "What is the IUPAC name for CH₃CH(OH)CH₃?",
+            "question": "In CH<sub>3</sub>–C≡C–CH=CH<sub>2</sub>, how many carbon atoms are sp<sup>3</sup>, sp<sup>2</sup> and sp hybridised, in that order?",
             "options": [
-              "1-propanol",
-              "2-propanol",
-              "Propan-1-ol",
-              "Isopropanol",
-              "Both B and D"
+              "2, 1, 2",
+              "1, 1, 3",
+              "1, 2, 2",
+              "2, 2, 1",
+              "3, 1, 1"
             ],
-            "correct": 4,
-            "solution": "3-carbon chain with -OH on carbon 2. IUPAC: propan-2-ol, commonly called 2-propanol or isopropanol."
+            "correct": 2,
+            "solution": "The CH<sub>3</sub> carbon has four single bonds: sp<sup>3</sup> (1). The two carbons of the triple bond are sp (2). The two carbons of the C=C double bond are sp<sup>2</sup> (2)."
           },
           {
             "question": "Which of the following is a characteristic of aromatic compounds?",
@@ -30318,16 +30318,16 @@ const subjects = [
             "solution": "Sodium reacts vigorously with water: 2Na + 2H₂O → 2NaOH + H₂. Sodium hydroxide and hydrogen gas are produced."
           },
           {
-            "question": "Which of the following is a homogeneous mixture?",
+            "question": "A student must separate a mixture of sand, salt and iron filings. Which order of methods is the most sensible?",
             "options": [
-              "Sand in water",
-              "Oil and water",
-              "Salt water",
-              "Granite",
-              "Fruit salad"
+              "Add water and filter, magnet, evaporate the filtrate",
+              "Evaporate, magnet, filter",
+              "Magnet, add water and filter, evaporate the filtrate",
+              "Magnet, evaporate the mixture, then filter",
+              "Filter first, then add water, then use a magnet"
             ],
             "correct": 2,
-            "solution": "Salt water is a homogeneous mixture (solution) where salt is uniformly dissolved in water."
+            "solution": "The magnet removes the iron from the dry mixture. Water then dissolves the salt, and filtering keeps the sand on the paper. Evaporating the filtrate leaves the salt. Putting water first would make the iron wet and rusty and harder to separate."
           },
           {
             "question": "What is the SI unit for amount of substance?",
@@ -30366,52 +30366,52 @@ const subjects = [
             "solution": "Density = mass/volume = 10 g / 5 cm³ = 2 g/cm³."
           },
           {
-            "question": "Which of the following is an element?",
+            "question": "How much heat is needed to change 50 g of ice at \\(-10\\,^{\\circ}\\)C into water at \\(20\\,^{\\circ}\\)C? Use \\(c_{\\text{ice}} = 2.09\\) J/(g K), \\(c_{\\text{water}} = 4.18\\) J/(g K) and latent heat of fusion 334 J/g.",
             "options": [
-              "Water",
-              "Air",
-              "Gold",
-              "Salt",
-              "Steel"
-            ],
-            "correct": 2,
-            "solution": "Gold (Au) is an element - it consists of only one type of atom."
-          },
-          {
-            "question": "What is the mass of one mole of carbon atoms?",
-            "options": [
-              "6 g",
-              "12 g",
-              "24 g",
-              "36 g",
-              "48 g"
+              "5.22 kJ",
+              "21.9 kJ",
+              "20.9 kJ",
+              "16.7 kJ",
+              "21900 kJ"
             ],
             "correct": 1,
-            "solution": "One mole of carbon atoms has a mass equal to its atomic mass in grams: 12 g."
+            "solution": "Three steps. Warm the ice to 0 °C: \\(50 \\times 2.09 \\times 10 = 1045\\) J. Melt it: \\(50 \\times 334 = 16\\,700\\) J. Warm the water to 20 °C: \\(50 \\times 4.18 \\times 20 = 4180\\) J. Total \\(= 21\\,925\\) J \\(= 21.9\\) kJ."
           },
           {
-            "question": "Which of the following is a compound?",
+            "question": "What mass of ammonium nitrate (NH<sub>4</sub>NO<sub>3</sub>) contains the same mass of nitrogen as 1.00 kg of urea, CO(NH<sub>2</sub>)<sub>2</sub>? (\\(A_r\\): H 1, C 12, N 14, O 16)",
             "options": [
-              "Oxygen gas",
-              "Nitrogen gas",
-              "Carbon dioxide",
-              "Air",
-              "Gold"
+              "0.75 kg",
+              "1.00 kg",
+              "2.14 kg",
+              "0.47 kg",
+              "1.33 kg"
             ],
-            "correct": 2,
-            "solution": "Carbon dioxide (CO₂) is a compound - it consists of two different elements chemically bonded together."
+            "correct": 4,
+            "solution": "Urea (\\(M = 60\\)) is \\(28/60 = 46.7\\%\\) N, so 1.00 kg contains 0.467 kg of N. Ammonium nitrate (\\(M = 80\\)) is \\(28/80 = 35\\%\\) N. Mass needed \\(= 0.467/0.35 = 1.33\\) kg."
           },
           {
-            "question": "What is Avogadro's number?",
+            "question": "Which list contains the correct numbers of <b>compounds</b> and <b>mixtures</b> among these eight materials: air, brass, CO<sub>2</sub>, O<sub>3</sub>, salt solution, S<sub>8</sub>, glucose, steel?",
             "options": [
-              "6.022 × 10²²",
-              "6.022 × 10²³",
-              "6.022 × 10²⁴",
-              "3.011 × 10²³",
-              "1.204 × 10²⁴"
+              "2 compounds, 4 mixtures",
+              "4 compounds, 4 mixtures",
+              "3 compounds, 3 mixtures",
+              "2 compounds, 3 mixtures",
+              "3 compounds, 4 mixtures"
             ],
-            "correct": 1,
-            "solution": "Avogadro's number is 6.022 × 10²³ particles per mole."
+            "correct": 0,
+            "solution": "Compounds (two or more elements chemically combined): CO<sub>2</sub> and glucose. Mixtures: air, brass, salt solution and steel. O<sub>3</sub> and S<sub>8</sub> are pure <b>elements</b>, so they are neither."
+          },
+          {
+            "question": "2.50 g of hydrated copper(II) sulfate, CuSO<sub>4</sub>·\\(x\\)H<sub>2</sub>O, lose water on heating and leave 1.60 g of anhydrous CuSO<sub>4</sub> (\\(M = 160\\)). What is \\(x\\)?",
+            "options": [
+              "2",
+              "4",
+              "7",
+              "5",
+              "10"
+            ],
+            "correct": 3,
+            "solution": "Mass of water lost \\(= 2.50 - 1.60 = 0.90\\) g. \\(n(\\text{H}_2\\text{O}) = 0.90/18 = 0.050\\) mol. \\(n(\\text{CuSO}_4) = 1.60/160 = 0.010\\) mol. The ratio is \\(0.050/0.010 = 5\\)."
           },
           {
             "question": "Which of the following is a chemical change?",
@@ -30426,64 +30426,64 @@ const subjects = [
             "solution": "Burning paper is a chemical change - new substances are formed (ash, CO₂, water vapor)."
           },
           {
-            "question": "What is the molar mass of water (H₂O)?",
+            "question": "A hydrocarbon contains 85.7% carbon and 14.3% hydrogen by mass, and its molar mass is 56 g/mol. What is its molecular formula?",
             "options": [
-              "10 g/mol",
-              "16 g/mol",
-              "18 g/mol",
-              "20 g/mol",
-              "22 g/mol"
+              "CH<sub>2</sub>",
+              "C<sub>4</sub>H<sub>8</sub>",
+              "C<sub>2</sub>H<sub>4</sub>",
+              "C<sub>4</sub>H<sub>10</sub>",
+              "C<sub>5</sub>H<sub>8</sub>"
             ],
-            "correct": 2,
-            "solution": "Molar mass = (2 × 1) + 16 = 18 g/mol."
+            "correct": 1,
+            "solution": "In 100 g: C \\(= 85.7/12 = 7.14\\) mol, H \\(= 14.3/1 = 14.3\\) mol. Ratio \\(= 1 : 2\\), so the empirical formula is CH<sub>2</sub> (\\(M = 14\\)). \\(56/14 = 4\\), so the molecular formula is C<sub>4</sub>H<sub>8</sub>."
           },
           {
-            "question": "Which of the following is a heterogeneous mixture?",
+            "question": "A closed jar contains ice, liquid water, a layer of oil floating on the water, and air above. How many <b>phases</b> does the system contain?",
             "options": [
-              "Salt water",
-              "Air",
-              "Brass",
-              "Sand and iron filings",
-              "Sugar solution"
+              "2",
+              "3",
+              "5",
+              "4",
+              "6"
             ],
             "correct": 3,
-            "solution": "Sand and iron filings is a heterogeneous mixture - the components are visibly different and not uniformly distributed."
+            "solution": "Ice (solid), liquid water, oil (a separate liquid layer) and the gas phase. The air and the water vapour form <b>one</b> gas phase, because gases mix completely. Total: 4."
           },
           {
-            "question": "What is the number of particles in 0.5 moles of a substance?",
+            "question": "How many electrons are in 1.8 g of water? (\\(M = 18\\) g/mol, each H<sub>2</sub>O molecule has 10 electrons)",
             "options": [
-              "3.011 × 10²²",
-              "3.011 × 10²³",
-              "6.022 × 10²³",
-              "1.204 × 10²⁴",
-              "6.022 × 10²²"
+              "6.02 × 10<sup>22</sup>",
+              "6.02 × 10<sup>24</sup>",
+              "1.8 × 10<sup>23</sup>",
+              "6.02 × 10<sup>23</sup>",
+              "3.01 × 10<sup>23</sup>"
             ],
-            "correct": 1,
-            "solution": "0.5 moles × (6.022 × 10²³ particles/mol) = 3.011 × 10²³ particles."
+            "correct": 3,
+            "solution": "\\(n = 1.8/18 = 0.10\\) mol of molecules, which is \\(6.02 \\times 10^{22}\\) molecules. Each has \\(2(1) + 8 = 10\\) electrons, so \\(6.02 \\times 10^{23}\\) electrons."
           },
           {
-            "question": "Which of the following is a mixture?",
+            "question": "A heater supplies 250 W (250 J every second) to 50 g of ice that is already at 0 °C. The latent heat of fusion is 334 J/g. How long does the temperature stay at 0 °C while the ice melts?",
             "options": [
-              "Sodium chloride",
-              "Water",
-              "Air",
-              "Carbon dioxide",
-              "Glucose"
+              "87.7 s",
+              "20.9 s",
+              "668 s",
+              "66.8 s",
+              "6.68 s"
             ],
-            "correct": 2,
-            "solution": "Air is a mixture of nitrogen, oxygen, and other gases. The others are pure substances."
+            "correct": 3,
+            "solution": "The temperature is constant while the energy goes into breaking the attractions between particles (melting). Energy needed: \\(50 \\times 334 = 16\\,700\\) J. Time \\(= 16\\,700/250 = 66.8\\) s."
           },
           {
-            "question": "What is the volume of 1 mole of gas at STP?",
+            "question": "How many hydrogen atoms are in 5.0 g of ammonia, NH<sub>3</sub>? (\\(M = 17\\) g/mol)",
             "options": [
-              "11.2 L",
-              "22.4 L",
-              "44.8 L",
-              "1.0 L",
-              "2.0 L"
+              "5.31 × 10<sup>23</sup>",
+              "1.77 × 10<sup>23</sup>",
+              "7.08 × 10<sup>23</sup>",
+              "9.03 × 10<sup>24</sup>",
+              "0.882"
             ],
-            "correct": 1,
-            "solution": "At STP (0°C, 1 atm), 1 mole of any ideal gas occupies 22.4 L."
+            "correct": 0,
+            "solution": "\\(n = 5.0/17 = 0.294\\) mol of NH<sub>3</sub>. Each molecule has 3 H atoms, so \\(n(\\text{H}) = 0.882\\) mol. Number \\(= 0.882 \\times 6.02 \\times 10^{23} = 5.3 \\times 10^{23}\\)."
           },
           {
             "question": "Which of the following is a property of non-metals?",
@@ -30498,16 +30498,16 @@ const subjects = [
             "solution": "Non-metals tend to gain electrons to form negative anions. They are poor conductors, brittle, and have low melting points."
           },
           {
-            "question": "What is the mass of 2 moles of oxygen molecules (O₂)?",
+            "question": "What is the mass of a single glucose molecule, C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (\\(M = 180\\) g/mol)?",
             "options": [
-              "16 g",
-              "32 g",
-              "48 g",
-              "64 g",
-              "96 g"
+              "1.08 × 10<sup>26</sup> g",
+              "2.99 × 10<sup>-25</sup> g",
+              "2.99 × 10<sup>-22</sup> g",
+              "3.34 × 10<sup>21</sup> g",
+              "4.98 × 10<sup>-23</sup> g"
             ],
-            "correct": 3,
-            "solution": "Molar mass of O₂ = 32 g/mol. 2 moles = 2 × 32 = 64 g."
+            "correct": 2,
+            "solution": "One mole (180 g) contains \\(6.02 \\times 10^{23}\\) molecules. One molecule has \\(180/(6.02 \\times 10^{23}) = 3.0 \\times 10^{-22}\\) g."
           },
           {
             "question": "Which of the following separation techniques is best for separating sand from water?",
@@ -30522,16 +30522,16 @@ const subjects = [
             "solution": "Filtration separates insoluble solids (sand) from liquids (water) using a filter."
           },
           {
-            "question": "What is the number of atoms in 0.5 moles of helium?",
+            "question": "A hydrocarbon is 80% carbon by mass. 0.30 g of the gas occupy 224 cm<sup>3</sup> at STP. What is its molecular formula?",
             "options": [
-              "3.011 × 10²²",
-              "3.011 × 10²³",
-              "6.022 × 10²³",
-              "1.204 × 10²⁴",
-              "6.022 × 10²²"
+              "CH<sub>3</sub>",
+              "C<sub>2</sub>H<sub>6</sub>",
+              "C<sub>2</sub>H<sub>4</sub>",
+              "C<sub>3</sub>H<sub>8</sub>",
+              "C<sub>4</sub>H<sub>12</sub>"
             ],
             "correct": 1,
-            "solution": "0.5 moles × (6.022 × 10²³ atoms/mol) = 3.011 × 10²³ atoms."
+            "solution": "\\(n = 0.224/22.4 = 0.0100\\) mol, so \\(M = 0.30/0.0100 = 30\\) g/mol. In 100 g: C \\(= 80/12 = 6.67\\) mol, H \\(= 20/1 = 20\\) mol. Ratio \\(1 : 3\\), empirical formula CH<sub>3</sub> (\\(M = 15\\)). \\(30/15 = 2\\), so C<sub>2</sub>H<sub>6</sub>."
           },
           {
             "question": "Which of the following is classified as a homogeneous mixture?",
@@ -30666,16 +30666,16 @@ const subjects = [
             "solution": "An extensive property depends on the size or extent of the system (e.g., mass, volume, internal energy, heat capacity). An intensive property does not depend on the quantity of matter (e.g., density, boiling point, temperature, refractive index)."
           },
           {
-            "question": "What is the total number of neutrons present in a neutral atom of Uranium-238 (²³⁸₉₂U)?",
+            "question": "A species has 16 protons, 16 neutrons and 18 electrons. Which symbol is correct?",
             "options": [
-              "146",
-              "92",
-              "238",
-              "144",
-              "330"
+              "<sup>32</sup>S<sup>2+</sup>",
+              "<sup>32</sup>S<sup>2-</sup>",
+              "<sup>34</sup>S<sup>2-</sup>",
+              "<sup>34</sup>Ar",
+              "<sup>32</sup>S"
             ],
-            "correct": 0,
-            "solution": "The mass number A = 238 (protons + neutrons) and atomic number Z = 92 (protons). The number of neutrons is N = A - Z = 238 - 92 = 146."
+            "correct": 1,
+            "solution": "16 protons means sulfur. Mass number \\(= 16 + 16 = 32\\). Electrons exceed protons by 2, so the charge is 2−. The species is \\(^{32}\\)S\\(^{2-}\\)."
           },
           {
             "question": "Which statement correctly describes the Tyndall effect?",
@@ -30828,28 +30828,28 @@ const subjects = [
             "solution": "The kinetic theory assumes gas particles have no intermolecular forces (they do not attract each other)."
           },
           {
-            "question": "At constant temperature, if the pressure of a gas is doubled, what happens to its volume?",
+            "question": "A 5.0 L cylinder contains oxygen at 150 atm and 27 °C. What mass of oxygen is in it? (\\(M(\\text{O}_2) = 32\\) g/mol, \\(R = 0.0821\\) L atm/(mol K))",
             "options": [
-              "It doubles",
-              "It halves",
-              "It remains the same",
-              "It becomes four times larger",
-              "It becomes one-fourth"
+              "974 g",
+              "487 g",
+              "30.5 g",
+              "1070 g",
+              "9.74 g"
             ],
-            "correct": 1,
-            "solution": "According to Boyle's law (P₁V₁ = P₂V₂ at constant temperature), if pressure doubles, volume halves."
+            "correct": 0,
+            "solution": "\\(n = PV/RT = 150 \\times 5.0/(0.0821 \\times 300) = 30.4\\) mol. \\(m = nM = 30.4 \\times 32 = 974\\) g. Using 22.4 L/mol is wrong because the gas is not at STP."
           },
           {
-            "question": "What is the volume occupied by 2 moles of an ideal gas at STP?",
+            "question": "2.0 g of magnesium (\\(A_r = 24\\)) react completely with excess acid: Mg + 2HCl → MgCl<sub>2</sub> + H<sub>2</sub>. The hydrogen is collected at 27 °C and 1.00 atm. What volume of hydrogen is this?",
             "options": [
-              "11.2 L",
-              "22.4 L",
-              "44.8 L",
-              "67.2 L",
-              "89.6 L"
+              "1.87 L",
+              "4.11 L",
+              "2.05 L",
+              "1.03 L",
+              "0.185 L"
             ],
             "correct": 2,
-            "solution": "At STP, 1 mole of ideal gas occupies 22.4 L. 2 moles occupy 2 × 22.4 = 44.8 L."
+            "solution": "\\(n(\\text{Mg}) = 2.0/24 = 0.0833\\) mol. The ratio Mg : H<sub>2</sub> is 1 : 1, so \\(n(\\text{H}_2) = 0.0833\\) mol. \\(V = nRT/P = 0.0833 \\times 0.0821 \\times 300/1.00 = 2.05\\) L."
           },
           {
             "question": "Which of the following gases would deviate most from ideal behaviour?",
@@ -30864,40 +30864,40 @@ const subjects = [
             "solution": "CO₂ deviates most from ideal behaviour at high pressure and low temperature because it has significant intermolecular forces."
           },
           {
-            "question": "What happens to the average kinetic energy of gas molecules when temperature is increased?",
+            "question": "A balloon of volume 5.0 L is released at 1.00 atm and 25 °C. It rises to a height where the pressure is 0.50 atm and the temperature is \\(-23\\) °C. What is its new volume?",
             "options": [
-              "It decreases",
-              "It remains constant",
-              "It increases",
-              "It becomes zero",
-              "It depends on pressure"
+              "11.9 L",
+              "10 L",
+              "-9.2 L",
+              "8.39 L",
+              "2.1 L"
             ],
-            "correct": 2,
-            "solution": "Average kinetic energy is directly proportional to absolute temperature (KE = 3/2 kT)."
+            "correct": 3,
+            "solution": "\\(T_1 = 298\\) K and \\(T_2 = 250\\) K. \\(V_2 = V_1 \\times (P_1/P_2) \\times (T_2/T_1) = 5.0 \\times 2.0 \\times (250/298) = 8.39\\) L. Lower pressure expands the gas, lower temperature shrinks it."
           },
           {
-            "question": "Which state of matter has the strongest intermolecular forces?",
+            "question": "How many atoms are present in 3 Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>?",
             "options": [
-              "Gas",
-              "Liquid",
-              "Solid",
-              "Plasma",
-              "All have equal forces"
+              "17",
+              "34",
+              "45",
+              "102",
+              "51"
             ],
-            "correct": 2,
-            "solution": "Solids have the strongest intermolecular forces, which hold particles in fixed positions."
+            "correct": 4,
+            "solution": "One Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> has \\(2 + 3 \\times (1 + 4) = 17\\) atoms. The coefficient 3 multiplies the whole formula: \\(3 \\times 17 = 51\\)."
           },
           {
-            "question": "In the ideal gas equation PV = nRT, what does R represent?",
+            "question": "A 10 L vessel at 27 °C contains 2.0 mol of N<sub>2</sub> and 3.0 mol of O<sub>2</sub>. What is the partial pressure of N<sub>2</sub>? (\\(R = 0.0821\\) L atm/(mol K))",
             "options": [
-              "Reaction rate",
-              "Gas constant",
-              "Radius",
-              "Resistance",
-              "Reducing agent"
+              "4.93 atm",
+              "12.3 atm",
+              "7.39 atm",
+              "49.3 atm",
+              "2.46 atm"
             ],
-            "correct": 1,
-            "solution": "R is the universal gas constant (8.314 J/mol·K or 0.0821 L·atm/mol·K)."
+            "correct": 0,
+            "solution": "Total \\(n = 5.0\\) mol, so \\(P_{\\text{total}} = nRT/V = 5.0 \\times 0.0821 \\times 300/10 = 12.3\\) atm. N<sub>2</sub> is 2.0/5.0 = 0.40 of the moles, so \\(P_{\\text{N}_2} = 0.40 \\times 12.3 = 4.93\\) atm."
           },
           {
             "question": "What is the relationship between temperature and pressure at constant volume for an ideal gas?",
@@ -30924,28 +30924,28 @@ const subjects = [
             "solution": "Liquids have a fixed volume but take the shape of their container (variable shape)."
           },
           {
-            "question": "What is the value of the gas constant R in L·atm/mol·K?",
+            "question": "A gas has a density of 1.78 g/L at 27 °C and 1.00 atm (\\(R = 0.0821\\) L atm/(mol K)). What is its molar mass?",
             "options": [
-              "0.0821",
-              "8.314",
-              "1.987",
-              "6.022",
-              "22.4"
+              "39.9 g/mol",
+              "3.95 g/mol",
+              "87.7 g/mol",
+              "43.8 g/mol",
+              "0.0723 g/mol"
             ],
-            "correct": 0,
-            "solution": "R = 0.0821 L·atm/mol·K when using pressure in atm and volume in liters."
+            "correct": 3,
+            "solution": "Take 1 L: mass 1.78 g. \\(n = PV/RT = 1.00 \\times 1/(0.0821 \\times 300) = 0.0406\\) mol. \\(M = 1.78/0.0406 = 43.8\\) g/mol. (Using 22.4 L/mol would be wrong because the gas is not at 0 °C.)"
           },
           {
-            "question": "Which process converts a solid directly to a gas?",
+            "question": "A 2.0 L flask holds a gas at 3.0 atm. It is connected by a tap to a 3.0 L flask holding the same gas at 1.0 atm. The temperature is constant. What is the final pressure after the tap is opened?",
             "options": [
-              "Evaporation",
-              "Condensation",
-              "Sublimation",
-              "Freezing",
-              "Melting"
+              "2.0 atm",
+              "1.0 atm",
+              "4.0 atm",
+              "1 atm",
+              "1.8 atm"
             ],
-            "correct": 2,
-            "solution": "Sublimation is the direct transition from solid to gas without passing through the liquid phase."
+            "correct": 4,
+            "solution": "Boyle: the product \\(PV\\) for each flask is the amount of gas. Total \\(PV = 2.0 \\times 3.0 + 3.0 \\times 1.0 = 9.0\\) L atm. The total volume is 5.0 L, so \\(P = 9.0/5.0 = 1.8\\) atm."
           },
           {
             "question": "At constant pressure, if the temperature of a gas is increased from 273 K to 546 K, what happens to its volume?",
@@ -30972,28 +30972,28 @@ const subjects = [
             "solution": "At high pressure, gas particles are forced closer together, making intermolecular forces significant."
           },
           {
-            "question": "What is the molar volume of an ideal gas at STP?",
+            "question": "A gas occupies 2.0 L at 1.0 atm and 27 °C. What volume does it occupy at 4.0 atm and 127 °C?",
             "options": [
-              "11.2 L/mol",
-              "22.4 L/mol",
-              "44.8 L/mol",
-              "1.0 L/mol",
-              "100 L/mol"
+              "10.7 L",
+              "0.667 L",
+              "2.35 L",
+              "0.5 L",
+              "6 L"
             ],
             "correct": 1,
-            "solution": "At STP (0°C, 1 atm), 1 mole of any ideal gas occupies 22.4 L."
+            "solution": "Use \\(P_1V_1/T_1 = P_2V_2/T_2\\) with kelvin: \\(T_1 = 300\\) K, \\(T_2 = 400\\) K. \\(V_2 = 2.0 \\times (1.0/4.0) \\times (400/300) = 0.667\\) L."
           },
           {
-            "question": "Which of the following has the highest vapour pressure at room temperature?",
+            "question": "The average kinetic energy of the particles of a gas is proportional to the temperature in kelvin. A sample at 27 °C is heated until the average kinetic energy has doubled. What is the new temperature?",
             "options": [
-              "Water",
-              "Ethanol",
-              "Diethyl ether",
-              "Mercury",
-              "Glycerol"
+              "54 °C",
+              "327 °C",
+              "600 °C",
+              "300 °C",
+              "127 °C"
             ],
-            "correct": 2,
-            "solution": "Diethyl ether has the highest vapour pressure due to weak intermolecular forces."
+            "correct": 1,
+            "solution": "Use kelvin. \\(27 + 273 = 300\\) K. Doubling the energy doubles the kelvin temperature: 600 K. Back to Celsius: \\(600 - 273 = 327\\) °C. Doubling the Celsius number (54 °C) is wrong."
           },
           {
             "question": "What is the relationship between pressure and the number of moles of gas at constant temperature and volume?",
@@ -31008,16 +31008,16 @@ const subjects = [
             "solution": "According to Avogadro's law, at constant temperature and volume, pressure is directly proportional to the number of moles."
           },
           {
-            "question": "Which of the following is a characteristic of plasma?",
+            "question": "Which pair of statements about evaporation and boiling is correct?",
             "options": [
-              "Neutral particles",
-              "Low temperature",
-              "Contains ions and free electrons",
-              "Solid state",
-              "Cannot conduct electricity"
+              "Evaporation happens at any temperature, only at the surface. Boiling happens at one temperature, throughout the liquid.",
+              "Evaporation needs 100 °C. Boiling happens only at the surface.",
+              "Evaporation happens throughout the liquid. Boiling happens only at the surface.",
+              "Both happen only at the boiling point, but boiling is faster.",
+              "Evaporation cools the liquid. Boiling does not need any energy."
             ],
-            "correct": 2,
-            "solution": "Plasma is the fourth state of matter consisting of ionised gas with free electrons and ions."
+            "correct": 0,
+            "solution": "Fast particles at the surface can escape at any temperature (evaporation, which cools the liquid). Boiling needs the vapour pressure to equal the external pressure, so bubbles form inside the liquid at the boiling point."
           },
           {
             "question": "What is the boiling point of a liquid?",
@@ -31032,16 +31032,16 @@ const subjects = [
             "solution": "Boiling point is the temperature at which the vapour pressure of the liquid equals the external atmospheric pressure."
           },
           {
-            "question": "Which gas law relates pressure and volume at constant temperature?",
+            "question": "A fixed mass of gas at constant pressure is heated from 20 °C until its volume has doubled. What is the final temperature?",
             "options": [
-              "Charles's law",
-              "Boyle's law",
-              "Gay-Lussac's law",
-              "Avogadro's law",
-              "Dalton's law"
+              "40 °C",
+              "313 °C",
+              "586 °C",
+              "146 °C",
+              "273 °C"
             ],
             "correct": 1,
-            "solution": "Boyle's law states that at constant temperature, pressure and volume are inversely proportional (P₁V₁ = P₂V₂)."
+            "solution": "Volume is proportional to kelvin temperature. \\(T_1 = 293\\) K, so \\(T_2 = 586\\) K. In Celsius: \\(586 - 273 = 313\\) °C. Doubling the Celsius value (40 °C) is the common error."
           },
           {
             "question": "What is the effect of increasing temperature on the viscosity of a liquid?",
@@ -31374,28 +31374,28 @@ const subjects = [
             "solution": "Gas solubility in liquids decreases with increasing temperature and increases with increasing pressure (Henry's law)."
           },
           {
-            "question": "What is the molarity of a solution containing 0.5 moles of solute in 250 mL of solution?",
+            "question": "250 cm<sup>3</sup> of 0.10 mol/L Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> are prepared. What is the concentration of sulfate ions?",
             "options": [
-              "0.5 M",
-              "1.0 M",
-              "2.0 M",
-              "4.0 M",
-              "0.25 M"
+              "0.10 mol/L",
+              "0.20 mol/L",
+              "0.60 mol/L",
+              "0.30 mol/L",
+              "0.075 mol/L"
             ],
-            "correct": 2,
-            "solution": "Molarity = moles/volume(L) = 0.5/0.25 = 2.0 M."
+            "correct": 3,
+            "solution": "Each formula unit gives 3 sulfate ions: \\(c(\\text{SO}_4^{2-}) = 3 \\times 0.10 = 0.30\\) mol/L. The volume does not change the concentration. (The Al<sup>3+</sup> concentration is 0.20 mol/L.)"
           },
           {
-            "question": "Which of the following is a colligative property?",
+            "question": "The solubility of NaCl is 36 g per 100 g of water at 20 °C. What mass of NaCl is in 500 g of saturated solution at 20 °C?",
             "options": [
-              "Colour",
-              "Density",
-              "Boiling point elevation",
-              "Reactivity",
-              "Flammability"
+              "180 g",
+              "36 g",
+              "100 g",
+              "71 g",
+              "132 g"
             ],
-            "correct": 2,
-            "solution": "Colligative properties depend on the number of solute particles, not their identity."
+            "correct": 4,
+            "solution": "136 g of saturated solution contain 36 g of NaCl (100 g water + 36 g salt). For 500 g: \\(500 \\times 36/136 = 132\\) g."
           },
           {
             "question": "What happens when a saturated solution is cooled?",
@@ -31422,16 +31422,16 @@ const subjects = [
             "solution": "CaCl₂ dissociates into 3 particles, giving the highest van't Hoff factor and greatest boiling point elevation."
           },
           {
-            "question": "What is the molality of a solution with 0.5 moles of solute in 1 kg of solvent?",
+            "question": "The solubility of KNO<sub>3</sub> is 64 g per 100 g of water at 40 °C and 32 g per 100 g at 20 °C. A solution saturated at 40 °C contains 200 g of water. What mass of crystals appears on cooling to 20 °C?",
             "options": [
-              "0.5 m",
-              "1.0 m",
-              "2.0 m",
-              "0.25 m",
-              "5.0 m"
+              "32 g",
+              "64 g",
+              "128 g",
+              "96 g",
+              "16 g"
             ],
-            "correct": 0,
-            "solution": "Molality = moles of solute/kg of solvent = 0.5/1 = 0.5 m."
+            "correct": 1,
+            "solution": "At 40 °C, 200 g of water hold 128 g of KNO<sub>3</sub>. At 20 °C they can hold only \\(2 \\times 32 = 64\\) g. The excess crystallises: \\(128 - 64 = 64\\) g."
           },
           {
             "question": "According to Henry's law, the solubility of a gas is directly proportional to:",
@@ -31446,16 +31446,16 @@ const subjects = [
             "solution": "Henry's law states that the solubility of a gas in a liquid is directly proportional to the partial pressure of the gas."
           },
           {
-            "question": "Which of the following is an example of a solid solution?",
+            "question": "Concentrated hydrochloric acid is 37% HCl by mass and has a density of 1.19 g/cm<sup>3</sup>. What is its concentration? (\\(M = 36.5\\) g/mol)",
             "options": [
-              "Salt water",
-              "Air",
-              "Brass (copper and zinc alloy)",
-              "Milk",
-              "Fog"
+              "12.1 mol/L",
+              "10.1 mol/L",
+              "36.5 mol/L",
+              "1.21 mol/L",
+              "14.3 mol/L"
             ],
-            "correct": 2,
-            "solution": "Brass is a solid solution where zinc atoms are dissolved in copper."
+            "correct": 0,
+            "solution": "In 1.00 L: mass of solution \\(= 1190\\) g. Mass of HCl \\(= 0.37 \\times 1190 = 440\\) g. \\(n = 440/36.5 = 12.1\\) mol, so \\(c = 12.1\\) mol/L."
           },
           {
             "question": "What is the effect of adding a non-volatile solute to a solvent?",
@@ -31470,16 +31470,16 @@ const subjects = [
             "solution": "Adding a non-volatile solute lowers vapour pressure, which raises the boiling point and lowers the freezing point."
           },
           {
-            "question": "Which of the following solutes would NOT dissociate in water?",
+            "question": "Which solution is <b>isotonic</b> (same osmolarity) with 0.15 mol/L NaCl? Assume complete dissociation.",
             "options": [
-              "NaCl",
-              "KNO₃",
-              "CaCl₂",
-              "Glucose",
-              "MgSO₄"
+              "0.15 mol/L glucose",
+              "0.30 mol/L NaCl",
+              "0.10 mol/L CaCl<sub>2</sub>",
+              "0.15 mol/L CaCl<sub>2</sub>",
+              "0.10 mol/L glucose"
             ],
-            "correct": 3,
-            "solution": "Glucose is a molecular compound that does not dissociate into ions in water."
+            "correct": 2,
+            "solution": "NaCl gives 2 particles per unit: \\(2 \\times 0.15 = 0.30\\) osmol/L. CaCl<sub>2</sub> gives 3: \\(3 \\times 0.10 = 0.30\\) osmol/L. Glucose does not dissociate, so 0.15 mol/L is only 0.15 osmol/L."
           },
           {
             "question": "What is the mass percent of a solution containing 10 g of solute in 90 g of solvent?",
@@ -31518,16 +31518,16 @@ const subjects = [
             "solution": "Molarity (M) = moles/volume of solution (L). Molality (m) = moles/mass of solvent (kg)."
           },
           {
-            "question": "Which of the following would have the lowest freezing point?",
+            "question": "Saline is 0.90% NaCl by mass per volume (9.0 g per litre). What is its osmolarity? (\\(M(\\text{NaCl}) = 58.5\\) g/mol)",
             "options": [
-              "0.1 M glucose",
-              "0.1 M NaCl",
-              "0.1 M CaCl₂",
-              "0.1 M urea",
-              "Pure water"
+              "0.31 osmol/L",
+              "0.15 osmol/L",
+              "0.62 osmol/L",
+              "0.077 osmol/L",
+              "9.0 osmol/L"
             ],
-            "correct": 2,
-            "solution": "CaCl₂ produces the most particles (3 ions), causing the greatest freezing point depression."
+            "correct": 0,
+            "solution": "\\(c = 9.0/58.5 = 0.154\\) mol/L. NaCl dissociates into 2 particles (Na<sup>+</sup> and Cl<sup>-</sup>), so the osmolarity is \\(2 \\times 0.154 = 0.31\\) osmol/L, close to that of blood plasma."
           },
           {
             "question": "What is a supersaturated solution?",
@@ -31566,16 +31566,16 @@ const subjects = [
             "solution": "Osmotic pressure is the minimum pressure needed to prevent the flow of solvent across a semipermeable membrane."
           },
           {
-            "question": "Which of the following is a homogeneous mixture?",
+            "question": "200 cm<sup>3</sup> of 0.50 mol/L NaCl are mixed with 300 cm<sup>3</sup> of 0.20 mol/L CaCl<sub>2</sub>. What is the concentration of chloride ions in the final mixture?",
             "options": [
-              "Sand in water",
-              "Oil and water",
-              "Salt water",
-              "Suspension",
-              "Colloid"
+              "0.35 mol/L",
+              "0.22 mol/L",
+              "0.70 mol/L",
+              "0.44 mol/L",
+              "0.88 mol/L"
             ],
-            "correct": 2,
-            "solution": "Salt water is a homogeneous solution where salt is uniformly dissolved."
+            "correct": 3,
+            "solution": "Cl<sup>-</sup> from NaCl: \\(0.200 \\times 0.50 = 0.100\\) mol. From CaCl<sub>2</sub> (2 Cl<sup>-</sup> per unit): \\(0.300 \\times 0.20 \\times 2 = 0.120\\) mol. Total \\(0.220\\) mol in 0.500 L \\(= 0.44\\) mol/L."
           },
           {
             "question": "What is the effect of pressure on the solubility of solids in liquids?",
@@ -31590,16 +31590,16 @@ const subjects = [
             "solution": "Pressure has a negligible effect on the solubility of solids in liquids because solids and liquids are nearly incompressible."
           },
           {
-            "question": "Which of the following is an example of a colloid?",
+            "question": "50.0 cm<sup>3</sup> of 12.0 mol/L HCl are diluted with water to a final volume of 2.00 L. What is the new concentration?",
             "options": [
-              "Salt solution",
-              "Sugar solution",
-              "Milk",
-              "Air",
-              "Alloy"
+              "0.600 mol/L",
+              "0.300 mol/L",
+              "0.150 mol/L",
+              "3.00 mol/L",
+              "0.0300 mol/L"
             ],
-            "correct": 2,
-            "solution": "Milk is a colloid (emulsion) with fat droplets dispersed in water."
+            "correct": 1,
+            "solution": "\\(n = 0.0500 \\times 12.0 = 0.600\\) mol (unchanged by dilution). \\(c = 0.600/2.00 = 0.300\\) mol/L."
           },
           {
             "question": "What is the molality (m) of a solution prepared by dissolving 20.0 g of NaOH (molar mass = 40.0 g/mol) in 500 g of pure water?",
@@ -31968,16 +31968,16 @@ const subjects = [
             "solution": "Combustion releases heat (exothermic). Melting, evaporation, and endothermic dissolution absorb heat."
           },
           {
-            "question": "What is the activation energy of a reaction?",
+            "question": "Why does a 10 °C rise in temperature roughly double the rate of many reactions?",
             "options": [
-              "The energy released in the reaction",
-              "The minimum energy required for reactants to form products",
-              "The total energy of the products",
-              "The energy of the transition state",
-              "The enthalpy change"
+              "The particles collide twice as often",
+              "The activation energy is halved",
+              "The reaction becomes more exothermic",
+              "A much larger fraction of the collisions has energy at or above the activation energy",
+              "The concentration of the reactants doubles"
             ],
-            "correct": 1,
-            "solution": "Activation energy is the minimum energy that reacting molecules must possess to undergo a chemical reaction."
+            "correct": 3,
+            "solution": "The collision frequency rises only a few percent. The big effect is on the <b>fraction</b> of particles with \\(E \\ge E_a\\), which grows rapidly with temperature. The activation energy and \\(\\Delta H\\) do not change."
           },
           {
             "question": "According to the Arrhenius equation, increasing temperature:",
@@ -31992,16 +31992,16 @@ const subjects = [
             "solution": "The Arrhenius equation (k = Ae^(-Ea/RT)) shows that increasing temperature increases the rate constant exponentially."
           },
           {
-            "question": "What is a catalyst?",
+            "question": "A gas is collected in a syringe: 0 s: 0 cm<sup>3</sup>, 30 s: 24 cm<sup>3</sup>, 60 s: 40 cm<sup>3</sup>, 90 s: 50 cm<sup>3</sup>. What is the mean rate between 30 s and 90 s?",
             "options": [
-              "A substance that increases the activation energy",
-              "A substance that decreases the activation energy",
-              "A substance that is consumed in the reaction",
-              "A substance that changes the equilibrium constant",
-              "A substance that only works at high temperature"
+              "0.43 cm<sup>3</sup>/s",
+              "0.80 cm<sup>3</sup>/s",
+              "0.56 cm<sup>3</sup>/s",
+              "0.28 cm<sup>3</sup>/s",
+              "0.33 cm<sup>3</sup>/s"
             ],
-            "correct": 1,
-            "solution": "A catalyst provides an alternative reaction pathway with lower activation energy, increasing the reaction rate without being consumed."
+            "correct": 0,
+            "solution": "Volume produced in that interval: \\(50 - 24 = 26\\) cm<sup>3</sup>. Time: \\(90 - 30 = 60\\) s. Rate \\(= 26/60 = 0.43\\) cm<sup>3</sup>/s. It is lower than the initial rate (\\(24/30 = 0.80\\) cm<sup>3</sup>/s) because the reactants are used up."
           },
           {
             "question": "Which of the following statements about enthalpy is correct?",
@@ -32016,16 +32016,16 @@ const subjects = [
             "solution": "Enthalpy change (ΔH) equals heat transferred at constant pressure. Enthalpy is H = U + PV."
           },
           {
-            "question": "What is the effect of increasing concentration on reaction rate?",
+            "question": "For a first-order reaction the concentration of A falls from 0.80 mol/L to 0.10 mol/L in 30 min. What is the rate constant?",
             "options": [
-              "Rate decreases",
-              "Rate increases",
-              "Rate remains constant",
-              "Rate becomes zero",
-              "Depends on temperature only"
+              "0.10 min<sup>-1</sup>",
+              "0.069 min<sup>-1</sup>",
+              "0.23 min<sup>-1</sup>",
+              "0.021 min<sup>-1</sup>",
+              "0.033 min<sup>-1</sup>"
             ],
             "correct": 1,
-            "solution": "Increasing reactant concentration increases the frequency of collisions, thus increasing the reaction rate."
+            "solution": "\\(0.80 \\to 0.40 \\to 0.20 \\to 0.10\\) is 3 half-lives, so \\(t_{1/2} = 30/3 = 10\\) min. For first order \\(k = \\ln 2/t_{1/2} = 0.693/10 = 0.069\\) min<sup>-1</sup>."
           },
           {
             "question": "Which of the following is true for a first-order reaction?",
@@ -32040,16 +32040,16 @@ const subjects = [
             "solution": "For a first-order reaction, rate = k[A], so rate is directly proportional to reactant concentration."
           },
           {
-            "question": "What is the half-life of a first-order reaction?",
+            "question": "A first-order reaction has a half-life of 20 min. What fraction of the reactant remains after 90 min?",
             "options": [
-              "Depends on initial concentration",
-              "Independent of initial concentration",
-              "Always 10 seconds",
-              "Infinite",
-              "Cannot be determined"
+              "25%",
+              "12.5%",
+              "6.3%",
+              "4.4%",
+              "1.6%"
             ],
-            "correct": 1,
-            "solution": "For first-order reactions, half-life (t₁/₂ = ln2/k) is independent of initial concentration."
+            "correct": 3,
+            "solution": "90 min is \\(90/20 = 4.5\\) half-lives. Fraction left \\(= (1/2)^{4.5} = 0.044\\), i.e. 4.4%. (After 4 half-lives it would be 6.3%, after 5 it would be 3.1%.)"
           },
           {
             "question": "What is Hess's law?",
@@ -32064,28 +32064,28 @@ const subjects = [
             "solution": "Hess's law states that the total enthalpy change of a reaction is the same regardless of the number of steps or pathway taken."
           },
           {
-            "question": "Which of the following has the highest activation energy?",
+            "question": "A radioactive sample of 80 g has a half-life of 5.0 days. What mass remains after 20 days?",
             "options": [
-              "A fast reaction",
-              "A slow reaction",
-              "A spontaneous reaction",
-              "An exothermic reaction",
-              "An endothermic reaction"
+              "5.0 g",
+              "10 g",
+              "20 g",
+              "2.5 g",
+              "40 g"
             ],
-            "correct": 1,
-            "solution": "Slow reactions typically have high activation energies that few molecules can overcome."
+            "correct": 0,
+            "solution": "20 days is 4 half-lives: \\(80 \\to 40 \\to 20 \\to 10 \\to 5.0\\) g."
           },
           {
-            "question": "What is the unit of the rate constant for a second-order reaction?",
+            "question": "Initial rates for A + B → products: (1) [A] = 0.10, [B] = 0.10, rate = \\(2.0 \\times 10^{-3}\\). (2) [A] = 0.20, [B] = 0.10, rate = \\(8.0 \\times 10^{-3}\\). (3) [A] = 0.10, [B] = 0.30, rate = \\(6.0 \\times 10^{-3}\\) (mol/L, mol L<sup>-1</sup> s<sup>-1</sup>). What is the rate when [A] = 0.30 and [B] = 0.20?",
             "options": [
-              "s⁻¹",
-              "L·mol⁻¹·s⁻¹",
-              "L²·mol⁻²·s⁻¹",
-              "mol·L⁻¹·s⁻¹",
-              "No units"
+              "0.012 mol L<sup>-1</sup> s<sup>-1</sup>",
+              "0.036 mol L<sup>-1</sup> s<sup>-1</sup>",
+              "0.12 mol L<sup>-1</sup> s<sup>-1</sup>",
+              "0.0072 mol L<sup>-1</sup> s<sup>-1</sup>",
+              "0.0108 mol L<sup>-1</sup> s<sup>-1</sup>"
             ],
             "correct": 1,
-            "solution": "For second-order reactions, rate = k[A]², so k has units of L·mol⁻¹·s⁻¹."
+            "solution": "Doubling [A] quadruples the rate (1→2): second order in A. Tripling [B] triples the rate (1→3): first order in B. Rate \\(= k[\\text{A}]^2[\\text{B}]\\). From (1): \\(k = 2.0 \\times 10^{-3}/(0.10^2 \\times 0.10) = 2.0\\). Then rate \\(= 2.0 \\times 0.30^2 \\times 0.20 = 0.036\\)."
           },
           {
             "question": "Which of the following is an endothermic process?",
@@ -32124,28 +32124,28 @@ const subjects = [
             "solution": "Gibbs free energy: ΔG = ΔH - TΔS, where ΔH is enthalpy change, T is temperature, and ΔS is entropy change."
           },
           {
-            "question": "Which of the following increases the rate of a reaction?",
+            "question": "As a rule of thumb, the rate of a reaction doubles for every 10 °C rise in temperature. A reaction takes 8.0 min at 20 °C. How long does it take at 50 °C?",
             "options": [
-              "Decreasing temperature",
-              "Decreasing concentration",
-              "Adding a catalyst",
-              "Increasing particle size",
-              "Decreasing surface area"
+              "2.0 min",
+              "4.0 min",
+              "1.0 min",
+              "0.50 min",
+              "2.7 min"
             ],
             "correct": 2,
-            "solution": "A catalyst provides an alternative pathway with lower activation energy, increasing the reaction rate."
+            "solution": "A rise of 30 °C is three steps of 10 °C, so the rate is multiplied by \\(2^3 = 8\\). The time falls to \\(8.0/8 = 1.0\\) min."
           },
           {
-            "question": "What is the order of a reaction if the rate doubles when concentration is doubled?",
+            "question": "The forward reaction has \\(E_a = 80\\) kJ/mol and \\(\\Delta H = -30\\) kJ/mol. A catalyst lowers the forward activation energy by 25 kJ/mol. What is the activation energy of the <b>reverse</b> reaction <b>with</b> the catalyst?",
             "options": [
-              "Zero order",
-              "First order",
-              "Second order",
-              "Third order",
-              "Cannot be determined"
+              "110 kJ/mol",
+              "55 kJ/mol",
+              "135 kJ/mol",
+              "30 kJ/mol",
+              "85 kJ/mol"
             ],
-            "correct": 1,
-            "solution": "If rate ∝ [A]^n and doubling [A] doubles rate, then 2^n = 2, so n = 1 (first order)."
+            "correct": 4,
+            "solution": "Without catalyst: \\(E_a(\\text{reverse}) = E_a(\\text{forward}) - \\Delta H = 80 + 30 = 110\\) kJ/mol. The catalyst lowers both barriers by the same amount (25 kJ/mol): \\(110 - 25 = 85\\) kJ/mol. \\(\\Delta H\\) is unchanged."
           },
           {
             "question": "Which of the following is true for a zero-order reaction?",
@@ -32490,16 +32490,16 @@ const subjects = [
             "solution": "Increasing pressure shifts equilibrium toward the side with fewer moles of gas (right: 2 moles vs left: 4 moles)."
           },
           {
-            "question": "What is the equilibrium constant Kc for the reaction A ⇌ B if [A] = 0.1 M and [B] = 0.9 M at equilibrium?",
+            "question": "1.0 mol/L of H<sub>2</sub> and 1.0 mol/L of I<sub>2</sub> are heated: H<sub>2</sub> + I<sub>2</sub> ⇌ 2HI, \\(K_c = 49\\). What is \\([\\text{HI}]\\) at equilibrium?",
             "options": [
-              "0.11",
-              "9",
-              "0.9",
-              "1",
-              "0.1"
+              "0.78 mol/L",
+              "1.80 mol/L",
+              "0.22 mol/L",
+              "1.56 mol/L",
+              "2.0 mol/L"
             ],
-            "correct": 1,
-            "solution": "Kc = [B]/[A] = 0.9/0.1 = 9."
+            "correct": 3,
+            "solution": "Let \\(x\\) mol/L of H<sub>2</sub> react: \\([\\text{HI}] = 2x\\), \\([\\text{H}_2] = [\\text{I}_2] = 1 - x\\). \\(K_c = (2x)^2/(1-x)^2 = 49\\). Take the square root: \\(2x/(1-x) = 7\\), so \\(x = 7/9 = 0.778\\) and \\([\\text{HI}] = 1.56\\) mol/L."
           },
           {
             "question": "Which of the following changes the value of the equilibrium constant?",
@@ -32514,28 +32514,28 @@ const subjects = [
             "solution": "Only temperature changes the equilibrium constant. Catalysts, pressure, and concentration changes affect the position but not K."
           },
           {
-            "question": "In an exothermic reaction, increasing temperature:",
+            "question": "50 cm<sup>3</sup> of \\(1.0 \\times 10^{-4}\\) mol/L AgNO<sub>3</sub> are mixed with 50 cm<sup>3</sup> of \\(1.0 \\times 10^{-4}\\) mol/L NaCl (\\(K_{sp}\\) of AgCl \\(= 1.8 \\times 10^{-10}\\)). What is the ion product and does a precipitate form?",
             "options": [
-              "Increases Kc",
-              "Decreases Kc",
-              "Does not change Kc",
-              "Makes the reaction spontaneous",
-              "Increases the rate only"
+              "\\(2.5 \\times 10^{-9}\\), no",
+              "\\(1.0 \\times 10^{-8}\\), no",
+              "\\(5.0 \\times 10^{-5}\\), no",
+              "\\(2.5 \\times 10^{-9}\\), yes",
+              "\\(1.0 \\times 10^{-8}\\), yes"
             ],
-            "correct": 1,
-            "solution": "For exothermic reactions (ΔH < 0), increasing temperature shifts equilibrium left (Le Chatelier), decreasing Kc."
+            "correct": 3,
+            "solution": "Mixing doubles the volume, so each concentration halves to \\(5.0 \\times 10^{-5}\\) mol/L. \\(Q = (5.0 \\times 10^{-5})^2 = 2.5 \\times 10^{-9}\\). Since \\(Q > K_{sp}\\) (\\(1.8 \\times 10^{-10}\\)), AgCl precipitates."
           },
           {
-            "question": "What does a large equilibrium constant indicate?",
+            "question": "\\(K_{sp}\\) of AgCl is \\(1.8 \\times 10^{-10}\\). What is its solubility in 0.10 mol/L NaCl?",
             "options": [
-              "Reaction does not proceed",
-              "Reaction favours reactants",
-              "Reaction favours products",
-              "Reaction is at equilibrium",
-              "Reaction is slow"
+              "1.34 × 10<sup>-5</sup> mol/L",
+              "1.8 × 10<sup>-10</sup> mol/L",
+              "0.1 mol/L",
+              "1.8 × 10<sup>-11</sup> mol/L",
+              "1.8 × 10<sup>-9</sup> mol/L"
             ],
-            "correct": 2,
-            "solution": "A large Kc (K >> 1) indicates the equilibrium position lies far to the right, favouring products."
+            "correct": 4,
+            "solution": "\\(K_{sp} = [\\text{Ag}^+][\\text{Cl}^-]\\). The chloride from NaCl (0.10 mol/L) is far more than the chloride from AgCl, so \\([\\text{Cl}^-] \\approx 0.10\\). \\(s = [\\text{Ag}^+] = 1.8 \\times 10^{-10}/0.10 = 1.8 \\times 10^{-9}\\) mol/L. In pure water it would be \\(1.3 \\times 10^{-5}\\): the <b>common ion effect</b>."
           },
           {
             "question": "Which of the following is true at equilibrium?",
@@ -32586,16 +32586,16 @@ const subjects = [
             "solution": "Pressure and catalyst affect equilibrium position but not K. Only temperature changes K."
           },
           {
-            "question": "In the reaction H₂(g) + I₂(g) ⇌ 2HI(g), what happens if more H₂ is added?",
+            "question": "At 50 °C the ionic product of water is \\(K_w = 5.5 \\times 10^{-14}\\). What is the pH of pure water at this temperature, and is it neutral?",
             "options": [
-              "Equilibrium shifts left",
-              "Equilibrium shifts right",
-              "No change",
-              "Kc changes",
-              "Reaction stops"
+              "6.63, neutral",
+              "7.00, neutral",
+              "6.63, acidic",
+              "7.37, basic",
+              "13.3, basic"
             ],
-            "correct": 1,
-            "solution": "Adding H₂ (reactant) shifts equilibrium right to consume the added H₂, producing more HI."
+            "correct": 0,
+            "solution": "In pure water \\([\\text{H}^+] = [\\text{OH}^-] = \\sqrt{5.5 \\times 10^{-14}} = 2.3 \\times 10^{-7}\\) mol/L, so \\(\\text{pH} = 6.63\\). Water is still neutral because \\([\\text{H}^+] = [\\text{OH}^-]\\). Neutral means equal concentrations, not pH 7."
           },
           {
             "question": "What is the relationship between Kp and Kc for the reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g)?",
@@ -32622,16 +32622,16 @@ const subjects = [
             "solution": "In heterogeneous equilibrium, pure solids and liquids are not included in the equilibrium constant expression."
           },
           {
-            "question": "What happens to Kc when the reaction is reversed?",
+            "question": "For A + B ⇌ C, \\(K_c = 4.0\\). A mixture has \\([\\text{A}] = 0.50\\), \\([\\text{B}] = 0.50\\) and \\([\\text{C}] = 0.60\\) mol/L. What is \\(Q\\) and which way does the reaction go?",
             "options": [
-              "Kc remains the same",
-              "Kc becomes 1/Kc",
-              "Kc becomes -Kc",
-              "Kc becomes Kc²",
-              "Kc becomes zero"
+              "\\(Q = 2.4\\), towards C",
+              "\\(Q = 2.4\\), towards A and B",
+              "\\(Q = 0.42\\), towards C",
+              "\\(Q = 4.0\\), no change",
+              "\\(Q = 1.2\\), towards A and B"
             ],
-            "correct": 1,
-            "solution": "When a reaction is reversed, the new equilibrium constant is the reciprocal of the original: K' = 1/K."
+            "correct": 0,
+            "solution": "\\(Q = [\\text{C}]/([\\text{A}][\\text{B}]) = 0.60/0.25 = 2.4\\). Since \\(Q < K_c\\) there is too little product, so the reaction moves to the right (towards C) until \\(Q = K_c\\)."
           },
           {
             "question": "In the reaction A + B ⇌ C + D, if the concentration of C is increased:",
@@ -32646,28 +32646,28 @@ const subjects = [
             "solution": "Adding product C shifts equilibrium left to consume the added C, producing more A and B."
           },
           {
-            "question": "What does a small equilibrium constant (K << 1) indicate?",
+            "question": "\\(K_{sp}\\) of PbI<sub>2</sub> is \\(4.0 \\times 10^{-9}\\). What is its molar solubility in pure water?",
             "options": [
-              "Reaction goes to completion",
-              "Reaction favours products",
-              "Reaction favours reactants",
-              "Reaction is fast",
-              "Reaction is spontaneous"
+              "6.3 × 10<sup>-5</sup> mol/L",
+              "1.0 × 10<sup>-3</sup> mol/L",
+              "2.0 × 10<sup>-3</sup> mol/L",
+              "1.6 × 10<sup>-3</sup> mol/L",
+              "4.0 × 10<sup>-9</sup> mol/L"
             ],
-            "correct": 2,
-            "solution": "A small K indicates the equilibrium position lies far to the left, favouring reactants."
+            "correct": 1,
+            "solution": "PbI<sub>2</sub> ⇌ Pb<sup>2+</sup> + 2I<sup>-</sup>. If the solubility is \\(s\\), then \\([\\text{Pb}^{2+}] = s\\) and \\([\\text{I}^-] = 2s\\). \\(K_{sp} = s(2s)^2 = 4s^3 = 4.0 \\times 10^{-9}\\), so \\(s^3 = 1.0 \\times 10^{-9}\\) and \\(s = 1.0 \\times 10^{-3}\\) mol/L."
           },
           {
-            "question": "Which of the following is true for a reaction at equilibrium?",
+            "question": "0.50 mol/L of N<sub>2</sub>O<sub>4</sub> is placed in a vessel: N<sub>2</sub>O<sub>4</sub>(g) ⇌ 2NO<sub>2</sub>(g). At equilibrium \\([\\text{NO}_2] = 0.20\\) mol/L. What is \\(K_c\\)?",
             "options": [
-              "ΔG = 0",
-              "ΔG < 0",
-              "ΔG > 0",
-              "ΔH = 0",
-              "ΔS = 0"
+              "0.080",
+              "0.10",
+              "0.40",
+              "0.040",
+              "0.20"
             ],
-            "correct": 0,
-            "solution": "At equilibrium, ΔG = 0 (no net driving force for the reaction in either direction)."
+            "correct": 1,
+            "solution": "NO<sub>2</sub> formed is 0.20 mol/L, which uses 0.10 mol/L of N<sub>2</sub>O<sub>4</sub>. So \\([\\text{N}_2\\text{O}_4] = 0.50 - 0.10 = 0.40\\) mol/L. \\(K_c = [\\text{NO}_2]^2/[\\text{N}_2\\text{O}_4] = 0.04/0.40 = 0.10\\)."
           },
           {
             "question": "In the reaction 2NO₂(g) ⇌ N₂O₄(g), what effect does increasing volume have?",
@@ -32706,16 +32706,16 @@ const subjects = [
             "solution": "Both temperature (affects rate constant) and catalyst (lowers activation energy) affect how quickly equilibrium is reached."
           },
           {
-            "question": "In an endothermic reaction, increasing temperature:",
+            "question": "2SO<sub>2</sub>(g) + O<sub>2</sub>(g) ⇌ 2SO<sub>3</sub>(g), \\(\\Delta H\\) is negative. Which set of changes would <b>all</b> increase the equilibrium yield of SO<sub>3</sub>?",
             "options": [
-              "Decreases Kc",
-              "Increases Kc",
-              "Does not change Kc",
-              "Makes reaction exothermic",
-              "Decreases rate"
+              "Raise the pressure, raise the temperature, add a catalyst",
+              "Lower the pressure, lower the temperature, remove O<sub>2</sub>",
+              "Raise the pressure, lower the temperature, add O<sub>2</sub>",
+              "Raise the temperature, add O<sub>2</sub>, add a catalyst",
+              "Lower the pressure, raise the temperature, remove SO<sub>3</sub>"
             ],
-            "correct": 1,
-            "solution": "For endothermic reactions (ΔH > 0), increasing temperature favours the forward reaction, increasing Kc."
+            "correct": 2,
+            "solution": "Fewer moles of gas on the right (2 against 3), so higher pressure favours SO<sub>3</sub>. The reaction is exothermic, so a lower temperature favours it. Extra O<sub>2</sub> shifts the equilibrium to the right. A catalyst only speeds up the approach to equilibrium."
           },
           {
             "question": "For the exothermic Haber process reaction: N₂(g) + 3H₂(g) ⇌ 2NH₃(g) (ΔH = -92 kJ/mol), which of the following changes will shift the equilibrium position toward the right (producing more NH₃)?",
@@ -33000,28 +33000,28 @@ const subjects = [
             "solution": "2-butene can exhibit cis-trans isomerism because each carbon of the double bond has two different substituents."
           },
           {
-            "question": "What are enantiomers?",
+            "question": "How many alkenes with the formula C<sub>4</sub>H<sub>8</sub> exist, counting each geometric (cis/trans) isomer separately and excluding rings?",
             "options": [
-              "Structural isomers",
-              "Geometric isomers",
-              "Non-superimposable mirror images",
-              "Conformational isomers",
-              "Identical molecules"
+              "4",
+              "2",
+              "3",
+              "5",
+              "6"
             ],
-            "correct": 2,
-            "solution": "Enantiomers are stereoisomers that are non-superimposable mirror images of each other."
+            "correct": 0,
+            "solution": "But-1-ene, cis-but-2-ene, trans-but-2-ene and 2-methylpropene. But-1-ene and 2-methylpropene have two identical groups on one carbon of the double bond, so they have no cis/trans forms."
           },
           {
-            "question": "Which of the following is chiral?",
+            "question": "How many structural isomers does hexane, C<sub>6</sub>H<sub>14</sub>, have (counting hexane itself)?",
             "options": [
-              "CH₂Cl₂",
-              "CH₃CH₂OH",
-              "CH₃CHClCH₃",
-              "CH₃CH₂CH₂CH₃",
-              "CH₄"
+              "3",
+              "5",
+              "4",
+              "6",
+              "9"
             ],
-            "correct": 2,
-            "solution": "2-chloropropane (CH₃CHClCH₃) has a chiral carbon (attached to four different groups)."
+            "correct": 1,
+            "solution": "Hexane, 2-methylpentane, 3-methylpentane, 2,2-dimethylbutane and 2,3-dimethylbutane. (C<sub>4</sub>H<sub>10</sub> has 2 and C<sub>5</sub>H<sub>12</sub> has 3.)"
           },
           {
             "question": "What is the relationship between R and S configurations?",
@@ -33036,28 +33036,28 @@ const subjects = [
             "solution": "R and S refer to the absolute configuration of a chiral center. Enantiomers have opposite configurations."
           },
           {
-            "question": "Which of the following is NOT a type of stereoisomerism?",
+            "question": "Open-chain glucose, CH<sub>2</sub>OH–(CHOH)<sub>4</sub>–CHO, has four chiral carbon atoms. How many stereoisomers are possible?",
             "options": [
-              "Enantiomerism",
-              "Diastereomerism",
-              "Geometric isomerism",
-              "Chain isomerism",
-              "Optical isomerism"
+              "16",
+              "4",
+              "8",
+              "12",
+              "32"
             ],
-            "correct": 3,
-            "solution": "Chain isomerism is a type of structural isomerism, not stereoisomerism."
+            "correct": 0,
+            "solution": "There is no internal symmetry, so there are \\(2^4 = 16\\) stereoisomers (8 pairs of enantiomers). D-glucose is only one of them."
           },
           {
-            "question": "What is a meso compound?",
+            "question": "A pure enantiomer rotates plane-polarised light by +20°. A mixture contains 75% of this enantiomer and 25% of its mirror image. What is the observed rotation?",
             "options": [
-              "A chiral compound",
-              "An achiral compound with chiral centers",
-              "A compound with no chiral centers",
-              "A racemic mixture",
-              "An optically active compound"
+              "+20°",
+              "+15°",
+              "0°",
+              "+10°",
+              "+5°"
             ],
-            "correct": 1,
-            "solution": "A meso compound has chiral centers but is achiral overall due to an internal plane of symmetry."
+            "correct": 3,
+            "solution": "Each enantiomer rotates by the same amount in opposite directions. The 25% of the (−) form cancels 25% of the (+) form, leaving an excess of \\(75 - 25 = 50\\%\\) of (+): \\(0.50 \\times 20° = +10°\\). A 50 : 50 mixture (racemic) would give 0°."
           },
           {
             "question": "Which of the following can rotate plane-polarised light?",
@@ -33072,16 +33072,16 @@ const subjects = [
             "solution": "Only enantiomerically pure (optically active) compounds rotate plane-polarised light."
           },
           {
-            "question": "What is a racemic mixture?",
+            "question": "Which pair are <b>functional group isomers</b>?",
             "options": [
-              "Pure enantiomer",
-              "Equal mixture of enantiomers",
-              "Mixture of diastereomers",
-              "Mixture of structural isomers",
-              "Optically pure compound"
+              "Butane and 2-methylpropane",
+              "Propan-1-ol and propan-2-ol",
+              "cis-but-2-ene and trans-but-2-ene",
+              "Pentane and cyclopentane",
+              "Propanal and propanone"
             ],
-            "correct": 1,
-            "solution": "A racemic mixture contains equal amounts of both enantiomers and is optically inactive."
+            "correct": 4,
+            "solution": "Propanal (aldehyde) and propanone (ketone) are both C<sub>3</sub>H<sub>6</sub>O but have different functional groups. Butane/2-methylpropane are chain isomers, the propanols are position isomers, the butenes are geometric isomers, and pentane/cyclopentane have different formulas."
           },
           {
             "question": "Which of the following has the highest number of structural isomers?",
@@ -33108,16 +33108,16 @@ const subjects = [
             "solution": "The CIP system is used to assign absolute configuration (R or S) to chiral centers based on atomic number priorities."
           },
           {
-            "question": "Which of the following is a diastereomer?",
+            "question": "How many structural isomers have the formula C<sub>3</sub>H<sub>6</sub>Cl<sub>2</sub>?",
             "options": [
-              "Mirror image isomer",
-              "Non-mirror image stereoisomer",
-              "Structural isomer",
-              "Conformational isomer",
-              "Identical molecule"
+              "2",
+              "4",
+              "3",
+              "5",
+              "6"
             ],
             "correct": 1,
-            "solution": "Diastereomers are stereoisomers that are not mirror images of each other."
+            "solution": "Put two Cl on propane: 1,1-dichloropropane, 1,2-dichloropropane, 1,3-dichloropropane and 2,2-dichloropropane. That is 4."
           },
           {
             "question": "What is optical activity?",
@@ -33168,16 +33168,16 @@ const subjects = [
             "solution": "A chiral center (carbon bonded to four different groups) is necessary for a molecule to be chiral."
           },
           {
-            "question": "What is the specific rotation?",
+            "question": "How many stereoisomers does 2,3-dibromobutane, CH<sub>3</sub>CHBrCHBrCH<sub>3</sub>, have?",
             "options": [
-              "The rotation angle",
-              "Rotation angle per unit concentration and path length",
-              "The wavelength of light",
-              "The temperature",
-              "The solvent used"
+              "2",
+              "4",
+              "3",
+              "1",
+              "6"
             ],
-            "correct": 1,
-            "solution": "Specific rotation [α] = observed rotation / (concentration × path length)."
+            "correct": 2,
+            "solution": "There are two chiral carbons, which would suggest \\(2^2 = 4\\). But the molecule is symmetrical, so one of the isomers is a <b>meso</b> compound (internal mirror plane, optically inactive). The stereoisomers are one pair of enantiomers and the meso form: 3."
           },
           {
             "question": "Which of the following pairs are enantiomers?",
@@ -33984,28 +33984,28 @@ const subjects = [
         "name": "Functional Groups (Alcohols, Ethers, Aldehydes, Ketones, Carboxylic Acids, Esters, Amines)",
         "questions": [
           {
-            "question": "Which functional group is present in CH₃CH₂OH?",
+            "question": "Which functional groups are present in CH<sub>3</sub>CH(OH)CH<sub>2</sub>COOCH<sub>3</sub>?",
             "options": [
-              "Aldehyde",
-              "Ketone",
-              "Alcohol",
-              "Carboxylic acid",
-              "Ester"
+              "A primary alcohol and a carboxylic acid",
+              "A secondary alcohol and a carboxylic acid",
+              "A ketone and an ester",
+              "A tertiary alcohol and an ester",
+              "A secondary alcohol and an ester"
             ],
-            "correct": 2,
-            "solution": "CH₃CH₂OH (ethanol) contains the -OH hydroxyl group, characteristic of alcohols."
+            "correct": 4,
+            "solution": "CH(OH) is attached to two carbons, so it is a secondary alcohol. –COO–CH<sub>3</sub> is an ester (the acid part is joined to a methyl group). There is no free –COOH."
           },
           {
-            "question": "What is the IUPAC name for CH₃CHO?",
+            "question": "Glycine (H<sub>2</sub>NCH<sub>2</sub>COOH) has \\(M = 75\\) g/mol. What is the molar mass of the tripeptide Gly-Gly-Gly?",
             "options": [
-              "Methanol",
-              "Ethanol",
-              "Ethanal",
-              "Propanal",
-              "Acetone"
+              "225 g/mol",
+              "207 g/mol",
+              "189 g/mol",
+              "171 g/mol",
+              "150 g/mol"
             ],
             "correct": 2,
-            "solution": "CH₃CHO is ethanal (acetaldehyde), an aldehyde with the -CHO group at the end of a 2-carbon chain."
+            "solution": "Each peptide bond forms by loss of one water molecule (18 g/mol). Three amino acids make two bonds: \\(3 \\times 75 - 2 \\times 18 = 225 - 36 = 189\\) g/mol."
           },
           {
             "question": "Which of the following is a secondary alcohol?",
@@ -34032,16 +34032,16 @@ const subjects = [
             "solution": "Strong oxidation of ethanol with acidified potassium dichromate produces ethanoic acid (carboxylic acid)."
           },
           {
-            "question": "Which of the following is an ether?",
+            "question": "Butan-2-ol is heated under reflux with an excess of acidified potassium dichromate. What is the organic product?",
             "options": [
-              "CH₃OH",
-              "CH₃OCH₃",
-              "CH₃CHO",
-              "CH₃COOH",
-              "CH₃COOCH₃"
+              "Butanal",
+              "Butanone",
+              "Butanoic acid",
+              "Butane",
+              "No reaction"
             ],
             "correct": 1,
-            "solution": "CH₃OCH₃ (dimethyl ether) contains the -O- ether linkage between two alkyl groups."
+            "solution": "Butan-2-ol is a <b>secondary</b> alcohol. Oxidation gives a ketone (butanone), and there is no further oxidation because the carbonyl carbon has no H to lose. A primary alcohol would go on to an acid, and a tertiary alcohol would not react."
           },
           {
             "question": "What is the IUPAC name for CH₃COCH₃?",
@@ -34080,16 +34080,16 @@ const subjects = [
             "solution": "This is an esterification reaction. Ethanoic acid + ethanol → ethyl ethanoate + water."
           },
           {
-            "question": "Which of the following is a primary amine?",
+            "question": "Which are the products of the hydrolysis of CH<sub>3</sub>CH<sub>2</sub>COOCH<sub>2</sub>CH<sub>2</sub>CH<sub>3</sub>?",
             "options": [
-              "(CH₃)₃N",
-              "CH₃NHCH₃",
-              "CH₃NH₂",
-              "NH₄⁺",
-              "Aniline"
+              "Propanoic acid and propan-1-ol",
+              "Ethanoic acid and butan-1-ol",
+              "Propanoic acid and propan-2-ol",
+              "Butanoic acid and ethanol",
+              "Propanal and propan-1-ol"
             ],
-            "correct": 2,
-            "solution": "CH₃NH₂ (methylamine) is a primary amine with one alkyl group attached to nitrogen."
+            "correct": 0,
+            "solution": "The part from the acid is CH<sub>3</sub>CH<sub>2</sub>CO– (3 carbons: propanoic acid). The part from the alcohol is –OCH<sub>2</sub>CH<sub>2</sub>CH<sub>3</sub> (propan-1-ol). The ester is called propyl propanoate."
           },
           {
             "question": "What is the characteristic reaction of carboxylic acids?",
@@ -34152,16 +34152,16 @@ const subjects = [
             "solution": "Aldehydes and ketones react with 2,4-DNPH to form orange 2,4-dinitrophenylhydrazone precipitates."
           },
           {
-            "question": "Which of the following is a tertiary amine?",
+            "question": "2.9 g of propanal (\\(M = 58\\)) are warmed with an excess of Tollens' reagent. The aldehyde is oxidised and silver ions are reduced: RCHO + 2Ag<sup>+</sup> → RCOOH + 2Ag. What mass of silver (\\(A_r = 108\\)) forms?",
             "options": [
-              "CH₃NH₂",
-              "CH₃NHCH₃",
-              "(CH₃)₃N",
-              "NH₃",
-              "Aniline"
+              "5.4 g",
+              "10.8 g",
+              "21.6 g",
+              "2.9 g",
+              "1.08 g"
             ],
-            "correct": 2,
-            "solution": "(CH₃)₃N (trimethylamine) is a tertiary amine with three alkyl groups attached to nitrogen."
+            "correct": 1,
+            "solution": "\\(n(\\text{propanal}) = 2.9/58 = 0.050\\) mol. The ratio aldehyde : Ag is 1 : 2, so \\(n(\\text{Ag}) = 0.10\\) mol. Mass \\(= 0.10 \\times 108 = 10.8\\) g."
           },
           {
             "question": "What is the characteristic test for aldehydes?",
@@ -34554,28 +34554,28 @@ const subjects = [
             "solution": "Alkanes have the general formula CₙH₂ₙ₊₂, indicating they are saturated hydrocarbons with only single bonds."
           },
           {
-            "question": "Which of the following is an alkene?",
+            "question": "1.6 g of methane (\\(M = 16\\)) react with excess chlorine until all hydrogen atoms are replaced: CH<sub>4</sub> + 4Cl<sub>2</sub> → CCl<sub>4</sub> + 4HCl. What mass of HCl (\\(M = 36.5\\)) forms?",
             "options": [
-              "C₂H₆",
-              "C₃H₆",
-              "C₄H₁₀",
-              "C₅H₁₂",
-              "C₆H₁₄"
+              "3.65 g",
+              "36.5 g",
+              "58.4 g",
+              "14.6 g",
+              "7.3 g"
             ],
-            "correct": 1,
-            "solution": "C₃H₆ (propene) follows the alkene formula CₙH₂ₙ, containing a carbon-carbon double bond."
+            "correct": 3,
+            "solution": "\\(n(\\text{CH}_4) = 1.6/16 = 0.10\\) mol. The ratio CH<sub>4</sub> : HCl is 1 : 4, so \\(n(\\text{HCl}) = 0.40\\) mol. Mass \\(= 0.40 \\times 36.5 = 14.6\\) g."
           },
           {
-            "question": "What is the product when ethene undergoes complete combustion?",
+            "question": "Cracking of dodecane: C<sub>12</sub>H<sub>26</sub> → C<sub>8</sub>H<sub>18</sub> + 2C<sub>2</sub>H<sub>4</sub>. What mass of ethene (\\(M = 28\\)) forms from 1.7 g of dodecane (\\(M = 170\\))?",
             "options": [
-              "CO + H₂O",
-              "CO₂ + H₂O",
-              "C + H₂O",
-              "CH₄ + O₂",
-              "C₂H₄O"
+              "0.28 g",
+              "0.56 g",
+              "1.12 g",
+              "0.020 g",
+              "5.6 g"
             ],
             "correct": 1,
-            "solution": "Complete combustion of ethene: C₂H₄ + 3O₂ → 2CO₂ + 2H₂O."
+            "solution": "\\(n(\\text{C}_{12}\\text{H}_{26}) = 1.7/170 = 0.010\\) mol. The ratio is 1 : 2, so \\(n(\\text{C}_2\\text{H}_4) = 0.020\\) mol. Mass \\(= 0.020 \\times 28 = 0.56\\) g."
           },
           {
             "question": "Which of the following is an aromatic hydrocarbon?",
@@ -34590,28 +34590,28 @@ const subjects = [
             "solution": "Benzene (C₆H₆) is aromatic with a planar ring structure and delocalised π electrons."
           },
           {
-            "question": "What type of reaction converts an alkene to an alkane?",
+            "question": "7.8 g of benzene (\\(M = 78\\)) are nitrated: C<sub>6</sub>H<sub>6</sub> + HNO<sub>3</sub> → C<sub>6</sub>H<sub>5</sub>NO<sub>2</sub> + H<sub>2</sub>O. The yield is 60%. What mass of nitrobenzene (\\(M = 123\\)) is obtained?",
             "options": [
-              "Elimination",
-              "Addition (hydrogenation)",
-              "Substitution",
-              "Oxidation",
-              "Polymerisation"
+              "7.4 g",
+              "12.3 g",
+              "4.7 g",
+              "20.5 g",
+              "0.74 g"
             ],
-            "correct": 1,
-            "solution": "Hydrogenation (addition of H₂) converts an alkene to an alkane."
+            "correct": 0,
+            "solution": "\\(n(\\text{benzene}) = 7.8/78 = 0.10\\) mol. Theoretical mass \\(= 0.10 \\times 123 = 12.3\\) g. At 60%: \\(12.3 \\times 0.60 = 7.4\\) g."
           },
           {
-            "question": "What is the IUPAC name for CH₃C≡CH?",
+            "question": "10 cm<sup>3</sup> of propane are mixed with 60 cm<sup>3</sup> of oxygen and ignited. The mixture is cooled to room temperature (water is a liquid). What volume of gas remains? All volumes are measured at the same temperature and pressure.",
             "options": [
-              "Propene",
-              "Propane",
-              "Propyne",
-              "Propadiene",
-              "Methylacetylene"
+              "30 cm<sup>3</sup>",
+              "40 cm<sup>3</sup>",
+              "70 cm<sup>3</sup>",
+              "50 cm<sup>3</sup>",
+              "10 cm<sup>3</sup>"
             ],
-            "correct": 2,
-            "solution": "CH₃C≡CH is propyne, an alkyne with a triple bond between carbons 1 and 2."
+            "correct": 1,
+            "solution": "C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub> → 3CO<sub>2</sub> + 4H<sub>2</sub>O(l). 10 cm<sup>3</sup> of propane use 50 cm<sup>3</sup> of O<sub>2</sub> and give 30 cm<sup>3</sup> of CO<sub>2</sub>. Oxygen left: \\(60 - 50 = 10\\) cm<sup>3</sup>. Gas remaining: \\(30 + 10 = 40\\) cm<sup>3</sup>."
           },
           {
             "question": "Which of the following has the highest boiling point?",
@@ -34626,16 +34626,16 @@ const subjects = [
             "solution": "Pentane has the highest molecular weight and largest surface area for London dispersion forces."
           },
           {
-            "question": "What is the product when benzene undergoes nitration?",
+            "question": "What is the IUPAC name of CH<sub>3</sub>CH=C(CH<sub>3</sub>)CH<sub>2</sub>CH<sub>3</sub>?",
             "options": [
-              "Nitrobenzene",
-              "Aniline",
-              "Benzoic acid",
-              "Phenol",
-              "Toluene"
+              "3-Methylpent-3-ene",
+              "2-Ethylbut-2-ene",
+              "3-Ethylbut-2-ene",
+              "3-Methylpent-2-ene",
+              "2-Methylpent-3-ene"
             ],
-            "correct": 0,
-            "solution": "Nitration of benzene with HNO₃/H₂SO₄ produces nitrobenzene (C₆H₅NO₂)."
+            "correct": 3,
+            "solution": "The longest chain containing the C=C has 5 carbons. Number from the end that gives the double bond the lowest number: C=C starts at C2. The methyl group is on C3: 3-methylpent-2-ene. (Numbering from the other end would put the double bond at 3.)"
           },
           {
             "question": "Which of the following is a characteristic of aromatic compounds?",
@@ -34662,28 +34662,28 @@ const subjects = [
             "solution": "According to Markovnikov's rule, HBr adds to propene to give 2-bromopropane."
           },
           {
-            "question": "Which of the following is an isomer of butane?",
+            "question": "What is the <b>major</b> product when but-1-ene reacts with hydrogen bromide?",
             "options": [
-              "Pentane",
-              "Propane",
-              "2-methylpropane",
-              "Cyclobutane",
-              "Butene"
+              "1-Bromobutane",
+              "1,2-Dibromobutane",
+              "2-Bromobutane",
+              "2-Bromo-2-methylpropane",
+              "2-Bromobut-1-ene"
             ],
             "correct": 2,
-            "solution": "2-methylpropane (isobutane) is a structural isomer of butane (both C₄H₁₀)."
+            "solution": "Markovnikov's rule: the H adds to the carbon of the double bond that already has more H atoms (C1), and the Br goes to C2, because the more substituted carbocation is more stable. The product is CH<sub>3</sub>CHBrCH<sub>2</sub>CH<sub>3</sub>."
           },
           {
-            "question": "What is the hybridisation of carbon in ethyne?",
+            "question": "The enthalpy of hydrogenation of cyclohexene is −120 kJ/mol and that of benzene is −208 kJ/mol. How much more stable is benzene than a hypothetical cyclohexa-1,3,5-triene with three separate C=C bonds?",
             "options": [
-              "sp",
-              "sp²",
-              "sp³",
-              "sp³d",
-              "sp³d²"
+              "88 kJ/mol",
+              "120 kJ/mol",
+              "328 kJ/mol",
+              "360 kJ/mol",
+              "152 kJ/mol"
             ],
-            "correct": 0,
-            "solution": "In ethyne (C₂H₂), each carbon is sp hybridised, forming two sigma bonds and two pi bonds."
+            "correct": 4,
+            "solution": "Three isolated double bonds would release \\(3 \\times (-120) = -360\\) kJ/mol on hydrogenation. Benzene releases only \\(-208\\) kJ/mol, so it starts \\(360 - 208 = 152\\) kJ/mol lower in energy. This is the stabilisation from delocalised electrons."
           },
           {
             "question": "Which of the following undergoes electrophilic aromatic substitution?",
@@ -34722,16 +34722,16 @@ const subjects = [
             "solution": "Tertiary carbocations are most stable due to hyperconjugation and inductive effects from three alkyl groups."
           },
           {
-            "question": "What is the IUPAC name for CH₃CH₂CH=CHCH₃?",
+            "question": "0.10 mol of ethyne, C<sub>2</sub>H<sub>2</sub>, reacts with an excess of bromine. What is the mass of the product? (\\(A_r\\): C 12, H 1, Br 80)",
             "options": [
-              "2-pentene",
-              "3-pentene",
-              "Pent-2-ene",
-              "Pent-3-ene",
-              "2-pentene (both A and C)"
+              "34.6 g",
+              "18.8 g",
+              "16.0 g",
+              "17.3 g",
+              "69.2 g"
             ],
-            "correct": 2,
-            "solution": "The double bond is between carbons 2 and 3. IUPAC name: pent-2-ene."
+            "correct": 0,
+            "solution": "Two Br<sub>2</sub> add across the triple bond: C<sub>2</sub>H<sub>2</sub> + 2Br<sub>2</sub> → CHBr<sub>2</sub>CHBr<sub>2</sub>. \\(M = 24 + 2 + 4 \\times 80 = 346\\) g/mol. Mass \\(= 0.10 \\times 346 = 34.6\\) g. (18.8 g would be the mass of 1,2-dibromoethane, from only one Br<sub>2</sub>.)"
           },
           {
             "question": "Which of the following is a product of petroleum cracking?",
@@ -35088,16 +35088,16 @@ const subjects = [
             "solution": "NaNO₃ is sodium nitrate. The oxidation state of nitrogen is +5, so it can also be called sodium nitrate(V)."
           },
           {
-            "question": "What is the oxidation state of sulfur in H₂SO₄?",
+            "question": "How many of these four mixtures give a <b>precipitate</b>? KNO<sub>3</sub> + NaCl; AgNO<sub>3</sub> + KCl; BaCl<sub>2</sub> + Na<sub>2</sub>SO<sub>4</sub>; Na<sub>2</sub>CO<sub>3</sub> + CaCl<sub>2</sub>",
             "options": [
-              "+2",
-              "+4",
-              "+6",
-              "-2",
-              "0"
+              "1",
+              "2",
+              "4",
+              "0",
+              "3"
             ],
-            "correct": 2,
-            "solution": "H is +1 (×2 = +2), O is -2 (×4 = -8). For neutrality: +2 + S - 8 = 0 → S = +6."
+            "correct": 4,
+            "solution": "AgCl, BaSO<sub>4</sub> and CaCO<sub>3</sub> are insoluble. In the first mixture all possible products (KCl, NaNO<sub>3</sub>) are soluble, so nothing forms."
           },
           {
             "question": "What is the correct name for K₂Cr₂O₇?",
@@ -35124,16 +35124,16 @@ const subjects = [
             "solution": "Ammonium sulfate is (NH₄)₂SO₄, with two ammonium ions balancing the -2 charge of sulfate."
           },
           {
-            "question": "What is the correct name for CaCO₃?",
+            "question": "6.2 g of sodium oxide (\\(M = 62\\) g/mol) are added to water and the solution is made up to 500 cm<sup>3</sup>. What is the concentration of hydroxide ions?",
             "options": [
-              "Calcium carbonate",
-              "Calcium carbon trioxide",
-              "Calcium(II) carbonate",
-              "Calcium monocarbonate",
-              "Both A and C"
+              "0.40 mol/L",
+              "0.10 mol/L",
+              "0.20 mol/L",
+              "0.80 mol/L",
+              "0.0040 mol/L"
             ],
-            "correct": 4,
-            "solution": "CaCO₃ is calcium carbonate or calcium(II) carbonate."
+            "correct": 0,
+            "solution": "Na<sub>2</sub>O + H<sub>2</sub>O → 2NaOH. \\(n(\\text{Na}_2\\text{O}) = 6.2/62 = 0.10\\) mol, which gives 0.20 mol of NaOH, i.e. 0.20 mol of OH<sup>-</sup>. In 0.500 L: \\(0.20/0.500 = 0.40\\) mol/L."
           },
           {
             "question": "Which of the following is the correct formula for magnesium hydroxide?",
@@ -35148,16 +35148,16 @@ const subjects = [
             "solution": "Magnesium hydroxide is Mg(OH)₂, with Mg²⁺ and two OH⁻ ions."
           },
           {
-            "question": "What is the oxidation state of manganese in KMnO₄?",
+            "question": "25.0 cm<sup>3</sup> of 0.100 mol/L sulfuric acid are neutralised by solid sodium hydroxide. What mass of NaOH is needed? (\\(M = 40\\) g/mol)",
             "options": [
-              "+2",
-              "+4",
-              "+6",
-              "+7",
-              "-1"
+              "0.10 g",
+              "0.40 g",
+              "0.20 g",
+              "2.0 g",
+              "0.050 g"
             ],
-            "correct": 3,
-            "solution": "K is +1, O is -2 (×4 = -8). For neutrality: +1 + Mn - 8 = 0 → Mn = +7."
+            "correct": 2,
+            "solution": "H<sub>2</sub>SO<sub>4</sub> + 2NaOH → Na<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O. \\(n(\\text{H}_2\\text{SO}_4) = 0.0250 \\times 0.100 = 2.50 \\times 10^{-3}\\) mol. \\(n(\\text{NaOH}) = 5.00 \\times 10^{-3}\\) mol. Mass \\(= 5.00 \\times 10^{-3} \\times 40 = 0.20\\) g."
           },
           {
             "question": "What is the correct name for NaClO?",
@@ -35184,16 +35184,16 @@ const subjects = [
             "solution": "Aluminium oxide is Al₂O₃, with Al³⁺ and O²⁻ ions (2 × +3 + 3 × -2 = 0)."
           },
           {
-            "question": "What is the correct name for FeSO₄?",
+            "question": "Which pair of reactants <b>cannot</b> be used to prepare zinc sulfate?",
             "options": [
-              "Iron(II) sulfate",
-              "Iron(III) sulfate",
-              "Iron sulfate",
-              "Ferrous sulfate",
-              "Both A and D"
+              "Zinc and sodium sulfate solution",
+              "Zinc and dilute sulfuric acid",
+              "Zinc oxide and dilute sulfuric acid",
+              "Zinc carbonate and dilute sulfuric acid",
+              "Zinc hydroxide and dilute sulfuric acid"
             ],
-            "correct": 4,
-            "solution": "FeSO₄ is iron(II) sulfate or ferrous sulfate, with Fe in the +2 oxidation state."
+            "correct": 0,
+            "solution": "Zinc is less reactive than sodium, so it cannot displace it from its salt. The other four are an acid reacting with a metal, a base, a carbonate and a hydroxide, and each gives ZnSO<sub>4</sub>."
           },
           {
             "question": "Which of the following is the formula for sodium phosphate?",
@@ -35208,16 +35208,16 @@ const subjects = [
             "solution": "Sodium phosphate is Na₃PO₄, with three Na⁺ ions balancing the -3 charge of phosphate (PO₄³⁻)."
           },
           {
-            "question": "What is the oxidation state of nitrogen in NH₃?",
+            "question": "What are the oxidation numbers of the two nitrogen atoms in ammonium nitrate, NH<sub>4</sub>NO<sub>3</sub>?",
             "options": [
-              "-3",
-              "-1",
-              "0",
-              "+1",
-              "+3"
+              "+1 and +1",
+              "-3 and +5",
+              "-3 and +3",
+              "+3 and +5",
+              "-5 and +3"
             ],
-            "correct": 0,
-            "solution": "H is +1 (×3 = +3). For neutrality: N + 3 = 0 → N = -3."
+            "correct": 1,
+            "solution": "The compound contains NH<sub>4</sub><sup>+</sup> and NO<sub>3</sub><sup>-</sup>. In NH<sub>4</sub><sup>+</sup>: \\(x + 4(+1) = +1\\), so \\(x = -3\\). In NO<sub>3</sub><sup>-</sup>: \\(x + 3(-2) = -1\\), so \\(x = +5\\)."
           },
           {
             "question": "What is the correct name for Pb(NO₃)₂?",
@@ -35232,16 +35232,16 @@ const subjects = [
             "solution": "Pb(NO₃)₂ is lead(II) nitrate or lead nitrate, with Pb in the +2 oxidation state."
           },
           {
-            "question": "Which of the following is the formula for zinc chloride?",
+            "question": "How many atoms are there in one formula unit of iron(III) sulfate?",
             "options": [
-              "ZnCl",
-              "ZnCl₂",
-              "Zn₂Cl",
-              "ZnCl₃",
-              "Zn₂Cl₂"
+              "9",
+              "11",
+              "14",
+              "17",
+              "20"
             ],
-            "correct": 1,
-            "solution": "Zinc chloride is ZnCl₂, with Zn²⁺ and two Cl⁻ ions."
+            "correct": 3,
+            "solution": "Iron(III) is Fe<sup>3+</sup> and sulfate is SO<sub>4</sub><sup>2-</sup>, so the formula is Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>. Atoms: \\(2 + 3 \\times (1 + 4) = 17\\)."
           },
           {
             "question": "What is the correct name for KClO₃?",
@@ -35256,28 +35256,28 @@ const subjects = [
             "solution": "KClO₃ is potassium chlorate, containing the chlorate ion (ClO₃⁻) with Cl in +5 oxidation state."
           },
           {
-            "question": "What is the oxidation state of chromium in Cr₂O₇²⁻?",
+            "question": "Which row gives the correct name and the oxidation number of chlorine for HClO<sub>4</sub>?",
             "options": [
-              "+2",
-              "+4",
-              "+6",
-              "+7",
-              "-2"
-            ],
-            "correct": 2,
-            "solution": "O is -2 (×7 = -14). Overall charge = -2. 2Cr - 14 = -2 → 2Cr = +12 → Cr = +6."
-          },
-          {
-            "question": "Which of the following is the formula for calcium nitrate?",
-            "options": [
-              "CaNO₃",
-              "Ca(NO₃)₂",
-              "Ca₂(NO₃)₂",
-              "Ca(NO₃)₃",
-              "Ca₂NO₃"
+              "Chloric acid, +5",
+              "Perchloric acid, +7",
+              "Perchloric acid, +5",
+              "Chlorous acid, +3",
+              "Hypochlorous acid, +1"
             ],
             "correct": 1,
-            "solution": "Calcium nitrate is Ca(NO₃)₂, with Ca²⁺ and two NO₃⁻ ions."
+            "solution": "Hydrogen is +1 and oxygen is −2: \\(+1 + x + 4(-2) = 0\\), so \\(x = +7\\). The acid with the most oxygen atoms in the series HClO, HClO<sub>2</sub>, HClO<sub>3</sub>, HClO<sub>4</sub> is called perchloric acid."
+          },
+          {
+            "question": "How many of these oxides give an <b>acidic</b> solution with water: Na<sub>2</sub>O, SO<sub>3</sub>, CO<sub>2</sub>, MgO, P<sub>4</sub>O<sub>10</sub>, CaO?",
+            "options": [
+              "2",
+              "4",
+              "5",
+              "3",
+              "1"
+            ],
+            "correct": 3,
+            "solution": "The non-metal oxides SO<sub>3</sub>, CO<sub>2</sub> and P<sub>4</sub>O<sub>10</sub> form acids (H<sub>2</sub>SO<sub>4</sub>, H<sub>2</sub>CO<sub>3</sub>, H<sub>3</sub>PO<sub>4</sub>). The metal oxides Na<sub>2</sub>O, MgO and CaO form basic hydroxides."
           },
           {
             "question": "What is the correct name for Na₂SO₃?",
@@ -35703,16 +35703,16 @@ const subjects = [
             "solution": "On a frictionless incline, a = g sin θ = 10 × sin 30° = 10 × 0.5 = 5.0 m/s². Mass cancels out."
           },
           {
-            "question": "An object moves in a circle of radius 2 m with a constant speed of 6 m/s. What is the magnitude of the centripetal acceleration?",
+            "question": "A train speeds up uniformly from rest to 12 m/s in 4.0 s, keeps 12 m/s for 6.0 s, then brakes uniformly to rest in 3.0 s. What is its average speed for the whole journey?",
             "options": [
-              "3 m/s²",
-              "6 m/s²",
-              "12 m/s²",
-              "18 m/s²",
-              "36 m/s²"
+              "6.0 m/s",
+              "11.4 m/s",
+              "8.77 m/s",
+              "12 m/s",
+              "2.92 m/s"
             ],
-            "correct": 3,
-            "solution": "Centripetal acceleration a = v²/r = 6²/2 = 36/2 = 18 m/s²."
+            "correct": 2,
+            "solution": "Area under the \\(v\\)-\\(t\\) graph: \\(\\tfrac{1}{2}(4)(12) + (6)(12) + \\tfrac{1}{2}(3)(12) = 24 + 72 + 18 = 114\\) m. Total time \\(13\\) s, so the average speed is \\(114/13 = 8.8\\) m/s."
           },
           {
             "question": "A 100 W light bulb is left on for 2 hours. How much energy is consumed in kilowatt-hours (kWh)?",
@@ -35811,28 +35811,28 @@ const subjects = [
             "solution": "Component of weight down slope = mg sin θ = 20 × 0.5 = 10 N. Normal reaction = mg cos θ = 20 × 0.866 = 17.3 N. Friction = μN = 0.2 × 17.3 = 3.46 N. Net force = 10 - 3.46 = 6.54 N. a = F/m = 6.54/2 = 3.27 ≈ 3.3 m/s²."
           },
           {
-            "question": "What is the angular velocity of a wheel rotating at 120 rpm?",
+            "question": "Car A moves at a constant 25 m/s. As it passes a point, car B starts from rest there and accelerates at 2.5 m/s<sup>2</sup>. How far from the point does B catch A?",
             "options": [
-              "2π rad/s",
-              "4π rad/s",
-              "6π rad/s",
-              "8π rad/s",
-              "12π rad/s"
+              "250 m",
+              "500 m",
+              "125 m",
+              "1000 m",
+              "312 m"
             ],
             "correct": 1,
-            "solution": "ω = 2πf = 2π × (120/60) = 2π × 2 = 4π rad/s."
+            "solution": "They meet when \\(25t = \\tfrac{1}{2}(2.5)t^2\\), so \\(t = 2 \\times 25/2.5 = 20\\) s. Distance \\(= 25 \\times 20 = 500\\) m."
           },
           {
-            "question": "A 0.5 kg ball is thrown horizontally at 10 m/s from a height of 20 m. How far does it travel horizontally before hitting the ground? (g = 10 m/s²)",
+            "question": "A particle has position \\(x = 4 + 6t - t^2\\) (in metres and seconds). What total distance does it travel in the first 6.0 s?",
             "options": [
-              "10 m",
-              "14 m",
-              "20 m",
-              "28 m",
-              "40 m"
+              "18 m",
+              "0 m",
+              "9 m",
+              "24 m",
+              "36 m"
             ],
-            "correct": 2,
-            "solution": "Time to fall: t = √(2h/g) = √(40/10) = 2 s. Horizontal distance = v × t = 10 × 2 = 20 m."
+            "correct": 0,
+            "solution": "\\(v = 6 - 2t\\), so it stops at \\(t = 3\\) s where \\(x = 13\\) m, having moved 9 m. Then it returns to \\(x = 4\\) m at \\(t = 6\\) s, another 9 m. The distance is 18 m (the displacement is 0)."
           },
           {
             "question": "A 1000 kg car accelerates from 0 to 20 m/s in 5 seconds. What is the average power delivered by the engine?",
@@ -35931,16 +35931,16 @@ const subjects = [
             "solution": "v_e = √(2GM/R) = √(2 × 6.67×10⁻¹¹ × 6×10²⁴/6.4×10⁶) = √(12.5×10⁷) ≈ 11,200 m/s = 11.2 km/s."
           },
           {
-            "question": "What is the angular velocity of a wheel rotating at 300 rpm?",
+            "question": "A driver at 30 m/s sees a hazard. The reaction time is 0.70 s, then the car brakes with a constant deceleration of 6.0 m/s<sup>2</sup>. What is the total stopping distance?",
             "options": [
-              "10π rad/s",
-              "20π rad/s",
-              "30π rad/s",
-              "40π rad/s",
-              "50π rad/s"
+              "75 m",
+              "117 m",
+              "21 m",
+              "96 m",
+              "54 m"
             ],
-            "correct": 0,
-            "solution": "ω = 2πf = 2π × (300/60) = 2π × 5 = 10π rad/s."
+            "correct": 3,
+            "solution": "During the reaction time: \\(30 \\times 0.70 = 21\\) m. Braking: \\(v^2 = u^2 + 2as\\) gives \\(s = 30^2/(2 \\times 6.0) = 75\\) m. Total \\(= 96\\) m."
           },
           {
             "question": "A 2 kg block slides down a 30° incline with coefficient of kinetic friction 0.2. What is the acceleration? (g = 10 m/s²)",
@@ -35967,16 +35967,16 @@ const subjects = [
             "solution": "Using conservation of momentum and kinetic energy for elastic collision: v2f = 2m₁v1i/(m₁+m₂) = 2×0.5×10/1.5 = 10/1.5 = 6.67 m/s ≈ 6.7 m/s."
           },
           {
-            "question": "What is the electric potential at a distance of 0.5 m from a point charge of 2 μC? (k = 9 × 10⁹ Nm²/C²)",
+            "question": "An electron enters a uniform electric field of \\(1.0 \\times 10^{3}\\) N/C at \\(3.0 \\times 10^{7}\\) m/s, perpendicular to the field. The field region is 5.0 cm long. What is the electron's sideways deflection when it leaves?",
             "options": [
-              "1.8 × 10⁴ V",
-              "3.6 × 10⁴ V",
-              "5.4 × 10⁴ V",
-              "7.2 × 10⁴ V",
-              "9.0 × 10⁴ V"
+              "0.244 mm",
+              "0.488 mm",
+              "0.122 mm",
+              "2.93 × 10<sup>8</sup> mm",
+              "0.0244 mm"
             ],
-            "correct": 1,
-            "solution": "V = kQ/r = 9×10⁹ × 2×10⁻⁶/0.5 = 18×10³/0.5 = 36,000 V = 3.6 × 10⁴ V."
+            "correct": 0,
+            "solution": "Time in the field: \\(t = 0.050/3.0 \\times 10^7 = 1.67 \\times 10^{-9}\\) s. Acceleration: \\(a = eE/m = 1.76 \\times 10^{14}\\) m/s<sup>2</sup>. Deflection \\(= \\tfrac{1}{2}at^2 = 2.44 × 10<sup>-4</sup>\\) m \\(= 0.24\\) mm."
           },
           {
             "question": "A 500 W heater operates for 2 hours. How much energy is consumed in kWh?",
@@ -36051,16 +36051,16 @@ const subjects = [
             "solution": "Let the total distance be 2d. Time for the first half: t₁ = d / 40. Time for the second half: t₂ = d / 60. Total time: t = t₁ + t₂ = d(1/40 + 1/60) = d(5/120) = d/24. Average speed = total distance / total time = 2d / (d/24) = 48 km/h (harmonic mean of 40 and 60)."
           },
           {
-            "question": "A train decelerates uniformly from 30 m/s to 10 m/s in 10 s. How far does the train travel during this deceleration period?",
+            "question": "A stone is dropped from the top of an 80 m tower. One second later a second stone is thrown straight down so that both hit the ground together (\\(g = 9.8\\) m/s<sup>2</sup>). What is the initial speed of the second stone?",
             "options": [
-              "200 m",
-              "150 m",
-              "300 m",
-              "100 m",
-              "250 m"
+              "9.8 m/s",
+              "39.6 m/s",
+              "26.3 m/s",
+              "11.4 m/s",
+              "5.71 m/s"
             ],
-            "correct": 0,
-            "solution": "Use s = ((u + v) / 2) × t. Here u = 30 m/s, v = 10 m/s, and t = 10 s. s = ((30 + 10) / 2) × 10 = 20 × 10 = 200 m."
+            "correct": 3,
+            "solution": "First stone: \\(t = \\sqrt{160/9.8} = 4.04\\) s. The second falls for \\(3.04\\) s: \\(80 = 3.04u + 4.9(3.04)^2\\), so \\(u = (80 - 45.3)/3.04 = 11.4\\) m/s."
           },
           {
             "question": "A ball is thrown horizontally at 15 m/s from the top of a building 20 m high. Neglecting air resistance, what horizontal distance from the base of the building does the ball travel before hitting the ground? (Use g = 10 m/s²)",
@@ -36111,16 +36111,16 @@ const subjects = [
             "solution": "Relative velocity v_{B/A} = v_B - v_A = 110 km/h - 90 km/h = +20 km/h (moving forward relative to Car A)."
           },
           {
-            "question": "An emergency medical helicopter accelerates vertically upward from rest at 2.0 m/s². What is its altitude after 6.0 s?",
+            "question": "A ball is kicked at 25 m/s at \\(40^{\\circ}\\) above the horizontal (\\(g = 9.8\\) m/s<sup>2</sup>). At what height is it when it passes a wall 30 m away, horizontally?",
             "options": [
-              "36 m",
-              "12 m",
-              "72 m",
-              "18 m",
-              "24 m"
+              "25.2 m",
+              "6.57 m",
+              "12.2 m",
+              "0.527 m",
+              "13.1 m"
             ],
-            "correct": 0,
-            "solution": "Starting from rest (u = 0): h = ut + (1/2)at² = 0 + 0.5 × 2.0 m/s² × (6.0 s)² = 1.0 × 36 = 36 m."
+            "correct": 4,
+            "solution": "Time to reach 30 m: \\(t = 30/(25\\cos 40^{\\circ}) = 1.57\\) s. Height \\(y = (25\\sin 40^{\\circ})t - 4.9t^2 = 25.2 - 12 = 13.1\\) m."
           },
           {
             "question": "At what launch angle θ above the horizontal is the range of a projectile maximum over flat terrain, neglecting air resistance?",
@@ -36135,28 +36135,28 @@ const subjects = [
             "solution": "The horizontal range is R = (u² sin 2θ) / g. The maximum value of sin(2θ) is 1, which occurs when 2θ = 90°, meaning θ = 45°."
           },
           {
-            "question": "An object moves in a straight line with initial velocity 4 m/s and constant acceleration -1 m/s². At what time does the object temporarily come to rest?",
+            "question": "A ball rolls off a table 1.25 m high at 2.0 m/s horizontally (\\(g = 9.8\\) m/s<sup>2</sup>). What is its speed just before it hits the floor?",
             "options": [
-              "4 s",
-              "2 s",
-              "8 s",
-              "1 s",
-              "16 s"
+              "2.0 m/s",
+              "5.34 m/s",
+              "4.95 m/s",
+              "6.95 m/s",
+              "4.0 m/s"
             ],
-            "correct": 0,
-            "solution": "Set final velocity v = 0: v = u + at ⇒ 0 = 4 + (-1)t ⇒ t = 4 s."
+            "correct": 1,
+            "solution": "The fall time is \\(\\sqrt{2h/g} = 0.505\\) s, so \\(v_y = gt = 4.95\\) m/s. The horizontal speed is still 2.0 m/s. \\(v = \\sqrt{2.0^2 + 4.95^2} = 5.3\\) m/s."
           },
           {
-            "question": "What is the speed of an object dropped from rest after it has fallen a vertical distance of 45 m? (Use g = 10 m/s²)",
+            "question": "A stone is thrown upward at 15 m/s from the top of a 40 m cliff (\\(g = 9.8\\) m/s<sup>2</sup>). How long does it take to reach the ground at the bottom of the cliff?",
             "options": [
-              "30 m/s",
-              "45 m/s",
-              "15 m/s",
-              "20 m/s",
-              "25 m/s"
+              "4.77 s",
+              "3.06 s",
+              "2.86 s",
+              "6.3 s",
+              "1.71 s"
             ],
             "correct": 0,
-            "solution": "v² = u² + 2gh = 0 + 2(10)(45) = 900 ⇒ v = √900 = 30 m/s."
+            "solution": "Take up as positive: \\(-40 = 15t - 4.9t^2\\), so \\(4.9t^2 - 15t - 40 = 0\\). The positive root is \\(t = \\dfrac{15 + \\sqrt{225 + 784}}{9.8} = 4.77\\) s."
           },
           {
             "question": "A boat crosses a 120 m wide river flowing with a current speed of 3 m/s. The boat heads perpendicular to the current at a speed of 4 m/s relative to the water. How long does the crossing take?",
@@ -36333,16 +36333,16 @@ const subjects = [
             "solution": "F = k|q₁q₂|/r² = 9×10⁹ × (2×10⁻⁶)(4×10⁻⁶)/(0.1)² = 9×10⁹ × 8×10⁻¹²/0.01 = 72×10⁻³/0.01 = 7.2 N. Wait, recalc: 9×10⁹ × 8×10⁻¹² = 72×10⁻³. 72×10⁻³/0.01 = 7.2 N. Actually: (2×10⁻⁶)(4×10⁻⁶) = 8×10⁻¹². 9×10⁹ × 8×10⁻¹² = 72×10⁻³ = 0.072. 0.072/0.01 = 7.2 N. Force is attractive (opposite charges)."
           },
           {
-            "question": "What is the momentum of a 2 kg object moving at 5 m/s?",
+            "question": "A 2.0 kg trolley moving at 6.0 m/s collides <b>elastically</b> and head-on with a stationary 4.0 kg trolley. What is the velocity of the 2.0 kg trolley after the collision?",
             "options": [
-              "2.5 kg m/s",
-              "5 kg m/s",
-              "10 kg m/s",
-              "20 kg m/s",
-              "50 kg m/s"
+              "+2.0 m/s",
+              "0 m/s",
+              "+4.0 m/s",
+              "-2.0 m/s",
+              "-4.0 m/s"
             ],
-            "correct": 2,
-            "solution": "Momentum p = mv = 2 × 5 = 10 kg m/s."
+            "correct": 3,
+            "solution": "\\(v_1 = \\dfrac{m_1 - m_2}{m_1 + m_2}u_1 = \\dfrac{2 - 4}{6}(6.0) = -2.0\\) m/s. The lighter trolley bounces back, while the 4.0 kg trolley moves at \\(+4.0\\) m/s."
           },
           {
             "question": "What is the moment of inertia of a thin rod of mass 2 kg and length 1 m about its centre?",
@@ -36381,40 +36381,40 @@ const subjects = [
             "solution": "Resolving horizontally: T₁cos30=T₂cos60 → T₁/T₂=cos60/cos30=0.5/(√3/2)=1/√3."
           },
           {
-            "question": "An elevator accelerates upward at 2 m/s². What is the apparent weight of a 60 kg person? (g=10)",
+            "question": "A 70 kg person stands on a scale in a lift. The lift accelerates upward from rest and the scale reads 910 N (\\(g = 9.8\\) m/s<sup>2</sup>). What is the speed of the lift after 4.0 s of this acceleration?",
             "options": [
-              "480 N",
-              "600 N",
-              "720 N",
-              "800 N",
-              "900 N"
+              "52 m/s",
+              "91.2 m/s",
+              "12.8 m/s",
+              "3.2 m/s",
+              "6.4 m/s"
             ],
             "correct": 2,
-            "solution": "N=m(g+a)=60×12=720 N."
+            "solution": "\\(N - mg = ma\\), so \\(a = (910 - 686)/70 = 3.2\\) m/s<sup>2</sup>. Then \\(v = at = 3.2 \\times 4.0 = 12.8\\) m/s."
           },
           {
-            "question": "A car rounds a flat curve of radius 50 m at 20 m/s. What minimum coefficient of friction is needed? (g=10)",
+            "question": "A 20 kg sign hangs from two cables attached to a ceiling. One cable makes 40° with the horizontal and the other 30° with the horizontal, on opposite sides. What is the tension in the cable at 40°? (\\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "0.4",
-              "0.6",
-              "0.8",
-              "1.0",
-              "1.2"
+              "160 N",
+              "196 N",
+              "152 N",
+              "181 N",
+              "305 N"
             ],
-            "correct": 2,
-            "solution": "μ=v²/(rg)=400/(50×10)=0.8."
+            "correct": 3,
+            "solution": "Horizontal balance: \\(T_1cos 40^{circ} = T_2cos 30^{circ}\\), so \\(T_2 = 0.885T_1\\). Vertical balance: \\(T_1sin 40^{circ} + T_2sin 30^{circ} = 196\\) N, so \\(T_1(0.643 + 0.442) = 196\\) and \\(T_1 = 181\\) N (and \\(T_2 = 160\\) N)."
           },
           {
-            "question": "A 3 kg object on a 30° incline (μ=0.2) is released. What is its acceleration? (g=10)",
+            "question": "A 2.0 kg block is pulled at <b>constant speed</b> across a rough floor (\\(\\mu_k = 0.25\\), \\(g = 9.8\\) m/s<sup>2</sup>) by a horizontal spring of constant 200 N/m. How far is the spring stretched?",
             "options": [
-              "2.3",
-              "3.3",
-              "4.3",
-              "5.0",
-              "6.7"
+              "10.2 cm",
+              "9.8 cm",
+              "4.9 cm",
+              "40.8 cm",
+              "2.45 cm"
             ],
-            "correct": 1,
-            "solution": "a=g(sinθ−μcosθ)=10(0.5−0.2×0.866)=3.27≈3.3 m/s²."
+            "correct": 4,
+            "solution": "Constant speed means zero net force, so the spring force equals friction: \\(kx = \\mu mg = 0.25 \\times 2.0 \\times 9.8 = 4.9\\) N. \\(x = 4.9/200 = 0.0245\\) m \\(= 2.5\\) cm."
           },
           {
             "question": "Two masses 4 kg and 6 kg on a frictionless table are connected by a string. A 20 N force pulls the 4 kg mass. What is the tension in the string?",
@@ -36429,16 +36429,16 @@ const subjects = [
             "solution": "a=F/(m₁+m₂)=20/10=2 m/s². T=m₂a=6×2=12 N."
           },
           {
-            "question": "A 2 kg block slides down a 45° frictionless incline. What is its acceleration? (g=10)",
+            "question": "A 5.0 kg block slides from rest down a 30° slope. The coefficient of kinetic friction is 0.30 (\\(g = 9.8\\) m/s<sup>2</sup>). What is its speed after it has slid 2.0 m?",
             "options": [
-              "5.0",
-              "7.1",
-              "8.7",
-              "10.0",
-              "14.1"
+              "3.07 m/s",
+              "4.43 m/s",
+              "3.43 m/s",
+              "5.46 m/s",
+              "4.71 m/s"
             ],
-            "correct": 1,
-            "solution": "a=gsinθ=10×sin45°=10×0.707=7.07≈7.1 m/s²."
+            "correct": 0,
+            "solution": "Along the slope: \\(a = g(\\sin 30^{\\circ} - \\mu\\cos 30^{\\circ}) = 9.8(0.500 - 0.260) = 2.35\\) m/s<sup>2</sup>. Then \\(v = \\sqrt{2as} = \\sqrt{2(2.35)(2.0)} = 3.07\\) m/s."
           },
           {
             "question": "A 1000 kg car moving at 20 m/s brakes to rest in 40 m. What is the average braking force?",
@@ -36465,40 +36465,40 @@ const subjects = [
             "solution": "Mass=Weight/g=800/10=80 kg. Mass is constant everywhere."
           },
           {
-            "question": "A 0.5 kg ball is thrown upward at 10 m/s. What maximum height does it reach? (g=10)",
+            "question": "A 3.0 kg block is tied by a light string to a 5.0 kg block on a frictionless table. A horizontal force of 24 N pulls the 5.0 kg block, with the 3.0 kg block behind it. What is the tension in the string?",
             "options": [
-              "2.5 m",
-              "5 m",
-              "7.5 m",
-              "10 m",
-              "15 m"
+              "24 N",
+              "9.0 N",
+              "15 N",
+              "14.4 N",
+              "3.0 N"
             ],
             "correct": 1,
-            "solution": "v²=u²+2as → 0=100−20h → h=5 m."
+            "solution": "Treat both blocks together: \\(a = 24/8.0 = 3.0\\) m/s<sup>2</sup>. The tension is the only horizontal force on the 3.0 kg block: \\(T = 3.0 \\times 3.0 = 9.0\\) N."
           },
           {
-            "question": "Three forces 3 N, 4 N, and 5 N act at a point. What is the maximum resultant?",
+            "question": "Masses of 4.0 kg and 6.0 kg hang from the ends of a light string over a frictionless pulley (\\(g = 9.8\\) m/s<sup>2</sup>). What is the tension in the string?",
             "options": [
-              "5 N",
-              "7 N",
-              "9 N",
-              "12 N",
-              "15 N"
+              "58.8 N",
+              "39.2 N",
+              "98 N",
+              "47 N",
+              "49 N"
             ],
             "correct": 3,
-            "solution": "Maximum when all act in same direction: 3+4+5=12 N."
+            "solution": "\\(a = (6.0 - 4.0)g/10 = 1.96\\) m/s<sup>2</sup>. For the 4.0 kg mass: \\(T - 4.0g = 4.0a\\), so \\(T = 4.0(9.8 + 1.96) = 47\\) N."
           },
           {
-            "question": "A 5 kg object experiences a net force of 15 N. How far does it travel in 3 s starting from rest?",
+            "question": "A 1200 kg car tows a 400 kg trailer. The engine force is 2500 N. Resistive forces are 300 N on the car and 200 N on the trailer. What is the tension in the tow bar?",
             "options": [
-              "4.5 m",
-              "9 m",
-              "13.5 m",
-              "18 m",
-              "22.5 m"
+              "700 N",
+              "500 N",
+              "625 N",
+              "200 N",
+              "1000 N"
             ],
-            "correct": 2,
-            "solution": "a=F/m=15/5=3 m/s². s=½at²=½×3×9=13.5 m."
+            "correct": 0,
+            "solution": "Whole system: \\(a = (2500 - 300 - 200)/1600 = 1.25\\) m/s<sup>2</sup>. For the trailer: \\(T - 200 = 400 \\times 1.25\\), so \\(T = 700\\) N."
           },
           {
             "question": "A pendulum bob of mass 0.2 kg at the end of a 1 m string is released from horizontal. What is the tension at the lowest point? (g=10)",
@@ -36525,16 +36525,16 @@ const subjects = [
             "solution": "Thrust=(dm/dt)×v_e=1×1000=1000 N."
           },
           {
-            "question": "A 10 N force acts at 60° to the horizontal on a block moving horizontally. What is the work done over 4 m?",
+            "question": "A planet has 8 times the mass of the Earth and twice its radius. What is the acceleration of free fall at its surface? (\\(g_{\\text{Earth}} = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "10 J",
-              "20 J",
-              "30 J",
-              "40 J",
-              "50 J"
+              "39.2 m/s<sup>2</sup>",
+              "19.6 m/s<sup>2</sup>",
+              "78.4 m/s<sup>2</sup>",
+              "9.8 m/s<sup>2</sup>",
+              "4.9 m/s<sup>2</sup>"
             ],
             "correct": 1,
-            "solution": "W=Fscosθ=10×4×0.5=20 J."
+            "solution": "\\(g = GM/R^2\\), so \\(g_2/g_1 = 8/2^2 = 2\\). Then \\(g_2 = 2 \\times 9.8 = 19.6\\) m/s<sup>2</sup>."
           },
           {
             "question": "A 2 kg block is pushed up a 30° frictionless incline by a 20 N horizontal force. What is the acceleration? (g=10)",
@@ -36867,40 +36867,40 @@ const subjects = [
             "solution": "Potential energy at top = mgh = 5 × 10 × 20 = 1,000 J. This converts to kinetic energy just before impact. KE = 1,000 J."
           },
           {
-            "question": "A 10 μF capacitor is charged to 50 V. What is the energy stored?",
+            "question": "A 1500 kg car travelling at 90 km/h brakes to a stop over a distance of 50 m. What is the average braking force?",
             "options": [
-              "0.0125 J",
-              "0.125 J",
-              "1.25 J",
-              "12.5 J",
-              "125 J"
+              "122 kN",
+              "4.69 kN",
+              "0.75 kN",
+              "9.38 kN",
+              "33.8 kN"
             ],
-            "correct": 0,
-            "solution": "E = ½CV² = 0.5 × 10×10⁻⁶ × 2500 = 0.5 × 0.025 = 0.0125 J."
+            "correct": 3,
+            "solution": "\\(90\\) km/h \\(= 25\\) m/s. Work-energy: \\(F \\times 50 = \\tfrac{1}{2}(1500)(25)^2 = 468\\,750\\) J. \\(F = 9375\\) N \\(= 9.4\\) kN."
           },
           {
-            "question": "What is the power dissipated in a 100 Ω resistor with 2 A flowing through it?",
+            "question": "A frictionless roller coaster car must just complete a vertical loop of radius 8.0 m. From what minimum height above the bottom of the loop must it start from rest?",
             "options": [
-              "20 W",
-              "200 W",
-              "400 W",
-              "800 W",
-              "1,000 W"
+              "16 m",
+              "8.0 m",
+              "20 m",
+              "12 m",
+              "40 m"
             ],
             "correct": 2,
-            "solution": "P = I²R = 2² × 100 = 4 × 100 = 400 W."
+            "solution": "At the top, the minimum speed satisfies \\(mg = mv^2/r\\), so \\(v^2 = gr\\). Energy from the start height \\(h\\) to the top (height \\(2r\\)): \\(mgh = mg(2r) + \\tfrac{1}{2}m(gr)\\), so \\(h = 2.5r = 20\\) m."
           },
           {
-            "question": "What is the focal length of a convex lens with power +4 dioptres?",
+            "question": "A force \\(F = 3x^2\\) (in newtons, with \\(x\\) in metres) acts on an object along the \\(x\\)-axis. What work does it do between \\(x = 0\\) and \\(x = 2.0\\) m?",
             "options": [
-              "0.15 m",
-              "0.20 m",
-              "0.25 m",
-              "0.30 m",
-              "0.40 m"
+              "12 J",
+              "8.0 J",
+              "6.0 J",
+              "24 J",
+              "4.0 J"
             ],
-            "correct": 2,
-            "solution": "Power = 1/f (in metres). f = 1/P = 1/4 = 0.25 m = 25 cm."
+            "correct": 1,
+            "solution": "The work is the area under the force-displacement graph: \\(W = \\int_0^2 3x^2\\,dx = [x^3]_0^2 = 8.0\\) J."
           },
           {
             "question": "What is the work done to move a 5 μC charge from infinity to a point where potential is 100 V?",
@@ -36939,16 +36939,16 @@ const subjects = [
             "solution": "ΔPE=mgh=2×10×5=100 J."
           },
           {
-            "question": "A spring (k=200 N/m) is compressed by 0.1 m. What is the elastic potential energy stored?",
+            "question": "A 70 kg skier slides from rest down a slope with a vertical drop of 40 m and reaches the bottom at 20 m/s. How much work is done against resistance? (\\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "0.5 J",
-              "1.0 J",
-              "2.0 J",
-              "4.0 J",
-              "10 J"
+              "13.4 kJ",
+              "27.4 kJ",
+              "14 kJ",
+              "41.4 kJ",
+              "6.72 kJ"
             ],
-            "correct": 1,
-            "solution": "E=½kx²=½×200×0.01=1.0 J."
+            "correct": 0,
+            "solution": "Potential energy lost: \\(mgh = 27.4\\) kJ. Kinetic energy gained: \\(\\tfrac{1}{2}(70)(20)^2 = 14.0\\) kJ. The difference, 13.4 kJ, is the work done against resistance."
           },
           {
             "question": "A 1000 kg car accelerates from rest to 20 m/s. What is the kinetic energy gained?",
@@ -36963,16 +36963,16 @@ const subjects = [
             "solution": "KE=½mv²=½×1000×400=200,000 J=200 kJ."
           },
           {
-            "question": "A machine does 500 J of work in 10 s. What is its power output?",
+            "question": "A 1200 kg car climbs 30 m vertically in 20 s at a constant 15 m/s. The air and road resistance is 400 N. What power must the engine deliver? (\\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "25 W",
-              "50 W",
-              "100 W",
-              "200 W",
-              "500 W"
+              "17.6 kW",
+              "23.6 kW",
+              "6 kW",
+              "11.6 kW",
+              "47.3 kW"
             ],
             "correct": 1,
-            "solution": "P=W/t=500/10=50 W."
+            "solution": "Raising the car: \\(mgh/t = 1200 \\times 9.8 \\times 30/20 = 17.6\\) kW. Overcoming resistance: \\(Fv = 400 \\times 15 = 6.0\\) kW. Total \\(= 23.6\\) kW."
           },
           {
             "question": "A 0.5 kg ball is thrown at 10 m/s and caught at the same height. What is its kinetic energy just before being caught?",
@@ -37011,16 +37011,16 @@ const subjects = [
             "solution": "mgh=½mv² → v=√(2gh)=√(2×10×5)=√100=10 m/s."
           },
           {
-            "question": "A car engine delivers 40 kW of power. How much work does it do in 5 minutes?",
+            "question": "A 2.0 kg block slides from rest down a rough slope 5.0 m long, dropping through 3.0 m of height. It reaches the bottom at 5.0 m/s. What is the average friction force? (\\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "200 kJ",
-              "1.2 MJ",
-              "2 MJ",
-              "12 MJ",
-              "24 MJ"
+              "6.76 N",
+              "33.8 N",
+              "11.3 N",
+              "11.8 N",
+              "5 N"
             ],
-            "correct": 3,
-            "solution": "W=Pt=40,000×300=12,000,000 J=12 MJ."
+            "correct": 0,
+            "solution": "Energy lost to friction: \\(mgh - \\tfrac{1}{2}mv^2 = 58.8 - 25 = 33.8\\) J. This equals \\(f \\times\\) (slope length): \\(f = 33.8/5.0 = 6.76\\) N."
           },
           {
             "question": "A 2 kg object moving at 3 m/s collides with a stationary 1 kg object and sticks to it. How much kinetic energy is lost?",
@@ -37035,16 +37035,16 @@ const subjects = [
             "solution": "Initial KE=½×2×9=9 J. Final v=(2×3)/3=2 m/s. Final KE=½×3×4=6 J. Lost=3 J."
           },
           {
-            "question": "A 50 kg athlete jumps to a height of 2 m. What is their takeoff speed? (g=10)",
+            "question": "A pump lifts 1200 litres of water per minute through a height of 15 m. The motor takes 5.0 kW of electrical power. What is the efficiency of the system? (1 L of water has a mass of 1.0 kg, \\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "2 m/s",
-              "4 m/s",
-              "6.3 m/s",
-              "8 m/s",
-              "10 m/s"
+              "3500%",
+              "41%",
+              "0.98%",
+              "100%",
+              "59%"
             ],
-            "correct": 2,
-            "solution": "v=√(2gh)=√(2×10×2)=√40=6.32≈6.3 m/s."
+            "correct": 4,
+            "solution": "The mass lifted per second is \\(1200/60 = 20\\) kg/s. Useful power: \\(20 \\times 9.8 \\times 15 = 2940\\) W. Efficiency \\(= 2940/5000 = 59\\%\\)."
           },
           {
             "question": "A pendulum of length 1 m is released from 30° to the vertical. What is its speed at the lowest point? (g=10)",
@@ -37059,16 +37059,16 @@ const subjects = [
             "solution": "h=L(1−cos30)=1×(1−0.866)=0.134 m. v=√(2gh)=√(2.68)=1.64≈1.6 m/s."
           },
           {
-            "question": "A motor with 80% efficiency consumes 1000 W. What is its useful power output?",
+            "question": "A spring of constant 800 N/m is compressed by 0.10 m and used to launch a 0.050 kg ball vertically. Ignoring friction, how high above the point of release does the ball rise? (\\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "200 W",
-              "400 W",
-              "800 W",
-              "1000 W",
-              "1200 W"
+              "4.08 m",
+              "16.3 m",
+              "4 m",
+              "8.16 m",
+              "12.6 m"
             ],
-            "correct": 2,
-            "solution": "Output=0.8×1000=800 W."
+            "correct": 3,
+            "solution": "Elastic energy: \\(\\tfrac{1}{2}kx^2 = \\tfrac{1}{2}(800)(0.10)^2 = 4.0\\) J. This becomes \\(mgh\\): \\(h = 4.0/(0.050 \\times 9.8) = 8.16\\) m."
           },
           {
             "question": "A 5 kg object is dropped from 20 m. What is its kinetic energy after falling 10 m? (g=10, neglect air resistance)",
@@ -37425,16 +37425,16 @@ const subjects = [
             "solution": "λ = h/mv = 6.63×10⁻³⁴ / (9.11×10⁻³¹ × 2×10⁶) = 6.63×10⁻³⁴ / 1.822×10⁻²⁴ = 3.64×10⁻¹⁰ m ≈ 3.6 × 10⁻¹⁰ m."
           },
           {
-            "question": "What is the period of a simple pendulum of length 1 m? (g = 10 m/s²)",
+            "question": "A 0.50 kg ball swings in a vertical circle of radius 0.80 m on a light string. At the bottom of the circle its speed is 6.0 m/s (\\(g = 9.8\\) m/s<sup>2</sup>). What is the tension in the string there?",
             "options": [
-              "0.5 s",
-              "1.0 s",
-              "1.6 s",
-              "2.0 s",
-              "3.1 s"
+              "22.5 N",
+              "17.6 N",
+              "4.9 N",
+              "27.4 N",
+              "32.3 N"
             ],
             "correct": 3,
-            "solution": "T = 2π√(L/g) = 2π√(1/10) = 2π × 0.316 = 1.99 ≈ 2.0 s."
+            "solution": "At the bottom, the net force upward provides the centripetal force: \\(T - mg = mv^2/r\\). So \\(T = 0.50(9.8) + 0.50(36)/0.80 = 4.9 + 22.5 = 27.4\\) N."
           },
           {
             "question": "What is the frequency of a photon with wavelength 400 nm? (c = 3 × 10⁸ m/s)",
@@ -37509,16 +37509,16 @@ const subjects = [
             "solution": "T∝1/√g. T₂=T₁×√(g₁/g₂)=2×√(10/2.5)=2×√4=2×2=4 s."
           },
           {
-            "question": "A mass-spring system has k=100 N/m and m=1 kg. What is the frequency of oscillation?",
+            "question": "A 0.20 kg mass on a spring (\\(k = 80\\) N/m) oscillates with amplitude 0.10 m. What is its kinetic energy when the displacement is 0.060 m?",
             "options": [
-              "0.5 Hz",
-              "1.0 Hz",
-              "1.6 Hz",
-              "2.0 Hz",
-              "3.2 Hz"
+              "0.4 J",
+              "0.256 J",
+              "0.144 J",
+              "0.544 J",
+              "0.128 J"
             ],
-            "correct": 2,
-            "solution": "f=(1/2π)√(k/m)=(1/2π)√100=10/6.28=1.59≈1.6 Hz."
+            "correct": 1,
+            "solution": "Total energy \\(= \\tfrac{1}{2}kA^2 = 0.40\\) J. Potential energy at 0.060 m is \\(\\tfrac{1}{2}(80)(0.060)^2 = 0.144\\) J. So \\(E_k = 0.40 - 0.144 = 0.256\\) J."
           },
           {
             "question": "A wave on a string has amplitude 0.02 m, frequency 100 Hz, and speed 50 m/s. What is the maximum transverse velocity of a particle on the string?",
@@ -37605,16 +37605,16 @@ const subjects = [
             "solution": "Approaching relative motion increases observed frequency."
           },
           {
-            "question": "A mass on a spring oscillates with period T. If the mass quadruples, what is the new period?",
+            "question": "A 0.40 kg mass on a spring (\\(k = 250\\) N/m) oscillates with amplitude 0.060 m. What is its speed when it is 0.036 m from the equilibrium position?",
             "options": [
-              "T/4",
-              "T/2",
-              "T",
-              "2T",
-              "4T"
+              "1.5 m/s",
+              "0.9 m/s",
+              "1.2 m/s",
+              "1.75 m/s",
+              "0.6 m/s"
             ],
-            "correct": 3,
-            "solution": "T=2π√(m/k). If m→4m, T→2T."
+            "correct": 2,
+            "solution": "\\(\\omega = \\sqrt{k/m} = \\sqrt{250/0.40} = 25\\) rad/s. \\(v = \\omega\\sqrt{A^2 - x^2} = 25\\sqrt{0.060^2 - 0.036^2} = 25 \\times 0.0480 = 1.2\\) m/s."
           },
           {
             "question": "A wave pulse travels 20 m in 4 s. What is its speed?",
@@ -37641,16 +37641,16 @@ const subjects = [
             "solution": "Transverse: particle displacement is perpendicular to wave propagation direction."
           },
           {
-            "question": "A spring-mass system has total energy 10 J and amplitude 0.2 m. What is the spring constant?",
+            "question": "A centrifuge rotates at 3000 revolutions per minute. A sample is 0.12 m from the axis. What is its centripetal acceleration in multiples of \\(g\\) (\\(g = 9.8\\) m/s<sup>2</sup>)?",
             "options": [
-              "250 N/m",
-              "500 N/m",
-              "750 N/m",
-              "1000 N/m",
-              "1250 N/m"
+              "1210 g",
+              "192 g",
+              "11800 g",
+              "30.6 g",
+              "72500 g"
             ],
-            "correct": 1,
-            "solution": "E=½kA² → k=2E/A²=20/0.04=500 N/m."
+            "correct": 0,
+            "solution": "\\(\\omega = 3000 \\times 2\\pi/60 = 314\\) rad/s. \\(a = \\omega^2 r = (314)^2(0.12) = 11800\\) m/s<sup>2</sup>, which is \\(1210\\,g\\)."
           },
           {
             "question": "A sound wave in air (v=340 m/s) has wavelength 0.17 m. What is its frequency?",
@@ -37677,16 +37677,16 @@ const subjects = [
             "solution": "Path difference=3λ/2 is odd multiple of λ/2 → destructive interference."
           },
           {
-            "question": "A simple pendulum on Earth has period 2 s. If length is doubled, what is the new period?",
+            "question": "A simple pendulum has a period of 2.50 s. Its length is shortened by 36%. What is the new period?",
             "options": [
-              "1.4 s",
-              "2 s",
-              "2.8 s",
-              "4 s",
-              "8 s"
+              "1.60 s",
+              "1.50 s",
+              "1.25 s",
+              "2.30 s",
+              "2.00 s"
             ],
-            "correct": 2,
-            "solution": "T∝√L. L→2L → T→T×√2=2×1.414=2.83≈2.8 s."
+            "correct": 4,
+            "solution": "\\(T \\propto \\sqrt{l}\\). The new length is \\(0.64l\\), so \\(T_2 = T\\sqrt{0.64} = 0.80 \\times 2.50 = 2.00\\) s."
           },
           {
             "question": "What is the period of oscillation of a simple pendulum of length L = 0.98 m on Earth? (Use g = 9.8 m/s² and π ≈ 3.14)",
@@ -38007,40 +38007,40 @@ const subjects = [
             "solution": "Total resistance = 10 + 2 = 12 Ω. Current I = V/R = 12/12 = 1 A. Terminal voltage = EMF - Ir = 12 - (1 × 2) = 10 V."
           },
           {
-            "question": "Two capacitors of 2 μF and 3 μF are connected in series. What is the total capacitance?",
+            "question": "A 4.0 \\(\\mu\\)F capacitor is charged to 100 V, then connected in parallel with an uncharged 6.0 \\(\\mu\\)F capacitor. How much energy is lost in the process?",
             "options": [
-              "1.2 μF",
-              "1.5 μF",
-              "5.0 μF",
-              "6.0 μF",
-              "12.0 μF"
+              "20 mJ",
+              "8.0 mJ",
+              "0",
+              "12 mJ",
+              "32 mJ"
             ],
-            "correct": 0,
-            "solution": "1/Ctotal = 1/2 + 1/3 = 5/6. Ctotal = 6/5 = 1.2 μF."
+            "correct": 3,
+            "solution": "Charge: \\(4.0 \\times 100 = 400\\ \\mu\\)C. Final voltage: \\(400/10 = 40\\) V. Energy before: \\(\\tfrac{1}{2}(4.0 \\times 10^{-6})(100)^2 = 20\\) mJ. After: \\(\\tfrac{1}{2}(10 \\times 10^{-6})(40)^2 = 8.0\\) mJ. Lost: 12 mJ (as heat and radiation)."
           },
           {
-            "question": "What is the electric field strength 0.5 m from a point charge of +2 μC? (k = 9 × 10⁹ Nm²/C²)",
+            "question": "Charges of \\(+4.0\\ \\mu\\text{C}\\) and \\(+1.0\\ \\mu\\text{C}\\) are 0.30 m apart. At what point on the line between them is the electric field zero?",
             "options": [
-              "36,000 N/C",
-              "72,000 N/C",
-              "144,000 N/C",
-              "288,000 N/C",
-              "576,000 N/C"
+              "0.15 m from the 4.0 \\(\\mu\\)C charge",
+              "0.20 m from the 4.0 \\(\\mu\\)C charge",
+              "0.10 m from the 4.0 \\(\\mu\\)C charge",
+              "0.24 m from the 4.0 \\(\\mu\\)C charge",
+              "0.25 m from the 4.0 \\(\\mu\\)C charge"
             ],
             "correct": 1,
-            "solution": "E = kQ/r² = 9×10⁹ × 2×10⁻⁶/(0.5)² = 18×10³/0.25 = 72,000 N/C."
+            "solution": "The fields cancel when \\(\\dfrac{4}{x^2} = \\dfrac{1}{(0.30 - x)^2}\\). Taking the square root: \\(\\dfrac{2}{x} = \\dfrac{1}{0.30 - x}\\), so \\(x = 0.20\\) m."
           },
           {
-            "question": "What is the electric field strength 0.5 m from a point charge of 2 μC? (k = 9 × 10⁹ Nm²/C²)",
+            "question": "An electron starts from rest in a uniform field of \\(2.0 \\times 10^{4}\\) N/C and moves 2.0 cm along the field direction (force on the electron). What is its final speed?",
             "options": [
-              "3.6 × 10⁴ N/C",
-              "7.2 × 10⁴ N/C",
-              "1.8 × 10⁴ N/C",
-              "9.0 × 10³ N/C",
-              "1.44 × 10⁵ N/C"
+              "5.93 × 10<sup>6</sup> m/s",
+              "2.37 × 10<sup>7</sup> m/s",
+              "7.03 × 10<sup>13</sup> m/s",
+              "1.19 × 10<sup>7</sup> m/s",
+              "8.38 × 10<sup>6</sup> m/s"
             ],
-            "correct": 1,
-            "solution": "E = kQ/r² = 9×10⁹ × 2×10⁻⁶ / 0.25 = 18×10³ / 0.25 = 7.2×10⁴ N/C."
+            "correct": 3,
+            "solution": "Work done by the field \\(= eEd = 1.6 \\times 10^{-19} \\times 2.0 \\times 10^4 \\times 0.020 = 6.4 \\times 10^{-17}\\) J. This is the kinetic energy: \\(v = \\sqrt{2E_k/m} = 1.19 × 10<sup>7</sup>\\) m/s."
           },
           {
             "question": "A wire of resistance 10 Ω is stretched to twice its original length. What is its new resistance?",
@@ -38067,40 +38067,40 @@ const subjects = [
             "solution": "V_s/V_p = N_s/N_p → V_s = V_p × N_s/N_p = 240 × 50/200 = 240 × 0.25 = 60 V."
           },
           {
-            "question": "A wire of length 2 m and cross-sectional area 1 mm² has resistance 10 Ω. What is the resistivity?",
+            "question": "A galvanometer of resistance 100 \\(\\Omega\\) gives full-scale deflection for 1.0 mA. What shunt resistor must be connected in parallel to turn it into an ammeter with a full-scale reading of 1.0 A?",
             "options": [
-              "5 × 10⁻⁶ Ωm",
-              "5 × 10⁻⁷ Ωm",
-              "5 × 10⁻⁸ Ωm",
-              "5 × 10⁻⁹ Ωm",
-              "5 × 10⁻¹⁰ Ωm"
+              "100 \\(\\Omega\\)",
+              "0.001 \\(\\Omega\\)",
+              "10 \\(\\Omega\\)",
+              "0.10 \\(\\Omega\\)",
+              "1.0 \\(\\Omega\\)"
             ],
-            "correct": 0,
-            "solution": "R = ρL/A → ρ = RA/L = 10 × 1×10⁻⁶/2 = 5×10⁻⁶ Ωm."
+            "correct": 3,
+            "solution": "At full scale the galvanometer has \\(V = 100 \\times 0.001 = 0.10\\) V across it. The shunt carries \\(1.0 - 0.001 = 0.999\\) A at 0.10 V: \\(R_s = 0.10/0.999 \\approx 0.10\\ \\Omega\\)."
           },
           {
-            "question": "Three resistors 2 Ω, 3 Ω, and 6 Ω are in parallel. What is the total resistance?",
+            "question": "A copper wire 50 m long and 1.0 mm in diameter (\\(\\rho = 1.7 \\times 10^{-8}\\ \\Omega\\) m) carries a current of 10 A. What power is lost as heat in the wire?",
             "options": [
-              "1 Ω",
-              "1.5 Ω",
-              "2 Ω",
-              "3 Ω",
-              "6 Ω"
+              "108 W",
+              "433 W",
+              "27.1 W",
+              "10.8 W",
+              "1.08 W"
             ],
             "correct": 0,
-            "solution": "1/R=1/2+1/3+1/6=(3+2+1)/6=1 → R=1 Ω."
+            "solution": "Area \\(= \\pi(0.50 \\times 10^{-3})^2 = 7.85 \\times 10^{-7}\\) m<sup>2</sup>. \\(R = \\rho L/A = 1.08\\ \\Omega\\). \\(P = I^2R = 100 \\times 1.08 = 108\\) W."
           },
           {
-            "question": "A 12 V battery is connected across a 4 Ω resistor. What is the power dissipated?",
+            "question": "A 2.0 kW, 230 V kettle is connected through an extension cable of total resistance 0.50 \\(\\Omega\\). Roughly what power is lost as heat in the cable?",
             "options": [
-              "12 W",
-              "24 W",
-              "36 W",
-              "48 W",
-              "60 W"
+              "4.3 W",
+              "38 W",
+              "10 W",
+              "150 W",
+              "9.5 W"
             ],
-            "correct": 2,
-            "solution": "P=V²/R=144/4=36 W."
+            "correct": 1,
+            "solution": "\\(I = P/V = 2000/230 = 8.7\\) A. Power lost in the cable: \\(I^2R = 8.7^2 \\times 0.50 = 38\\) W. (Strictly the kettle then sees a slightly lower voltage.)"
           },
           {
             "question": "A potentiometer wire of length 100 cm has resistance 10 Ω. It is connected to a 2 V battery. What is the potential gradient?",
@@ -38115,28 +38115,28 @@ const subjects = [
             "solution": "Current=2/10=0.2 A. Total PD=2 V. Gradient=2/100=0.02 V/cm."
           },
           {
-            "question": "The resistance of a wire is 10 Ω. If its length is doubled and radius halved, what is the new resistance?",
+            "question": "Two identical 60 W, 230 V bulbs are connected in series across a 230 V supply. Assuming constant resistance, what power does each bulb dissipate?",
             "options": [
-              "20 Ω",
-              "40 Ω",
-              "80 Ω",
-              "160 Ω",
-              "320 Ω"
-            ],
-            "correct": 2,
-            "solution": "R∝L/A. L→2L, r→r/2 → A→A/4. R_new=10×2/(1/4)=80 Ω."
-          },
-          {
-            "question": "A cell has emf 2 V and internal resistance 0.5 Ω. What is the terminal voltage when delivering 2 A?",
-            "options": [
-              "0.5 V",
-              "1.0 V",
-              "1.5 V",
-              "2.0 V",
-              "2.5 V"
+              "60 W",
+              "15 W",
+              "30 W",
+              "120 W",
+              "7.5 W"
             ],
             "correct": 1,
-            "solution": "V=E−Ir=2−2×0.5=2−1=1 V."
+            "solution": "\\(R = V^2/P = 230^2/60 = 882\\ \\Omega\\) each. The voltage across each bulb is 115 V, so \\(P = V^2/R = 115^2/882 = 15\\) W. Each bulb gives only a quarter of its rated power."
+          },
+          {
+            "question": "A battery has emf 9.0 V and internal resistance 3.0 \\(\\Omega\\). What is the maximum power it can deliver to an external resistor?",
+            "options": [
+              "27 W",
+              "13.5 W",
+              "3.4 W",
+              "9.0 W",
+              "6.75 W"
+            ],
+            "correct": 4,
+            "solution": "Maximum power is transferred when \\(R = r = 3.0\\ \\Omega\\). Then \\(I = 9.0/6.0 = 1.5\\) A and \\(P = I^2R = 2.25 \\times 3.0 = 6.75\\) W."
           },
           {
             "question": "In a Wheatstone bridge, the ratio arms are 2:3 and the known resistance is 6 Ω. What is the unknown resistance?",
@@ -38151,16 +38151,16 @@ const subjects = [
             "solution": "P/Q=R/S → 2/3=6/S → S=9 Ω. Wait: P=2, Q=3, R=6, S=unknown. 2/3=6/S → S=9. Option E=9."
           },
           {
-            "question": "A capacitor of 2 μF is charged to 100 V. How much charge is stored?",
+            "question": "A 6.0 \\(\\mu\\)F and a 3.0 \\(\\mu\\)F capacitor are connected in series, and this combination is connected in parallel with a 4.0 \\(\\mu\\)F capacitor. The whole network is connected across 12 V. What is the voltage across the 3.0 \\(\\mu\\)F capacitor?",
             "options": [
-              "50 μC",
-              "100 μC",
-              "150 μC",
-              "200 μC",
-              "400 μC"
+              "4.0 V",
+              "8.0 V",
+              "12 V",
+              "6.0 V",
+              "9.0 V"
             ],
-            "correct": 3,
-            "solution": "Q=CV=2×100=200 μC."
+            "correct": 1,
+            "solution": "The series branch has \\(C = 6 \\times 3/9 = 2.0\\ \\mu\\)F and its voltage is 12 V, so its charge is \\(24\\ \\mu\\)C on <b>each</b> capacitor. \\(V_3 = Q/C = 24/3.0 = 8.0\\) V (and \\(V_6 = 4.0\\) V)."
           },
           {
             "question": "Two cells of emf 1.5 V and internal resistance 0.5 Ω each are connected in series to a 2 Ω resistor. What is the current?",
@@ -38187,64 +38187,64 @@ const subjects = [
             "solution": "S=G×I_g/(I−I_g)=50×0.001/(0.999)=50/999≈0.05 Ω."
           },
           {
-            "question": "The drift velocity of electrons in a conductor is proportional to:",
+            "question": "A 12 V battery of internal resistance 1.0 \\(\\Omega\\) is connected in a loop with a 6.0 V battery of internal resistance 2.0 \\(\\Omega\\) so that they oppose each other, with a 3.0 \\(\\Omega\\) resistor. What is the potential difference across the terminals of the 6.0 V battery?",
             "options": [
-              "Cross-sectional area",
-              "Length",
-              "Electric field",
-              "Resistivity",
-              "Temperature"
+              "6.0 V",
+              "4.0 V",
+              "8.0 V",
+              "12 V",
+              "11 V"
             ],
             "correct": 2,
-            "solution": "Drift velocity v_d=eEτ/m, so v_d∝E (electric field)."
+            "solution": "\\(I = (12 - 6)/(1 + 2 + 3) = 1.0\\) A. The 12 V battery drives current <b>through</b> the 6.0 V battery, charging it, so its terminal voltage is \\(6.0 + Ir = 6.0 + 1.0 \\times 2.0 = 8.0\\) V."
           },
           {
-            "question": "A parallel plate capacitor with plate separation d and area A has capacitance C. If separation is halved and area doubled, what is the new capacitance?",
+            "question": "A 500 \\(\\mu\\)F capacitor charged to 12 V discharges through a 20 k\\(\\Omega\\) resistor. How long does it take for the voltage to fall to 3.0 V?",
             "options": [
-              "C/4",
-              "C/2",
-              "C",
-              "2C",
-              "4C"
+              "20 s",
+              "10 s",
+              "13.9 s",
+              "40 s",
+              "6.93 s"
+            ],
+            "correct": 2,
+            "solution": "\\(\\tau = RC = 20 \\times 10^3 \\times 500 \\times 10^{-6} = 10\\) s. \\(V = V_0e^{-t/\\tau}\\): \\(3.0 = 12e^{-t/10}\\), so \\(t = 10\\ln 4 = 13.9\\) s."
+          },
+          {
+            "question": "A 12 V supply is connected across a 4.0 k\\(\\Omega\\) resistor in series with an 8.0 k\\(\\Omega\\) resistor. A load of 8.0 k\\(\\Omega\\) is then connected across the 8.0 k\\(\\Omega\\) resistor. What is the voltage across the load?",
+            "options": [
+              "8.0 V",
+              "4.0 V",
+              "9.0 V",
+              "6.0 V",
+              "12 V"
             ],
             "correct": 3,
-            "solution": "C∝A/d. A→2A, d→d/2 → C_new∝2A/(d/2)=4A/d=4C."
+            "solution": "The load and the 8.0 k\\(\\Omega\\) resistor are in parallel: \\(4.0\\) k\\(\\Omega\\). This is in series with 4.0 k\\(\\Omega\\), so the voltage divides equally: \\(12 \\times 4/(4 + 4) = 6.0\\) V. Without the load it would have been 8.0 V."
           },
           {
-            "question": "Kirchhoff's current law is based on:",
+            "question": "A 12 V battery of internal resistance 0.50 \\(\\Omega\\) is connected to a 6.0 \\(\\Omega\\) and a 3.0 \\(\\Omega\\) resistor in parallel, which are in series with a 4.0 \\(\\Omega\\) resistor. What is the current in the 3.0 \\(\\Omega\\) resistor?",
             "options": [
-              "Conservation of energy",
-              "Conservation of charge",
-              "Ohm's law",
-              "Coulomb's law",
-              "Ampere's law"
+              "1.85 A",
+              "1.23 A",
+              "0.615 A",
+              "4 A",
+              "2.46 A"
             ],
             "correct": 1,
-            "solution": "KCL: sum of currents at a node = 0, based on conservation of charge."
+            "solution": "Total resistance: \\(0.50 + 4.0 + (6 \\times 3)/9 = 6.5\\ \\Omega\\). \\(I = 12/6.5 = 1.85\\) A. The parallel pair has \\(2.0\\ \\Omega\\), so its voltage is \\(3.69\\) V. \\(I_3 = 3.69/3.0 = 1.23\\) A."
           },
           {
-            "question": "The time constant of an RC circuit with R=10 kΩ and C=100 μF is:",
+            "question": "An oil drop of mass \\(3.0 \\times 10^{-15}\\) kg hangs stationary between two horizontal plates 1.0 cm apart with a potential difference of 920 V (\\(g = 9.8\\) m/s<sup>2</sup>). How many excess elementary charges does the drop carry?",
             "options": [
-              "0.1 s",
-              "1 s",
-              "10 s",
-              "100 s",
-              "1000 s"
+              "1",
+              "3",
+              "4",
+              "2",
+              "6"
             ],
-            "correct": 1,
-            "solution": "τ=RC=10×10³×100×10⁻⁶=1 s."
-          },
-          {
-            "question": "Two point charges of +2.0 μC and +8.0 μC are separated by a distance of 0.20 m in a vacuum. What is the electrostatic repulsive force between them? (Coulomb's constant k = 9.0 × 10⁹ N·m²/C²)",
-            "options": [
-              "3.6 N",
-              "0.72 N",
-              "36 N",
-              "7.2 N",
-              "0.36 N"
-            ],
-            "correct": 0,
-            "solution": "By Coulomb's Law: F = k |q₁ q₂| / r² = (9.0 × 10⁹) × (2.0 × 10⁻⁶ × 8.0 × 10⁻⁶) / (0.20)² = (9.0 × 10⁹ × 16.0 × 10⁻¹²) / 0.04 = 0.144 / 0.04 = 3.6 N."
+            "correct": 3,
+            "solution": "Balance: \\(qE = mg\\) with \\(E = V/d = 920/0.010 = 9.2 \\times 10^4\\) V/m. \\(q = mg/E = 2.94 \\times 10^{-14}/9.2 \\times 10^4 = 3.2 \\times 10^{-19}\\) C \\(= 2e\\)."
           },
           {
             "question": "Three resistors with resistances of 6 Ω, 3 Ω, and 2 Ω are connected in parallel. What is the equivalent resistance of the combination?",
@@ -38271,16 +38271,16 @@ const subjects = [
             "solution": "Current from Ohm's Law: I = V / R = 12 V / 4.0 Ω = 3.0 A. Charge Q = I × t = 3.0 A × 30 s = 90 C."
           },
           {
-            "question": "What is the equivalent capacitance of two capacitors C₁ = 6.0 μF and C₂ = 3.0 μF connected in series?",
+            "question": "A 100 \\(\\mu\\)F capacitor is charged through a 50 k\\(\\Omega\\) resistor from a 9.0 V battery. What is the voltage across the capacitor after 5.0 s?",
             "options": [
-              "2.0 μF",
-              "9.0 μF",
-              "4.5 μF",
-              "1.0 μF",
-              "18 μF"
+              "3.31 V",
+              "8.94 V",
+              "9 V",
+              "4.5 V",
+              "5.69 V"
             ],
-            "correct": 0,
-            "solution": "For capacitors in series: 1 / C_eq = 1 / C₁ + 1 / C₂ = 1/6.0 + 1/3.0 = 1/6.0 + 2/6.0 = 3/6.0 = 1 / 2.0 μF. Therefore, C_eq = 2.0 μF."
+            "correct": 4,
+            "solution": "\\(\\tau = RC = 50 \\times 10^3 \\times 100 \\times 10^{-6} = 5.0\\) s, so \\(t = \\tau\\). Charging: \\(V = V_0(1 - e^{-1}) = 9.0 \\times 0.632 = 5.69\\) V."
           },
           {
             "question": "A cylindrical copper wire has resistance R. If its length is doubled and its radius is halved, what is the new resistance of the wire?",
@@ -38295,28 +38295,28 @@ const subjects = [
             "solution": "Resistance is R = ρ L / A = ρ L / (π r²). If length is doubled (L' = 2L) and radius is halved (r' = r/2), the new area is A' = π (r/2)² = A / 4. New resistance R' = ρ (2L) / (A / 4) = 8 (ρ L / A) = 8 R."
           },
           {
-            "question": "How much electrical energy is stored in a 50 μF capacitor charged to a potential difference of 200 V?",
+            "question": "A parallel-plate capacitor in air is charged to 200 V and then <b>disconnected</b> from the battery. A dielectric of constant \\(\\kappa = 4\\) is slid between the plates, filling the gap. What is the new voltage?",
             "options": [
-              "1.0 J",
-              "2.0 J",
-              "0.5 J",
-              "10 J",
-              "0.01 J"
+              "50 V",
+              "800 V",
+              "200 V",
+              "100 V",
+              "25 V"
             ],
             "correct": 0,
-            "solution": "Energy stored in a capacitor is U = (1/2) C V² = 0.5 × (50 × 10⁻⁶ F) × (200 V)² = 25 × 10⁻⁶ × 40,000 = 1.0 J."
+            "solution": "The charge is fixed. \\(C\\) becomes \\(4C\\), so \\(V = Q/C\\) falls to \\(200/4 = 50\\) V. The stored energy \\(Q^2/2C\\) also falls to a quarter."
           },
           {
-            "question": "An electrical heater connected to a 240 V mains supply draws a current of 5.0 A. What is the power rating of the heater?",
+            "question": "The mains voltage is 230 V rms. What is the peak-to-peak voltage?",
             "options": [
-              "1200 W (1.2 kW)",
-              "240 W",
-              "48 W",
-              "600 W",
-              "2400 W"
+              "325 V",
+              "230 V",
+              "460 V",
+              "650 V",
+              "163 V"
             ],
-            "correct": 0,
-            "solution": "Electrical power is P = V × I = 240 V × 5.0 A = 1200 W (or 1.2 kW)."
+            "correct": 3,
+            "solution": "Peak \\(= 230\\sqrt{2} = 325\\) V. Peak-to-peak is twice this: \\(2 \\times 325 = 650\\) V."
           },
           {
             "question": "A battery with an electromotive force (emf) of 9.0 V and an internal resistance of 0.50 Ω is connected to an external load resistor of 4.0 Ω. What is the terminal voltage across the battery?",
@@ -38343,28 +38343,28 @@ const subjects = [
             "solution": "Kirchhoff's Current Law (junction rule) states that the sum of currents entering any electrical junction must equal the sum of currents leaving that junction. This directly reflects the conservation of electric charge (charge cannot accumulate at an infinitesimal point)."
           },
           {
-            "question": "What is the electric field strength at a distance of 3.0 m from a point charge of +3.0 μC in a vacuum? (k = 9.0 × 10⁹ N·m²/C²)",
+            "question": "Two protons are released from rest 1.0 nm apart. What is the speed of each when they are very far apart? (\\(m_p = 1.67 \\times 10^{-27}\\) kg)",
             "options": [
-              "3000 N/C",
-              "9000 N/C",
-              "1000 N/C",
-              "27,000 N/C",
-              "300 N/C"
+              "16600 m/s",
+              "8300 m/s",
+              "33200 m/s",
+              "1.17 × 10<sup>5</sup> m/s",
+              "11700 m/s"
             ],
-            "correct": 0,
-            "solution": "The electric field of a point charge is E = k Q / r² = (9.0 × 10⁹ × 3.0 × 10⁻⁶) / (3.0)² = (2.7 × 10⁴) / 9.0 = 3000 N/C."
+            "correct": 4,
+            "solution": "Initial electric potential energy: \\(ke^2/r = 8.99 \\times 10^9(1.6 \\times 10^{-19})^2/10^{-9} = 2.30 \\times 10^{-19}\\) J. It is shared equally between two protons: each gets \\(1.15 \\times 10^{-19}\\) J. \\(v = \\sqrt{2E_k/m} = 11700\\) m/s."
           },
           {
-            "question": "What happens to the capacitance of a parallel plate capacitor if the distance between its plates is halved while maintaining the same plate area?",
+            "question": "A defibrillator capacitor of 50 \\(\\mu\\)F is charged to 5000 V and discharged through a patient in 5.0 ms. What is the average power delivered?",
             "options": [
-              "The capacitance doubles",
-              "The capacitance is halved",
-              "The capacitance quadruples",
-              "The capacitance remains unchanged",
-              "The capacitance decreases by a factor of 4"
+              "50 W",
+              "1.25 × 10<sup>5</sup> W",
+              "625 W",
+              "25 W",
+              "2.5 × 10<sup>5</sup> W"
             ],
-            "correct": 0,
-            "solution": "Capacitance of a parallel plate capacitor is C = ε₀ A / d. Capacitance is inversely proportional to the plate separation d. Halving d (d' = d/2) doubles the capacitance (C' = 2C)."
+            "correct": 1,
+            "solution": "Energy: \\(\\tfrac{1}{2}CV^2 = \\tfrac{1}{2}(50 \\times 10^{-6})(5000)^2 = 625\\) J. Average power \\(= 625/0.0050 = 1.25 \\times 10^5\\) W."
           },
           {
             "question": "Two resistors of 10 Ω and 30 Ω are connected in series with a 12 V battery. What is the potential difference across the 30 Ω resistor?",
@@ -38391,28 +38391,28 @@ const subjects = [
             "solution": "An ammeter is connected in series, so it must have zero internal resistance to avoid altering the circuit current. A voltmeter is connected in parallel, so it must have infinite internal resistance to draw zero current from the branch it measures."
           },
           {
-            "question": "How much work is required to move a charge of +0.05 C between two points having a potential difference of 100 V?",
+            "question": "Charges of \\(+3.0\\) nC and \\(-3.0\\) nC are 0.20 m apart. What is the electric field at the midpoint? (\\(k = 9.0 \\times 10^{9}\\) N m<sup>2</sup> C<sup>-2</sup>)",
             "options": [
-              "5.0 J",
-              "2000 J",
-              "0.05 J",
-              "500 J",
-              "20 J"
+              "0 N/C",
+              "2700 N/C, towards the negative charge",
+              "5400 N/C, towards the negative charge",
+              "5400 N/C, towards the positive charge",
+              "10 800 N/C, towards the negative charge"
             ],
-            "correct": 0,
-            "solution": "Work done on a charge by an electric field is W = q ΔV = 0.05 C × 100 V = 5.0 J."
+            "correct": 2,
+            "solution": "Each charge is 0.10 m away: \\(E = kq/r^2 = 9.0 \\times 10^9 \\times 3.0 \\times 10^{-9}/0.010 = 2700\\) N/C. The fields point the same way (away from \\(+\\), towards \\(-\\)), so they <b>add</b>: 5400 N/C."
           },
           {
-            "question": "A lightbulb rated at 60 W for a 120 V supply has a filament resistance of R. What is the value of R?",
+            "question": "A heating wire has a resistance of 10.0 \\(\\Omega\\) at 20 °C and a temperature coefficient of \\(4.0 \\times 10^{-3}\\) K<sup>-1</sup>. It is connected to 12 V. What power does it dissipate when its temperature has risen to 120 °C?",
             "options": [
-              "240 Ω",
-              "120 Ω",
-              "480 Ω",
-              "2.0 Ω",
-              "0.5 Ω"
+              "10.3 W",
+              "14.4 W",
+              "20.2 W",
+              "13.8 W",
+              "20.6 W"
             ],
             "correct": 0,
-            "solution": "From P = V² / R: R = V² / P = (120)² / 60 = 14400 / 60 = 240 Ω."
+            "solution": "\\(R = R_0(1 + \\alpha\\Delta T) = 10.0(1 + 0.004 \\times 100) = 14.0\\ \\Omega\\). \\(P = V^2/R = 144/14.0 = 10.3\\) W, less than the 14.4 W at 20 °C."
           },
           {
             "question": "What is an ohmic conductor?",
@@ -38451,16 +38451,16 @@ const subjects = [
             "solution": "In the SI system, the Ampere (A) is chosen as one of the seven fundamental base units (and the Coulomb is defined as a derived unit, 1 C = 1 A·s)."
           },
           {
-            "question": "A dielectric slab with dielectric constant κ = 4 is inserted between the plates of an isolated charged capacitor. What happens to the potential difference across the plates?",
+            "question": "A 2.0 \\(\\mu\\)F capacitor is charged to 300 V and then disconnected from the source. The plates are slowly pulled apart until the separation has doubled. How much work is done?",
             "options": [
-              "It decreases by a factor of 4",
-              "It increases by a factor of 4",
-              "It remains unchanged",
-              "It decreases to zero",
-              "It increases by a factor of 16"
+              "0.18 J",
+              "0.045 J",
+              "0.36 J",
+              "0.090 J",
+              "0"
             ],
-            "correct": 0,
-            "solution": "For an isolated capacitor, the charge Q remains constant. The capacitance increases by factor κ (C' = κC = 4C). Since V = Q / C, the new potential difference is V' = Q / (4C) = V / 4."
+            "correct": 3,
+            "solution": "Charge stays constant and \\(C\\) halves, so \\(U = Q^2/2C\\) doubles. \\(U_1 = \\tfrac{1}{2}(2.0 \\times 10^{-6})(300)^2 = 0.090\\) J, \\(U_2 = 0.18\\) J. The work done \\(= U_2 - U_1 = 0.090\\) J."
           },
           {
             "question": "What is the drift velocity of conduction electrons in a metal wire typically on the order of?",
@@ -38511,16 +38511,16 @@ const subjects = [
             "solution": "Kirchhoff's first law (Kirchhoff's Current Law, KCL) states that by conservation of electric charge, the algebraic sum of all electric currents entering and exiting any node (junction) in an electrical circuit is zero (Σ I = 0)."
           },
           {
-            "question": "Which of the following formulas can be used to calculate the magnitude of the electric field E generated by a point charge Q in a vacuum?",
+            "question": "A particle of mass 1.0 mg and charge \\(+2.0\\ \\mu\\text{C}\\) is released from rest at a point where the potential is 300 V. What is its speed when it reaches a point at 100 V?",
             "options": [
-              "E = k₀ · Q",
-              "E = k₀ · (Q / r)",
-              "E = Q / r²",
-              "E = k₀ · (Q / r²)",
-              "E = Q / r"
+              "34.6 m/s",
+              "28.3 m/s",
+              "14.1 m/s",
+              "400 m/s",
+              "283 m/s"
             ],
-            "correct": 3,
-            "solution": "By Coulomb's law, the electric field created by a point charge Q at a distance r in vacuum is given by E = k₀ · (|Q| / r²), where k₀ = 1 / (4πε₀)."
+            "correct": 1,
+            "solution": "A positive charge moves from high to low potential and gains \\(q\\Delta V = 2.0 \\times 10^{-6} \\times 200 = 4.0 \\times 10^{-4}\\) J. The mass is \\(1.0 \\times 10^{-6}\\) kg. \\(v = \\sqrt{2E_k/m} = \\sqrt{800} = 28.3\\) m/s."
           },
           {
             "question": "Let R₁ be the equivalent resistance of a network of three equal resistors of value x, where one is in series with the other two connected in parallel; let R₂ be the equivalent resistance of a network of three equal resistors of value y, where one is in parallel with the other two connected in series. What relation between x and y makes R₁ = R₂?",
@@ -38535,16 +38535,16 @@ const subjects = [
             "solution": "Calculate R₁:\nTwo resistors of resistance x in parallel have equivalent resistance x/2.\nIn series with the third resistor: R₁ = x + x/2 = (3/2)x.\n\nCalculate R₂:\nTwo resistors of resistance y in series have equivalent resistance 2y.\nIn parallel with the third resistor of resistance y:\nR₂ = (y · 2y) / (y + 2y) = (2y²) / (3y) = (2/3)y.\n\nSetting R₁ = R₂:\n(3/2)x = (2/3)y ⇒ x = (4/9)y."
           },
           {
-            "question": "Four capacitors C₁, C₂ of 8 μF and 12 μF respectively, are connected in series with each other, and in parallel with C₃ of 20 μF and C₄ of 5 μF. What is the equivalent capacitance of the system?",
+            "question": "A 10 \\(\\mu\\)F capacitor charged to 6.0 V is connected, with matching polarity, to a 20 \\(\\mu\\)F capacitor charged to 3.0 V. What is the common voltage?",
             "options": [
-              "29.8 μF",
-              "45 μF",
-              "29.8 mF",
-              "45 mF",
-              "24.8 μF"
+              "4.0 V",
+              "4.5 V",
+              "3.0 V",
+              "2.0 V",
+              "9.0 V"
             ],
             "correct": 0,
-            "solution": "Equivalent capacitance of C₁ and C₂ in series:\nC₁₂ = (C₁ × C₂) / (C₁ + C₂) = (8 × 12) / (8 + 12) = 96 / 20 = 4.8 μF.\nThese are connected in parallel with C₃ and C₄:\nC_eq = C₁₂ + C₃ + C₄ = 4.8 μF + 20 μF + 5 μF = 29.8 μF."
+            "solution": "Total charge: \\(10(6.0) + 20(3.0) = 120\\ \\mu\\)C. Total capacitance: \\(30\\ \\mu\\)F. \\(V = 120/30 = 4.0\\) V."
           },
           {
             "question": "Inside a conducting sphere of radius r uniformly charged (positively), a negative charge q is placed at a distance r/2 from the center. How does it move, if it moves at all?",
@@ -38649,16 +38649,16 @@ const subjects = [
             "solution": "F=qvB → B=F/(qv)=1.6×10⁻¹⁵/(1.6×10⁻¹⁹×10⁷)=10⁻³ T."
           },
           {
-            "question": "A wire of length 0.5 m carries 10 A perpendicular to a 0.4 T field. What is the magnetic force?",
+            "question": "A conducting rod of length 0.40 m slides at a constant 5.0 m/s on rails in a perpendicular field of 0.30 T. The circuit has a total resistance of 2.0 \\(\\Omega\\). What force is needed to keep the rod moving at constant speed?",
             "options": [
-              "1 N",
-              "2 N",
-              "3 N",
-              "4 N",
-              "5 N"
+              "0.6 N",
+              "0.036 N",
+              "0.072 N",
+              "0.018 N",
+              "0.36 N"
             ],
             "correct": 1,
-            "solution": "F=BIL=0.4×10×0.5=2 N."
+            "solution": "Emf \\(= BLv = 0.30 \\times 0.40 \\times 5.0 = 0.60\\) V. Current \\(= 0.60/2.0 = 0.30\\) A. Magnetic force \\(= BIL = 0.30 \\times 0.30 \\times 0.40 = 0.036\\) N, so the same force must be applied (Lenz's law)."
           },
           {
             "question": "The magnetic field inside a long straight solenoid depends on:",
@@ -38721,28 +38721,28 @@ const subjects = [
             "solution": "For ideal transformer: N_p/N_s=I_s/I_p → I_s=I_p×N_p/N_s=2×1000/100=20 A."
           },
           {
-            "question": "Lenz's law is a consequence of:",
+            "question": "A flat coil of 200 turns and area 25 cm<sup>2</sup> is perpendicular to a field that falls uniformly from 0.40 T to zero in 0.050 s. What emf is induced?",
             "options": [
-              "Conservation of energy",
-              "Conservation of momentum",
-              "Conservation of charge",
-              "Newton's third law",
-              "Coulomb's law"
-            ],
-            "correct": 0,
-            "solution": "Lenz's law (induced current opposes change) ensures energy conservation."
-          },
-          {
-            "question": "A metal rod of length 1 m moves at 5 m/s perpendicular to a 0.2 T field. What is the induced EMF?",
-            "options": [
-              "0.2 V",
-              "0.5 V",
-              "1.0 V",
-              "2.0 V",
-              "5.0 V"
+              "0.020 V",
+              "0.80 V",
+              "4.0 V",
+              "400 V",
+              "8.0 V"
             ],
             "correct": 2,
-            "solution": "ε=BLv=0.2×1×5=1.0 V."
+            "solution": "Flux change per turn: \\(0.40 \\times 25 \\times 10^{-4} = 1.0 \\times 10^{-3}\\) Wb. \\(\\varepsilon = N\\Delta\\Phi/\\Delta t = 200 \\times 1.0 \\times 10^{-3}/0.050 = 4.0\\) V."
+          },
+          {
+            "question": "Two long parallel wires 5.0 cm apart carry currents of 10 A and 20 A in the same direction. What is the force per unit length between them? (\\(\\mu_0 = 4\\pi \\times 10^{-7}\\) T m/A)",
+            "options": [
+              "\\(8.0 \\times 10^{-4}\\) N/m, attractive",
+              "\\(8.0 \\times 10^{-4}\\) N/m, repulsive",
+              "\\(4.0 \\times 10^{-3}\\) N/m, attractive",
+              "\\(1.6 \\times 10^{-3}\\) N/m, attractive",
+              "\\(4.0 \\times 10^{-4}\\) N/m, attractive"
+            ],
+            "correct": 0,
+            "solution": "\\(F/L = \\dfrac{\\mu_0I_1I_2}{2\\pi d} = \\dfrac{2 \\times 10^{-7} \\times 10 \\times 20}{0.050} = 8.0 \\times 10^{-4}\\) N/m. Currents in the same direction attract."
           },
           {
             "question": "A coil of 100 turns experiences a flux change from 0.02 Wb to 0.08 Wb in 0.5 s. What is the induced EMF?",
@@ -38757,52 +38757,52 @@ const subjects = [
             "solution": "ε=−NΔΦ/Δt=−100×(0.08−0.02)/0.5=−100×0.12=−12 V. Magnitude=12 V."
           },
           {
-            "question": "The self-inductance of a solenoid increases if:",
+            "question": "A solenoid has 800 turns over a length of 0.40 m and carries a current of 2.0 A. What is the magnetic flux density inside it? (\\(\\mu_0 = 4\\pi \\times 10^{-7}\\) T m/A)",
             "options": [
-              "Length increases",
-              "Number of turns decreases",
-              "Cross-sectional area decreases",
-              "Core permeability increases",
-              "Current decreases"
+              "0.00251 T",
+              "0.0101 T",
+              "0.00201 T",
+              "0.00503 T",
+              "0.0201 T"
             ],
             "correct": 3,
-            "solution": "L=μ₀μ_rN²A/l. Higher permeability (μ_r) increases L."
+            "solution": "\\(n = 800/0.40 = 2000\\) turns/m. \\(B = \\mu_0nI = 4\\pi \\times 10^{-7} \\times 2000 \\times 2.0 = 0.00503\\) T."
           },
           {
-            "question": "In an AC circuit with inductor L, the current lags the voltage by:",
+            "question": "Protons pass undeflected through crossed fields of \\(E = 5.0 \\times 10^{3}\\) V/m and \\(B = 0.020\\) T. They then enter a region with only a field of 0.50 T. What is the radius of their circular path?",
             "options": [
-              "0°",
-              "30°",
-              "45°",
-              "60°",
-              "90°"
+              "130 mm",
+              "0.21 mm",
+              "26 mm",
+              "5.2 mm",
+              "0.52 mm"
+            ],
+            "correct": 3,
+            "solution": "Undeflected: \\(qE = qvB\\), so \\(v = E/B = 5000/0.020 = 2.5 \\times 10^5\\) m/s. Then \\(r = mv/(qB) = 1.67 \\times 10^{-27}(2.5 \\times 10^5)/(1.6 \\times 10^{-19} \\times 0.50) = 0.00522\\) m \\(= 5.2\\) mm."
+          },
+          {
+            "question": "A proton moves in a circle of radius 0.20 m in a magnetic field of 0.50 T. What is its kinetic energy in MeV? (\\(m_p = 1.67 \\times 10^{-27}\\) kg, \\(1\\ \\text{MeV} = 1.6 \\times 10^{-13}\\) J)",
+            "options": [
+              "0.96 MeV",
+              "0.48 MeV",
+              "0.24 MeV",
+              "1.9 MeV",
+              "4.8 MeV"
+            ],
+            "correct": 1,
+            "solution": "\\(r = mv/(qB)\\), so \\(v = qBr/m = 1.6 \\times 10^{-19}(0.50)(0.20)/1.67 \\times 10^{-27} = 9.58 × 10<sup>6</sup>\\) m/s. \\(E_k = \\tfrac{1}{2}mv^2 = 7.7 \\times 10^{-14}\\) J \\(= 0.48\\) MeV."
+          },
+          {
+            "question": "A generator coil of 100 turns and area 0.020 m<sup>2</sup> rotates at 50 Hz in a field of 0.30 T. What is the rms emf?",
+            "options": [
+              "188 V",
+              "21.2 V",
+              "267 V",
+              "94.2 V",
+              "133 V"
             ],
             "correct": 4,
-            "solution": "In a pure inductor, current lags voltage by 90°."
-          },
-          {
-            "question": "An RLC series circuit is at resonance when:",
-            "options": [
-              "X_L=0",
-              "X_C=0",
-              "X_L=X_C",
-              "R=0",
-              "Z=0"
-            ],
-            "correct": 2,
-            "solution": "At resonance, inductive reactance equals capacitive reactance: X_L=X_C."
-          },
-          {
-            "question": "A 50 Hz AC voltage is applied to a 0.1 H inductor. What is the inductive reactance?",
-            "options": [
-              "5 Ω",
-              "10 Ω",
-              "15.7 Ω",
-              "31.4 Ω",
-              "50 Ω"
-            ],
-            "correct": 3,
-            "solution": "X_L=2πfL=2π×50×0.1=31.4 Ω."
+            "solution": "\\(\\omega = 2\\pi \\times 50 = 314\\) rad/s. Peak emf \\(= NBA\\omega = 100 \\times 0.30 \\times 0.020 \\times 314 = 188\\) V. \\(\\varepsilon_{\\text{rms}} = 188/\\sqrt{2} = 133\\) V."
           },
           {
             "question": "A capacitor of 10 μF is connected to 50 Hz AC supply. What is the capacitive reactance?",
@@ -38817,16 +38817,16 @@ const subjects = [
             "solution": "X_C=1/(2πfC)=1/(2π×50×10×10⁻⁶)=1/(3.14×10⁻³)=318 Ω."
           },
           {
-            "question": "The RMS value of a sinusoidal voltage with peak value 311 V is approximately:",
+            "question": "A straight wire 0.30 m long carries 4.0 A in a uniform field of 0.50 T. The wire makes an angle of 30° with the field. What is the force on it?",
             "options": [
-              "110 V",
-              "220 V",
-              "311 V",
-              "440 V",
-              "622 V"
+              "0.30 N",
+              "0.60 N",
+              "0.52 N",
+              "0.15 N",
+              "1.2 N"
             ],
-            "correct": 1,
-            "solution": "V_rms=V_peak/√2=311/1.414≈220 V."
+            "correct": 0,
+            "solution": "\\(F = BIL\\sin\\theta = 0.50 \\times 4.0 \\times 0.30 \\times \\sin 30^{\\circ} = 0.30\\) N."
           },
           {
             "question": "A 100-turn coil rotates at 50 rev/s in a 0.5 T field. If area is 0.02 m², what is the maximum induced EMF?",
@@ -39159,28 +39159,28 @@ const subjects = [
             "solution": "Gay-Lussac's law: P₁/T₁ = P₂/T₂. P₂ = P₁ × T₂/T₁ = 100 × 600/300 = 200 kPa."
           },
           {
-            "question": "A metal rod of length 1 m expands by 0.001 m when heated from 20°C to 100°C. What is its coefficient of linear expansion?",
+            "question": "A thermometer bulb holds \\(0.50\\) cm<sup>3</sup> of mercury (\\(\\beta = 1.8 \\times 10^{-4}\\) K<sup>-1</sup>) in a glass bulb (\\(\\beta = 2.7 \\times 10^{-5}\\) K<sup>-1</sup>). The temperature rises by 50 K. What volume of mercury is pushed up the stem?",
             "options": [
-              "1.0 × 10⁻⁵ /°C",
-              "1.25 × 10⁻⁵ /°C",
-              "1.5 × 10⁻⁵ /°C",
-              "2.0 × 10⁻⁵ /°C",
-              "2.5 × 10⁻⁵ /°C"
+              "0.0045 cm<sup>3</sup>",
+              "0.00383 cm<sup>3</sup>",
+              "6.75 × 10<sup>-4</sup> cm<sup>3</sup>",
+              "0.00518 cm<sup>3</sup>",
+              "0.0383 cm<sup>3</sup>"
             ],
             "correct": 1,
-            "solution": "α = ΔL/(L₀ΔT) = 0.001/(1 × 80) = 1.25 × 10⁻⁵ /°C."
+            "solution": "The glass bulb also expands, so only the <b>difference</b> is pushed up: \\(\\Delta V = V(\\beta_{\\text{Hg}} - \\beta_{\\text{glass}})\\Delta T = 0.50(1.53 \\times 10^{-4})(50) = 0.00383\\) cm<sup>3</sup>."
           },
           {
-            "question": "What is the pressure at the bottom of a lake 10 m deep? (ρ = 1000 kg/m³, g = 10 m/s², atmospheric pressure = 10⁵ Pa)",
+            "question": "A temperature of \\(-40\\) °C is equal to the same number in degrees Fahrenheit. What is it in kelvin?",
             "options": [
-              "1 × 10⁵ Pa",
-              "1.5 × 10⁵ Pa",
-              "2 × 10⁵ Pa",
-              "2.5 × 10⁵ Pa",
-              "3 × 10⁵ Pa"
+              "313 K",
+              "-40 K",
+              "233 K",
+              "273 K",
+              "-233 K"
             ],
             "correct": 2,
-            "solution": "P = P₀ + ρgh = 10⁵ + 1000 × 10 × 10 = 10⁵ + 10⁵ = 2 × 10⁵ Pa."
+            "solution": "\\(T = \\theta + 273 = -40 + 273 = 233\\) K. (Check: \\(\\tfrac{9}{5}(-40) + 32 = -40\\).)"
           },
           {
             "question": "A gas at 300 K and 1 atm is compressed to half its volume at constant temperature. What is the new pressure?",
@@ -39207,16 +39207,16 @@ const subjects = [
             "solution": "Boyle's law: P∝1/V at constant T. V halves → P doubles to 2 atm."
           },
           {
-            "question": "A Carnot engine operates between 600 K and 300 K. What is its maximum efficiency?",
+            "question": "A Carnot engine works between 500 K and 300 K and does 1200 J of work per cycle. How much heat does it reject to the cold reservoir per cycle?",
             "options": [
-              "25%",
-              "50%",
-              "75%",
-              "100%",
-              "33%"
+              "3000 J",
+              "1200 J",
+              "720 J",
+              "1800 J",
+              "800 J"
             ],
-            "correct": 1,
-            "solution": "η=1−T_c/T_h=1−300/600=0.5=50%."
+            "correct": 3,
+            "solution": "\\(\\eta = 1 - 300/500 = 0.40\\). Heat input \\(= W/\\eta = 1200/0.40 = 3000\\) J. Heat rejected \\(= 3000 - 1200 = 1800\\) J."
           },
           {
             "question": "What is the internal energy change of an ideal gas heated from 300 K to 400 K? (n=2 mol, C_v=3R/2)",
@@ -39231,28 +39231,28 @@ const subjects = [
             "solution": "ΔU=nC_vΔT=2×(3×8.314/2)×100=2494 J."
           },
           {
-            "question": "A heat engine absorbs 2000 J and rejects 1200 J. What is its efficiency?",
+            "question": "A monatomic ideal gas (\\(\\gamma = 5/3\\)) at \\(1.0 \\times 10^{5}\\) Pa and 4.0 L is compressed adiabatically to 1.0 L. What is the final pressure?",
             "options": [
-              "20%",
-              "30%",
-              "40%",
-              "50%",
-              "60%"
+              "4 × 10<sup>5</sup> Pa",
+              "1.01 × 10<sup>6</sup> Pa",
+              "6.96 × 10<sup>5</sup> Pa",
+              "1.6 × 10<sup>6</sup> Pa",
+              "1.01 × 10<sup>5</sup> Pa"
             ],
-            "correct": 2,
-            "solution": "η=W/Q_h=(2000−1200)/2000=800/2000=0.4=40%."
+            "correct": 1,
+            "solution": "For an adiabatic change \\(pV^{\\gamma}\\) is constant: \\(p_2 = p_1(V_1/V_2)^{5/3} = 1.0 \\times 10^5 \\times 4^{5/3} = 1.01 × 10<sup>6</sup>\\) Pa. An isothermal compression would only give \\(4.0 \\times 10^{5}\\) Pa."
           },
           {
-            "question": "During an adiabatic process, which quantity remains constant?",
+            "question": "A heat engine takes in 1200 J of heat per cycle. On a \\(p\\)-\\(V\\) diagram its cycle is a triangle with a base of 3.0 L and a height of \\(2.0 \\times 10^{5}\\) Pa. What is its efficiency?",
             "options": [
-              "Temperature",
-              "Pressure",
-              "Volume",
-              "Entropy",
-              "No heat is exchanged"
+              "50%",
+              "12.5%",
+              "75%",
+              "33%",
+              "25%"
             ],
             "correct": 4,
-            "solution": "Adiabatic means no heat transfer (Q=0)."
+            "solution": "Net work = area of the triangle \\(= \\tfrac{1}{2}(3.0 \\times 10^{-3})(2.0 \\times 10^5) = 300\\) J. \\(\\eta = 300/1200 = 25\\%\\)."
           },
           {
             "question": "An ideal gas expands at constant pressure from 1 L to 3 L. If it does 200 J of work, what is the pressure?",
@@ -39279,52 +39279,52 @@ const subjects = [
             "solution": "ΔU=Q−W expresses conservation of energy."
           },
           {
-            "question": "A refrigerator has COP 4. If it removes 800 J from cold reservoir, how much work is required?",
+            "question": "A 1.5 kW electric heater with an efficiency of 80% heats 2.0 kg of water from 15 °C to 65 °C. How long does it take? (\\(c_{\\text{water}} = 4200\\) J kg<sup>-1</sup> K<sup>-1</sup>)",
             "options": [
-              "100 J",
-              "200 J",
-              "400 J",
-              "800 J",
-              "1600 J"
+              "280 s",
+              "224 s",
+              "5.83 s",
+              "350 s",
+              "455 s"
             ],
-            "correct": 1,
-            "solution": "COP=Q_c/W → W=Q_c/COP=800/4=200 J."
+            "correct": 3,
+            "solution": "Energy needed: \\(mc\\Delta T = 2.0 \\times 4200 \\times 50 = 420\\,000\\) J. Useful power: \\(0.80 \\times 1500 = 1200\\) W. \\(t = 420\\,000/1200 = 350\\) s."
           },
           {
-            "question": "In an isochoric process, which quantity is zero?",
+            "question": "Helium (\\(M = 4\\) g/mol) and oxygen (\\(M = 32\\) g/mol) are at the same temperature. What is the ratio of the rms speed of helium atoms to that of oxygen molecules?",
             "options": [
-              "Heat transfer",
-              "Internal energy change",
-              "Work done",
-              "Pressure change",
-              "Temperature change"
+              "2.83",
+              "8",
+              "4",
+              "1",
+              "0.354"
             ],
-            "correct": 2,
-            "solution": "Isochoric: constant volume → W=PΔV=0."
+            "correct": 0,
+            "solution": "\\(c_{\\text{rms}} = \\sqrt{3RT/M}\\), so \\(c_{He}/c_{O_2} = \\sqrt{M_{O_2}/M_{He}} = \\sqrt{32/4} = \\sqrt{8} = 2.83\\)."
           },
           {
-            "question": "A diatomic ideal gas has C_p/C_v ratio of approximately:",
+            "question": "0.50 mol of an ideal gas occupies 12 L at 27 °C. What is its pressure? (\\(R = 8.31\\) J mol<sup>-1</sup> K<sup>-1</sup>)",
             "options": [
-              "1.2",
-              "1.4",
-              "1.6",
-              "1.8",
-              "2.0"
+              "9.35 kPa",
+              "0.104 kPa",
+              "51.9 kPa",
+              "104 kPa",
+              "1040 kPa"
             ],
-            "correct": 1,
-            "solution": "For diatomic gas: γ=C_p/C_v≈1.4."
+            "correct": 3,
+            "solution": "Use kelvin and cubic metres: \\(T = 300\\) K, \\(V = 0.012\\) m<sup>3</sup>. \\(p = nRT/V = 0.50 \\times 8.31 \\times 300/0.012 = 1.04 × 10<sup>5</sup>\\) Pa \\(= 104\\) kPa."
           },
           {
-            "question": "What is the entropy change when 1 kg of ice at 0°C melts? (L_f=334 kJ/kg)",
+            "question": "2.0 mol of an ideal gas at 300 K expands isothermally from 10 L to 40 L. How much heat does it absorb? (\\(R = 8.31\\) J mol<sup>-1</sup> K<sup>-1</sup>)",
             "options": [
-              "334 J/K",
-              "1000 J/K",
-              "1223 J/K",
-              "3340 J/K",
-              "12230 J/K"
+              "6.91 kJ",
+              "19.9 kJ",
+              "11.5 kJ",
+              "0 kJ",
+              "3.46 kJ"
             ],
-            "correct": 2,
-            "solution": "ΔS=Q/T=mL/T=334000/273=1223 J/K."
+            "correct": 0,
+            "solution": "For an isothermal expansion \\(\\Delta U = 0\\), so \\(Q = W = nRT\\ln(V_2/V_1) = 2.0 \\times 8.31 \\times 300 \\times \\ln 4 = 6910\\) J \\(= 6.9\\) kJ."
           },
           {
             "question": "An ideal gas undergoes free expansion into vacuum. What happens to its temperature?",
@@ -39339,16 +39339,16 @@ const subjects = [
             "solution": "Free expansion is adiabatic and no work is done. For ideal gas, internal energy unchanged → T constant."
           },
           {
-            "question": "A heat pump has COP 5. How much heat is delivered to the hot reservoir per 100 J of work?",
+            "question": "100 g of a metal at 100 °C is dropped into 200 g of water at 20 °C. The final temperature is 24 °C. What is the specific heat capacity of the metal? (\\(c_{\\text{water}} = 4200\\) J kg<sup>-1</sup> K<sup>-1</sup>)",
             "options": [
-              "100 J",
-              "300 J",
-              "500 J",
-              "600 J",
-              "1000 J"
+              "442 J kg<sup>-1</sup> K<sup>-1</sup>",
+              "336 J kg<sup>-1</sup> K<sup>-1</sup>",
+              "2650 J kg<sup>-1</sup> K<sup>-1</sup>",
+              "221 J kg<sup>-1</sup> K<sup>-1</sup>",
+              "884 J kg<sup>-1</sup> K<sup>-1</sup>"
             ],
-            "correct": 3,
-            "solution": "COP=Q_h/W → Q_h=COP×W=5×100=500 J. Wait for heat pump COP is heating COP=Q_h/W. So 500 J."
+            "correct": 0,
+            "solution": "Heat gained by water: \\(0.200 \\times 4200 \\times 4 = 3360\\) J. Heat lost by metal: \\(0.100 \\times c \\times 76\\). So \\(c = 3360/7.6 = 442\\) J kg<sup>-1</sup> K<sup>-1</sup>."
           },
           {
             "question": "The efficiency of a real heat engine is always:",
@@ -39363,16 +39363,16 @@ const subjects = [
             "solution": "Real engines have irreversibilities, so η_real < η_Carnot."
           },
           {
-            "question": "In a PV diagram, the area under the curve represents:",
+            "question": "A gas expands at a constant pressure of \\(1.5 \\times 10^{5}\\) Pa from 2.0 L to 5.0 L while absorbing 800 J of heat. What is the change in its internal energy?",
             "options": [
-              "Temperature",
-              "Heat",
-              "Work done",
-              "Internal energy",
-              "Entropy"
+              "450 J",
+              "1250 J",
+              "350 J",
+              "800 J",
+              "-350 J"
             ],
             "correct": 2,
-            "solution": "W=∫PdV, which is the area under the PV curve."
+            "solution": "\\(W = p\\Delta V = 1.5 \\times 10^5 \\times 3.0 \\times 10^{-3} = 450\\) J. \\(\\Delta U = Q - W = 800 - 450 = 350\\) J."
           },
           {
             "question": "A gas is heated at constant volume. What happens to its pressure?",
@@ -39387,16 +39387,16 @@ const subjects = [
             "solution": "Charles' law at constant V: P∝T. Temperature increases → pressure increases."
           },
           {
-            "question": "For an ideal gas, C_p − C_v equals:",
+            "question": "A fixed mass of gas at \\(2.0 \\times 10^{5}\\) Pa, 4.0 L and 300 K is heated to 450 K while its volume is changed to 5.0 L. What is the new pressure?",
             "options": [
-              "R",
-              "2R",
-              "R/2",
-              "γR",
-              "0"
+              "3.75 × 10<sup>5</sup> Pa",
+              "2.4 × 10<sup>5</sup> Pa",
+              "1.6 × 10<sup>5</sup> Pa",
+              "3 × 10<sup>5</sup> Pa",
+              "1.07 × 10<sup>5</sup> Pa"
             ],
-            "correct": 0,
-            "solution": "Mayer's relation: C_p−C_v=R for ideal gas."
+            "correct": 1,
+            "solution": "\\(\\dfrac{p_1V_1}{T_1} = \\dfrac{p_2V_2}{T_2}\\), so \\(p_2 = p_1\\dfrac{V_1}{V_2}\\dfrac{T_2}{T_1} = 2.0 \\times 10^5 \\times 0.80 \\times 1.5 = 2.4 × 10<sup>5</sup>\\) Pa."
           },
           {
             "question": "An engine operates on a cycle and returns to its initial state. What is the net change in internal energy?",
@@ -39411,16 +39411,16 @@ const subjects = [
             "solution": "Internal energy is a state function. For a cycle, ΔU=0."
           },
           {
-            "question": "The triple point of water is at:",
+            "question": "A 0.25 kg block of copper (\\(c = 390\\) J kg<sup>-1</sup> K<sup>-1</sup>) at 200 °C is dropped into 0.80 kg of water at 20 °C in a 0.10 kg aluminium calorimeter (\\(c = 900\\)). What is the final temperature?",
             "options": [
-              "0°C",
-              "4°C",
-              "273.16 K",
-              "373.15 K",
-              "100 K"
+              "25.1 °C",
+              "24.9 °C",
+              "110 °C",
+              "49.9 °C",
+              "175 °C"
             ],
-            "correct": 2,
-            "solution": "Triple point of water=273.16 K (0.01°C)."
+            "correct": 1,
+            "solution": "Heat lost by the copper = heat gained by the water and calorimeter: \\(97.5(200 - T) = (3360 + 90)(T - 20)\\). So \\(19\\,500 + 69\\,000 = 3547.5T\\) and \\(T = 24.9\\) °C. Leaving out the calorimeter gives 24.8 °C, which is slightly wrong."
           },
           {
             "question": "During an isothermal expansion of an ideal gas, which statement is true?",
@@ -39459,16 +39459,16 @@ const subjects = [
             "solution": "Carnot efficiency is given by η = 1 - (T_C / T_H) = 1 - (300 / 500) = 1 - 0.60 = 0.40 = 40%."
           },
           {
-            "question": "How much heat energy is required to raise the temperature of 2.0 kg of water from 20 °C to 70 °C? (Specific heat capacity of water c = 4184 J/(kg·K))",
+            "question": "2.0 kg of water at 80 °C, 3.0 kg of water at 20 °C and 5.0 kg of water at 40 °C are mixed in an insulated container. What is the final temperature?",
             "options": [
-              "418.4 kJ",
-              "209.2 kJ",
-              "836.8 kJ",
-              "104.6 kJ",
-              "500 kJ"
+              "47 °C",
+              "40 °C",
+              "60 °C",
+              "42 °C",
+              "33 °C"
             ],
-            "correct": 0,
-            "solution": "Heat required Q = m c ΔT = 2.0 kg × 4184 J/(kg·K) × (70 - 20) K = 2.0 × 4184 × 50 = 100 × 4184 = 418,400 J = 418.4 kJ."
+            "correct": 3,
+            "solution": "Because the specific heat is the same, \\(T = \\dfrac{2.0(80) + 3.0(20) + 5.0(40)}{10} = \\dfrac{160 + 60 + 200}{10} = 42\\) °C."
           },
           {
             "question": "In an isobaric expansion at a constant pressure of 2.0 × 10⁵ Pa, an ideal gas expands from a volume of 0.010 m³ to 0.030 m³. How much work is done by the gas?",
@@ -39507,16 +39507,16 @@ const subjects = [
             "solution": "An adiabatic process is one in which the system is thermally insulated from its environment or the process occurs so rapidly that no heat enters or leaves the system: Q = 0. Therefore, ΔU = -W."
           },
           {
-            "question": "What is absolute zero on the Celsius scale?",
+            "question": "Steel rails 25 m long are laid at 10 °C. The highest temperature expected is 45 °C (\\(\\alpha = 1.2 \\times 10^{-5}\\) K<sup>-1</sup>). What is the minimum expansion gap needed for each rail?",
             "options": [
-              "-273.15 °C",
-              "0 °C",
-              "-100 °C",
-              "-459.67 °C",
-              "-212 °C"
+              "1.05 mm",
+              "3 mm",
+              "21 mm",
+              "368 mm",
+              "10.5 mm"
             ],
-            "correct": 0,
-            "solution": "Absolute zero (0 K) is the thermodynamic lower limit of temperature where all classical molecular kinetic motion ceases. On the Celsius scale, it corresponds to -273.15 °C (T_C = T_K - 273.15)."
+            "correct": 4,
+            "solution": "\\(\\Delta L = \\alpha L_0\\Delta T = 1.2 \\times 10^{-5} \\times 25 \\times 35 = 0.0105\\) m \\(= 10.5\\) mm."
           },
           {
             "question": "During an isochoric (isovolumetric) heating process, what is the work done by the gas?",
@@ -39531,28 +39531,28 @@ const subjects = [
             "solution": "In an isochoric process, the volume remains constant (ΔV = 0). Because work done by a gas is W = ∫ P dV, when dV = 0, no mechanical work is performed: W = 0 J."
           },
           {
-            "question": "How much heat is required to completely melt 0.50 kg of ice at 0 °C into liquid water at 0 °C? (Latent heat of fusion of water L_f = 3.34 × 10⁵ J/kg)",
+            "question": "0.10 kg of ice at \\(-10\\) °C is added to 0.50 kg of water at 30 °C (\\(c_{\\text{ice}} = 2100\\), \\(L_f = 3.34 \\times 10^{5}\\) J/kg). What is the final temperature?",
             "options": [
-              "167 kJ",
-              "334 kJ",
-              "668 kJ",
-              "83.5 kJ",
-              "209 kJ"
+              "28.3 °C",
+              "10.9 °C",
+              "0.0 °C",
+              "23.3 °C",
+              "21.8 °C"
             ],
-            "correct": 0,
-            "solution": "Heat for phase change without temperature change: Q = m L_f = 0.50 kg × (3.34 × 10⁵ J/kg) = 1.67 × 10⁵ J = 167 kJ."
+            "correct": 1,
+            "solution": "Heat to warm and melt the ice: \\(0.10(2100)(10) + 0.10(3.34 \\times 10^5) = 35\\,500\\) J. The water can give up \\(0.50(4200)(30) = 63\\,000\\) J cooling to 0 °C, so all the ice melts. The remaining \\(27\\,500\\) J warms 0.60 kg: \\(T = 27\\,500/(0.60 \\times 4200) = 10.9\\) °C."
           },
           {
-            "question": "Which mode of heat transfer can occur through a complete vacuum without requiring any physical medium?",
+            "question": "A 60 kg person (\\(c = 3500\\) J kg<sup>-1</sup> K<sup>-1</sup>) produces heat at 100 W. If none of it escaped, by how much would the body temperature rise in one hour?",
             "options": [
-              "Thermal radiation",
-              "Conduction",
-              "Convection",
-              "Evaporation",
-              "Advection"
+              "1.71 K",
+              "0.0286 K",
+              "103 K",
+              "3.43 K",
+              "0.857 K"
             ],
             "correct": 0,
-            "solution": "Thermal radiation transfers heat via electromagnetic waves (primarily infrared radiation) and does not require any material medium, which is how solar energy travels across the vacuum of space to Earth. Conduction and convection require matter."
+            "solution": "Energy in one hour: \\(100 \\times 3600 = 3.6 \\times 10^{5}\\) J. \\(\\Delta T = Q/mc = 3.6 \\times 10^{5}/(60 \\times 3500) = 1.71\\) K. This shows why the body must lose heat constantly."
           },
           {
             "question": "What does the Zeroth Law of Thermodynamics define?",
@@ -40857,52 +40857,52 @@ const subjects = [
             "solution": "Pascal: F₁/A₁=F₂/A₂. F₂=2000×10=20000 N. F₁=20000×0.01/0.5=400 N."
           },
           {
-            "question": "What is the pressure at 20 m depth in water? (ρ=1000 kg/m³, g=10 m/s², P₀=10⁵ Pa)",
+            "question": "A rectangular dam wall is 100 m wide and holds back water to a depth of 12 m. What is the total force of the water on the wall? (\\(\\rho = 1000\\) kg/m<sup>3</sup>, \\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "1×10⁵ Pa",
-              "2×10⁵ Pa",
-              "3×10⁵ Pa",
-              "4×10⁵ Pa",
-              "5×10⁵ Pa"
-            ],
-            "correct": 2,
-            "solution": "P=P₀+ρgh=10⁵+1000×10×20=3×10⁵ Pa."
-          },
-          {
-            "question": "A block of density 600 kg/m³ floats in water. What fraction is submerged?",
-            "options": [
-              "30%",
-              "40%",
-              "50%",
-              "60%",
-              "70%"
+              "1.41 × 10<sup>8</sup> N",
+              "1.18 × 10<sup>7</sup> N",
+              "3.53 × 10<sup>7</sup> N",
+              "7.06 × 10<sup>7</sup> N",
+              "1.18 × 10<sup>5</sup> N"
             ],
             "correct": 3,
-            "solution": "Fraction=ρ_obj/ρ_water=600/1000=0.6=60%."
+            "solution": "The pressure rises linearly from 0 to \\(\\rho gh\\), so the average is \\(\\tfrac{1}{2}\\rho gh = 58\\,800\\) Pa. The wall area is \\(12 \\times 100 = 1200\\) m<sup>2</sup>. \\(F = 58\\,800 \\times 1200 = 7.06 × 10<sup>7</sup>\\) N."
           },
           {
-            "question": "Water flows in a pipe radius 2 cm at 1 m/s. What is the flow rate in m³/s?",
+            "question": "Ice has a density of 917 kg/m<sup>3</sup> and sea water 1025 kg/m<sup>3</sup>. What fraction of an iceberg's volume is above the surface?",
             "options": [
-              "1.26×10⁻⁴",
-              "2.51×10⁻⁴",
-              "3.14×10⁻⁴",
-              "6.28×10⁻⁴",
-              "1.26×10⁻³"
+              "10.5%",
+              "89.5%",
+              "11.8%",
+              "50.0%",
+              "1.05%"
             ],
             "correct": 0,
-            "solution": "Q=Av=π×(0.02)²×1=1.26×10⁻⁴ m³/s."
+            "solution": "A floating body displaces its own weight: the submerged fraction is \\(917/1025 = 89.5\\%\\). So the fraction above the surface is \\(1 - 0.895 = 10.5\\%\\)."
           },
           {
-            "question": "According to Bernoulli, where fluid velocity is higher, pressure is:",
+            "question": "Fatty deposits narrow an artery so that its radius is 10% smaller. By what percentage must the pressure difference across it increase to keep the same blood flow rate (laminar flow)?",
             "options": [
-              "Higher",
-              "Lower",
-              "Same",
-              "Zero",
-              "Maximum"
+              "10%",
+              "23%",
+              "19%",
+              "100%",
+              "52%"
             ],
-            "correct": 1,
-            "solution": "Bernoulli: P+½ρv²=const. Higher v means lower P."
+            "correct": 4,
+            "solution": "Poiseuille: \\(Q \\propto r^4\\Delta p\\). For the same \\(Q\\), \\(\\Delta p \\propto 1/r^4\\). With \\(r\\) now \\(0.90r\\): \\(\\Delta p\\) increases by \\(1/0.90^4 = 1.52\\), so by 52%."
+          },
+          {
+            "question": "Air flows at 60 m/s over the top of a wing and 50 m/s under it. The wing has an area of 16 m<sup>2</sup> and the air density is 1.2 kg/m<sup>3</sup>. What is the lift force?",
+            "options": [
+              "192 N",
+              "960 N",
+              "10600 N",
+              "58600 N",
+              "5280 N"
+            ],
+            "correct": 2,
+            "solution": "\\(\\Delta p = \\tfrac{1}{2}\\rho(v_{\\text{top}}^2 - v_{\\text{under}}^2) = 0.6(3600 - 2500) = 660\\) Pa. Lift \\(= \\Delta p \\times A = 660 \\times 16 = 10600\\) N."
           },
           {
             "question": "An object weighs 50 N in air and 30 N submerged in water. What is its density?",
@@ -40917,16 +40917,16 @@ const subjects = [
             "solution": "Buoyancy=20 N. V=20/(1000×10)=2×10⁻³ m³. Mass=5 kg. ρ=5/2×10⁻³=2500 kg/m³."
           },
           {
-            "question": "A soap bubble radius 5 cm has surface tension 0.04 N/m. What is the excess pressure?",
+            "question": "A metal object weighs 8.0 N in air and 6.8 N when fully submerged in water. What is the density of the metal? (water \\(\\rho = 1000\\) kg/m<sup>3</sup>)",
             "options": [
-              "1.6 Pa",
-              "3.2 Pa",
-              "4.8 Pa",
-              "6.4 Pa",
-              "8.0 Pa"
+              "5670 kg/m<sup>3</sup>",
+              "1180 kg/m<sup>3</sup>",
+              "150 kg/m<sup>3</sup>",
+              "13300 kg/m<sup>3</sup>",
+              "6670 kg/m<sup>3</sup>"
             ],
-            "correct": 1,
-            "solution": "ΔP=4γ/r=4×0.04/0.05=3.2 Pa."
+            "correct": 4,
+            "solution": "Buoyant force \\(= 8.0 - 6.8 = 1.2\\) N \\(= \\rho_w g V\\). The weight is \\(\\rho_m g V\\). So \\(\\rho_m/\\rho_w = 8.0/1.2\\) and \\(\\rho_m = 6670\\) kg/m<sup>3</sup>."
           },
           {
             "question": "Water rises 6 cm in a capillary of radius 0.2 mm. What is surface tension? (ρ=1000, g=10)",
@@ -40941,52 +40941,52 @@ const subjects = [
             "solution": "γ=hρgr/(2)=0.06×1000×10×2×10⁻⁴/2=0.06 N/m."
           },
           {
-            "question": "A hydraulic press has pistons 5 cm² and 500 cm². A force of 100 N on the small piston lifts:",
+            "question": "A submarine of volume 500 m<sup>3</sup> and mass \\(4.8 \\times 10^{5}\\) kg floats at the surface with all of its volume submerged except for a negligible part. What is the minimum mass of sea water (\\(\\rho = 1030\\) kg/m<sup>3</sup>) it must take on as ballast to hover under water?",
             "options": [
-              "1000 N",
-              "5000 N",
-              "10000 N",
-              "15000 N",
-              "20000 N"
+              "35000 kg",
+              "5.15 × 10<sup>5</sup> kg",
+              "4.8 × 10<sup>5</sup> kg",
+              "70000 kg",
+              "3500 kg"
             ],
-            "correct": 2,
-            "solution": "F₂=F₁×A₂/A₁=100×500/5=10000 N."
+            "correct": 0,
+            "solution": "To hover, its average density must equal that of sea water: total mass \\(= 1030 \\times 500 = 5.15 \\times 10^{5}\\) kg. It already has \\(4.8 \\times 10^{5}\\) kg, so it needs \\(35000\\) kg more."
           },
           {
-            "question": "What is gauge pressure at the bottom of a 3 m pool? (ρ=1000, g=10)",
+            "question": "A hydraulic lift raises a 1500 kg car on a piston of diameter 0.40 m. The small piston has a diameter of 0.040 m. What force on the small piston is needed? (\\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "10 kPa",
-              "20 kPa",
-              "30 kPa",
-              "40 kPa",
-              "50 kPa"
+              "1470 N",
+              "14.7 N",
+              "1.47 N",
+              "147 N",
+              "14 700 N"
             ],
-            "correct": 2,
-            "solution": "P=ρgh=1000×10×3=30000 Pa=30 kPa."
+            "correct": 3,
+            "solution": "The area ratio is \\((0.040/0.40)^2 = 1/100\\). \\(F_1 = F_2(A_1/A_2) = 1500 \\times 9.8/100 = 147\\) N."
           },
           {
-            "question": "An iceberg (ρ=920) floats in seawater (ρ=1025). What percentage is above water?",
+            "question": "A cubic wooden block of side 0.20 m and density 600 kg/m<sup>3</sup> floats in water. What is the smallest mass that, placed on top, will just make it sink completely? (water \\(\\rho = 1000\\) kg/m<sup>3</sup>)",
             "options": [
-              "5%",
-              "8%",
-              "10%",
-              "12%",
-              "15%"
+              "4.8 kg",
+              "8.0 kg",
+              "3.2 kg",
+              "1.6 kg",
+              "0.32 kg"
             ],
             "correct": 2,
-            "solution": "Submerged=920/1025=0.898. Above=10.2%≈10%."
+            "solution": "Volume \\(= 0.008\\) m<sup>3</sup>. Fully submerged, the buoyant force supports \\(1000 \\times 0.008 = 8.0\\) kg. The block itself has mass \\(600 \\times 0.008 = 4.8\\) kg, so the extra mass is \\(8.0 - 4.8 = 3.2\\) kg."
           },
           {
-            "question": "A Venturi meter has A₁=10 cm² and A₂=5 cm². If v₁=2 m/s, what is v₂?",
+            "question": "Water flows at \\(0.020\\) m<sup>3</sup>/s through a horizontal pipe of diameter 0.10 m, where the pressure is \\(2.0 \\times 10^{5}\\) Pa. The pipe narrows to a diameter of 0.050 m. What is the pressure in the narrow section?",
             "options": [
-              "2",
-              "3",
-              "4",
-              "5",
-              "6"
+              "2.49 × 10<sup>5</sup> Pa",
+              "2 × 10<sup>5</sup> Pa",
+              "1.48 × 10<sup>5</sup> Pa",
+              "1.51 × 10<sup>5</sup> Pa",
+              "1.96 × 10<sup>5</sup> Pa"
             ],
-            "correct": 2,
-            "solution": "A₁v₁=A₂v₂ → v₂=10×2/5=4 m/s."
+            "correct": 3,
+            "solution": "\\(v_1 = Q/A_1 = 2.55\\) m/s and \\(v_2 = Q/A_2 = 10.2\\) m/s. Bernoulli: \\(p_2 = p_1 + \\tfrac{1}{2}\\rho(v_1^2 - v_2^2) = 2.0 \\times 10^5 + 500(6.48 - 104) = 1.51 × 10<sup>5</sup>\\) Pa."
           },
           {
             "question": "A hot-air balloon displaces 2000 m³ of air (ρ=1.2). If balloon+cargo=1800 kg, what is net lift? (g=10)",
@@ -41001,28 +41001,28 @@ const subjects = [
             "solution": "Lift=ρVg−mg=1.2×2000×10−1800×10=24000−18000=6000 N."
           },
           {
-            "question": "A U-tube shows 2 cm Hg difference. What is pressure difference? (ρ_Hg=13600, g=10)",
+            "question": "A U-tube manometer containing mercury (\\(ho = 13,600\\) kg/m<sup>3</sup>) is connected to a gas on one side and open to the air on the other. The mercury surface is 15 cm <b>lower</b> on the gas side than on the open side. The atmospheric pressure is \\(1.013 \times 10^5\\) Pa. What is the pressure of the gas? (\\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "1360 Pa",
-              "2720 Pa",
-              "5440 Pa",
-              "6800 Pa",
-              "13600 Pa"
+              "20000 Pa",
+              "1.21 × 10<sup>5</sup> Pa",
+              "81300 Pa",
+              "1.01 × 10<sup>5</sup> Pa",
+              "1.03 × 10<sup>5</sup> Pa"
             ],
             "correct": 1,
-            "solution": "ΔP=ρgh=13600×10×0.02=2720 Pa."
+            "solution": "The gas pushes the mercury down on its own side, so the gas pressure is <b>higher</b> than atmospheric by \\(ho gh = 13,600 \times 9.8 \times 0.15 = 2.0 \times 10^4\\) Pa. \\(p = 1.013 \times 10^5 + 2.0 \times 10^4 = 1.21 × 10<sup>5</sup>\\) Pa."
           },
           {
-            "question": "Water exits a hole at depth 5 m. What is exit velocity? (g=10)",
+            "question": "A bubble of air leaves a diver at a depth of 25 m in sea water (\\(\\rho = 1030\\) kg/m<sup>3</sup>) and rises to the surface at constant temperature (\\(p_{\\text{atm}} = 1.01 \\times 10^5\\) Pa, \\(g = 9.8\\) m/s<sup>2</sup>). By what factor does its volume increase?",
             "options": [
-              "5",
-              "7.1",
-              "10",
-              "14.1",
-              "20"
+              "2.5",
+              "3.5",
+              "7.0",
+              "4.5",
+              "1.7"
             ],
-            "correct": 2,
-            "solution": "Torricelli: v=√(2gh)=√(2×10×5)=√100=10 m/s."
+            "correct": 1,
+            "solution": "At 25 m: \\(p = 1.01 \\times 10^5 + 1030(9.8)(25) = 3.53 × 10<sup>5</sup>\\) Pa. Boyle's law: \\(V_2/V_1 = p_1/p_2 = 3.53 × 10<sup>5</sup>/1.01 \\times 10^5 = 3.5\\)."
           },
           {
             "question": "A dam gate is 4 m wide and 2 m high with top edge 3 m below surface. Total force?",
@@ -41049,28 +41049,28 @@ const subjects = [
             "solution": "v=2r²g(ρ_s−ρ_f)/(9η)=2×10⁻⁶×10×6740/(13.5)≈0.01 m/s=1.0 cm/s."
           },
           {
-            "question": "In streamline flow, velocity at any point:",
+            "question": "A large open tank has a small hole 1.8 m below the water surface and 1.0 m above the ground. How far from the base of the tank does the water jet land? (\\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "Changes",
-              "Constant in time",
-              "Zero",
-              "Maximum",
-              "Turbulent"
+              "2.68 m",
+              "5.94 m",
+              "4.49 m",
+              "3.35 m",
+              "1.34 m"
             ],
-            "correct": 1,
-            "solution": "Steady flow: velocity at each point is constant over time."
+            "correct": 0,
+            "solution": "Torricelli: \\(v = \\sqrt{2gh} = \\sqrt{2(9.8)(1.8)} = 5.94\\) m/s. Fall time from 1.0 m: \\(t = \\sqrt{2(1.0)/9.8} = 0.452\\) s. Range \\(= vt = 2.68\\) m."
           },
           {
-            "question": "What is the SI unit of dynamic viscosity?",
+            "question": "Blood flows at 0.30 m/s in an aorta of radius 1.0 cm. The total cross-sectional area of all the capillaries it feeds is 2000 cm<sup>2</sup>. What is the average speed of the blood in the capillaries?",
             "options": [
-              "Pa",
-              "Pa·s",
-              "N/m",
-              "kg/m·s²",
-              "J/s"
+              "0.0471 m/s",
+              "4.71 × 10<sup>-4</sup> m/s",
+              "9.42 × 10<sup>-4</sup> m/s",
+              "191 m/s",
+              "1.5 × 10<sup>-4</sup> m/s"
             ],
             "correct": 1,
-            "solution": "Dynamic viscosity unit is Pa·s (Pascal-second) or N·s/m²."
+            "solution": "Continuity: \\(A_1v_1 = A_2v_2\\). \\(A_1 = \\pi(1.0)^2 = 3.14\\) cm<sup>2</sup>. \\(v_2 = 0.30 \\times 3.14/2000 = 4.71 × 10<sup>-4</sup>\\) m/s. The slow flow gives time for exchange with the tissues."
           },
           {
             "question": "A balloon volume 0.15 m³ is filled with helium (ρ=0.18 kg/m³) in air (ρ=1.2). What mass can it lift? (g=10)",
@@ -41193,16 +41193,16 @@ const subjects = [
             "solution": "Molecules in the bulk liquid experience equal cohesive forces in all directions. Molecules at the liquid surface lack neighboring liquid molecules above them, creating a net inward attractive force that pulls surface molecules toward the bulk, causing the surface to behave like a stretched elastic membrane."
           },
           {
-            "question": "What parameter is used in fluid dynamics to predict whether flow will be laminar or turbulent?",
+            "question": "Water leaves a horizontal hose nozzle of diameter 2.0 cm at 12 m/s and hits a vertical wall, stopping completely. What is the force on the wall? (\\(\\rho = 1000\\) kg/m<sup>3</sup>)",
             "options": [
-              "Reynolds number (Re)",
-              "Mach number",
-              "Froude number",
-              "Avogadro's number",
-              "Prandtl number"
+              "45.2 N",
+              "3.77 N",
+              "90.5 N",
+              "271 N",
+              "1.44 × 10<sup>5</sup> N"
             ],
             "correct": 0,
-            "solution": "The Reynolds number Re = (ρ v d) / η is a dimensionless quantity representing the ratio of inertial forces to viscous forces. In pipe flow, Re < 2000 corresponds to smooth laminar flow, whereas Re > 3000-4000 indicates chaotic turbulent flow."
+            "solution": "Mass flow rate \\(= \\rho Av = 1000 \\times \\pi(0.010)^2 \\times 12 = 3.77\\) kg/s. Force \\(= \\Delta p/\\Delta t = (\\text{mass rate}) \\times v = 3.77 \\times 12 = 45.2\\) N."
           },
           {
             "question": "What happens to the pressure at the constricted throat of a Venturi tube through which air is flowing?",
@@ -41253,16 +41253,16 @@ const subjects = [
             "solution": "From the continuity equation A₁ v₁ = A₂ v₂: (π d₁² / 4) v₁ = (π d₂² / 4) v₂ ⇒ v₂ = v₁ × (d₁ / d₂)² = 2.0 m/s × (4.0 / 8.0)² = 2.0 × (1/2)² = 2.0 × 0.25 = 0.50 m/s."
           },
           {
-            "question": "What is the SI derived unit of dynamic viscosity (η)?",
+            "question": "A steel sphere of radius 1.0 mm (\\(\\rho = 8000\\) kg/m<sup>3</sup>) falls at terminal velocity in oil of viscosity 0.80 Pa s and density 900 kg/m<sup>3</sup>. What is the terminal speed? (Use Stokes' law, \\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "Pascal-second (Pa·s or kg·m⁻¹·s⁻¹)",
-              "Pascal per meter (Pa/m)",
-              "Joule per second (J/s)",
-              "Newton-meter (N·m)",
-              "Poise (non-SI) only"
+              "0.0218 m/s",
+              "0.0193 m/s",
+              "0.193 m/s",
+              "0.00193 m/s",
+              "19.3 m/s"
             ],
-            "correct": 0,
-            "solution": "Dynamic viscosity is defined by shear stress τ = η (dv/dy) ⇒ η = τ / (dv/dy) = (N/m²) / ((m/s)/m) = Pa / s⁻¹ = Pa·s = kg·m⁻¹·s⁻¹."
+            "correct": 1,
+            "solution": "At terminal speed: weight = buoyancy + drag, so \\(\\tfrac{4}{3}\\pi r^3(\\rho_s - \\rho_f)g = 6\\pi\\eta rv\\). Therefore \\(v = \\dfrac{2r^2(\\rho_s - \\rho_f)g}{9\\eta} = \\dfrac{2(10^{-6})(7100)(9.8)}{9(0.80)} = 0.0193\\) m/s."
           },
           {
             "question": "A U-tube manometer containing mercury (density = 13.6 g/cm³) has water (density = 1.0 g/cm³) poured into one arm. If the water column has a height of 27.2 cm, what is the difference in mercury height (Δh_Hg) between the two arms?",
@@ -41325,16 +41325,16 @@ const subjects = [
             "solution": "Volume of the room V = 5.0 m × 4.0 m × 3.0 m = 60 m³. Mass m = ρ × V = 1.25 kg/m³ × 60 m³ = 75 kg."
           },
           {
-            "question": "The water jet from a faucet takes 20 minutes to fill a 200-liter tank. What is the volumetric flow rate?",
+            "question": "Water drains from a large tank through a pipe of diameter 3.0 cm whose exit is 2.0 m below the water surface. What is the volume flow rate? (\\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "about 0.00017 m³/s",
-              "about 17 m³/s",
-              "about 10 m³/s",
-              "about 100 m³/s",
-              "about 4,000 m³/s"
+              "8.9 L/s",
+              "2.2 L/s",
+              "18 L/s",
+              "4.4 L/s",
+              "6.3 L/s"
             ],
-            "correct": 0,
-            "solution": "Volumetric flow rate Q = Volume / time.\nVolume = 200 L = 200 × 10⁻³ m³ = 0.2 m³.\nTime = 20 minutes = 20 × 60 = 1200 s.\nQ = 0.2 m³ / 1200 s ≈ 0.0001667 m³/s ≈ 0.00017 m³/s."
+            "correct": 3,
+            "solution": "\\(v = \\sqrt{2gh} = \\sqrt{2(9.8)(2.0)} = 6.26\\) m/s. \\(A = \\pi(0.015)^2 = 7.07 \\times 10^{-4}\\) m<sup>2</sup>. \\(Q = Av = 4.4 \\times 10^{-3}\\) m<sup>3</sup>/s \\(= 4.4\\) L/s."
           },
           {
             "question": "A body of volume V is immersed in a liquid. If the body sinks, which of the following relationships between the specific weight of the body (PC) and the specific weight of the liquid (PL) is correct?",
@@ -41391,16 +41391,16 @@ const subjects = [
             "solution": "F = Gm₁m₂/r² = 6.67×10⁻¹¹ × 10 × 10/1 = 6.67×10⁻⁹ N."
           },
           {
-            "question": "A 2 kg object moves in a circle of radius 1 m at 5 m/s. What is the centripetal force?",
+            "question": "The Moon orbits the Earth in a circle of radius \\(4.0 \\times 10^{8}\\) m with a period of 27.3 days. What is its centripetal acceleration?",
             "options": [
-              "10 N",
-              "25 N",
-              "50 N",
-              "100 N",
-              "250 N"
+              "0.00284 m/s<sup>2</sup>",
+              "1070 m/s<sup>2</sup>",
+              "9.8 m/s<sup>2</sup>",
+              "0.0775 m/s<sup>2</sup>",
+              "1.04 × 10<sup>-4</sup> m/s<sup>2</sup>"
             ],
-            "correct": 2,
-            "solution": "Fc = mv²/r = 2 × 25/1 = 50 N."
+            "correct": 0,
+            "solution": "The period in seconds is \\(27.3 \\times 86\\,400 = 2.36 \\times 10^{6}\\) s. \\(v = 2\\pi r/T = 1070\\) m/s and \\(a = v^2/r = 0.00284\\) m/s<sup>2</sup>."
           },
           {
             "question": "What is the period of a satellite in low Earth orbit (r ≈ R)? (g = 10 m/s², R = 6.4 × 10⁶ m)",
@@ -41451,16 +41451,16 @@ const subjects = [
             "solution": "T = mv²/r. 50 = 0.5 × v²/1 → v² = 100 → v = 10 m/s."
           },
           {
-            "question": "What is the angular velocity of a wheel rotating at 120 rpm?",
+            "question": "A car takes a flat curve of radius 80 m. The coefficient of static friction between the tyres and the road is 0.65 (\\(g = 9.8\\) m/s<sup>2</sup>). What is the maximum speed at which it can take the curve without skidding?",
             "options": [
-              "2π rad/s",
-              "4π rad/s",
-              "6π rad/s",
-              "8π rad/s",
-              "12π rad/s"
+              "510 m/s",
+              "22.6 m/s",
+              "28 m/s",
+              "6.37 m/s",
+              "0.282 m/s"
             ],
             "correct": 1,
-            "solution": "ω = 2πf = 2π × (120/60) = 2π × 2 = 4π rad/s."
+            "solution": "Friction provides the centripetal force: \\(\\mu mg = mv^2/r\\), so \\(v = \\sqrt{\\mu g r} = \\sqrt{0.65 \\times 9.8 \\times 80} = 22.6\\) m/s. The mass cancels."
           },
           {
             "question": "A satellite has orbital period T. If its orbital radius doubles, what is the new period?",
@@ -41523,16 +41523,16 @@ const subjects = [
             "solution": "For ideal banking: tan θ = v²/(rg). r = v²/(g tan θ) = 400/(10 × 0.577) = 400/5.77 ≈ 69 m."
           },
           {
-            "question": "What is the angular momentum of a 2 kg object moving in a circle of radius 1 m at 4 m/s?",
+            "question": "A 0.50 kg mass hangs at rest from a spring and stretches it by 4.9 cm (\\(g = 9.8\\) m/s<sup>2</sup>). It is pulled down a little and released. What is the period of the oscillation?",
             "options": [
-              "2 kg m²/s",
-              "4 kg m²/s",
-              "8 kg m²/s",
-              "16 kg m²/s",
-              "32 kg m²/s"
+              "20.1 s",
+              "2.25 s",
+              "0.889 s",
+              "0.444 s",
+              "1.39 s"
             ],
-            "correct": 2,
-            "solution": "L = mvr = 2 × 4 × 1 = 8 kg m²/s."
+            "correct": 3,
+            "solution": "\\(k = mg/x = (0.50)(9.8)/0.049 = 100\\) N/m. \\(T = 2\\pi\\sqrt{m/k} = 2\\pi\\sqrt{0.50/100} = 0.444\\) s."
           },
           {
             "question": "A planet has twice Earth's mass and twice Earth's radius. What is its surface gravity?",
@@ -41913,16 +41913,16 @@ const subjects = [
             "solution": "For elastic collision: v₁f = (m₁-m₂)/(m₁+m₂) × v₁i = (5-10)/(15) × 10 = -3.33 m/s."
           },
           {
-            "question": "What is the impulse on a 2 kg object that changes its velocity from 5 m/s to 15 m/s?",
+            "question": "A 0.15 kg ball hits a wall at 20 m/s, with its velocity at 60° to the normal to the wall, and rebounds elastically. The contact lasts 5.0 ms. What is the average force on the ball?",
             "options": [
-              "10 Ns",
-              "20 Ns",
-              "30 Ns",
-              "40 Ns",
-              "50 Ns"
+              "1200 N",
+              "300 N",
+              "1040 N",
+              "3000 N",
+              "600 N"
             ],
-            "correct": 1,
-            "solution": "Impulse = Δp = mΔv = 2 × (15 - 5) = 20 Ns."
+            "correct": 4,
+            "solution": "Only the component along the normal changes: \\(20\\cos 60^{\\circ} = 10\\) m/s, which reverses. \\(\\Delta p = 2(0.15)(10) = 3.0\\) N s. \\(F = 3.0/0.0050 = 600\\) N."
           },
           {
             "question": "Two objects of equal mass collide elastically. If one is initially at rest, what happens after collision?",
@@ -41949,16 +41949,16 @@ const subjects = [
             "solution": "Conservation of momentum: 1000 × 20 = (1000 + 2000) × v. v = 20000/3000 = 6.67 m/s."
           },
           {
-            "question": "What is the momentum of a 0.5 kg object moving at 20 m/s?",
+            "question": "A 20 g bullet moving at 400 m/s embeds itself in a 2.0 kg block hanging from a long string. To what height does the block swing? (\\(g = 9.8\\) m/s<sup>2</sup>)",
             "options": [
-              "5 kg m/s",
-              "10 kg m/s",
-              "15 kg m/s",
-              "20 kg m/s",
-              "25 kg m/s"
+              "8160 m",
+              "0.8 m",
+              "0.816 m",
+              "3.96 m",
+              "1.6 m"
             ],
             "correct": 1,
-            "solution": "p = mv = 0.5 × 20 = 10 kg m/s."
+            "solution": "Momentum: \\(0.020 \\times 400 = 2.02\\,v\\), so \\(v = 3.96\\) m/s. Energy: \\(h = v^2/2g = 15.7/19.6 = 0.8\\) m."
           },
           {
             "question": "A 10 kg object at rest explodes into two fragments of 4 kg and 6 kg. If the 4 kg fragment moves at 10 m/s, what is the velocity of the 6 kg fragment?",
@@ -41973,16 +41973,16 @@ const subjects = [
             "solution": "Conservation of momentum: 0 = 4 × 10 + 6 × v. v = -40/6 = -6.67 m/s."
           },
           {
-            "question": "What is the coefficient of restitution for a perfectly elastic collision?",
+            "question": "Masses of 2.0 kg at \\((0, 0)\\), 3.0 kg at \\((4, 0)\\) and 5.0 kg at \\((2, 6)\\) (coordinates in metres) form a system. What are the coordinates of its centre of mass?",
             "options": [
-              "0",
-              "0.5",
-              "1",
-              "2",
-              "Infinite"
+              "(2.2, 3.0)",
+              "(2.0, 2.0)",
+              "(2.0, 3.0)",
+              "(2.2, 6.0)",
+              "(3.3, 3.0)"
             ],
-            "correct": 2,
-            "solution": "Coefficient of restitution e = 1 for perfectly elastic collisions (no kinetic energy lost)."
+            "correct": 0,
+            "solution": "\\(x = (2.0 \\times 0 + 3.0 \\times 4 + 5.0 \\times 2)/10 = 2.2\\) m. \\(y = (2.0 \\times 0 + 3.0 \\times 0 + 5.0 \\times 6)/10 = 3.0\\) m."
           },
           {
             "question": "A 2 kg ball moving at 8 m/s hits a wall and rebounds at 6 m/s. What is the impulse imparted to the ball?",
@@ -42021,28 +42021,28 @@ const subjects = [
             "solution": "Initial KE = 2 × ½mv² = mv². Final KE = ½(2m)(v/2)² = ½mv²/2 = mv²/4. Change = 75% lost, so 25% remains. Wait, let me recalculate: v_final = 0 (equal and opposite). Final KE = 0. 100% lost. Actually if they stick, v_final = 0 for equal opposite. So 100% KE lost."
           },
           {
-            "question": "A force of 50 N acts on a 10 kg object for 0.2 seconds. What is the change in momentum?",
+            "question": "A 1.0 kg ball moving at 4.0 m/s east hits a stationary 1.0 kg ball in an elastic, non-head-on collision. The first ball leaves at 30° north of east. What is the speed of the second ball?",
             "options": [
-              "1 Ns",
-              "5 Ns",
-              "10 Ns",
-              "50 Ns",
-              "100 Ns"
+              "3.5 m/s",
+              "2.0 m/s",
+              "4.0 m/s",
+              "1.0 m/s",
+              "2.8 m/s"
             ],
-            "correct": 2,
-            "solution": "Impulse = F × t = 50 × 0.2 = 10 Ns = change in momentum."
+            "correct": 1,
+            "solution": "For equal masses in an elastic collision, the balls leave at 90° to each other, so the second ball moves at 60° south of east. Using \\(v_1 = 4.0\\cos 30^{\\circ} = 3.46\\) m/s and \\(v_2 = 4.0\\sin 30^{\\circ} = 2.0\\) m/s."
           },
           {
-            "question": "What is the recoil velocity of a 5 kg gun firing a 0.01 kg bullet at 500 m/s?",
+            "question": "A railway wagon of 8000 kg rolls at 1.5 m/s. A load of 2000 kg of sand falls vertically onto it. What is the final speed, and how much kinetic energy is lost?",
             "options": [
-              "-0.1 m/s",
-              "-0.5 m/s",
-              "-1 m/s",
-              "-5 m/s",
-              "-10 m/s"
+              "1.5 m/s and 0 J",
+              "1.2 m/s and 0 J",
+              "1.9 m/s and 1800 J",
+              "1.2 m/s and 1800 J",
+              "1.2 m/s and 9000 J"
             ],
-            "correct": 2,
-            "solution": "Conservation of momentum: 0 = 5 × v + 0.01 × 500. v = -5/5 = -1 m/s."
+            "correct": 3,
+            "solution": "Horizontal momentum is conserved: \\(8000 \\times 1.5 = 10\\,000v\\), so \\(v = 1.2\\) m/s. \\(E_k\\) before: \\(\\tfrac{1}{2}(8000)(1.5)^2 = 9000\\) J. After: \\(\\tfrac{1}{2}(10\\,000)(1.2)^2 = 7200\\) J. Lost: 1800 J."
           },
           {
             "question": "A 1 kg object moving at 10 m/s collides with a 2 kg object at rest. If the collision is elastic, what is the velocity of the 2 kg object after collision?",
@@ -42129,16 +42129,16 @@ const subjects = [
             "solution": "Initial momentum = 2×6 + 3×4 = 12 + 12 = 24. Total mass = 5 kg. v = 24/5 = 4.8 m/s."
           },
           {
-            "question": "What is the impulse-momentum theorem?",
+            "question": "A 60 kg skater at rest on frictionless ice throws a 2.0 kg ball horizontally at 8.0 m/s (relative to the ice). What is the skater's recoil speed?",
             "options": [
-              "F = ma",
-              "F = dP/dt",
-              "F = mv",
-              "F = mgh",
-              "F = kx"
+              "0.267 m/s",
+              "0.276 m/s",
+              "8 m/s",
+              "3.75 m/s",
+              "16 m/s"
             ],
-            "correct": 1,
-            "solution": "The impulse-momentum theorem states that force equals the rate of change of momentum: F = dP/dt."
+            "correct": 0,
+            "solution": "The total momentum stays zero: \\(60v = 2.0 \\times 8.0\\), so \\(v = 16/60 = 0.267\\) m/s in the opposite direction."
           },
           {
             "question": "A rocket of mass 1000 kg ejects fuel at 100 kg/s with exhaust velocity 2000 m/s. What is the thrust?",
@@ -42273,16 +42273,16 @@ const subjects = [
             "solution": "Linear momentum is a vector quantity. In the absence of external forces, momentum is conserved component-wise: Σ p_x(initial) = Σ p_x(final) and Σ p_y(initial) = Σ p_y(final) independently."
           },
           {
-            "question": "What is the linear momentum of a 0.15 kg baseball traveling at 40 m/s?",
+            "question": "A 3.0 kg object at rest explodes into a 1.0 kg piece moving at 12 m/s east and a 2.0 kg piece moving west. How much kinetic energy is released?",
             "options": [
-              "6.0 kg·m/s",
-              "12 kg·m/s",
-              "0.60 kg·m/s",
-              "120 kg·m/s",
-              "267 kg·m/s"
+              "72 J",
+              "36 J",
+              "108 J",
+              "144 J",
+              "216 J"
             ],
-            "correct": 0,
-            "solution": "Momentum p = m v = 0.15 kg × 40 m/s = 6.0 kg·m/s."
+            "correct": 2,
+            "solution": "Momentum: \\(1.0 \\times 12 = 2.0v\\), so the 2.0 kg piece moves at 6.0 m/s. \\(E_k = \\tfrac{1}{2}(1.0)(12)^2 + \\tfrac{1}{2}(2.0)(6.0)^2 = 72 + 36 = 108\\) J."
           },
           {
             "question": "A rocket expels 50 kg of exhaust gas per second at a speed of 2000 m/s relative to the rocket. What is the thrust force produced on the rocket?",
@@ -43122,16 +43122,16 @@ const subjects = [
             "solution": "Gradient m = (y₂ − y₁)/(x₂ − x₁) = (11 − 3)/(6 − 2) = 8/4 = 2."
           },
           {
-            "question": "What is the value of 7! / 5!?",
+            "question": "If \\(a + b = 5\\) and \\(ab = 6\\), what is \\(a^{3} + b^{3}\\)?",
             "options": [
-              "7",
-              "14",
-              "21",
-              "42",
+              "125",
+              "35",
+              "65",
+              "25",
               "49"
             ],
-            "correct": 3,
-            "solution": "7! / 5! = (7 × 6 × 5!)/5! = 7 × 6 = 42."
+            "correct": 1,
+            "solution": "\\(a^{3} + b^{3} = (a + b)^{3} - 3ab(a + b) = 125 - 3 \\times 6 \\times 5 = 125 - 90 = 35\\). (Check: \\(a = 2\\), \\(b = 3\\) gives \\(8 + 27 = 35\\).)"
           },
           {
             "question": "What is the equation of the circle with centre (−2, 3) and radius 4?",
@@ -43146,16 +43146,16 @@ const subjects = [
             "solution": "Circle equation: (x − h)² + (y − k)² = r² where (h, k) is centre. Centre (−2, 3), r = 4: (x + 2)² + (y − 3)² = 16."
           },
           {
-            "question": "Find the value of x if 3x − 7 = 14",
+            "question": "If \\(x + \\dfrac{1}{x} = 3\\), what is \\(x^{3} + \\dfrac{1}{x^{3}}\\)?",
             "options": [
-              "5",
-              "6",
-              "7",
-              "8",
-              "21"
+              "27",
+              "9",
+              "24",
+              "15",
+              "18"
             ],
-            "correct": 2,
-            "solution": "3x = 14 + 7 = 21 → x = 21/3 = 7."
+            "correct": 4,
+            "solution": "Cube: \\(\\left(x + \\frac{1}{x}\\right)^{3} = x^{3} + \\frac{1}{x^{3}} + 3\\left(x + \\frac{1}{x}\\right)\\). So \\(27 = x^{3} + \\frac{1}{x^{3}} + 9\\) and \\(x^{3} + \\frac{1}{x^{3}} = 18\\)."
           },
           {
             "question": "What is the value of log₁₀(1000)?",
@@ -43182,16 +43182,16 @@ const subjects = [
             "solution": "Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2) = ((−4+6)/2, (2−8)/2) = (2/2, −6/2) = (1, −3)."
           },
           {
-            "question": "What is the value of 2⁵ × 2⁻³?",
+            "question": "Factorise \\(x^{3} - 7x + 6\\).",
             "options": [
-              "2",
-              "4",
-              "8",
-              "16",
-              "32"
+              "\\((x - 1)(x - 2)(x + 3)\\)",
+              "\\((x + 1)(x + 2)(x - 3)\\)",
+              "\\((x - 1)(x + 2)(x + 3)\\)",
+              "\\((x - 1)(x - 2)(x - 3)\\)",
+              "\\((x + 1)(x - 2)(x - 3)\\)"
             ],
-            "correct": 1,
-            "solution": "2⁵ × 2⁻³ = 2^(5−3) = 2² = 4."
+            "correct": 0,
+            "solution": "Try \\(x = 1\\): \\(1 - 7 + 6 = 0\\), so \\((x - 1)\\) is a factor. Dividing gives \\(x^{2} + x - 6 = (x - 2)(x + 3)\\). Check the product of the constants: \\((-1)(-2)(3) = 6\\) ✓."
           },
           {
             "question": "What is the y-intercept of the line y = 3x − 6?",
@@ -43206,16 +43206,16 @@ const subjects = [
             "solution": "The y-intercept occurs when x = 0. y = 3(0) − 6 = −6. The y-intercept is (0, −6)."
           },
           {
-            "question": "Simplify: √50 + √18",
+            "question": "Divide \\(2x^{3} - 3x^{2} + x - 5\\) by \\(x - 2\\). What are the quotient and the remainder?",
             "options": [
-              "√68",
-              "4√2",
-              "5√2",
-              "8√2",
-              "16"
+              "Quotient \\(2x^{2} + x + 3\\), remainder \\(-5\\)",
+              "Quotient \\(2x^{2} - x + 3\\), remainder \\(1\\)",
+              "Quotient \\(2x^{2} - 7x + 15\\), remainder \\(-35\\)",
+              "Quotient \\(2x^{2} + x + 3\\), remainder \\(1\\)",
+              "Quotient \\(2x^{2} + x + 3\\), remainder \\(11\\)"
             ],
             "correct": 3,
-            "solution": "√50 = √(25 × 2) = 5√2. √18 = √(9 × 2) = 3√2. √50 + √18 = 5√2 + 3√2 = 8√2."
+            "solution": "Synthetic division with 2: coefficients \\(2, -3, 1, -5\\). Bring down 2; \\(-3 + 4 = 1\\); \\(1 + 2 = 3\\); \\(-5 + 6 = 1\\). Quotient \\(2x^{2} + x + 3\\), remainder \\(1 = p(2)\\)."
           },
           {
             "question": "Find the derivative of f(x) = e^(3x)",
@@ -43242,16 +43242,16 @@ const subjects = [
             "solution": "log₅(x) = 3 means 5³ = x. x = 125."
           },
           {
-            "question": "Simplify: (x² − 9)/(x − 3)",
+            "question": "What is the sum of the squares of all the roots of \\(x^{4} - 5x^{2} + 4 = 0\\)?",
             "options": [
-              "x − 3",
-              "x + 3",
-              "x² + 3",
-              "x − 9",
-              "x + 9"
+              "10",
+              "5",
+              "0",
+              "20",
+              "25"
             ],
-            "correct": 1,
-            "solution": "x² − 9 = (x − 3)(x + 3). So (x² − 9)/(x − 3) = x + 3, for x ≠ 3."
+            "correct": 0,
+            "solution": "\\(x^{4} - 5x^{2} + 4 = (x^{2} - 1)(x^{2} - 4)\\), so the roots are \\(\\pm 1\\) and \\(\\pm 2\\). The sum of squares is \\(1 + 1 + 4 + 4 = 10\\)."
           },
           {
             "question": "What is the integral of 2x + 3 with respect to x?",
@@ -43338,16 +43338,16 @@ const subjects = [
             "solution": "Fibonacci sequence: each term is the sum of the two preceding terms. 8 + 13 = 21."
           },
           {
-            "question": "Simplify: (2³)² × 2⁻⁴",
+            "question": "What is the remainder when \\(x^{4} + 3x^{2} - 2\\) is divided by \\(x + 1\\)?",
             "options": [
+              "-2",
+              "0",
+              "1",
               "2",
-              "4",
-              "8",
-              "16",
-              "32"
+              "-4"
             ],
-            "correct": 1,
-            "solution": "(2³)² = 2⁶. 2⁶ × 2⁻⁴ = 2^(6-4) = 2² = 4."
+            "correct": 3,
+            "solution": "The remainder is \\(p(-1) = (-1)^{4} + 3(-1)^{2} - 2 = 1 + 3 - 2 = 2\\)."
           },
           {
             "question": "Solve: |2x − 5| = 7",
@@ -43386,16 +43386,16 @@ const subjects = [
             "solution": "Gradient = (y₂ − y₁)/(x₂ − x₁) = (8 − 2)/(3 − 1) = 6/2 = 3."
           },
           {
-            "question": "Simplify: 3(x + 4) − 2(x − 3)",
+            "question": "Simplify \\(\\dfrac{x^{2} - 9}{x^{2} + x - 6} \\div \\dfrac{x - 3}{x^{2} - 4}\\).",
             "options": [
-              "x + 6",
-              "x + 12",
-              "x + 18",
-              "5x + 6",
-              "5x + 18"
+              "\\(x - 2\\)",
+              "\\(\\dfrac{x + 2}{x - 3}\\)",
+              "\\(x + 2\\)",
+              "\\((x + 2)^{2}\\)",
+              "\\(1\\)"
             ],
             "correct": 2,
-            "solution": "3x + 12 − 2x + 6 = x + 18."
+            "solution": "Factorise: \\(\\dfrac{(x - 3)(x + 3)}{(x + 3)(x - 2)} \\times \\dfrac{(x - 2)(x + 2)}{x - 3}\\). Everything cancels except \\((x + 2)\\)."
           },
           {
             "question": "Solve: 2x + 5 = 3x − 7",
@@ -43422,16 +43422,16 @@ const subjects = [
             "solution": "Prime numbers on a die: 2, 3, 5 (3 outcomes). Total outcomes = 6. P = 3/6 = 1/2."
           },
           {
-            "question": "What is the value of 2⁵?",
+            "question": "The polynomial \\(x^{3} - 4x^{2} + ax + 6\\) is divisible by \\(x - 2\\). What is \\(a\\)?",
             "options": [
-              "16",
-              "25",
-              "32",
-              "64",
-              "128"
+              "-1",
+              "1",
+              "2",
+              "-2",
+              "3"
             ],
-            "correct": 2,
-            "solution": "2⁵ = 2 × 2 × 2 × 2 × 2 = 32."
+            "correct": 1,
+            "solution": "By the factor theorem \\(p(2) = 0\\): \\(8 - 16 + 2a + 6 = 0\\), so \\(2a = 2\\) and \\(a = 1\\)."
           },
           {
             "question": "Simplify: (a²b³)² / (a³b)",
@@ -43494,16 +43494,16 @@ const subjects = [
             "solution": "By the Remainder Theorem, the remainder of P(x) when divided by (x − 2) is equal to P(2).\nP(2) = 2(2)³ + a(2)² − 5(2) + 6 = 2(8) + 4a − 10 + 6 = 16 + 4a − 4 = 12 + 4a.\nSetting P(2) = 16:\n12 + 4a = 16 → 4a = 4 → a = 1."
           },
           {
-            "question": "Given the functions f(x) = 3x − 2 and g(x) = x² + 1, what is the value of (g ∘ f)(2)?",
+            "question": "What is the domain of \\(f(x) = \\dfrac{\\sqrt{x - 1}}{x - 4}\\)?",
             "options": [
-              "13",
-              "15",
-              "17",
-              "19",
-              "25"
+              "\\((1, \\infty)\\)",
+              "\\([1, \\infty) \\setminus \\{4\\}\\)",
+              "\\([1, \\infty)\\)",
+              "\\(\\mathbb{R} \\setminus \\{4\\}\\)",
+              "\\((-\\infty, 1] \\cup \\{4\\}\\)"
             ],
-            "correct": 2,
-            "solution": "(g ∘ f)(2) = g(f(2)).\nFirst, evaluate f(2): f(2) = 3(2) − 2 = 6 − 2 = 4.\nNext, evaluate g(4): g(4) = 4² + 1 = 16 + 1 = 17."
+            "correct": 1,
+            "solution": "The square root needs \\(x - 1 \\geq 0\\), so \\(x \\geq 1\\). The denominator must not be zero, so \\(x \\neq 4\\). The domain is \\([1, \\infty)\\) without the point 4."
           },
           {
             "question": "What is the inverse function f⁻¹(x) of the one-to-one function f(x) = (2x + 3) / (x − 1), for x ≠ 1?",
@@ -43566,28 +43566,28 @@ const subjects = [
             "solution": "Step 1: Shift right by 3 units: y = f(x − 3).\nStep 2: Shift down by 2 units: y = f(x − 3) − 2.\nStep 3: Reflection across x-axis replaces y with −y: −y = f(x − 3) − 2 → y = −[f(x − 3) − 2] = −f(x − 3) + 2."
           },
           {
-            "question": "Which of the following functions is an ODD function, satisfying f(−x) = −f(x) for all x in its domain?",
+            "question": "Let \\(f(x) = x^{2}\\) for \\(x < 1\\) and \\(f(x) = 3x - 2\\) for \\(x \\geq 1\\). What is \\(f(f(2)) + f(-1)\\)?",
             "options": [
-              "f(x) = x³ − 5x",
-              "f(x) = x⁴ − 3x² + 2",
-              "f(x) = x³ + x²",
-              "f(x) = 2x + cos(x)",
-              "f(x) = |x| / x²"
+              "9",
+              "14",
+              "11",
+              "7",
+              "5"
             ],
-            "correct": 0,
-            "solution": "Check f(x) = x³ − 5x:\nf(−x) = (−x)³ − 5(−x) = −x³ + 5x = −(x³ − 5x) = −f(x).\nTherefore, f(x) = x³ − 5x is an odd function. The other options are either even (x⁴ − 3x² + 2) or neither even nor odd."
+            "correct": 2,
+            "solution": "\\(f(2) = 3(2) - 2 = 4\\). \\(f(4) = 3(4) - 2 = 10\\). \\(f(-1) = (-1)^{2} = 1\\). Sum \\(= 10 + 1 = 11\\)."
           },
           {
-            "question": "What is the maximum value of the quadratic function f(x) = −2x² + 8x + 5 on the set of real numbers?",
+            "question": "What is the maximum value of \\(f(x) = -2x^{2} + 8x - 3\\)?",
             "options": [
-              "13",
-              "11",
-              "15",
+              "2",
+              "-3",
+              "8",
               "5",
-              "9"
+              "13"
             ],
-            "correct": 0,
-            "solution": "For f(x) = ax² + bx + c with a = −2 < 0, the maximum occurs at the vertex x = −b / (2a):\nx = −8 / (2 × (−2)) = −8 / (−4) = 2.\nEvaluating f(2):\nf(2) = −2(2)² + 8(2) + 5 = −2(4) + 16 + 5 = −8 + 16 + 5 = 13."
+            "correct": 3,
+            "solution": "The vertex is at \\(x = -\\dfrac{b}{2a} = -\\dfrac{8}{-4} = 2\\). \\(f(2) = -8 + 16 - 3 = 5\\). Since \\(a < 0\\), this is a maximum."
           },
           {
             "question": "Solve the biquadratic equation x⁴ − 13x² + 36 = 0 for all real solutions.",
@@ -43626,28 +43626,28 @@ const subjects = [
             "solution": "Using the difference of cubes identity: a³ − b³ = (a − b)(a² + ab + b²).\nThus: (a³ − b³) / (a − b) = a² + ab + b².\nSubtracting 2ab:\n(a² + ab + b²) − 2ab = a² − ab + b²? No, (a - b)² = a² - 2ab + b².\nWait! a² + ab + b² - 2ab = a² - ab + b².\nIf the problem is (a³ - b³)/(a - b) - 3ab = a² - 2ab + b² = (a - b)²!\nOr if it is (a + b)² = a² + 2ab + b², adding ab gives a² + 3ab + b².\nLet's verify: (a³ - b³)/(a - b) - 3ab = a² + ab + b² - 3ab = a² - 2ab + b² = (a - b)²."
           },
           {
-            "question": "Find the range of the function f(x) = x² − 4x + 7 on the closed interval [0, 5].",
+            "question": "How many solutions does \\(|x^{2} - 4| = 3\\) have?",
             "options": [
-              "[3, 12]",
-              "[3, 7]",
-              "[7, 12]",
-              "[0, 5]",
-              "[−3, 12]"
+              "2",
+              "3",
+              "6",
+              "4",
+              "1"
             ],
-            "correct": 0,
-            "solution": "The vertex of the parabola f(x) = x² − 4x + 7 is at x = −(−4)/(2 × 1) = 2.\nSince x = 2 lies within the interval [0, 5], the minimum value is:\nf(2) = 2² − 4(2) + 7 = 4 − 8 + 7 = 3.\nCheck the endpoints:\nf(0) = 0² − 4(0) + 7 = 7\nf(5) = 5² − 4(5) + 7 = 25 − 20 + 7 = 12.\nThe maximum value on [0, 5] is 12.\nTherefore, the range of f(x) on [0, 5] is [3, 12]."
+            "correct": 3,
+            "solution": "\\(x^{2} - 4 = 3\\) gives \\(x^{2} = 7\\) (two solutions) and \\(x^{2} - 4 = -3\\) gives \\(x^{2} = 1\\) (two solutions). Total: 4."
           },
           {
-            "question": "If f(2x + 1) = 4x² + 6x − 1, what is the explicit expression for f(x)?",
+            "question": "The graph of \\(y = |x|\\) is moved 3 units to the right, reflected in the \\(x\\)-axis, and then moved 2 units up. What is the value of the new function at \\(x = 0\\)?",
             "options": [
-              "f(x) = x² + x − 3",
-              "f(x) = x² + 2x − 1",
-              "f(x) = x² − x + 2",
-              "f(x) = 2x² + 3x − 1",
-              "f(x) = x² + 4x − 5"
+              "5",
+              "1",
+              "-5",
+              "2",
+              "-1"
             ],
-            "correct": 0,
-            "solution": "Let u = 2x + 1 → 2x = u − 1 → x = (u − 1)/2.\nSubstitute x into the expression for f(2x + 1):\nf(u) = 4[(u − 1)/2]² + 6[(u − 1)/2] − 1\nf(u) = 4[(u² − 2u + 1)/4] + 3(u − 1) − 1\nf(u) = (u² − 2u + 1) + (3u − 3) − 1 = u² + u − 3.\nReplacing u with x: f(x) = x² + x − 3."
+            "correct": 4,
+            "solution": "Shift right 3: \\(y = |x - 3|\\). Reflect in the \\(x\\)-axis: \\(y = -|x - 3|\\). Move up 2: \\(y = -|x - 3| + 2\\). At \\(x = 0\\): \\(-3 + 2 = -1\\)."
           },
           {
             "question": "What is the monic polynomial P(x) of degree 3 with integer coefficients whose roots are −1, 2, and 4?",
@@ -43722,16 +43722,16 @@ const subjects = [
             "solution": "Testing the given integer candidates in P(x) = x³ - 2x² - x - 6:\nFor x = 3: P(3) = 3³ - 2(3²) - 3 - 6 = 27 - 18 - 3 - 6 = 0.\nThus, x = 3 is a root of the equation."
           },
           {
-            "question": "Given the two functions f(x) = e^(x²) and g(x) = (e^x)², which of the following statements is true?",
+            "question": "How many of these functions are <b>even</b>? \\(x^{4} - 3x^{2} + 1\\), \\(x^{3} - x\\), \\(|x| + x\\), \\(x^{2} + x\\), \\(\\dfrac{1}{x^{2}}\\)",
             "options": [
-              "They are never equal for any real value of x",
-              "They are equal for every real x",
-              "They have the same value if x = 0 or x = 2",
-              "They have the same value for 0 ≤ x ≤ 2",
-              "They have the same value only for x = 1"
+              "1",
+              "2",
+              "3",
+              "4",
+              "0"
             ],
-            "correct": 2,
-            "solution": "Note that g(x) = (e^x)² = e^(2x).\nEquating f(x) = g(x) gives:\ne^(x²) = e^(2x) ⇔ x² = 2x ⇔ x² - 2x = 0 ⇔ x(x - 2) = 0.\nTherefore, the two functions are equal when x = 0 or x = 2."
+            "correct": 1,
+            "solution": "Even means \\(f(-x) = f(x)\\). \\(x^{4} - 3x^{2} + 1\\) and \\(\\frac{1}{x^{2}}\\) are even. \\(x^{3} - x\\) is odd. \\(|x| + x\\) and \\(x^{2} + x\\) are neither."
           },
           {
             "question": "Defined on the set of real numbers, the operator ◊ is given by the relation: a ◊ b = ab − a − b. What is the value of: (a ◊ b) ◊ c − (a ◊ c) ◊ b?",
@@ -43746,16 +43746,16 @@ const subjects = [
             "solution": "Note that a ◊ b = ab - a - b = (a - 1)(b - 1) - 1.\nLet x = (a - 1), y = (b - 1), z = (c - 1).\nThen (a ◊ b) = xy - 1.\n(a ◊ b) ◊ c = (xy - 1) ◊ c = ((xy - 1) - 1)(c - 1) - 1 = (xy - 2)z - 1 = xyz - 2z - 1.\nSimilarly, (a ◊ c) ◊ b = xyz - 2y - 1.\nSubtracting the two expressions:\n(xyz - 2z - 1) - (xyz - 2y - 1) = 2y - 2z = 2(b - 1) - 2(c - 1) = 2b - 2c."
           },
           {
-            "question": "What is the maximum value taken by the expression 6x² − 2y² as the real numbers x and y vary in the interval [0, 1]?",
+            "question": "A quadratic function has zeros at \\(x = 1\\) and \\(x = 5\\) and passes through the point \\((3, 8)\\). What is \\(f(0)\\)?",
             "options": [
-              "3",
-              "2",
-              "6",
-              "4",
-              "8"
+              "-10",
+              "10",
+              "-5",
+              "5",
+              "-8"
             ],
-            "correct": 2,
-            "solution": "To maximize 6x² - 2y² subject to x, y ∈ [0, 1]:\nMaximize the positive term by setting x = 1 (giving 6(1)² = 6).\nMinimize the negative term by setting y = 0 (giving -2(0)² = 0).\nMaximum value = 6 - 0 = 6."
+            "correct": 0,
+            "solution": "\\(f(x) = a(x - 1)(x - 5)\\). At \\(x = 3\\): \\(a(2)(-2) = -4a = 8\\), so \\(a = -2\\). Then \\(f(0) = -2(-1)(-5) = -10\\)."
           }
         ]
       },
@@ -43788,16 +43788,16 @@ const subjects = [
             "solution": "Angle C = 180° - 40° - 65° = 75°. Sine rule: BC/sin 40° = AB/sin 75° → BC = 8 × sin 40° / sin 75° ≈ 5.32 cm ≈ 5.2 cm."
           },
           {
-            "question": "What is the area of a circle with radius 7 cm? (π = 22/7)",
+            "question": "The median from vertex A of a triangle has length 18 cm. How far is the centroid from A?",
             "options": [
-              "138 cm²",
-              "144 cm²",
-              "154 cm²",
-              "168 cm²",
-              "176 cm²"
+              "6 cm",
+              "9 cm",
+              "18 cm",
+              "12 cm",
+              "3 cm"
             ],
-            "correct": 2,
-            "solution": "Area = πr² = (22/7) × 49 = 22 × 7 = 154 cm²."
+            "correct": 3,
+            "solution": "The centroid divides each median in the ratio \\(2 : 1\\) from the vertex. Distance from A \\(= \\tfrac{2}{3} \\times 18 = 12\\) cm (and 6 cm from the midpoint of the side)."
           },
           {
             "question": "What is the area of a trapezium with parallel sides 8 cm and 12 cm, and height 5 cm?",
@@ -43848,16 +43848,16 @@ const subjects = [
             "solution": "Perimeter = 2(length + width) = 2(12 + 8) = 2 × 20 = 40 cm."
           },
           {
-            "question": "What is the surface area of a cube with side length 5 cm?",
+            "question": "A sector has radius 6 and central angle \\(120^{\\circ}\\). What is its perimeter?",
             "options": [
-              "25 cm²",
-              "100 cm²",
-              "125 cm²",
-              "150 cm²",
-              "250 cm²"
+              "\\(4\\pi\\)",
+              "\\(12\\pi\\)",
+              "\\(6 + 4\\pi\\)",
+              "\\(12 + 12\\pi\\)",
+              "\\(12 + 4\\pi\\)"
             ],
-            "correct": 2,
-            "solution": "Surface area = 6s² = 6 × 25 = 150 cm²."
+            "correct": 4,
+            "solution": "The angle is \\(\\tfrac{2\\pi}{3}\\), so the arc is \\(6 \\times \\tfrac{2\\pi}{3} = 4\\pi\\). The perimeter is the arc plus the two radii: \\(4\\pi + 6 + 6 = 12 + 4\\pi\\)."
           },
           {
             "question": "What is the area of a triangle with base 12 cm and height 8 cm?",
@@ -43872,16 +43872,16 @@ const subjects = [
             "solution": "Area = ½ × base × height = ½ × 12 × 8 = 48 cm²."
           },
           {
-            "question": "What is the value of cos 180°?",
+            "question": "A right triangle has legs 9 and 12. What is the length of the altitude drawn to the hypotenuse?",
             "options": [
-              "−1",
-              "−0.5",
-              "0",
-              "0.5",
-              "1"
+              "7.2",
+              "7.5",
+              "6",
+              "5.1",
+              "9.6"
             ],
             "correct": 0,
-            "solution": "cos 180° = −1. At 180°, the point on the unit circle is (−1, 0), so cosine = −1."
+            "solution": "The hypotenuse is \\(\\sqrt{81 + 144} = 15\\). The area is \\(\\tfrac{1}{2}(9)(12) = 54\\), and also \\(\\tfrac{1}{2}(15)h\\). So \\(h = \\dfrac{108}{15} = 7.2\\)."
           },
           {
             "question": "What is the sum of the interior angles of a regular octagon?",
@@ -43920,16 +43920,16 @@ const subjects = [
             "solution": "Volume = (4/3)πr³ = (4/3) × 3.14 × 27 = 4 × 3.14 × 9 = 113.04 cm³."
           },
           {
-            "question": "What is the value of cos 60°?",
+            "question": "ABCD is a cyclic quadrilateral with \\(\\angle A = 70^{\\circ}\\) and \\(\\angle B = 100^{\\circ}\\). What is \\(\\angle D\\)?",
             "options": [
-              "0",
-              "0.5",
-              "√2/2",
-              "√3/2",
-              "1"
+              "\\(70^{\\circ}\\)",
+              "\\(80^{\\circ}\\)",
+              "\\(110^{\\circ}\\)",
+              "\\(100^{\\circ}\\)",
+              "\\(90^{\\circ}\\)"
             ],
             "correct": 1,
-            "solution": "cos 60° = 0.5. In a 30-60-90 triangle, the side adjacent to the 60° angle is half the hypotenuse."
+            "solution": "Opposite angles of a cyclic quadrilateral add to \\(180^{\\circ}\\). \\(\\angle C = 180 - 70 = 110^{\\circ}\\) and \\(\\angle D = 180 - 100 = 80^{\\circ}\\)."
           },
           {
             "question": "A right triangle has legs of 6 cm and 8 cm. What is the length of the hypotenuse?",
@@ -43944,28 +43944,28 @@ const subjects = [
             "solution": "Using Pythagoras: c = √(a² + b²) = √(36 + 64) = √100 = 10 cm."
           },
           {
-            "question": "What is the area of a circle with radius 7 cm? (π = 22/7)",
+            "question": "What is the ratio of the area of the circumscribed circle to the area of the inscribed circle of an equilateral triangle?",
             "options": [
-              "154 cm²",
-              "176 cm²",
-              "198 cm²",
-              "220 cm²",
-              "242 cm²"
+              "4",
+              "2",
+              "3",
+              "\\(\\sqrt{3}\\)",
+              "9"
             ],
             "correct": 0,
-            "solution": "Area = πr² = (22/7) × 49 = 22 × 7 = 154 cm²."
+            "solution": "In an equilateral triangle the circumradius is twice the inradius (\\(R = 2r\\), since the centroid divides the median 2 : 1). Areas go with the square of the radius: \\(\\dfrac{\\pi R^2}{\\pi r^2} = 4\\)."
           },
           {
-            "question": "What is the value of sin 30°?",
+            "question": "Two parallel chords of lengths 16 and 12 lie on opposite sides of the centre of a circle of radius 10. How far apart are they?",
             "options": [
-              "0",
-              "0.5",
-              "√2/2",
-              "√3/2",
-              "1"
+              "2",
+              "10",
+              "14",
+              "7",
+              "28"
             ],
-            "correct": 1,
-            "solution": "sin 30° = 0.5. In a 30-60-90 triangle, the side opposite the 30° angle is half the hypotenuse."
+            "correct": 2,
+            "solution": "The distance from the centre to a chord of length \\(2a\\) is \\(\\sqrt{r^2 - a^2}\\). For 16: \\(\\sqrt{100 - 64} = 6\\). For 12: \\(\\sqrt{100 - 36} = 8\\). On opposite sides, add: \\(6 + 8 = 14\\). (On the same side it would be \\(8 - 6 = 2\\).)"
           },
           {
             "question": "A rectangle has perimeter 30 cm and length 10 cm. What is its width?",
@@ -43980,28 +43980,28 @@ const subjects = [
             "solution": "Perimeter = 2(l + w) → 30 = 2(10 + w) → 15 = 10 + w → w = 5 cm."
           },
           {
-            "question": "Volume of cone: r=3, h=6? (π=3.14)",
+            "question": "A triangle has sides 13, 14 and 15. What is the radius of its inscribed circle?",
             "options": [
-              "56.52",
-              "169.56",
-              "113.04",
-              "84.78",
-              "28.26"
+              "5",
+              "3",
+              "6.5",
+              "4",
+              "8"
             ],
-            "correct": 0,
-            "solution": "V=πr²h/3=3.14×9×6/3=56.52."
+            "correct": 3,
+            "solution": "Semi-perimeter \\(s = 21\\). By Heron: area \\(= \\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} = 84\\). The inradius is \\(r = \\dfrac{\\text{area}}{s} = \\dfrac{84}{21} = 4\\)."
           },
           {
-            "question": "Area of trapezoid: bases 5,9, height 4?",
+            "question": "The interior angles of a convex polygon add up to \\(1440^{\\circ}\\). How many diagonals does it have?",
             "options": [
+              "45",
+              "35",
+              "20",
               "28",
-              "36",
-              "56",
-              "14",
-              "20"
+              "40"
             ],
-            "correct": 0,
-            "solution": "A=(a+b)h/2=(5+9)×4/2=28."
+            "correct": 1,
+            "solution": "\\((n - 2) \\times 180 = 1440\\) gives \\(n = 10\\). The number of diagonals is \\(\\dfrac{n(n - 3)}{2} = \\dfrac{10 \\times 7}{2} = 35\\)."
           },
           {
             "question": "A right-angled triangle has legs of lengths 9 cm and 12 cm. What is the radius of the circle inscribed in this triangle (inradius)?",
@@ -44454,28 +44454,28 @@ const subjects = [
             "solution": "sin 120° = sin(180° − 60°) = sin 60° = √3/2. Since 120° is in the second quadrant where sine is positive, sin 120° = √3/2."
           },
           {
-            "question": "What is the value of tan 45°?",
+            "question": "What is the total length of the part of \\([0, 2\\pi]\\) where \\(\\sin x \\geq \\dfrac{\\sqrt{3}}{2}\\)?",
             "options": [
-              "0",
-              "1",
-              "√2",
-              "√3",
-              "undefined"
+              "\\(\\tfrac{\\pi}{3}\\)",
+              "\\(\\tfrac{2\\pi}{3}\\)",
+              "\\(\\tfrac{\\pi}{6}\\)",
+              "\\(\\tfrac{\\pi}{2}\\)",
+              "\\(\\tfrac{4\\pi}{3}\\)"
             ],
-            "correct": 1,
-            "solution": "tan 45° = sin 45°/cos 45° = (√2/2)/(√2/2) = 1."
+            "correct": 0,
+            "solution": "\\(\\sin x = \\tfrac{\\sqrt{3}}{2}\\) at \\(x = \\tfrac{\\pi}{3}\\) and \\(x = \\tfrac{2\\pi}{3}\\). Between them the sine is larger. The length is \\(\\tfrac{2\\pi}{3} - \\tfrac{\\pi}{3} = \\tfrac{\\pi}{3}\\)."
           },
           {
-            "question": "What is the value of √144?",
+            "question": "If \\(\\sin x + \\cos x = \\tfrac{1}{2}\\), what is \\(\\sin 2x\\)?",
             "options": [
-              "10",
-              "11",
-              "12",
-              "13",
-              "14"
+              "\\(\\dfrac{3}{4}\\)",
+              "\\(\\dfrac{1}{4}\\)",
+              "\\(\\dfrac{-1}{2}\\)",
+              "\\(\\dfrac{-3}{4}\\)",
+              "\\(\\dfrac{-1}{4}\\)"
             ],
-            "correct": 2,
-            "solution": "√144 = 12, since 12² = 144."
+            "correct": 3,
+            "solution": "Square both sides: \\(\\sin^{2}x + 2\\sin x\\cos x + \\cos^{2}x = \\tfrac{1}{4}\\). So \\(1 + \\sin 2x = \\tfrac{1}{4}\\) and \\(\\sin 2x = -\\tfrac{3}{4}\\)."
           },
           {
             "question": "What is the value of tan 60°?",
@@ -44490,76 +44490,76 @@ const subjects = [
             "solution": "tan 60° = sin 60°/cos 60° = (√3/2)/(1/2) = √3."
           },
           {
-            "question": "Value of cos 45°?",
+            "question": "How many solutions does \\(2\\cos^{2}x - \\cos x - 1 = 0\\) have in the interval \\([0, 2\\pi)\\)?",
             "options": [
-              "0.5",
-              "√2/2",
-              "√3/2",
+              "2",
+              "4",
+              "5",
               "1",
-              "0"
+              "3"
+            ],
+            "correct": 4,
+            "solution": "Factorise: \\((2\\cos x + 1)(\\cos x - 1) = 0\\). \\(\\cos x = 1\\) gives \\(x = 0\\). \\(\\cos x = -\\tfrac{1}{2}\\) gives \\(x = \\tfrac{2\\pi}{3}\\) and \\(x = \\tfrac{4\\pi}{3}\\). Total: 3."
+          },
+          {
+            "question": "A sector has radius 8 and a central angle of \\(135^{\\circ}\\). What is the arc length?",
+            "options": [
+              "\\(3\\pi\\)",
+              "\\(6\\pi\\)",
+              "\\(12\\pi\\)",
+              "\\(8\\pi\\)",
+              "\\(135\\pi\\)"
             ],
             "correct": 1,
-            "solution": "cos 45°=√2/2."
+            "solution": "\\(135^{\\circ} = \\dfrac{135\\pi}{180} = \\dfrac{3\\pi}{4}\\) radians. Arc length \\(s = r\\theta = 8 \\times \\dfrac{3\\pi}{4} = 6\\pi\\)."
           },
           {
-            "question": "Value of sin 90°?",
+            "question": "In a triangle, \\(A = 40^{\\circ}\\), \\(B = 60^{\\circ}\\) and \\(a = 10\\). What is the side \\(b\\)?",
             "options": [
-              "0",
-              "0.5",
-              "1",
-              "√2/2",
-              "√3/2"
+              "7.4",
+              "15.3",
+              "13.5",
+              "10.0",
+              "8.8"
             ],
             "correct": 2,
-            "solution": "sin 90°=1."
+            "solution": "Sine rule: \\(\\dfrac{b}{\\sin 60^{\\circ}} = \\dfrac{10}{\\sin 40^{\\circ}}\\). So \\(b = \\dfrac{10 \\times 0.8660}{0.6428} = 13.5\\). (The larger angle faces the larger side, so \\(b > a\\).)"
           },
           {
-            "question": "Value of tan 30°?",
+            "question": "\\(\\sin\\alpha = \\dfrac{3}{5}\\) and \\(\\alpha\\) is in the second quadrant. What is \\(\\sin 2\\alpha\\)?",
             "options": [
-              "1",
-              "√3",
-              "1/√3",
-              "0",
-              "√3/2"
+              "\\(\\dfrac{24}{25}\\)",
+              "\\(\\dfrac{-12}{25}\\)",
+              "\\(\\dfrac{7}{25}\\)",
+              "\\(\\dfrac{-24}{25}\\)",
+              "\\(\\dfrac{-7}{25}\\)"
             ],
-            "correct": 2,
-            "solution": "tan 30°=1/√3."
+            "correct": 3,
+            "solution": "In the second quadrant \\(\\cos\\alpha\\) is negative: \\(\\cos\\alpha = -\\sqrt{1 - \\tfrac{9}{25}} = -\\tfrac{4}{5}\\). \\(\\sin 2\\alpha = 2\\sin\\alpha\\cos\\alpha = 2 \\times \\tfrac{3}{5} \\times \\left(-\\tfrac{4}{5}\\right) = -\\tfrac{24}{25}\\)."
           },
           {
-            "question": "Value of cos 270°?",
+            "question": "What is the sum of the solutions of \\(\\sin x = \\cos x\\) in \\([0, 2\\pi)\\)?",
             "options": [
-              "0",
-              "1",
-              "−1",
-              "−1/2",
-              "1/2"
+              "\\(\\tfrac{\\pi}{2}\\)",
+              "\\(\\tfrac{3\\pi}{2}\\)",
+              "\\(2\\pi\\)",
+              "\\(\\tfrac{5\\pi}{4}\\)",
+              "\\(\\pi\\)"
             ],
-            "correct": 0,
-            "solution": "cos 270°=0."
+            "correct": 1,
+            "solution": "\\(\\sin x = \\cos x\\) means \\(\\tan x = 1\\), so \\(x = \\tfrac{\\pi}{4}\\) or \\(x = \\tfrac{5\\pi}{4}\\). The sum is \\(\\tfrac{6\\pi}{4} = \\tfrac{3\\pi}{2}\\)."
           },
           {
-            "question": "If sin θ=4/5, cos θ=?",
+            "question": "A triangle has sides 7, 8 and 9. What is the cosine of the angle opposite the side of length 9?",
             "options": [
-              "3/5",
-              "4/5",
-              "5/4",
-              "5/3",
-              "−3/5"
-            ],
-            "correct": 0,
-            "solution": "cos²θ=1−16/25=9/25 → cos θ=3/5."
-          },
-          {
-            "question": "Value of sin 180°?",
-            "options": [
-              "0",
-              "1",
-              "−1",
-              "1/2",
-              "−1/2"
+              "\\(\\dfrac{2}{7}\\)",
+              "\\(\\dfrac{4}{7}\\)",
+              "\\(\\dfrac{5}{7}\\)",
+              "\\(\\dfrac{-2}{7}\\)",
+              "\\(\\dfrac{7}{9}\\)"
             ],
             "correct": 0,
-            "solution": "sin 180°=0."
+            "solution": "Cosine rule: \\(\\cos C = \\dfrac{a^{2} + b^{2} - c^{2}}{2ab} = \\dfrac{49 + 64 - 81}{2 \\times 7 \\times 8} = \\dfrac{32}{112} = \\dfrac{2}{7}\\)."
           },
           {
             "question": "Given that sin(θ) = 3/5 and θ is an angle in Quadrant II (π/2 < θ < π), what is the value of cos(θ)?",
@@ -44856,16 +44856,16 @@ const subjects = [
         "name": "Probability & Statistics",
         "questions": [
           {
-            "question": "Two dice rolled. Probability the sum is 7 or 11?",
+            "question": "Bag A has 3 red and 2 blue balls. Bag B has 1 red and 4 blue balls. A bag is chosen at random and a ball is drawn, and it is red. What is the probability that it came from bag A?",
             "options": [
-              "1/6",
-              "2/9",
-              "1/4",
-              "5/18",
-              "7/36"
+              "\\(\\dfrac{2}{5}\\)",
+              "\\(\\dfrac{3}{5}\\)",
+              "\\(\\dfrac{1}{2}\\)",
+              "\\(\\dfrac{3}{4}\\)",
+              "\\(\\dfrac{3}{10}\\)"
             ],
-            "correct": 1,
-            "solution": "Total outcomes = 36. Sum of 7: 6 ways. Sum of 11: 2 ways. Total favourable = 8. P = 8/36 = 2/9."
+            "correct": 3,
+            "solution": "\\(P(\\text{red}) = \\tfrac{1}{2} \\cdot \\tfrac{3}{5} + \\tfrac{1}{2} \\cdot \\tfrac{1}{5} = \\tfrac{3}{10} + \\tfrac{1}{10} = \\tfrac{2}{5}\\). \\(P(A | \\text{red}) = \\dfrac{3/10}{2/5} = \\dfrac{3}{4}\\)."
           },
           {
             "question": "A bag contains 5 red and 3 blue marbles. Two marbles are drawn without replacement. What is the probability both are red?",
@@ -44928,28 +44928,28 @@ const subjects = [
             "solution": "P(A∩B)=P(A)×P(B)=0.4×0.5=0.2."
           },
           {
-            "question": "A die is rolled twice. What is the probability the sum is 7?",
+            "question": "A shooter hits the target with probability 0.7 on each independent shot. What is the probability of at least 2 hits in 3 shots?",
             "options": [
-              "1/6",
-              "1/9",
-              "5/36",
-              "7/36",
-              "1/3"
+              "0.784",
+              "0.441",
+              "0.343",
+              "0.657",
+              "0.900"
             ],
             "correct": 0,
-            "solution": "Total outcomes=36. Sum 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1)=6 ways. P=6/36=1/6."
+            "solution": "Exactly 2 hits: \\(3 \\times 0.7^{2} \\times 0.3 = 0.441\\). Exactly 3 hits: \\(0.7^{3} = 0.343\\). Sum \\(= 0.784\\)."
           },
           {
-            "question": "What is the probability of rolling a number greater than 4 on a fair die?",
+            "question": "Machine A makes 60% of a product with 2% defective. Machine B makes 40% with 5% defective. A defective item is found. What is the probability that it came from A?",
             "options": [
-              "1/6",
-              "1/3",
-              "1/2",
-              "2/3",
-              "5/6"
+              "0.375",
+              "0.6",
+              "0.012",
+              "0.032",
+              "0.25"
             ],
-            "correct": 1,
-            "solution": "Numbers >4: 5,6 (2 outcomes). P=2/6=1/3."
+            "correct": 0,
+            "solution": "\\(P(\\text{defective}) = 0.6 \\times 0.02 + 0.4 \\times 0.05 = 0.012 + 0.020 = 0.032\\). Bayes: \\(P(A | D) = \\dfrac{0.012}{0.032} = 0.375\\)."
           },
           {
             "question": "In a class of 30 students, 18 play football and 12 play basketball. If 6 play both, what is the probability a randomly selected student plays neither?",
@@ -44964,16 +44964,16 @@ const subjects = [
             "solution": "Neither=30−(18+12−6)=30−24=6. P=6/30=1/5."
           },
           {
-            "question": "Three coins are tossed. What is the probability of at least one head?",
+            "question": "Three cards are drawn without replacement from 5 red and 3 blue cards. What is the probability of exactly 2 red cards?",
             "options": [
-              "1/8",
-              "3/8",
-              "7/8",
-              "1/2",
-              "1"
+              "\\(\\dfrac{5}{28}\\)",
+              "\\(\\dfrac{3}{8}\\)",
+              "\\(\\dfrac{45}{56}\\)",
+              "\\(\\dfrac{1}{2}\\)",
+              "\\(\\dfrac{15}{28}\\)"
             ],
-            "correct": 2,
-            "solution": "P(no heads)=1/8 (TTT). P(at least one head)=1−1/8=7/8."
+            "correct": 4,
+            "solution": "\\(\\dfrac{\\binom{5}{2}\\binom{3}{1}}{\\binom{8}{3}} = \\dfrac{10 \\times 3}{56} = \\dfrac{30}{56} = \\dfrac{15}{28}\\)."
           },
           {
             "question": "A number is chosen at random from 1 to 20. What is the probability it is prime?",
@@ -44988,64 +44988,64 @@ const subjects = [
             "solution": "Primes: 2,3,5,7,11,13,17,19=8 numbers. P=8/20=2/5."
           },
           {
-            "question": "The mean of 5 numbers is 12. What is the sum of these numbers?",
+            "question": "The mean of 10 numbers is 12. An 11th number is added and the mean becomes 13. What is the 11th number?",
             "options": [
-              "12",
-              "24",
-              "48",
-              "60",
-              "72"
+              "13",
+              "25",
+              "23",
+              "14",
+              "12"
+            ],
+            "correct": 2,
+            "solution": "The old sum is \\(10 \\times 12 = 120\\). The new sum is \\(11 \\times 13 = 143\\). The new number is \\(143 - 120 = 23\\)."
+          },
+          {
+            "question": "The values 2, 3, 5 and 7 occur 4, 3, 2 and 1 times respectively. What is the mean minus the median?",
+            "options": [
+              "0.2",
+              "0.4",
+              "0",
+              "1.0",
+              "0.6"
+            ],
+            "correct": 1,
+            "solution": "\\(n = 10\\). Mean \\(= \\dfrac{2 \\times 4 + 3 \\times 3 + 5 \\times 2 + 7 \\times 1}{10} = \\dfrac{34}{10} = 3.4\\). The 5th and 6th values are both 3, so the median is 3. Difference \\(= 0.4\\)."
+          },
+          {
+            "question": "What is the (population) standard deviation of 2, 4, 4, 4, 5, 5, 7, 9?",
+            "options": [
+              "4",
+              "2.14",
+              "1.5",
+              "2",
+              "5"
             ],
             "correct": 3,
-            "solution": "Mean=sum/n → sum=mean×n=12×5=60."
+            "solution": "Mean \\(= 40/8 = 5\\). Squared deviations: \\(9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32\\). Variance \\(= 32/8 = 4\\), so the standard deviation is \\(\\sqrt{4} = 2\\). (Dividing by \\(n - 1\\) gives 2.14, the sample value.)"
           },
           {
-            "question": "What is the median of: 3, 7, 2, 9, 5?",
+            "question": "Two fair dice are rolled. Given that at least one die shows a 6, what is the probability that the sum is 8?",
             "options": [
-              "3",
-              "5",
-              "7",
-              "9",
-              "5.2"
+              "\\(\\dfrac{5}{36}\\)",
+              "\\(\\dfrac{2}{11}\\)",
+              "\\(\\dfrac{1}{18}\\)",
+              "\\(\\dfrac{1}{11}\\)",
+              "\\(\\dfrac{1}{6}\\)"
             ],
             "correct": 1,
-            "solution": "Sorted: 2,3,5,7,9. Median (middle)=5."
+            "solution": "Outcomes with at least one 6: \\(36 - 25 = 11\\). Of these, the sum is 8 only for \\((6, 2)\\) and \\((2, 6)\\): 2 outcomes. So \\(P = \\dfrac{2}{11}\\)."
           },
           {
-            "question": "What is the mode of: 2, 3, 3, 5, 5, 5, 7?",
+            "question": "A fair die is rolled 4 times. What is the probability of at least one six?",
             "options": [
-              "2",
-              "3",
-              "5",
-              "7",
-              "No mode"
-            ],
-            "correct": 2,
-            "solution": "Mode=most frequent value=5 (appears 3 times)."
-          },
-          {
-            "question": "The range of data: 4, 8, 2, 10, 6 is:",
-            "options": [
-              "2",
-              "4",
-              "6",
-              "8",
-              "10"
-            ],
-            "correct": 2,
-            "solution": "Range=max−min=10−2=8."
-          },
-          {
-            "question": "What is the probability of drawing a face card (J, Q, K) from a standard deck?",
-            "options": [
-              "1/13",
-              "3/13",
-              "1/4",
-              "1/2",
-              "3/26"
+              "0.482",
+              "0.518",
+              "0.667",
+              "0.250",
+              "0.171"
             ],
             "correct": 1,
-            "solution": "Face cards=12 (4 suits×3). P=12/52=3/13."
+            "solution": "Use the complement: no sixes in 4 rolls has probability \\(\\left(\\dfrac{5}{6}\\right)^{4} = \\dfrac{625}{1296} = 0.482\\). So \\(P(\\text{at least one}) = 1 - 0.482 = 0.518\\)."
           },
           {
             "question": "A box contains 5 defective and 15 non-defective items. Two are drawn without replacement. What is the probability both are non-defective?",
@@ -45060,28 +45060,28 @@ const subjects = [
             "solution": "P(first non-def)=15/20=3/4. P(second|first)=14/19. P=3/4×14/19=42/76=21/38."
           },
           {
-            "question": "The variance of a dataset is 25. What is the standard deviation?",
+            "question": "What is the interquartile range of 3, 5, 7, 8, 9, 11, 13, 15, 18?",
             "options": [
-              "5",
-              "12.5",
-              "25",
-              "50",
-              "625"
+              "8",
+              "6",
+              "9",
+              "4",
+              "15"
             ],
             "correct": 0,
-            "solution": "SD=√variance=√25=5."
+            "solution": "The median is 9. The lower half is 3, 5, 7, 8: \\(Q_1 = \\dfrac{5 + 7}{2} = 6\\). The upper half is 11, 13, 15, 18: \\(Q_3 = \\dfrac{13 + 15}{2} = 14\\). \\(\\text{IQR} = 14 - 6 = 8\\)."
           },
           {
-            "question": "In how many ways can 5 people be arranged in a circle?",
+            "question": "\\(P(A) = 0.5\\), \\(P(B) = 0.4\\) and \\(P(A \\cup B) = 0.7\\). What is the probability of neither A nor B, and are A and B independent?",
             "options": [
-              "24",
-              "60",
-              "120",
-              "720",
-              "5040"
+              "0.3, not independent",
+              "0.2, independent",
+              "0.6, independent",
+              "0.3, independent",
+              "0.5, not independent"
             ],
-            "correct": 1,
-            "solution": "Circular permutations=(n−1)!=4!=24."
+            "correct": 3,
+            "solution": "\\(P(\\text{neither}) = 1 - 0.7 = 0.3\\). \\(P(A \\cap B) = 0.5 + 0.4 - 0.7 = 0.2\\), and \\(P(A)P(B) = 0.5 \\times 0.4 = 0.2\\). They are equal, so A and B are independent."
           },
           {
             "question": "What is the probability that a leap year has 53 Sundays?",
@@ -45108,16 +45108,16 @@ const subjects = [
             "solution": "Binomial: P=¹⁰C₇(0.5)⁷(0.5)³=120×1/1024=120/1024≈0.117."
           },
           {
-            "question": "The probability of rain today is 0.3. What is the probability it does NOT rain?",
+            "question": "A disease affects 1% of people. A test is positive for 90% of the people with the disease and for 5% of the people without it. If a person tests positive, what is the probability that they have the disease?",
             "options": [
-              "0.3",
-              "0.5",
-              "0.7",
-              "0.9",
-              "1.0"
+              "90%",
+              "5%",
+              "15%",
+              "1%",
+              "50%"
             ],
             "correct": 2,
-            "solution": "P(not rain)=1−P(rain)=1−0.3=0.7."
+            "solution": "\\(P(\\text{pos}) = 0.01 \\times 0.90 + 0.99 \\times 0.05 = 0.009 + 0.0495 = 0.0585\\). \\(P(\\text{disease} | \\text{pos}) = \\dfrac{0.009}{0.0585} = 0.154 \\approx 15\\%\\). Most positives are false positives because the disease is rare."
           },
           {
             "question": "Two events A and B are mutually exclusive. If P(A)=0.3 and P(B)=0.4, what is P(A or B)?",
@@ -45180,16 +45180,16 @@ const subjects = [
             "solution": "P(at least one 6) = 1 − P(no 6 in all 3 rolls).\nP(not getting a 6 on one roll) = 5/6.\nP(no 6 in 3 rolls) = (5/6)³ = 125/216.\nP(at least one 6) = 1 − 125/216 = 91/216."
           },
           {
-            "question": "A discrete random variable X has the following probability distribution:\nX = 1 with P = 0.2\nX = 2 with P = 0.5\nX = 5 with P = 0.3\nWhat is the expected value E[X]?",
+            "question": "In a histogram the bar height is the frequency density. The class 0–5 has frequency 20 and bar height 4. The class 5–15 has frequency 60. What is the bar height of the class 5–15?",
             "options": [
-              "2.7",
-              "2.5",
-              "3.0",
-              "2.3",
-              "3.2"
+              "6",
+              "12",
+              "3",
+              "4",
+              "60"
             ],
             "correct": 0,
-            "solution": "E[X] = ∑ x_i P(x_i) = (1 × 0.2) + (2 × 0.5) + (5 × 0.3) = 0.2 + 1.0 + 1.5 = 2.7."
+            "solution": "Frequency density = frequency / class width. First class: \\(20/5 = 4\\) ✓. Second class: \\(60/10 = 6\\). (The area of the bar, not its height, represents the frequency.)"
           },
           {
             "question": "What is the standard deviation of the small dataset: {2, 4, 4, 4, 5, 5, 7, 9}?",
@@ -45252,16 +45252,16 @@ const subjects = [
             "solution": "There are 4 Aces in a 52-card deck.\nP(1st Ace) = 4/52 = 1/13.\nP(2nd Ace | 1st Ace) = 3/51 = 1/17.\nP(both Aces) = (1/13) × (1/17) = 1/221."
           },
           {
-            "question": "What is the median of the following set of 10 numbers: 14, 7, 22, 19, 3, 11, 15, 8, 25, 18?",
+            "question": "A data set has \\(Q_1 = 20\\) and \\(Q_3 = 32\\). Using the rule \"an outlier lies more than \\(1.5 \\times \\text{IQR}\\) above \\(Q_3\\)\", above which value is a data point an outlier?",
             "options": [
-              "14.5",
-              "14",
-              "15",
-              "13.5",
-              "16"
+              "44",
+              "32",
+              "56",
+              "50",
+              "38"
             ],
-            "correct": 0,
-            "solution": "First sort the numbers in ascending order:\n3, 7, 8, 11, 14, 15, 18, 19, 22, 25.\nSince n = 10 (even), the median is the mean of the 5th and 6th values:\nMedian = (14 + 15) / 2 = 29 / 2 = 14.5."
+            "correct": 3,
+            "solution": "\\(\\text{IQR} = 32 - 20 = 12\\). \\(1.5 \\times 12 = 18\\). The upper fence is \\(32 + 18 = 50\\)."
           },
           {
             "question": "In a group of 30 students, 18 study Biology, 15 study Chemistry, and 8 study both. If a student is chosen at random, what is the probability that they study NEITHER subject?",
@@ -45324,16 +45324,16 @@ const subjects = [
             "solution": "The product of three integers is even unless all three are odd.\nThe set contains 5 odd numbers {1, 3, 5, 7, 9} and 4 even numbers {2, 4, 6, 8}.\nTotal ways to choose 3 numbers = C(9, 3) = (9 × 8 × 7) / (3 × 2 × 1) = 84.\nWays to choose 3 odd numbers = C(5, 3) = 10.\nWays to choose at least one even = 84 − 10 = 74.\nProbability = 74/84 = 37/42."
           },
           {
-            "question": "In a frequency distribution table, which measure of central tendency corresponds to the value with the highest frequency?",
+            "question": "A data set has mean 20 and standard deviation 4. Each value \\(x\\) is replaced by \\(y = 3x - 5\\). What is the mean of \\(y\\) plus the standard deviation of \\(y\\)?",
             "options": [
-              "Mode",
-              "Median",
-              "Mean",
-              "Mid-range",
-              "Variance"
+              "62",
+              "67",
+              "59",
+              "75",
+              "55"
             ],
-            "correct": 0,
-            "solution": "By definition, the MODE is the data value or category that appears most frequently in a dataset or frequency distribution."
+            "correct": 1,
+            "solution": "The mean changes with the whole formula: \\(3 \\times 20 - 5 = 55\\). The standard deviation ignores the shift and is multiplied by \\(|3|\\): \\(3 \\times 4 = 12\\). Sum \\(= 55 + 12 = 67\\)."
           },
           {
             "question": "A continuous random variable has a uniform distribution on the interval [2, 10]. What is the probability that X is between 4 and 7?",
@@ -45360,16 +45360,16 @@ const subjects = [
             "solution": "P(Winning) = 0.2.\nP(Losing) = 1 − 0.2 = 0.8.\nOdds against winning = P(Losing) : P(Winning) = 0.8 : 0.2 = 4 : 1 (read as '4 to 1')."
           },
           {
-            "question": "What is the interquartile range (IQR) of a dataset if the first quartile Q1 = 28 and the third quartile Q3 = 63?",
+            "question": "Estimate the mean of the grouped data: 0–10 (frequency 5), 10–20 (frequency 15), 20–30 (frequency 10).",
             "options": [
-              "35",
-              "45.5",
-              "91",
-              "28",
-              "17.5"
+              "15.0",
+              "18.3",
+              "20",
+              "16.0",
+              "16.7"
             ],
-            "correct": 0,
-            "solution": "The Interquartile Range (IQR) is the difference between the third and first quartiles:\nIQR = Q3 − Q1 = 63 − 28 = 35."
+            "correct": 4,
+            "solution": "Use the class midpoints 5, 15, 25: \\(\\dfrac{5 \\times 5 + 15 \\times 15 + 25 \\times 10}{30} = \\dfrac{25 + 225 + 250}{30} = \\dfrac{500}{30} = 16.7\\)."
           },
           {
             "question": "Rolling a six-sided die twice, what is the probability of getting a 5 or a 6 at least once?",
@@ -45465,7 +45465,7 @@ const subjects = [
             "question": "What is the derivative of f(x)=cos(x²)?",
             "options": [
               "−sin(x²)",
-              "−2xsin(x²)",
+              "−sin(2x)",
               "2xcos(x²)",
               "−2xcos(x²)",
               "−2xsin(x²)"
@@ -45936,16 +45936,16 @@ const subjects = [
             "solution": "Perpendicular gradient=−1/m=−1/3."
           },
           {
-            "question": "Distance between (−1,2) and (3,−4)?",
+            "question": "What is the area of the region defined by \\(x \\geq 0\\), \\(y \\geq 0\\) and \\(2x + 3y \\leq 12\\)?",
             "options": [
-              "4",
-              "5",
+              "12",
+              "24",
               "6",
-              "7",
-              "√52"
+              "18",
+              "10"
             ],
-            "correct": 3,
-            "solution": "d=√((3+1)²+(−4−2)²)=√52."
+            "correct": 0,
+            "solution": "The line \\(2x + 3y = 12\\) meets the axes at \\((6, 0)\\) and \\((0, 4)\\). The region is a right triangle with legs 6 and 4: area \\(= \\tfrac{1}{2} \\times 6 \\times 4 = 12\\)."
           },
           {
             "question": "Midpoint of (4,−2) and (−2,6)?",
@@ -45972,16 +45972,16 @@ const subjects = [
             "solution": "m=(7−3)/2=2. y=2x+3."
           },
           {
-            "question": "Gradient of x+2y=4?",
+            "question": "What is the area of the triangle with vertices \\((1, 1)\\), \\((5, 2)\\) and \\((3, 6)\\)?",
             "options": [
-              "1/2",
-              "−1/2",
-              "2",
-              "−2",
-              "4"
+              "18",
+              "8",
+              "12",
+              "9",
+              "10"
             ],
-            "correct": 1,
-            "solution": "y=−x/2+2. Gradient=−1/2."
+            "correct": 3,
+            "solution": "Area \\(= \\tfrac{1}{2}|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)| = \\tfrac{1}{2}|1(-4) + 5(5) + 3(-1)| = \\tfrac{1}{2}(18) = 9\\)."
           },
           {
             "question": "Line parallel to y=−2x+5 through (3,1)?",
@@ -45996,40 +45996,40 @@ const subjects = [
             "solution": "y−1=−2(x−3) → y=−2x+7."
           },
           {
-            "question": "Distance from origin to (3,4)?",
+            "question": "A line passes through the intersection of \\(x + y = 4\\) and \\(2x - y = 2\\) and is perpendicular to \\(y = 2x + 1\\). What is its equation?",
             "options": [
-              "3",
-              "4",
-              "5",
-              "7",
-              "12"
-            ],
-            "correct": 2,
-            "solution": "d=√(3²+4²)=5."
-          },
-          {
-            "question": "Line with x-int 3, y-int 2?",
-            "options": [
-              "2x+3y=6",
-              "3x+2y=6",
-              "x/3+y/2=1",
-              "All",
-              "None"
-            ],
-            "correct": 3,
-            "solution": "x/3+y/2=1 → 2x+3y=6."
-          },
-          {
-            "question": "Gradient of horizontal line?",
-            "options": [
-              "0",
-              "1",
-              "−1",
-              "Undefined",
-              "∞"
+              "\\(x + 2y = 6\\)",
+              "\\(2x + y = 6\\)",
+              "\\(x - 2y = -2\\)",
+              "\\(y = 2x - 2\\)",
+              "\\(x + 2y = 2\\)"
             ],
             "correct": 0,
-            "solution": "Horizontal line has gradient 0."
+            "solution": "Adding the equations: \\(3x = 6\\), so \\(x = 2\\) and \\(y = 2\\). The perpendicular slope is \\(-\\tfrac{1}{2}\\): \\(y - 2 = -\\tfrac{1}{2}(x - 2)\\), so \\(2y - 4 = -x + 2\\) and \\(x + 2y = 6\\)."
+          },
+          {
+            "question": "The perpendicular bisector of the segment joining \\(A(-1, 3)\\) and \\(B(5, 1)\\) meets the \\(x\\)-axis at which \\(x\\)-value?",
+            "options": [
+              "\\(2\\)",
+              "\\(\\dfrac{3}{4}\\)",
+              "\\(4\\)",
+              "\\(\\dfrac{-4}{3}\\)",
+              "\\(\\dfrac{4}{3}\\)"
+            ],
+            "correct": 4,
+            "solution": "Midpoint \\((2, 2)\\). Slope of AB \\(= \\dfrac{1 - 3}{5 + 1} = -\\tfrac{1}{3}\\), so the perpendicular slope is 3: \\(y - 2 = 3(x - 2)\\), i.e. \\(y = 3x - 4\\). Set \\(y = 0\\): \\(x = \\tfrac{4}{3}\\)."
+          },
+          {
+            "question": "The points \\((1, 2)\\), \\((3, k)\\) and \\((7, 10)\\) are collinear. What is \\(k\\)?",
+            "options": [
+              "\\(6\\)",
+              "\\(5\\)",
+              "\\(4\\)",
+              "\\(\\dfrac{14}{3}\\)",
+              "\\(\\dfrac{16}{3}\\)"
+            ],
+            "correct": 3,
+            "solution": "The slope from \\((1, 2)\\) to \\((7, 10)\\) is \\(\\tfrac{8}{6} = \\tfrac{4}{3}\\). The slope from \\((1, 2)\\) to \\((3, k)\\) must be the same: \\(\\dfrac{k - 2}{2} = \\dfrac{4}{3}\\), so \\(k = 2 + \\dfrac{8}{3} = \\dfrac{14}{3}\\)."
           },
           {
             "question": "Line through (−2,5) with gradient −1?",
@@ -46068,16 +46068,16 @@ const subjects = [
             "solution": "2x+1=−x+7 → x=2, y=5."
           },
           {
-            "question": "Distance between (1,1) and (4,5)?",
+            "question": "\\(A(0, 0)\\), \\(B(4, 1)\\) and \\(C(6, 5)\\) are three vertices of a parallelogram ABCD, in that order. What is D?",
             "options": [
-              "4",
-              "5",
-              "6",
-              "7",
-              "8"
+              "\\((10, 6)\\)",
+              "\\((2, 4)\\)",
+              "\\((-2, -4)\\)",
+              "\\((4, 2)\\)",
+              "\\((2, -4)\\)"
             ],
             "correct": 1,
-            "solution": "d=√((4−1)²+(5−1)²)=√25=5."
+            "solution": "The diagonals of a parallelogram bisect each other, so the midpoint of AC equals the midpoint of BD: \\(D = A + C - B = (0 + 6 - 4, 0 + 5 - 1) = (2, 4)\\)."
           },
           {
             "question": "Equation of line through (1,1) and (3,5)?",
@@ -46092,16 +46092,16 @@ const subjects = [
             "solution": "m=(5−1)/(3−1)=2. y−1=2(x−1) → y=2x−1."
           },
           {
-            "question": "Gradient of line y=−3x+2?",
+            "question": "What is the distance from the point \\((2, -1)\\) to the line \\(3x - 4y + 5 = 0\\)?",
             "options": [
-              "−3",
+              "5",
               "3",
-              "2",
-              "−2",
-              "1/3"
+              "1",
+              "15",
+              "\\(\\dfrac{3}{5}\\)"
             ],
-            "correct": 0,
-            "solution": "Gradient=−3."
+            "correct": 1,
+            "solution": "Use \\(d = \\dfrac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}} = \\dfrac{|6 + 4 + 5|}{\\sqrt{9 + 16}} = \\dfrac{15}{5} = 3\\)."
           },
           {
             "question": "Point on line y=2x+3 when x=−1?",
@@ -46128,16 +46128,16 @@ const subjects = [
             "solution": "y=5x passes through (0,0)."
           },
           {
-            "question": "Distance between (0,0) and (6,8)?",
+            "question": "What is the tangent of the acute angle between the lines \\(y = x\\) and \\(y = 3x\\)?",
             "options": [
-              "10",
-              "12",
-              "14",
-              "8",
-              "6"
+              "\\(2\\)",
+              "\\(\\dfrac{1}{4}\\)",
+              "\\(\\dfrac{1}{2}\\)",
+              "\\(\\dfrac{1}{3}\\)",
+              "\\(3\\)"
             ],
-            "correct": 0,
-            "solution": "d=√(36+64)=√100=10."
+            "correct": 2,
+            "solution": "\\(\\tan\\theta = \\left|\\dfrac{m_2 - m_1}{1 + m_1m_2}\\right| = \\dfrac{|3 - 1|}{1 + 3} = \\dfrac{2}{4} = \\dfrac{1}{2}\\)."
           },
           {
             "question": "What is the distance between the points A(−3, 5) and B(5, −1) in the Cartesian plane?",
@@ -46920,16 +46920,16 @@ const subjects = [
             "solution": "This is a permutation: 10P3 = 10 × 9 × 8 = 720 ways."
           },
           {
-            "question": "6P3 equals?",
+            "question": "How many 4-digit numbers with all digits different are <b>even</b>?",
             "options": [
-              "120",
-              "240",
-              "720",
-              "18",
-              "6"
+              "2520",
+              "2296",
+              "2240",
+              "2016",
+              "4536"
             ],
-            "correct": 0,
-            "solution": "6P3=6!/(6−3)!=720/6=120."
+            "correct": 1,
+            "solution": "Last digit 0: the other three places are filled in \\(9 \\times 8 \\times 7 = 504\\) ways. Last digit 2, 4, 6 or 8 (4 choices): the first digit cannot be 0 or the last digit (8 choices), then \\(8\\) and \\(7\\) for the others: \\(4 \\times 8 \\times 8 \\times 7 = 1792\\). Total \\(= 504 + 1792 = 2296\\)."
           },
           {
             "question": "In how many ways can 5 people sit in a row?",
@@ -46944,16 +46944,16 @@ const subjects = [
             "solution": "5!=120."
           },
           {
-            "question": "6C3 equals?",
+            "question": "If \\(\\dbinom{n}{3} = \\dbinom{n}{7}\\), what is \\(\\dbinom{n}{4}\\)?",
             "options": [
-              "20",
               "120",
-              "720",
-              "15",
-              "30"
+              "45",
+              "252",
+              "210",
+              "330"
             ],
-            "correct": 0,
-            "solution": "6C3=6!/(3!3!)=720/36=20."
+            "correct": 3,
+            "solution": "Since \\(\\binom{n}{k} = \\binom{n}{n - k}\\), we need \\(3 + 7 = n\\), so \\(n = 10\\). Then \\(\\binom{10}{4} = \\dfrac{10 \\cdot 9 \\cdot 8 \\cdot 7}{24} = 210\\)."
           },
           {
             "question": "How many ways to choose 2 from 8?",
@@ -46968,40 +46968,40 @@ const subjects = [
             "solution": "8C2=8!/(2!6!)=28."
           },
           {
-            "question": "5! equals?",
+            "question": "How many different arrangements of the letters of the word STATISTICS are there?",
             "options": [
-              "60",
-              "100",
-              "120",
-              "150",
-              "720"
-            ],
-            "correct": 2,
-            "solution": "5!=5×4×3×2×1=120."
-          },
-          {
-            "question": "10P2 equals?",
-            "options": [
-              "45",
-              "90",
-              "100",
-              "20",
-              "80"
+              "3 628 800",
+              "50 400",
+              "151 200",
+              "25 200",
+              "10 080"
             ],
             "correct": 1,
-            "solution": "10P2=10!/(8!)=10×9=90."
+            "solution": "There are 10 letters: S appears 3 times, T 3 times, I 2 times, A once, C once. The number of arrangements is \\(\\dfrac{10!}{3!\\,3!\\,2!} = \\dfrac{3\\,628\\,800}{72} = 50\\,400\\)."
           },
           {
-            "question": "7C4 equals?",
+            "question": "At a meeting, every person shakes hands once with every other person, and there are 45 handshakes. Three more people then arrive and shake hands with everyone already there (and with each other). How many handshakes are there in total now?",
             "options": [
-              "35",
-              "210",
-              "840",
-              "28",
-              "70"
+              "45",
+              "75",
+              "66",
+              "90",
+              "78"
+            ],
+            "correct": 4,
+            "solution": "\\(\\binom{n}{2} = 45\\) gives \\(n = 10\\). With 13 people, the total is \\(\\binom{13}{2} = 78\\). (The 3 newcomers add \\(3 \\times 10 + 3 = 33\\) handshakes.)"
+          },
+          {
+            "question": "A code has 3 letters chosen from A, B, C, D, E, F, with no repeats, and the letter A must be used. How many such codes are there?",
+            "options": [
+              "60",
+              "120",
+              "20",
+              "90",
+              "36"
             ],
             "correct": 0,
-            "solution": "7C4=7!/(4!3!)=5040/144=35."
+            "solution": "Choose the position of A: 3 ways. Fill the other two places from the remaining 5 letters in order: \\(5 \\times 4 = 20\\). Total \\(= 3 \\times 20 = 60\\). (Check by complement: \\(6 \\times 5 \\times 4 - 5 \\times 4 \\times 3 = 120 - 60 = 60\\).)"
           },
           {
             "question": "In how many ways can 4 prizes be given to 10 students?",
@@ -47040,16 +47040,16 @@ const subjects = [
             "solution": "4!=24."
           },
           {
-            "question": "9C2 equals?",
+            "question": "Six people stand in a row. In how many ways can they stand if A and B must <b>not</b> be next to each other?",
             "options": [
-              "36",
-              "72",
-              "81",
-              "18",
-              "9"
+              "480",
+              "240",
+              "720",
+              "600",
+              "120"
             ],
-            "correct": 1,
-            "solution": "9C2=9!/(2!7!)=72/2=36."
+            "correct": 0,
+            "solution": "All arrangements: \\(6! = 720\\). With A and B together: treat them as one block, \\(5!\\) arrangements, times 2 for their order, \\(= 240\\). Not together: \\(720 - 240 = 480\\)."
           },
           {
             "question": "How many ways to choose 3 from 7?",
@@ -47064,16 +47064,16 @@ const subjects = [
             "solution": "7C3=7!/(3!4!)=5040/144=35."
           },
           {
-            "question": "4P2 equals?",
+            "question": "A committee of 5 is chosen from 6 men and 4 women. How many committees contain <b>at least 2 women</b>?",
             "options": [
-              "12",
-              "6",
-              "24",
-              "8",
-              "4"
+              "252",
+              "246",
+              "126",
+              "186",
+              "120"
             ],
-            "correct": 0,
-            "solution": "4P2=4!/(2!)=24/2=12."
+            "correct": 3,
+            "solution": "Use the complement. All committees: \\(\\binom{10}{5} = 252\\). With no women: \\(\\binom{6}{5} = 6\\). With exactly 1 woman: \\(4 \\times \\binom{6}{4} = 60\\). So \\(252 - 6 - 60 = 186\\)."
           },
           {
             "question": "How many ways to arrange 3 books from 5?",
@@ -47088,16 +47088,16 @@ const subjects = [
             "solution": "5P3=5!/(2!)=120/2=60."
           },
           {
-            "question": "6C2 equals?",
+            "question": "What is the term independent of \\(x\\) in the expansion of \\(\\left(x - \\dfrac{2}{x}\\right)^{6}\\)?",
             "options": [
-              "15",
-              "30",
-              "12",
-              "20",
-              "60"
+              "\\(160\\)",
+              "\\(-20\\)",
+              "\\(-160\\)",
+              "\\(64\\)",
+              "\\(-120\\)"
             ],
-            "correct": 0,
-            "solution": "6C2=6!/(2!4!)=720/48=15."
+            "correct": 2,
+            "solution": "The general term is \\(\\binom{6}{k}x^{6 - k}\\left(-\\dfrac{2}{x}\\right)^{k} = \\binom{6}{k}(-2)^{k}x^{6 - 2k}\\). The exponent is 0 when \\(k = 3\\): \\(\\binom{6}{3}(-2)^{3} = 20 \\times (-8) = -160\\)."
           },
           {
             "question": "8P4 equals?",
@@ -47442,28 +47442,28 @@ const subjects = [
             "solution": "ℝ=ℚ∪(irrationals). All real numbers including √2, π, etc."
           },
           {
-            "question": "What is the intersection of ℕ and ℤ?",
+            "question": "Write \\(0.2\\overline{3}\\) (the digit 3 repeats forever) as a fraction.",
             "options": [
-              "ℕ",
-              "ℤ",
-              "ℚ",
-              "∅",
-              "ℝ"
+              "\\(\\dfrac{23}{99}\\)",
+              "\\(\\dfrac{7}{30}\\)",
+              "\\(\\dfrac{23}{90}\\)",
+              "\\(\\dfrac{2}{9}\\)",
+              "\\(\\dfrac{1}{4}\\)"
             ],
-            "correct": 0,
-            "solution": "ℕ⊂ℤ, so ℕ∩ℤ=ℕ."
+            "correct": 1,
+            "solution": "Let \\(x = 0.2333\\ldots\\) Then \\(100x = 23.333\\ldots\\) and \\(10x = 2.333\\ldots\\) Subtracting: \\(90x = 21\\), so \\(x = \\dfrac{21}{90} = \\dfrac{7}{30}\\)."
           },
           {
-            "question": "Which set is the largest among ℕ, ℤ, ℚ, ℝ?",
+            "question": "How many positive divisors does 360 have?",
             "options": [
-              "ℕ",
-              "ℤ",
-              "ℚ",
-              "ℝ",
-              "All equal"
+              "12",
+              "24",
+              "18",
+              "20",
+              "30"
             ],
-            "correct": 3,
-            "solution": "ℕ⊂ℤ⊂ℚ⊂ℝ. ℝ is the largest."
+            "correct": 1,
+            "solution": "\\(360 = 2^{3} \\cdot 3^{2} \\cdot 5^{1}\\). The number of divisors is \\((3 + 1)(2 + 1)(1 + 1) = 4 \\times 3 \\times 2 = 24\\)."
           },
           {
             "question": "Is √2 a rational number?",
@@ -47478,28 +47478,28 @@ const subjects = [
             "solution": "√2≈1.414... cannot be expressed as a fraction. It's irrational."
           },
           {
-            "question": "Which number is irrational?",
+            "question": "A drug has a concentration of 0.45 mg per mL. Express this in \\(\\mu\\)g per litre.",
             "options": [
-              "0.5",
-              "−3",
-              "2/3",
-              "√5",
-              "0"
+              "\\(4.5 \\times 10^{5}\\)",
+              "\\(4.5 \\times 10^{2}\\)",
+              "\\(4.5 \\times 10^{8}\\)",
+              "\\(4.5 \\times 10^{-1}\\)",
+              "\\(4.5 \\times 10^{3}\\)"
             ],
-            "correct": 3,
-            "solution": "√5≈2.236... cannot be written as a fraction. Irrational."
+            "correct": 0,
+            "solution": "\\(1\\ \\text{mg} = 1000\\ \\mu\\text{g}\\) and \\(1\\ \\text{L} = 1000\\ \\text{mL}\\). So \\(0.45\\ \\text{mg/mL} = 450\\ \\mu\\text{g/mL} = 450 \\times 1000\\ \\mu\\text{g/L} = 4.5 \\times 10^{5}\\ \\mu\\text{g/L}\\)."
           },
           {
-            "question": "What is ℚ∩(ℝ\\ℚ)?",
+            "question": "A cell has a diameter of \\(2 \\times 10^{-5}\\) m. About how many cells placed side by side fit in a line 1 cm long?",
             "options": [
-              "ℚ",
-              "ℝ",
-              "∅",
-              "ℕ",
-              "ℤ"
+              "\\(5 \\times 10^{3}\\)",
+              "\\(5 \\times 10^{1}\\)",
+              "\\(5 \\times 10^{2}\\)",
+              "\\(2 \\times 10^{3}\\)",
+              "\\(2 \\times 10^{-3}\\)"
             ],
             "correct": 2,
-            "solution": "ℚ and irrationals are disjoint. Intersection is empty."
+            "solution": "1 cm \\(= 10^{-2}\\) m. Number \\(= \\dfrac{10^{-2}}{2 \\times 10^{-5}} = 0.5 \\times 10^{3} = 5 \\times 10^{2}\\), which is 500 cells."
           },
           {
             "question": "Is 0 a natural number?",
@@ -47526,40 +47526,40 @@ const subjects = [
             "solution": "ℤ is not closed under division (3÷2=1.5∉ℤ)."
           },
           {
-            "question": "What type of number is −√9?",
+            "question": "For which digit \\(d\\) is the three-digit number \\(47d\\) divisible by 6?",
             "options": [
-              "Natural",
-              "Integer",
-              "Irrational",
-              "Complex",
-              "None"
+              "1",
+              "2",
+              "7",
+              "8",
+              "4"
             ],
-            "correct": 1,
-            "solution": "−√9=−3, which is an integer."
+            "correct": 4,
+            "solution": "Divisible by 6 means divisible by 2 and by 3. By 2: \\(d\\) must be even (0, 2, 4, 6, 8). By 3: the digit sum \\(4 + 7 + d = 11 + d\\) must be a multiple of 3, so \\(d = 1, 4, 7\\). Only \\(d = 4\\) satisfies both: \\(474 = 6 \\times 79\\)."
           },
           {
-            "question": "Is 0.333... a rational number?",
+            "question": "How many of these numbers are irrational? \\(\\dfrac{\\sqrt{50}}{\\sqrt{2}}\\), \\((1 + \\sqrt{2})^{2}\\), \\(\\sqrt{8} \\cdot \\sqrt{2}\\), \\(0.\\overline{12}\\), \\(\\sqrt{3} + \\sqrt{12}\\)",
             "options": [
-              "No",
-              "Yes",
-              "Only if finite",
-              "It's irrational",
-              "It's complex"
-            ],
-            "correct": 1,
-            "solution": "0.333...=1/3, which is rational."
-          },
-          {
-            "question": "Which set contains π?",
-            "options": [
-              "ℕ",
-              "ℤ",
-              "ℚ",
-              "ℝ",
-              "None"
+              "1",
+              "3",
+              "4",
+              "2",
+              "0"
             ],
             "correct": 3,
-            "solution": "π≈3.14159 is irrational, so π∈ℝ but π∉ℚ."
+            "solution": "\\(\\dfrac{\\sqrt{50}}{\\sqrt{2}} = \\sqrt{25} = 5\\) (rational). \\((1 + \\sqrt{2})^2 = 3 + 2\\sqrt{2}\\) (irrational). \\(\\sqrt{8}\\sqrt{2} = 4\\) (rational). \\(0.\\overline{12}\\) is a repeating decimal (rational). \\(\\sqrt{3} + \\sqrt{12} = 3\\sqrt{3}\\) (irrational). Total: 2."
+          },
+          {
+            "question": "Two positive integers have GCD 12 and LCM 360. One of them is 72. What is the other?",
+            "options": [
+              "30",
+              "48",
+              "90",
+              "60",
+              "120"
+            ],
+            "correct": 3,
+            "solution": "For two numbers, \\(\\text{GCD} \\times \\text{LCM} = \\) product. So the other is \\(\\dfrac{12 \\times 360}{72} = 60\\). Check: \\(\\gcd(60, 72) = 12\\) and \\(\\text{lcm}(60, 72) = 360\\)."
           },
           {
             "question": "What is ℤ\\ℕ (integers minus naturals)?",
@@ -47622,16 +47622,16 @@ const subjects = [
             "solution": "2^ℕ={2,4,8,16,...} which are in ℕ, hence in ℤ. Actually yes, it is a subset."
           },
           {
-            "question": "What is ℝ\\ℚ?",
+            "question": "Calculate \\(\\dfrac{(3.6 \\times 10^{-4})(5 \\times 10^{7})}{1.2 \\times 10^{2}}\\).",
             "options": [
-              "ℕ",
-              "ℤ",
-              "Irrational numbers",
-              "Complex numbers",
-              "Empty set"
+              "\\(1.5 \\times 10^{2}\\)",
+              "\\(1.5 \\times 10^{1}\\)",
+              "\\(1.5 \\times 10^{3}\\)",
+              "\\(1.5 \\times 10^{-1}\\)",
+              "\\(1.5 \\times 10^{0}\\)"
             ],
-            "correct": 2,
-            "solution": "ℝ\\ℚ is the set of irrational numbers."
+            "correct": 0,
+            "solution": "Numbers: \\(\\dfrac{3.6 \\times 5}{1.2} = 15\\). Powers of ten: \\(10^{-4 + 7 - 2} = 10^{1}\\). So the result is \\(15 \\times 10^{1} = 150 = 1.5 \\times 10^{2}\\)."
           },
           {
             "question": "Is −1.5 a rational number?",
@@ -47928,16 +47928,16 @@ const subjects = [
             "solution": "|−5|=5 (distance from 0)."
           },
           {
-            "question": "What is |3−7|?",
+            "question": "How many integers satisfy \\(|2x - 3| \\leq 5\\)?",
             "options": [
-              "−4",
+              "5",
+              "7",
+              "6",
               "4",
-              "10",
-              "−10",
-              "0"
+              "9"
             ],
-            "correct": 1,
-            "solution": "|3−7|=|−4|=4."
+            "correct": 2,
+            "solution": "\\(-5 \\leq 2x - 3 \\leq 5\\) gives \\(-2 \\leq 2x \\leq 8\\), so \\(-1 \\leq x \\leq 4\\). The integers are \\(-1, 0, 1, 2, 3, 4\\): 6 of them."
           },
           {
             "question": "Solve |x|=3. What are the solutions?",
@@ -47976,16 +47976,16 @@ const subjects = [
             "solution": "x−2=5→x=7 or x−2=−5→x=−3."
           },
           {
-            "question": "What is |0|?",
+            "question": "Solve \\(\\dfrac{x}{x - 3} = \\dfrac{3}{x - 3} + 2\\).",
             "options": [
-              "0",
-              "1",
-              "−1",
-              "Undefined",
-              "∞"
+              "\\(x = 3\\)",
+              "No solution",
+              "\\(x = -3\\)",
+              "\\(x = 0\\)",
+              "Infinitely many solutions"
             ],
-            "correct": 0,
-            "solution": "|0|=0."
+            "correct": 1,
+            "solution": "Multiply by \\(x - 3\\): \\(x = 3 + 2(x - 3)\\), so \\(x = 2x - 3\\) and \\(x = 3\\). But \\(x = 3\\) makes the denominators zero, so it is not allowed. There is no solution."
           },
           {
             "question": "What is |−10|×|−2|?",
@@ -48036,16 +48036,16 @@ const subjects = [
             "solution": "|x|=|y| means x=y or x=−y."
           },
           {
-            "question": "What is |−1.5|?",
+            "question": "The system \\(x - y = 1\\), \\(x^{2} + y^{2} = 25\\) has two solutions. What is the sum of the \\(x\\)-values of the two solutions?",
             "options": [
-              "−1.5",
-              "1.5",
-              "0.5",
-              "−0.5",
-              "2"
+              "7",
+              "1",
+              "-1",
+              "5",
+              "0"
             ],
             "correct": 1,
-            "solution": "|−1.5|=1.5."
+            "solution": "Substitute \\(y = x - 1\\): \\(x^{2} + (x - 1)^{2} = 25\\), so \\(2x^{2} - 2x - 24 = 0\\) and \\(x^{2} - x - 12 = 0\\). The roots are \\(x = 4\\) and \\(x = -3\\) (points \\((4, 3)\\) and \\((-3, -4)\\)). Sum \\(= 1\\)."
           },
           {
             "question": "Solve |x|<3. What is the solution set?",
@@ -48144,16 +48144,16 @@ const subjects = [
             "solution": "−1≤2x−3≤1 → 2≤2x≤4 → 1≤x≤2."
           },
           {
-            "question": "What is |−π|?",
+            "question": "The roots of \\(x^{2} - 5x + k = 0\\) differ by 3. What is \\(k\\)?",
             "options": [
-              "−π",
-              "π",
-              "0",
-              "3.14",
-              "−3.14"
+              "6",
+              "2",
+              "-4",
+              "4",
+              "10"
             ],
-            "correct": 1,
-            "solution": "|−π|=π."
+            "correct": 3,
+            "solution": "If the roots are \\(r\\) and \\(r + 3\\), their sum is \\(2r + 3 = 5\\), so \\(r = 1\\) and the roots are 1 and 4. The product is \\(k = 4\\)."
           },
           {
             "question": "If |a|=|b| and a≠b, what is the relationship?",
@@ -48414,52 +48414,52 @@ const subjects = [
         "name": "Powers & Radicals",
         "questions": [
           {
-            "question": "What is 2³?",
+            "question": "Simplify \\(\\dfrac{2^{n+1} \\cdot 4^{n}}{8^{n-1}}\\).",
             "options": [
-              "6",
-              "8",
-              "9",
-              "16",
-              "5"
+              "\\(2^{n+4}\\)",
+              "\\(16\\)",
+              "\\(2^{4n}\\)",
+              "\\(8\\)",
+              "\\(32\\)"
             ],
             "correct": 1,
-            "solution": "2³=2×2×2=8."
+            "solution": "Write everything with base 2: \\(\\dfrac{2^{n+1} \\cdot 2^{2n}}{2^{3(n-1)}} = 2^{(n + 1) + 2n - (3n - 3)} = 2^{4} = 16\\). The \\(n\\) cancels."
           },
           {
-            "question": "Simplify x²×x³.",
+            "question": "Which of these numbers is the largest?",
             "options": [
-              "x⁵",
-              "x⁶",
-              "x",
-              "x⁰",
-              "x¹"
+              "\\(2^{300}\\)",
+              "\\(5^{100}\\)",
+              "\\(6^{80}\\)",
+              "\\(3^{200}\\)",
+              "\\(7^{70}\\)"
+            ],
+            "correct": 3,
+            "solution": "Write each as a power with exponent 100 or compare their logs. \\(2^{300} = 8^{100}\\), \\(3^{200} = 9^{100}\\), \\(5^{100}\\). \\(6^{80} = (6^{0.8})^{100} \\approx 4.2^{100}\\) and \\(7^{70} = (7^{0.7})^{100} \\approx 3.9^{100}\\). The largest base is 9, so \\(3^{200}\\)."
+          },
+          {
+            "question": "Rationalise \\(\\dfrac{6}{\\sqrt{5} - \\sqrt{2}}\\).",
+            "options": [
+              "\\(2\\sqrt{5} + 2\\sqrt{2}\\)",
+              "\\(2\\sqrt{5} - 2\\sqrt{2}\\)",
+              "\\(6\\sqrt{5} + 6\\sqrt{2}\\)",
+              "\\(\\dfrac{6(\\sqrt{5} + \\sqrt{2})}{7}\\)",
+              "\\(\\sqrt{5} + \\sqrt{2}\\)"
             ],
             "correct": 0,
-            "solution": "x²×x³=x^(2+3)=x⁵."
+            "solution": "Multiply top and bottom by the conjugate: \\(\\dfrac{6(\\sqrt{5} + \\sqrt{2})}{(\\sqrt{5})^2 - (\\sqrt{2})^2} = \\dfrac{6(\\sqrt{5} + \\sqrt{2})}{3} = 2\\sqrt{5} + 2\\sqrt{2}\\)."
           },
           {
-            "question": "What is √16?",
+            "question": "Simplify \\(\\dfrac{(x^{-2}y^{3})^{-2}}{(x^{3}y^{-1})^{2}}\\).",
             "options": [
-              "2",
-              "4",
-              "8",
-              "16",
-              "32"
+              "\\(\\dfrac{1}{x^{2}y^{4}}\\)",
+              "\\(x^{2}y^{4}\\)",
+              "\\(\\dfrac{x^{2}}{y^{4}}\\)",
+              "\\(\\dfrac{1}{x^{2}y^{8}}\\)",
+              "\\(\\dfrac{y^{4}}{x^{2}}\\)"
             ],
-            "correct": 1,
-            "solution": "√16=4 since 4²=16."
-          },
-          {
-            "question": "Simplify (x²)³.",
-            "options": [
-              "x⁵",
-              "x⁶",
-              "x⁸",
-              "x⁹",
-              "x"
-            ],
-            "correct": 1,
-            "solution": "(x²)³=x^(2×3)=x⁶."
+            "correct": 0,
+            "solution": "Numerator: \\(x^{4}y^{-6}\\). Denominator: \\(x^{6}y^{-2}\\). Dividing: \\(x^{4 - 6}y^{-6 + 2} = x^{-2}y^{-4} = \\dfrac{1}{x^{2}y^{4}}\\)."
           },
           {
             "question": "What is 5⁰?",
@@ -48486,16 +48486,16 @@ const subjects = [
             "solution": "√(x⁴)=x² for x≥0."
           },
           {
-            "question": "What is 2⁻²?",
+            "question": "Simplify \\(\\sqrt{72} - \\sqrt{50} + \\sqrt{8}\\).",
             "options": [
-              "−4",
-              "1/4",
-              "4",
-              "−1/4",
-              "−2"
+              "\\(\\sqrt{30}\\)",
+              "\\(13\\sqrt{2}\\)",
+              "\\(\\sqrt{2}\\)",
+              "\\(3\\sqrt{2}\\)",
+              "\\(9\\sqrt{2}\\)"
             ],
-            "correct": 1,
-            "solution": "2⁻²=1/2²=1/4."
+            "correct": 3,
+            "solution": "\\(\\sqrt{72} = 6\\sqrt{2}\\), \\(\\sqrt{50} = 5\\sqrt{2}\\), \\(\\sqrt{8} = 2\\sqrt{2}\\). So \\(6\\sqrt{2} - 5\\sqrt{2} + 2\\sqrt{2} = 3\\sqrt{2}\\). You cannot combine radicands: \\(\\sqrt{a} - \\sqrt{b} \\neq \\sqrt{a - b}\\)."
           },
           {
             "question": "Simplify x⁵/x².",
@@ -48510,16 +48510,16 @@ const subjects = [
             "solution": "x⁵/x²=x^(5−2)=x³."
           },
           {
-            "question": "What is ∛27?",
+            "question": "Solve \\(\\sqrt{x + 7} = x - 5\\).",
             "options": [
-              "3",
-              "9",
-              "27",
-              "81",
-              "6"
+              "\\(x = 2\\)",
+              "\\(x = 2 \\text{ or } x = 9\\)",
+              "\\(x = 9\\)",
+              "\\(x = -9\\)",
+              "No solution"
             ],
-            "correct": 0,
-            "solution": "∛27=3 since 3³=27."
+            "correct": 2,
+            "solution": "Square both sides: \\(x + 7 = x^{2} - 10x + 25\\), so \\(x^{2} - 11x + 18 = 0\\), giving \\(x = 2\\) or \\(x = 9\\). Check: \\(x = 9\\): \\(\\sqrt{16} = 4 = 9 - 5\\) ✓. \\(x = 2\\): \\(\\sqrt{9} = 3\\) but \\(2 - 5 = -3\\) ✗. Squaring can add false solutions."
           },
           {
             "question": "Simplify (2x)³.",
@@ -48558,16 +48558,16 @@ const subjects = [
             "solution": "√18/√2=√(18/2)=√9=3."
           },
           {
-            "question": "What is (−2)³?",
+            "question": "What is the value of \\((\\sqrt{3} + \\sqrt{2})^{2}(\\sqrt{3} - \\sqrt{2})^{2}\\)?",
             "options": [
-              "−6",
-              "6",
-              "−8",
-              "8",
-              "−2"
+              "\\(25\\)",
+              "\\(1\\)",
+              "\\(5\\)",
+              "\\(6\\)",
+              "\\(2\\sqrt{6}\\)"
             ],
-            "correct": 2,
-            "solution": "(−2)³=−2×−2×−2=−8."
+            "correct": 1,
+            "solution": "Combine first: \\(\\big[(\\sqrt{3} + \\sqrt{2})(\\sqrt{3} - \\sqrt{2})\\big]^{2} = (3 - 2)^{2} = 1\\)."
           },
           {
             "question": "Simplify √(50).",
@@ -48582,16 +48582,16 @@ const subjects = [
             "solution": "√50=√(25×2)=5√2."
           },
           {
-            "question": "What is 3^(−1)?",
+            "question": "What is the sum of the solutions of \\(9^{x} - 4 \\cdot 3^{x} + 3 = 0\\)?",
             "options": [
-              "−3",
-              "1/3",
+              "0",
+              "2",
               "3",
-              "−1/3",
-              "0"
+              "4",
+              "1"
             ],
-            "correct": 1,
-            "solution": "3^(−1)=1/3."
+            "correct": 4,
+            "solution": "Let \\(t = 3^{x}\\). Then \\(9^{x} = t^{2}\\) and \\(t^{2} - 4t + 3 = 0\\), so \\(t = 1\\) or \\(t = 3\\). Hence \\(x = 0\\) or \\(x = 1\\). The sum is 1."
           },
           {
             "question": "Simplify (x³)^(1/3).",
@@ -48936,40 +48936,40 @@ const subjects = [
             "solution": "log₁₀(100)=2 since 10²=100."
           },
           {
-            "question": "Solve 2^x=8.",
+            "question": "If \\(\\log_{2} 3 = a\\), what is \\(\\log_{6} 12\\)?",
             "options": [
-              "x=2",
-              "x=3",
-              "x=4",
-              "x=8",
-              "x=1"
+              "\\(\\dfrac{a + 1}{a + 2}\\)",
+              "\\(2a\\)",
+              "\\(\\dfrac{a + 2}{a + 1}\\)",
+              "\\(a + 2\\)",
+              "\\(\\dfrac{2a}{a + 1}\\)"
             ],
-            "correct": 1,
-            "solution": "2^x=8=2³ → x=3."
+            "correct": 2,
+            "solution": "Change to base 2: \\(\\log_{6} 12 = \\dfrac{\\log_{2} 12}{\\log_{2} 6}\\). \\(\\log_{2} 12 = \\log_{2} 4 + \\log_{2} 3 = 2 + a\\) and \\(\\log_{2} 6 = 1 + a\\). The result is \\(\\dfrac{a + 2}{a + 1}\\)."
           },
           {
-            "question": "What is ln(e)?",
+            "question": "Solve \\(\\log_{1/2}(x - 1) > 1\\).",
             "options": [
-              "0",
+              "\\(x > \\tfrac{3}{2}\\)",
+              "\\(1 < x < \\tfrac{3}{2}\\)",
+              "\\(x < \\tfrac{3}{2}\\)",
+              "\\(x > 1\\)",
+              "\\(\\tfrac{1}{2} < x < 1\\)"
+            ],
+            "correct": 1,
+            "solution": "The domain needs \\(x - 1 > 0\\). The base \\(\\tfrac{1}{2}\\) is less than 1, so the inequality <b>reverses</b>: \\(x - 1 < (\\tfrac{1}{2})^{1} = \\tfrac{1}{2}\\), so \\(x < \\tfrac{3}{2}\\). Combined with \\(x > 1\\): \\(1 < x < \\tfrac{3}{2}\\)."
+          },
+          {
+            "question": "What is the value of \\(2\\log_{3} 6 - \\log_{3} 4\\)?",
+            "options": [
+              "2",
+              "\\(\\log_{3} 8\\)",
               "1",
-              "e",
-              "−1",
-              "Undefined"
+              "4",
+              "\\(\\log_{3} 32\\)"
             ],
-            "correct": 1,
-            "solution": "ln(e)=1 since e¹=e."
-          },
-          {
-            "question": "Solve log₂(x)=4.",
-            "options": [
-              "x=2",
-              "x=4",
-              "x=8",
-              "x=16",
-              "x=32"
-            ],
-            "correct": 3,
-            "solution": "log₂(x)=4 → x=2⁴=16."
+            "correct": 0,
+            "solution": "\\(2\\log_{3} 6 = \\log_{3} 36\\). Then \\(\\log_{3} 36 - \\log_{3} 4 = \\log_{3} \\dfrac{36}{4} = \\log_{3} 9 = 2\\)."
           },
           {
             "question": "What is log₁₀(1)?",
@@ -48984,16 +48984,16 @@ const subjects = [
             "solution": "log₁₀(1)=0 since 10⁰=1."
           },
           {
-            "question": "Solve 3^x=27.",
+            "question": "A culture of 500 bacteria doubles every 3 hours. After how many hours does it reach 64 000?",
             "options": [
-              "x=2",
-              "x=3",
-              "x=9",
-              "x=27",
-              "x=1"
+              "7 hours",
+              "14 hours",
+              "42 hours",
+              "63 hours",
+              "21 hours"
             ],
-            "correct": 1,
-            "solution": "3^x=27=3³ → x=3."
+            "correct": 4,
+            "solution": "\\(\\dfrac{64\\,000}{500} = 128 = 2^{7}\\), so 7 doublings are needed. Time \\(= 7 \\times 3 = 21\\) hours."
           },
           {
             "question": "What is log₅(25)?",
@@ -49008,16 +49008,16 @@ const subjects = [
             "solution": "log₅(25)=2 since 5²=25."
           },
           {
-            "question": "Solve e^x=1.",
+            "question": "Money grows at 5% compound interest per year. Approximately how many years does it take to double? (Use \\(\\ln 2 = 0.693\\) and \\(\\ln 1.05 = 0.0488\\).)",
             "options": [
-              "x=0",
-              "x=1",
-              "x=e",
-              "x=−1",
-              "Undefined"
+              "20 years",
+              "7.1 years",
+              "10 years",
+              "14.2 years",
+              "28.4 years"
             ],
-            "correct": 0,
-            "solution": "e^x=1 → x=0 since e⁰=1."
+            "correct": 3,
+            "solution": "\\(1.05^{t} = 2\\), so \\(t = \\dfrac{\\ln 2}{\\ln 1.05} = \\dfrac{0.693}{0.0488} = 14.2\\) years. (The \"rule of 72\" gives \\(72/5 = 14.4\\).)"
           },
           {
             "question": "What is log₃(1/9)?",
@@ -49044,16 +49044,16 @@ const subjects = [
             "solution": "5^(2x)=25=5² → 2x=2 → x=1."
           },
           {
-            "question": "What is ln(1)?",
+            "question": "Solve \\(\\log_{2} x + \\log_{2}(x - 2) = 3\\).",
             "options": [
-              "0",
-              "1",
-              "e",
-              "−1",
-              "Undefined"
+              "\\(x = -2\\)",
+              "\\(x = 4\\)",
+              "\\(x = -2 \\text{ or } x = 4\\)",
+              "\\(x = 2\\)",
+              "\\(x = 8\\)"
             ],
-            "correct": 0,
-            "solution": "ln(1)=0."
+            "correct": 1,
+            "solution": "Combine: \\(\\log_{2}[x(x - 2)] = 3\\), so \\(x(x - 2) = 8\\) and \\(x^{2} - 2x - 8 = 0\\). Then \\(x = 4\\) or \\(x = -2\\). The logarithm needs \\(x > 2\\), so \\(x = -2\\) is rejected."
           },
           {
             "question": "Solve logₓ(64)=3.",
@@ -49116,16 +49116,16 @@ const subjects = [
             "solution": "10^x=0.1=10⁻¹ → x=−1."
           },
           {
-            "question": "What is logₐ(a⁵)?",
+            "question": "A sample falls to \\(\\frac{1}{16}\\) of its original activity in 20 hours. What percentage remains after 12 hours (approximately)?",
             "options": [
-              "5",
-              "a",
-              "a⁵",
-              "1",
-              "0"
+              "19%",
+              "24%",
+              "25%",
+              "12.5%",
+              "6.3%"
             ],
             "correct": 0,
-            "solution": "logₐ(a⁵)=5."
+            "solution": "\\(\\dfrac{1}{16} = 2^{-4}\\) so the half-life is \\(20/4 = 5\\) h. After 12 h there are \\(12/5 = 2.4\\) half-lives, so the fraction left is \\(2^{-2.4} \\approx 0.19\\), i.e. 19%."
           },
           {
             "question": "Solve 4^x=2.",
@@ -49140,16 +49140,16 @@ const subjects = [
             "solution": "4^x=2 → (2²)^x=2 → 2^(2x)=2¹ → 2x=1 → x=0.5."
           },
           {
-            "question": "What is ln(e³)?",
+            "question": "Given \\(\\log 2 = 0.30\\), what is \\([\\text{H}^{+}]\\) for a solution of pH 4.3?",
             "options": [
-              "3",
-              "e³",
-              "1/e³",
-              "1/3",
-              "0"
+              "\\(2 \\times 10^{-5}\\)",
+              "\\(5 \\times 10^{-4}\\)",
+              "\\(2 \\times 10^{-4}\\)",
+              "\\(5 \\times 10^{-5}\\)",
+              "\\(4.3 \\times 10^{-5}\\)"
             ],
-            "correct": 0,
-            "solution": "ln(e³)=3."
+            "correct": 3,
+            "solution": "\\([\\text{H}^{+}] = 10^{-4.3} = 10^{-5} \\times 10^{0.7}\\). Since \\(\\log 5 = \\log 10 - \\log 2 = 0.70\\), we get \\(10^{0.7} = 5\\). So \\([\\text{H}^{+}] = 5 \\times 10^{-5}\\) mol/L."
           },
           {
             "question": "Solve log₂(x−1)=3.",
@@ -49470,16 +49470,16 @@ const subjects = [
         "name": "Ratio, Proportions & Percentages",
         "questions": [
           {
-            "question": "What is 25% of 80?",
+            "question": "A shop gives a 20% discount, and then adds a 10% surcharge on the discounted price. The final price is 88 euros. What was the original price?",
             "options": [
-              "10",
-              "15",
-              "20",
-              "25",
-              "40"
+              "98 euros",
+              "90 euros",
+              "110 euros",
+              "100 euros",
+              "80 euros"
             ],
-            "correct": 2,
-            "solution": "25% of 80 = 0.25×80 = 20."
+            "correct": 3,
+            "solution": "The overall multiplier is \\(0.80 \\times 1.10 = 0.88\\). So the original price is \\(88/0.88 = 100\\) euros. Adding or subtracting the percentages (\\(-20\\% + 10\\% = -10\\%\\)) would give 97.8, which is wrong."
           },
           {
             "question": "The ratio 3:5 is equivalent to:",
@@ -49506,16 +49506,16 @@ const subjects = [
             "solution": "x/12=2/3 → x=12×2/3=8."
           },
           {
-            "question": "What is 15% as a fraction?",
+            "question": "How many mL of a 40% solution must be added to 200 mL of a 10% solution to obtain a 20% solution?",
             "options": [
-              "1/5",
-              "3/20",
-              "3/10",
-              "1/15",
-              "15/100"
+              "50 mL",
+              "150 mL",
+              "200 mL",
+              "75 mL",
+              "100 mL"
             ],
-            "correct": 1,
-            "solution": "15%=15/100=3/20."
+            "correct": 4,
+            "solution": "Amount of solute: \\(0.10 \\times 200 + 0.40x = 0.20(200 + x)\\). So \\(20 + 0.4x = 40 + 0.2x\\), which gives \\(0.2x = 20\\) and \\(x = 100\\) mL."
           },
           {
             "question": "If a:b=4:5 and b:c=2:3, what is a:c?",
@@ -49542,28 +49542,28 @@ const subjects = [
             "solution": "Increase=10. % increase=10/50×100=20%."
           },
           {
-            "question": "What is 0.6 as a percentage?",
+            "question": "6 workers can finish a job in 10 days. After 2 days, 2 workers leave. How many days in total does the job take?",
             "options": [
-              "0.6%",
-              "6%",
-              "60%",
-              "600%",
-              "50%"
+              "12",
+              "10",
+              "14",
+              "16",
+              "18"
             ],
             "correct": 2,
-            "solution": "0.6=60/100=60%."
+            "solution": "The whole job is \\(6 \\times 10 = 60\\) worker-days. After 2 days, \\(12\\) are done and \\(48\\) remain. With 4 workers: \\(48/4 = 12\\) more days. Total \\(= 2 + 12 = 14\\) days."
           },
           {
-            "question": "If 3x=5y, what is x:y?",
+            "question": "50 mL of a 30% solution are diluted with water to make a 12% solution. How much water must be added?",
             "options": [
-              "3:5",
-              "5:3",
-              "3:8",
-              "8:3",
-              "15:3"
+              "125 mL",
+              "75 mL",
+              "60 mL",
+              "50 mL",
+              "100 mL"
             ],
             "correct": 1,
-            "solution": "3x=5y → x/y=5/3 → x:y=5:3."
+            "solution": "Solute: \\(0.30 \\times 50 = 15\\) mL. For 12% the final volume is \\(15/0.12 = 125\\) mL. Water added \\(= 125 - 50 = 75\\) mL."
           },
           {
             "question": "A shirt costs $40 after 20% discount. What was the original price?",
@@ -49578,16 +49578,16 @@ const subjects = [
             "solution": "40=0.8×original → original=40/0.8=$50."
           },
           {
-            "question": "What is 3/4 as a percentage?",
+            "question": "An unemployment rate rises from 8% to 10%. What is the <b>relative</b> increase?",
             "options": [
-              "30%",
-              "34%",
-              "75%",
+              "25%",
+              "2%",
+              "20%",
               "80%",
-              "25%"
+              "12.5%"
             ],
-            "correct": 2,
-            "solution": "3/4=0.75=75%."
+            "correct": 0,
+            "solution": "The increase is 2 <b>percentage points</b>. The relative increase is \\(\\dfrac{10 - 8}{8} = \\dfrac{2}{8} = 25\\%\\)."
           },
           {
             "question": "If the ratio of boys to girls is 3:2 and there are 30 boys, how many girls?",
@@ -49602,16 +49602,16 @@ const subjects = [
             "solution": "3/2=30/g → g=30×2/3=20."
           },
           {
-            "question": "What is 1/8 as a percentage?",
+            "question": "A recipe for 6 people uses 450 g of flour. How much flour is needed for 10 people if each person gets 20% less than before?",
             "options": [
-              "8%",
-              "10%",
-              "12.5%",
-              "15%",
-              "18%"
+              "750 g",
+              "450 g",
+              "540 g",
+              "600 g",
+              "720 g"
             ],
-            "correct": 2,
-            "solution": "1/8=0.125=12.5%."
+            "correct": 3,
+            "solution": "Per person: \\(450/6 = 75\\) g. With 20% less: \\(75 \\times 0.80 = 60\\) g. For 10 people: \\(600\\) g."
           },
           {
             "question": "A number is increased by 10% then decreased by 10%. What is the net change?",
@@ -49638,16 +49638,16 @@ const subjects = [
             "solution": "12:18 = 2:3 (divide by 6)."
           },
           {
-            "question": "What is 200% of 30?",
+            "question": "840 euros are shared in the ratio \\(2 : 3 : 7\\). How much more does the largest share receive than the smallest?",
             "options": [
-              "15",
-              "30",
-              "45",
-              "60",
-              "90"
+              "490 euros",
+              "350 euros",
+              "140 euros",
+              "420 euros",
+              "210 euros"
             ],
-            "correct": 3,
-            "solution": "200% of 30 = 2×30 = 60."
+            "correct": 1,
+            "solution": "There are \\(2 + 3 + 7 = 12\\) parts, so one part is \\(840/12 = 70\\). The smallest share is \\(2 \\times 70 = 140\\) and the largest is \\(7 \\times 70 = 490\\). The difference is \\(490 - 140 = 350\\)."
           },
           {
             "question": "If x:y=1:2 and y:z=3:4, what is x:z?",
@@ -49674,16 +49674,16 @@ const subjects = [
             "solution": "120:2 = 60:1 km/h."
           },
           {
-            "question": "What is 5/20 as a percentage?",
+            "question": "A population grows by 10% in each of two years, and then falls by 10% in the third year. What is the overall change?",
             "options": [
-              "5%",
-              "10%",
-              "20%",
-              "25%",
-              "50%"
+              "+8.9%",
+              "+10.9%",
+              "+1.0%",
+              "+11.0%",
+              "+9.0%"
             ],
-            "correct": 3,
-            "solution": "5/20=1/4=0.25=25%."
+            "correct": 0,
+            "solution": "The multiplier is \\(1.10 \\times 1.10 \\times 0.90 = 1.089\\). The overall change is \\(+8.9\\%\\). Percentage changes multiply, they do not add."
           },
           {
             "question": "If a:b:b:c=2:3:4, what is a:c?",
@@ -50004,16 +50004,16 @@ const subjects = [
             "solution": "Center is (h,k)=(2,−1)."
           },
           {
-            "question": "The equation x²−y²=1 represents:",
+            "question": "For which values of \\(k\\) is the line \\(y = x + k\\) tangent to the circle \\(x^{2} + y^{2} = 8\\)?",
             "options": [
-              "Ellipse",
-              "Circle",
-              "Hyperbola",
-              "Parabola",
-              "Line"
+              "\\(k = \\pm 2\\sqrt{2}\\)",
+              "\\(k = \\pm 8\\)",
+              "\\(k = \\pm 2\\)",
+              "\\(k = \\pm 4\\)",
+              "\\(k = 4 \\text{ only}\\)"
             ],
-            "correct": 2,
-            "solution": "x²−y²=1 is a hyperbola."
+            "correct": 3,
+            "solution": "The line \\(x - y + k = 0\\) must be at a distance equal to the radius \\(2\\sqrt{2}\\) from the origin: \\(\\dfrac{|k|}{\\sqrt{2}} = 2\\sqrt{2}\\), so \\(|k| = 4\\) and \\(k = \\pm 4\\) (two tangents)."
           },
           {
             "question": "What is the focus of the parabola y²=4x?",
@@ -50028,16 +50028,16 @@ const subjects = [
             "solution": "For y²=4ax, focus is (a,0). Here a=1, so (1,0)."
           },
           {
-            "question": "The equation x²+y²=25 represents:",
+            "question": "The curve \\(4x^{2} + 9y^{2} - 16x + 18y - 11 = 0\\) is an ellipse. What is its area?",
             "options": [
-              "Ellipse",
-              "Circle",
-              "Hyperbola",
-              "Parabola",
-              "Line"
+              "\\(36\\pi\\)",
+              "\\(12\\pi\\)",
+              "\\(3\\pi\\)",
+              "\\(6\\pi\\)",
+              "\\(9\\pi\\)"
             ],
-            "correct": 1,
-            "solution": "x²+y²=r² is a circle with radius r=5."
+            "correct": 3,
+            "solution": "Complete the squares: \\(4(x - 2)^{2} - 16 + 9(y + 1)^{2} - 9 = 11\\), so \\(4(x - 2)^{2} + 9(y + 1)^{2} = 36\\), i.e. \\(\\dfrac{(x - 2)^{2}}{9} + \\dfrac{(y + 1)^{2}}{4} = 1\\). The semi-axes are 3 and 2, so the area is \\(\\pi \\times 3 \\times 2 = 6\\pi\\)."
           },
           {
             "question": "What is the directrix of the parabola y²=8x?",
@@ -50064,64 +50064,64 @@ const subjects = [
             "solution": "For x²/a²−y²/b²=1, vertices are (±a,0). Here a=2."
           },
           {
-            "question": "What is the eccentricity of a circle?",
+            "question": "The ellipse \\(\\dfrac{x^{2}}{25} + \\dfrac{y^{2}}{9} = 1\\) has foci \\(F_1\\) and \\(F_2\\). What is the perimeter of triangle \\(F_1PF_2\\) for any point \\(P\\) on the ellipse?",
             "options": [
-              "0",
-              "1",
-              "e",
-              "√2",
-              "Undefined"
+              "10",
+              "14",
+              "16",
+              "8",
+              "18"
+            ],
+            "correct": 4,
+            "solution": "\\(a = 5\\), \\(b = 3\\), so \\(c = \\sqrt{25 - 9} = 4\\). For any point on the ellipse, \\(PF_1 + PF_2 = 2a = 10\\). Also \\(F_1F_2 = 2c = 8\\). The perimeter is \\(10 + 8 = 18\\)."
+          },
+          {
+            "question": "The line \\(y = x + 1\\) meets the circle \\(x^{2} + y^{2} = 25\\) at two points. What is the length of the chord between them?",
+            "options": [
+              "\\(7\\sqrt{2}\\)",
+              "\\(7\\)",
+              "\\(14\\)",
+              "\\(5\\sqrt{2}\\)",
+              "\\(\\sqrt{14}\\)"
             ],
             "correct": 0,
-            "solution": "For a circle, eccentricity e=0."
+            "solution": "Substitute: \\(x^{2} + (x + 1)^{2} = 25\\), so \\(x^{2} + x - 12 = 0\\) and \\(x = 3\\) or \\(x = -4\\). The points are \\((3, 4)\\) and \\((-4, -3)\\). The distance is \\(\\sqrt{7^{2} + 7^{2}} = 7\\sqrt{2}\\)."
           },
           {
-            "question": "The equation (x−1)²+(y+2)²=9 has center at:",
+            "question": "The point \\((2, 4)\\) lies on the parabola \\(y^{2} = 8x\\). What is its distance from the focus?",
             "options": [
-              "(1,−2)",
-              "(−1,2)",
-              "(1,2)",
-              "(−1,−2)",
-              "(0,0)"
+              "4",
+              "2",
+              "8",
+              "6",
+              "5"
             ],
             "correct": 0,
-            "solution": "Center is (h,k)=(1,−2)."
+            "solution": "For \\(y^{2} = 4px\\) we have \\(p = 2\\): the focus is \\((2, 0)\\) and the directrix is \\(x = -2\\). The distance from \\((2, 4)\\) to the focus is \\(\\sqrt{0 + 16} = 4\\), which equals its distance to the directrix, \\(2 - (-2) = 4\\) ✓."
           },
           {
-            "question": "What type of conic is xy=1?",
+            "question": "What are the centre and radius of the circle \\(x^{2} + y^{2} - 6x + 4y - 12 = 0\\)?",
             "options": [
-              "Ellipse",
-              "Circle",
-              "Hyperbola",
-              "Parabola",
-              "Line"
-            ],
-            "correct": 2,
-            "solution": "xy=1 is a rectangular hyperbola."
-          },
-          {
-            "question": "The parabola x²=−4y opens:",
-            "options": [
-              "Upward",
-              "Downward",
-              "Right",
-              "Left",
-              "No direction"
+              "Centre \\((-3, 2)\\), radius 5",
+              "Centre \\((3, -2)\\), radius 5",
+              "Centre \\((3, -2)\\), radius 25",
+              "Centre \\((3, -2)\\), radius \\(\\sqrt{12}\\)",
+              "Centre \\((6, -4)\\), radius 5"
             ],
             "correct": 1,
-            "solution": "x²=−4ay with a>0 opens downward."
+            "solution": "Complete the squares: \\((x - 3)^{2} - 9 + (y + 2)^{2} - 4 - 12 = 0\\), so \\((x - 3)^{2} + (y + 2)^{2} = 25\\). The centre is \\((3, -2)\\) and the radius is \\(\\sqrt{25} = 5\\)."
           },
           {
-            "question": "What is the latus rectum of y²=12x?",
+            "question": "What is the distance between the foci of the hyperbola \\(\\dfrac{x^{2}}{16} - \\dfrac{y^{2}}{9} = 1\\)?",
             "options": [
-              "3",
+              "5",
+              "10",
+              "8",
               "6",
-              "12",
-              "24",
-              "4"
+              "25"
             ],
-            "correct": 2,
-            "solution": "Latus rectum=4a. Here 4a=12, so length=12."
+            "correct": 1,
+            "solution": "For a hyperbola \\(c^{2} = a^{2} + b^{2} = 16 + 9 = 25\\), so \\(c = 5\\). The foci are at \\((\\pm 5, 0)\\), so they are \\(2c = 10\\) apart."
           },
           {
             "question": "The ellipse x²/25+y²/9=1 has major axis length:",
@@ -50196,16 +50196,16 @@ const subjects = [
             "solution": "Minor axis=2b where b=3. Length=6."
           },
           {
-            "question": "The eccentricity of a parabola is:",
+            "question": "A parabola has its vertex at the origin, a vertical axis and its focus at \\((0, 2)\\). What is its equation?",
             "options": [
-              "0",
-              "1",
-              "e",
-              "√2",
-              "Undefined"
+              "\\(x^{2} = 4y\\)",
+              "\\(y^{2} = 8x\\)",
+              "\\(x^{2} = 8y\\)",
+              "\\(x^{2} = 2y\\)",
+              "\\(y^{2} = 4x\\)"
             ],
-            "correct": 1,
-            "solution": "For any parabola, eccentricity e=1."
+            "correct": 2,
+            "solution": "For a vertical axis the equation is \\(x^{2} = 4py\\), where \\(p\\) is the distance from the vertex to the focus. Here \\(p = 2\\), so \\(x^{2} = 8y\\)."
           },
           {
             "question": "What is the asymptote of the hyperbola x²/4−y²/9=1?",
@@ -50514,16 +50514,16 @@ const subjects = [
         "name": "Inequalities",
         "questions": [
           {
-            "question": "Solve x+3>7.",
+            "question": "What is the product of all the real solutions of \\(x^{4} - 10x^{2} + 9 = 0\\)?",
             "options": [
-              "x>4",
-              "x<4",
-              "x>10",
-              "x<10",
-              "x=4"
+              "9",
+              "-9",
+              "1",
+              "0",
+              "81"
             ],
             "correct": 0,
-            "solution": "x+3>7 → x>4."
+            "solution": "Let \\(t = x^{2}\\): \\(t^{2} - 10t + 9 = 0\\) gives \\(t = 1\\) or \\(t = 9\\). So \\(x = \\pm 1, \\pm 3\\). The product is \\((1)(-1)(3)(-3) = 9\\)."
           },
           {
             "question": "What is the solution to 2x≤6?",
@@ -50562,16 +50562,16 @@ const subjects = [
             "solution": "x−5≥−2 → x≥3."
           },
           {
-            "question": "Solve |x|<3.",
+            "question": "For which values of \\(k\\) does \\(kx^{2} - 4x + 1 = 0\\) have <b>no</b> real solutions?",
             "options": [
-              "x<3",
-              "x>−3",
-              "−3<x<3",
-              "x≤3",
-              "x≥−3"
+              "\\(k > 4\\)",
+              "\\(k < 4\\)",
+              "\\(k \\geq 4\\)",
+              "\\(k > -4\\)",
+              "\\(k = 4\\)"
             ],
-            "correct": 2,
-            "solution": "|x|<3 means −3<x<3."
+            "correct": 0,
+            "solution": "No real solutions means the discriminant is negative: \\(16 - 4k < 0\\), so \\(k > 4\\). For \\(k = 4\\) the discriminant is zero (one repeated root)."
           },
           {
             "question": "What is the solution to x²>9?",
@@ -50658,16 +50658,16 @@ const subjects = [
             "solution": "1/x>0 when x>0."
           },
           {
-            "question": "Solve 2x+1≤x+5.",
+            "question": "Two numbers have a sum of 20 and a product of 91. What is their difference?",
             "options": [
-              "x≤4",
-              "x≥4",
-              "x<4",
-              "x>4",
-              "x=4"
+              "4",
+              "8",
+              "2",
+              "6",
+              "10"
             ],
-            "correct": 0,
-            "solution": "2x+1≤x+5 → x≤4."
+            "correct": 3,
+            "solution": "They are the roots of \\(t^{2} - 20t + 91 = 0\\), so \\(t = \\dfrac{20 \\pm \\sqrt{400 - 364}}{2} = \\dfrac{20 \\pm 6}{2}\\), which gives 13 and 7. The difference is 6."
           },
           {
             "question": "What is the solution to |2x+1|≤5?",
@@ -50682,16 +50682,16 @@ const subjects = [
             "solution": "−5≤2x+1≤5 → −6≤2x≤4 → −3≤x≤2."
           },
           {
-            "question": "Solve x/2>3.",
+            "question": "Solve \\(\\dfrac{x - 1}{x + 2} \\geq 0\\).",
             "options": [
-              "x>6",
-              "x<6",
-              "x>1.5",
-              "x<1.5",
-              "x=6"
+              "\\((-2, 1]\\)",
+              "\\((-\\infty, -2] \\cup [1, \\infty)\\)",
+              "\\([-2, 1]\\)",
+              "\\((-\\infty, 1]\\)",
+              "\\((-\\infty, -2) \\cup [1, \\infty)\\)"
             ],
-            "correct": 0,
-            "solution": "x/2>3 → x>6."
+            "correct": 4,
+            "solution": "The sign changes at \\(x = 1\\) (numerator zero, allowed) and at \\(x = -2\\) (denominator zero, <b>not</b> allowed). The fraction is positive for \\(x < -2\\) and for \\(x > 1\\), and zero at \\(x = 1\\)."
           },
           {
             "question": "What is the solution to x²+1<0?",
