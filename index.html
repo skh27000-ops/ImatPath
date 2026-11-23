@@ -325,6 +325,25 @@ nav.scd .nb{box-shadow:6px 9px 0 var(--ink)}
 @media(max-width:900px){.ip-chip{display:none}}
 @media(max-width:560px){.ip-tabs button{padding:7px 14px;font-size:.86rem}.ip-ctrl{margin-top:30px;gap:14px}}
 @media(prefers-reduced-motion:reduce){.ip-body,.ip-glare,.ip-chip,.ip-pencil svg,.ip-hint b{animation:none}.ip-track{transition:none}}
+
+/* bookshelf: course documents */
+#shelf .bk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-bottom:56px}
+.bk{position:relative;display:flex;flex-direction:column;min-height:330px;padding:22px 22px 20px 34px;border:3px solid var(--ink);border-radius:8px 18px 18px 8px;box-shadow:7px 7px 0 var(--ink);color:var(--ink);transition:transform .2s var(--e),box-shadow .2s var(--e)}
+.bk:before{content:"";position:absolute;left:0;top:0;bottom:0;width:16px;background:rgba(27,19,64,.16);border-right:3px solid var(--ink);border-radius:5px 0 0 5px}
+.bk:hover{transform:translate(-3px,-3px) rotate(-.6deg);box-shadow:10px 10px 0 var(--ink)}
+.bk .px{color:var(--ink);opacity:.75;font-size:.62rem}
+.bk h3{font:800 2rem/1 'Bricolage Grotesque';letter-spacing:-.04em;margin:18px 0 8px}
+.bk p{font-size:.95rem;opacity:.9;margin:0}
+.bk .bk-n{margin-top:auto;display:flex;align-items:baseline;gap:8px;font:800 3.2rem/1 'Bricolage Grotesque';letter-spacing:-.05em}
+.bk .bk-n small{font:700 .85rem Figtree,sans-serif;letter-spacing:0;opacity:.8}
+.bk .bk-m{display:inline-block;margin-top:10px;font:700 .8rem Figtree,sans-serif;background:rgba(255,255,255,.7);border:2px solid var(--ink);border-radius:99px;padding:4px 12px;align-self:flex-start}
+.bk.b1{background:var(--mint)}.bk.b2{background:var(--sky)}.bk.b3{background:var(--coral)}.bk.b4{background:var(--sun)}
+.bk-peek-h{font:800 1.5rem 'Bricolage Grotesque';margin:0 0 6px}.bk-peek-p{opacity:.8;max-width:620px;margin:0 0 22px}
+.bk-peek{display:flex;gap:20px;overflow-x:auto;padding:6px 4px 26px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.bk-pg{flex:0 0 min(250px,70vw);scroll-snap-align:start}
+.bk-pg img{display:block;width:100%;height:auto;border:3px solid var(--ink);border-radius:12px;box-shadow:5px 5px 0 var(--ink);background:#fff}
+.bk-pg b{display:block;font:800 1rem 'Bricolage Grotesque';margin-top:12px}.bk-pg span{font-size:.85rem;opacity:.75}
+.bk-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:6px}.bk-cta small{opacity:.7}
 </style><script src="exam-date.js"></script>
 </head><body>
 
@@ -376,6 +395,23 @@ nav.scd .nb{box-shadow:6px 9px 0 var(--ink)}
 <p class="ip-cap" id="ipCap" aria-live="polite"></p>
 </div></div></section>
 
+<section id="shelf" style="background:var(--cream)"><div class="w"><span class="px">Course documents</span><h2>Your bookshelf, one lesson at a time.</h2><p class="lead">Every chapter has its own course document: short explanations, clear figures, checkpoints and a practice set with worked answers. Read it on screen or download the PDF.</p>
+<div class="bk-grid">
+<article class="bk b1"><span class="px">IMAT 2027</span><h3>Biology</h3><p>From the cell to genetics and the human body.</p><div class="bk-n">30<small>documents</small></div><span class="bk-m">472 pages</span></article>
+<article class="bk b2"><span class="px">IMAT 2027</span><h3>Chemistry</h3><p>Atoms, bonds, reactions and the maths behind them.</p><div class="bk-n">21<small>documents</small></div><span class="bk-m">358 pages</span></article>
+<article class="bk b3"><span class="px">IMAT 2027</span><h3>Physics</h3><p>Motion, energy, fluids, circuits and fields.</p><div class="bk-n">18<small>documents</small></div><span class="bk-m">320 pages</span></article>
+<article class="bk b4"><span class="px">IMAT 2027</span><h3>Maths</h3><p>Numbers, algebra, geometry, statistics and probability.</p><div class="bk-n">16<small>documents</small></div><span class="bk-m">277 pages</span></article>
+</div>
+<h3 class="bk-peek-h">Inside a document</h3><p class="bk-peek-p">Real pages from the Biology document on prokaryotic and eukaryotic cells. Every lesson follows the same plan, so you always know where you are.</p>
+<div class="bk-peek" role="list">
+<figure class="bk-pg" role="listitem"><img src="img/doc-pages/welcome.webp" alt="First page of a course document: the goals of the lesson, a contents list with page numbers and a checkbox for each section." width="827" height="1170" loading="lazy" decoding="async"><b>Start here</b><span>Goals, contents and a tick-box for every section.</span></figure>
+<figure class="bk-pg" role="listitem"><img src="img/doc-pages/figure.webp" alt="A page with a labelled drawing of a bacterium and a table of its parts and what each part does." width="827" height="1170" loading="lazy" decoding="async"><b>Clear figures</b><span>Labelled drawings, with the key terms in a table.</span></figure>
+<figure class="bk-pg" role="listitem"><img src="img/doc-pages/table.webp" alt="A comparison table of prokaryotic and eukaryotic cells next to a drawing of an animal cell." width="827" height="1170" loading="lazy" decoding="async"><b>Side by side</b><span>Comparison tables that make the differences stick.</span></figure>
+<figure class="bk-pg" role="listitem"><img src="img/doc-pages/practice.webp" alt="A practice set page with multiple-choice questions and a score tracker." width="827" height="1170" loading="lazy" decoding="async"><b>Practice set</b><span>IMAT-style questions at the end of every lesson.</span></figure>
+<figure class="bk-pg" role="listitem"><img src="img/doc-pages/answers.webp" alt="An answers and explanations page: a short reason for each answer." width="827" height="1170" loading="lazy" decoding="async"><b>Answers explained</b><span>A reason for every answer, not just a letter.</span></figure>
+</div>
+<div class="bk-cta"><a class="btn g" href="auth.html?mode=form&amp;tab=signup">Open the lessons →</a><small>85 documents and 1,427 pages in total.</small></div>
+</div></section>
 <section id="pricing" style="background:var(--lav);border-block:3px solid var(--ink)"><div class="w"><span class="px">Enrolment &amp; Pricing</span>
 <h2>One payment. Zero subscriptions. Full access until exam day.</h2><p class="lead">Study on your own, learn live with teachers, or get a personal guide through the whole application. Everything stays open until IMAT exam day in September 2027.</p>
 <div class="plans" id="plans"></div>
