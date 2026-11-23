@@ -13,14 +13,12 @@
 
   function build(name) {
     var d = DEF[name];
-    /* Not in the official MUR list (Annex A): hidden from students. The questions stay in the data so every position keeps its meaning. */
-    var HIDE = { 'math-calculus': 1, 'math-sequences-and-series': 1 };
     var LESSONS = d.topics.reduce(function (a, g) { return a.concat(g.items); }, []);
     var QB = {};
     d.sets.forEach(function (s) { if (s.lesson) QB[s.lesson] = s.id; });
     var QB_GROUPS = d.topics.map(function (g) {
       return { t: g.t, ids: d.sets.filter(function (s) { return s.lesson && g.items.indexOf(s.lesson) >= 0; }).map(function (s) { return s.id; }) };
-    }).concat([{ t: 'Extra practice', note: 'Not named in the official ' + name.toLowerCase() + ' list', ids: d.sets.filter(function (s) { return !s.lesson && !HIDE[s.id]; }).map(function (s) { return s.id; }) }]);
+    }).concat([{ t: 'Extra practice', note: 'Not named in the official ' + name.toLowerCase() + ' list', ids: d.sets.filter(function (s) { return !s.lesson; }).map(function (s) { return s.id; }) }]);
 
     /* Rebuilds the subject into the sorted sets. Question order stays the same, so saved answers keep their positions. */
     function buildChapters(questions) {
@@ -29,7 +27,7 @@
         var idx = [];
         d.map.forEach(function (m, i) { if (m === si) idx.push(i); });
         return { id: s.id, name: s.name, idx: idx, questions: idx.map(function (i) { return questions[i]; }), startIndex: idx[0], endIndex: idx[idx.length - 1] };
-      }).filter(function (c) { return c.idx.length && !HIDE[c.id]; });
+      }).filter(function (c) { return c.idx.length; });
     }
 
     /* Moves the saved checklist progress from the old generic list to the official lessons, once. Keeps a copy. */
