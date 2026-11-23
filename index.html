@@ -464,7 +464,7 @@ nav.scd .nb{box-shadow:6px 9px 0 var(--ink)}
 <script>
 const $=s=>document.querySelector(s),EXAM=new Date(window.IMAT_EXAM),ML=Math.max(1,(EXAM-new Date())/2.63e9);
 // Prices live here: edit once, the page updates.
-const SEATS={total:100,left:100}, SEATS_APP={total:10,left:10}; /* NOT shown on the page. When left/total <= 20% the cards say 'Very few launch seats left' and the bar turns red: only do that when it is true. */ /* launch seats at -50%. Lower `left` by hand after each sale; at 0 the site shows the full prices by itself */
+const SEATS={total:100,left:20}, SEATS_APP={total:10,left:10}; /* NOT shown on the page. When left/total <= 20% the cards say 'Very few launch seats left' and the bar turns red: only do that when it is true. */ /* launch seats at -50%. Lower `left` by hand after each sale; at 0 the site shows the full prices by itself */
 const LIVE=SEATS.left>0, LOW=LIVE&&SEATS.left/SEATS.total<=.2, OFF=LIVE?50:0, eur=n=>'€'+(Number.isInteger(n)?n:n.toFixed(2)), now=p=>p*(100-OFF)/100;
 const PLANS=[
 {k:'Self-study',n:'Self-Study',d:'Everything you need to prepare on your own, at your own pace, until exam day.',s:SEATS,p:79,v:'Full access until IMAT exam day (September 2027)',b:'Get Self-Study',c:'#E6F8FF',l:['4,000+ practice questions with worked solutions','Flashcards with spaced repetition (Anki export included)','Course documents: 85 written lessons as PDFs','20 timed mock exams with official scoring','Official past papers (2017–2026) with explanations','Analytics, syllabus checklist and score predictor']},
