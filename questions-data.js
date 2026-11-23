@@ -26328,16 +26328,16 @@ const subjects = [
             "solution": "Nucleophiles are electron-rich species (e.g. OH⁻, NH₃) that donate electrons to electrophilic centres. Electrophiles are electron-deficient species (e.g. H⁺, carbocations, Br₂) that accept electrons. Neither must carry a formal charge — lone pairs or π electrons can make a species nucleophilic."
           },
           {
-            "question": "In the reaction 2Na + 2H₂O → 2NaOH + H₂, what is oxidised and what is reduced?",
+            "question": "How many electrons does the ion \\(^{65}_{30}\\text{Zn}^{+}\\) contain?",
             "options": [
-              "Na is oxidised, H₂O is reduced",
-              "Na is reduced, H₂O is oxidised",
-              "NaOH is oxidised, H₂ is reduced",
-              "H₂O is oxidised, H₂ is reduced",
-              "Na is both oxidised and reduced"
+              "30",
+              "29",
+              "36",
+              "35",
+              "31"
             ],
-            "correct": 0,
-            "solution": "Na goes from 0 to +1 (loses electrons, oxidised). H in H₂O goes from +1 to 0 in H₂ (gains electrons, reduced)."
+            "correct": 1,
+            "solution": "The atomic number 30 = protons = electrons in the neutral atom. A charge of +1 means 1 electron(s) lost: 30 − 1 = 29."
           },
           {
             "question": "An ion is written <sup>56</sup><sub>26</sub>Fe<sup>3+</sup>. How many more neutrons than electrons does it contain?",
@@ -26364,16 +26364,16 @@ const subjects = [
             "solution": "\\(A_r = (20 \\times 90.5 + 21 \\times 0.3 + 22 \\times 9.2)/100 = (1810 + 6.3 + 202.4)/100 = 20.2\\)."
           },
           {
-            "question": "Which of the following is an example of a redox reaction?",
+            "question": "An element has two isotopes: mass 85 (25% abundance) and mass 87 (75% abundance). What is the average atomic mass?",
             "options": [
-              "NaCl(aq) + AgNO₃(aq) → AgCl(s) + NaNO₃(aq)",
-              "HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)",
-              "2Na(s) + Cl₂(g) → 2NaCl(s)",
-              "NH₃(g) + HCl(g) → NH₄Cl(s)",
-              "CaCO₃(s) → CaO(s) + CO₂(g)"
+              "21.25",
+              "87.5",
+              "86.5",
+              "85.5",
+              "106.8"
             ],
             "correct": 2,
-            "solution": "In 2Na + Cl₂ → 2NaCl, sodium is oxidised (0 → +1) and chlorine is reduced (0 → -1). This involves electron transfer, making it a redox reaction. The others are precipitation, acid-base, acid-base, and decomposition reactions respectively."
+            "solution": "Weighted average: \\(85\\times0.25+87\\times0.75=86.5\\) (not the simple mean 86)."
           },
           {
             "question": "Which order lists the ions N<sup>3-</sup>, O<sup>2-</sup>, F<sup>-</sup>, Na<sup>+</sup> and Mg<sup>2+</sup> from the largest radius to the smallest?",
@@ -26412,16 +26412,16 @@ const subjects = [
             "solution": "Fe is [Ar]3d<sup>6</sup>4s<sup>2</sup>. The 4s electrons leave first, then one 3d: Fe<sup>3+</sup> is [Ar]3d<sup>5</sup>. The five d electrons occupy five orbitals singly (Hund), so 5 are unpaired."
           },
           {
-            "question": "Which of the following is a property of metals?",
+            "question": "How many electrons does the ion \\(^{56}_{26}\\text{Fe}^{+}\\) contain?",
             "options": [
-              "Poor conductors of heat and electricity",
-              "Brittle when solid",
-              "Low melting and boiling points",
-              "Lose electrons to form positive ions",
-              "Gain electrons to form negative ions"
+              "27",
+              "30",
+              "31",
+              "25",
+              "26"
             ],
             "correct": 3,
-            "solution": "Metals are good conductors, malleable (not brittle), have high melting points, and lose electrons to form positive cations. Non-metals tend to gain electrons to form negative anions."
+            "solution": "The atomic number 26 = protons = electrons in the neutral atom. A charge of +1 means 1 electron(s) lost: 26 − 1 = 25."
           },
           {
             "question": "How many of these pairs are isotopes of the same element: (\\(^{12}\\)C, \\(^{14}\\)C), (\\(^{14}\\)C, \\(^{14}\\)N), (\\(^{35}\\)Cl, \\(^{37}\\)Cl), (\\(^{16}\\)O, \\(^{18}\\)O)?",
@@ -26448,40 +26448,40 @@ const subjects = [
             "solution": "Across a period the nuclear charge increases while the electrons enter the same shell, so the atoms get <b>smaller</b>. The radius is smallest for Cl and largest for Na."
           },
           {
-            "question": "Which of the following is the correct order of increasing bond strength?",
+            "question": "An element has two isotopes: mass 10 (20% abundance) and mass 13 (80% abundance). What is the average atomic mass?",
             "options": [
-              "Single bond < Double bond < Triple bond",
-              "Triple bond < Double bond < Single bond",
-              "Double bond < Single bond < Triple bond",
-              "All bonds have equal strength",
-              "Bond strength depends only on atomic size"
+              "12.4",
+              "13.4",
+              "10.6",
+              "11.5",
+              "12.6"
             ],
             "correct": 0,
-            "solution": "Bond strength increases with bond order because more shared electrons create stronger attraction between nuclei. Triple bonds (3 shared pairs) are strongest, followed by double bonds (2 shared pairs), then single bonds (1 shared pair)."
+            "solution": "Weighted average: \\(10\\times0.2+13\\times0.8=12.4\\) (not the simple mean 11.5)."
           },
           {
-            "question": "Which of the following compounds is an aromatic hydrocarbon?",
+            "question": "How many neutrons does the ion \\(^{39}_{19}\\text{K}^{+}\\) contain?",
             "options": [
-              "Cyclohexane",
-              "Cyclohexene",
-              "Benzene",
-              "Hexane",
-              "Cyclopropane"
+              "20",
+              "39",
+              "19",
+              "21",
+              "18"
             ],
-            "correct": 2,
-            "solution": "Benzene (C₆H₆) is an aromatic hydrocarbon with a planar ring structure and delocalised π electrons following Hückel's rule (4n+2 π electrons, where n=1). The other compounds are aliphatic."
+            "correct": 0,
+            "solution": "Neutrons = mass number − atomic number = 39 − 19 = 20. The charge changes electrons, not neutrons."
           },
           {
-            "question": "What is the hybridisation of the central carbon atom in ethene (C₂H₄)?",
+            "question": "How many neutrons does the ion \\(^{80}_{35}\\text{Br}^{2-}\\) contain?",
             "options": [
-              "sp",
-              "sp²",
-              "sp³",
-              "sp³d",
-              "sp³d²"
+              "43",
+              "37",
+              "80",
+              "35",
+              "45"
             ],
-            "correct": 1,
-            "solution": "In ethene, each carbon forms 3 sigma bonds (2 C-H and 1 C-C) and 1 pi bond. This requires 3 hybrid orbitals for sigma bonding, which is sp² hybridisation. The remaining unhybridised p orbital forms the pi bond."
+            "correct": 4,
+            "solution": "Neutrons = mass number − atomic number = 80 − 35 = 45. The charge changes electrons, not neutrons."
           },
           {
             "question": "A period 3 oxide is insoluble in water, has a very high melting point and reacts with hot concentrated NaOH but not with hydrochloric acid. What is it?",
@@ -26496,16 +26496,16 @@ const subjects = [
             "solution": "SiO<sub>2</sub> has a giant covalent structure (very high melting point, insoluble) and is <b>acidic</b>: it reacts with bases. Al<sub>2</sub>O<sub>3</sub> is amphoteric (it would also react with the acid). MgO is basic. P<sub>4</sub>O<sub>10</sub> and SO<sub>2</sub> dissolve in water."
           },
           {
-            "question": "Which of the following is a correct statement about isotopes?",
+            "question": "An element has two isotopes: mass 10 (60% abundance) and mass 14 (40% abundance). What is the average atomic mass?",
             "options": [
-              "Isotopes have different numbers of protons",
-              "Isotopes have different numbers of electrons",
-              "Isotopes have different numbers of neutrons",
-              "Isotopes have different chemical properties",
-              "Isotopes are always radioactive"
+              "18.4",
+              "11.6",
+              "12.4",
+              "12",
+              "12.6"
             ],
-            "correct": 2,
-            "solution": "Isotopes are atoms of the same element (same number of protons) with different numbers of neutrons. They have similar chemical properties because chemical behaviour depends on electron configuration, which is determined by proton number."
+            "correct": 1,
+            "solution": "Weighted average: \\(10\\times0.6+14\\times0.4=11.6\\) (not the simple mean 12)."
           },
           {
             "question": "Copper has two isotopes, <sup>63</sup>Cu and <sup>65</sup>Cu, and its relative atomic mass is 63.55. What is the percentage abundance of <sup>63</sup>Cu?",
@@ -26532,16 +26532,16 @@ const subjects = [
             "solution": "Na<sup>+</sup> (\\(11 - 1\\)), Mg<sup>2+</sup> (\\(12 - 2\\)), O<sup>2-</sup> (\\(8 + 2\\)), F<sup>-</sup> (\\(9 + 1\\)) and Al<sup>3+</sup> (\\(13 - 3\\)) all have 10. K<sup>+</sup> (\\(19 - 1 = 18\\)) and Ar (18) do not."
           },
           {
-            "question": "Which of the following is a property of ionic compounds?",
+            "question": "How many neutrons does the ion \\(^{65}_{30}\\text{Zn}^{2+}\\) contain?",
             "options": [
-              "They have low melting points",
-              "They conduct electricity when solid",
-              "They conduct electricity when molten or dissolved",
-              "They are formed by sharing electrons",
-              "They are typically gases at room temperature"
+              "35",
+              "30",
+              "28",
+              "65",
+              "37"
             ],
-            "correct": 2,
-            "solution": "Ionic compounds have high melting points, conduct electricity when molten or dissolved (ions are free to move), and are formed by electrostatic attraction between oppositely charged ions, not electron sharing."
+            "correct": 0,
+            "solution": "Neutrons = mass number − atomic number = 65 − 30 = 35. The charge changes electrons, not neutrons."
           },
           {
             "question": "Bromine has two isotopes, <sup>79</sup>Br and <sup>81</sup>Br. Its relative atomic mass is 79.9. Which percentage abundance is closest to that of <sup>81</sup>Br?",
@@ -26556,16 +26556,16 @@ const subjects = [
             "solution": "Let \\(x\\) be the fraction of \\(^{81}\\)Br: \\(79 + 2x = 79.9\\), so \\(x = 0.45\\). The abundance is 45%. (The relative atomic mass sits a bit closer to 79 than to 81, so more than half is \\(^{79}\\)Br.)"
           },
           {
-            "question": "Which of the following is a correct statement about electronegativity?",
+            "question": "An element has atomic number 9. In which group (IUPAC numbering 1–18) of the periodic table does it belong?",
             "options": [
-              "It decreases across a period",
-              "It increases down a group",
-              "Fluorine is the most electronegative element",
-              "Noble gases have the highest electronegativity",
-              "It is the same as electron affinity"
+              "Group 18",
+              "Group 17",
+              "Group 2",
+              "Group 16",
+              "Group 7"
             ],
-            "correct": 2,
-            "solution": "Electronegativity increases across a period (left to right) and decreases down a group. Fluorine is the most electronegative element (Pauling scale: 4.0). Noble gases are generally not assigned electronegativity values as they rarely form bonds."
+            "correct": 1,
+            "solution": "The outer shell is n = 2 with 7 valence electrons (2s and 2p). For the main groups, group = valence electrons for s-block (1–2) and valence + 10 for the p-block: Group 17, period 2."
           },
           {
             "question": "Chlorine is 75% <sup>35</sup>Cl and 25% <sup>37</sup>Cl. In the mass spectrum of Cl<sub>2</sub> molecules there are three peaks at \\(m/z\\) = 70, 72 and 74. What are their relative heights?",
@@ -26592,28 +26592,28 @@ const subjects = [
             "solution": "Colour needs a <b>partly filled</b> \\(d\\) subshell. Cu<sup>2+</sup> is 3d<sup>9</sup>. Zn<sup>2+</sup> is 3d<sup>10</sup> (full) and Sc<sup>3+</sup> is [Ar] (empty \\(d\\)), so both are colourless. Ca<sup>2+</sup> and K<sup>+</sup> have no \\(d\\) electrons."
           },
           {
-            "question": "What is the ground-state electron configuration of a neutral chromium atom (Cr, Z = 24)?",
+            "question": "How many unpaired electrons are there in the ground state of the manganese atom (atomic number of the neutral atom: 25)?",
             "options": [
-              "[Ar] 3d⁵ 4s¹",
-              "[Ar] 3d⁴ 4s²",
-              "[Ar] 3d⁶",
-              "[Ar] 3d³ 4s² 4p¹",
-              "[Ar] 4s² 3d⁴"
+              "0",
+              "8",
+              "6",
+              "5",
+              "3"
             ],
-            "correct": 0,
-            "solution": "Chromium is an exception to the standard Aufbau ordering. To achieve an energetically favorable half-filled 3d subshell (3d⁵), an electron is promoted from the 4s orbital, giving the ground-state configuration [Ar] 3d⁵ 4s¹."
+            "correct": 3,
+            "solution": "Ground-state configuration: 1s^2 2s^2 2p^6 3s^2 3p^6 3d^5 4s^2. Applying Hund's rule (one electron per orbital before pairing) gives 5 unpaired electron(s)."
           },
           {
-            "question": "Which of the following sets of quantum numbers (n, l, m_l, m_s) is NOT permitted for an electron in an atom?",
+            "question": "How many unpaired electrons are there in the ground state of the nitrogen atom (atomic number of the neutral atom: 7)?",
             "options": [
-              "n = 3, l = 3, m_l = 0, m_s = +1/2",
-              "n = 4, l = 2, m_l = -1, m_s = -1/2",
-              "n = 2, l = 1, m_l = 0, m_s = +1/2",
-              "n = 5, l = 0, m_l = 0, m_s = -1/2",
-              "n = 3, l = 2, m_l = +2, m_s = +1/2"
+              "3",
+              "4",
+              "0",
+              "2",
+              "5"
             ],
             "correct": 0,
-            "solution": "The azimuthal quantum number l can only take integer values from 0 to n - 1. For n = 3, the maximum permitted value of l is 2 (corresponding to the 3d subshell). An orbital with l = 3 (an f orbital) only exists for n ≥ 4."
+            "solution": "Ground-state configuration: 1s^2 2s^2 2p^3. Applying Hund's rule (one electron per orbital before pairing) gives 3 unpaired electron(s)."
           },
           {
             "question": "Which of the following isoelectronic species has the smallest ionic radius?",
@@ -26700,28 +26700,28 @@ const subjects = [
             "solution": "Let x be the fractional abundance of ³⁵Cl. Then (1 - x) is the abundance of ³⁷Cl. 35.0x + 37.0(1 - x) = 35.5 ⇒ 37.0 - 2.0x = 35.5 ⇒ 2.0x = 1.5 ⇒ x = 0.75, which corresponds to 75%."
           },
           {
-            "question": "Which of the following atoms in its ground state possesses the greatest number of unpaired electrons?",
+            "question": "How many unpaired electrons are there in the ground state of the sulfur atom (atomic number of the neutral atom: 16)?",
             "options": [
-              "Manganese (Mn, Z = 25)",
-              "Iron (Fe, Z = 26)",
-              "Vanadium (V, Z = 23)",
-              "Titanium (Ti, Z = 22)",
-              "Zinc (Zn, Z = 30)"
+              "5",
+              "2",
+              "1",
+              "0",
+              "4"
             ],
-            "correct": 0,
-            "solution": "Manganese has ground-state configuration [Ar] 3d⁵ 4s². By Hund's rule, all five 3d electrons occupy separate orbitals with parallel spins, giving 5 unpaired electrons. Fe has [Ar] 3d⁶ 4s² (4 unpaired), V has [Ar] 3d³ 4s² (3 unpaired), Ti has [Ar] 3d² 4s² (2 unpaired), and Zn has [Ar] 3d¹⁰ 4s² (0 unpaired)."
+            "correct": 1,
+            "solution": "Ground-state configuration: 1s^2 2s^2 2p^6 3s^2 3p^4. Applying Hund's rule (one electron per orbital before pairing) gives 2 unpaired electron(s)."
           },
           {
-            "question": "Which periodic trend generally DECREASES across a period from left to right?",
+            "question": "An element has atomic number 14. In which group (IUPAC numbering 1–18) of the periodic table does it belong?",
             "options": [
-              "Atomic radius",
-              "First ionization energy",
-              "Electronegativity",
-              "Effective nuclear charge",
-              "Electron affinity magnitude"
+              "Group 13",
+              "Group 14",
+              "Group 3",
+              "Group 15",
+              "Group 18"
             ],
-            "correct": 0,
-            "solution": "Across a period from left to right, protons are added to the nucleus while electrons enter the same valence shell. This increases the effective nuclear charge (Z_eff) without increasing shielding, pulling the valence electrons closer and decreasing the atomic radius."
+            "correct": 1,
+            "solution": "The outer shell is n = 3 with 4 valence electrons (3s and 3p). For the main groups, group = valence electrons for s-block (1–2) and valence + 10 for the p-block: Group 14, period 3."
           },
           {
             "question": "In a ground-state phosphorus atom (\\(Z = 15\\)), how many orbitals are <b>completely filled</b> with two electrons?",
@@ -26736,16 +26736,16 @@ const subjects = [
             "solution": "P is 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>3</sup>. Full orbitals: 1s, 2s, three 2p and 3s \\(= 6\\). The three 3p electrons are in three separate orbitals (Hund), so those orbitals are half-filled."
           },
           {
-            "question": "Which of the following elements has the lowest electronegativity on the Pauling scale?",
+            "question": "An element has atomic number 17. In which group (IUPAC numbering 1–18) of the periodic table does it belong?",
             "options": [
-              "Cesium (Cs)",
-              "Sodium (Na)",
-              "Barium (Ba)",
-              "Lithium (Li)",
-              "Aluminum (Al)"
+              "Group 3",
+              "Group 18",
+              "Group 7",
+              "Group 17",
+              "Group 16"
             ],
-            "correct": 0,
-            "solution": "Electronegativity decreases down a group and from right to left across a period. Francium and Cesium have the lowest electronegativity values (~0.79 on the Pauling scale) because of their large atomic radii and low effective nuclear charge on valence electrons."
+            "correct": 3,
+            "solution": "The outer shell is n = 3 with 7 valence electrons (3s and 3p). For the main groups, group = valence electrons for s-block (1–2) and valence + 10 for the p-block: Group 17, period 3."
           },
           {
             "question": "How many electrons in a chloride ion, Cl<sup>-</sup> (\\(Z = 17\\)), are in \\(p\\) orbitals?",
@@ -26760,16 +26760,16 @@ const subjects = [
             "solution": "Cl<sup>-</sup> has 18 electrons: 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>. The \\(p\\) electrons are \\(6 + 6 = 12\\)."
           },
           {
-            "question": "Which species is diamagnetic in its ground state?",
+            "question": "How many unpaired electrons are there in the ground state of the iron ion (charge +3) (atomic number of the neutral atom: 26)?",
             "options": [
-              "Zn²⁺",
-              "Cu²⁺",
-              "Fe³⁺",
-              "Ni²⁺",
-              "Mn²⁺"
+              "4",
+              "0",
+              "7",
+              "5",
+              "6"
             ],
-            "correct": 0,
-            "solution": "Zn (Z = 28) has configuration [Ar] 3d¹⁰ 4s². Zn²⁺ loses both 4s electrons, leaving [Ar] 3d¹⁰. All 10 electrons in the 3d subshell are paired into 5 orbitals, meaning Zn²⁺ has no unpaired electrons and is diamagnetic. The other ions all have partially filled d subshells containing unpaired electrons (paramagnetic)."
+            "correct": 3,
+            "solution": "Ground-state configuration: 1s^2 2s^2 2p^6 3s^2 3p^6 3d^5. Applying Hund's rule (one electron per orbital before pairing) gives 5 unpaired electron(s). Cations lose electrons from the outermost 4s first, then 3d."
           },
           {
             "question": "Which is the correct ground-state electron configuration of the copper(II) ion, Cu<sup>2+</sup>? (\\(Z = 29\\))",
@@ -26784,16 +26784,16 @@ const subjects = [
             "solution": "Cu is [Ar]3d<sup>10</sup>4s<sup>1</sup> (an exception). To make Cu<sup>2+</sup> remove the 4s electron and one 3d electron: [Ar]3d<sup>9</sup>. It has one unpaired electron."
           },
           {
-            "question": "Which element has the highest second ionization energy (IE₂)?",
+            "question": "An element has atomic number 5. In which group (IUPAC numbering 1–18) of the periodic table does it belong?",
             "options": [
-              "Sodium (Na, Z = 11)",
-              "Magnesium (Mg, Z = 12)",
-              "Aluminum (Al, Z = 13)",
-              "Silicon (Si, Z = 14)",
-              "Calcium (Ca, Z = 20)"
+              "Group 13",
+              "Group 2",
+              "Group 14",
+              "Group 18",
+              "Group 12"
             ],
             "correct": 0,
-            "solution": "Sodium has the ground-state configuration [Ne] 3s¹. The first electron is removed from the 3s orbital, forming Na⁺ with the noble-gas configuration [Ne] (1s² 2s² 2p⁶). Removing a second electron requires disrupting this stable octet from the n = 2 shell, leading to an exceptionally high IE₂."
+            "solution": "The outer shell is n = 2 with 3 valence electrons (2s and 2p). For the main groups, group = valence electrons for s-block (1–2) and valence + 10 for the p-block: Group 13, period 2."
           },
           {
             "question": "According to Hund's rule, what occurs when degenerate orbitals are populated by electrons?",
@@ -26808,16 +26808,16 @@ const subjects = [
             "solution": "Hund's rule of maximum multiplicity states that for degenerate (equal-energy) orbitals, the lowest energy configuration is achieved when electrons occupy each orbital singly with parallel spins before any orbital is doubly occupied."
           },
           {
-            "question": "Which of the following elements has the greatest metallic character?",
+            "question": "An element has atomic number 35. In which group (IUPAC numbering 1–18) of the periodic table does it belong?",
             "options": [
-              "Potassium (K)",
-              "Calcium (Ca)",
-              "Sodium (Na)",
-              "Magnesium (Mg)",
-              "Aluminum (Al)"
+              "Group 7",
+              "Group 18",
+              "Group 4",
+              "Group 16",
+              "Group 17"
             ],
-            "correct": 0,
-            "solution": "Metallic character increases down a group (due to increasing atomic radius and easier electron loss) and decreases across a period (due to increasing electronegativity and ionization energy). Among the given elements, potassium (Group 1, Period 4) loses its valence electron most readily, giving it the greatest metallic character."
+            "correct": 4,
+            "solution": "The outer shell is n = 4 with 7 valence electrons (4s and 4p). For the main groups, group = valence electrons for s-block (1–2) and valence + 10 for the p-block: Group 17, period 4."
           },
           {
             "question": "Compared with potassium, calcium has:",
@@ -26832,40 +26832,40 @@ const subjects = [
             "solution": "K and Ca are in the same period (4), with Ca one place to the right. One more proton pulls the same shell closer, so the radius is smaller and the electron is harder to remove."
           },
           {
-            "question": "Which of the following elements has the highest first ionization energy?",
+            "question": "An element has atomic number 13. In which group (IUPAC numbering 1–18) of the periodic table does it belong?",
             "options": [
-              "Si",
-              "S",
-              "Al",
-              "Mg",
-              "Na"
+              "Group 13",
+              "Group 12",
+              "Group 14",
+              "Group 18",
+              "Group 3"
             ],
-            "correct": 1,
-            "solution": "Na, Mg, Al, Si, and S all belong to the 3rd period of the periodic table. First ionization energy generally increases from left to right across a period due to increasing effective nuclear charge and decreasing atomic radius. Sulfur (S, Group 16) is farthest to the right and has the highest first ionization energy among the options."
+            "correct": 0,
+            "solution": "The outer shell is n = 3 with 3 valence electrons (3s and 3p). For the main groups, group = valence electrons for s-block (1–2) and valence + 10 for the p-block: Group 13, period 3."
           },
           {
-            "question": "The aluminum atom must:",
+            "question": "How many electrons does the ion \\(^{56}_{26}\\text{Fe}^{2+}\\) contain?",
             "options": [
-              "lose 5 electrons to achieve the octet",
-              "lose 4 electrons to achieve the octet",
-              "lose 3 electrons to achieve the octet",
-              "gain 3 electrons to achieve the octet",
-              "gain 4 electrons to achieve the octet"
+              "28",
+              "30",
+              "32",
+              "26",
+              "24"
             ],
-            "correct": 2,
-            "solution": "Aluminum has atomic number Z = 13 with electron configuration [Ne] 3s² 3p¹. It has 3 valence electrons in its outer shell; losing these 3 valence electrons gives it the stable noble gas electron configuration of Neon ([Ne]), achieving a complete octet as Al³⁺."
+            "correct": 4,
+            "solution": "The atomic number 26 = protons = electrons in the neutral atom. A charge of +2 means 2 electron(s) lost: 26 − 2 = 24."
           },
           {
-            "question": "Which aspect of chemistry is governed by Hund's rule?",
+            "question": "How many unpaired electrons are there in the ground state of the oxygen atom (atomic number of the neutral atom: 8)?",
             "options": [
-              "The reactivity of alcohol functional groups",
-              "The progressive filling of degenerate orbitals",
-              "The transfer of electrons from one functional group to another in a chemical reaction",
-              "The representation of molecular structure through line diagrams",
-              "The electron affinity of organic molecules"
+              "3",
+              "0",
+              "1",
+              "2",
+              "4"
             ],
-            "correct": 1,
-            "solution": "Hund's rule of maximum multiplicity states that when electrons occupy degenerate orbitals (orbitals of equal energy, such as the three p orbitals or five d orbitals), they occupy them singly with parallel spins before doubly occupying any orbital."
+            "correct": 3,
+            "solution": "Ground-state configuration: 1s^2 2s^2 2p^4. Applying Hund's rule (one electron per orbital before pairing) gives 2 unpaired electron(s)."
           },
           {
             "question": "The first ionisation energies (kJ/mol) are: Mg 738, Al 578, P 1012, S 1000. Which pair of explanations accounts for <b>both</b> dips (Al below Mg, S below P)?",
@@ -26880,28 +26880,28 @@ const subjects = [
             "solution": "Mg loses a 3s electron, but Al loses a 3p electron, which has higher energy and is slightly shielded by the 3s electrons. In S the electron removed comes from an orbital with two electrons, and their repulsion makes it easier to remove than a single electron in P."
           },
           {
-            "question": "Which of the following statements about quantum numbers is NOT correct?",
+            "question": "How many unpaired electrons are there in the ground state of the titanium atom (atomic number of the neutral atom: 22)?",
             "options": [
-              "The number of possible orbitals for each value of n is n³",
-              "The angular momentum quantum number l can take all values from 0 to (n-1)",
-              "The magnetic quantum number m indicates the different possible orientations of orbitals in space",
-              "The principal quantum number n can take all positive integer values from 1 to infinity",
-              "The spin quantum number ms can take only two values"
-            ],
-            "correct": 0,
-            "solution": "For a given principal quantum level n, the total number of orbitals is n² (not n³), and the maximum number of electrons is 2n²."
-          },
-          {
-            "question": "Two elements have the following electron configurations:\n[Ar] 3d¹⁰ 4s² and [Ar] 3d¹⁰ 4s² 4p⁴\nWhich of the following statements is correct?",
-            "options": [
-              "They are both transition metals.",
-              "They both belong to group 4.",
-              "They both belong to the fourth period.",
-              "They both have two valence electrons.",
-              "They both belong to the s block."
+              "0",
+              "3",
+              "2",
+              "4",
+              "1"
             ],
             "correct": 2,
-            "solution": "The highest principal quantum number in both configurations is n = 4, which means both elements belong to the 4th period of the periodic table (Zinc with Z=30 and Selenium with Z=34)."
+            "solution": "Ground-state configuration: 1s^2 2s^2 2p^6 3s^2 3p^6 3d^2 4s^2. Applying Hund's rule (one electron per orbital before pairing) gives 2 unpaired electron(s)."
+          },
+          {
+            "question": "How many unpaired electrons are there in the ground state of the vanadium atom (atomic number of the neutral atom: 23)?",
+            "options": [
+              "2",
+              "6",
+              "0",
+              "3",
+              "4"
+            ],
+            "correct": 3,
+            "solution": "Ground-state configuration: 1s^2 2s^2 2p^6 3s^2 3p^6 3d^3 4s^2. Applying Hund's rule (one electron per orbital before pairing) gives 3 unpaired electron(s)."
           },
           {
             "question": "How many unpaired electrons does a chromium atom (\\(Z = 24\\)) have in its ground state?",
@@ -26928,40 +26928,40 @@ const subjects = [
             "solution": "Configuration 2 occupies degenerate 2p orbitals singly with parallel spins, and configuration 5 completely fills all degenerate 2p orbitals; both fully comply with Hund's rule of maximum multiplicity."
           },
           {
-            "question": "Which of the following species is isoelectronic with the nitride ion N³⁻?",
+            "question": "How many electrons does the ion \\(^{80}_{35}\\text{Br}^{-}\\) contain?",
             "options": [
-              "C",
-              "F⁺",
-              "P³⁺",
-              "O²⁻",
-              "Be"
+              "35",
+              "45",
+              "44",
+              "36",
+              "34"
             ],
             "correct": 3,
-            "solution": "Isoelectronic species have the same number of electrons. The nitride ion (N³⁻) has 7 + 3 = 10 electrons. The oxide ion (O²⁻) has 8 + 2 = 10 electrons, making them isoelectronic with neon."
+            "solution": "The atomic number 35 = protons = electrons in the neutral atom. A charge of -1 means 1 electron(s) gained: 35 + 1 = 36."
           },
           {
-            "question": "What is the reason why electronegativity decreases when going down a group of the periodic table?",
+            "question": "An element has atomic number 6. In which group (IUPAC numbering 1–18) of the periodic table does it belong?",
             "options": [
-              "Because the atomic radius decreases",
-              "Because the atomic radius increases",
-              "Because the tendency to lose electrons decreases",
-              "Because the attractive forces between the nucleus and the valence electrons increase",
-              "Because the metallic character decreases"
+              "Group 14",
+              "Group 18",
+              "Group 4",
+              "Group 15",
+              "Group 13"
             ],
-            "correct": 1,
-            "solution": "Descending a group, additional electron shells are added, increasing the atomic radius and electron shielding, which weakens the nuclear electrostatic pull on shared valence electrons."
+            "correct": 0,
+            "solution": "The outer shell is n = 2 with 4 valence electrons (2s and 2p). For the main groups, group = valence electrons for s-block (1–2) and valence + 10 for the p-block: Group 14, period 2."
           },
           {
-            "question": "Which of the following statements about atomic quantum numbers is FALSE?",
+            "question": "How many unpaired electrons are there in the ground state of the silicon atom (atomic number of the neutral atom: 14)?",
             "options": [
-              "The secondary quantum number depends on the principal quantum number",
-              "The secondary quantum number depends on the magnetic quantum number",
-              "The secondary quantum number can only take on values lower than the value of the principal quantum number",
-              "The spin quantum number of an electron can only assume half-integer values",
-              "The number of orbitals of a level depends on the principal quantum number"
+              "2",
+              "1",
+              "5",
+              "4",
+              "3"
             ],
-            "correct": 1,
-            "solution": "The orbital angular momentum quantum number l depends only on n (0 ≤ l ≤ n - 1). The magnetic quantum number m depends on l (-l ≤ m ≤ +l), not the reverse."
+            "correct": 0,
+            "solution": "Ground-state configuration: 1s^2 2s^2 2p^6 3s^2 3p^2. Applying Hund's rule (one electron per orbital before pairing) gives 2 unpaired electron(s)."
           }
         ]
       },
@@ -27030,16 +27030,16 @@ const subjects = [
             "solution": "Ideal gas assumptions: particles have negligible volume, no intermolecular forces, elastic collisions, and random motion. Statement C correctly describes elastic collisions. Real gases deviate from ideal behaviour at high pressure and low temperature."
           },
           {
-            "question": "What is the hybridisation of the carbon atom in methane (CH₄)?",
+            "question": "How many π bonds are there in a molecule of C₂H₄? (Count a double bond as one σ plus one π, and a triple bond as one σ plus two π.)",
             "options": [
-              "sp",
-              "sp²",
-              "sp³",
-              "sp³d",
-              "sp³d²"
+              "3",
+              "1",
+              "2",
+              "10",
+              "5"
             ],
-            "correct": 2,
-            "solution": "Carbon in methane forms four sigma bonds with hydrogen. To accommodate four bonding pairs with minimal repulsion, carbon undergoes sp³ hybridisation, giving a tetrahedral geometry with 109.5° bond angles."
+            "correct": 1,
+            "solution": "C₂H₄ has 5 σ bonds and 1 π bonds, so 1 π bond(s)."
           },
           {
             "question": "MgO melts at about 2850 °C and NaCl at about 800 °C. Which explanation is correct?",
@@ -27054,40 +27054,40 @@ const subjects = [
             "solution": "The attraction between ions grows with the charges (2+ and 2− against 1+ and 1−) and falls as the ions get larger. Mg<sup>2+</sup> and O<sup>2-</sup> have higher charges and the Mg<sup>2+</sup> ion is smaller than Na<sup>+</sup>."
           },
           {
-            "question": "Which of the following is a property of ionic compounds?",
+            "question": "How many π bonds are there in a molecule of HCOOH? (Count a double bond as one σ plus one π, and a triple bond as one σ plus two π.)",
             "options": [
-              "Low melting points",
-              "Conduct electricity in solid state",
-              "Conduct electricity when molten or dissolved",
-              "Soft and malleable",
-              "Formed between non-metals"
+              "1",
+              "3",
+              "8",
+              "2",
+              "4"
             ],
-            "correct": 2,
-            "solution": "Ionic compounds have high melting points, are brittle, and conduct electricity only when molten or dissolved (ions are mobile). They do not conduct in solid state (ions are fixed in lattice)."
+            "correct": 0,
+            "solution": "HCOOH has 4 σ bonds and 1 π bonds, so 1 π bond(s)."
           },
           {
-            "question": "Which of the following is an example of an addition polymer?",
+            "question": "How many covalent bonds in total (σ plus π) are there in a molecule of CH₃CN? (Count a double bond as one σ plus one π, and a triple bond as one σ plus two π.)",
             "options": [
-              "Polyester",
-              "Polyamide",
-              "Polyethene",
-              "Polycarbonate",
-              "Polyurethane"
+              "7",
+              "5",
+              "3",
+              "8",
+              "6"
             ],
-            "correct": 2,
-            "solution": "Polyethene (polyethylene) is formed by addition polymerisation of ethene monomers. The double bond opens up and monomers join without any byproduct. The others are condensation polymers formed with elimination of small molecules."
+            "correct": 0,
+            "solution": "CH₃CN has 5 σ bonds and 2 π bonds, so 5 + 2 = 7 bonds in total."
           },
           {
-            "question": "What is the hybridisation of the carbon atoms in ethene (C₂H₄)?",
+            "question": "How many π bonds are there in a molecule of CH₃CN? (Count a double bond as one σ plus one π, and a triple bond as one σ plus two π.)",
             "options": [
-              "sp",
-              "sp²",
-              "sp³",
-              "sp³d",
-              "sp³d²"
+              "1",
+              "3",
+              "5",
+              "4",
+              "2"
             ],
-            "correct": 1,
-            "solution": "Each carbon in ethene forms three sigma bonds (one C-C, two C-H) and one pi bond. To accommodate three bonding regions with 120° angles, carbon undergoes sp² hybridisation, giving trigonal planar geometry."
+            "correct": 4,
+            "solution": "CH₃CN has 5 σ bonds and 2 π bonds, so 2 π bond(s)."
           },
           {
             "question": "What is the product when 2-bromopropane undergoes elimination with a strong base?",
@@ -27102,16 +27102,16 @@ const subjects = [
             "solution": "2-bromopropane (CH₃CHBrCH₃) with a strong base (e.g., KOH in ethanol) undergoes E2 elimination. A hydrogen is removed from a carbon adjacent to the bromine, and the C-Br bond breaks, forming a double bond. The product is propene (CH₃CH=CH₂)."
           },
           {
-            "question": "Which of the following is an example of an addition reaction?",
+            "question": "How many π bonds are there in a molecule of CH₃CHO? (Count a double bond as one σ plus one π, and a triple bond as one σ plus two π.)",
             "options": [
-              "Combustion of methane",
-              "Substitution of chlorine in ethane",
-              "Addition of bromine to ethene",
-              "Esterification of propanoic acid",
-              "Oxidation of ethanol"
+              "2",
+              "12",
+              "6",
+              "3",
+              "1"
             ],
-            "correct": 2,
-            "solution": "Addition reactions involve adding atoms across a double or triple bond. Bromine adds across the double bond in ethene (C₂H₄ + Br₂ → C₂H₄Br₂), converting it to 1,2-dibromoethane."
+            "correct": 4,
+            "solution": "CH₃CHO has 6 σ bonds and 1 π bonds, so 1 π bond(s)."
           },
           {
             "question": "How many ions are present in one formula unit of aluminium sulfate?",
@@ -27234,16 +27234,16 @@ const subjects = [
             "solution": "Silicon dioxide (quartz) consists of a continuous 3D network of covalent bonds, where every silicon atom is tetrahedrally bonded to 4 oxygen atoms, and each oxygen bridges two silicon atoms. CO₂, sucrose, and I₂ are molecular solids, while NaCl is an ionic solid."
           },
           {
-            "question": "Which of the following bonds is the most polar?",
+            "question": "How many covalent bonds in total (σ plus π) are there in a molecule of HCOOH? (Count a double bond as one σ plus one π, and a triple bond as one σ plus two π.)",
             "options": [
-              "H-F",
-              "H-Cl",
-              "H-Br",
-              "C-O",
-              "N-O"
+              "2",
+              "6",
+              "4",
+              "8",
+              "5"
             ],
-            "correct": 0,
-            "solution": "Bond polarity is determined by the electronegativity difference (ΔEN) between the bonded atoms. Fluorine is the most electronegative element (4.0) and hydrogen has an electronegativity of 2.1. ΔEN = 4.0 - 2.1 = 1.9, which is the largest difference among the options."
+            "correct": 4,
+            "solution": "HCOOH has 4 σ bonds and 1 π bonds, so 4 + 1 = 5 bonds in total."
           },
           {
             "question": "Four solids have these properties. W: very high melting point, hard, does not conduct. X: high melting point, conducts only when molten. Y: conducts when solid, malleable. Z: low melting point, does not conduct. Which row matches W, X, Y, Z?",
@@ -27282,16 +27282,16 @@ const subjects = [
             "solution": "Each water molecule has 2 hydrogen atoms and 2 lone pairs on oxygen, allowing it to form an extensive 3D network with an average of 4 hydrogen bonds per molecule. HF has only 1 hydrogen atom per molecule, limiting it to an average of 2 hydrogen bonds per molecule despite each individual H-F···F bond being stronger."
           },
           {
-            "question": "Which of the following molecules has a square planar molecular geometry?",
+            "question": "How many covalent bonds in total (σ plus π) are there in a molecule of CH₂=CH–CH=CH₂? (Count a double bond as one σ plus one π, and a triple bond as one σ plus two π.)",
             "options": [
-              "XeF₄",
-              "CCl₄",
-              "SF₄",
-              "SiCl₄",
-              "BF₄⁻"
+              "18",
+              "11",
+              "13",
+              "9",
+              "3"
             ],
-            "correct": 0,
-            "solution": "XeF₄ has 4 bonding pairs and 2 lone pairs on xenon (steric number 6, octahedral electron geometry). The two lone pairs position themselves opposite each other (180° apart) to minimize repulsion, resulting in a square planar molecular geometry."
+            "correct": 1,
+            "solution": "CH₂=CH–CH=CH₂ has 9 σ bonds and 2 π bonds, so 9 + 2 = 11 bonds in total."
           },
           {
             "question": "Which factor most significantly increases the lattice energy of an ionic compound?",
@@ -27402,16 +27402,16 @@ const subjects = [
             "solution": "Ionic bonds form between metals with low electronegativity and nonmetals with high electronegativity. Magnesium (Mg) is an alkaline earth metal that readily loses two electrons to chlorine (a halogen) to form the ionic lattice compound MgCl₂."
           },
           {
-            "question": "In a molecule of hydrocyanic acid (HCN), how many total bonds are present?",
+            "question": "How many covalent bonds in total (σ plus π) are there in a molecule of C₂H₆? (Count a double bond as one σ plus one π, and a triple bond as one σ plus two π.)",
             "options": [
-              "One π bond and three σ bonds",
-              "Two σ bonds and two π bonds",
-              "One σ bond and three π bonds",
-              "Three π bonds",
-              "Three σ bonds"
+              "14",
+              "8",
+              "9",
+              "1",
+              "7"
             ],
-            "correct": 1,
-            "solution": "The Lewis structure of HCN is H–C≡N. The H–C single bond is 1 σ bond. The C≡N triple bond consists of 1 σ bond and 2 π bonds. In total, the molecule has 2 σ bonds and 2 π bonds."
+            "correct": 4,
+            "solution": "C₂H₆ has 7 σ bonds and 0 π bonds, so 7 + 0 = 7 bonds in total."
           },
           {
             "question": "Which of the following pairs of molecules is such that at least one member of the pair can establish permanent dipole–permanent dipole interactions with the other member?",
@@ -27480,28 +27480,28 @@ const subjects = [
         "name": "Stoichiometry & Calculations",
         "questions": [
           {
-            "question": "20.0 g of CaCO₃ (M = 100 g/mol) decomposes to CaO + CO₂. What volume of CO₂ at RTP (1 mol = 24.0 dm³)?",
+            "question": "CaCO₃ decomposes: CaCO₃ → CaO + CO₂. Heating 50 g of CaCO₃ (M = 100 g/mol) gives CaO (M = 56 g/mol) with a 90% yield. What mass of CaO is obtained?",
             "options": [
-              "2.4 dm³",
-              "4.8 dm³",
-              "6.0 dm³",
-              "12.0 dm³",
-              "24.0 dm³"
+              "25.2 g",
+              "45 g",
+              "50.4 g",
+              "28 g",
+              "2520 g"
             ],
-            "correct": 1,
-            "solution": "Moles of CaCO₃ = 20.0/100 = 0.200 mol. Moles of CO₂ = 0.200 mol (1:1 ratio). Volume at RTP = 0.200 × 24.0 = 4.8 dm³."
+            "correct": 0,
+            "solution": "Moles CaCO₃ = 50/100 = 0.5 mol, giving 0.5 mol CaO (1:1) = 28 g theoretical. Actual = 90% of that = 25.2 g."
           },
           {
-            "question": "A weak acid HA has Ka = 1.8 × 10⁻⁵. What is the approximate pH of a 0.10 mol/dm³ solution?",
+            "question": "For the reaction N₂ + 3H₂ → 2NH₃, 4 mol of N₂ is mixed with 6 mol of H₂. How many grams of NH₃ can be formed at most? (molar mass of NH₃ = 17 g/mol)",
             "options": [
-              "1.0",
-              "2.7",
-              "3.7",
-              "4.7",
-              "5.7"
+              "85 g",
+              "102 g",
+              "136 g",
+              "68 g",
+              "34 g"
             ],
-            "correct": 1,
-            "solution": "For a weak acid: [H⁺] ≈ √(Ka × c) = √(1.8 × 10⁻⁵ × 0.10) ≈ 0.00134 mol/dm³. pH = -log(0.00134) ≈ 2.87 ≈ 2.7."
+            "correct": 3,
+            "solution": "Compare the mole ratios to the coefficients: N₂ gives 4/1 = 4 and H₂ gives 6/3 = 2. The smaller one limits, so H₂ is the limiting reagent and 4 mol of NH₃ form, which is 4 × 17 = 68 g."
           },
           {
             "question": "In the reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g), the system is at equilibrium. What happens if the pressure is increased by reducing the volume?",
@@ -27528,16 +27528,16 @@ const subjects = [
             "solution": "A more reactive metal displaces a less reactive one. Zn displaces Cu (reaction). Mg displaces Fe (reaction). Cu cannot displace Zn, and Fe cannot displace Mg."
           },
           {
-            "question": "A 250 cm³ solution contains 0.73 g of HCl (Mr = 36.5). What is the concentration of the solution in mol/dm³?",
+            "question": "CaCO₃ decomposes: CaCO₃ → CaO + CO₂. Heating 20 g of CaCO₃ (M = 100 g/mol) gives CaO (M = 56 g/mol) with a 90% yield. What mass of CaO is obtained?",
             "options": [
-              "0.02 mol/dm³",
-              "0.04 mol/dm³",
-              "0.08 mol/dm³",
-              "0.10 mol/dm³",
-              "0.20 mol/dm³"
+              "11.2 g",
+              "12.44 g",
+              "10.08 g",
+              "18 g",
+              "20.16 g"
             ],
             "correct": 2,
-            "solution": "Moles of HCl = 0.73 ÷ 36.5 = 0.02 mol. Volume = 250 cm³ = 0.25 dm³. Concentration = 0.02 ÷ 0.25 = 0.08 mol/dm³."
+            "solution": "Moles CaCO₃ = 20/100 = 0.2 mol, giving 0.2 mol CaO (1:1) = 11.2 g theoretical. Actual = 90% of that = 10.08 g."
           },
           {
             "question": "What mass of CaCO<sub>3</sub> is needed to make 1.00 tonne of CaO (\\(M = 56\\)) if the process has a yield of 80%? (\\(M(\\text{CaCO}_3) = 100\\))",
@@ -27612,40 +27612,40 @@ const subjects = [
             "solution": "Moles of NaCl = 5.85 ÷ 58.5 = 0.10 mol. Volume = 500 cm³ = 0.5 dm³. Concentration = 0.10 ÷ 0.5 = 0.2 mol/dm³."
           },
           {
-            "question": "Which of the following is the correct formula for copper(II) sulfate?",
+            "question": "For the reaction N₂ + 3H₂ → 2NH₃, 2 mol of N₂ is mixed with 1 mol of H₂. How many grams of NH₃ can be formed at most? (molar mass of NH₃ = 17 g/mol)",
             "options": [
-              "CuSO₄",
-              "Cu₂SO₄",
-              "CuSO₃",
-              "Cu₂SO₃",
-              "Cu(SO₄)₂"
-            ],
-            "correct": 0,
-            "solution": "Copper(II) has a +2 charge. Sulfate has a -2 charge. The formula is CuSO₄, giving a neutral compound."
-          },
-          {
-            "question": "What is the volume occupied by 0.5 moles of an ideal gas at STP (22.4 dm³/mol)?",
-            "options": [
-              "5.6 dm³",
-              "11.2 dm³",
-              "22.4 dm³",
-              "44.8 dm³",
-              "112 dm³"
+              "22.67 g",
+              "11.33 g",
+              "25.5 g",
+              "34 g",
+              "68 g"
             ],
             "correct": 1,
-            "solution": "At STP, 1 mole of gas occupies 22.4 dm³. 0.5 moles = 0.5 × 22.4 = 11.2 dm³."
+            "solution": "Compare the mole ratios to the coefficients: N₂ gives 2/1 = 2 and H₂ gives 1/3 = 0.3333. The smaller one limits, so H₂ is the limiting reagent and 0.6667 mol of NH₃ form, which is 0.6667 × 17 = 11.33 g."
           },
           {
-            "question": "What is the pH of a 0.001 mol/dm³ solution of NaOH at 25°C?",
+            "question": "For the reaction 2Al + 3Cl₂ → 2AlCl₃, 4 mol of Al is mixed with 8 mol of Cl₂. How many grams of AlCl₃ can be formed at most? (molar mass of AlCl₃ = 133.5 g/mol)",
             "options": [
-              "1",
-              "3",
-              "7",
-              "10",
-              "11"
+              "1068 g",
+              "534 g",
+              "712 g",
+              "267 g",
+              "801 g"
             ],
-            "correct": 3,
-            "solution": "NaOH is a strong base, fully dissociated. [OH⁻] = 0.001 mol/dm³ = 10⁻³ M. pOH = -log(10⁻³) = 3. pH = 14 - pOH = 11."
+            "correct": 1,
+            "solution": "Compare the mole ratios to the coefficients: Al gives 4/2 = 2 and Cl₂ gives 8/3 = 2.667. The smaller one limits, so Al is the limiting reagent and 4 mol of AlCl₃ form, which is 4 × 133.5 = 534 g."
+          },
+          {
+            "question": "For the reaction N₂ + 3H₂ → 2NH₃, 1 mol of N₂ is mixed with 2 mol of H₂. How many grams of NH₃ can be formed at most? (molar mass of NH₃ = 17 g/mol)",
+            "options": [
+              "45.33 g",
+              "11.33 g",
+              "17 g",
+              "25.5 g",
+              "22.67 g"
+            ],
+            "correct": 4,
+            "solution": "Compare the mole ratios to the coefficients: N₂ gives 1/1 = 1 and H₂ gives 2/3 = 0.6667. The smaller one limits, so H₂ is the limiting reagent and 1.333 mol of NH₃ form, which is 1.333 × 17 = 22.67 g."
           },
           {
             "question": "In the reaction A + B ⇌ C + D, increasing the concentration of A will cause the equilibrium to:",
@@ -27660,28 +27660,28 @@ const subjects = [
             "solution": "According to Le Chatelier's principle, increasing the concentration of a reactant (A) shifts the equilibrium to the right to consume some of the added A, producing more products C and D. The equilibrium constant Kc remains unchanged."
           },
           {
-            "question": "What is the relative atomic mass of chlorine given that ³⁵Cl has 75% abundance and ³⁷Cl has 25% abundance?",
+            "question": "How many moles are there in 100 g of NaOH? (use the standard atomic masses H = 1, C = 12, N = 14, O = 16, Na = 23, Mg = 24, Al = 27, P = 31, S = 32, Cl = 35.5, Ca = 40, Fe = 56)",
             "options": [
-              "35.0",
-              "35.5",
-              "36.0",
-              "36.5",
-              "37.0"
+              "2.381 mol",
+              "5 mol",
+              "4000 mol",
+              "0.4 mol",
+              "2.5 mol"
             ],
-            "correct": 1,
-            "solution": "Relative atomic mass = (35 × 0.75) + (37 × 0.25) = 26.25 + 9.25 = 35.5."
+            "correct": 4,
+            "solution": "M(NaOH) = 40 g/mol, so n = m/M = 100/40 = 2.5 mol."
           },
           {
-            "question": "Which of the following compounds is an alkane?",
+            "question": "For the reaction C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, 2 mol of C₃H₈ is mixed with 8 mol of O₂. How many grams of CO₂ can be formed at most? (molar mass of CO₂ = 44 g/mol)",
             "options": [
-              "C₂H₄",
-              "C₃H₆",
-              "C₄H₁₀",
-              "C₅H₈",
-              "C₆H₆"
+              "105.6 g",
+              "211.2 g",
+              "352 g",
+              "264 g",
+              "220 g"
             ],
-            "correct": 2,
-            "solution": "Alkanes have the general formula CₙH₂ₙ₊₂. C₄H₁₀ follows this pattern (n=4, 2n+2=10). C₂H₄ and C₃H₆ are alkenes (CₙH₂ₙ), C₅H₈ is an alkyne (CₙH₂ₙ₋₂), and C₆H₆ is benzene (aromatic)."
+            "correct": 1,
+            "solution": "Compare the mole ratios to the coefficients: C₃H₈ gives 2/1 = 2 and O₂ gives 8/5 = 1.6. The smaller one limits, so O₂ is the limiting reagent and 4.8 mol of CO₂ form, which is 4.8 × 44 = 211.2 g."
           },
           {
             "question": "What happens to the rate of a reaction when the temperature is increased by 10°C?",
@@ -27696,16 +27696,16 @@ const subjects = [
             "solution": "According to the Arrhenius equation, reaction rate approximately doubles or triples for every 10°C increase in temperature (the \"Q10 rule\"). This is because more molecules have sufficient energy to overcome the activation energy barrier."
           },
           {
-            "question": "Which of the following is the correct formula for magnesium oxide?",
+            "question": "For the reaction N₂ + 3H₂ → 2NH₃, 1 mol of N₂ is mixed with 8 mol of H₂. How many grams of NH₃ can be formed at most? (molar mass of NH₃ = 17 g/mol)",
             "options": [
-              "MgO",
-              "MgO₂",
-              "Mg₂O",
-              "Mg₂O₂",
-              "Mg(OH)₂"
+              "34 g",
+              "136 g",
+              "68 g",
+              "17 g",
+              "90.67 g"
             ],
             "correct": 0,
-            "solution": "Magnesium has a +2 charge, oxygen has a -2 charge. The formula is MgO, giving a neutral compound."
+            "solution": "Compare the mole ratios to the coefficients: N₂ gives 1/1 = 1 and H₂ gives 8/3 = 2.667. The smaller one limits, so N₂ is the limiting reagent and 2 mol of NH₃ form, which is 2 × 17 = 34 g."
           },
           {
             "question": "10.0 g of calcium carbonate are heated: CaCO<sub>3</sub> → CaO + CO<sub>2</sub>. The mass of CaO obtained is 3.8 g. What is the percentage yield? (\\(A_r\\): Ca 40, C 12, O 16)",
@@ -27720,40 +27720,40 @@ const subjects = [
             "solution": "\\(n(\\text{CaCO}_3) = 10.0/100 = 0.100\\) mol, so the theoretical yield is \\(0.100 \\times 56 = 5.6\\) g of CaO. Percentage yield \\(= 3.8/5.6 \\times 100 = 67.9\\%\\)."
           },
           {
-            "question": "In a titration, what colour does phenolphthalein turn in a basic solution?",
+            "question": "CaCO₃ decomposes: CaCO₃ → CaO + CO₂. Heating 10 g of CaCO₃ (M = 100 g/mol) gives CaO (M = 56 g/mol) with a 75% yield. What mass of CaO is obtained?",
             "options": [
-              "Colourless",
-              "Red",
-              "Pink",
-              "Blue",
-              "Yellow"
+              "8.4 g",
+              "420 g",
+              "5.6 g",
+              "4.2 g",
+              "7.5 g"
             ],
-            "correct": 2,
-            "solution": "Phenolphthalein is colourless in acidic and neutral solutions, but turns pink in basic solutions (pH > 8.2). It is commonly used as an indicator in acid-base titrations."
+            "correct": 3,
+            "solution": "Moles CaCO₃ = 10/100 = 0.1 mol, giving 0.1 mol CaO (1:1) = 5.6 g theoretical. Actual = 75% of that = 4.2 g."
           },
           {
-            "question": "Which of the following is the correct formula for aluminium sulfate?",
+            "question": "CaCO₃ decomposes: CaCO₃ → CaO + CO₂. Heating 10 g of CaCO₃ (M = 100 g/mol) gives CaO (M = 56 g/mol) with a 80% yield. What mass of CaO is obtained?",
             "options": [
-              "AlSO₄",
-              "Al₂(SO₄)₃",
-              "Al(SO₄)₂",
-              "Al₂SO₄",
-              "Al₃(SO₄)₂"
+              "4.48 g",
+              "5.6 g",
+              "8.96 g",
+              "448 g",
+              "7 g"
             ],
-            "correct": 1,
-            "solution": "Aluminium has a +3 charge (Al³⁺) and sulfate has a -2 charge (SO₄²⁻). To balance charges, we need 2 aluminium ions (total +6) and 3 sulfate ions (total -6). Formula: Al₂(SO₄)₃."
+            "correct": 0,
+            "solution": "Moles CaCO₃ = 10/100 = 0.1 mol, giving 0.1 mol CaO (1:1) = 5.6 g theoretical. Actual = 80% of that = 4.48 g."
           },
           {
-            "question": "What is the mass of 0.25 moles of Na₂CO₃? (Na = 23, C = 12, O = 16)",
+            "question": "For the reaction C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, 4 mol of C₃H₈ is mixed with 2 mol of O₂. How many grams of CO₂ can be formed at most? (molar mass of CO₂ = 44 g/mol)",
             "options": [
-              "10.5 g",
-              "21 g",
-              "26.5 g",
-              "42 g",
-              "53 g"
+              "105.6 g",
+              "528 g",
+              "176 g",
+              "52.8 g",
+              "88 g"
             ],
-            "correct": 2,
-            "solution": "Mr of Na₂CO₃ = (2 × 23) + 12 + (3 × 16) = 46 + 12 + 48 = 106 g/mol. 0.25 moles = 0.25 × 106 = 26.5 g."
+            "correct": 3,
+            "solution": "Compare the mole ratios to the coefficients: C₃H₈ gives 4/1 = 4 and O₂ gives 2/5 = 0.4. The smaller one limits, so O₂ is the limiting reagent and 1.2 mol of CO₂ form, which is 1.2 × 44 = 52.8 g."
           },
           {
             "question": "What is the pH of a solution formed by mixing equal volumes of 0.1 mol/dm³ HCl and 0.1 mol/dm³ NaOH?",
@@ -27780,16 +27780,16 @@ const subjects = [
             "solution": "The reaction is exothermic (ΔH < 0). According to Le Chatelier's principle, increasing temperature favours the endothermic direction (reverse reaction in this case), decreasing the yield of SO₃."
           },
           {
-            "question": "What is the empirical formula of a compound with 40% carbon, 6.7% hydrogen, and 53.3% oxygen by mass?",
+            "question": "CaCO₃ decomposes: CaCO₃ → CaO + CO₂. Heating 100 g of CaCO₃ (M = 100 g/mol) gives CaO (M = 56 g/mol) with a 60% yield. What mass of CaO is obtained?",
             "options": [
-              "CH₂O",
-              "C₂H₄O₂",
-              "C₃H₆O₃",
-              "CHO",
-              "C₂H₆O"
+              "3360 g",
+              "67.2 g",
+              "93.33 g",
+              "33.6 g",
+              "56 g"
             ],
-            "correct": 0,
-            "solution": "Assume 100g: C = 40/12 = 3.33 mol, H = 6.7/1 = 6.7 mol, O = 53.3/16 = 3.33 mol. Ratio C:H:O = 3.33:6.7:3.33 = 1:2:1. Empirical formula = CH₂O."
+            "correct": 3,
+            "solution": "Moles CaCO₃ = 100/100 = 1 mol, giving 1 mol CaO (1:1) = 56 g theoretical. Actual = 60% of that = 33.6 g."
           },
           {
             "question": "Which of the following solutions would have the highest boiling point? (Assume same concentration)",
@@ -27828,28 +27828,28 @@ const subjects = [
             "solution": "Ba<sup>2+</sup>: \\(0.0250 \\times 0.200 = 5.00 \\times 10^{-3}\\) mol. SO<sub>4</sub><sup>2-</sup>: \\(0.0250 \\times 0.300 = 7.50 \\times 10^{-3}\\) mol. The ratio is 1 : 1, so Ba<sup>2+</sup> is limiting. Mass \\(= 5.00 \\times 10^{-3} \\times 233 = 1.17\\) g."
           },
           {
-            "question": "What is the volume occupied by 2 moles of gas at STP (22.4 dm³/mol)?",
+            "question": "For the reaction N₂ + 3H₂ → 2NH₃, 1 mol of N₂ is mixed with 1 mol of H₂. How many grams of NH₃ can be formed at most? (molar mass of NH₃ = 17 g/mol)",
             "options": [
-              "11.2 dm³",
-              "22.4 dm³",
-              "44.8 dm³",
-              "67.2 dm³",
-              "89.6 dm³"
+              "11.33 g",
+              "5.667 g",
+              "17 g",
+              "22.67 g",
+              "34 g"
             ],
-            "correct": 2,
-            "solution": "At STP, 1 mole of any gas occupies 22.4 dm³. 2 moles occupy 2 × 22.4 = 44.8 dm³."
+            "correct": 0,
+            "solution": "Compare the mole ratios to the coefficients: N₂ gives 1/1 = 1 and H₂ gives 1/3 = 0.3333. The smaller one limits, so H₂ is the limiting reagent and 0.6667 mol of NH₃ form, which is 0.6667 × 17 = 11.33 g."
           },
           {
-            "question": "Which of the following is an example of a condensation polymer?",
+            "question": "CaCO₃ decomposes: CaCO₃ → CaO + CO₂. Heating 20 g of CaCO₃ (M = 100 g/mol) gives CaO (M = 56 g/mol) with a 60% yield. What mass of CaO is obtained?",
             "options": [
-              "Polyethene",
-              "Polypropene",
-              "Nylon",
-              "PVC",
-              "Polystyrene"
+              "18.67 g",
+              "12 g",
+              "11.2 g",
+              "13.44 g",
+              "6.72 g"
             ],
-            "correct": 2,
-            "solution": "Nylon is a condensation polymer formed by the reaction between diamines and dicarboxylic acids, with the elimination of water molecules. Polyethene, polypropene, PVC, and polystyrene are addition polymers."
+            "correct": 4,
+            "solution": "Moles CaCO₃ = 20/100 = 0.2 mol, giving 0.2 mol CaO (1:1) = 11.2 g theoretical. Actual = 60% of that = 6.72 g."
           },
           {
             "question": "28 g of nitrogen react with 10 g of hydrogen: N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub>. What mass of ammonia can form? (\\(A_r\\): N 14, H 1)",
@@ -27876,28 +27876,28 @@ const subjects = [
             "solution": "\\(2\\text{Ag}^+ + \\text{CrO}_4^{2-} \\to \\text{Ag}_2\\text{CrO}_4\\). Na<sup>+</sup> and NO<sub>3</sub><sup>-</sup> are spectator ions and are left out. Sum: \\(2 + 1 + 1 = 4\\)."
           },
           {
-            "question": "What is the mass of sodium hydroxide (NaOH, molar mass = 40.0 g/mol) required to prepare 250 mL of a 0.20 M aqueous solution?",
+            "question": "How many moles are there in 500 g of MgCl₂? (use the standard atomic masses H = 1, C = 12, N = 14, O = 16, Na = 23, Mg = 24, Al = 27, P = 31, S = 32, Cl = 35.5, Ca = 40, Fe = 56)",
             "options": [
-              "2.0 g",
-              "4.0 g",
-              "1.0 g",
-              "5.0 g",
-              "0.50 g"
+              "5.263 mol",
+              "2.632 mol",
+              "5.155 mol",
+              "0.19 mol",
+              "47500 mol"
             ],
             "correct": 0,
-            "solution": "Number of moles n = M × V = 0.20 mol/L × 0.250 L = 0.050 moles. Mass m = n × Molar Mass = 0.050 mol × 40.0 g/mol = 2.0 g."
+            "solution": "M(MgCl₂) = 95 g/mol, so n = m/M = 500/95 = 5.263 mol."
           },
           {
-            "question": "A hydrocarbon contains 85.7% carbon and 14.3% hydrogen by mass. If its molar mass is 56.0 g/mol, what is its molecular formula? (Atomic masses: C = 12.0, H = 1.0)",
+            "question": "A compound contains 40% C, 6.7% H, 53.3% O by mass. What is its empirical formula? (C = 12, H = 1, O = 16, Ca = 40, Fe = 56)",
             "options": [
-              "C₄H₈",
-              "C₂H₄",
-              "C₃H₆",
-              "C₅H₁₀",
+              "CaCO₃",
+              "CH₄",
+              "CH",
+              "CH₂O",
               "CH₂"
             ],
-            "correct": 0,
-            "solution": "In 100 g: moles of C = 85.7 / 12.0 = 7.14; moles of H = 14.3 / 1.0 = 14.3. Ratio H/C = 14.3 / 7.14 = 2.0. Empirical formula is CH₂ (formula mass = 12 + 2 = 14.0 g/mol). Molar mass ratio: 56.0 / 14.0 = 4. Molecular formula is (CH₂)₄ = C₄H₈."
+            "correct": 3,
+            "solution": "Divide each percentage by the atomic mass to get relative moles, then divide by the smallest and round to whole numbers: C 3.333, H 6.7, O 3.331 → CH₂O."
           },
           {
             "question": "What volume of carbon dioxide gas (CO₂) at standard temperature and pressure (STP, where molar volume = 22.4 L/mol) is produced by the complete thermal decomposition of 10.0 g of calcium carbonate (CaCO₃, molar mass = 100.0 g/mol)?",
@@ -27912,16 +27912,16 @@ const subjects = [
             "solution": "Decomposition reaction: CaCO₃(s) → CaO(s) + CO₂(g). Moles of CaCO₃ = 10.0 g / 100.0 g/mol = 0.100 mol. Since the mole ratio is 1:1, moles of CO₂ = 0.100 mol. Volume at STP = 0.100 mol × 22.4 L/mol = 2.24 L."
           },
           {
-            "question": "In a reaction, 4.0 moles of Al react with 6.0 moles of Cl₂ to produce AlCl₃ according to: 2Al + 3Cl₂ → 2AlCl₃. Which is the limiting reactant and how many moles of AlCl₃ are formed?",
+            "question": "A compound contains 75% C, 25% H by mass. What is its empirical formula? (C = 12, H = 1, O = 16, Ca = 40, Fe = 56)",
             "options": [
-              "Both are in stoichiometric amounts; 4.0 moles of AlCl₃",
-              "Al is limiting; 4.0 moles of AlCl₃",
-              "Cl₂ is limiting; 4.0 moles of AlCl₃",
-              "Al is limiting; 2.0 moles of AlCl₃",
-              "Cl₂ is limiting; 6.0 moles of AlCl₃"
+              "CH₂",
+              "CaCO₃",
+              "Fe₂O₃",
+              "CH₂O",
+              "CH₄"
             ],
-            "correct": 0,
-            "solution": "Stoichiometric ratio requires 3 moles of Cl₂ per 2 moles of Al. Ratio of available amounts: 4.0 mol Al / 2 = 2.0; 6.0 mol Cl₂ / 3 = 2.0. Both reactants are completely consumed with neither in excess. Theoretical yield of AlCl₃ = 4.0 moles."
+            "correct": 4,
+            "solution": "Divide each percentage by the atomic mass to get relative moles, then divide by the smallest and round to whole numbers: C 6.25, H 25 → CH₄."
           },
           {
             "question": "A sample of 5.00 g of copper(II) sulfate hydrate, CuSO₄ · xH₂O, is heated until all water of crystallization is driven off, leaving 3.20 g of anhydrous CuSO₄ (molar mass = 160.0 g/mol). What is the value of x? (Molar mass of H₂O = 18.0 g/mol)",
@@ -27948,40 +27948,40 @@ const subjects = [
             "solution": "Moles of Cl⁻ from NaCl = 0.100 L × 0.20 mol/L = 0.020 mol. Each CaCl₂ unit yields 2 Cl⁻ ions: moles of Cl⁻ from CaCl₂ = 0.100 L × 0.10 mol/L × 2 = 0.020 mol. Total moles of Cl⁻ = 0.020 + 0.020 = 0.040 mol. Total volume = 100 mL + 100 mL = 200 mL = 0.200 L. [Cl⁻] = 0.040 mol / 0.200 L = 0.20 M."
           },
           {
-            "question": "What is the theoretical yield in grams of water formed from the reaction of 4.0 g of H₂ with 64.0 g of O₂? (Atomic masses: H = 1.0, O = 16.0)",
+            "question": "A compound contains 85.7% C, 14.3% H by mass. What is its empirical formula? (C = 12, H = 1, O = 16, Ca = 40, Fe = 56)",
             "options": [
-              "36.0 g",
-              "18.0 g",
-              "72.0 g",
-              "32.0 g",
-              "68.0 g"
+              "Fe₂O₃",
+              "CaCO₃",
+              "CH₂O",
+              "CH₄",
+              "CH₂"
             ],
-            "correct": 0,
-            "solution": "Reaction: 2H₂ + O₂ → 2H₂O. Moles of H₂ = 4.0 g / 2.0 g/mol = 2.0 mol. Moles of O₂ = 64.0 g / 32.0 g/mol = 2.0 mol. H₂ requires 1.0 mol of O₂ to react completely, so H₂ is the limiting reactant. 2.0 moles of H₂ produce 2.0 moles of H₂O. Mass of H₂O = 2.0 mol × 18.0 g/mol = 36.0 g."
+            "correct": 4,
+            "solution": "Divide each percentage by the atomic mass to get relative moles, then divide by the smallest and round to whole numbers: C 7.142, H 14.3 → CH₂."
           },
           {
-            "question": "In an experiment, the reaction of 12.0 g of carbon with excess oxygen yields 33.0 g of carbon dioxide (CO₂, molar mass = 44.0 g/mol). What is the percentage yield? (Atomic mass: C = 12.0)",
+            "question": "A compound contains 40% Ca, 12% C, 48% O by mass. What is its empirical formula? (C = 12, H = 1, O = 16, Ca = 40, Fe = 56)",
             "options": [
-              "75%",
-              "80%",
-              "66%",
-              "90%",
-              "85%"
+              "CH₂O",
+              "CH₄",
+              "CaCO₃",
+              "CH₂",
+              "Fe₂O₃"
             ],
-            "correct": 0,
-            "solution": "Moles of C = 12.0 g / 12.0 g/mol = 1.00 mol. Reaction: C + O₂ → CO₂. Theoretical yield of CO₂ = 1.00 mol × 44.0 g/mol = 44.0 g. Percentage yield = (Actual Yield / Theoretical Yield) × 100% = (33.0 g / 44.0 g) × 100% = 75%."
+            "correct": 2,
+            "solution": "Divide each percentage by the atomic mass to get relative moles, then divide by the smallest and round to whole numbers: Ca 1, C 1, O 3 → CaCO₃."
           },
           {
-            "question": "What is the total number of atoms contained in 0.50 moles of ammonia gas (NH₃)? (N_A = 6.02 × 10²³ mol⁻¹)",
+            "question": "What is the molar mass of H₃PO₄? (H = 1, C = 12, N = 14, O = 16, Na = 23, Mg = 24, Al = 27, P = 31, S = 32, Cl = 35.5, Ca = 40, Fe = 56)",
             "options": [
-              "1.20 × 10²⁴ atoms",
-              "6.02 × 10²³ atoms",
-              "3.01 × 10²³ atoms",
-              "2.41 × 10²⁴ atoms",
-              "1.81 × 10²⁴ atoms"
+              "98 g/mol",
+              "114 g/mol",
+              "97 g/mol",
+              "196 g/mol",
+              "100 g/mol"
             ],
             "correct": 0,
-            "solution": "One molecule of NH₃ contains 4 atoms (1 nitrogen + 3 hydrogen). In 0.50 moles of NH₃, there are 0.50 × 4 = 2.0 moles of atoms. Total number of atoms = 2.0 mol × 6.02 × 10²³ atoms/mol = 1.20 × 10²⁴ atoms."
+            "solution": "Add the atomic masses of every atom in the formula: 3×1 + 1×31 + 4×16 = 98 g/mol."
           },
           {
             "question": "What volume of 0.50 M HCl is needed to completely neutralize 25.0 mL of 0.20 M Ba(OH)₂ solution?",
@@ -27996,28 +27996,28 @@ const subjects = [
             "solution": "Reaction: 2HCl + Ba(OH)₂ → BaCl₂ + 2H₂O. Moles of OH⁻ = 2 × (0.0250 L × 0.20 mol/L) = 0.010 mol. Since HCl provides 1 H⁺ per molecule, moles of HCl required = 0.010 mol. Volume of HCl = moles / M = 0.010 mol / 0.50 mol/L = 0.020 L = 20.0 mL."
           },
           {
-            "question": "What is the mole fraction of ethanol (C₂H₅OH, molar mass = 46.0 g/mol) in a solution containing 46.0 g of ethanol and 54.0 g of water (H₂O, molar mass = 18.0 g/mol)?",
+            "question": "A compound contains 70% Fe, 30% O by mass. What is its empirical formula? (C = 12, H = 1, O = 16, Ca = 40, Fe = 56)",
             "options": [
-              "0.25",
-              "0.46",
-              "0.50",
-              "0.33",
-              "0.20"
+              "CH₂",
+              "CaCO₃",
+              "CH₂O",
+              "Fe₂O₃",
+              "CH"
             ],
-            "correct": 0,
-            "solution": "Moles of ethanol = 46.0 g / 46.0 g/mol = 1.0 mol. Moles of water = 54.0 g / 18.0 g/mol = 3.0 mol. Total moles = 1.0 + 3.0 = 4.0 mol. Mole fraction of ethanol = 1.0 / 4.0 = 0.25."
+            "correct": 3,
+            "solution": "Divide each percentage by the atomic mass to get relative moles, then divide by the smallest and round to whole numbers: Fe 1.25, O 1.875 → Fe₂O₃."
           },
           {
-            "question": "How many grams of glucose (C₆H₁₂O₆, molar mass = 180.0 g/mol) are present in 500 mL of a 5.0% (w/v) intravenous solution?",
+            "question": "What is the molar mass of H₂O? (H = 1, C = 12, N = 14, O = 16, Na = 23, Mg = 24, Al = 27, P = 31, S = 32, Cl = 35.5, Ca = 40, Fe = 56)",
             "options": [
-              "25.0 g",
-              "50.0 g",
-              "10.0 g",
-              "5.0 g",
-              "2.5 g"
+              "18 g/mol",
+              "16 g/mol",
+              "20 g/mol",
+              "17 g/mol",
+              "34 g/mol"
             ],
             "correct": 0,
-            "solution": "A 5.0% (w/v) solution contains 5.0 g of solute per 100 mL of solution. For 500 mL: (5.0 g / 100 mL) × 500 mL = 25.0 g of glucose."
+            "solution": "Add the atomic masses of every atom in the formula: 2×1 + 1×16 = 18 g/mol."
           },
           {
             "question": "Consider the unbalanced equation: Fe₂O₃ + CO → Fe + CO₂. What is the stoichiometric coefficient of CO when balanced with lowest whole-number coefficients?",
@@ -28032,40 +28032,40 @@ const subjects = [
             "solution": "Balancing: Fe₂O₃ + 3CO → 2Fe + 3CO₂. Reactants: 2 Fe, 3 + 3 = 6 O, 3 C. Products: 2 Fe, 6 O, 3 C. The coefficient of CO is 3."
           },
           {
-            "question": "What is the mass percentage of nitrogen in urea, CO(NH₂)₂? (Atomic masses: C = 12.0, O = 16.0, N = 14.0, H = 1.0)",
+            "question": "How many atoms are there in 1 mol of NH₄NO₃? (Avogadro's number = 6.0 × 10²³)",
             "options": [
-              "46.7%",
-              "23.3%",
-              "33.3%",
-              "58.3%",
-              "28.0%"
+              "\\(5.4\\times10^{24}\\)",
+              "\\(6\\times10^{23}\\)",
+              "\\(5.4\\times10^{23}\\)",
+              "\\(6\\times10^{24}\\)",
+              "\\(5.4\\times10^{25}\\)"
             ],
             "correct": 0,
-            "solution": "Molar mass of CO(NH₂)₂ = 12.0 + 16.0 + 2(14.0 + 2.0) = 28.0 + 32.0 = 60.0 g/mol. Mass of nitrogen = 2 × 14.0 = 28.0 g. Mass percentage = (28.0 / 60.0) × 100% = 46.7%."
+            "solution": "Each formula unit/molecule has 9 atoms, so \\(1\\times9\\times6.0\\times10^{23}\\) = \\(5.4\\times10^{24}\\)."
           },
           {
-            "question": "An oxide of iron contains 70.0% iron and 30.0% oxygen by mass. What is its empirical formula? (Atomic masses: Fe = 56.0, O = 16.0)",
+            "question": "How many moles are there in 200 g of C₂H₆O? (use the standard atomic masses H = 1, C = 12, N = 14, O = 16, Na = 23, Mg = 24, Al = 27, P = 31, S = 32, Cl = 35.5, Ca = 40, Fe = 56)",
             "options": [
-              "Fe₂O₃",
-              "FeO",
-              "Fe₃O₄",
-              "Fe₂O",
-              "FeO₂"
+              "8.696 mol",
+              "4.348 mol",
+              "9200 mol",
+              "4.167 mol",
+              "0.23 mol"
             ],
-            "correct": 0,
-            "solution": "In 100 g: moles of Fe = 70.0 / 56.0 = 1.25 mol; moles of O = 30.0 / 16.0 = 1.875 mol. Ratio O/Fe = 1.875 / 1.25 = 1.5 = 3/2. Multiplying by 2 gives the integer ratio 2 Fe : 3 O, so the empirical formula is Fe₂O₃."
+            "correct": 1,
+            "solution": "M(C₂H₆O) = 46 g/mol, so n = m/M = 200/46 = 4.348 mol."
           },
           {
-            "question": "What volume of concentrated 12.0 M HCl is required to prepare 600 mL of a 0.50 M HCl solution?",
+            "question": "CaCO₃ decomposes: CaCO₃ → CaO + CO₂. Heating 50 g of CaCO₃ (M = 100 g/mol) gives CaO (M = 56 g/mol) with a 70% yield. What mass of CaO is obtained?",
             "options": [
-              "25.0 mL",
-              "50.0 mL",
-              "12.5 mL",
-              "30.0 mL",
-              "15.0 mL"
+              "28 g",
+              "39.2 g",
+              "19.6 g",
+              "1960 g",
+              "35 g"
             ],
-            "correct": 0,
-            "solution": "Use the dilution formula M₁V₁ = M₂V₂: (12.0 M)(V₁) = (0.50 M)(600 mL) ⇒ V₁ = (0.50 × 600) / 12.0 = 300 / 12.0 = 25.0 mL."
+            "correct": 2,
+            "solution": "Moles CaCO₃ = 50/100 = 0.5 mol, giving 0.5 mol CaO (1:1) = 28 g theoretical. Actual = 70% of that = 19.6 g."
           },
           {
             "question": "When 10.0 g of a mixture of NaCl and sand is treated with water, the insoluble sand is filtered out, dried, and found to weigh 4.5 g. What is the mass percentage of NaCl in the original mixture?",
@@ -28092,16 +28092,16 @@ const subjects = [
             "solution": "In 100 g: Fe \\(= 70.0/56 = 1.25\\) mol and O \\(= 30.0/16 = 1.875\\) mol. Ratio \\(= 1 : 1.5\\), so multiply by 2 to get whole numbers: \\(2 : 3\\). The formula is Fe<sub>2</sub>O<sub>3</sub>."
           },
           {
-            "question": "If 28.0 g of nitrogen gas (N₂) reacts completely with excess hydrogen gas (H₂) to form ammonia (NH₃), what mass of NH₃ is produced? (Atomic masses: N = 14.0, H = 1.0)",
+            "question": "A compound contains 92.3% C, 7.7% H by mass. What is its empirical formula? (C = 12, H = 1, O = 16, Ca = 40, Fe = 56)",
             "options": [
-              "34.0 g",
-              "17.0 g",
-              "28.0 g",
-              "56.0 g",
-              "24.0 g"
+              "Fe₂O₃",
+              "CH₂",
+              "CH",
+              "CaCO₃",
+              "CH₄"
             ],
-            "correct": 0,
-            "solution": "Reaction: N₂ + 3H₂ → 2NH₃. Moles of N₂ = 28.0 g / 28.0 g/mol = 1.00 mol. Moles of NH₃ produced = 2 × 1.00 = 2.00 mol. Mass of NH₃ = 2.00 mol × 17.0 g/mol = 34.0 g."
+            "correct": 2,
+            "solution": "Divide each percentage by the atomic mass to get relative moles, then divide by the smallest and round to whole numbers: C 7.692, H 7.7 → CH."
           },
           {
             "question": "What is the volume in liters of oxygen gas needed to react with 2 liters of methane according to the reaction CH₄ + 2O₂ → CO₂ + 2H₂O, measured under the same conditions of temperature and pressure?",
@@ -28176,16 +28176,16 @@ const subjects = [
             "solution": "Balanced combustion: 2 H₂ + O₂ → 2 H₂O.\n10 moles of H₂ react completely with 5 moles of O₂ to produce 10 moles of H₂O.\nOxygen is in excess: 7 - 5 = 2 moles of unreacted O₂ remain.\nTotal moles present after reaction = 10 moles of H₂O + 2 moles of O₂ = 12 moles."
           },
           {
-            "question": "The most suitable volumetric flask for dissolving 10 g of NaOH (Molar mass = 40 g/mol) to obtain a 5.0 M solution will have a volume of:",
+            "question": "What is the molar mass of MgCl₂? (H = 1, C = 12, N = 14, O = 16, Na = 23, Mg = 24, Al = 27, P = 31, S = 32, Cl = 35.5, Ca = 40, Fe = 56)",
             "options": [
-              "10 mL",
-              "50 mL",
-              "100 mL",
-              "1 L",
-              "5 L"
+              "95 g/mol",
+              "190 g/mol",
+              "97 g/mol",
+              "94 g/mol",
+              "93 g/mol"
             ],
-            "correct": 1,
-            "solution": "Moles of NaOH = 10 g / (40 g/mol) = 0.25 mol.\nRequired solution volume V = moles / molarity = 0.25 mol / (5.0 mol/L) = 0.050 L = 50 mL."
+            "correct": 0,
+            "solution": "Add the atomic masses of every atom in the formula: 1×24 + 2×35.5 = 95 g/mol."
           },
           {
             "question": "To an acidic aqueous solution of KBrO₃ (100 mL, 0.1 mol/L) are added 100 mL of an aqueous solution containing 0.006 mol of K₂S₂O₃ and 0.09 mol of KI. The following quantitative reactions occur:\n(1) 9 I⁻(aq) + BrO₃⁻(aq) + 6 H⁺(aq) → 3 I₃⁻(aq) + Br⁻(aq) + 3 H₂O\n(2) I₃⁻(aq) + 2 S₂O₃²⁻(aq) → 3 I⁻(aq) + S₄O₆²⁻(aq)\nReaction (2) is instantaneous, while reaction (1) is relatively slow. At the moment when all the S₂O₃²⁻ present in the solution has reacted, how many moles of BrO₃⁻ will have been consumed?",
@@ -28218,16 +28218,16 @@ const subjects = [
         "name": "Acids, Bases & pH",
         "questions": [
           {
-            "question": "Which type of reaction is the conversion of an alkene to an alkane?",
+            "question": "What is the pH of a \\(1\\times10^{-5}\\) M solution of HCl?",
             "options": [
-              "Substitution",
-              "Addition",
-              "Elimination",
-              "Polymerisation",
-              "Oxidation"
+              "10",
+              "6",
+              "-5",
+              "4",
+              "5"
             ],
-            "correct": 1,
-            "solution": "Converting an alkene (C=C) to an alkane (C-C) by adding hydrogen is a hydrogenation reaction, which is a type of addition reaction."
+            "correct": 4,
+            "solution": "HCl is a strong monoprotic acid: \\([H^+]=10^{-5}\\), so pH = 5."
           },
           {
             "question": "The acids HA, HB and HC have \\(K_a\\) values of \\(1 \\times 10^{-3}\\), \\(1 \\times 10^{-5}\\) and \\(1 \\times 10^{-9}\\). Which statement is correct?",
@@ -28254,28 +28254,28 @@ const subjects = [
             "solution": "Strong oxidation of ethanol with acidified K₂Cr₂O₇ produces ethanoic acid (carboxylic acid). Mild oxidation would produce ethanal (aldehyde). With strong oxidising agents and heat, ethanol is fully oxidised to ethanoic acid."
           },
           {
-            "question": "Which of the following is a strong acid?",
+            "question": "What is the pH of a \\(1\\times10^{-2}\\) M solution of HCl?",
             "options": [
-              "CH₃COOH",
-              "H₂CO₃",
-              "HCl",
-              "NH₃",
-              "HCOOH"
+              "2",
+              "4",
+              "1",
+              "3",
+              "12"
             ],
-            "correct": 2,
-            "solution": "HCl is a strong acid that completely dissociates in water. CH₃COOH (acetic acid), H₂CO₃ (carbonic acid), and HCOOH (formic acid) are weak acids. NH₃ is a weak base."
+            "correct": 0,
+            "solution": "HCl is a strong monoprotic acid: \\([H^+]=10^{-2}\\), so pH = 2."
           },
           {
-            "question": "What is the IUPAC name for CH₃COOH?",
+            "question": "What is the pH of a 0.1 M solution of a weak monoprotic acid with K_a = 1.0 × 10⁻⁵? (Use the approximation [H⁺] = √(K_aC).)",
             "options": [
-              "Methanoic acid",
-              "Ethanoic acid",
-              "Propanoic acid",
-              "Butanoic acid",
-              "Pentanoic acid"
+              "1",
+              "5",
+              "6",
+              "4",
+              "3"
             ],
-            "correct": 1,
-            "solution": "CH₃COOH has a 2-carbon chain with a carboxylic acid group. The name is ethanoic acid (also known as acetic acid)."
+            "correct": 4,
+            "solution": "\\([H^+]=\\sqrt{K_aC}=\\sqrt{10^{-5}\\times10^{-1}}=10^{-3}\\) M, so pH = 3 (a strong acid of the same concentration would give pH 1)."
           },
           {
             "question": "What is the product when propanoic acid reacts with ethanol in the presence of concentrated sulfuric acid?",
@@ -28386,28 +28386,28 @@ const subjects = [
             "solution": "\\([\\text{H}^+] \\approx \\sqrt{K_a c} = \\sqrt{1.8 \\times 10^{-5} \\times 0.050} = 9.5 \\times 10^{-4}\\) mol/L. \\(\\text{pH} = -\\log(9.5 \\times 10^{-4}) = 3.02\\)."
           },
           {
-            "question": "Which of the following salts will produce an acidic solution?",
+            "question": "What is the pH of a \\(1\\times10^{-2}\\) M solution of Ba(OH)₂? (Ba(OH)₂ is a strong base and dissociates completely.)",
             "options": [
-              "NaCl",
-              "KNO₃",
-              "NH₄Cl",
-              "CH₃COONa",
-              "Na₂CO₃"
+              "12.3",
+              "12",
+              "11",
+              "2",
+              "11.3"
             ],
-            "correct": 2,
-            "solution": "NH₄Cl is the salt of a weak base (NH₃) and strong acid (HCl). The NH₄⁺ ion hydrolyses to produce H⁺, making the solution acidic."
+            "correct": 0,
+            "solution": "Each Ba(OH)₂ releases 2 OH⁻, so [OH⁻] = \\(2\\times10^{-2}\\) M, pOH = 1.699 and pH = 14 − pOH = 12.3."
           },
           {
-            "question": "What is the relationship between Ka and Kb for a conjugate acid-base pair?",
+            "question": "What is the pH of a \\(1\\times10^{-3}\\) M solution of HCl?",
             "options": [
-              "Ka × Kb = 1",
-              "Ka + Kb = 14",
-              "Ka × Kb = Kw",
-              "Ka/Kb = Kw",
-              "Ka = Kb"
+              "3",
+              "-3",
+              "2",
+              "6",
+              "11"
             ],
-            "correct": 2,
-            "solution": "For a conjugate acid-base pair, Ka × Kb = Kw (the ion product of water, 10⁻¹⁴ at 25°C)."
+            "correct": 0,
+            "solution": "HCl is a strong monoprotic acid: \\([H^+]=10^{-3}\\), so pH = 3."
           },
           {
             "question": "A solution has a pH of 9.5 at 25 °C. What is the concentration of hydroxide ions?",
@@ -28434,16 +28434,16 @@ const subjects = [
             "solution": "Start: \\(0.0100\\) mol of each. The added H<sup>+</sup> (0.0010 mol) converts 0.0010 mol of ethanoate into acid: base \\(0.0090\\) mol, acid \\(0.0110\\) mol. \\(\\text{pH} = 4.76 + \\log(0.0090/0.0110) = 4.76 - 0.09 = 4.67\\). The volume cancels in the ratio."
           },
           {
-            "question": "Which of the following is the strongest acid?",
+            "question": "10 mL of 0.2 M HCl is mixed with 30 mL of 0.2 M NaOH. What is the pH of the mixture?",
             "options": [
-              "HCl",
-              "HBr",
-              "HI",
-              "HF",
-              "H₂SO₄"
+              "7",
+              "12",
+              "14",
+              "13",
+              "13.18"
             ],
-            "correct": 2,
-            "solution": "HI is the strongest hydrogen halide acid because the H-I bond is weakest and I⁻ is the most stable anion (largest, most polarizable)."
+            "correct": 3,
+            "solution": "Moles H⁺ = 0.002 mol, moles OH⁻ = 0.006 mol. The excess is base: 0.004 mol in 40 mL = 0.1 M, giving pH = 13."
           },
           {
             "question": "What is the pH of 0.020 mol/L barium hydroxide, Ba(OH)<sub>2</sub>? Assume complete dissociation.",
@@ -28554,16 +28554,16 @@ const subjects = [
             "solution": "An amphiprotic species can both donate and accept a proton. The hydrogen carbonate ion (HCO₃⁻) can act as an acid by donating H⁺ to form CO₃²⁻, or act as a base by accepting H⁺ to form H₂CO₃."
           },
           {
-            "question": "What is the conjugate acid of the hydrogen phosphate ion, HPO₄²⁻?",
+            "question": "What is the pH of a \\(1\\times10^{-4}\\) M solution of Ba(OH)₂? (Ba(OH)₂ is a strong base and dissociates completely.)",
             "options": [
-              "H₂PO₄⁻",
-              "H₃PO₄",
-              "PO₄³⁻",
-              "P₂O₇⁴⁻",
-              "H₄PO₄⁺"
+              "10",
+              "10.3",
+              "9.301",
+              "4",
+              "9"
             ],
-            "correct": 0,
-            "solution": "A conjugate acid is formed when a base accepts one proton (H⁺). Adding H⁺ to HPO₄²⁻ yields H₂PO₄⁻ (dihydrogen phosphate)."
+            "correct": 1,
+            "solution": "Each Ba(OH)₂ releases 2 OH⁻, so [OH⁻] = \\(2\\times10^{-4}\\) M, pOH = 3.699 and pH = 14 − pOH = 10.3."
           },
           {
             "question": "If 10.0 mL of a 0.10 M HCl solution is diluted with distilled water to a final volume of 1000 mL, what is the pH of the resulting solution?",
@@ -28674,16 +28674,16 @@ const subjects = [
             "solution": "The titration of a strong acid with a weak base yields an equivalence point in the acidic region (pH ~ 5.0 to 5.5) due to hydrolysis of the conjugate acid (NH₄⁺). Methyl red changes color between pH 4.4 and 6.2, matching the equivalence point pH perfectly."
           },
           {
-            "question": "A solution contains 1.0 × 10⁻⁴ M HCl. What is its pH?",
+            "question": "What is the pH of a \\(1\\times10^{-3}\\) M solution of Ba(OH)₂? (Ba(OH)₂ is a strong base and dissociates completely.)",
             "options": [
-              "4.0",
-              "3.0",
-              "10.0",
-              "1.0",
-              "5.0"
+              "3",
+              "10",
+              "11.3",
+              "10.3",
+              "11"
             ],
-            "correct": 0,
-            "solution": "HCl is a strong monoprotic acid that dissociates completely, so [H⁺] = 1.0 × 10⁻⁴ M. pH = -log₁₀(1.0 × 10⁻⁴) = 4.0."
+            "correct": 2,
+            "solution": "Each Ba(OH)₂ releases 2 OH⁻, so [OH⁻] = \\(2\\times10^{-3}\\) M, pOH = 2.699 and pH = 14 − pOH = 11.3."
           },
           {
             "question": "Why is pure hydrofluoric acid (HF) a weak acid in aqueous solution, unlike HCl, HBr, and HI which are strong acids?",
@@ -28722,16 +28722,16 @@ const subjects = [
             "solution": "By definition, a strong acid (such as HCl, HNO₃, or H₂SO₄) undergoes 100% dissociation (complete ionization) into protons and conjugate base anions in dilute aqueous solution."
           },
           {
-            "question": "An example of an acid is:",
+            "question": "What is the pH of a \\(1\\times10^{-1}\\) M solution of Ba(OH)₂? (Ba(OH)₂ is a strong base and dissociates completely.)",
             "options": [
-              "NaCl",
-              "KOH",
-              "HClO",
-              "NaOH",
-              "Ca(OH)2"
+              "13",
+              "12",
+              "12.3",
+              "13.3",
+              "1"
             ],
-            "correct": 2,
-            "solution": "HClO is hypochlorous acid, a weak monoprotic oxoacid of chlorine. In contrast, NaCl is a neutral salt, while KOH, NaOH, and Ca(OH)₂ are Arrhenius bases."
+            "correct": 3,
+            "solution": "Each Ba(OH)₂ releases 2 OH⁻, so [OH⁻] = \\(2\\times10^{-1}\\) M, pOH = 0.699 and pH = 14 − pOH = 13.3."
           },
           {
             "question": "In an aqueous solution, the molar concentration of OH⁻ ions is 5.8 × 10⁻⁹ M. What is the pH value of the solution?",
@@ -28812,28 +28812,28 @@ const subjects = [
             "solution": "In glucose: \\(6x + 12 - 12 = 0\\) gives \\(x = 0\\) for carbon. In CO<sub>2</sub> carbon is +4. Six carbon atoms each rise by 4, so \\(6 \\times 4 = 24\\) electrons are lost."
           },
           {
-            "question": "What is the oxidation state of oxygen in H₂O₂?",
+            "question": "A current of 2 A flows for 4825 s through a solution of Al³⁺ ions. What mass of Al is deposited? (M = 27 g/mol, F = 96500 C/mol)",
             "options": [
-              "-2",
-              "-1",
-              "0",
-              "+1",
-              "+2"
-            ],
-            "correct": 1,
-            "solution": "In H₂O₂ (hydrogen peroxide), hydrogen has an oxidation state of +1. Let x be oxidation state of O. 2(+1) + 2x = 0 → 2 + 2x = 0 → x = -1."
-          },
-          {
-            "question": "In the reaction 2Fe³⁺ + Sn²⁺ → 2Fe²⁺ + Sn⁴⁺, which species is reduced?",
-            "options": [
-              "Fe³⁺",
-              "Sn²⁺",
-              "Fe²⁺",
-              "Sn⁴⁺",
-              "None"
+              "0.9 g",
+              "1.8 g",
+              "2.7 g",
+              "0.3 g",
+              "8.1 g"
             ],
             "correct": 0,
-            "solution": "Fe³⁺ gains an electron to become Fe²⁺ (reduction). Sn²⁺ loses electrons to become Sn⁴⁺ (oxidation)."
+            "solution": "Charge Q = It = 9650 C → \\(n_{e^-}=Q/F=0.1\\) mol. Each Al ion needs 3 electrons: moles of metal = 0.03333, mass = 0.9 g."
+          },
+          {
+            "question": "A current of 5 A flows for 1930 s through a solution of Al³⁺ ions. What mass of Al is deposited? (M = 27 g/mol, F = 96500 C/mol)",
+            "options": [
+              "0.3 g",
+              "0.9 g",
+              "1.8 g",
+              "8.1 g",
+              "2.7 g"
+            ],
+            "correct": 1,
+            "solution": "Charge Q = It = 9650 C → \\(n_{e^-}=Q/F=0.1\\) mol. Each Al ion needs 3 electrons: moles of metal = 0.03333, mass = 0.9 g."
           },
           {
             "question": "Permanganate oxidises sulfite in acid: MnO<sub>4</sub><sup>-</sup> → Mn<sup>2+</sup> and SO<sub>3</sub><sup>2-</sup> → SO<sub>4</sub><sup>2-</sup>. What is the sum of all coefficients in the balanced equation (smallest whole numbers)?",
@@ -28920,16 +28920,16 @@ const subjects = [
             "solution": "\\(n(\\text{MnO}_4^-) = 0.0200 \\times 0.0200 = 4.00 \\times 10^{-4}\\) mol. The ratio MnO<sub>4</sub><sup>-</sup> : Fe<sup>2+</sup> is 1 : 5, so \\(n(\\text{Fe}^{2+}) = 2.00 \\times 10^{-3}\\) mol. \\(c = 2.00 \\times 10^{-3}/0.0250 = 0.0800\\) mol/L."
           },
           {
-            "question": "Which of the following reactions is a disproportionation reaction?",
+            "question": "A current of 2 A flows for 9650 s through a solution of Al³⁺ ions. What mass of Al is deposited? (M = 27 g/mol, F = 96500 C/mol)",
             "options": [
-              "2Na + Cl₂ → 2NaCl",
-              "2H₂ + O₂ → 2H₂O",
-              "2H₂O₂ → 2H₂O + O₂",
-              "Fe + CuSO₄ → FeSO₄ + Cu",
-              "Zn + 2HCl → ZnCl₂ + H₂"
+              "1.8 g",
+              "3.6 g",
+              "5.4 g",
+              "0.6 g",
+              "16.2 g"
             ],
-            "correct": 2,
-            "solution": "In 2H₂O₂ → 2H₂O + O₂, oxygen is both oxidised (to O₂, 0) and reduced (to H₂O, -2). This is disproportionation."
+            "correct": 0,
+            "solution": "Charge Q = It = 19300 C → \\(n_{e^-}=Q/F=0.2\\) mol. Each Al ion needs 3 electrons: moles of metal = 0.06667, mass = 1.8 g."
           },
           {
             "question": "What is the function of a salt bridge in an electrochemical cell?",
@@ -28968,16 +28968,16 @@ const subjects = [
             "solution": "Each Cr goes from +6 to +3, gaining 3 electrons. Two Cr atoms per ion: 6 electrons per Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup>. Each Fe<sup>2+</sup> gives 1 electron, so \\(0.010 \\times 6 = 0.060\\) mol of Fe<sup>2+</sup>."
           },
           {
-            "question": "In the reaction Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag, what is oxidised?",
+            "question": "A current of 5 A flows for 965 s through a solution of Al³⁺ ions. What mass of Al is deposited? (M = 27 g/mol, F = 96500 C/mol)",
             "options": [
-              "Cu",
-              "Ag⁺",
-              "NO₃⁻",
-              "Ag",
-              "None"
+              "0.45 g",
+              "0.15 g",
+              "0.9 g",
+              "1.35 g",
+              "4.05 g"
             ],
             "correct": 0,
-            "solution": "Cu goes from 0 to +2 (loses electrons, oxidised). Ag⁺ goes from +1 to 0 (gains electrons, reduced)."
+            "solution": "Charge Q = It = 4825 C → \\(n_{e^-}=Q/F=0.05\\) mol. Each Al ion needs 3 electrons: moles of metal = 0.01667, mass = 0.45 g."
           },
           {
             "question": "What is the standard electrode potential of the hydrogen electrode?",
@@ -28992,16 +28992,16 @@ const subjects = [
             "solution": "The standard hydrogen electrode (SHE) is defined as having a potential of 0 V under standard conditions."
           },
           {
-            "question": "Which of the following is a non-spontaneous redox reaction?",
+            "question": "A current of 5 A flows for 4825 s through a solution of Al³⁺ ions. What mass of Al is deposited? (M = 27 g/mol, F = 96500 C/mol)",
             "options": [
-              "Zn + Cu²⁺ → Zn²⁺ + Cu",
-              "Mg + 2H⁺ → Mg²⁺ + H₂",
-              "Cu + 2Ag⁺ → Cu²⁺ + 2Ag",
-              "Ag + Cu²⁺ → Ag⁺ + Cu",
-              "Fe + 2H⁺ → Fe²⁺ + H₂"
+              "0.75 g",
+              "6.75 g",
+              "4.5 g",
+              "2.25 g",
+              "20.25 g"
             ],
             "correct": 3,
-            "solution": "Ag + Cu²⁺ → Ag⁺ + Cu is non-spontaneous because Ag is less reactive than Cu (Ag has a higher reduction potential)."
+            "solution": "Charge Q = It = 24125 C → \\(n_{e^-}=Q/F=0.25\\) mol. Each Al ion needs 3 electrons: moles of metal = 0.08333, mass = 2.25 g."
           },
           {
             "question": "What is produced at the cathode during electrolysis of water?",
@@ -29016,40 +29016,40 @@ const subjects = [
             "solution": "At the cathode, water is reduced: 2H₂O + 2e⁻ → H₂ + 2OH⁻. Hydrogen gas is produced."
           },
           {
-            "question": "Which of the following statements about corrosion is correct?",
+            "question": "In acidic solution, MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O. A 50 mL sample of Fe²⁺ solution needs 25 mL of 0.04 M KMnO₄ to reach the end point. What is the concentration of Fe²⁺?",
             "options": [
-              "Corrosion is a reduction process",
-              "Corrosion requires oxygen only",
-              "Corrosion of iron is an oxidation process",
-              "Corrosion is prevented by coating with a more reactive metal",
-              "Stainless steel never corrodes"
+              "0.02 M",
+              "0.2 M",
+              "0.5 M",
+              "0.1 M",
+              "5 M"
             ],
-            "correct": 2,
-            "solution": "Corrosion of iron (rusting) is an oxidation process where Fe is oxidised to Fe²⁺/Fe³⁺."
+            "correct": 3,
+            "solution": "Moles MnO₄⁻ = 0.04 × 0.025 = 0.001 mol. The ratio is 1 : 5, so Fe²⁺ = 0.005 mol in 50 mL: 0.1 M."
           },
           {
-            "question": "What is the oxidation state of chromium in potassium dichromate, K₂Cr₂O₇?",
+            "question": "A current of 10 A flows for 9650 s through a solution of Al³⁺ ions. What mass of Al is deposited? (M = 27 g/mol, F = 96500 C/mol)",
             "options": [
-              "+6",
-              "+3",
-              "+7",
-              "+12",
-              "+4"
+              "81 g",
+              "9 g",
+              "27 g",
+              "3 g",
+              "18 g"
             ],
-            "correct": 0,
-            "solution": "In K₂Cr₂O₇, K is +1 and O is -2. The compound is neutral: 2(+1) + 2(Cr) + 7(-2) = 0 ⇒ 2 + 2(Cr) - 14 = 0 ⇒ 2(Cr) = +12 ⇒ Cr = +6."
+            "correct": 1,
+            "solution": "Charge Q = It = 96500 C → \\(n_{e^-}=Q/F=1\\) mol. Each Al ion needs 3 electrons: moles of metal = 0.3333, mass = 9 g."
           },
           {
-            "question": "In the reaction: 2MnO₄⁻ + 5C₂O₄²⁻ + 16H⁺ → 2Mn²⁺ + 10CO₂ + 8H₂O, which species acts as the reducing agent?",
+            "question": "In acidic solution, MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O. A 25 mL sample of Fe²⁺ solution needs 40 mL of 0.02 M KMnO₄ to reach the end point. What is the concentration of Fe²⁺?",
             "options": [
-              "C₂O₄²⁻ (oxalate ion)",
-              "MnO₄⁻ (permanganate ion)",
-              "H⁺",
-              "Mn²⁺",
-              "CO₂"
+              "0.032 M",
+              "0.16 M",
+              "4 M",
+              "0.32 M",
+              "0.8 M"
             ],
-            "correct": 0,
-            "solution": "In oxalate (C₂O₄²⁻), carbon has an oxidation number of +3: 2(C) + 4(-2) = -2 ⇒ 2(C) = +6 ⇒ C = +3. In CO₂, carbon is +4. Carbon is oxidized from +3 to +4, meaning oxalate loses electrons and acts as the reducing agent."
+            "correct": 1,
+            "solution": "Moles MnO₄⁻ = 0.02 × 0.04 = 0.0008 mol. The ratio is 1 : 5, so Fe²⁺ = 0.004 mol in 25 mL: 0.16 M."
           },
           {
             "question": "Given standard reduction potentials: E°(Cu²⁺/Cu) = +0.34 V and E°(Zn²⁺/Zn) = -0.76 V. What is the standard cell potential (E°_cell) for the Daniell cell: Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s)?",
@@ -29088,16 +29088,16 @@ const subjects = [
             "solution": "Moles of Al metal = 54.0 g / 27.0 g/mol = 2.0 mol. The half-reaction for aluminum reduction is: Al³⁺ + 3e⁻ → Al(s). Each mole of Al requires 3 moles of electrons. Therefore, 2.0 mol Al × 3 = 6.0 moles of electrons (6 Faradays)."
           },
           {
-            "question": "What is the oxidation number of phosphorus in the dihydrogen phosphate ion, H₂PO₄⁻?",
+            "question": "In acidic solution, MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O. A 25 mL sample of Fe²⁺ solution needs 20 mL of 0.05 M KMnO₄ to reach the end point. What is the concentration of Fe²⁺?",
             "options": [
-              "+5",
-              "+3",
-              "+4",
-              "+1",
-              "-3"
+              "1 M",
+              "0.4 M",
+              "0.04 M",
+              "0.2 M",
+              "5 M"
             ],
-            "correct": 0,
-            "solution": "In H₂PO₄⁻, H is +1 and O is -2. The sum of oxidation numbers equals the net charge (-1): 2(+1) + P + 4(-2) = -1 ⇒ 2 + P - 8 = -1 ⇒ P - 6 = -1 ⇒ P = +5."
+            "correct": 3,
+            "solution": "Moles MnO₄⁻ = 0.05 × 0.02 = 0.001 mol. The ratio is 1 : 5, so Fe²⁺ = 0.005 mol in 25 mL: 0.2 M."
           },
           {
             "question": "Which of the following half-reactions represents a disproportionation reaction?",
@@ -29160,16 +29160,16 @@ const subjects = [
             "solution": "Balance Cr: Cr₂O₇²⁻ → 2Cr³⁺. Balance O with H₂O: Cr₂O₇²⁻ → 2Cr³⁺ + 7H₂O. Balance H with H⁺: Cr₂O₇²⁻ + 14H⁺ → 2Cr³⁺ + 7H₂O. Balance charge: LHS has (-2 + 14) = +12; RHS has 2(+3) = +6. Add 6e⁻ to LHS: Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O."
           },
           {
-            "question": "What is the oxidation number of oxygen in potassium superoxide, KO₂?",
+            "question": "A current of 10 A flows for 965 s through a solution of Al³⁺ ions. What mass of Al is deposited? (M = 27 g/mol, F = 96500 C/mol)",
             "options": [
-              "-1/2",
-              "-1",
-              "-2",
-              "0",
-              "+1/2"
+              "2.7 g",
+              "0.3 g",
+              "0.9 g",
+              "1.8 g",
+              "8.1 g"
             ],
-            "correct": 0,
-            "solution": "Potassium is an alkali metal and always has an oxidation state of +1 in its ionic compounds. In KO₂, +1 + 2(O) = 0 ⇒ 2(O) = -1 ⇒ O = -1/2."
+            "correct": 2,
+            "solution": "Charge Q = It = 9650 C → \\(n_{e^-}=Q/F=0.1\\) mol. Each Al ion needs 3 electrons: moles of metal = 0.03333, mass = 0.9 g."
           },
           {
             "question": "During the electrolysis of aqueous sodium chloride (brine) using inert electrodes, what are the primary products formed at the anode and cathode?",
@@ -29208,16 +29208,16 @@ const subjects = [
             "solution": "Cu²⁺ + 2e⁻ → Cu. Depositing 0.10 mol of Cu requires: n(e⁻) = 2 × 0.10 = 0.20 mol of electrons. Total charge Q = n(e⁻) × F = 0.20 mol × 96,500 C/mol = 19,300 C. Since Q = I × t, time t = Q / I = 19,300 C / 9.65 A = 2000 seconds."
           },
           {
-            "question": "Which of the following compounds contains nitrogen in its highest possible oxidation state?",
+            "question": "In acidic solution, MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O. A 50 mL sample of Fe²⁺ solution needs 40 mL of 0.04 M KMnO₄ to reach the end point. What is the concentration of Fe²⁺?",
             "options": [
-              "HNO₃",
-              "NO₂",
-              "NH₃",
-              "N₂O",
-              "HNO₂"
+              "0.32 M",
+              "0.032 M",
+              "0.8 M",
+              "0.16 M",
+              "8 M"
             ],
-            "correct": 0,
-            "solution": "Nitrogen has 5 valence electrons, so its maximum possible oxidation state is +5. In nitric acid (HNO₃), H is +1 and O is -2: +1 + N + 3(-2) = 0 ⇒ N = +5."
+            "correct": 3,
+            "solution": "Moles MnO₄⁻ = 0.04 × 0.04 = 0.0016 mol. The ratio is 1 : 5, so Fe²⁺ = 0.008 mol in 50 mL: 0.16 M."
           },
           {
             "question": "What is the standard hydrogen electrode (SHE) assigned as by IUPAC convention?",
@@ -29232,28 +29232,28 @@ const subjects = [
             "solution": "By international convention, the standard hydrogen electrode (SHE), operating at 1 atm H₂ gas and 1 M H⁺ ion activity, is defined as the universal reference electrode with an arbitrary standard electrode potential of E° = 0.00 V."
           },
           {
-            "question": "In the reaction: Cl₂ + 2NaBr → 2NaCl + Br₂, which element undergoes reduction?",
+            "question": "In acidic solution, MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O. A 50 mL sample of Fe²⁺ solution needs 25 mL of 0.05 M KMnO₄ to reach the end point. What is the concentration of Fe²⁺?",
             "options": [
-              "Chlorine",
-              "Bromine",
-              "Sodium",
-              "Both chlorine and bromine",
-              "Neither; it is not a redox reaction"
+              "0.025 M",
+              "6.25 M",
+              "0.625 M",
+              "0.125 M",
+              "0.25 M"
             ],
-            "correct": 0,
-            "solution": "Elemental chlorine (Cl₂) has an oxidation number of 0. In NaCl, chlorine has an oxidation number of -1. Gaining electrons to go from 0 to -1 is reduction. Bromine is oxidized from -1 to 0."
+            "correct": 3,
+            "solution": "Moles MnO₄⁻ = 0.05 × 0.025 = 0.00125 mol. The ratio is 1 : 5, so Fe²⁺ = 0.00625 mol in 50 mL: 0.125 M."
           },
           {
-            "question": "What is the oxidation state of sulfur in sodium thiosulfate, Na₂S₂O₃?",
+            "question": "In acidic solution, MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O. A 50 mL sample of Fe²⁺ solution needs 20 mL of 0.04 M KMnO₄ to reach the end point. What is the concentration of Fe²⁺?",
             "options": [
-              "+2",
-              "+4",
-              "+6",
-              "-2",
-              "+2.5"
+              "0.4 M",
+              "0.08 M",
+              "4 M",
+              "0.016 M",
+              "0.16 M"
             ],
-            "correct": 0,
-            "solution": "In Na₂S₂O₃, Na is +1 and O is -2. The compound is neutral: 2(+1) + 2(S) + 3(-2) = 0 ⇒ 2 + 2(S) - 6 = 0 ⇒ 2(S) = +4 ⇒ S = +2 (average oxidation state)."
+            "correct": 1,
+            "solution": "Moles MnO₄⁻ = 0.04 × 0.02 = 0.0008 mol. The ratio is 1 : 5, so Fe²⁺ = 0.004 mol in 50 mL: 0.08 M."
           },
           {
             "question": "Which statement correctly describes the operation of a rechargeable lead-acid battery during discharge?",
@@ -29304,16 +29304,16 @@ const subjects = [
             "solution": "Balancing the redox reaction in acidic solution:\n3 Cu + 8 H⁺ + 2 NO₃⁻ → 3 Cu²⁺ + 2 NO + 4 H₂O.\nCoefficients: a = 3, b = 8, c = 2, d = 3, e = 2, f = 4."
           },
           {
-            "question": "When water is subjected to the action of a strong oxidizing agent, what is formed?",
+            "question": "In acidic solution, MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O. A 25 mL sample of Fe²⁺ solution needs 25 mL of 0.02 M KMnO₄ to reach the end point. What is the concentration of Fe²⁺?",
             "options": [
-              "H₂",
-              "O₂",
-              "H₂ and O₂",
-              "H₂ and OH⁻",
-              "H⁺ and OH⁻"
+              "0.1 M",
+              "0.5 M",
+              "0.02 M",
+              "0.2 M",
+              "2.5 M"
             ],
-            "correct": 1,
-            "solution": "Oxidation of water involves the loss of electrons by oxygen (from oxidation state -2 to 0): 2 H₂O → O₂ + 4 H⁺ + 4e⁻, releasing molecular oxygen (O₂)."
+            "correct": 0,
+            "solution": "Moles MnO₄⁻ = 0.02 × 0.025 = 0.0005 mol. The ratio is 1 : 5, so Fe²⁺ = 0.0025 mol in 25 mL: 0.1 M."
           }
         ]
       },
@@ -29322,16 +29322,16 @@ const subjects = [
         "name": "Organic Chemistry",
         "questions": [
           {
-            "question": "What is the correct IUPAC name for CH₃CH(Cl)CH₂CH₃?",
+            "question": "What is the number of rings plus double bonds (counting a triple bond as two) in a molecule of formula C₆H₉NCl₂?",
             "options": [
-              "1-chlorobutane",
-              "2-chlorobutane",
-              "3-chlorobutane",
-              "1-chloro-2-methylpropane",
-              "sec-butyl chloride"
+              "2",
+              "1",
+              "0",
+              "4",
+              "3"
             ],
-            "correct": 1,
-            "solution": "Longest chain = 4 carbons → butane. Cl is on carbon 2 from either end. Result: 2-chlorobutane."
+            "correct": 0,
+            "solution": "Degrees of unsaturation = (2C + 2 + N − H − X)/2 = (14 + 1 − 9 − 2)/2 = 2. (Halogens count like H, nitrogen adds one H.)"
           },
           {
             "question": "A compound X has the formula C<sub>3</sub>H<sub>6</sub>O. It gives an orange precipitate with 2,4-dinitrophenylhydrazine but no silver mirror with Tollens' reagent. What is X?",
@@ -29358,16 +29358,16 @@ const subjects = [
             "solution": "Oxidising an alcohol to a carbonyl compound removes 2 H. A C=O double bond adds one degree of unsaturation, so C<sub>4</sub>H<sub>10</sub>O becomes C<sub>4</sub>H<sub>8</sub>O (butanal or butanone)."
           },
           {
-            "question": "What is the correct IUPAC name for CH₃CH₂CH₂OH?",
+            "question": "What is the number of rings plus double bonds (counting a triple bond as two) in a molecule of formula C₄H₄Cl₂?",
             "options": [
-              "Methanol",
-              "Ethanol",
-              "Propanol",
-              "Butanol",
-              "Isopropanol"
+              "3",
+              "4",
+              "0",
+              "2",
+              "1"
             ],
-            "correct": 2,
-            "solution": "The compound has 3 carbon atoms (prop- prefix) and an -OH group (ol suffix). The -OH is on carbon 1. Name: propan-1-ol or simply propanol."
+            "correct": 3,
+            "solution": "Degrees of unsaturation = (2C + 2 + N − H − X)/2 = (10 + 0 − 4 − 2)/2 = 2. (Halogens count like H, nitrogen adds one H.)"
           },
           {
             "question": "An alkane has a molar mass of 86 g/mol. How many covalent bonds does one molecule contain in total?",
@@ -29382,16 +29382,16 @@ const subjects = [
             "solution": "C<sub>n</sub>H<sub>2n+2</sub>: \\(14n + 2 = 86\\) gives \\(n = 6\\), so the alkane is hexane, C<sub>6</sub>H<sub>14</sub>. It has \\(6 - 1 = 5\\) C–C bonds and 14 C–H bonds: \\(5 + 14 = 19\\)."
           },
           {
-            "question": "Which of the following is a secondary alcohol?",
+            "question": "How many moles are there in 120 g of the alcohol C₃H₈O? (C = 12, H = 1, O = 16)",
             "options": [
-              "Methanol",
-              "Ethanol",
-              "2-propanol",
-              "2-methyl-2-propanol",
-              "Phenol"
+              "2 mol",
+              "4 mol",
+              "0.5 mol",
+              "7200 mol",
+              "1.935 mol"
             ],
-            "correct": 2,
-            "solution": "2-propanol (isopropanol) has the -OH group on a carbon bonded to two other carbons (secondary carbon)."
+            "correct": 0,
+            "solution": "Molar mass = 3×12 + 8×1 + 16 = 60 g/mol, so n = 120/60 = 2 mol."
           },
           {
             "question": "What is the IUPAC name of (CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH(CH<sub>3</sub>)CH<sub>2</sub>CH<sub>3</sub>?",
@@ -29478,16 +29478,16 @@ const subjects = [
             "solution": "Dehydration of an alcohol to form an alkene is an elimination reaction (removing H and OH)."
           },
           {
-            "question": "Which of the following compounds is a carboxylic acid?",
+            "question": "How many moles are there in 88 g of the alcohol C₅H₁₂O? (C = 12, H = 1, O = 16)",
             "options": [
-              "CH₃OH",
-              "CH₃CHO",
-              "CH₃COOH",
-              "CH₃COCH₃",
-              "CH₃OCH₃"
+              "1 mol",
+              "1.222 mol",
+              "7744 mol",
+              "2 mol",
+              "0.9778 mol"
             ],
-            "correct": 2,
-            "solution": "CH₃COOH (ethanoic acid) contains the -COOH carboxylic acid functional group."
+            "correct": 0,
+            "solution": "Molar mass = 5×12 + 12×1 + 16 = 88 g/mol, so n = 88/88 = 1 mol."
           },
           {
             "question": "An acyclic hydrocarbon has the formula C<sub>6</sub>H<sub>8</sub> and contains one triple bond. How many C=C double bonds does it contain?",
@@ -29502,28 +29502,28 @@ const subjects = [
             "solution": "A saturated acyclic C<sub>6</sub> hydrocarbon is C<sub>6</sub>H<sub>14</sub>. C<sub>6</sub>H<sub>8</sub> has 6 fewer H, which is 3 degrees of unsaturation. A triple bond counts for 2, so one more is needed: 1 C=C."
           },
           {
-            "question": "Which of the following is a primary alcohol?",
+            "question": "How many moles are there in 60 g of the alcohol C₃H₈O? (C = 12, H = 1, O = 16)",
             "options": [
-              "2-propanol",
-              "2-methyl-2-propanol",
-              "1-butanol",
-              "Cyclohexanol",
-              "Benzyl alcohol"
-            ],
-            "correct": 2,
-            "solution": "1-butanol has the -OH group on a carbon bonded to only one other carbon (primary carbon)."
-          },
-          {
-            "question": "What is the product when propanal undergoes reduction?",
-            "options": [
-              "Propane",
-              "Propanol",
-              "Propanoic acid",
-              "Propene",
-              "Propyne"
+              "3600 mol",
+              "1 mol",
+              "2 mol",
+              "1.364 mol",
+              "0.9677 mol"
             ],
             "correct": 1,
-            "solution": "Reduction of an aldehyde (propanal) with NaBH₄ or LiAlH₄ produces the corresponding primary alcohol (propanol)."
+            "solution": "Molar mass = 3×12 + 8×1 + 16 = 60 g/mol, so n = 60/60 = 1 mol."
+          },
+          {
+            "question": "What is the number of rings plus double bonds (counting a triple bond as two) in a molecule of formula C₂H₁Cl?",
+            "options": [
+              "0",
+              "4",
+              "1",
+              "2",
+              "3"
+            ],
+            "correct": 3,
+            "solution": "Degrees of unsaturation = (2C + 2 + N − H − X)/2 = (6 + 0 − 1 − 1)/2 = 2. (Halogens count like H, nitrogen adds one H.)"
           },
           {
             "question": "4.6 g of ethanol (\\(M = 46\\)) and 6.0 g of ethanoic acid (\\(M = 60\\)) react: CH<sub>3</sub>COOH + C<sub>2</sub>H<sub>5</sub>OH ⇌ CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub> + H<sub>2</sub>O. If 67% of the reactants are converted at equilibrium, what mass of ethyl ethanoate (\\(M = 88\\)) forms?",
@@ -29562,16 +29562,16 @@ const subjects = [
             "solution": "Aromatic compounds have delocalised π electrons over a ring structure, following Hückel's rule (4n+2 π electrons)."
           },
           {
-            "question": "What is the product when ethene reacts with bromine water?",
+            "question": "What is the number of rings plus double bonds (counting a triple bond as two) in a molecule of formula C₈H₁₁NCl₂?",
             "options": [
-              "Ethane",
-              "1,2-dibromoethane",
-              "Bromoethane",
-              "Ethylene glycol",
-              "No reaction"
+              "2",
+              "3",
+              "1",
+              "6",
+              "4"
             ],
             "correct": 1,
-            "solution": "C₂H₄ + Br₂ → C₂H₄Br₂. Bromine adds across the double bond to form 1,2-dibromoethane."
+            "solution": "Degrees of unsaturation = (2C + 2 + N − H − X)/2 = (18 + 1 − 11 − 2)/2 = 3. (Halogens count like H, nitrogen adds one H.)"
           },
           {
             "question": "According to Hückel's rule, a planar, monocyclic, fully conjugated ring system is aromatic if it contains how many π electrons?",
@@ -29586,40 +29586,40 @@ const subjects = [
             "solution": "Hückel's rule states that a planar, cyclic, fully conjugated system exhibits special aromatic stability if the number of delocalized π electrons equals 4n + 2, where n = 0, 1, 2, ... (giving 2, 6, 10, 14, ... π electrons). Benzene has 6 π electrons (n = 1)."
           },
           {
-            "question": "Which of the following carbocations is the most stable?",
+            "question": "What is the number of rings plus double bonds (counting a triple bond as two) in a molecule of formula C₂H₂?",
             "options": [
-              "tert-Butyl cation, (CH₃)₃C⁺",
-              "Isopropyl cation, (CH₃)₂CH⁺",
-              "Ethyl cation, CH₃CH₂⁺",
-              "Methyl cation, CH₃⁺",
-              "Vinyl cation, CH₂=CH⁺"
+              "3",
+              "1",
+              "0",
+              "2",
+              "4"
             ],
-            "correct": 0,
-            "solution": "Carbocation stability follows the order: 3° > 2° > 1° > methyl. The tert-butyl cation is tertiary (3°); its vacant p orbital is stabilized by hyperconjugation from nine adjacent C-H σ bonds and positive inductive effect (+I) from three methyl groups."
+            "correct": 3,
+            "solution": "Degrees of unsaturation = (2C + 2 + N − H − X)/2 = (6 + 0 − 2 − 0)/2 = 2. (Halogens count like H, nitrogen adds one H.)"
           },
           {
-            "question": "Which of the following organic compounds has the lowest pKa (is the most acidic)?",
+            "question": "How many moles of O₂ are needed for the complete combustion of 2 mol of C₆H₁₄?",
             "options": [
-              "Trichloroacetic acid (CCl₃COOH)",
-              "Acetic acid (CH₃COOH)",
-              "Chloroacetic acid (CH₂ClCOOH)",
-              "Phenol (C₆H₅OH)",
-              "Ethanol (CH₃CH₂OH)"
+              "9.5 mol",
+              "12 mol",
+              "40 mol",
+              "26 mol",
+              "19 mol"
             ],
-            "correct": 0,
-            "solution": "Trichloroacetic acid contains three strongly electronegative chlorine atoms on the alpha carbon. They exert a strong electron-withdrawing inductive effect (-I), stabilizing the conjugate base (trichloroacetate carboxylate anion) by dispersing the negative charge, resulting in a very low pKa (~0.65)."
+            "correct": 4,
+            "solution": "C₆H₁₄ + 9.5 O₂ → 6 CO₂ + 7 H₂O. O atoms needed: 12 + 7 = 19, i.e. 9.5 O₂ per mole, so 19 mol."
           },
           {
-            "question": "What is the systematic IUPAC name for the compound: CH₃-CH(CH₃)-CH₂-CH(C₂H₅)-CH₃?",
+            "question": "How many moles of O₂ are needed for the complete combustion of 1 mol of C₇H₈?",
             "options": [
-              "2,4-dimethylhexane",
-              "3,5-dimethylhexane",
-              "2-ethyl-4-methylpentane",
-              "4-ethyl-2-methylpentane",
-              "3-methyl-5-methylhexane"
+              "4.5 mol",
+              "15 mol",
+              "9 mol",
+              "11 mol",
+              "18 mol"
             ],
-            "correct": 0,
-            "solution": "Find the longest carbon chain: start at CH₃ (C1), C2 has CH₃, C3 is CH₂, C4 has CH₃, and the ethyl group provides C5 and C6. The longest chain has 6 carbons (hexane). Number from the end nearest the substituents (left): substituents are methyl groups at C2 and C4. Name: 2,4-dimethylhexane."
+            "correct": 2,
+            "solution": "C₇H₈ + 9 O₂ → 7 CO₂ + 4 H₂O. O atoms needed: 14 + 4 = 18, i.e. 9 O₂ per mole, so 9 mol."
           },
           {
             "question": "Which of the following compounds is NOT aromatic?",
@@ -29634,28 +29634,28 @@ const subjects = [
             "solution": "Cyclooctatetraene has 8 π electrons, which fits 4n (anti-aromatic if planar). To avoid severe anti-aromatic destabilization, it adopts a non-planar 'tub' conformation and behaves as a typical polyene (non-aromatic). Benzene, pyridine, pyrrole, and furan all possess 6 π electrons in planar conjugated rings and are aromatic."
           },
           {
-            "question": "What type of hybridization is present in the central carbon atom of allene (propadiene, CH₂=C=CH₂)?",
+            "question": "What is the number of rings plus double bonds (counting a triple bond as two) in a molecule of formula C₁₀H₁₂Cl₂?",
             "options": [
-              "sp",
-              "sp²",
-              "sp³",
-              "sp³d",
-              "unhybridized"
+              "4",
+              "2",
+              "8",
+              "5",
+              "6"
             ],
             "correct": 0,
-            "solution": "In allene, the central carbon forms two double bonds (one with each terminal carbon) and has no lone pairs (steric number 2). It forms 2 σ bonds and 2 π bonds at 90° to each other, which requires sp hybridization with a linear geometry (180° bond angle)."
+            "solution": "Degrees of unsaturation = (2C + 2 + N − H − X)/2 = (22 + 0 − 12 − 2)/2 = 4. (Halogens count like H, nitrogen adds one H.)"
           },
           {
-            "question": "Which of the following species acts as an electrophile in organic reactions?",
+            "question": "How many moles of O₂ are needed for the complete combustion of 4 mol of C₆H₈?",
             "options": [
-              "Nitronium ion (NO₂⁺)",
-              "Ammonia (NH₃)",
-              "Hydroxide ion (OH⁻)",
-              "Water (H₂O)",
-              "Methoxide ion (CH₃O⁻)"
+              "64 mol",
+              "32 mol",
+              "16 mol",
+              "24 mol",
+              "56 mol"
             ],
-            "correct": 0,
-            "solution": "An electrophile is an electron-poor species (Lewis acid) that seeks an electron pair. The nitronium ion (NO₂⁺) carries a formal positive charge and has an electron-deficient nitrogen atom, making it a powerful electrophile (e.g., in the nitration of benzene). NH₃, OH⁻, H₂O, and CH₃O⁻ are nucleophiles (electron donors)."
+            "correct": 1,
+            "solution": "C₆H₈ + 8 O₂ → 6 CO₂ + 4 H₂O. O atoms needed: 12 + 4 = 16, i.e. 8 O₂ per mole, so 32 mol."
           },
           {
             "question": "What is the order of increasing basicity for the following amines in aqueous solution: ammonia, methylamine, dimethylamine?",
@@ -29682,16 +29682,16 @@ const subjects = [
             "solution": "Nylon-6,6 is synthesized by the reaction between hexamethylenediamine and adipic acid. Each peptide/amide linkage formation eliminates a small water molecule (H₂O), which defines condensation polymerization. Polyethylene, PVC, polystyrene, and polypropylene are all addition polymers formed from alkene monomers without loss of small molecules."
           },
           {
-            "question": "Why is phenol significantly more acidic than cyclohexanol?",
+            "question": "How many moles of O₂ are needed for the complete combustion of 4 mol of C₄H₁₀?",
             "options": [
-              "The phenoxide anion is stabilized by resonance delocalization of the negative charge into the aromatic ring",
-              "Phenol has a higher molecular weight",
-              "The oxygen atom in phenol is sp³ hybridized",
-              "Cyclohexanol contains delocalized π electrons",
-              "Phenol is non-polar"
+              "16 mol",
+              "36 mol",
+              "26 mol",
+              "56 mol",
+              "13 mol"
             ],
-            "correct": 0,
-            "solution": "Deprotonation of phenol yields the phenoxide anion (C₆H₅O⁻). The negative charge on oxygen is delocalized over the ortho and para positions of the aromatic ring through resonance. In cyclohexanol, the negative charge remains localized on oxygen with no resonance stabilization, making phenol ~10⁶ times more acidic."
+            "correct": 2,
+            "solution": "C₄H₁₀ + 6.5 O₂ → 4 CO₂ + 5 H₂O. O atoms needed: 8 + 5 = 13, i.e. 6.5 O₂ per mole, so 26 mol."
           },
           {
             "question": "What is the primary factor that accounts for the relative stability of tertiary free radicals over primary free radicals?",
@@ -29730,16 +29730,16 @@ const subjects = [
             "solution": "Tollens' reagent contains [Ag(NH₃)₂]⁺, a mild oxidizing agent. Aldehydes are easily oxidized to carboxylic acid salts (carboxylates), while Ag⁺ is reduced to metallic silver (Ag⁰), precipitating on the test-tube wall as a characteristic 'silver mirror'. Ketones do not react."
           },
           {
-            "question": "Which of the following compounds will give a positive iodoform test (formation of yellow CHI₃ precipitate with I₂/NaOH)?",
+            "question": "How many moles of O₂ are needed for the complete combustion of 1 mol of C₄H₈?",
             "options": [
-              "Propan-2-one (acetone)",
-              "Propan-3-one",
-              "Pentan-3-one",
-              "Methanol",
-              "Benzophenone"
+              "4 mol",
+              "12 mol",
+              "3 mol",
+              "8 mol",
+              "6 mol"
             ],
-            "correct": 0,
-            "solution": "The iodoform test is specific for compounds containing a methyl ketone group (CH₃-C=O) or secondary methyl alcohols that can be oxidized to them (CH₃-CH(OH)-R), as well as ethanol and acetaldehyde. Acetone (CH₃COCH₃) contains two methyl ketone groups and gives a prompt positive yellow precipitate of iodoform (CHI₃)."
+            "correct": 4,
+            "solution": "C₄H₈ + 6 O₂ → 4 CO₂ + 4 H₂O. O atoms needed: 8 + 4 = 12, i.e. 6 O₂ per mole, so 6 mol."
           },
           {
             "question": "What is the geometry and bond angle around each carbon atom in benzene?",
@@ -29754,16 +29754,16 @@ const subjects = [
             "solution": "Each carbon atom in benzene forms 3 σ bonds (two with adjacent carbons and one with a hydrogen atom) using sp² hybrid orbitals. With 3 electron domains and no lone pairs, the geometry around each carbon is trigonal planar with bond angles of exactly 120°."
           },
           {
-            "question": "What type of intermediate is formed in the homolytic cleavage of a carbon-hydrogen bond?",
+            "question": "What is the number of rings plus double bonds (counting a triple bond as two) in a molecule of formula C₃H₃NCl₂?",
             "options": [
-              "A carbon free radical",
-              "A carbocation",
-              "A carbanion",
-              "A carbene",
-              "An oxonium ion"
+              "3",
+              "1",
+              "0",
+              "4",
+              "2"
             ],
-            "correct": 0,
-            "solution": "Homolytic fission occurs when a covalent bond breaks symmetrically such that each atom retains one of the two shared electrons, forming neutral free radicals with unpaired electrons (R· and H·). Heterolytic fission produces a pair of ions."
+            "correct": 4,
+            "solution": "Degrees of unsaturation = (2C + 2 + N − H − X)/2 = (8 + 1 − 3 − 2)/2 = 2. (Halogens count like H, nitrogen adds one H.)"
           },
           {
             "question": "Which of the following functional groups has the highest priority in IUPAC nomenclature?",
@@ -29802,16 +29802,16 @@ const subjects = [
             "solution": "Constitutional (structural) isomers share the same molecular formula, but their atoms are connected in different orders (different bond connectivity), resulting in different physical and chemical properties (e.g., butane and isobutane; ethanol and dimethyl ether)."
           },
           {
-            "question": "What is the major organic product of the acid-catalyzed hydration of propene (CH₃-CH=CH₂)?",
+            "question": "How many moles of O₂ are needed for the complete combustion of 4 mol of C₆H₁₀?",
             "options": [
-              "Propan-2-ol",
-              "Propan-1-ol",
-              "Propanoic acid",
-              "Propanal",
-              "Acetone"
+              "34 mol",
+              "44 mol",
+              "24 mol",
+              "68 mol",
+              "17 mol"
             ],
             "correct": 0,
-            "solution": "According to Markovnikov's rule, electrophilic addition of H₂O (via H⁺ and OH⁻) to an unsymmetrical alkene proceeds through the more stable secondary carbocation intermediate: CH₃-C⁺H-CH₃ rather than CH₃-CH₂-CH₂⁺. Attack of water on the 2° carbocation yields propan-2-ol as the major product."
+            "solution": "C₆H₁₀ + 8.5 O₂ → 6 CO₂ + 5 H₂O. O atoms needed: 12 + 5 = 17, i.e. 8.5 O₂ per mole, so 34 mol."
           }
         ]
       },
@@ -30294,16 +30294,16 @@ const subjects = [
             "solution": "2Na + 2H₂O → 2NaOH + H₂. Sodium reacts vigorously with water, producing sodium hydroxide and hydrogen gas. The reaction is exothermic and the hydrogen may ignite."
           },
           {
-            "question": "In the equilibrium 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), what happens if more SO₂ is added?",
+            "question": "The solubility product of a salt AB (such as AgCl) is K_sp = \\(1\\times10^{-6}\\). What is its molar solubility in pure water?",
             "options": [
-              "Equilibrium shifts left",
-              "Equilibrium shifts right",
-              "No change",
-              "The reaction stops",
-              "The equilibrium constant changes"
+              "\\(2\\times10^{-3}\\text{ M}\\)",
+              "\\(10^{-3}\\text{ M}\\)",
+              "\\(10^{-4}\\text{ M}\\)",
+              "\\(10^{-6}\\text{ M}\\)",
+              "\\(0.000001\\text{ M}\\)"
             ],
             "correct": 1,
-            "solution": "According to Le Chatelier's principle, adding more SO₂ (a reactant) shifts the equilibrium to the right to consume the added reactant, producing more SO₃."
+            "solution": "For AB: K_sp = s·s = s², so \\(s=\\sqrt{K_{sp}}=10^{-3}\\) M."
           },
           {
             "question": "What is the product when sodium reacts with water?",
@@ -30558,28 +30558,28 @@ const subjects = [
             "solution": "Fractional distillation separates miscible liquids based on differences in their boiling points and vapor pressures using a fractionating column that provides repeated cycles of vaporization and condensation."
           },
           {
-            "question": "What type of radioactive decay involves the emission of a helium-4 nucleus (consisting of two protons and two neutrons)?",
+            "question": "An element has two isotopes: mass 35 (80% abundance) and mass 39 (20% abundance). What is the average atomic mass?",
             "options": [
-              "Alpha (α) decay",
-              "Beta-minus (β⁻) decay",
-              "Beta-plus (β⁺) decay",
-              "Gamma (γ) emission",
-              "Electron capture"
+              "28",
+              "37",
+              "35.8",
+              "38.2",
+              "66.2"
             ],
-            "correct": 0,
-            "solution": "Alpha decay occurs when an unstable nucleus emits an alpha particle, which is a helium nucleus (⁴₂He²⁺), reducing the atomic number Z by 2 and the mass number A by 4."
+            "correct": 2,
+            "solution": "Weighted average: \\(35\\times0.8+39\\times0.2=35.8\\) (not the simple mean 37)."
           },
           {
-            "question": "A radioactive isotope has a half-life of 12 days. If a researcher starts with 64.0 mg of this isotope, how much remains after 48 days?",
+            "question": "How many electrons does the ion \\(^{39}_{19}\\text{K}^{3+}\\) contain?",
             "options": [
-              "4.0 mg",
-              "8.0 mg",
-              "2.0 mg",
-              "16.0 mg",
-              "1.0 mg"
+              "16",
+              "23",
+              "22",
+              "19",
+              "20"
             ],
             "correct": 0,
-            "solution": "The number of half-lives elapsed is n = 48 days / 12 days = 4. The remaining mass is m = m₀ × (1/2)ⁿ = 64.0 mg × (1/2)⁴ = 64.0 / 16 = 4.0 mg."
+            "solution": "The atomic number 19 = protons = electrons in the neutral atom. A charge of +3 means 3 electron(s) lost: 19 − 3 = 16."
           },
           {
             "question": "Which law states that when two elements combine to form more than one compound, the masses of one element that combine with a fixed mass of the other are in the ratio of small whole numbers?",
@@ -30606,16 +30606,16 @@ const subjects = [
             "solution": "Rusting of iron involves a chemical reaction with oxygen and water to produce hydrated iron(III) oxide (Fe₂O₃·nH₂O), forming new chemical bonds with entirely new chemical properties. Boiling, dissolving sugar, sublimating dry ice, and melting wax are physical phase changes where chemical identity is preserved."
           },
           {
-            "question": "What is the resulting daughter nucleus when Carbon-14 (¹⁴₆C) undergoes beta-minus (β⁻) decay?",
+            "question": "What is the number of rings plus double bonds (counting a triple bond as two) in a molecule of formula C₇H₁₀Cl₂?",
             "options": [
-              "Nitrogen-14 (¹⁴₇N)",
-              "Boron-14 (¹⁴₅B)",
-              "Carbon-13 (¹³₆C)",
-              "Oxygen-14 (¹⁴₈O)",
-              "Nitrogen-15 (¹⁵₇N)"
+              "0",
+              "2",
+              "4",
+              "3",
+              "1"
             ],
-            "correct": 0,
-            "solution": "In beta-minus decay, a neutron in the nucleus converts into a proton, an electron (β⁻ particle), and an antineutrino: ¹⁴₆C → ¹⁴₇N + ⁰₋₁e + ν̄_e. The mass number remains 14, and the atomic number increases by 1 to 7, which corresponds to nitrogen (¹⁴₇N)."
+            "correct": 1,
+            "solution": "Degrees of unsaturation = (2C + 2 + N − H − X)/2 = (16 + 0 − 10 − 2)/2 = 2. (Halogens count like H, nitrogen adds one H.)"
           },
           {
             "question": "How many significant figures are in the measurement 0.004050 kg?",
@@ -30750,16 +30750,16 @@ const subjects = [
             "solution": "Sublimation (direct conversion of solid to gas) requires absorbing heat to overcome intermolecular forces in the solid lattice, making it endothermic (ΔH > 0). Condensation, freezing, and deposition are exothermic processes that release heat."
           },
           {
-            "question": "If a sample contains 0.20 moles of Ca²⁺ ions, how many coulombs of positive charge are carried by these ions? (1 Faraday = 96,500 C/mol)",
+            "question": "How many atoms are there in 1 mol of H₂SO₄? (Avogadro's number = 6.0 × 10²³)",
             "options": [
-              "38,600 C",
-              "19,300 C",
-              "96,500 C",
-              "48,250 C",
-              "193,000 C"
+              "\\(4.2\\times10^{25}\\)",
+              "\\(4.8\\times10^{24}\\)",
+              "\\(4.2\\times10^{23}\\)",
+              "\\(6\\times10^{23}\\)",
+              "\\(4.2\\times10^{24}\\)"
             ],
-            "correct": 0,
-            "solution": "Each Ca²⁺ ion carries 2 positive elementary charges, so 1 mole of Ca²⁺ carries 2 Faradays of charge. For 0.20 moles: Total charge Q = 0.20 mol × 2 × 96,500 C/mol = 0.40 × 96,500 C = 38,600 C."
+            "correct": 4,
+            "solution": "Each formula unit/molecule has 7 atoms, so \\(1\\times7\\times6.0\\times10^{23}\\) = \\(4.2\\times10^{24}\\)."
           },
           {
             "question": "What is the primary scientific principle underlying paper chromatography?",
@@ -30816,16 +30816,16 @@ const subjects = [
         "name": "States of Matter & Ideal Gas Laws",
         "questions": [
           {
-            "question": "Which of the following is NOT an assumption of the kinetic theory of gases?",
+            "question": "What volume does 3 mol of an ideal gas occupy at 1 atm and 27 °C? (R = 0.082 L·atm/(mol·K))",
             "options": [
-              "Gas particles are in constant random motion",
-              "Gas particles have negligible volume",
-              "Gas particles attract each other",
-              "Collisions between gas particles are perfectly elastic",
-              "The average kinetic energy is proportional to temperature"
+              "73.8 L",
+              "6.642 L",
+              "67.2 L",
+              "1220 L",
+              "36.9 L"
             ],
-            "correct": 2,
-            "solution": "The kinetic theory assumes gas particles have no intermolecular forces (they do not attract each other)."
+            "correct": 0,
+            "solution": "Use kelvin: T = 27 + 273 = 300 K. \\(V=\\dfrac{nRT}{P}=\\dfrac{3\\times0.082\\times300}{1}=73.8\\) L."
           },
           {
             "question": "A 5.0 L cylinder contains oxygen at 150 atm and 27 °C. What mass of oxygen is in it? (\\(M(\\text{O}_2) = 32\\) g/mol, \\(R = 0.0821\\) L atm/(mol K))",
@@ -30852,16 +30852,16 @@ const subjects = [
             "solution": "\\(n(\\text{Mg}) = 2.0/24 = 0.0833\\) mol. The ratio Mg : H<sub>2</sub> is 1 : 1, so \\(n(\\text{H}_2) = 0.0833\\) mol. \\(V = nRT/P = 0.0833 \\times 0.0821 \\times 300/1.00 = 2.05\\) L."
           },
           {
-            "question": "Which of the following gases would deviate most from ideal behaviour?",
+            "question": "What volume does 1 mol of an ideal gas occupy at 4 atm and 127 °C? (R = 0.082 L·atm/(mol·K))",
             "options": [
-              "Helium at high temperature",
-              "Neon at low pressure",
-              "Carbon dioxide at high pressure and low temperature",
-              "Hydrogen at room temperature",
-              "Nitrogen at standard conditions"
+              "8.2 L",
+              "4.1 L",
+              "22.4 L",
+              "131.2 L",
+              "2.603 L"
             ],
-            "correct": 2,
-            "solution": "CO₂ deviates most from ideal behaviour at high pressure and low temperature because it has significant intermolecular forces."
+            "correct": 0,
+            "solution": "Use kelvin: T = 127 + 273 = 400 K. \\(V=\\dfrac{nRT}{P}=\\dfrac{1\\times0.082\\times400}{4}=8.2\\) L."
           },
           {
             "question": "A balloon of volume 5.0 L is released at 1.00 atm and 25 °C. It rises to a height where the pressure is 0.50 atm and the temperature is \\(-23\\) °C. What is its new volume?",
@@ -30900,16 +30900,16 @@ const subjects = [
             "solution": "Total \\(n = 5.0\\) mol, so \\(P_{\\text{total}} = nRT/V = 5.0 \\times 0.0821 \\times 300/10 = 12.3\\) atm. N<sub>2</sub> is 2.0/5.0 = 0.40 of the moles, so \\(P_{\\text{N}_2} = 0.40 \\times 12.3 = 4.93\\) atm."
           },
           {
-            "question": "What is the relationship between temperature and pressure at constant volume for an ideal gas?",
+            "question": "What volume does 0.5 mol of an ideal gas occupy at 2 atm and 27 °C? (R = 0.082 L·atm/(mol·K))",
             "options": [
-              "Directly proportional",
-              "Inversely proportional",
-              "No relationship",
-              "Exponential",
-              "Logarithmic"
+              "14630 L",
+              "6.15 L",
+              "11.2 L",
+              "0.5535 L",
+              "3.075 L"
             ],
-            "correct": 0,
-            "solution": "According to Gay-Lussac's law, at constant volume, pressure is directly proportional to absolute temperature."
+            "correct": 1,
+            "solution": "Use kelvin: T = 27 + 273 = 300 K. \\(V=\\dfrac{nRT}{P}=\\dfrac{0.5\\times0.082\\times300}{2}=6.15\\) L."
           },
           {
             "question": "Which of the following is a property of liquids?",
@@ -30948,28 +30948,28 @@ const subjects = [
             "solution": "Boyle: the product \\(PV\\) for each flask is the amount of gas. Total \\(PV = 2.0 \\times 3.0 + 3.0 \\times 1.0 = 9.0\\) L atm. The total volume is 5.0 L, so \\(P = 9.0/5.0 = 1.8\\) atm."
           },
           {
-            "question": "At constant pressure, if the temperature of a gas is increased from 273 K to 546 K, what happens to its volume?",
+            "question": "What volume does 2 mol of an ideal gas occupy at 4 atm and 227 °C? (R = 0.082 L·atm/(mol·K))",
             "options": [
-              "It halves",
-              "It doubles",
-              "It triples",
-              "It remains the same",
-              "It quadruples"
+              "20.5 L",
+              "328 L",
+              "12200 L",
+              "44.8 L",
+              "10.25 L"
             ],
-            "correct": 1,
-            "solution": "According to Charles's law (V/T = constant at constant pressure), if temperature doubles, volume also doubles."
+            "correct": 0,
+            "solution": "Use kelvin: T = 227 + 273 = 500 K. \\(V=\\dfrac{nRT}{P}=\\dfrac{2\\times0.082\\times500}{4}=20.5\\) L."
           },
           {
-            "question": "Which of the following explains why real gases deviate from ideal behaviour at high pressure?",
+            "question": "What volume does 0.5 mol of an ideal gas occupy at 2 atm and 227 °C? (R = 0.082 L·atm/(mol·K))",
             "options": [
-              "Gas particles move faster",
-              "Gas particles have significant volume",
-              "Intermolecular forces become significant",
-              "Temperature increases",
-              "Volume increases"
+              "11.2 L",
+              "4.654 L",
+              "5.125 L",
+              "10.25 L",
+              "41 L"
             ],
-            "correct": 2,
-            "solution": "At high pressure, gas particles are forced closer together, making intermolecular forces significant."
+            "correct": 3,
+            "solution": "Use kelvin: T = 227 + 273 = 500 K. \\(V=\\dfrac{nRT}{P}=\\dfrac{0.5\\times0.082\\times500}{2}=10.25\\) L."
           },
           {
             "question": "A gas occupies 2.0 L at 1.0 atm and 27 °C. What volume does it occupy at 4.0 atm and 127 °C?",
@@ -30996,16 +30996,16 @@ const subjects = [
             "solution": "Use kelvin. \\(27 + 273 = 300\\) K. Doubling the energy doubles the kelvin temperature: 600 K. Back to Celsius: \\(600 - 273 = 327\\) °C. Doubling the Celsius number (54 °C) is wrong."
           },
           {
-            "question": "What is the relationship between pressure and the number of moles of gas at constant temperature and volume?",
+            "question": "What volume does 0.5 mol of an ideal gas occupy at 2 atm and 127 °C? (R = 0.082 L·atm/(mol·K))",
             "options": [
-              "Inversely proportional",
-              "Directly proportional",
-              "No relationship",
-              "Exponential",
-              "Square root relationship"
+              "19510 L",
+              "2.603 L",
+              "32.8 L",
+              "8.2 L",
+              "11.2 L"
             ],
-            "correct": 1,
-            "solution": "According to Avogadro's law, at constant temperature and volume, pressure is directly proportional to the number of moles."
+            "correct": 3,
+            "solution": "Use kelvin: T = 127 + 273 = 400 K. \\(V=\\dfrac{nRT}{P}=\\dfrac{0.5\\times0.082\\times400}{2}=8.2\\) L."
           },
           {
             "question": "Which pair of statements about evaporation and boiling is correct?",
@@ -31056,52 +31056,52 @@ const subjects = [
             "solution": "Increasing temperature decreases viscosity because molecules have more kinetic energy and can flow more easily."
           },
           {
-            "question": "An ideal gas occupies a volume of 4.0 L at a pressure of 2.0 atm. If the temperature is kept constant, what will its volume be if the pressure is increased to 8.0 atm?",
+            "question": "A gas mixture contains 2 mol of N₂, 4 mol of O₂ and 4 mol of Ar at a total pressure of 2 atm. What is the partial pressure of N₂?",
             "options": [
-              "1.0 L",
-              "2.0 L",
-              "0.50 L",
-              "16.0 L",
-              "8.0 L"
+              "0.5 atm",
+              "0.8 atm",
+              "1.6 atm",
+              "0.6667 atm",
+              "0.4 atm"
             ],
-            "correct": 0,
-            "solution": "According to Boyle's Law (at constant T and n): P₁V₁ = P₂V₂. Here, (2.0 atm)(4.0 L) = (8.0 atm)(V₂) ⇒ 8.0 = 8.0 V₂ ⇒ V₂ = 1.0 L."
+            "correct": 4,
+            "solution": "Dalton: partial pressure = mole fraction × total pressure: \\(P_{N_2}=\\dfrac{2}{10}\\times2=0.4\\) atm."
           },
           {
-            "question": "What is the density of oxygen gas (O₂, molar mass = 32.0 g/mol) at 27 °C and 1.0 atm? (R = 0.0821 L·atm/(mol·K))",
+            "question": "What volume does 3 mol of an ideal gas occupy at 2 atm and 127 °C? (R = 0.082 L·atm/(mol·K))",
             "options": [
-              "1.30 g/L",
-              "1.43 g/L",
-              "2.60 g/L",
-              "0.95 g/L",
-              "1.15 g/L"
+              "3252 L",
+              "67.2 L",
+              "49.2 L",
+              "196.8 L",
+              "15.62 L"
             ],
-            "correct": 0,
-            "solution": "Convert temperature to Kelvin: T = 27 + 273.15 = 300.15 K ≈ 300 K. Density formula from ideal gas law: d = (P · M) / (R · T) = (1.0 atm × 32.0 g/mol) / (0.0821 L·atm/(mol·K) × 300 K) = 32.0 / 24.63 ≈ 1.30 g/L."
+            "correct": 2,
+            "solution": "Use kelvin: T = 127 + 273 = 400 K. \\(V=\\dfrac{nRT}{P}=\\dfrac{3\\times0.082\\times400}{2}=49.2\\) L."
           },
           {
-            "question": "A gas mixture contains 0.40 moles of N₂, 0.10 moles of O₂, and 0.50 moles of Ar. If the total pressure is 5.0 atm, what is the partial pressure of oxygen (P_O₂)?",
+            "question": "A gas mixture contains 1 mol of N₂, 2 mol of O₂ and 3 mol of Ar at a total pressure of 4 atm. What is the partial pressure of N₂?",
             "options": [
-              "0.50 atm",
-              "1.0 atm",
-              "2.0 atm",
-              "0.25 atm",
-              "2.5 atm"
+              "3.333 atm",
+              "0.6667 atm",
+              "1.333 atm",
+              "0.1667 atm",
+              "0.8 atm"
             ],
-            "correct": 0,
-            "solution": "Total moles = 0.40 + 0.10 + 0.50 = 1.00 mol. Mole fraction of O₂ is X_O₂ = 0.10 / 1.00 = 0.10. By Dalton's Law of partial pressures: P_O₂ = X_O₂ × P_total = 0.10 × 5.0 atm = 0.50 atm."
+            "correct": 1,
+            "solution": "Dalton: partial pressure = mole fraction × total pressure: \\(P_{N_2}=\\dfrac{1}{6}\\times4=0.6667\\) atm."
           },
           {
-            "question": "According to Graham's Law of Effusion, how many times faster does helium gas (He, molar mass = 4.0 g/mol) effuse compared to methane gas (CH₄, molar mass = 16.0 g/mol) under identical conditions?",
+            "question": "Under the same conditions, how many times faster does H₂ (M = 2) effuse than O₂ (M = 32)?",
             "options": [
-              "2.0 times faster",
-              "4.0 times faster",
-              "1.4 times faster",
-              "8.0 times faster",
-              "0.5 times faster"
+              "30 times",
+              "16 times",
+              "5 times",
+              "0.25 times",
+              "4 times"
             ],
-            "correct": 0,
-            "solution": "Graham's Law states: Rate(He) / Rate(CH₄) = √(M_CH₄ / M_He) = √(16.0 / 4.0) = √4.0 = 2.0. Helium effuses twice as fast as methane."
+            "correct": 4,
+            "solution": "Graham: \\(\\dfrac{r_1}{r_2}=\\sqrt{\\dfrac{M_2}{M_1}}=\\sqrt{\\dfrac{32}{2}}=4\\). The lighter gas is faster; the mass ratio itself (16) is a common wrong answer."
           },
           {
             "question": "On a phase diagram, what does the triple point represent?",
@@ -31116,64 +31116,64 @@ const subjects = [
             "solution": "The triple point is the unique invariant point on a PT phase diagram where the three boundary curves (fusion, vaporization, and sublimation) intersect, meaning solid, liquid, and gaseous phases coexist in dynamic equilibrium."
           },
           {
-            "question": "Under which conditions does a real gas exhibit the GREATEST deviation from ideal gas behavior?",
+            "question": "What is the density of a gas of molar mass 4 g/mol at STP? (molar volume 22.4 L/mol)",
             "options": [
-              "High pressure and low temperature",
-              "Low pressure and high temperature",
-              "High pressure and high temperature",
-              "Low pressure and low temperature",
-              "Standard temperature and pressure (STP)"
+              "0.1633 g/L",
+              "5.6 g/L",
+              "89.6 g/L",
+              "0.3571 g/L",
+              "0.1786 g/L"
             ],
-            "correct": 0,
-            "solution": "Gases deviate from ideal behavior when intermolecular attractions become significant (which occurs at low temperatures when molecules move slowly) and when the volume occupied by the gas molecules themselves becomes a significant fraction of the container volume (which occurs at high pressures)."
+            "correct": 4,
+            "solution": "One mole (4 g) occupies 22.4 L, so density = 4/22.4 = 0.1786 g/L."
           },
           {
-            "question": "In the van der Waals equation for real gases: [P + a(n/V)²](V - nb) = nRT, what physical factor does the parameter 'a' account for?",
+            "question": "What is the density of a gas of molar mass 16 g/mol at STP? (molar volume 22.4 L/mol)",
             "options": [
-              "Attractive intermolecular forces between gas molecules",
-              "The finite volume occupied by gas molecules",
-              "The kinetic energy of the molecules",
-              "The frequency of molecular collisions with the container wall",
-              "The molecular mass of the gas"
+              "358.4 g/L",
+              "0.7143 g/L",
+              "1.429 g/L",
+              "0.6531 g/L",
+              "1.4 g/L"
             ],
-            "correct": 0,
-            "solution": "The parameter 'a' corrects for intermolecular attractive forces (which pull molecules away from container walls, reducing the observed pressure). The parameter 'b' corrects for the finite, non-zero volume excluded by the molecules themselves."
+            "correct": 1,
+            "solution": "One mole (16 g) occupies 22.4 L, so density = 16/22.4 = 0.7143 g/L."
           },
           {
-            "question": "A balloon has a volume of 3.0 L at 27 °C. If the pressure remains constant, what will its volume be if the temperature is raised to 127 °C?",
+            "question": "A gas mixture contains 5 mol of N₂, 4 mol of O₂ and 3 mol of Ar at a total pressure of 3 atm. What is the partial pressure of N₂?",
             "options": [
-              "4.0 L",
-              "6.0 L",
-              "3.5 L",
-              "14.1 L",
-              "2.25 L"
+              "0.4167 atm",
+              "2.143 atm",
+              "1.25 atm",
+              "1.75 atm",
+              "1 atm"
             ],
-            "correct": 0,
-            "solution": "Convert temperatures to Kelvin: T₁ = 27 + 273 = 300 K; T₂ = 127 + 273 = 400 K. Charles's Law states: V₁/T₁ = V₂/T₂ ⇒ 3.0 L / 300 K = V₂ / 400 K ⇒ V₂ = (3.0 × 400) / 300 = 4.0 L."
+            "correct": 2,
+            "solution": "Dalton: partial pressure = mole fraction × total pressure: \\(P_{N_2}=\\dfrac{5}{12}\\times3=1.25\\) atm."
           },
           {
-            "question": "A sample of hydrogen gas is collected over water at 25 °C and a total atmospheric pressure of 760 mmHg. If the vapor pressure of water at 25 °C is 24 mmHg, what is the partial pressure of dry hydrogen gas?",
+            "question": "Under the same conditions, how many times faster does He (M = 4) effuse than O₂ (M = 36)?",
             "options": [
-              "736 mmHg",
-              "784 mmHg",
-              "760 mmHg",
-              "748 mmHg",
-              "712 mmHg"
+              "3 times",
+              "32 times",
+              "0.3333 times",
+              "9 times",
+              "4 times"
             ],
             "correct": 0,
-            "solution": "Total pressure P_total = P_H₂ + P_H₂O. Therefore, the partial pressure of dry hydrogen is: P_H₂ = P_total - P_H₂O = 760 mmHg - 24 mmHg = 736 mmHg."
+            "solution": "Graham: \\(\\dfrac{r_1}{r_2}=\\sqrt{\\dfrac{M_2}{M_1}}=\\sqrt{\\dfrac{36}{4}}=3\\). The lighter gas is faster; the mass ratio itself (9) is a common wrong answer."
           },
           {
-            "question": "What happens to the average kinetic energy of ideal gas molecules if the absolute temperature in Kelvin is doubled?",
+            "question": "A gas mixture contains 2 mol of N₂, 2 mol of O₂ and 3 mol of Ar at a total pressure of 6 atm. What is the partial pressure of N₂?",
             "options": [
-              "It doubles",
-              "It quadruples",
-              "It increases by a factor of √2",
-              "It remains unchanged",
-              "It decreases by half"
+              "0.2857 atm",
+              "4.286 atm",
+              "1.714 atm",
+              "2.4 atm",
+              "2 atm"
             ],
-            "correct": 0,
-            "solution": "According to the kinetic theory of gases, the average translational kinetic energy of gas molecules is directly proportional to the absolute temperature: KE_avg = (3/2)k_B T. If T is doubled, KE_avg doubles."
+            "correct": 2,
+            "solution": "Dalton: partial pressure = mole fraction × total pressure: \\(P_{N_2}=\\dfrac{2}{7}\\times6=1.714\\) atm."
           },
           {
             "question": "Why does liquid water have a negative slope for its solid-liquid equilibrium (melting) boundary line on its PT phase diagram?",
@@ -31200,40 +31200,40 @@ const subjects = [
             "solution": "The critical temperature is the threshold temperature above which thermal energy overcomes intermolecular attractions so completely that the substance cannot be condensed into a distinct liquid phase, regardless of the applied pressure."
           },
           {
-            "question": "A 2.24 L gas cylinder at STP (0 °C, 1 atm) contains 4.40 g of an unknown gas. What is the molar mass of the gas?",
+            "question": "What volume does 1 mol of an ideal gas occupy at 1 atm and 227 °C? (R = 0.082 L·atm/(mol·K))",
             "options": [
-              "44.0 g/mol",
-              "22.0 g/mol",
-              "88.0 g/mol",
-              "32.0 g/mol",
-              "28.0 g/mol"
+              "18.61 L",
+              "41 L",
+              "6098 L",
+              "20.5 L",
+              "22.4 L"
             ],
-            "correct": 0,
-            "solution": "At STP, 1 mole of an ideal gas occupies 22.4 L. Moles of gas n = 2.24 L / 22.4 L/mol = 0.100 mol. Molar mass M = mass / moles = 4.40 g / 0.100 mol = 44.0 g/mol (likely CO₂ or N₂O)."
+            "correct": 1,
+            "solution": "Use kelvin: T = 227 + 273 = 500 K. \\(V=\\dfrac{nRT}{P}=\\dfrac{1\\times0.082\\times500}{1}=41\\) L."
           },
           {
-            "question": "Which of the following gases would behave MOST ideally at 298 K and 1 atm?",
+            "question": "A gas mixture contains 2 mol of N₂, 4 mol of O₂ and 3 mol of Ar at a total pressure of 8 atm. What is the partial pressure of N₂?",
             "options": [
-              "Helium (He)",
-              "Water vapor (H₂O)",
-              "Ammonia (NH₃)",
-              "Sulfur dioxide (SO₂)",
-              "Carbon dioxide (CO₂)"
+              "1.778 atm",
+              "2.286 atm",
+              "3.556 atm",
+              "0.2222 atm",
+              "2.667 atm"
             ],
             "correct": 0,
-            "solution": "Helium is a small, monoatomic noble gas with an extremely small atomic volume and only exceedingly weak London dispersion forces. Thus, its intermolecular attractions and excluded volume are negligible compared to polar molecules like H₂O, NH₃, SO₂ or larger quadrupolar CO₂."
+            "solution": "Dalton: partial pressure = mole fraction × total pressure: \\(P_{N_2}=\\dfrac{2}{9}\\times8=1.778\\) atm."
           },
           {
-            "question": "How does the root-mean-square speed (v_rms) of gas molecules depend on temperature (T) and molar mass (M)?",
+            "question": "What is the density of a gas of molar mass 2 g/mol at STP? (molar volume 22.4 L/mol)",
             "options": [
-              "v_rms is directly proportional to √T and inversely proportional to √M",
-              "v_rms is directly proportional to T and inversely proportional to M",
-              "v_rms is directly proportional to T² and inversely proportional to M²",
-              "v_rms is independent of molar mass",
-              "v_rms is directly proportional to M and inversely proportional to T"
+              "11.2 g/L",
+              "0.1786 g/L",
+              "0.08163 g/L",
+              "44.8 g/L",
+              "0.08929 g/L"
             ],
-            "correct": 0,
-            "solution": "From kinetic molecular theory, v_rms = √(3RT / M). Therefore, molecular speed is proportional to the square root of the absolute temperature and inversely proportional to the square root of the molar mass."
+            "correct": 4,
+            "solution": "One mole (2 g) occupies 22.4 L, so density = 2/22.4 = 0.08929 g/L."
           },
           {
             "question": "What is the normal boiling point of a liquid?",
@@ -31260,40 +31260,40 @@ const subjects = [
             "solution": "Let the mass be m. Moles of H₂ = m / 2.0. Moles of CH₄ = m / 16.0. Since V and T are constant, pressure is directly proportional to moles: P_H₂ / P_CH₄ = n_H₂ / n_CH₄ = (m / 2) / (m / 16) = 16 / 2 = 8 : 1."
           },
           {
-            "question": "What term describes the direct phase transition of a substance from the gas phase into the solid phase without passing through the liquid phase?",
+            "question": "A gas mixture contains 4 mol of N₂, 4 mol of O₂ and 1 mol of Ar at a total pressure of 4 atm. What is the partial pressure of N₂?",
             "options": [
-              "Deposition",
-              "Sublimation",
-              "Condensation",
-              "Fusion",
-              "Vaporization"
+              "0.4444 atm",
+              "1.778 atm",
+              "2.222 atm",
+              "1.333 atm",
+              "3.2 atm"
             ],
-            "correct": 0,
-            "solution": "Deposition (also called desublimation) is the thermodynamic transition in which a gas transforms directly into a solid without passing through the liquid state (e.g., frost formation on cold glass)."
+            "correct": 1,
+            "solution": "Dalton: partial pressure = mole fraction × total pressure: \\(P_{N_2}=\\dfrac{4}{9}\\times4=1.778\\) atm."
           },
           {
-            "question": "Which of the following changes will double the pressure of an ideal gas confined in a rigid container?",
+            "question": "Under the same conditions, how many times faster does CH₄ (M = 16) effuse than SO₂ (M = 64)?",
             "options": [
-              "Doubling the absolute temperature in Kelvin",
-              "Doubling the volume of the container",
-              "Doubling the temperature in Celsius from 20 °C to 40 °C",
-              "Halving the number of moles of gas present",
-              "Adding an equal mass of a gas with twice the molar mass"
+              "0.5 times",
+              "4 times",
+              "3 times",
+              "48 times",
+              "2 times"
             ],
-            "correct": 0,
-            "solution": "In a rigid container, volume V is constant. From Gay-Lussac's law, P = (nR/V)T, so pressure is directly proportional to absolute temperature T (in Kelvin). Doubling the Kelvin temperature doubles the pressure."
+            "correct": 4,
+            "solution": "Graham: \\(\\dfrac{r_1}{r_2}=\\sqrt{\\dfrac{M_2}{M_1}}=\\sqrt{\\dfrac{64}{16}}=2\\). The lighter gas is faster; the mass ratio itself (4) is a common wrong answer."
           },
           {
-            "question": "Two gas bulbs of equal volume V are connected by a stopcock of negligible volume. Initially, bulb 1 contains 2.0 moles of argon at pressure P, and bulb 2 is evacuated. When the stopcock is opened at constant temperature, what is the final pressure?",
+            "question": "What is the density of a gas of molar mass 64 g/mol at STP? (molar volume 22.4 L/mol)",
             "options": [
-              "P / 2",
-              "P",
-              "2P",
-              "P / 4",
-              "Zero"
+              "0.35 g/L",
+              "2.857 g/L",
+              "2.612 g/L",
+              "5.714 g/L",
+              "1434 g/L"
             ],
-            "correct": 0,
-            "solution": "The total volume available to the argon gas increases from V to 2V. By Boyle's Law: P₁V₁ = P₂V₂ ⇒ P(V) = P₂(2V) ⇒ P₂ = P / 2."
+            "correct": 1,
+            "solution": "One mole (64 g) occupies 22.4 L, so density = 64/22.4 = 2.857 g/L."
           },
           {
             "question": "The triple point of a substance is a particular thermodynamic state determined by values of pressure and temperature at which:",
@@ -31308,16 +31308,16 @@ const subjects = [
             "solution": "The triple point in a phase diagram is the unique temperature and pressure at which the three phases (solid, liquid, and gas) of that substance coexist in thermodynamic equilibrium."
           },
           {
-            "question": "At a temperature of 27 °C, the volume of a balloon is 2.40 L. Assuming the pressure remains constant, what will be the volume of the same balloon at −23 °C?",
+            "question": "A gas mixture contains 4 mol of N₂, 2 mol of O₂ and 4 mol of Ar at a total pressure of 8 atm. What is the partial pressure of N₂?",
             "options": [
-              "2.88 L",
-              "2.00 L",
-              "−2.04 L",
-              "1.20 L",
-              "1.02 L"
+              "3.2 atm",
+              "4.8 atm",
+              "2.667 atm",
+              "5.333 atm",
+              "1.6 atm"
             ],
-            "correct": 1,
-            "solution": "Using Charles's Law at constant pressure: V₁ / T₁ = V₂ / T₂.\nConvert temperatures to Kelvin:\nT₁ = 27 + 273.15 = 300 K\nT₂ = -23 + 273.15 = 250 K\nV₂ = V₁ × (T₂ / T₁) = 2.40 L × (250 / 300) = 2.00 L."
+            "correct": 0,
+            "solution": "Dalton: partial pressure = mole fraction × total pressure: \\(P_{N_2}=\\dfrac{4}{10}\\times8=3.2\\) atm."
           },
           {
             "question": "A balloon containing 1.0 mole of helium gas at 25 °C is added with 3.0 more moles of helium. If the temperature remains constant and the balloon’s volume doubles, how will the pressure change compared to the original pressure inside the same balloon?",
@@ -31332,16 +31332,16 @@ const subjects = [
             "solution": "From the ideal gas law: P = nRT / V.\nInitial state: P₁ = (1.0)RT / V₁.\nFinal state: n₂ = 1.0 + 3.0 = 4.0 mol, V₂ = 2 V₁.\nP₂ = (4.0)RT / (2 V₁) = 2 × (RT / V₁) = 2 P₁.\nThe pressure inside the balloon is doubled."
           },
           {
-            "question": "A cylinder initially contains 100 mol of hydrogen gas at a pressure of 4 × 10⁵ Pa. After use, the recorded pressure is 10⁵ Pa. Indicate how many moles of hydrogen have been consumed:",
+            "question": "Under the same conditions, how many times faster does He (M = 4) effuse than CH₄ (M = 16)?",
             "options": [
-              "25 mol",
-              "75 mol",
-              "10 mol",
-              "4 mol",
-              "1 mol"
+              "12 times",
+              "0.5 times",
+              "4 times",
+              "2 times",
+              "3 times"
             ],
-            "correct": 1,
-            "solution": "Assuming constant volume and temperature, pressure is directly proportional to moles: P₁ / n₁ = P₂ / n₂.\nn₂ = n₁ × (P₂ / P₁) = 100 mol × (10⁵ / (4 × 10⁵)) = 25 mol.\nMoles consumed = n₁ - n₂ = 100 - 25 = 75 mol."
+            "correct": 3,
+            "solution": "Graham: \\(\\dfrac{r_1}{r_2}=\\sqrt{\\dfrac{M_2}{M_1}}=\\sqrt{\\dfrac{16}{4}}=2\\). The lighter gas is faster; the mass ratio itself (4) is a common wrong answer."
           },
           {
             "question": "In a rigid 1 L container containing solid carbon and gaseous dioxygen at 40°C and 12 atm, the following reaction is carried out: C(s) + O₂(g) → CO₂(g). Once the reaction is complete, the temperature is returned to 40°C. Neglecting the change in solid volume, what will the pressure in the container be, compared to the initial pressure?",
@@ -31362,16 +31362,16 @@ const subjects = [
         "name": "Solutions & Solubility",
         "questions": [
           {
-            "question": "Which of the following factors increases the solubility of a gas in a liquid?",
+            "question": "18 g of glucose (M = 180 g/mol) are dissolved in water to make 500 mL of solution. What is the molarity?",
             "options": [
-              "Increasing temperature",
-              "Decreasing pressure",
-              "Decreasing temperature",
-              "Stirring",
-              "All of the above"
+              "0.0002 M",
+              "0.05 M",
+              "0.2 M",
+              "0.036 M",
+              "36 M"
             ],
             "correct": 2,
-            "solution": "Gas solubility in liquids decreases with increasing temperature and increases with increasing pressure (Henry's law)."
+            "solution": "n = 18/180 = 0.1 mol; volume 500 mL = 0.5 L. Molarity = 0.1/0.5 = 0.2 M."
           },
           {
             "question": "250 cm<sup>3</sup> of 0.10 mol/L Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> are prepared. What is the concentration of sulfate ions?",
@@ -31398,28 +31398,28 @@ const subjects = [
             "solution": "136 g of saturated solution contain 36 g of NaCl (100 g water + 36 g salt). For 500 g: \\(500 \\times 36/136 = 132\\) g."
           },
           {
-            "question": "What happens when a saturated solution is cooled?",
+            "question": "What volume of 6 M stock solution is needed to prepare 250 mL of 1 M solution?",
             "options": [
-              "More solute dissolves",
-              "The solution becomes unsaturated",
-              "Crystals may precipitate",
-              "The concentration increases",
-              "Nothing changes"
+              "1500 mL",
+              "208.3 mL",
+              "83.33 mL",
+              "15 mL",
+              "41.67 mL"
             ],
-            "correct": 2,
-            "solution": "Cooling a saturated solution usually decreases solubility, causing excess solute to precipitate as crystals."
+            "correct": 4,
+            "solution": "\\(C_1V_1=C_2V_2\\) gives \\(V_1=\\dfrac{1\\times250}{6}=41.67\\) mL."
           },
           {
-            "question": "Which of the following would have the highest boiling point?",
+            "question": "25 mL of a 12 M solution is diluted by adding 400 mL of water. What is the new concentration?",
             "options": [
-              "0.1 M glucose",
-              "0.1 M NaCl",
-              "0.1 M CaCl₂",
-              "0.1 M urea",
-              "Pure water"
+              "204 M",
+              "0.7059 M",
+              "6 M",
+              "0.75 M",
+              "192 M"
             ],
-            "correct": 2,
-            "solution": "CaCl₂ dissociates into 3 particles, giving the highest van't Hoff factor and greatest boiling point elevation."
+            "correct": 1,
+            "solution": "Moles are conserved: \\(12\\times25=C_2\\times425\\), so \\(C_2=0.7059\\) M (the final volume is 425 mL, not just the added water)."
           },
           {
             "question": "The solubility of KNO<sub>3</sub> is 64 g per 100 g of water at 40 °C and 32 g per 100 g at 20 °C. A solution saturated at 40 °C contains 200 g of water. What mass of crystals appears on cooling to 20 °C?",
@@ -31434,16 +31434,16 @@ const subjects = [
             "solution": "At 40 °C, 200 g of water hold 128 g of KNO<sub>3</sub>. At 20 °C they can hold only \\(2 \\times 32 = 64\\) g. The excess crystallises: \\(128 - 64 = 64\\) g."
           },
           {
-            "question": "According to Henry's law, the solubility of a gas is directly proportional to:",
+            "question": "What volume of 6 M stock solution is needed to prepare 500 mL of 0.1 M solution?",
             "options": [
-              "Temperature",
-              "Pressure",
-              "Volume",
-              "Concentration",
-              "Density"
+              "8.333 mL",
+              "491.7 mL",
+              "300 mL",
+              "30000 mL",
+              "16.67 mL"
             ],
-            "correct": 1,
-            "solution": "Henry's law states that the solubility of a gas in a liquid is directly proportional to the partial pressure of the gas."
+            "correct": 0,
+            "solution": "\\(C_1V_1=C_2V_2\\) gives \\(V_1=\\dfrac{0.1\\times500}{6}=8.333\\) mL."
           },
           {
             "question": "Concentrated hydrochloric acid is 37% HCl by mass and has a density of 1.19 g/cm<sup>3</sup>. What is its concentration? (\\(M = 36.5\\) g/mol)",
@@ -31458,16 +31458,16 @@ const subjects = [
             "solution": "In 1.00 L: mass of solution \\(= 1190\\) g. Mass of HCl \\(= 0.37 \\times 1190 = 440\\) g. \\(n = 440/36.5 = 12.1\\) mol, so \\(c = 12.1\\) mol/L."
           },
           {
-            "question": "What is the effect of adding a non-volatile solute to a solvent?",
+            "question": "5.85 g of NaCl (M = 58.5 g/mol) are dissolved in water to make 500 mL of solution. What is the molarity?",
             "options": [
-              "Boiling point decreases",
-              "Freezing point increases",
-              "Vapour pressure decreases",
-              "All of the above",
-              "None of the above"
+              "11.7 M",
+              "0.0117 M",
+              "0.2 M",
+              "0.1 M",
+              "0.05 M"
             ],
             "correct": 2,
-            "solution": "Adding a non-volatile solute lowers vapour pressure, which raises the boiling point and lowers the freezing point."
+            "solution": "n = 5.85/58.5 = 0.1 mol; volume 500 mL = 0.5 L. Molarity = 0.1/0.5 = 0.2 M."
           },
           {
             "question": "Which solution is <b>isotonic</b> (same osmolarity) with 0.15 mol/L NaCl? Assume complete dissociation.",
@@ -31482,40 +31482,40 @@ const subjects = [
             "solution": "NaCl gives 2 particles per unit: \\(2 \\times 0.15 = 0.30\\) osmol/L. CaCl<sub>2</sub> gives 3: \\(3 \\times 0.10 = 0.30\\) osmol/L. Glucose does not dissociate, so 0.15 mol/L is only 0.15 osmol/L."
           },
           {
-            "question": "What is the mass percent of a solution containing 10 g of solute in 90 g of solvent?",
+            "question": "25 mL of a 2 M solution is diluted by adding 100 mL of water. What is the new concentration?",
             "options": [
-              "10%",
-              "11.1%",
-              "90%",
-              "9%",
-              "100%"
+              "8 M",
+              "0.5 M",
+              "1 M",
+              "0.4 M",
+              "10 M"
             ],
-            "correct": 0,
-            "solution": "Mass percent = (mass of solute / total mass) × 100 = (10/100) × 100 = 10%."
+            "correct": 3,
+            "solution": "Moles are conserved: \\(2\\times25=C_2\\times125\\), so \\(C_2=0.4\\) M (the final volume is 125 mL, not just the added water)."
           },
           {
-            "question": "Which of the following increases the rate of dissolution?",
+            "question": "What volume of 4 M stock solution is needed to prepare 250 mL of 0.2 M solution?",
             "options": [
-              "Decreasing temperature",
-              "Increasing particle size",
-              "Stirring",
-              "Decreasing surface area",
-              "All of the above"
+              "25 mL",
+              "237.5 mL",
+              "200 mL",
+              "12.5 mL",
+              "10 mL"
             ],
-            "correct": 2,
-            "solution": "Stirring increases the rate of dissolution by bringing fresh solvent into contact with the solute surface."
+            "correct": 3,
+            "solution": "\\(C_1V_1=C_2V_2\\) gives \\(V_1=\\dfrac{0.2\\times250}{4}=12.5\\) mL."
           },
           {
-            "question": "What is the difference between molarity and molality?",
+            "question": "29.25 g of NaCl (M = 58.5 g/mol) are dissolved in water to make 500 mL of solution. What is the molarity?",
             "options": [
-              "Molarity uses mass of solvent, molality uses volume of solution",
-              "Molarity uses volume of solution, molality uses mass of solvent",
-              "They are the same",
-              "Molarity is for gases, molality for liquids",
-              "Molality is temperature-dependent, molarity is not"
+              "0.25 M",
+              "58.5 M",
+              "0.5 M",
+              "0.0585 M",
+              "1 M"
             ],
-            "correct": 1,
-            "solution": "Molarity (M) = moles/volume of solution (L). Molality (m) = moles/mass of solvent (kg)."
+            "correct": 4,
+            "solution": "n = 29.25/58.5 = 0.5 mol; volume 500 mL = 0.5 L. Molarity = 0.5/0.5 = 1 M."
           },
           {
             "question": "Saline is 0.90% NaCl by mass per volume (9.0 g per litre). What is its osmolarity? (\\(M(\\text{NaCl}) = 58.5\\) g/mol)",
@@ -31530,40 +31530,40 @@ const subjects = [
             "solution": "\\(c = 9.0/58.5 = 0.154\\) mol/L. NaCl dissociates into 2 particles (Na<sup>+</sup> and Cl<sup>-</sup>), so the osmolarity is \\(2 \\times 0.154 = 0.31\\) osmol/L, close to that of blood plasma."
           },
           {
-            "question": "What is a supersaturated solution?",
+            "question": "What volume of 4 M stock solution is needed to prepare 1000 mL of 0.5 M solution?",
             "options": [
-              "A solution with maximum solute dissolved",
-              "A solution with more solute than can normally dissolve",
-              "A solution with no solute",
-              "A solution at equilibrium",
-              "A solution that cannot dissolve any more solute"
+              "250 mL",
+              "125 mL",
+              "875 mL",
+              "2000 mL",
+              "40 mL"
             ],
             "correct": 1,
-            "solution": "A supersaturated solution contains more dissolved solute than would be possible under normal conditions."
+            "solution": "\\(C_1V_1=C_2V_2\\) gives \\(V_1=\\dfrac{0.5\\times1000}{4}=125\\) mL."
           },
           {
-            "question": "Which of the following affects the solubility of ionic solids in water?",
+            "question": "What volume of 6 M stock solution is needed to prepare 1000 mL of 0.2 M solution?",
             "options": [
-              "Temperature only",
-              "Pressure only",
-              "Common ion effect",
-              "Both temperature and common ion effect",
-              "Neither temperature nor pressure"
-            ],
-            "correct": 3,
-            "solution": "Solubility of ionic solids is affected by temperature and the common ion effect."
-          },
-          {
-            "question": "What is osmotic pressure?",
-            "options": [
-              "The pressure needed to prevent osmosis",
-              "The pressure of the solvent",
-              "The pressure of the solute",
-              "The atmospheric pressure",
-              "The vapour pressure"
+              "33.33 mL",
+              "966.7 mL",
+              "30000 mL",
+              "60 mL",
+              "66.67 mL"
             ],
             "correct": 0,
-            "solution": "Osmotic pressure is the minimum pressure needed to prevent the flow of solvent across a semipermeable membrane."
+            "solution": "\\(C_1V_1=C_2V_2\\) gives \\(V_1=\\dfrac{0.2\\times1000}{6}=33.33\\) mL."
+          },
+          {
+            "question": "What volume of 6 M stock solution is needed to prepare 500 mL of 0.2 M solution?",
+            "options": [
+              "600 mL",
+              "30 mL",
+              "33.33 mL",
+              "16.67 mL",
+              "15000 mL"
+            ],
+            "correct": 3,
+            "solution": "\\(C_1V_1=C_2V_2\\) gives \\(V_1=\\dfrac{0.2\\times500}{6}=16.67\\) mL."
           },
           {
             "question": "200 cm<sup>3</sup> of 0.50 mol/L NaCl are mixed with 300 cm<sup>3</sup> of 0.20 mol/L CaCl<sub>2</sub>. What is the concentration of chloride ions in the final mixture?",
@@ -31578,16 +31578,16 @@ const subjects = [
             "solution": "Cl<sup>-</sup> from NaCl: \\(0.200 \\times 0.50 = 0.100\\) mol. From CaCl<sub>2</sub> (2 Cl<sup>-</sup> per unit): \\(0.300 \\times 0.20 \\times 2 = 0.120\\) mol. Total \\(0.220\\) mol in 0.500 L \\(= 0.44\\) mol/L."
           },
           {
-            "question": "What is the effect of pressure on the solubility of solids in liquids?",
+            "question": "360 g of glucose (M = 180 g/mol) are dissolved in water to make 250 mL of solution. What is the molarity?",
             "options": [
-              "Significant increase",
-              "Significant decrease",
-              "Negligible effect",
-              "Depends on temperature",
-              "Causes precipitation"
+              "4 M",
+              "0.008 M",
+              "1.44 M",
+              "8 M",
+              "0.5 M"
             ],
-            "correct": 2,
-            "solution": "Pressure has a negligible effect on the solubility of solids in liquids because solids and liquids are nearly incompressible."
+            "correct": 3,
+            "solution": "n = 360/180 = 2 mol; volume 250 mL = 0.25 L. Molarity = 2/0.25 = 8 M."
           },
           {
             "question": "50.0 cm<sup>3</sup> of 12.0 mol/L HCl are diluted with water to a final volume of 2.00 L. What is the new concentration?",
@@ -31602,16 +31602,16 @@ const subjects = [
             "solution": "\\(n = 0.0500 \\times 12.0 = 0.600\\) mol (unchanged by dilution). \\(c = 0.600/2.00 = 0.300\\) mol/L."
           },
           {
-            "question": "What is the molality (m) of a solution prepared by dissolving 20.0 g of NaOH (molar mass = 40.0 g/mol) in 500 g of pure water?",
+            "question": "By how many °C is the freezing point of water lowered by a 2 molal solution of CaCl₂ (assume complete dissociation)? (K_f of water = 1.86 °C·kg/mol)",
             "options": [
-              "1.00 mol/kg",
-              "0.50 mol/kg",
-              "2.00 mol/kg",
-              "0.04 mol/kg",
-              "1.25 mol/kg"
+              "14.88 °C",
+              "5.58 °C",
+              "3.72 °C",
+              "11.16 °C",
+              "0.93 °C"
             ],
-            "correct": 0,
-            "solution": "Moles of solute NaOH = 20.0 g / 40.0 g/mol = 0.50 mol. Mass of solvent water in kg = 500 g / 1000 = 0.500 kg. Molality m = moles of solute / kg of solvent = 0.50 mol / 0.500 kg = 1.00 mol/kg."
+            "correct": 3,
+            "solution": "\\(\\Delta T_f=i\\,K_f\\,m=3\\times1.86\\times2=11.16\\) °C, where i = 3 particles per formula unit."
           },
           {
             "question": "Which of the following ionic compounds is virtually INSOLUBLE in water at 25 °C according to general solubility rules?",
@@ -31650,28 +31650,28 @@ const subjects = [
             "solution": "Henry's Law states that at constant temperature, the solubility C of a gas in a liquid is directly proportional to its partial pressure P above the liquid: C = k_H · P. Doubling the partial pressure doubles the solubility."
           },
           {
-            "question": "What is the osmotic pressure (in atm) of a 0.20 M glucose solution at 27 °C? (R = 0.0821 L·atm/(mol·K))",
+            "question": "9.8 g of H₂SO₄ (M = 98 g/mol) are dissolved in water to make 500 mL of solution. What is the molarity?",
             "options": [
-              "4.93 atm",
-              "2.46 atm",
-              "9.85 atm",
-              "0.44 atm",
-              "1.23 atm"
+              "19.6 M",
+              "0.0002 M",
+              "0.05 M",
+              "0.1 M",
+              "0.2 M"
             ],
-            "correct": 0,
-            "solution": "Glucose is a non-electrolyte (i = 1). T = 27 + 273.15 = 300.15 K ≈ 300 K. Osmotic pressure Π = i M R T = 1 × 0.20 mol/L × 0.0821 L·atm/(mol·K) × 300 K = 4.926 atm ≈ 4.93 atm."
+            "correct": 4,
+            "solution": "n = 9.8/98 = 0.1 mol; volume 500 mL = 0.5 L. Molarity = 0.1/0.5 = 0.2 M."
           },
           {
-            "question": "The solubility product constant K_sp of silver chloride (AgCl) in water is 1.8 × 10⁻¹⁰ at 25 °C. What is the molar solubility of AgCl in pure water?",
+            "question": "For the equilibrium H₂(g) + I₂(g) ⇌ 2HI(g): increasing the pressure — what is the effect?",
             "options": [
-              "1.34 × 10⁻⁵ M",
-              "1.8 × 10⁻¹⁰ M",
-              "3.6 × 10⁻⁵ M",
-              "9.0 × 10⁻⁶ M",
-              "4.2 × 10⁻⁴ M"
+              "shifts left and increases K",
+              "has no effect on the position (equal gas moles)",
+              "shifts left (the reaction is exothermic) and lowers K",
+              "shifts left (more gas moles)",
+              "shifts right (the system replaces CO₂)"
             ],
-            "correct": 0,
-            "solution": "AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq). Let molar solubility be s. Then [Ag⁺] = s and [Cl⁻] = s. K_sp = s² ⇒ s = √(1.8 × 10⁻¹⁰) ≈ 1.34 × 10⁻⁵ M."
+            "correct": 1,
+            "solution": "Le Chatelier: the system opposes the change. Increasing the pressure has no effect on the position (equal gas moles)."
           },
           {
             "question": "What is the effect of adding 0.10 M NaCl on the solubility of silver chloride (AgCl) in water?",
@@ -31686,16 +31686,16 @@ const subjects = [
             "solution": "Adding NaCl introduces a high concentration of Cl⁻ ions. By Le Chatelier's principle applied to the equilibrium AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq), the excess chloride shifts the equilibrium to the left, precipitating more solid AgCl and decreasing its solubility (the common ion effect)."
           },
           {
-            "question": "A solution contains 5.0 mg of lead ions (Pb²⁺) dissolved in 2.0 kg of water. What is the concentration of Pb²⁺ in parts per million (ppm)?",
+            "question": "By how many °C is the freezing point of water lowered by a 2 molal solution of NaCl (assume complete dissociation)? (K_f of water = 1.86 °C·kg/mol)",
             "options": [
-              "2.5 ppm",
-              "5.0 ppm",
-              "10.0 ppm",
-              "1.25 ppm",
-              "0.25 ppm"
+              "11.16 °C",
+              "7.44 °C",
+              "4 °C",
+              "0.93 °C",
+              "3.72 °C"
             ],
-            "correct": 0,
-            "solution": "1 ppm is defined as 1 mg of solute per 1 kg of solution (or water). Concentration in ppm = mg of solute / kg of solvent = 5.0 mg / 2.0 kg = 2.5 ppm."
+            "correct": 1,
+            "solution": "\\(\\Delta T_f=i\\,K_f\\,m=2\\times1.86\\times2=7.44\\) °C, where i = 2 particles per formula unit."
           },
           {
             "question": "According to Raoult's Law, what is the vapor pressure of a solution containing 1.0 mole of non-volatile sucrose and 4.0 moles of water at 25 °C, given that pure water has a vapor pressure of 24.0 mmHg at 25 °C?",
@@ -31710,16 +31710,16 @@ const subjects = [
             "solution": "Total moles = 1.0 + 4.0 = 5.0 mol. Mole fraction of solvent water X_water = 4.0 / 5.0 = 0.80. By Raoult's Law: P_solution = X_water × P°_water = 0.80 × 24.0 mmHg = 19.2 mmHg."
           },
           {
-            "question": "What is the molar solubility of calcium fluoride, CaF₂ (K_sp = 4.0 × 10⁻¹¹), in pure water?",
+            "question": "By how many °C is the freezing point of water lowered by a 0.5 molal solution of NaCl (assume complete dissociation)? (K_f of water = 1.86 °C·kg/mol)",
             "options": [
-              "2.15 × 10⁻⁴ M",
-              "6.32 × 10⁻⁶ M",
-              "1.0 × 10⁻⁵ M",
-              "3.16 × 10⁻⁴ M",
-              "4.0 × 10⁻¹¹ M"
+              "1 °C",
+              "0.93 °C",
+              "3.72 °C",
+              "1.86 °C",
+              "2.79 °C"
             ],
-            "correct": 0,
-            "solution": "Dissociation: CaF₂(s) ⇌ Ca²⁺ + 2F⁻. If solubility is s: [Ca²⁺] = s, [F⁻] = 2s. K_sp = [Ca²⁺][F⁻]² = s(2s)² = 4s³. 4s³ = 4.0 × 10⁻¹¹ ⇒ s³ = 1.0 × 10⁻¹¹ ⇒ s = ∛(10 × 10⁻¹²) = ∛10 × 10⁻⁴ ≈ 2.15 × 10⁻⁴ M."
+            "correct": 3,
+            "solution": "\\(\\Delta T_f=i\\,K_f\\,m=2\\times1.86\\times0.5=1.86\\) °C, where i = 2 particles per formula unit."
           },
           {
             "question": "Why does a red blood cell undergo hemolysis (bursts) when placed in a hypotonic solution (e.g., pure distilled water)?",
@@ -31758,16 +31758,16 @@ const subjects = [
             "solution": "Upon mixing equal volumes, concentrations are halved: [Ag⁺] = 0.010 M = 1.0 × 10⁻² M, and [Cl⁻] = 0.010 M = 1.0 × 10⁻² M. Ion product Q = [Ag⁺][Cl⁻] = (1.0 × 10⁻²)(1.0 × 10⁻²) = 1.0 × 10⁻⁴. Since Q (1.0 × 10⁻⁴) >> K_sp (1.8 × 10⁻¹⁰), the solution is supersaturated and AgCl precipitates immediately."
           },
           {
-            "question": "What is the van 't Hoff factor (i) for magnesium chloride, MgCl₂, assuming complete dissociation in dilute aqueous solution?",
+            "question": "By how many °C is the freezing point of water lowered by a 1 molal solution of CaCl₂ (assume complete dissociation)? (K_f of water = 1.86 °C·kg/mol)",
             "options": [
-              "3",
-              "2",
-              "1",
-              "4",
-              "0.33"
+              "3 °C",
+              "1.86 °C",
+              "5.58 °C",
+              "2.79 °C",
+              "7.44 °C"
             ],
-            "correct": 0,
-            "solution": "MgCl₂ dissolves according to: MgCl₂(s) → Mg²⁺(aq) + 2Cl⁻(aq). One formula unit yields 1 magnesium cation and 2 chloride anions, giving a total of 1 + 2 = 3 ions per formula unit, so i = 3."
+            "correct": 2,
+            "solution": "\\(\\Delta T_f=i\\,K_f\\,m=3\\times1.86\\times1=5.58\\) °C, where i = 3 particles per formula unit."
           },
           {
             "question": "Why does the solubility of most gases in water DECREASE as the temperature of the water increases?",
@@ -31806,16 +31806,16 @@ const subjects = [
             "solution": "Proteins have very high molar masses (e.g., 50,000 g/mol), so even reasonable mass concentrations yield extremely tiny molalities (e.g., ~10⁻⁴ m), producing freezing point or boiling point changes that are too small to measure accurately (<0.001 °C). In contrast, osmotic pressure Π = MRT produces easily measurable hydrostatic pressures (several centimeters of water column) even at very low molarities."
           },
           {
-            "question": "What is the normality (N) of a 0.50 M sulfuric acid (H₂SO₄) solution in an acid-base neutralization reaction where both protons are transferred?",
+            "question": "By how many °C is the freezing point of water lowered by a 0.5 molal solution of glucose? (K_f of water = 1.86 °C·kg/mol)",
             "options": [
-              "1.0 N",
-              "0.50 N",
-              "0.25 N",
-              "2.0 N",
-              "1.5 N"
+              "0.5 °C",
+              "1.86 °C",
+              "3.72 °C",
+              "0.93 °C",
+              "0.465 °C"
             ],
-            "correct": 0,
-            "solution": "H₂SO₄ is a diprotic acid (supplies 2 equivalents of H⁺ per mole). Normality N = Molarity × n_equivalents = 0.50 M × 2 eq/mol = 1.0 N."
+            "correct": 3,
+            "solution": "\\(\\Delta T_f=i\\,K_f\\,m=1\\times1.86\\times0.5=0.93\\) °C, where i = 1 particles per formula unit."
           },
           {
             "question": "If an intravenous solution of saline is describe as 'isotonic' with human blood, what does this mean?",
@@ -31830,28 +31830,28 @@ const subjects = [
             "solution": "An isotonic solution has an effective osmolarity and osmotic pressure equal to that of the intracellular fluid of human cells (~290-300 mOsm/L, equivalent to ~0.9% w/v NaCl). As a result, there is no net osmosis across the erythrocyte membrane, preserving normal cell volume."
           },
           {
-            "question": "What is the relationship between the solubility product K_sp and the molar solubility s for an ionic salt of formula M₂X₃?",
+            "question": "For the equilibrium 2NO₂(g) ⇌ N₂O₄(g): decreasing the volume of the container — what is the effect?",
             "options": [
-              "K_sp = 108 s⁵",
-              "K_sp = 6 s⁵",
-              "K_sp = 27 s⁴",
-              "K_sp = 4 s³",
-              "K_sp = 108 s⁴"
+              "shifts right (fewer gas moles: 4 → 2)",
+              "shifts left (the reaction is exothermic) and lowers K",
+              "shifts left (more gas moles)",
+              "shifts right (fewer gas moles: 2 → 1)",
+              "shifts left and increases K"
             ],
-            "correct": 0,
-            "solution": "M₂X₃(s) ⇌ 2M³⁺ + 3X²⁻. If molar solubility is s: [M³⁺] = 2s, [X²⁻] = 3s. K_sp = [M³⁺]²[X²⁻]³ = (2s)²(3s)³ = (4s²)(27s³) = 108 s⁵."
+            "correct": 3,
+            "solution": "Le Chatelier: the system opposes the change. Decreasing the volume of the container shifts right (fewer gas moles: 2 → 1)."
           },
           {
-            "question": "An increase in the boiling point of an aqueous solution depends on:",
+            "question": "By how many °C is the freezing point of water lowered by a 0.5 molal solution of CaCl₂ (assume complete dissociation)? (K_f of water = 1.86 °C·kg/mol)",
             "options": [
-              "only the osmotic pressure",
-              "only the chemical nature of the solute",
-              "only the number of solute particles in solution",
-              "only the Van der Waals forces",
-              "only the latent heat"
+              "1.395 °C",
+              "1.5 °C",
+              "3.72 °C",
+              "2.79 °C",
+              "0.93 °C"
             ],
-            "correct": 2,
-            "solution": "Boiling point elevation (ΔTb = i × Kb × m) is a colligative property. Colligative properties depend solely on the number of solute particles (ions or molecules) per unit mass of solvent, not on their chemical identity or nature."
+            "correct": 3,
+            "solution": "\\(\\Delta T_f=i\\,K_f\\,m=3\\times1.86\\times0.5=2.79\\) °C, where i = 3 particles per formula unit."
           },
           {
             "question": "An aqueous solution of glucose and sucrose is given. Knowing that the mole fraction of glucose is 0.07, which of the following options is correct?",
@@ -31866,28 +31866,28 @@ const subjects = [
             "solution": "The sum of mole fractions of all components in a solution must equal 1: X_glucose + X_sucrose + X_water = 1. Given X_glucose = 0.07, we must have X_sucrose + X_water = 1 - 0.07 = 0.93. In option E: 0.08 + 0.85 = 0.93, which exactly satisfies this fundamental requirement."
           },
           {
-            "question": "If an aqueous solution of H2SO4 has a molarity of 2 M, what is its normality?",
+            "question": "11.7 g of NaCl (M = 58.5 g/mol) are dissolved in water to make 2000 mL of solution. What is the molarity?",
             "options": [
-              "4 N",
-              "2 N",
-              "1 N",
-              "3 N",
-              "6 N"
+              "0.00585 M",
+              "0.1 M",
+              "0.0001 M",
+              "0.4 M",
+              "0.05 M"
             ],
-            "correct": 0,
-            "solution": "Normality (N) = Molarity (M) × valence factor (n). Sulfuric acid (H₂SO₄) is a diprotic acid that can release 2 moles of H⁺ per mole of acid (n = 2). Thus, N = 2 M × 2 = 4 N."
+            "correct": 1,
+            "solution": "n = 11.7/58.5 = 0.2 mol; volume 2000 mL = 2 L. Molarity = 0.2/2 = 0.1 M."
           },
           {
-            "question": "Which of the following actions produces an aqueous solution of NaNO₃ (M = 85 g/mol) with a concentration of 0.20 M?",
+            "question": "By how many °C is the freezing point of water lowered by a 2 molal solution of glucose? (K_f of water = 1.86 °C·kg/mol)",
             "options": [
-              "Dilute 250 mL of a 0.8 M NaNO₃ solution up to 1.0 L",
-              "Dilute 50 mL of a 2 M NaNO₃ solution to 200 mL",
-              "Dissolve 17.0 g of NaNO₃ in 250 mL of H₂O",
-              "Add water to 8.5 g of NaNO₃ to obtain 250 mL of solution",
-              "Mix 150 mL of a 0.15 M NaNO₃ solution with 50 mL of a 0.05 M NaNO₃ solution"
+              "0.93 °C",
+              "2 °C",
+              "1.86 °C",
+              "3.72 °C",
+              "7.44 °C"
             ],
-            "correct": 0,
-            "solution": "Using the dilution formula M₁V₁ = M₂V₂:\nM₂ = (M₁ × V₁) / V₂ = (0.8 M × 0.250 L) / 1.0 L = 0.20 M."
+            "correct": 3,
+            "solution": "\\(\\Delta T_f=i\\,K_f\\,m=1\\times1.86\\times2=3.72\\) °C, where i = 1 particles per formula unit."
           },
           {
             "question": "Under appropriate conditions, the solubility product of Zn(OH)₂ is 1.2 × 10⁻¹⁷. Which of the following statements is correct?",
@@ -31926,16 +31926,16 @@ const subjects = [
             "solution": "Adding CaCl₂ introduces a high concentration of the common ion Cl⁻. By Le Chatelier's principle (common ion effect), the solubility equilibrium CuCl(s) ⇌ Cu⁺(aq) + Cl⁻(aq) shifts to the left, precipitating CuCl and lowering [Cu⁺]."
           },
           {
-            "question": "By dissolving 18 g of glucose (molar mass: 180 g/mol) in 10 L of water, the resulting solution is:",
+            "question": "29.25 g of NaCl (M = 58.5 g/mol) are dissolved in water to make 2000 mL of solution. What is the molarity?",
             "options": [
-              "0.01 M",
-              "0.1 M",
-              "0.018 M",
-              "1.8 M",
-              "0.18 M"
+              "14.63 M",
+              "0.00025 M",
+              "0.25 M",
+              "0.125 M",
+              "1 M"
             ],
-            "correct": 0,
-            "solution": "Moles of glucose = 18 g / (180 g/mol) = 0.1 mol.\nMolarity = moles / volume = 0.1 mol / 10 L = 0.01 M."
+            "correct": 2,
+            "solution": "n = 29.25/58.5 = 0.5 mol; volume 2000 mL = 2 L. Molarity = 0.5/2 = 0.25 M."
           },
           {
             "question": "By dissolving 400 g of the strong electrolyte CaBr₂ in 10 L of water, what will be the concentration of Br⁻ ions? (atomic masses: Ca = 40 u, Br = 80 u)",
@@ -31980,16 +31980,16 @@ const subjects = [
             "solution": "The collision frequency rises only a few percent. The big effect is on the <b>fraction</b> of particles with \\(E \\ge E_a\\), which grows rapidly with temperature. The activation energy and \\(\\Delta H\\) do not change."
           },
           {
-            "question": "According to the Arrhenius equation, increasing temperature:",
+            "question": "A first-order reaction has a half-life of 5 min and an initial concentration of 0.8 M. What is the concentration after 20 min?",
             "options": [
-              "Decreases the rate constant",
-              "Increases the rate constant",
-              "Has no effect on rate constant",
-              "Makes the reaction endothermic",
-              "Makes the reaction exothermic"
+              "0.6 M",
+              "0.025 M",
+              "0.1 M",
+              "0.2 M",
+              "0.05 M"
             ],
-            "correct": 1,
-            "solution": "The Arrhenius equation (k = Ae^(-Ea/RT)) shows that increasing temperature increases the rate constant exponentially."
+            "correct": 4,
+            "solution": "20/5 = 4 half-lives: \\(0.8/2^{4}=0.05\\) M."
           },
           {
             "question": "A gas is collected in a syringe: 0 s: 0 cm<sup>3</sup>, 30 s: 24 cm<sup>3</sup>, 60 s: 40 cm<sup>3</sup>, 90 s: 50 cm<sup>3</sup>. What is the mean rate between 30 s and 90 s?",
@@ -32100,16 +32100,16 @@ const subjects = [
             "solution": "Melting requires heat input (endothermic). Freezing, condensation, combustion, and formation of water are exothermic."
           },
           {
-            "question": "What is the effect of a catalyst on equilibrium?",
+            "question": "A first-order reaction has a half-life of 40 min and an initial concentration of 1.6 M. What is the concentration after 120 min?",
             "options": [
-              "Shifts equilibrium to the right",
-              "Shifts equilibrium to the left",
-              "Does not affect equilibrium position",
-              "Changes the equilibrium constant",
-              "Prevents the reaction from reaching equilibrium"
+              "0.5333 M",
+              "0.1 M",
+              "0.2667 M",
+              "0.4 M",
+              "0.2 M"
             ],
-            "correct": 2,
-            "solution": "A catalyst increases the rate at which equilibrium is reached but does not change the equilibrium position or equilibrium constant."
+            "correct": 4,
+            "solution": "120/40 = 3 half-lives: \\(1.6/2^{3}=0.2\\) M."
           },
           {
             "question": "What is the relationship between ΔG, ΔH, and ΔS?",
@@ -32160,16 +32160,16 @@ const subjects = [
             "solution": "For zero-order reactions, rate = k (constant), independent of reactant concentration."
           },
           {
-            "question": "What is the effect of temperature on the rate constant of a reaction?",
+            "question": "A first-order reaction has a half-life of 40 min. What fraction of the reactant remains after 200 min?",
             "options": [
-              "Rate constant decreases with temperature",
-              "Rate constant increases with temperature",
-              "Rate constant is independent of temperature",
-              "Rate constant decreases exponentially",
-              "Rate constant is always 1"
+              "\\(\\dfrac{1}{10}\\)",
+              "\\(\\dfrac{31}{32}\\)",
+              "\\(\\dfrac{1}{32}\\)",
+              "\\(\\dfrac{1}{16}\\)",
+              "\\(\\dfrac{1}{64}\\)"
             ],
-            "correct": 1,
-            "solution": "According to the Arrhenius equation, the rate constant increases exponentially with temperature."
+            "correct": 2,
+            "solution": "200 min = 5 half-lives, so the fraction is \\((1/2)^{5}=1/32\\)."
           },
           {
             "question": "Which of the following statements about spontaneous reactions is correct?",
@@ -32184,16 +32184,16 @@ const subjects = [
             "solution": "Spontaneous reactions have negative Gibbs free energy change (ΔG < 0). They can be slow or fast, exothermic or endothermic."
           },
           {
-            "question": "What is the activation energy of a reaction with a rate constant that doubles when temperature increases from 300 K to 310 K?",
+            "question": "A first-order reaction has a half-life of 5 min. What fraction of the reactant remains after 25 min?",
             "options": [
-              "Low",
-              "High",
-              "Zero",
-              "Negative",
-              "Cannot be determined"
+              "\\(\\dfrac{1}{10}\\)",
+              "\\(\\dfrac{1}{32}\\)",
+              "\\(\\dfrac{1}{5}\\)",
+              "\\(\\dfrac{31}{32}\\)",
+              "\\(\\dfrac{1}{64}\\)"
             ],
-            "correct": 0,
-            "solution": "A small temperature increase causing a significant rate increase suggests relatively low activation energy."
+            "correct": 1,
+            "solution": "25 min = 5 half-lives, so the fraction is \\((1/2)^{5}=1/32\\)."
           },
           {
             "question": "Under what condition is a chemical reaction ALWAYS spontaneous at all temperatures according to the Gibbs free energy equation (ΔG = ΔH - TΔS)?",
@@ -32220,52 +32220,52 @@ const subjects = [
             "solution": "ΔH°_rxn = Σ ΔH°_f(products) - Σ ΔH°_f(reactants). Products: [1(-393.5) + 2(-285.8)] = -393.5 - 571.6 = -965.1 kJ/mol. Reactants: [-74.8 + 2(0)] = -74.8 kJ/mol. ΔH°_rxn = -965.1 - (-74.8) = -890.3 kJ/mol."
           },
           {
-            "question": "For a first-order chemical reaction, what is the relationship between the half-life (t_1/2) and the rate constant (k)?",
+            "question": "The rate law of a reaction is rate = k[A]^2[B]^2. The initial rate is \\(3\\times10^{-3}\\) M/s. What is the rate if [A] is multiplied by 3 and [B] by 3?",
             "options": [
-              "t_1/2 = (ln 2) / k ≈ 0.693 / k",
-              "t_1/2 = 1 / (k · [A]₀)",
-              "t_1/2 = [A]₀ / (2k)",
-              "t_1/2 = k / 0.693",
-              "t_1/2 = ln(k) / 2"
+              "\\(7.5\\times10^{-2}\\)",
+              "\\(2.43\\times10^{-1}\\)",
+              "\\(4.86\\times10^{-1}\\)",
+              "\\(3.7\\times10^{-5}\\)",
+              "\\(2.7\\times10^{-2}\\)"
             ],
-            "correct": 0,
-            "solution": "For a first-order reaction: ln([A]₀ / [A]) = kt. At t = t_1/2, [A] = [A]₀ / 2, so ln(2) = k · t_1/2 ⇒ t_1/2 = (ln 2) / k ≈ 0.693 / k. Notably, the half-life is completely independent of the initial concentration [A]₀."
+            "correct": 1,
+            "solution": "Rate scales as \\(3^{2}\\times3^{2}=81\\): \\(3\\times10^{-3}\\) × 81 = \\(2.43\\times10^{-1}\\) M/s (the exponents are the orders)."
           },
           {
-            "question": "What are the units of the rate constant k for a second-order reaction whose rate law is Rate = k[A]²?",
+            "question": "A first-order reaction has a half-life of 20 min. What fraction of the reactant remains after 80 min?",
             "options": [
-              "M⁻¹·s⁻¹ (or L·mol⁻¹·s⁻¹)",
-              "s⁻¹",
-              "M·s⁻¹ (or mol·L⁻¹·s⁻¹)",
-              "M⁻²·s⁻¹",
-              "dimensionless"
+              "\\(\\dfrac{1}{16}\\)",
+              "\\(\\dfrac{15}{16}\\)",
+              "\\(\\dfrac{1}{4}\\)",
+              "\\(\\dfrac{1}{32}\\)",
+              "\\(\\dfrac{1}{8}\\)"
             ],
             "correct": 0,
-            "solution": "Rate has units M·s⁻¹. From Rate = k[A]²: M·s⁻¹ = k · M² ⇒ k = (M·s⁻¹) / M² = M⁻¹·s⁻¹ (or L·mol⁻¹·s⁻¹)."
+            "solution": "80 min = 4 half-lives, so the fraction is \\((1/2)^{4}=1/16\\)."
           },
           {
-            "question": "How does a catalyst increase the rate of a chemical reaction?",
+            "question": "The rate law of a reaction is rate = k[A]^2[B]^2. The initial rate is \\(5\\times10^{-3}\\) M/s. What is the rate if [A] is multiplied by 3 and [B] by 3?",
             "options": [
-              "By providing an alternative reaction pathway with a lower activation energy (E_a)",
-              "By increasing the enthalpy change (ΔH) of the reaction",
-              "By shifting the equilibrium constant (K) toward products",
-              "By increasing the kinetic energy of reactant molecules",
-              "By increasing the collision frequency without affecting activation energy"
+              "\\(6.17\\times10^{-5}\\)",
+              "\\(8.1\\times10^{-1}\\)",
+              "\\(4.5\\times10^{-2}\\)",
+              "\\(4.05\\times10^{-1}\\)",
+              "\\(1.25\\times10^{-1}\\)"
             ],
-            "correct": 0,
-            "solution": "A catalyst increases the reaction rate by providing an alternative reaction mechanism that has a lower activation energy barrier (E_a). It accelerates both the forward and reverse reaction rates equally and leaves the thermodynamic quantities (ΔH, ΔS, ΔG) and equilibrium constant (K) completely unchanged."
+            "correct": 3,
+            "solution": "Rate scales as \\(3^{2}\\times3^{2}=81\\): \\(5\\times10^{-3}\\) × 81 = \\(4.05\\times10^{-1}\\) M/s (the exponents are the orders)."
           },
           {
-            "question": "For the reaction 2NO(g) + O₂(g) → 2NO₂(g), experimental data shows that doubling [NO] quadruples the rate, while doubling [O₂] doubles the rate. What is the overall reaction order?",
+            "question": "The rate law of a reaction is rate = k[A]^2[B]^0. The initial rate is \\(2\\times10^{-3}\\) M/s. What is the rate if [A] is multiplied by 2 and [B] by 3?",
             "options": [
-              "3",
-              "2",
-              "1",
-              "4",
-              "0"
+              "\\(1.6\\times10^{-2}\\)",
+              "\\(2\\times10^{-3}\\)",
+              "\\(8\\times10^{-3}\\)",
+              "\\(5\\times10^{-4}\\)",
+              "\\(2.4\\times10^{-2}\\)"
             ],
-            "correct": 0,
-            "solution": "Rate ∝ [NO]^m [O₂]^n. Doubling [NO] quadruples the rate (2^m = 4 ⇒ m = 2, second order in NO). Doubling [O₂] doubles the rate (2^n = 2 ⇒ n = 1, first order in O₂). Overall order = m + n = 2 + 1 = 3 (third-order overall)."
+            "correct": 2,
+            "solution": "Rate scales as \\(2^{2}\\times3^{0}=4\\): \\(2\\times10^{-3}\\) × 4 = \\(8\\times10^{-3}\\) M/s (the exponents are the orders)."
           },
           {
             "question": "What is the standard enthalpy change of a reaction if the sum of bond energies of the bonds broken in the reactants is 2200 kJ/mol and the sum of bond energies of the bonds formed in the products is 2650 kJ/mol?",
@@ -32316,16 +32316,16 @@ const subjects = [
             "solution": "In 2H₂(g) + O₂(g) → 2H₂O(l), 3 moles of highly disordered gas molecules are converted into 2 moles of condensed, structured liquid water. This large reduction in positional disorder results in a negative entropy change (ΔS < 0). All the other options involve increases in gas moles or dissolution/melting, where entropy increases."
           },
           {
-            "question": "What is the rate-determining step in a multi-step reaction mechanism?",
+            "question": "A first-order reaction has a half-life of 10 min. What fraction of the reactant remains after 40 min?",
             "options": [
-              "The slowest elementary step, which has the highest activation energy barrier",
-              "The fastest elementary step",
-              "The step with the greatest enthalpy change",
-              "The first step of the mechanism",
-              "The step that generates the final product"
+              "\\(\\dfrac{1}{8}\\)",
+              "\\(\\dfrac{1}{4}\\)",
+              "\\(\\dfrac{1}{16}\\)",
+              "\\(\\dfrac{15}{16}\\)",
+              "\\(\\dfrac{1}{32}\\)"
             ],
-            "correct": 0,
-            "solution": "The rate-determining (or rate-limiting) step is the slowest elementary step in a reaction sequence. It has the highest activation energy transition state, acting as a kinetic bottleneck that governs the overall reaction rate."
+            "correct": 2,
+            "solution": "40 min = 4 half-lives, so the fraction is \\((1/2)^{4}=1/16\\)."
           },
           {
             "question": "According to Hess's Law, what is true about the overall enthalpy change of a chemical reaction?",
@@ -32388,16 +32388,16 @@ const subjects = [
             "solution": "The transition state (activated complex) is a transient, highly energetic configuration of atoms corresponding to the maximum potential energy along the reaction coordinate. It cannot be isolated because bonds are in the process of breaking and forming simultaneously."
           },
           {
-            "question": "The radioactive isotope Iodine-131 decays by first-order kinetics with a half-life of 8.0 days. What fraction of an initial sample remains after 24 days?",
+            "question": "A first-order reaction has a half-life of 20 min and an initial concentration of 1.6 M. What is the concentration after 60 min?",
             "options": [
-              "1/8",
-              "1/4",
-              "1/16",
-              "1/3",
-              "1/6"
+              "0.4 M",
+              "0.1 M",
+              "0.5333 M",
+              "0.2 M",
+              "0.2667 M"
             ],
-            "correct": 0,
-            "solution": "The number of half-lives elapsed is n = 24 / 8.0 = 3 half-lives. Fraction remaining = (1/2)ⁿ = (1/2)³ = 1/8."
+            "correct": 3,
+            "solution": "60/20 = 3 half-lives: \\(1.6/2^{3}=0.2\\) M."
           },
           {
             "question": "What is the molar heat capacity of an ideal monoatomic gas at constant volume (C_v)?",
@@ -32424,28 +32424,28 @@ const subjects = [
             "solution": "At dynamic chemical equilibrium under conditions of constant temperature and pressure, the Gibbs free energy of the system is at an absolute minimum, which means ΔG = 0 (no driving force in either direction)."
           },
           {
-            "question": "How does increasing the surface area of a solid reactant influence the rate of a heterogeneous reaction?",
+            "question": "The rate law of a reaction is rate = k[A]^2[B]^2. The initial rate is \\(2\\times10^{-3}\\) M/s. What is the rate if [A] is multiplied by 2 and [B] by 3?",
             "options": [
-              "It increases the rate by providing more collision sites between reactant particles",
-              "It decreases the rate by spreading out the particles",
-              "It decreases the activation energy of the reaction",
-              "It changes the reaction from endothermic to exothermic",
-              "It has no effect on reaction rate"
+              "\\(5.56\\times10^{-5}\\)",
+              "\\(7.2\\times10^{-2}\\)",
+              "\\(1.44\\times10^{-1}\\)",
+              "\\(1.8\\times10^{-2}\\)",
+              "\\(8\\times10^{-3}\\)"
             ],
-            "correct": 0,
-            "solution": "In heterogeneous reactions (e.g., solid-liquid or solid-gas), reaction occurs only at the interface where particles meet. Finely dividing a solid increases its surface area, exposing more particles to collisions with other reactants, thereby increasing the collision frequency and reaction rate."
+            "correct": 1,
+            "solution": "Rate scales as \\(2^{2}\\times3^{2}=36\\): \\(2\\times10^{-3}\\) × 36 = \\(7.2\\times10^{-2}\\) M/s (the exponents are the orders)."
           },
           {
-            "question": "The equation 2A + B → C + 2D represents a reaction that occurs in a single step. Which of the following expressions represents its rate law?",
+            "question": "A first-order reaction has a half-life of 10 min and an initial concentration of 3.2 M. What is the concentration after 50 min?",
             "options": [
-              "Rate = k[C][D]² / ([A][B])",
-              "Rate = k[2A][B]",
-              "Rate = k[A]²[B][C][D]²",
-              "Rate = k[A]²[B]",
-              "Rate = k[C][D]² / ([A]²[B])"
+              "0.64 M",
+              "0.32 M",
+              "0.1 M",
+              "0.05 M",
+              "0.2 M"
             ],
-            "correct": 3,
-            "solution": "For an elementary (single-step) reaction, the rate law exponents match the stoichiometric coefficients of the reactants: Rate = k [A]² [B]."
+            "correct": 2,
+            "solution": "50/10 = 5 half-lives: \\(3.2/2^{5}=0.1\\) M."
           },
           {
             "question": "A potential energy diagram for a generic reaction A + B ⇌ C + D displays a single continuous energy barrier with one peak. Based on it, indicate the correct statement:",
@@ -32460,16 +32460,16 @@ const subjects = [
             "solution": "A reaction coordinate profile displaying a single activation energy barrier (one transition state) corresponds to an elementary single-step reaction mechanism in both forward and backward directions."
           },
           {
-            "question": "Which combination of factors definitely causes an increase in the rate of a reaction?",
+            "question": "The rate law of a reaction is rate = k[A]^2[B]^0. The initial rate is \\(3\\times10^{-3}\\) M/s. What is the rate if [A] is multiplied by 2 and [B] by 3?",
             "options": [
-              "Addition of a catalyst and decrease in temperature",
-              "Increase in temperature and decrease in the concentration of reactants",
-              "Increase in temperature and increase in the concentration of reactants",
-              "Decrease in pressure and reduction in contact surface area",
-              "Increase in catalyst concentration and decrease in reactant concentration"
+              "\\(3.6\\times10^{-2}\\)",
+              "\\(2.4\\times10^{-2}\\)",
+              "\\(3\\times10^{-3}\\)",
+              "\\(1.8\\times10^{-2}\\)",
+              "\\(1.2\\times10^{-2}\\)"
             ],
-            "correct": 2,
-            "solution": "Increasing temperature increases the average kinetic energy and fraction of successful collisions (Arrhenius law), while increasing reactant concentration increases collision frequency; both unequivocally increase reaction velocity."
+            "correct": 4,
+            "solution": "Rate scales as \\(2^{2}\\times3^{0}=4\\): \\(3\\times10^{-3}\\) × 4 = \\(1.2\\times10^{-2}\\) M/s (the exponents are the orders)."
           }
         ]
       },
@@ -32478,16 +32478,16 @@ const subjects = [
         "name": "Chemical Equilibrium & Le Chatelier's Principle",
         "questions": [
           {
-            "question": "In the reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g), what happens if pressure is increased?",
+            "question": "For N₂ + 3H₂ ⇌ 2NH₃ at equilibrium, the concentrations are [N₂] = 3 M, [H₂] = 4 M and [NH₃] = 3 M. What is K_c?",
             "options": [
-              "Equilibrium shifts left",
-              "Equilibrium shifts right",
-              "No change",
-              "Reaction stops",
-              "Rate decreases"
+              "0.04688",
+              "21.33",
+              "0.75",
+              "0.25",
+              "0.6"
             ],
-            "correct": 1,
-            "solution": "Increasing pressure shifts equilibrium toward the side with fewer moles of gas (right: 2 moles vs left: 4 moles)."
+            "correct": 0,
+            "solution": "\\(K_c=\\dfrac{[NH_3]^2}{[N_2][H_2]^3}=\\dfrac{3^2}{3\\times4^3}=0.04688\\). Coefficients become exponents."
           },
           {
             "question": "1.0 mol/L of H<sub>2</sub> and 1.0 mol/L of I<sub>2</sub> are heated: H<sub>2</sub> + I<sub>2</sub> ⇌ 2HI, \\(K_c = 49\\). What is \\([\\text{HI}]\\) at equilibrium?",
@@ -32502,16 +32502,16 @@ const subjects = [
             "solution": "Let \\(x\\) mol/L of H<sub>2</sub> react: \\([\\text{HI}] = 2x\\), \\([\\text{H}_2] = [\\text{I}_2] = 1 - x\\). \\(K_c = (2x)^2/(1-x)^2 = 49\\). Take the square root: \\(2x/(1-x) = 7\\), so \\(x = 7/9 = 0.778\\) and \\([\\text{HI}] = 1.56\\) mol/L."
           },
           {
-            "question": "Which of the following changes the value of the equilibrium constant?",
+            "question": "The solubility product of a salt AB (such as AgCl) is K_sp = \\(1\\times10^{-10}\\). What is its molar solubility in pure water?",
             "options": [
-              "Adding more reactant",
-              "Adding a catalyst",
-              "Changing temperature",
-              "Changing pressure",
-              "Changing concentration"
+              "\\(10^{-5}\\text{ M}\\)",
+              "\\(10^{-10}\\text{ M}\\)",
+              "\\(10^{-6}\\text{ M}\\)",
+              "\\(1e-10\\text{ M}\\)",
+              "\\(10^{-4}\\text{ M}\\)"
             ],
-            "correct": 2,
-            "solution": "Only temperature changes the equilibrium constant. Catalysts, pressure, and concentration changes affect the position but not K."
+            "correct": 0,
+            "solution": "For AB: K_sp = s·s = s², so \\(s=\\sqrt{K_{sp}}=10^{-5}\\) M."
           },
           {
             "question": "50 cm<sup>3</sup> of \\(1.0 \\times 10^{-4}\\) mol/L AgNO<sub>3</sub> are mixed with 50 cm<sup>3</sup> of \\(1.0 \\times 10^{-4}\\) mol/L NaCl (\\(K_{sp}\\) of AgCl \\(= 1.8 \\times 10^{-10}\\)). What is the ion product and does a precipitate form?",
@@ -32538,52 +32538,52 @@ const subjects = [
             "solution": "\\(K_{sp} = [\\text{Ag}^+][\\text{Cl}^-]\\). The chloride from NaCl (0.10 mol/L) is far more than the chloride from AgCl, so \\([\\text{Cl}^-] \\approx 0.10\\). \\(s = [\\text{Ag}^+] = 1.8 \\times 10^{-10}/0.10 = 1.8 \\times 10^{-9}\\) mol/L. In pure water it would be \\(1.3 \\times 10^{-5}\\): the <b>common ion effect</b>."
           },
           {
-            "question": "Which of the following is true at equilibrium?",
+            "question": "For N₂ + 3H₂ ⇌ 2NH₃ at equilibrium, the concentrations are [N₂] = 1 M, [H₂] = 4 M and [NH₃] = 3 M. What is K_c?",
             "options": [
-              "Forward reaction stops",
-              "Reverse reaction stops",
-              "Forward and reverse rates are equal",
-              "Concentrations are equal",
-              "Pressure is constant"
+              "0.1406",
+              "7.111",
+              "0.6923",
+              "0.75",
+              "2.25"
+            ],
+            "correct": 0,
+            "solution": "\\(K_c=\\dfrac{[NH_3]^2}{[N_2][H_2]^3}=\\dfrac{3^2}{1\\times4^3}=0.1406\\). Coefficients become exponents."
+          },
+          {
+            "question": "The solubility product of a salt AB₂ (such as CaF₂) is K_sp = \\(4\\times10^{-9}\\). What is its molar solubility in pure water?",
+            "options": [
+              "\\(10^{-2}\\text{ M}\\)",
+              "\\(10^{-4}\\text{ M}\\)",
+              "\\(10^{-3}\\text{ M}\\)",
+              "\\(4e-9\\text{ M}\\)",
+              "\\(2\\times10^{-3}\\text{ M}\\)"
             ],
             "correct": 2,
-            "solution": "At equilibrium, the rates of forward and reverse reactions are equal, but both reactions continue to occur (dynamic equilibrium)."
+            "solution": "For AB₂: K_sp = s·(2s)² = 4s³, so \\(s=\\sqrt[3]{K_{sp}/4}=10^{-3}\\) M."
           },
           {
-            "question": "In the reaction 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), ΔH = -198 kJ/mol. What effect does decreasing temperature have?",
+            "question": "For N₂ + 3H₂ ⇌ 2NH₃ at equilibrium, the concentrations are [N₂] = 1 M, [H₂] = 2 M and [NH₃] = 1 M. What is K_c?",
             "options": [
-              "Yield of SO₃ decreases",
-              "Yield of SO₃ increases",
-              "No effect on yield",
-              "Reaction stops",
-              "Equilibrium constant decreases"
+              "0.1429",
+              "0.5",
+              "0.125",
+              "0.1667",
+              "8"
             ],
-            "correct": 1,
-            "solution": "The reaction is exothermic. Decreasing temperature favours the exothermic direction (forward), increasing SO₃ yield."
+            "correct": 2,
+            "solution": "\\(K_c=\\dfrac{[NH_3]^2}{[N_2][H_2]^3}=\\dfrac{1^2}{1\\times2^3}=0.125\\). Coefficients become exponents."
           },
           {
-            "question": "What is Le Chatelier's principle?",
+            "question": "For N₂ + 3H₂ ⇌ 2NH₃ at equilibrium, the concentrations are [N₂] = 3 M, [H₂] = 4 M and [NH₃] = 6 M. What is K_c?",
             "options": [
-              "Catalysts increase reaction rate",
-              "Equilibrium shifts to oppose changes",
-              "All reactions are reversible",
-              "Entropy always increases",
-              "Enthalpy is conserved"
+              "5.333",
+              "2.4",
+              "3",
+              "0.5",
+              "0.1875"
             ],
-            "correct": 1,
-            "solution": "Le Chatelier's principle: if a system at equilibrium is disturbed, it shifts to counteract the change and restore equilibrium."
-          },
-          {
-            "question": "Which of the following affects the position of equilibrium but not the equilibrium constant?",
-            "options": [
-              "Temperature",
-              "Pressure",
-              "Catalyst",
-              "Both B and C",
-              "All of the above"
-            ],
-            "correct": 3,
-            "solution": "Pressure and catalyst affect equilibrium position but not K. Only temperature changes K."
+            "correct": 4,
+            "solution": "\\(K_c=\\dfrac{[NH_3]^2}{[N_2][H_2]^3}=\\dfrac{6^2}{3\\times4^3}=0.1875\\). Coefficients become exponents."
           },
           {
             "question": "At 50 °C the ionic product of water is \\(K_w = 5.5 \\times 10^{-14}\\). What is the pH of pure water at this temperature, and is it neutral?",
@@ -32598,28 +32598,28 @@ const subjects = [
             "solution": "In pure water \\([\\text{H}^+] = [\\text{OH}^-] = \\sqrt{5.5 \\times 10^{-14}} = 2.3 \\times 10^{-7}\\) mol/L, so \\(\\text{pH} = 6.63\\). Water is still neutral because \\([\\text{H}^+] = [\\text{OH}^-]\\). Neutral means equal concentrations, not pH 7."
           },
           {
-            "question": "What is the relationship between Kp and Kc for the reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g)?",
+            "question": "For N₂ + 3H₂ ⇌ 2NH₃ at equilibrium, the concentrations are [N₂] = 2 M, [H₂] = 4 M and [NH₃] = 6 M. What is K_c?",
             "options": [
-              "Kp = Kc",
-              "Kp = Kc(RT)^Δn",
-              "Kp = Kc/RT",
-              "Kp = Kc × RT",
-              "Kp = Kc(RT)^2"
+              "0.2813",
+              "2.571",
+              "1.5",
+              "3.556",
+              "0.75"
             ],
-            "correct": 1,
-            "solution": "Kp = Kc(RT)^Δn, where Δn = moles of gas products - moles of gas reactants = 2 - 4 = -2."
+            "correct": 0,
+            "solution": "\\(K_c=\\dfrac{[NH_3]^2}{[N_2][H_2]^3}=\\dfrac{6^2}{2\\times4^3}=0.2813\\). Coefficients become exponents."
           },
           {
-            "question": "Which of the following statements about heterogeneous equilibrium is correct?",
+            "question": "The solubility product of a salt AB (such as AgCl) is K_sp = \\(1\\times10^{-8}\\). What is its molar solubility in pure water?",
             "options": [
-              "All phases must be the same",
-              "Solids and liquids are not included in K expression",
-              "Only gases are included",
-              "Solids are included but liquids are not",
-              "Concentration of solids is constant"
+              "\\(10^{-4}\\text{ M}\\)",
+              "\\(10^{-8}\\text{ M}\\)",
+              "\\(1e-8\\text{ M}\\)",
+              "\\(10^{-3}\\text{ M}\\)",
+              "\\(2\\times10^{-4}\\text{ M}\\)"
             ],
-            "correct": 1,
-            "solution": "In heterogeneous equilibrium, pure solids and liquids are not included in the equilibrium constant expression."
+            "correct": 0,
+            "solution": "For AB: K_sp = s·s = s², so \\(s=\\sqrt{K_{sp}}=10^{-4}\\) M."
           },
           {
             "question": "For A + B ⇌ C, \\(K_c = 4.0\\). A mixture has \\([\\text{A}] = 0.50\\), \\([\\text{B}] = 0.50\\) and \\([\\text{C}] = 0.60\\) mol/L. What is \\(Q\\) and which way does the reaction go?",
@@ -32634,16 +32634,16 @@ const subjects = [
             "solution": "\\(Q = [\\text{C}]/([\\text{A}][\\text{B}]) = 0.60/0.25 = 2.4\\). Since \\(Q < K_c\\) there is too little product, so the reaction moves to the right (towards C) until \\(Q = K_c\\)."
           },
           {
-            "question": "In the reaction A + B ⇌ C + D, if the concentration of C is increased:",
+            "question": "For N₂ + 3H₂ ⇌ 2NH₃ at equilibrium, the concentrations are [N₂] = 1 M, [H₂] = 3 M and [NH₃] = 1 M. What is K_c?",
             "options": [
-              "Equilibrium shifts right",
-              "Equilibrium shifts left",
-              "No change",
-              "Kc increases",
-              "Rate of forward reaction increases"
+              "0.1",
+              "0.3333",
+              "27",
+              "0.03704",
+              "0.1111"
             ],
-            "correct": 1,
-            "solution": "Adding product C shifts equilibrium left to consume the added C, producing more A and B."
+            "correct": 3,
+            "solution": "\\(K_c=\\dfrac{[NH_3]^2}{[N_2][H_2]^3}=\\dfrac{1^2}{1\\times3^3}=0.03704\\). Coefficients become exponents."
           },
           {
             "question": "\\(K_{sp}\\) of PbI<sub>2</sub> is \\(4.0 \\times 10^{-9}\\). What is its molar solubility in pure water?",
@@ -32670,40 +32670,40 @@ const subjects = [
             "solution": "NO<sub>2</sub> formed is 0.20 mol/L, which uses 0.10 mol/L of N<sub>2</sub>O<sub>4</sub>. So \\([\\text{N}_2\\text{O}_4] = 0.50 - 0.10 = 0.40\\) mol/L. \\(K_c = [\\text{NO}_2]^2/[\\text{N}_2\\text{O}_4] = 0.04/0.40 = 0.10\\)."
           },
           {
-            "question": "In the reaction 2NO₂(g) ⇌ N₂O₄(g), what effect does increasing volume have?",
+            "question": "The solubility product of a salt AB₂ (such as CaF₂) is K_sp = \\(4\\times10^{-12}\\). What is its molar solubility in pure water?",
             "options": [
-              "Equilibrium shifts toward NO₂",
-              "Equilibrium shifts toward N₂O₄",
-              "No change",
-              "Kc changes",
-              "Reaction stops"
+              "\\(10^{-5}\\text{ M}\\)",
+              "\\(2\\times10^{-4}\\text{ M}\\)",
+              "\\(10^{-3}\\text{ M}\\)",
+              "\\(10^{-8}\\text{ M}\\)",
+              "\\(10^{-4}\\text{ M}\\)"
+            ],
+            "correct": 4,
+            "solution": "For AB₂: K_sp = s·(2s)² = 4s³, so \\(s=\\sqrt[3]{K_{sp}/4}=10^{-4}\\) M."
+          },
+          {
+            "question": "For N₂ + 3H₂ ⇌ 2NH₃ at equilibrium, the concentrations are [N₂] = 3 M, [H₂] = 3 M and [NH₃] = 6 M. What is K_c?",
+            "options": [
+              "3",
+              "0.4444",
+              "2.25",
+              "1.333",
+              "0.6667"
+            ],
+            "correct": 1,
+            "solution": "\\(K_c=\\dfrac{[NH_3]^2}{[N_2][H_2]^3}=\\dfrac{6^2}{3\\times3^3}=0.4444\\). Coefficients become exponents."
+          },
+          {
+            "question": "The solubility product of a salt AB₂ (such as CaF₂) is K_sp = \\(4\\times10^{-15}\\). What is its molar solubility in pure water?",
+            "options": [
+              "\\(10^{-5}\\text{ M}\\)",
+              "\\(10^{-6}\\text{ M}\\)",
+              "\\(10^{-4}\\text{ M}\\)",
+              "\\(4e-15\\text{ M}\\)",
+              "\\(2\\times10^{-5}\\text{ M}\\)"
             ],
             "correct": 0,
-            "solution": "Increasing volume decreases pressure, shifting equilibrium toward the side with more moles of gas (left: 2 moles NO₂ vs right: 1 mole N₂O₄)."
-          },
-          {
-            "question": "What is the effect of adding an inert gas at constant volume?",
-            "options": [
-              "Equilibrium shifts right",
-              "Equilibrium shifts left",
-              "No effect on equilibrium",
-              "Kc changes",
-              "Reaction rate increases"
-            ],
-            "correct": 2,
-            "solution": "Adding inert gas at constant volume does not change partial pressures of reactants/products, so equilibrium is unaffected."
-          },
-          {
-            "question": "Which of the following affects the rate at which equilibrium is reached?",
-            "options": [
-              "Temperature only",
-              "Catalyst only",
-              "Both temperature and catalyst",
-              "Neither temperature nor catalyst",
-              "Pressure only"
-            ],
-            "correct": 2,
-            "solution": "Both temperature (affects rate constant) and catalyst (lowers activation energy) affect how quickly equilibrium is reached."
+            "solution": "For AB₂: K_sp = s·(2s)² = 4s³, so \\(s=\\sqrt[3]{K_{sp}/4}=10^{-5}\\) M."
           },
           {
             "question": "2SO<sub>2</sub>(g) + O<sub>2</sub>(g) ⇌ 2SO<sub>3</sub>(g), \\(\\Delta H\\) is negative. Which set of changes would <b>all</b> increase the equilibrium yield of SO<sub>3</sub>?",
@@ -32730,16 +32730,16 @@ const subjects = [
             "solution": "By Le Chatelier's principle: (1) Pressure: Reactants have 4 moles of gas and products have 2 moles. Increasing pressure shifts equilibrium toward the side with fewer gas moles (the right). (2) Temperature: The forward reaction is exothermic (releases heat). Decreasing temperature shifts equilibrium in the direction that produces heat (the right)."
           },
           {
-            "question": "What is the correct mathematical relationship between K_p and K_c for the gas-phase reaction: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g)?",
+            "question": "For the equilibrium N₂(g) + 3H₂(g) ⇌ 2NH₃(g), ΔH < 0: increasing the pressure — what is the effect?",
             "options": [
-              "K_p = K_c(RT)⁻¹",
-              "K_p = K_c(RT)¹",
-              "K_p = K_c(RT)²",
-              "K_p = K_c",
-              "K_p = K_c(RT)⁻²"
+              "shifts right (the system replaces CO₂)",
+              "shifts left (the reaction is exothermic) and lowers K",
+              "has no effect on the position (equal gas moles)",
+              "shifts right (fewer gas moles: 4 → 2)",
+              "shifts left and increases K"
             ],
-            "correct": 0,
-            "solution": "The relationship is K_p = K_c(RT)^(Δn), where Δn = (moles of gaseous products) - (moles of gaseous reactants). Here, Δn = 2 - (2 + 1) = 2 - 3 = -1. Therefore, K_p = K_c(RT)⁻¹."
+            "correct": 3,
+            "solution": "Le Chatelier: the system opposes the change. Increasing the pressure shifts right (fewer gas moles: 4 → 2)."
           },
           {
             "question": "For the reaction PCl₅(g) ⇌ PCl₃(g) + Cl₂(g), the equilibrium constant K_c = 0.040 M at a given temperature. If a container holds [PCl₅] = 0.50 M, [PCl₃] = 0.10 M, and [Cl₂] = 0.10 M, in which direction will the reaction proceed?",
@@ -32814,16 +32814,16 @@ const subjects = [
             "solution": "A catalyst accelerates both the forward and reverse rates by the exact same factor by lowering activation energy equally in both directions. It does not alter the thermodynamic energies of reactants or products, meaning it has zero effect on the equilibrium constant K or the equilibrium yield."
           },
           {
-            "question": "At 448 °C, the equilibrium constant for the reaction H₂(g) + I₂(g) ⇌ 2HI(g) is K_c = 50. What is the value of K_p for this reaction at the same temperature?",
+            "question": "For the equilibrium CaCO₃(s) ⇌ CaO(s) + CO₂(g): removing co₂ — what is the effect?",
             "options": [
-              "50",
-              "50 × (0.0821 × 721)",
-              "50 / (0.0821 × 721)",
-              "2500",
-              "√50"
+              "shifts left (more gas moles)",
+              "shifts right (fewer gas moles: 4 → 2)",
+              "shifts left (the reaction is exothermic) and lowers K",
+              "shifts left and increases K",
+              "shifts right (the system replaces CO₂)"
             ],
-            "correct": 0,
-            "solution": "Δn = moles of gaseous products - moles of gaseous reactants = 2 - (1 + 1) = 0. Since K_p = K_c(RT)^(Δn) and (RT)⁰ = 1, K_p = K_c = 50."
+            "correct": 4,
+            "solution": "Le Chatelier: the system opposes the change. Removing CO₂ shifts right (the system replaces CO₂)."
           },
           {
             "question": "For the reaction 2NO₂(g) (brown) ⇌ N₂O₄(g) (colorless) (ΔH = -57 kJ/mol), what visual change is observed when the gas mixture is plunged into an ice bath?",
@@ -32838,16 +32838,16 @@ const subjects = [
             "solution": "The forward reaction producing N₂O₄ is exothermic. Cooling the system in an ice bath removes heat, which shifts the equilibrium in the exothermic direction (to the right) by Le Chatelier's principle. This increases the concentration of colorless N₂O₄ and decreases the concentration of brown NO₂, causing the mixture to fade."
           },
           {
-            "question": "What is the relationship between the standard Gibbs free energy change (ΔG°) and the equilibrium constant (K) at temperature T?",
+            "question": "For the equilibrium N₂(g) + 3H₂(g) ⇌ 2NH₃(g), ΔH < 0: raising the temperature — what is the effect?",
             "options": [
-              "ΔG° = -RT ln K",
-              "ΔG° = RT ln K",
-              "ΔG° = -nFE° ln K",
-              "K = e^(ΔG° / RT)",
-              "ΔG° = -TΔS° ln K"
+              "shifts right (the system replaces CO₂)",
+              "shifts left (the reaction is exothermic) and lowers K",
+              "shifts right (fewer gas moles: 2 → 1)",
+              "has no effect on the position (equal gas moles)",
+              "shifts left and increases K"
             ],
-            "correct": 0,
-            "solution": "The fundamental thermodynamic link between standard Gibbs free energy change and the equilibrium constant is ΔG° = -RT ln K, which can be rearranged to K = e^(-ΔG° / RT)."
+            "correct": 1,
+            "solution": "Le Chatelier: the system opposes the change. Raising the temperature shifts left (the reaction is exothermic) and lowers K."
           },
           {
             "question": "For a system at chemical equilibrium, which of the following statements is ALWAYS TRUE?",
@@ -33084,16 +33084,16 @@ const subjects = [
             "solution": "Propanal (aldehyde) and propanone (ketone) are both C<sub>3</sub>H<sub>6</sub>O but have different functional groups. Butane/2-methylpropane are chain isomers, the propanols are position isomers, the butenes are geometric isomers, and pentane/cyclopentane have different formulas."
           },
           {
-            "question": "Which of the following has the highest number of structural isomers?",
+            "question": "A molecule has 4 different stereocentres and no internal symmetry. What is the maximum number of stereoisomers?",
             "options": [
-              "C₂H₆",
-              "C₃H₈",
-              "C₄H₁₀",
-              "C₅H₁₂",
-              "C₆H₁₄"
+              "17",
+              "5",
+              "15",
+              "32",
+              "16"
             ],
             "correct": 4,
-            "solution": "As the number of carbons increases, the number of possible structural isomers increases dramatically."
+            "solution": "Maximum number of stereoisomers = 2ⁿ = 2^4 = 16."
           },
           {
             "question": "What is the Cahn-Ingold-Prelog (CIP) system used for?",
@@ -33120,16 +33120,16 @@ const subjects = [
             "solution": "Put two Cl on propane: 1,1-dichloropropane, 1,2-dichloropropane, 1,3-dichloropropane and 2,2-dichloropropane. That is 4."
           },
           {
-            "question": "What is optical activity?",
+            "question": "A molecule has 3 different stereocentres and no internal symmetry. What is the maximum number of stereoisomers?",
             "options": [
-              "The ability to absorb light",
-              "The ability to rotate plane-polarised light",
-              "The ability to emit light",
-              "The ability to reflect light",
-              "The ability to scatter light"
+              "4",
+              "8",
+              "9",
+              "6",
+              "7"
             ],
             "correct": 1,
-            "solution": "Optical activity is the ability of a chiral compound to rotate the plane of plane-polarised light."
+            "solution": "Maximum number of stereoisomers = 2ⁿ = 2^3 = 8."
           },
           {
             "question": "Which of the following compounds has a plane of symmetry?",
@@ -33180,16 +33180,16 @@ const subjects = [
             "solution": "There are two chiral carbons, which would suggest \\(2^2 = 4\\). But the molecule is symmetrical, so one of the isomers is a <b>meso</b> compound (internal mirror plane, optically inactive). The stereoisomers are one pair of enantiomers and the meso form: 3."
           },
           {
-            "question": "Which of the following pairs are enantiomers?",
+            "question": "A molecule has 5 different stereocentres and no internal symmetry. What is the maximum number of stereoisomers?",
             "options": [
-              "Butane and 2-methylpropane",
-              "cis-2-butene and trans-2-butene",
-              "R-2-butanol and S-2-butanol",
-              "Ethanol and methanol",
-              "Propane and cyclopropane"
+              "31",
+              "10",
+              "33",
+              "64",
+              "32"
             ],
-            "correct": 2,
-            "solution": "R-2-butanol and S-2-butanol are non-superimposable mirror images (enantiomers)."
+            "correct": 4,
+            "solution": "Maximum number of stereoisomers = 2ⁿ = 2^5 = 32."
           },
           {
             "question": "What is geometric isomerism?",
@@ -34008,16 +34008,16 @@ const subjects = [
             "solution": "Each peptide bond forms by loss of one water molecule (18 g/mol). Three amino acids make two bonds: \\(3 \\times 75 - 2 \\times 18 = 225 - 36 = 189\\) g/mol."
           },
           {
-            "question": "Which of the following is a secondary alcohol?",
+            "question": "How many moles are there in 92 g of the alcohol C₂H₆O? (C = 12, H = 1, O = 16)",
             "options": [
-              "Methanol",
-              "Ethanol",
-              "2-propanol",
-              "2-methyl-2-propanol",
-              "Phenol"
+              "4232 mol",
+              "4 mol",
+              "1.917 mol",
+              "2 mol",
+              "0.5 mol"
             ],
-            "correct": 2,
-            "solution": "2-propanol has the -OH group on a carbon bonded to two other carbons (secondary carbon)."
+            "correct": 3,
+            "solution": "Molar mass = 2×12 + 6×1 + 16 = 46 g/mol, so n = 92/46 = 2 mol."
           },
           {
             "question": "What is the product when ethanol is oxidised with acidified K₂Cr₂O₇?",
@@ -34044,16 +34044,16 @@ const subjects = [
             "solution": "Butan-2-ol is a <b>secondary</b> alcohol. Oxidation gives a ketone (butanone), and there is no further oxidation because the carbonyl carbon has no H to lose. A primary alcohol would go on to an acid, and a tertiary alcohol would not react."
           },
           {
-            "question": "What is the IUPAC name for CH₃COCH₃?",
+            "question": "How many moles are there in 74 g of the alcohol C₄H₁₀O? (C = 12, H = 1, O = 16)",
             "options": [
-              "Propanal",
-              "Propanone",
-              "Propanol",
-              "Propanoic acid",
-              "Methyl ethyl ketone"
+              "0.9737 mol",
+              "5476 mol",
+              "2 mol",
+              "1.276 mol",
+              "1 mol"
             ],
-            "correct": 1,
-            "solution": "CH₃COCH₃ is propanone (acetone), a ketone with the C=O group in the middle of a 3-carbon chain."
+            "correct": 4,
+            "solution": "Molar mass = 4×12 + 10×1 + 16 = 74 g/mol, so n = 74/74 = 1 mol."
           },
           {
             "question": "Which of the following compounds can undergo oxidation to form a carboxylic acid?",
@@ -34116,16 +34116,16 @@ const subjects = [
             "solution": "Ethanoic acid (pKa ≈ 4.76) is the strongest acid listed. Phenol (pKa ≈ 10) and alcohols (pKa ≈ 16-18) are weaker."
           },
           {
-            "question": "What is the IUPAC name for CH₃CH₂COOH?",
+            "question": "How many moles are there in 222 g of the alcohol C₄H₁₀O? (C = 12, H = 1, O = 16)",
             "options": [
-              "Ethanoic acid",
-              "Propanoic acid",
-              "Butanoic acid",
-              "Formic acid",
-              "Propionic acid"
+              "3.828 mol",
+              "16430 mol",
+              "3 mol",
+              "6 mol",
+              "0.3333 mol"
             ],
-            "correct": 1,
-            "solution": "CH₃CH₂COOH has a 3-carbon chain with a carboxylic acid group. IUPAC name: propanoic acid."
+            "correct": 2,
+            "solution": "Molar mass = 4×12 + 10×1 + 16 = 74 g/mol, so n = 222/74 = 3 mol."
           },
           {
             "question": "Which of the following can be reduced to form a secondary alcohol?",
@@ -34188,16 +34188,16 @@ const subjects = [
             "solution": "Ethanol is soluble in both water (due to -OH group) and organic solvents (due to alkyl chain)."
           },
           {
-            "question": "What is the IUPAC name for CH₃COOCH₂CH₃?",
+            "question": "How many moles are there in 148 g of the alcohol C₄H₁₀O? (C = 12, H = 1, O = 16)",
             "options": [
-              "Methyl ethanoate",
-              "Ethyl ethanoate",
-              "Methyl propanoate",
-              "Ethyl propanoate",
-              "Acetate"
+              "4 mol",
+              "1.947 mol",
+              "10950 mol",
+              "2 mol",
+              "0.5 mol"
             ],
-            "correct": 1,
-            "solution": "CH₃COOCH₂CH₃ is ethyl ethanoate (ethyl acetate), formed from ethanoic acid and ethanol."
+            "correct": 3,
+            "solution": "Molar mass = 4×12 + 10×1 + 16 = 74 g/mol, so n = 148/74 = 2 mol."
           },
           {
             "question": "Which of the following is the most reactive towards nucleophilic addition?",
@@ -34542,16 +34542,16 @@ const subjects = [
         "name": "Hydrocarbons (Alkanes, Alkenes, Alkynes, Aromatics)",
         "questions": [
           {
-            "question": "What is the general formula for alkanes?",
+            "question": "An alkyne has 4 carbon atoms and one triple bond. How many hydrogen atoms does it have?",
             "options": [
-              "CₙH₂ₙ",
-              "CₙH₂ₙ₊₂",
-              "CₙH₂ₙ₋₂",
-              "CₙH₂ₙ₊₁",
-              "CₙH₂ₙ₋₁"
+              "8",
+              "7",
+              "4",
+              "6",
+              "10"
             ],
-            "correct": 1,
-            "solution": "Alkanes have the general formula CₙH₂ₙ₊₂, indicating they are saturated hydrocarbons with only single bonds."
+            "correct": 3,
+            "solution": "A triple bond is two degrees of unsaturation (removes 4 H from the alkane): CₙH₂ₙ₋₂ gives 6 H."
           },
           {
             "question": "1.6 g of methane (\\(M = 16\\)) react with excess chlorine until all hydrogen atoms are replaced: CH<sub>4</sub> + 4Cl<sub>2</sub> → CCl<sub>4</sub> + 4HCl. What mass of HCl (\\(M = 36.5\\)) forms?",
@@ -34578,16 +34578,16 @@ const subjects = [
             "solution": "\\(n(\\text{C}_{12}\\text{H}_{26}) = 1.7/170 = 0.010\\) mol. The ratio is 1 : 2, so \\(n(\\text{C}_2\\text{H}_4) = 0.020\\) mol. Mass \\(= 0.020 \\times 28 = 0.56\\) g."
           },
           {
-            "question": "Which of the following is an aromatic hydrocarbon?",
+            "question": "An alkane has 22 hydrogen atoms. How many sigma (σ) bonds does one molecule contain?",
             "options": [
-              "Cyclohexane",
-              "Cyclohexene",
-              "Benzene",
-              "Hexane",
-              "Cyclopropane"
+              "30",
+              "22",
+              "31",
+              "29",
+              "32"
             ],
             "correct": 2,
-            "solution": "Benzene (C₆H₆) is aromatic with a planar ring structure and delocalised π electrons."
+            "solution": "CₙH₂ₙ₊₂ with n = 10. C–H bonds: 22; C–C bonds: 9. Total σ bonds = 22 + 9 = 31."
           },
           {
             "question": "7.8 g of benzene (\\(M = 78\\)) are nitrated: C<sub>6</sub>H<sub>6</sub> + HNO<sub>3</sub> → C<sub>6</sub>H<sub>5</sub>NO<sub>2</sub> + H<sub>2</sub>O. The yield is 60%. What mass of nitrobenzene (\\(M = 123\\)) is obtained?",
@@ -34614,16 +34614,16 @@ const subjects = [
             "solution": "C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub> → 3CO<sub>2</sub> + 4H<sub>2</sub>O(l). 10 cm<sup>3</sup> of propane use 50 cm<sup>3</sup> of O<sub>2</sub> and give 30 cm<sup>3</sup> of CO<sub>2</sub>. Oxygen left: \\(60 - 50 = 10\\) cm<sup>3</sup>. Gas remaining: \\(30 + 10 = 40\\) cm<sup>3</sup>."
           },
           {
-            "question": "Which of the following has the highest boiling point?",
+            "question": "A cycloalkane has 8 carbon atoms. How many hydrogen atoms does it have?",
             "options": [
-              "Pentane",
-              "2-methylbutane",
-              "2,2-dimethylpropane",
-              "Butane",
-              "Propane"
+              "8",
+              "16",
+              "17",
+              "24",
+              "14"
             ],
-            "correct": 0,
-            "solution": "Pentane has the highest molecular weight and largest surface area for London dispersion forces."
+            "correct": 1,
+            "solution": "A ring removes two hydrogens from the alkane formula CₙH₂ₙ₊₂, so it is CₙH₂ₙ: 16 H."
           },
           {
             "question": "What is the IUPAC name of CH<sub>3</sub>CH=C(CH<sub>3</sub>)CH<sub>2</sub>CH<sub>3</sub>?",
@@ -34650,16 +34650,16 @@ const subjects = [
             "solution": "Aromatic compounds have delocalised π electrons over a ring structure, following Hückel's rule."
           },
           {
-            "question": "What is the product when propene reacts with HBr?",
+            "question": "An alkyne has 8 carbon atoms and one triple bond. How many hydrogen atoms does it have?",
             "options": [
-              "1-bromopropane",
-              "2-bromopropane",
-              "1,2-dibromopropane",
-              "Bromopropane mixture",
-              "No reaction"
+              "8",
+              "18",
+              "12",
+              "15",
+              "14"
             ],
-            "correct": 1,
-            "solution": "According to Markovnikov's rule, HBr adds to propene to give 2-bromopropane."
+            "correct": 4,
+            "solution": "A triple bond is two degrees of unsaturation (removes 4 H from the alkane): CₙH₂ₙ₋₂ gives 14 H."
           },
           {
             "question": "What is the <b>major</b> product when but-1-ene reacts with hydrogen bromide?",
@@ -34710,16 +34710,16 @@ const subjects = [
             "solution": "Benzene undergoes electrophilic aromatic substitution with Br₂/FeBr₃ to form bromobenzene."
           },
           {
-            "question": "Which of the following is the most stable carbocation?",
+            "question": "An alkane has 10 hydrogen atoms. How many sigma (σ) bonds does one molecule contain?",
             "options": [
-              "Primary",
-              "Secondary",
-              "Tertiary",
-              "Methyl",
-              "Vinyl"
+              "16",
+              "10",
+              "11",
+              "13",
+              "14"
             ],
-            "correct": 2,
-            "solution": "Tertiary carbocations are most stable due to hyperconjugation and inductive effects from three alkyl groups."
+            "correct": 3,
+            "solution": "CₙH₂ₙ₊₂ with n = 4. C–H bonds: 10; C–C bonds: 3. Total σ bonds = 10 + 3 = 13."
           },
           {
             "question": "0.10 mol of ethyne, C<sub>2</sub>H<sub>2</sub>, reacts with an excess of bromine. What is the mass of the product? (\\(A_r\\): C 12, H 1, Br 80)",
@@ -34734,40 +34734,40 @@ const subjects = [
             "solution": "Two Br<sub>2</sub> add across the triple bond: C<sub>2</sub>H<sub>2</sub> + 2Br<sub>2</sub> → CHBr<sub>2</sub>CHBr<sub>2</sub>. \\(M = 24 + 2 + 4 \\times 80 = 346\\) g/mol. Mass \\(= 0.10 \\times 346 = 34.6\\) g. (18.8 g would be the mass of 1,2-dibromoethane, from only one Br<sub>2</sub>.)"
           },
           {
-            "question": "Which of the following is a product of petroleum cracking?",
+            "question": "An alkyne has 11 carbon atoms and one triple bond. How many hydrogen atoms does it have?",
             "options": [
-              "Methane",
-              "Ethene",
-              "Benzene",
-              "All of the above",
-              "None of the above"
-            ],
-            "correct": 3,
-            "solution": "Petroleum cracking produces various hydrocarbons including methane, ethene, and benzene."
-          },
-          {
-            "question": "What is the product when ethyne undergoes hydrogenation?",
-            "options": [
-              "Ethene",
-              "Ethane",
-              "Propane",
-              "Butane",
-              "No reaction"
-            ],
-            "correct": 1,
-            "solution": "Complete hydrogenation of ethyne (C₂H₂) with excess H₂ produces ethane (C₂H₆)."
-          },
-          {
-            "question": "Which of the following is the general formula for alkynes?",
-            "options": [
-              "CₙH₂ₙ",
-              "CₙH₂ₙ₊₂",
-              "CₙH₂ₙ₋₂",
-              "CₙH₂ₙ₊₁",
-              "CₙH₂ₙ₋₁"
+              "11",
+              "21",
+              "20",
+              "22",
+              "24"
             ],
             "correct": 2,
-            "solution": "Alkynes have the general formula CₙH₂ₙ₋₂, containing a carbon-carbon triple bond."
+            "solution": "A triple bond is two degrees of unsaturation (removes 4 H from the alkane): CₙH₂ₙ₋₂ gives 20 H."
+          },
+          {
+            "question": "An alkyne has 7 carbon atoms and one triple bond. How many hydrogen atoms does it have?",
+            "options": [
+              "7",
+              "12",
+              "13",
+              "16",
+              "14"
+            ],
+            "correct": 1,
+            "solution": "A triple bond is two degrees of unsaturation (removes 4 H from the alkane): CₙH₂ₙ₋₂ gives 12 H."
+          },
+          {
+            "question": "An alkane has 24 hydrogen atoms. How many sigma (σ) bonds does one molecule contain?",
+            "options": [
+              "35",
+              "32",
+              "24",
+              "33",
+              "34"
+            ],
+            "correct": 4,
+            "solution": "CₙH₂ₙ₊₂ with n = 11. C–H bonds: 24; C–C bonds: 10. Total σ bonds = 24 + 10 = 34."
           },
           {
             "question": "What type of isomerism is possible in alkenes?",
@@ -35052,40 +35052,40 @@ const subjects = [
         "name": "Inorganic Compounds & Nomenclature",
         "questions": [
           {
-            "question": "What is the correct name for Fe₂O₃?",
+            "question": "What is the oxidation number of S in SO₃²⁻?",
             "options": [
-              "Iron(II) oxide",
-              "Iron(III) oxide",
-              "Iron oxide",
-              "Diiron trioxide",
-              "Iron trioxide"
+              "+4",
+              "+3",
+              "+6",
+              "+5",
+              "+8"
             ],
-            "correct": 1,
-            "solution": "Fe₂O₃ is iron(III) oxide because iron is in the +3 oxidation state (2 × +3 + 3 × -2 = 0)."
+            "correct": 0,
+            "solution": "Use O = −2, H = +1 and charge balance (total oxidation numbers = overall charge). Solving for the unknown atom gives +4."
           },
           {
-            "question": "What is the formula for copper(II) sulfate pentahydrate?",
+            "question": "How many atoms are there in one formula unit of the compound formed by K⁺ and NO₃⁻?",
             "options": [
-              "CuSO₄",
-              "CuSO₄·5H₂O",
-              "Cu₂SO₄·5H₂O",
-              "CuSO₄·H₂O",
-              "Cu(SO₄)₂·5H₂O"
-            ],
-            "correct": 1,
-            "solution": "Copper(II) sulfate pentahydrate is CuSO₄·5H₂O, containing 5 water molecules of crystallisation."
-          },
-          {
-            "question": "Which of the following is the correct name for NaNO₃?",
-            "options": [
-              "Sodium nitrite",
-              "Sodium nitrate",
-              "Sodium nitrogen oxide",
-              "Sodium nitrate(V)",
-              "Both B and D"
+              "4",
+              "8",
+              "3",
+              "2",
+              "5"
             ],
             "correct": 4,
-            "solution": "NaNO₃ is sodium nitrate. The oxidation state of nitrogen is +5, so it can also be called sodium nitrate(V)."
+            "solution": "Balance charges: 1 × (K⁺) and 1 × (NO₃⁻). The anion has 4 atom(s), so the total is 1 + 1×4 = 5 atoms."
+          },
+          {
+            "question": "How many atoms are there in one formula unit of the compound formed by Ca²⁺ and PO₄³⁻?",
+            "options": [
+              "6",
+              "11",
+              "5",
+              "16",
+              "13"
+            ],
+            "correct": 4,
+            "solution": "Balance charges: 3 × (Ca²⁺) and 2 × (PO₄³⁻). The anion has 5 atom(s), so the total is 3 + 2×5 = 13 atoms."
           },
           {
             "question": "How many of these four mixtures give a <b>precipitate</b>? KNO<sub>3</sub> + NaCl; AgNO<sub>3</sub> + KCl; BaCl<sub>2</sub> + Na<sub>2</sub>SO<sub>4</sub>; Na<sub>2</sub>CO<sub>3</sub> + CaCl<sub>2</sub>",
@@ -35100,28 +35100,28 @@ const subjects = [
             "solution": "AgCl, BaSO<sub>4</sub> and CaCO<sub>3</sub> are insoluble. In the first mixture all possible products (KCl, NaNO<sub>3</sub>) are soluble, so nothing forms."
           },
           {
-            "question": "What is the correct name for K₂Cr₂O₇?",
+            "question": "What is the oxidation number of N in NO₂?",
             "options": [
-              "Potassium chromate",
-              "Potassium dichromate",
-              "Potassium chromium oxide",
-              "Dipotassium heptoxide",
-              "Potassium chromate(VI)"
-            ],
-            "correct": 1,
-            "solution": "K₂Cr₂O₇ is potassium dichromate, containing the dichromate ion (Cr₂O₇²⁻)."
-          },
-          {
-            "question": "Which of the following is the formula for ammonium sulfate?",
-            "options": [
-              "(NH₄)₂SO₄",
-              "NH₄SO₄",
-              "NH₄₂SO₄",
-              "(NH₄)₂S",
-              "NH₄(SO₄)₂"
+              "+4",
+              "+8",
+              "+5",
+              "+3",
+              "−4"
             ],
             "correct": 0,
-            "solution": "Ammonium sulfate is (NH₄)₂SO₄, with two ammonium ions balancing the -2 charge of sulfate."
+            "solution": "Use O = −2, H = +1 and charge balance (total oxidation numbers = overall charge). Solving for the unknown atom gives +4."
+          },
+          {
+            "question": "How many atoms are there in one formula unit of the compound formed by Mg²⁺ and OH⁻?",
+            "options": [
+              "8",
+              "3",
+              "5",
+              "4",
+              "6"
+            ],
+            "correct": 2,
+            "solution": "Balance charges: 1 × (Mg²⁺) and 2 × (OH⁻). The anion has 2 atom(s), so the total is 1 + 2×2 = 5 atoms."
           },
           {
             "question": "6.2 g of sodium oxide (\\(M = 62\\) g/mol) are added to water and the solution is made up to 500 cm<sup>3</sup>. What is the concentration of hydroxide ions?",
@@ -35136,16 +35136,16 @@ const subjects = [
             "solution": "Na<sub>2</sub>O + H<sub>2</sub>O → 2NaOH. \\(n(\\text{Na}_2\\text{O}) = 6.2/62 = 0.10\\) mol, which gives 0.20 mol of NaOH, i.e. 0.20 mol of OH<sup>-</sup>. In 0.500 L: \\(0.20/0.500 = 0.40\\) mol/L."
           },
           {
-            "question": "Which of the following is the correct formula for magnesium hydroxide?",
+            "question": "What is the oxidation number of C in CH₃OH?",
             "options": [
-              "MgOH",
-              "Mg(OH)₂",
-              "Mg₂OH",
-              "Mg(OH)₃",
-              "MgH₂O"
+              "−2",
+              "−1",
+              "−3",
+              "+2",
+              "0"
             ],
-            "correct": 1,
-            "solution": "Magnesium hydroxide is Mg(OH)₂, with Mg²⁺ and two OH⁻ ions."
+            "correct": 0,
+            "solution": "Use O = −2, H = +1 and charge balance (total oxidation numbers = overall charge). Solving for the unknown atom gives −2."
           },
           {
             "question": "25.0 cm<sup>3</sup> of 0.100 mol/L sulfuric acid are neutralised by solid sodium hydroxide. What mass of NaOH is needed? (\\(M = 40\\) g/mol)",
@@ -35160,28 +35160,28 @@ const subjects = [
             "solution": "H<sub>2</sub>SO<sub>4</sub> + 2NaOH → Na<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O. \\(n(\\text{H}_2\\text{SO}_4) = 0.0250 \\times 0.100 = 2.50 \\times 10^{-3}\\) mol. \\(n(\\text{NaOH}) = 5.00 \\times 10^{-3}\\) mol. Mass \\(= 5.00 \\times 10^{-3} \\times 40 = 0.20\\) g."
           },
           {
-            "question": "What is the correct name for NaClO?",
+            "question": "What is the oxidation number of S in Na₂S₂O₃ (average)?",
             "options": [
-              "Sodium chloride",
-              "Sodium chlorate",
-              "Sodium hypochlorite",
-              "Sodium chlorite",
-              "Sodium perchlorate"
+              "+3",
+              "+1",
+              "−2",
+              "+4",
+              "+2"
             ],
-            "correct": 2,
-            "solution": "NaClO is sodium hypochlorite, containing the hypochlorite ion (ClO⁻) with Cl in +1 oxidation state."
+            "correct": 4,
+            "solution": "Use O = −2, H = +1 and charge balance (total oxidation numbers = overall charge). Solving for the unknown atom gives +2."
           },
           {
-            "question": "Which of the following is the formula for aluminium oxide?",
+            "question": "What is the oxidation number of S in H₂SO₄?",
             "options": [
-              "AlO",
-              "Al₂O₃",
-              "AlO₂",
-              "Al₂O",
-              "Al₃O₂"
+              "−6",
+              "+7",
+              "+8",
+              "+5",
+              "+6"
             ],
-            "correct": 1,
-            "solution": "Aluminium oxide is Al₂O₃, with Al³⁺ and O²⁻ ions (2 × +3 + 3 × -2 = 0)."
+            "correct": 4,
+            "solution": "Use O = −2, H = +1 and charge balance (total oxidation numbers = overall charge). Solving for the unknown atom gives +6."
           },
           {
             "question": "Which pair of reactants <b>cannot</b> be used to prepare zinc sulfate?",
@@ -35196,16 +35196,16 @@ const subjects = [
             "solution": "Zinc is less reactive than sodium, so it cannot displace it from its salt. The other four are an acid reacting with a metal, a base, a carbonate and a hydroxide, and each gives ZnSO<sub>4</sub>."
           },
           {
-            "question": "Which of the following is the formula for sodium phosphate?",
+            "question": "How many atoms are there in one formula unit of the compound formed by Na⁺ and O²⁻?",
             "options": [
-              "NaPO₄",
-              "Na₃PO₄",
-              "Na₂PO₄",
-              "Na₃(PO₄)₂",
-              "Na(PO₄)₃"
+              "2",
+              "6",
+              "1",
+              "3",
+              "4"
             ],
-            "correct": 1,
-            "solution": "Sodium phosphate is Na₃PO₄, with three Na⁺ ions balancing the -3 charge of phosphate (PO₄³⁻)."
+            "correct": 3,
+            "solution": "Balance charges: 2 × (Na⁺) and 1 × (O²⁻). The anion has 1 atom(s), so the total is 2 + 1×1 = 3 atoms."
           },
           {
             "question": "What are the oxidation numbers of the two nitrogen atoms in ammonium nitrate, NH<sub>4</sub>NO<sub>3</sub>?",
@@ -35220,16 +35220,16 @@ const subjects = [
             "solution": "The compound contains NH<sub>4</sub><sup>+</sup> and NO<sub>3</sub><sup>-</sup>. In NH<sub>4</sub><sup>+</sup>: \\(x + 4(+1) = +1\\), so \\(x = -3\\). In NO<sub>3</sub><sup>-</sup>: \\(x + 3(-2) = -1\\), so \\(x = +5\\)."
           },
           {
-            "question": "What is the correct name for Pb(NO₃)₂?",
+            "question": "What is the oxidation number of N in NH₄⁺?",
             "options": [
-              "Lead(I) nitrate",
-              "Lead(II) nitrate",
-              "Lead nitrate",
-              "Lead dinitrate",
-              "Both B and C"
+              "−6",
+              "+3",
+              "−3",
+              "−1",
+              "−4"
             ],
-            "correct": 4,
-            "solution": "Pb(NO₃)₂ is lead(II) nitrate or lead nitrate, with Pb in the +2 oxidation state."
+            "correct": 2,
+            "solution": "Use O = −2, H = +1 and charge balance (total oxidation numbers = overall charge). Solving for the unknown atom gives −3."
           },
           {
             "question": "How many atoms are there in one formula unit of iron(III) sulfate?",
@@ -35244,16 +35244,16 @@ const subjects = [
             "solution": "Iron(III) is Fe<sup>3+</sup> and sulfate is SO<sub>4</sub><sup>2-</sup>, so the formula is Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>. Atoms: \\(2 + 3 \\times (1 + 4) = 17\\)."
           },
           {
-            "question": "What is the correct name for KClO₃?",
+            "question": "How many atoms are there in one formula unit of the compound formed by Na⁺ and NO₃⁻?",
             "options": [
-              "Potassium chloride",
-              "Potassium chlorate",
-              "Potassium hypochlorite",
-              "Potassium chlorite",
-              "Potassium perchlorate"
+              "4",
+              "5",
+              "6",
+              "8",
+              "2"
             ],
             "correct": 1,
-            "solution": "KClO₃ is potassium chlorate, containing the chlorate ion (ClO₃⁻) with Cl in +5 oxidation state."
+            "solution": "Balance charges: 1 × (Na⁺) and 1 × (NO₃⁻). The anion has 4 atom(s), so the total is 1 + 1×4 = 5 atoms."
           },
           {
             "question": "Which row gives the correct name and the oxidation number of chlorine for HClO<sub>4</sub>?",
@@ -35280,16 +35280,16 @@ const subjects = [
             "solution": "The non-metal oxides SO<sub>3</sub>, CO<sub>2</sub> and P<sub>4</sub>O<sub>10</sub> form acids (H<sub>2</sub>SO<sub>4</sub>, H<sub>2</sub>CO<sub>3</sub>, H<sub>3</sub>PO<sub>4</sub>). The metal oxides Na<sub>2</sub>O, MgO and CaO form basic hydroxides."
           },
           {
-            "question": "What is the correct name for Na₂SO₃?",
+            "question": "What is the oxidation number of N in HNO₃?",
             "options": [
-              "Sodium sulfate",
-              "Sodium sulfite",
-              "Sodium sulfide",
-              "Sodium sulfur oxide",
-              "Sodium thiosulfate"
+              "+5",
+              "+6",
+              "−5",
+              "+10",
+              "+4"
             ],
-            "correct": 1,
-            "solution": "Na₂SO₃ is sodium sulfite, containing the sulfite ion (SO₃²⁻) with S in +4 oxidation state."
+            "correct": 0,
+            "solution": "Use O = −2, H = +1 and charge balance (total oxidation numbers = overall charge). Solving for the unknown atom gives +5."
           },
           {
             "question": "What is the systematic IUPAC name of the compound Fe₂(SO₄)₃?",
@@ -35340,16 +35340,16 @@ const subjects = [
             "solution": "Binary acids (acids composed of hydrogen and one non-metal) in aqueous solution are named with the prefix 'hydro-', followed by the root of the non-metal with an '-ic' suffix and the word 'acid': Hydrosulfuric acid. (H₂SO₄ is sulfuric acid; H₂SO₃ is sulfurous acid)."
           },
           {
-            "question": "What is the chemical formula of dinitrogen pentoxide?",
+            "question": "How many atoms are there in one formula unit of the compound formed by K⁺ and OH⁻?",
             "options": [
-              "N₂O₅",
-              "NO₂",
-              "N₂O",
-              "N₅O₂",
-              "N₂O₄"
+              "3",
+              "4",
+              "1",
+              "6",
+              "2"
             ],
             "correct": 0,
-            "solution": "According to covalent prefix nomenclature: 'di-' means 2 (two nitrogen atoms, N₂), and 'pent-' means 5 (five oxygen atoms, O₅). Formula: N₂O₅."
+            "solution": "Balance charges: 1 × (K⁺) and 1 × (OH⁻). The anion has 2 atom(s), so the total is 1 + 1×2 = 3 atoms."
           },
           {
             "question": "Which of the following oxoacids contains chlorine in the +7 oxidation state?",
@@ -35484,16 +35484,16 @@ const subjects = [
             "solution": "Sulfurous acid has sulfur in the +4 oxidation state and formula H₂SO₃ (formed when SO₂ dissolves in water). Sulfuric acid has sulfur in the +6 state and formula H₂SO₄."
           },
           {
-            "question": "What is the formula for lead(IV) oxide?",
+            "question": "What is the oxidation number of Fe in Fe₃O₄ (average)?",
             "options": [
-              "PbO₂",
-              "PbO",
-              "Pb₂O₃",
-              "Pb₃O₄",
-              "PbO₄"
+              "+3",
+              "+8",
+              "+8/3",
+              "+2",
+              "+4"
             ],
-            "correct": 0,
-            "solution": "Lead(IV) indicates the Pb⁴⁺ ion. Oxide is O²⁻. Balancing the charges gives PbO₂ (plumbic oxide). PbO is lead(II) oxide."
+            "correct": 2,
+            "solution": "Use O = −2, H = +1 and charge balance (total oxidation numbers = overall charge). Solving for the unknown atom gives +8/3."
           },
           {
             "question": "What is the name of the compound with the formula N₂O?",
@@ -35628,16 +35628,16 @@ const subjects = [
             "solution": "In manganese dioxide (MnO₂), oxygen has an oxidation number of -2. Balancing neutral charges gives: ox(Mn) + 2(-2) = 0 ⇒ ox(Mn) = +4."
           },
           {
-            "question": "Which, among the following formulas, represents a stable compound?",
+            "question": "How many atoms are there in one formula unit of the compound formed by Mg²⁺ and CO₃²⁻?",
             "options": [
-              "CaCl",
-              "CaO",
-              "Ca₂Cl",
-              "NaCl₂",
-              "NaO"
+              "3",
+              "5",
+              "4",
+              "2",
+              "8"
             ],
             "correct": 1,
-            "solution": "Calcium forms Ca²⁺ and oxygen forms O²⁻, combining in a 1:1 ratio to form the stable ionic lattice compound calcium oxide (CaO)."
+            "solution": "Balance charges: 1 × (Mg²⁺) and 1 × (CO₃²⁻). The anion has 4 atom(s), so the total is 1 + 1×4 = 5 atoms."
           }
         ]
       }
