@@ -575,7 +575,7 @@ addEventListener('keydown',e=>{if(e.key=='Escape')menu(false)});
 // ---------- v2: active nav link ----------
 const NL=[...document.querySelectorAll('.nl a,.nr a:not(.btn)')];
 const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)NL.forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
-['features','platform','guide','pricing','faq','try'].forEach(id=>{const el=document.getElementById(id);if(el)spy.observe(el)});
+['features','platform','shelf','guide','pricing','faq','try'].forEach(id=>{const el=document.getElementById(id);if(el)spy.observe(el)});
 
 // ---------- v2: FAQ smooth accordion (one open at a time) ----------
 if(!RM)document.querySelectorAll('#fq details').forEach(d=>{const s=d.firstElementChild;
