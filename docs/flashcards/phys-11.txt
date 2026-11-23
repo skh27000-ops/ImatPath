@@ -1,0 +1,26 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Physics::Temperature, heat and calorimetry
+#guid column:1
+#tags column:4
+phys11-001	<b>Temperature</b>: what is it?	<b>Temperature</b> is the quantity that tells in which direction <b>heat</b> will flow: from the object at the higher temperature to the one at the lower temperature. Two objects at the same temperature are in <b>thermal equilibrium</b>.	ImatPath Physics definition
+phys11-003	<b>Heat</b>: what is it?	<b>Heat</b> (<i>Q</i>) is the <b>energy transferred</b> between objects because of a <b>temperature difference</b>. It is measured in joules. An object <b>does not "contain" heat</b>. It contains <b>internal energy</b>.	ImatPath Physics definition
+phys11-018	<small>Heat capacity and calorimetry</small><br><b>Water</b><br><i>c (J kg-1 K-1)?</i>	4186 (about 4200)	ImatPath Physics recall
+phys11-019	<small>Heat capacity and calorimetry</small><br><b>Ice</b><br><i>c (J kg-1 K-1)?</i>	2100	ImatPath Physics recall
+phys11-020	<small>Heat capacity and calorimetry</small><br><b>Steam</b><br><i>c (J kg-1 K-1)?</i>	2000	ImatPath Physics recall
+phys11-021	<small>Heat capacity and calorimetry</small><br><b>Aluminium</b><br><i>c (J kg-1 K-1)?</i>	900	ImatPath Physics recall
+phys11-022	<small>Heat capacity and calorimetry</small><br><b>Iron</b><br><i>c (J kg-1 K-1)?</i>	450	ImatPath Physics recall
+phys11-023	<small>Heat capacity and calorimetry</small><br><b>Copper</b><br><i>c (J kg-1 K-1)?</i>	390	ImatPath Physics recall
+phys11-024	<small>Heat capacity and calorimetry</small><br><b>Air</b><br><i>c (J kg-1 K-1)?</i>	1000	ImatPath Physics recall
+phys11-002	Formula to know: <b>Temperature scales</b>	<i>T(K) = θ(<sup>°</sup>C) + 273.15</i><br><i>θ(<sup>°</sup>F) = (9)/(5) θ(<sup>°</sup>C) + 32</i>	ImatPath Physics formula
+phys11-004	Formula to know: <b>Specific heat capacity</b>	<i>Q = mcΔ T</i>	ImatPath Physics formula
+phys11-005	Formula to know: <b>Calorimetry</b>	heat lost = heat gained<br><i>m<sub>1</sub>c<sub>1</sub>(T<sub>1</sub> - T<sub>f</sub>) = m<sub>2</sub>c<sub>2</sub>(T<sub>f</sub> - T<sub>2</sub>)</i>	ImatPath Physics formula
+phys11-006	Formula to know: <b>Solids and liquids expand when heated</b>	Linear expansion: <i>Δ L = α L<sub>0</sub> Δ T</i><br>Volume expansion: <i>Δ V = β V<sub>0</sub> Δ T &nbsp;&nbsp;&nbsp; (β ≈ 3α</i> for solids)	ImatPath Physics formula
+phys11-015	Key points: <b>Basics</b>	• Temperature = average kinetic energy of particles. Heat = energy transferred due to a temperature difference.<br>• <i>T(K) = θ(<sup>°</sup>C) + 273.15</i>. A change of 1 K = a change of 1 °C.<br>• Zeroth law: thermal equilibrium is transitive.	ImatPath Physics summary
+phys11-016	Key points: <b>Heat calculations</b>	• <i>Q = mcΔ T</i>. Water <i>c = 4200</i> J kg<sup>-1</sup> K<sup>-1</sup> (high).<br>• Isolated system: <b>heat lost = heat gained</b>.	ImatPath Physics summary
+phys11-017	Key points: <b>Expansion</b>	• <i>Δ L = α L<sub>0</sub>Δ T</i>, <i>Δ V = β V<sub>0</sub>Δ T</i> (<i>β ≈ 3α</i>).<br>• Water is densest at <b>4 °C</b>.	ImatPath Physics summary
+phys11-007	A 0.25 kg block of copper (<i>c = 390</i> J kg<sup>-1</sup> K<sup>-1</sup>) at 200 °C is dropped into 0.80 kg of water at 20 °C in a 0.10 kg aluminium calorimeter (<i>c = 900</i>). What is the final temperature?<br><br><br>A) 25.1 °C<br>B) 24.9 °C<br>C) 110 °C<br>D) 49.9 °C<br>E) 175 °C	<b>B) 24.9 °C</b><br><br>Heat lost by the copper = heat gained by the water and calorimeter: <i>97.5(200 - T) = (3360 + 90)(T - 20)</i>. So <i>19 500 + 69 000 = 3547.5T</i> and <i>T = 24.9</i> °C. Leaving out the calorimeter gives 24.8 °C, which is slightly wrong.	ImatPath Physics practice
+phys11-009	100 g of a metal at 100 °C is dropped into 200 g of water at 20 °C. The final temperature is 24 °C. What is the specific heat capacity of the metal? (<i>c<sub>water</sub> = 4200</i> J kg<sup>-1</sup> K<sup>-1</sup>)<br><br><br>A) 442 J kg<sup>-1</sup> K<sup>-1</sup><br>B) 336 J kg<sup>-1</sup> K<sup>-1</sup><br>C) 2650 J kg<sup>-1</sup> K<sup>-1</sup><br>D) 221 J kg<sup>-1</sup> K<sup>-1</sup><br>E) 884 J kg<sup>-1</sup> K<sup>-1</sup>	<b>A) 442 J kg<sup>-1</sup> K<sup>-1</sup></b><br><br>Heat gained by water: <i>0.200 × 4200 × 4 = 3360</i> J. Heat lost by metal: <i>0.100 × c × 76</i>. So <i>c = 3360/7.6 = 442</i> J kg<sup>-1</sup> K<sup>-1</sup>.	ImatPath Physics practice
+phys11-011	Steel rails 25 m long are laid at 10 °C. The highest temperature expected is 45 °C (<i>α = 1.2 × 10<sup>-5</sup></i> K<sup>-1</sup>). What is the minimum expansion gap needed for each rail?<br><br><br>A) 1.05 mm<br>B) 3 mm<br>C) 21 mm<br>D) 368 mm<br>E) 10.5 mm	<b>E) 10.5 mm</b><br><br><i>Δ L = α L<sub>0</sub>Δ T = 1.2 × 10<sup>-5</sup> × 25 × 35 = 0.0105</i> m <i>= 10.5</i> mm.	ImatPath Physics practice
+phys11-013	2.0 kg of water at 80 °C, 3.0 kg of water at 20 °C and 5.0 kg of water at 40 °C are mixed in an insulated container. What is the final temperature?<br><br><br>A) 47 °C<br>B) 40 °C<br>C) 60 °C<br>D) 42 °C<br>E) 33 °C	<b>D) 42 °C</b><br><br>Because the specific heat is the same, <i>T = (2.0(80) + 3.0(20) + 5.0(40))/(10) = (160 + 60 + 200)/(10) = 42</i> °C.	ImatPath Physics practice

@@ -135,18 +135,19 @@ const XP = (function () {
       position: fixed;
       bottom: 100px;
       right: 32px;
-      background: #0D9488;
-      color: white;
-      padding: 12px 20px;
+      background: #FFC83D;
+      color: #1B1340;
+      border: 3px solid #1B1340;
+      padding: 10px 20px;
       border-radius: 50px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
+      font-family: 'Bricolage Grotesque', 'Figtree', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
       z-index: 9999;
       display: flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 8px 30px rgba(13,148,136,0.35);
+      box-shadow: 4px 4px 0 #1B1340;
       transform: translateY(20px);
       opacity: 0;
       transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -182,7 +183,7 @@ const XP = (function () {
     overlay.style.cssText = `
       position: fixed; inset: 0; z-index: 10000;
       display: flex; align-items: center; justify-content: center;
-      background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
+      background: rgba(27,19,64,0.7); backdrop-filter: blur(4px);
       animation: xpFadeIn 0.3s ease;
     `;
     overlay.innerHTML = `
@@ -192,21 +193,21 @@ const XP = (function () {
         @keyframes xpSpin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
       </style>
       <div style="
-        background: white; border-radius: 28px; padding: 48px 56px;
-        text-align: center; max-width: 360px; width: 90%;
+        background: white; border: 3px solid #1B1340; border-radius: 28px; padding: 36px 44px;
+        text-align: center; max-width: 380px; width: 90%;
         animation: xpPop 0.4s cubic-bezier(0.22,1,0.36,1);
-        box-shadow: 0 24px 80px rgba(0,0,0,0.3);
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        box-shadow: 8px 8px 0 #6C3BFF;
+        font-family: 'Figtree', sans-serif;
       ">
-        <div style="font-size:4rem;margin-bottom:16px;animation:xpSpin 0.6s ease">⚡</div>
-        <div style="font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0D9488;margin-bottom:8px">Level Up!</div>
-        <div style="font-size:2.8rem;font-weight:800;color:#1A1916;letter-spacing:-2px;margin-bottom:8px">Level ${newLevel}</div>
-        <div style="font-size:0.95rem;color:#5A5750;margin-bottom:28px">You're on fire! Keep studying 🔥</div>
+        <div style="width:120px;margin:0 auto 10px;animation:xpPop 0.6s ease">${window.PIP_SVG ? window.PIP_SVG.replace('class="pip"','class="pip wow"') : '⚡'}</div>
+        <div style="font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#6C3BFF;margin-bottom:8px">Level Up!</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:3.2rem;font-weight:800;color:#1B1340;letter-spacing:-2px;margin-bottom:8px;text-shadow:3px 3px 0 #FFC83D">Level ${newLevel}</div>
+        <div style="font-size:0.95rem;color:#4A4270;margin-bottom:24px">You're on fire! Keep studying 🔥</div>
         <button onclick="this.closest('[style*=inset]').remove()" style="
-          background:#0D9488;color:white;border:none;border-radius:12px;
-          padding:12px 32px;font-family:inherit;font-size:0.95rem;font-weight:700;
-          cursor:pointer;transition:background 0.2s;
-        " onmouseover="this.style.background='#0F766E'" onmouseout="this.style.background='#0D9488'">
+          background:#6C3BFF;color:white;border:3px solid #1B1340;border-radius:99px;
+          padding:11px 32px;font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:800;
+          cursor:pointer;box-shadow:3px 3px 0 #1B1340;transition:transform 0.15s,box-shadow 0.15s;
+        " onmouseover="this.style.transform='translate(2px,2px)';this.style.boxShadow='1px 1px 0 #1B1340'" onmouseout="this.style.transform='';this.style.boxShadow='3px 3px 0 #1B1340'">
           Let's go!
         </button>
       </div>
@@ -231,17 +232,17 @@ const XP = (function () {
         <span style="font-size:1rem">🔥</span>
         <span style="font-weight:800;font-size:0.9rem">${s.streak}</span>
       </span>
-      <span style="width:1px;height:18px;background:rgba(13,148,136,0.2)"></span>
+      <span style="width:1px;height:18px;background:rgba(27,19,64,0.2)"></span>
       <span style="display:flex;align-items:center;gap:5px;">
         <span style="font-size:0.85rem">⚡</span>
         <span style="font-weight:700;font-size:0.85rem">Lv.${s.level}</span>
       </span>
       <span style="
-        width:52px;height:5px;background:#E0DEDB;border-radius:3px;overflow:hidden;
+        width:52px;height:8px;background:#EDE6FF;border:2px solid #1B1340;border-radius:4px;overflow:hidden;
         position:relative;
       ">
         <span style="
-          display:block;height:100%;background:#0D9488;border-radius:3px;
+          display:block;height:100%;background:#6C3BFF;
           width:${pct}%;transition:width 0.5s ease;
         "></span>
       </span>
@@ -261,17 +262,17 @@ const XP = (function () {
       align-items: center;
       gap: 8px;
       background: white;
-      border: 1.5px solid #E0DEDB;
+      border: 3px solid #1B1340;
       border-radius: 50px;
       padding: 6px 14px;
       cursor: default;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: #1A1916;
+      font-family: 'Figtree', sans-serif;
+      color: #1B1340;
       transition: border-color 0.2s;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     `;
-    pill.addEventListener('mouseenter', () => pill.style.borderColor = '#0D9488');
-    pill.addEventListener('mouseleave', () => pill.style.borderColor = '#E0DEDB');
+    pill.addEventListener('mouseenter', () => pill.style.borderColor = '#6C3BFF');
+    pill.addEventListener('mouseleave', () => pill.style.borderColor = '#1B1340');
 
     // Insert before dark mode toggle (first child)
     navRight.insertBefore(pill, navRight.firstChild);

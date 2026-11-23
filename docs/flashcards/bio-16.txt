@@ -1,0 +1,32 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Biology::Mendel's laws & applications
+#guid column:1
+#tags column:4
+bio16-013	<small>Words and the first law</small><br><b>Gene</b><br><i>Meaning?</i>	A segment of DNA that codes for a trait	ImatPath Biology recall
+bio16-014	<small>Words and the first law</small><br><b>Allele</b><br><i>Meaning?</i>	A version of a gene (for example, the allele for round or wrinkled seeds)	ImatPath Biology recall
+bio16-015	<small>Words and the first law</small><br><b>Genotype</b><br><i>Meaning?</i>	The alleles an individual carries (<b>Rr</b>)	ImatPath Biology recall
+bio16-016	<small>Words and the first law</small><br><b>Phenotype</b><br><i>Meaning?</i>	The visible trait (round)	ImatPath Biology recall
+bio16-017	<small>Words and the first law</small><br><b>Dominant</b><br><i>Meaning?</i>	An allele that shows in the phenotype even when only <b>one</b> copy is present (written with a capital letter)	ImatPath Biology recall
+bio16-018	<small>Words and the first law</small><br><b>Recessive</b><br><i>Meaning?</i>	An allele that shows only when <b>two</b> copies are present (small letter)	ImatPath Biology recall
+bio16-019	<small>Words and the first law</small><br><b>Homozygous</b><br><i>Meaning?</i>	Two identical alleles (<b>RR</b> or <b>rr</b>)	ImatPath Biology recall
+bio16-020	<small>Words and the first law</small><br><b>Heterozygous</b><br><i>Meaning?</i>	Two different alleles (<b>Rr</b>)	ImatPath Biology recall
+bio16-021	<small>Words and the first law</small><br><b>R</b><br><i>R · r?</i>	<b>R:</b> RR<br><b>r:</b> Rr	ImatPath Biology recall
+bio16-022	<small>Words and the first law</small><br><b>r</b><br><i>R · r?</i>	<b>R:</b> Rr<br><b>r:</b> rr	ImatPath Biology recall
+bio16-023	<small>Beyond simple dominance</small><br><b>A</b><br><i>Possible genotypes?</i>	I<sup>A</sup>I<sup>A</sup> or I<sup>A</sup>i	ImatPath Biology recall
+bio16-024	<small>Beyond simple dominance</small><br><b>B</b><br><i>Possible genotypes?</i>	I<sup>B</sup>I<sup>B</sup> or I<sup>B</sup>i	ImatPath Biology recall
+bio16-025	<small>Beyond simple dominance</small><br><b>AB</b><br><i>Possible genotypes?</i>	I<sup>A</sup>I<sup>B</sup>	ImatPath Biology recall
+bio16-026	<small>Beyond simple dominance</small><br><b>O</b><br><i>Possible genotypes?</i>	ii	ImatPath Biology recall
+bio16-027	<small>Words and the first law</small><br><b>Phenotype ratio</b>	<b>3 round : 1 wrinkled</b>	ImatPath Biology key idea
+bio16-028	<small>Probability</small><br><b>Multiplication rule</b>	the probability of <b>two independent events both</b> happening is the <b>product</b>. P(boy then girl) = 1/2 × 1/2 = 1/4.	ImatPath Biology key idea
+bio16-029	<small>Probability</small><br><b>Addition rule</b>	the probability of <b>either of two exclusive outcomes</b> is the <b>sum</b>. P(Rr from a heterozygous cross) = P(Rr) + P(rR) = 1/4 + 1/4 = 1/2.	ImatPath Biology key idea
+bio16-030	<small>Answers & explanations</small><br><b>Segregation</b>	alleles separate in gametes. <b>Independent assortment</b>: different genes sort independently (if unlinked).	ImatPath Biology key idea
+bio16-001	Formula to know: <b>Dihybrid cross</b>	9 round yellow : 3 round green : 3 wrinkled yellow : 1 wrinkled green	ImatPath Biology formula
+bio16-010	Key points: <b>Terms and laws</b>	• Genotype vs phenotype. Homozygous vs heterozygous. Dominant shows with one copy.<br>• <b>Segregation</b>: alleles separate in gametes. <b>Independent assortment</b>: different genes sort independently (if unlinked).	ImatPath Biology summary
+bio16-011	Key points: <b>Crosses</b>	• <b>Aa × Aa → 3 : 1</b> (genotypes 1 : 2 : 1). <b>Dihybrid → 9 : 3 : 3 : 1</b>.<br>• <b>Test cross</b> with the homozygous recessive.<br>• Probabilities: <b>multiply</b> for "and", <b>add</b> for "or".	ImatPath Biology summary
+bio16-012	Key points: <b>Variations</b>	• <b>Incomplete dominance</b> (intermediate, 1 : 2 : 1), <b>codominance</b> (both shown, AB blood).<br>• ABO: I<sup>A</sup>, I<sup>B</sup> codominant, both dominant over i.	ImatPath Biology summary
+bio16-002	Two plants heterozygous for two independent genes (AaBb × AaBb) are crossed. What is the probability that an offspring shows the dominant trait for A and the recessive trait for B?<br><br><br>A) 9/16<br>B) 3/16<br>C) 1/16<br>D) 6/16<br>E) 3/4	<b>B) 3/16</b><br><br>P(dominant for A) <i>= 3/4</i> and P(recessive for B, bb) <i>= 1/4</i>. For independent genes multiply: <i>3/4 × 1/4 = 3/16</i>.	ImatPath Biology practice
+bio16-004	Snapdragon flower colour shows incomplete dominance: red (RR) × white (rr) gives pink (Rr). A pink plant is crossed with a white plant. What are the expected offspring?<br><br><br>A) 1/2 pink and 1/2 white<br>B) All pink<br>C) 1/2 red and 1/2 white<br>D) 1 red : 2 pink : 1 white<br>E) 3/4 pink and 1/4 white	<b>A) 1/2 pink and 1/2 white</b><br><br>Rr × rr gives Rr (pink) and rr (white) in equal numbers.	ImatPath Biology practice
+bio16-006	Two carriers of albinism (Aa) have two children. What is the probability that the first is unaffected and the second is albino?<br><br><br>A) 1/16<br>B) 1/4<br>C) 9/16<br>D) 3/8<br>E) 3/16	<b>E) 3/16</b><br><br>P(unaffected) <i>= 3/4</i> and P(albino) <i>= 1/4</i>. The events are independent: <i>3/4 × 1/4 = 3/16</i>.	ImatPath Biology practice
+bio16-008	In an F2 generation of 929 pea plants from a monohybrid cross of purple (dominant) and white flowers, how many white-flowered plants would you expect?<br><br><br>A) About 697<br>B) About 464<br>C) About 310<br>D) About 232<br>E) About 929	<b>D) About 232</b><br><br>Segregation gives a 3 : 1 ratio, so 1/4 of the plants are white (homozygous recessive): <i>929/4 = 232</i>. (Mendel observed 224.)	ImatPath Biology practice

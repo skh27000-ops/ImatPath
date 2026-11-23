@@ -1,0 +1,23 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Biology::Genetic code & protein synthesis
+#guid column:1
+#tags column:4
+bio19-017	<b>genetic code</b>: what is it?	The <b>genetic code</b> is the set of rules that translates mRNA into protein.	ImatPath Biology term
+bio19-013	<small>From gene to protein</small><br><b>Sugar</b><br><i>DNA · RNA?</i>	<b>DNA:</b> Deoxyribose<br><b>RNA:</b> <b>Ribose</b>	ImatPath Biology recall
+bio19-014	<small>From gene to protein</small><br><b>Bases</b><br><i>DNA · RNA?</i>	<b>DNA:</b> A, T, G, C<br><b>RNA:</b> A, <b>U</b>, G, C	ImatPath Biology recall
+bio19-015	<small>From gene to protein</small><br><b>Strands</b><br><i>DNA · RNA?</i>	<b>DNA:</b> Two<br><b>RNA:</b> Usually <b>one</b>	ImatPath Biology recall
+bio19-016	<small>From gene to protein</small><br><b>Types</b><br><i>DNA · RNA?</i>	<b>DNA:</b> Genome<br><b>RNA:</b> <b>mRNA, tRNA, rRNA</b>	ImatPath Biology recall
+bio19-018	<small>Transcription</small><br><b>Initiation</b>	RNA polymerase binds to the <b>promoter</b>, a DNA sequence just before the gene. In eukaryotes, <b>transcription factors</b> must bind first.	ImatPath Biology key idea
+bio19-019	<small>Transcription</small><br><b>Elongation</b>	the enzyme unwinds a short stretch of DNA and adds RNA nucleotides.	ImatPath Biology key idea
+bio19-020	<small>Transcription</small><br><b>Termination</b>	at a <b>terminator</b> sequence the mRNA is released.	ImatPath Biology key idea
+bio19-021	<small>Transcription</small><br><b>Splicing</b>	<b>introns</b> (non-coding sequences) are removed and <b>exons</b> (coding sequences) are joined. A complex called the <b>spliceosome</b> does this. <b>Alternative splicing</b> joins exons in different combinations, so <b>one gene can make several proteins</b>.	ImatPath Biology key idea
+bio19-001	Formula to know: <b>The central dogma</b>	DNA → (transcription) → mRNA → (translation) → protein	ImatPath Biology formula
+bio19-010	Key points: <b>Code</b>	• <b>DNA → mRNA → protein</b>. Codon = 3 bases. <b>AUG</b> start; <b>UAA, UAG, UGA</b> stop. Redundant, universal, unambiguous.	ImatPath Biology summary
+bio19-011	Key points: <b>Transcription</b>	• <b>RNA polymerase</b> reads the template 3′→5′, makes mRNA 5′→3′. Promoter, elongation, terminator.<br>• Eukaryotes: <b>5′ cap</b>, <b>poly-A tail</b>, <b>splicing</b> (introns out, exons joined). Alternative splicing = many proteins from one gene.	ImatPath Biology summary
+bio19-012	Key points: <b>Translation</b>	• Ribosome (rRNA + protein), <b>tRNA</b> (anticodon), A, P, E sites. Initiation (AUG), elongation (peptide bonds), termination (release factor).	ImatPath Biology summary
+bio19-002	The template strand of a gene reads 3'–TACGGACTT–5'. What is the mRNA sequence?<br><br><br>A) 5'–UACGGACUU–3'<br>B) 5'–AUGCCUGAA–3'<br>C) 5'–ATGCCTGAA–3'<br>D) 3'–AUGCCUGAA–5'<br>E) 5'–TACGGACTT–3'	<b>B) 5'–AUGCCUGAA–3'</b><br><br>The mRNA is complementary to the template and antiparallel: T→A, A→U, C→G, G→C. <i>3'</i>-TAC GGA CTT-<i>5'</i> gives <i>5'</i>-AUG CCU GAA-<i>3'</i>. RNA has uracil, not thymine.	ImatPath Biology practice
+bio19-004	A eukaryotic gene is transcribed into a pre-mRNA of 4500 nucleotides. The mature mRNA has 1500 nucleotides (ignoring cap and tail). What percentage of the pre-mRNA is removed?<br><br><br>A) 67%<br>B) 33%<br>C) 50%<br>D) 75%<br>E) 25%	<b>A) 67%</b><br><br><i>4500 - 1500 = 3000</i> nucleotides (introns) are removed by splicing. <i>3000/4500 = 0.667</i>, i.e. 67%.	ImatPath Biology practice
+bio19-006	A codon in mRNA is 5'–AUG–3'. What is the sequence of the matching tRNA anticodon?<br><br><br>A) 5'–UAC–3'<br>B) 3'–TAC–5'<br>C) 3'–AUG–5'<br>D) 5'–AUG–3'<br>E) 3'–UAC–5'	<b>E) 3'–UAC–5'</b><br><br>The anticodon is complementary and antiparallel to the codon: A→U, U→A, G→C. It is written <i>3'</i>-UAC-<i>5'</i>. It carries methionine and is the initiator tRNA at the start codon.	ImatPath Biology practice
+bio19-008	How does RNA polymerase differ from DNA polymerase?<br><br><br>A) RNA polymerase reads the template 5' to 3'<br>B) RNA polymerase adds nucleotides to a 5' end<br>C) RNA polymerase makes DNA<br>D) RNA polymerase does not need a primer to start a new chain<br>E) RNA polymerase has proofreading as good as DNA polymerase	<b>D) RNA polymerase does not need a primer to start a new chain</b><br><br>Both enzymes add nucleotides to the 3' end (the chain grows 5' → 3'), reading the template 3' → 5'. RNA polymerase can start from scratch at a promoter, but DNA polymerase needs an RNA primer.	ImatPath Biology practice

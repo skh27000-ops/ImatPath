@@ -1,0 +1,40 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Biology::Organic molecules & functions
+#guid column:1
+#tags column:4
+bio09-035	<b>Monosaccharides</b>: what is it?	<b>Monosaccharides</b> are single sugars with the formula (CH<sub>2</sub>O)<sub>n</sub>.	ImatPath Biology term
+bio09-036	<b>triglyceride</b>: what is it?	A <b>triglyceride</b> is <b>one glycerol + three fatty acids</b>, joined by <b>ester bonds</b> (three condensation reactions).	ImatPath Biology term
+bio09-014	<small>Carbohydrates</small><br><b>Maltose</b><br><i>Made from?</i>	glucose + glucose	ImatPath Biology recall
+bio09-015	<small>Carbohydrates</small><br><b>Sucrose</b><br><i>Made from?</i>	glucose + fructose	ImatPath Biology recall
+bio09-016	<small>Carbohydrates</small><br><b>Lactose</b><br><i>Made from?</i>	glucose + galactose	ImatPath Biology recall
+bio09-017	<small>Carbohydrates</small><br><b>Starch</b><br><i>Monomer and bonds · Where and what it does?</i>	<b>Monomer and bonds:</b> α-glucose, α-1,4 (amylose, coiled) and α-1,6 branches (amylopectin)<br><b>Where and what it does:</b> <b>Energy store in plants</b>. Compact and insoluble	ImatPath Biology recall
+bio09-018	<small>Carbohydrates</small><br><b>Glycogen</b><br><i>Monomer and bonds · Where and what it does?</i>	<b>Monomer and bonds:</b> α-glucose, highly <b>branched</b><br><b>Where and what it does:</b> <b>Energy store in animals and fungi</b>, in liver and muscle. Many ends, so it is broken down quickly	ImatPath Biology recall
+bio09-019	<small>Carbohydrates</small><br><b>Cellulose</b><br><i>Monomer and bonds · Where and what it does?</i>	<b>Monomer and bonds:</b> <b>β-glucose</b>, β-1,4, alternate units flipped<br><b>Where and what it does:</b> Main part of the <b>plant cell wall</b>. Chains lie side by side held by hydrogen bonds into strong fibres	ImatPath Biology recall
+bio09-020	<small>Carbohydrates</small><br><b>Chitin</b><br><i>Monomer and bonds · Where and what it does?</i>	<b>Monomer and bonds:</b> Modified glucose with nitrogen<br><b>Where and what it does:</b> Fungal cell walls and the <b>exoskeleton</b> of insects	ImatPath Biology recall
+bio09-021	<small>Proteins</small><br><b>Primary</b><br><i>What it is · Held by?</i>	<b>What it is:</b> The <b>sequence</b> of amino acids<br><b>Held by:</b> Peptide bonds	ImatPath Biology recall
+bio09-022	<small>Proteins</small><br><b>Secondary</b><br><i>What it is · Held by?</i>	<b>What it is:</b> Local folding into an <b>α-helix</b> or <b>β-pleated sheet</b><br><b>Held by:</b> <b>Hydrogen bonds</b> along the backbone	ImatPath Biology recall
+bio09-023	<small>Proteins</small><br><b>Tertiary</b><br><i>What it is · Held by?</i>	<b>What it is:</b> The full <b>3-D shape</b> of one polypeptide<br><b>Held by:</b> Hydrogen bonds, <b>ionic</b> bonds, <b>disulfide bridges</b> (between cysteines), <b>hydrophobic</b> interactions	ImatPath Biology recall
+bio09-024	<small>Proteins</small><br><b>Quaternary</b><br><i>What it is · Held by?</i>	<b>What it is:</b> <b>Several polypeptides</b> together (for example haemoglobin, with 4 chains)<br><b>Held by:</b> The same kinds of bonds	ImatPath Biology recall
+bio09-025	<small>Proteins</small><br><b>Enzymes</b><br><i>Example?</i>	Amylase, DNA polymerase	ImatPath Biology recall
+bio09-026	<small>Proteins</small><br><b>Structure</b><br><i>Example?</i>	Collagen, keratin	ImatPath Biology recall
+bio09-027	<small>Proteins</small><br><b>Transport</b><br><i>Example?</i>	Haemoglobin (carries O<sub>2</sub>)	ImatPath Biology recall
+bio09-028	<small>Proteins</small><br><b>Defence</b><br><i>Example?</i>	Antibodies	ImatPath Biology recall
+bio09-029	<small>Proteins</small><br><b>Signalling</b><br><i>Example?</i>	Insulin, receptors	ImatPath Biology recall
+bio09-030	<small>Proteins</small><br><b>Movement</b><br><i>Example?</i>	Actin and myosin	ImatPath Biology recall
+bio09-031	<small>Nucleic acids</small><br><b>Sugar</b><br><i>DNA · RNA?</i>	<b>DNA:</b> <b>Deoxyribose</b><br><b>RNA:</b> <b>Ribose</b>	ImatPath Biology recall
+bio09-032	<small>Nucleic acids</small><br><b>Bases</b><br><i>DNA · RNA?</i>	<b>DNA:</b> A, T, G, C<br><b>RNA:</b> A, <b>U</b>, G, C	ImatPath Biology recall
+bio09-033	<small>Nucleic acids</small><br><b>Strands</b><br><i>DNA · RNA?</i>	<b>DNA:</b> <b>Two</b> (double helix)<br><b>RNA:</b> Usually <b>one</b>	ImatPath Biology recall
+bio09-034	<small>Nucleic acids</small><br><b>Job</b><br><i>DNA · RNA?</i>	<b>DNA:</b> Stores genetic information<br><b>RNA:</b> Carries and uses it (mRNA, tRNA, rRNA)	ImatPath Biology recall
+bio09-037	<small>Building big molecules</small><br><b>Condensation reaction</b>	two monomers join and a molecule of <b>water is released</b>. This builds polymers.	ImatPath Biology key idea
+bio09-038	<small>Building big molecules</small><br><b>Hydrolysis</b>	water is <b>added</b> to break a bond. This splits polymers, for example in digestion.	ImatPath Biology key idea
+bio09-009	Key points: <b>Polymers</b>	• <b>Condensation</b> joins monomers and releases water. <b>Hydrolysis</b> adds water to break the bond.	ImatPath Biology summary
+bio09-010	Key points: <b>Carbohydrates</b>	• Glucose → maltose, sucrose, lactose (disaccharides). Starch (plants), <b>glycogen</b> (animals), <b>cellulose</b> (β-glucose, cell wall).	ImatPath Biology summary
+bio09-011	Key points: <b>Lipids</b>	• Triglyceride = glycerol + 3 fatty acids (ester bonds). Saturated vs unsaturated. Phospholipids form bilayers. Cholesterol is a steroid.	ImatPath Biology summary
+bio09-012	Key points: <b>Proteins</b>	• Amino acids joined by <b>peptide bonds</b>. <b>Primary</b> sequence, <b>secondary</b> helix and sheet, <b>tertiary</b> 3-D, <b>quaternary</b> several chains.	ImatPath Biology summary
+bio09-013	Key points: <b>Nucleic acids</b>	• Nucleotide = sugar + phosphate + base. DNA: deoxyribose, T, double. RNA: ribose, U, single.	ImatPath Biology summary
+bio09-001	A polypeptide of 150 amino acids is made in a ribosome. How many peptide bonds and how many water molecules are produced?<br><br><br>A) 150 bonds and 150 water molecules<br>B) 149 bonds and 149 water molecules<br>C) 149 bonds and 150 water molecules<br>D) 151 bonds and 149 water molecules<br>E) 75 bonds and 75 water molecules	<b>B) 149 bonds and 149 water molecules</b><br><br>Each peptide bond is made by a condensation reaction that releases one water. Joining <i>n</i> amino acids in a chain needs <i>n - 1</i> bonds, so <i>150 - 1 = 149</i>.	ImatPath Biology practice
+bio09-003	How many water molecules are released in the formation of two triglyceride molecules from glycerol and fatty acids?<br><br><br>A) 6<br>B) 2<br>C) 3<br>D) 4<br>E) 9	<b>A) 6</b><br><br>Each triglyceride has 3 ester bonds, and each bond forms by condensation with the release of 1 water: <i>3</i> per triglyceride. For two: <i>2 × 3 = 6</i>.	ImatPath Biology practice
+bio09-005	In sickle cell disease, a single amino acid (glutamic acid) is replaced by valine. Which level of protein structure is changed directly by the mutation, and which bonds stabilise an α helix?<br><br><br>A) Secondary structure; disulfide bridges<br>B) Tertiary structure; peptide bonds<br>C) Quaternary structure; ionic bonds<br>D) Primary structure; ester bonds<br>E) Primary structure; hydrogen bonds between backbone groups	<b>E) Primary structure; hydrogen bonds between backbone groups</b><br><br>The mutation changes the amino acid sequence, which is the primary structure. The α helix (secondary structure) is held by hydrogen bonds between the C=O and N–H groups of the backbone, not by side chains.	ImatPath Biology practice
+bio09-007	How many of these molecules are steroids: oestrogen, testosterone, insulin, cortisol, adrenaline?<br><br><br>A) 2<br>B) 4<br>C) 5<br>D) 3<br>E) 1	<b>D) 3</b><br><br>Oestrogen, testosterone and cortisol are steroids (made from cholesterol, with four fused rings). Insulin is a protein hormone and adrenaline is derived from the amino acid tyrosine.	ImatPath Biology practice

@@ -4,21 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Syllabus Checklist — ImatPath</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-700.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="description" content="Track your theory review and practice completion across all 88 official IMAT chapters — Reviewed & Practiced statuses, linked to Question Bank practice.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" href="favicon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
 
 <!-- Core Supabase & Auth Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="supabase.js"></script>
 <script src="auth-guard.js"></script>
+<script src="xp-system.js"></script>
+<script src="biology-syllabus.js"></script>
+<script src="science-syllabus.js"></script>
 
 <script>
 // ── Fast Dark Mode Init ──
@@ -28,298 +31,296 @@
 })();
 </script>
 
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="app-shell.css">
+<script src="mascot.js"></script>
 <style>
-:root{
-  --cream:#f6f1e6; --cream-2:#efe7d5; --card:#fffdf7;
-  --ink:#152720; --ink-soft:#42574d;
-  --g900:#0a241b; --g800:#0e2f23; --g700:#164534; --g600:#1e5b44;
-  --terra:#c1591f; --terra-d:#a84a15;
-  --gold:#d9a441; --gold-l:#e9c070;
-  --line:#e2d8c2; --line-d:#23443a;
-  --ok:#2e7d4f; --ok-bg:#e9f5ed; --ok-border:#a3d9b5;
-  --bad:#b3402e;
-  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
-  --sh-sm:0 1px 2px rgba(21,39,32,.06),0 4px 14px rgba(21,39,32,.06);
-  --sh-md:0 2px 6px rgba(21,39,32,.08),0 14px 34px rgba(21,39,32,.10);
+/* Checklist — page-specific */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes chipin{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
+
+/* ============ STATS ============ */
+.stats{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:20px;margin-bottom:40px}
+.stcard{border:var(--bw) solid var(--ink);border-radius:var(--r);background:var(--sky-l);box-shadow:var(--sh);padding:22px 26px;position:relative;transition:transform .3s var(--e),box-shadow .3s var(--e)}
+.stcard:nth-child(2){background:var(--sun-l)}
+.stcard:hover{transform:translate(-3px,-4px);box-shadow:8px 9px 0 var(--ink)}
+.stcard .v{font:800 clamp(2.4rem,3.4vw,3.2rem)/1 var(--f-disp);letter-spacing:-.05em}
+.stcard .v small{font-size:.42em;color:var(--ink-2);font-weight:700;letter-spacing:0}
+.stcard .v.pop{animation:tickpop .45s var(--e)}
+.stcard .l{font:800 .95rem var(--f-disp);letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:10px 0 14px;display:block}
+.kbar{height:18px;border-radius:99px;background:#fff;border:2.5px solid var(--ink);overflow:hidden}
+.kbar i{display:block;height:100%;width:0;transition:width .9s var(--e)}
+.kbar.g i{background:var(--mint)}
+.kbar.gold i{background:var(--sun)}
+.stcard .s{font:700 .8rem var(--f-body);letter-spacing:0;color:var(--ink-2);margin-top:10px;display:block;text-transform:none}
+.stcard .ic{position:absolute;top:18px;right:18px;color:var(--ink);opacity:.55}
+.stcard.dark{background:var(--grape);background-image:radial-gradient(rgba(255,255,255,.14) 1.6px,transparent 1.6px);background-size:22px 22px;color:#fff;display:flex;align-items:center;gap:24px}
+.stcard.dark .l{color:var(--sun)}
+.stcard.dark .s{color:rgba(255,255,255,.85)}
+.gauge{width:150px;flex:none}
+.gauge .base{fill:none;stroke:rgba(255,255,255,.25);stroke-width:12;stroke-linecap:round}
+.gauge .val{fill:none;stroke:var(--sun);stroke-width:12;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset 1.2s var(--e)}
+
+/* ============ LAYOUT ============ */
+.grid12{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start}
+.span4{grid-column:span 4}
+.span8{grid-column:span 8}
+/* left column */
+.leftcol{position:sticky;top:120px;display:flex;flex-direction:column;gap:22px}
+.panel{border:var(--bw) solid var(--ink);border-radius:var(--r);background:#fff;box-shadow:var(--sh);padding:22px;margin-bottom:0}
+.panel h3{font-size:1.4rem;margin-bottom:6px}
+.panel .sub{font-size:.9rem;color:var(--ink-2)}
+.srow{display:grid;grid-template-columns:78px 1fr auto;gap:10px;align-items:center;font:700 .82rem var(--f-body);letter-spacing:0;margin-top:13px;color:var(--ink-2)}
+.srow .tr{height:14px;border-radius:99px;background:var(--lav);border:2.5px solid var(--ink);overflow:hidden}
+.srow .tr i{display:block;height:100%;width:0;background:var(--mint);transition:width .8s var(--e)}
+.srow .ct{text-align:right;white-space:nowrap;font-size:.75rem}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font:700 .78rem var(--f-body);letter-spacing:0;text-transform:none;color:var(--ink-2)}
+.legend span{display:flex;align-items:center;gap:7px}
+.legend i{width:14px;height:14px;border-radius:5px;border:2.5px solid var(--ink)}
+.legend .lg i{background:var(--mint)}
+.legend .ld i{background:var(--sun)}
+.note-card{border:3px dashed var(--ink-3);border-radius:var(--r-s);background:var(--sun-l);padding:14px 16px;font-size:.88rem;color:var(--ink-2);display:flex;gap:12px;align-items:flex-start}
+.note-card::before{content:"!";flex:none;width:24px;height:24px;border-radius:50%;background:var(--sun);border:2.5px solid var(--ink);color:var(--ink);display:grid;place-items:center;font:800 .9rem var(--f-disp);margin-top:1px}
+/* right column */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tab{font:800 .9rem var(--f-disp);letter-spacing:-.01em;padding:8px 16px;border-radius:99px;border:var(--bw) solid var(--ink);background:#fff;color:var(--ink);transition:transform .15s,box-shadow .15s,background .15s;text-transform:none;display:inline-flex;align-items:center;gap:9px}
+.tab .cnt{font:800 .72rem var(--f-body);background:var(--lav);border-radius:99px;padding:1px 8px;border:2px solid var(--ink)}
+.tab:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--ink)}
+.tab.act{background:var(--grape);color:#fff;box-shadow:3px 3px 0 var(--ink)}
+.tab.act .cnt{background:var(--sun);color:var(--ink)}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cchip{border:var(--bw) solid var(--ink);border-radius:var(--r-s);background:#fff;box-shadow:var(--sh-s);padding:14px 16px;display:flex;flex-direction:column;gap:12px;animation:chipin .5s var(--e) backwards;transition:transform .25s var(--e),box-shadow .25s var(--e)}
+.cchip:hover{transform:translate(-2px,-4px);box-shadow:6px 8px 0 var(--ink)}
+.cc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.cc-name{font:700 1rem/1.35 var(--f-body)}
+.cc-link{flex:none;width:30px;height:30px;border:var(--bw) solid var(--ink);border-radius:50%;background:var(--sun);display:grid;place-items:center;font:800 .9rem var(--f-disp);color:var(--ink);text-decoration:none;transition:transform .2s var(--e)}
+.cc-link:hover{background:var(--coral);color:#fff;transform:translate(2px,-2px) rotate(8deg)}
+.cc-togs{display:flex;gap:8px;flex-wrap:wrap}
+.tog{font:700 .78rem var(--f-body);letter-spacing:0;text-transform:none;padding:5px 13px;border-radius:99px;border:2.5px solid var(--ink);background:var(--cream);color:var(--ink);display:inline-flex;align-items:center;gap:7px;transition:transform .15s,background .15s}
+.tog i{width:10px;height:10px;border-radius:50%;border:2px solid currentColor;transition:.2s;font-style:normal}
+.tog:hover{background:#fff}
+.tog:active{transform:scale(.9)}
+.tog.r.on{background:var(--mint);color:var(--ink)}
+.tog.r.on i{background:var(--ink);border-color:var(--ink)}
+.tog.p.on{background:var(--sun);color:var(--ink)}
+.tog.p.on i{background:var(--ink);border-color:var(--ink)}
+.chips-foot{margin-top:18px;font:700 .85rem var(--f-body);letter-spacing:0;text-transform:none;color:var(--ink-2);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:1180px){
+  .stats{grid-template-columns:1fr 1fr}
+  .stcard.dark{grid-column:span 2}
+  .span4,.span8{grid-column:span 12}
+  .leftcol{position:static}
 }
-
-[data-theme="dark"] {
-  --cream: #111714; --cream-2: #191f1c; --card: #1a211d;
-  --ink: #e2ddd3; --ink-soft: #a4b3a9;
-  --line: #2a3530; --line-d: #2a3530;
-  --g900: #0a0e0c; --g800: #0f1613;
-  --ok-bg: rgba(46,125,79,.18); --ok-border: rgba(74,222,128,.35);
+@media(max-width:900px){
+  .chips{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .stcard.dark{grid-column:span 1}
 }
+/* ck2-marker */
+/* Checklist v2 — sticker album */
+.top{margin-bottom:22px}
+.cd-chip{display:none}
+.ecg-div{display:none}
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;transition:background 0.3s, color 0.3s;}
-a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-svg{display:block}
-::selection{background:var(--terra);color:#fff}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+/* mastery card first, big, with Pip */
+.stats{grid-template-columns:1.25fr 1fr 1fr;align-items:stretch}
+.stcard.dark{order:-1;min-height:230px;position:relative;padding-right:150px}
+.stcard.dark .v{font-size:clamp(3.4rem,5vw,4.6rem);color:var(--sun);text-shadow:3px 3px 0 var(--ink)}
+.ck-pip{position:absolute;right:12px;bottom:-12px;width:140px;pointer-events:none;animation:pipbob 3.4s ease-in-out infinite}
+.stcard:not(.dark){display:flex;flex-direction:column;justify-content:flex-end}
 
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,164,65,.5)}50%{box-shadow:0 0 0 6px rgba(217,164,65,0)}}
-@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+/* sticker cards */
+.chips{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.bigcard{appearance:none;font:inherit;color:var(--ink);text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:6px;position:relative;min-height:136px;padding:16px 44px 16px 16px;background:#fff;border:var(--bw) solid var(--ink);border-radius:var(--r-s);box-shadow:var(--sh-s);transition:transform .2s,background .2s}
+.bigcard:hover{transform:translate(-2px,-2px);background:var(--mint-l,#E3FAF3)}
+.bigcard:focus-visible,.big-back:focus-visible{outline:3px solid var(--grape);outline-offset:3px}
+.bc-t{font:800 1.1rem/1.25 var(--f-disp);letter-spacing:-.01em}
+.bc-m{font-weight:700;font-size:.82rem;color:var(--ink-2)}
+.bc-a{position:absolute;right:16px;top:50%;translate:0 -50%;font:800 1.4rem var(--f-disp)}
+.big-head{grid-column:1/-1;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.big-head h3{font:800 1.3rem/1.2 var(--f-disp);letter-spacing:-.02em;margin:0}
+.big-back{appearance:none;font:800 .85rem var(--f-body);color:var(--ink);cursor:pointer;background:#fff;border:var(--bw) solid var(--ink);border-radius:99px;padding:8px 14px;box-shadow:3px 3px 0 var(--ink)}
+.cchip{position:relative;overflow:hidden;min-height:136px;justify-content:space-between}
+.cchip::before{content:"";position:absolute;right:-18px;top:-18px;width:64px;height:64px;border-radius:50%;background:var(--lav);border:var(--bw) solid var(--ink);opacity:.0;transition:opacity .3s}
+.cchip:has(.tog.r.on){background:var(--sky-l)}
+.cchip:has(.tog.p.on){background:var(--sun-l)}
+.cchip:has(.tog.r.on):has(.tog.p.on){background:var(--mint-l)}
+.cchip:has(.tog.r.on):has(.tog.p.on)::after{content:"MASTERED";position:absolute;right:10px;bottom:10px;rotate:-8deg;font:.5rem var(--f-px);color:var(--coral);border:2.5px solid var(--coral);border-radius:8px;padding:3px 7px;background:#fff;pointer-events:none;animation:stamp .5s var(--e)}
+@keyframes stamp{0%{transform:scale(2.2);opacity:0}60%{transform:scale(.9);opacity:1}100%{transform:scale(1)}}
+.cc-name{font:800 1.02rem/1.25 var(--f-disp);letter-spacing:-.01em}
 
-/* ============ SIDEBAR ============ */
-.sidebar{position:fixed;inset:0 auto 0 0;width:264px;background:var(--g900);color:var(--cream);display:flex;flex-direction:column;z-index:60;transition:transform .35s ease}
-.logo{display:flex;align-items:center;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em;padding:26px 26px 22px;color:var(--cream)}
-.logo em{font-style:italic;color:var(--gold-l)}
-.sb-nav{display:flex;flex-direction:column;gap:4px;padding:6px 14px}
-.sb-nav a{display:flex;align-items:center;gap:13px;padding:12px 14px;border-radius:12px;font-size:14.5px;font-weight:500;color:#9db3a5;position:relative;transition:.2s}
-.sb-nav a svg{flex:none;opacity:.85}
-.sb-nav a:hover{color:var(--cream);background:rgba(246,241,230,.06)}
-.sb-nav a.active{color:var(--cream);background:rgba(217,164,65,.12);font-weight:600}
-.sb-nav a.active::before{content:"";position:absolute;left:-14px;top:9px;bottom:9px;width:3px;border-radius:3px;background:var(--gold)}
-.sb-spacer{flex:1}
+/* left column panels */
+.panel{border-radius:24px}
+.tabs{position:sticky;top:96px;z-index:20;background:var(--cream);padding:6px 0 10px;margin-top:-6px}
 
-.access-card{margin:0 16px 14px;padding:16px 18px;border:1px solid rgba(217,164,65,.45);border-radius:16px;background:linear-gradient(150deg,rgba(217,164,65,.14),rgba(217,164,65,.04));position:relative;overflow:hidden;cursor:pointer;transition:transform .2s;}
-.access-card:hover{transform:translateY(-2px);}
-.access-card::after{content:"";position:absolute;top:-30px;right:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.25),transparent 70%)}
-.access-card .ac-l{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);display:flex;align-items:center;gap:7px;margin-bottom:6px}
-.access-card .ac-l i{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-.access-card b{font-family:var(--serif);font-size:16.5px;font-weight:600;display:block;color:var(--cream)}
-.access-card span{font-size:12px;color:#9db3a5}
+@media(max-width:1180px){.stats{grid-template-columns:1fr 1fr}.stcard.dark{grid-column:span 2}}
+@media(max-width:900px){.stats{grid-template-columns:minmax(0,1fr)}.stcard{min-width:0}.stcard.dark{grid-column:auto;padding-right:24px;flex-wrap:wrap}.ck-pip{position:static;display:block;width:100px;margin:0 0 -14px auto}.tabs{position:static}}
 
-.user-row{display:flex;align-items:center;gap:12px;padding:16px 20px;border-top:1px solid var(--line-d)}
-.avatar{width:38px;height:38px;border-radius:12px;background:var(--g700);border:1.5px solid var(--line-d);display:grid;place-items:center;font-weight:700;font-size:15px;color:var(--gold-l)}
-.user-row .u-t{flex:1;min-width:0}
-.user-row .u-t b{display:block;font-size:14px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.user-row .u-t small{font-size:11.5px;color:#8fa897}
-.logout{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;color:#8fa897;transition:.2s;cursor:pointer;}
-.logout:hover{color:#ff9c7a;background:rgba(179,64,46,.15)}
-
-/* ============ MAIN ============ */
-.main{margin-left:264px;min-height:100vh;display:flex;flex-direction:column}
-.topbar{position:sticky;top:0;z-index:40;background:rgba(246,241,230,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:18px;transition:background 0.3s, border-color 0.3s;}
-[data-theme="dark"] .topbar { background: rgba(17,23,20,.85); }
-.burger{display:none;flex-direction:column;gap:5px;padding:8px;margin-right:4px}
-.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px}
-.topbar h1{font-size:clamp(1.3rem,2.2vw,1.7rem)}
-.topbar p{font-size:13px;color:var(--ink-soft);max-width:520px}
-.top-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-.date-chip{font-size:12.5px;font-weight:600;color:var(--ink-soft);background:var(--card);border:1px solid var(--line);padding:8px 15px;border-radius:999px}
-.count-chip{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;background:var(--g800);color:var(--cream);padding:8px 16px;border-radius:999px;white-space:nowrap}
-.count-chip b{color:var(--gold-l);font-family:var(--serif);font-size:15px}
-.count-chip .fl{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-
-.nav-dark-toggle{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);display:flex;align-items:center;justify-content:center;font-size:14px;transition:.25s;cursor:pointer;}
-.nav-dark-toggle:hover{border-color:var(--terra);color:var(--terra)}
-[data-theme="dark"] .nav-dark-toggle{border-color:var(--line);color:var(--gold)}
-
-.content-container{padding:32px 36px 60px;max-width:960px;width:100%;margin:0 auto}
-
-/* ============ KPI ROW ============ */
-.kpi-row{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:14px;margin-bottom:28px;}
-.kpi{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--sh-sm);display:flex;flex-direction:column;gap:4px;}
-.kpi-val{font-family:var(--serif);font-size:32px;font-weight:600;line-height:1;color:var(--ink);}
-.kpi-lbl{font-size:13px;font-weight:700;color:var(--ink);margin-top:6px;}
-.kpi-sub{font-size:11.5px;color:var(--ink-soft);}
-
-/* ============ CHECKLIST MAIN CARD ============ */
-.checklist-wrapper{border-radius:24px;overflow:hidden;box-shadow:var(--sh-md);animation:fadeInUp .45s ease;}
-.checklist-head{background:var(--g900);color:var(--cream);padding:24px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:1px solid rgba(255,255,255,0.06);}
-.checklist-head h2{font-size:22px;color:var(--cream);font-family:var(--serif);}
-.checklist-head p{font-size:13px;color:#9db3a5;}
-
-.checklist-body{background:var(--card);border:1.5px solid var(--line);border-top:none;border-radius:0 0 24px 24px;padding:28px 32px 32px;}
-
-/* Subject Tabs */
-.subject-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
-.sub-tab{padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600;border:1.5px solid var(--line);background:var(--cream);color:var(--ink-soft);cursor:pointer;transition:all .2s;}
-.sub-tab:hover{border-color:var(--terra);color:var(--ink);}
-.sub-tab.active{background:var(--g900);color:var(--cream);border-color:var(--g900);box-shadow:0 4px 12px rgba(10,36,27,.2);}
-[data-theme="dark"] .sub-tab.active{background:var(--g800);border-color:var(--gold);color:var(--gold-l);}
-
-/* Chapter Rows */
-.chapter-rows{display:flex;flex-direction:column;gap:4px;}
-.ch-row{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--line);transition:background .15s;gap:14px;}
-.ch-row:last-child{border-bottom:none;}
-.ch-row:hover{background:rgba(217,164,65,.04);border-radius:12px;}
-.ch-info{flex:1;min-width:0;cursor:pointer;}
-.ch-title{font-size:15px;font-weight:600;color:var(--ink);transition:color .2s;}
-.ch-title:hover{color:var(--terra);}
-.ch-meta{font-size:12px;color:var(--ink-soft);margin-top:2px;}
-.ch-badges{display:flex;align-items:center;gap:10px;flex-shrink:0;}
-
-/* Toggle Pills */
-.status-pill{padding:6px 15px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--line);background:var(--cream);color:var(--ink-soft);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px;user-select:none;}
-.status-pill:hover{border-color:var(--ink-soft);}
-.status-pill.active{background:var(--ok-bg);border-color:var(--ok-border);color:var(--ok);}
-
-/* Practice Action */
-.ch-practice-btn{font-size:13px;font-weight:700;color:var(--terra);padding:6px 12px;border-radius:8px;transition:.2s;display:inline-flex;align-items:center;gap:5px;}
-.ch-practice-btn:hover{background:rgba(193,89,31,.08);}
-
-/* Footer Note */
-.checklist-footer-note{margin-top:28px;padding:18px 22px;border-radius:16px;background:var(--cream);border:1px solid var(--line);font-size:13.5px;color:var(--ink-soft);line-height:1.6;}
-.checklist-footer-note b{color:var(--terra);}
-
-.toast{position:fixed;bottom:30px;right:30px;padding:14px 22px;border-radius:12px;background:var(--card);border:1px solid var(--line);box-shadow:var(--sh-md);font-size:14px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:10px;transform:translateY(100px);opacity:0;transition:all .35s;z-index:200;}
-.toast.show{transform:translateY(0);opacity:1;}
-
-.overlay{position:fixed;inset:0;background:rgba(10,36,27,.5);z-index:55;opacity:0;pointer-events:none;transition:.3s}
-.overlay.show{opacity:1;pointer-events:auto}
-
-@media(max-width:960px){
-  .sidebar{transform:translateX(-100%)}
-  .sidebar.open{transform:none;box-shadow:0 0 60px rgba(0,0,0,.4)}
-  .main{margin-left:0}
-  .burger{display:flex}
-  .topbar{padding:16px 20px}
-  .content-container{padding:22px 20px 40px}
-  .ch-row{flex-direction:column;align-items:flex-start;gap:10px;}
-  .ch-badges{width:100%;justify-content:flex-start;}
-}
 </style>
+<script src="exam-date.js"></script>
 </head>
 <body>
+<div class="noise" aria-hidden="true"></div>
+<div class="scrim" aria-hidden="true"></div>
+<div class="toast" id="toast" role="alert" aria-live="polite"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span id="toastText">Status saved</span></div>
 
-<div class="overlay" id="overlay"></div>
-
-<!-- ================= SIDEBAR ================= -->
-<aside class="sidebar" id="sidebar">
-  <a class="logo" href="index.html">Imat<em>Path</em></a>
-  <nav class="sb-nav">
-    <a href="dashboard.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
-      Dashboard</a>
-    <a class="active" href="checklist.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-      Syllabus Checklist</a>
-    <a href="question-bank.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-      Question Bank</a>
-    <a href="mock-exam.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg>
-      Mock Exams</a>
-    <a href="roadmap.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
-      IMAT Past Papers</a>
-    <a href="analytics.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M8 17v-6M13 17V7M18 17v-4"/></svg>
-      Analytics</a>
-  </nav>
-  <div class="sb-spacer"></div>
-  
-  <div class="access-card" id="accessPlanCard" onclick="window.location.href='dashboard.html'">
-    <span class="ac-l"><i></i><span id="accessPlanTitle">Free Plan</span></span>
-    <b id="accessPlanStatus">Full access</b>
-    <span id="accessPlanSub">All features included · no payment required</span>
-  </div>
-  
-  <div class="user-row">
-    <span class="avatar" id="userAvatar">U</span>
-    <div class="u-t">
-      <b id="userName">User</b>
-      <small>IMAT 2026 candidate</small>
-    </div>
-    <a class="logout" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+<aside class="side" id="side">
+  <div class="tricolore" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button class="side-x" id="sideX" aria-label="Close menu">✕</button>
+  <div class="side-in">
+    <a class="logo" href="index.html" aria-label="ImatPath home">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
     </a>
+    <nav class="snav" aria-label="Dashboard">
+      <a href="dashboard.html" title="Dashboard"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a><a href="lessons.html" title="Lessons"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.500-2 10-.5V19c-2.500-1.500-6-1.500-10 .5-4-2-7.500-2-10-.5z"/><path d="M12 6v13.500"/></svg>Lessons</a>
+      <a href="flashcards.html" title="Flashcards"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="14" height="14" rx="2.5"/><path d="M17 17v1.5A2.5 2.5 0 0 1 14.5 21h-9A2.5 2.5 0 0 1 3 18.5v-9A2.5 2.5 0 0 1 5.5 7H7"/><path d="M11 10h6"/></svg>Flashcards</a>
+      <a class="act" href="checklist.html" title="Syllabus Checklist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="m8 9 2 2 4-4M8 15h8"/></svg>Syllabus Checklist</a>
+      <a href="question-bank.html" title="Question Bank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.33c-.7.28-.9.87-.9 1.67"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>Question Bank</a>
+      <a href="mock-exam.html" title="Mock Exams"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>Mock Exams</a>
+      <a href="roadmap.html" title="IMAT Past Papers"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/><path d="M9 8h6M9 12h6"/></svg>IMAT Past Papers</a>
+      <a href="analytics.html" title="Analytics"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Analytics</a>
+    </nav>
+    <div class="side-foot">
+      <div class="plan-card">
+        <span class="t"><i></i>IMAT Candidate Access</span>
+        <p>Valid until exam day · Track your progress across all devices.</p>
+      </div>
+      <div class="user-card" id="userCard">
+        <span class="avatar" id="userAvatar">U</span>
+        <span style="flex:1;min-width:0;overflow:hidden"><span class="n" id="userName">User</span><br><span class="r">IMAT 2027 candidate</span></span>
+        <button class="logout-btn" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        </button>
+      </div>
+    </div>
   </div>
 </aside>
 
-<!-- ================= MAIN ================= -->
-<div class="main">
-  <header class="topbar">
-    <div style="display:flex;align-items:center;gap:12px">
-      <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
-      <div>
-        <h1>Syllabus Checklist</h1>
-        <p>Track your theory review and practice completion across all 86 official IMAT chapters.</p>
-      </div>
+<main class="main">
+  <div class="mtop">
+    <a class="logo" href="index.html" style="text-decoration:none">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+  </div>
+
+  <header class="top">
+    <div>
+      <span class="eyebrow" data-rv>The syllabus, chapter by chapter</span>
+      <h1 class="lm"><span>Syllabus <em>Checklist.</em></span></h1>
+      <p class="top-sub" data-rv style="--d:.15s">Track your theory review and practice completion across all 88 official IMAT chapters.</p>
     </div>
-    <div class="top-right">
-      <button class="nav-dark-toggle" id="navDarkToggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-      </button>
-      <span class="date-chip" id="todayChip">—</span>
-      <span class="count-chip"><span class="fl"></span><b id="daysChip">31</b>&nbsp;days to IMAT</span>
+    <div class="cd-chip" data-rv style="--d:.2s" role="timer" aria-label="Countdown to IMAT 2027">
+      <span class="big"><span id="cdDays">356</span><small> days<br>to IMAT</small></span>
+      <div class="cd-boxes">
+        <div class="cd-b"><b id="cdH">--</b><span>hrs</span></div>
+        <div class="cd-b"><b id="cdM">--</b><span>min</span></div>
+        <div class="cd-b"><b id="cdS">--</b><span>sec</span></div>
+      </div>
     </div>
   </header>
 
-  <div class="content-container">
-    <!-- Top KPI Progress Row -->
-    <div class="kpi-row">
-      <div class="kpi">
-        <div class="kpi-val" id="totalReviewedKpi" style="color:var(--ok)">0 / 86</div>
-        <div class="kpi-lbl">Chapters Reviewed</div>
-        <div class="kpi-sub" id="reviewedPctSub">0% theory covered</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-val" id="totalPracticedKpi" style="color:var(--terra)">0 / 86</div>
-        <div class="kpi-lbl">Chapters Practiced</div>
-        <div class="kpi-sub" id="practicedPctSub">0% question practice</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-val" id="overallMasteryKpi">0%</div>
-        <div class="kpi-lbl">Syllabus Mastery</div>
-        <div class="kpi-sub">Combined progress</div>
-      </div>
+  <div class="ecg-div" aria-hidden="true">
+    <svg viewBox="0 0 1200 56" preserveAspectRatio="none"><path class="ecg-path" pathLength="1000" d="M0 30 H120 l14 0 8-16 10 30 8-14 h60 H320 l14 0 8-16 10 30 8-14 h60 H620 l14 0 8-16 10 30 8-14 h60 H920 l14 0 8-16 10 30 8-14 h60 H1200"/></svg>
+  </div>
+
+  <!-- stats -->
+  <div class="stats">
+    <div class="stcard" data-rv>
+      <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+      <span class="v" id="vR">0<small>/ 88</small></span>
+      <span class="l">Chapters Reviewed</span>
+      <div class="kbar g"><i id="barR"></i></div>
+      <span class="s" id="pctR">0% theory covered</span>
     </div>
-
-    <!-- Main Checklist Container -->
-    <div class="checklist-wrapper">
-      <div class="checklist-head">
-        <h2>Your IMAT Test — <span id="currentSubjectTitle">Biology</span></h2>
-        <p>Click a status to toggle it</p>
-      </div>
-
-      <div class="checklist-body">
-        <!-- Subject Filter Tabs -->
-        <div class="subject-tabs" id="subjectTabs"></div>
-
-        <!-- Chapter Rows -->
-        <div class="chapter-rows" id="chapterRows"></div>
-
-        <!-- Footer Note Box -->
-        <div class="checklist-footer-note" id="footerNote">
-          <b>86 chapters</b> across all subjects — each with Reviewed & Practiced status, linked directly to Question Bank practice.
-        </div>
+    <div class="stcard" data-rv style="--d:.1s">
+      <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
+      <span class="v" id="vP">0<small>/ 88</small></span>
+      <span class="l">Chapters Practiced</span>
+      <div class="kbar gold"><i id="barP"></i></div>
+      <span class="s" id="pctP">0% question practice</span>
+    </div>
+    <div class="stcard dark" data-rv style="--d:.2s">
+      <span class="ck-pip" data-pip data-mood="wow" aria-hidden="true"></span>
+      <svg class="gauge" viewBox="0 0 200 118" aria-hidden="true">
+        <path class="base" d="M18 104 A 82 82 0 0 1 182 104" pathLength="100"/>
+        <path class="val" id="gVal" d="M18 104 A 82 82 0 0 1 182 104" pathLength="100"/>
+      </svg>
+      <div>
+        <span class="v" id="vM" style="color:var(--gold)">0<small style="color:rgba(245,241,230,.6)">%</small></span>
+        <span class="l">Syllabus Mastery</span>
+        <span class="s">Combined progress · reviewed + practiced</span>
       </div>
     </div>
   </div>
-</div>
 
-<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastText"></span></div>
+  <div class="grid12">
+    <!-- left -->
+    <div class="leftcol span4">
+      <div class="panel" data-rv>
+        <h3>Your IMAT Test</h3>
+        <p class="sub">Per-subject coverage at a glance.</p>
+        <div id="subjRows"></div>
+        <div class="legend">
+          <span class="lg"><i></i>Reviewed — studied</span>
+          <span class="ld"><i></i>Practiced — proven</span>
+        </div>
+      </div>
+      <div class="note-card" data-rv style="--d:.1s"><span id="noteTotal">106</span> lessons across all subjects — each with Reviewed &amp; Practiced status, linked directly to Question Bank practice.</div>
+      <div class="panel" data-rv style="--d:.15s">
+        <h3>Reading ≠ answering</h3>
+        <p class="sub" style="margin-bottom:16px">A chapter isn't done until you've proven it in the bank. Toggle both statuses honestly.</p>
+        <a class="btn red sm" href="question-bank.html">Open Question Bank <span class="ar">→</span></a>
+        <button class="btn ghost sm" id="resetBtn" style="margin-left:8px">Reset progress</button>
+      </div>
 
-<script src="xp-system.js"></script>
+      <!-- Telegram Community Panel -->
+      <div class="panel" data-rv style="--d:.2s;background:var(--grape);color:#fff">
+        <div style="font-family:var(--f-px);font-size:.62rem;color:var(--sun);display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <i style="width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block;animation:pulse-dot 2s infinite"></i>VIP Community
+        </div>
+        <h4 style="font-family:var(--disp);font-size:18px;margin-bottom:6px;color:#fff">Join Private Telegram</h4>
+        <p style="font-size:12.5px;color:rgba(255,255,255,.9);margin-bottom:14px;line-height:1.5">Connect with IMAT 2027 candidates, discuss high-yield questions, and share study strategies.</p>
+        <a class="btn gold sm" id="vipTgBtn" href="https://t.me/+2JUJEOZ6YzNhNzVk" target="_blank" rel="noopener" style="width:100%">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.15-.03-.21-.02-.09.02-1.5 1.02-4.22 2.79-.4.28-.76.41-1.09.4-.36-.01-1.05-.2-1.56-.37-.63-.2-1.13-.31-1.08-.66.02-.18.27-.37.75-.55 2.92-1.27 4.87-2.11 5.85-2.52 2.78-1.16 3.36-1.36 3.74-1.37.08 0 .28.02.4.12.1.08.13.19.14.27-.01.07.01.21 0 .27z"/></svg>
+          Join Telegram Group <span class="ar">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- right -->
+    <div class="span8">
+      <div class="tabs" id="tabs" data-rv></div>
+      <div class="chips" id="chips"></div>
+      <div class="chips-foot">
+        <span id="footCount">0 / 0 reviewed in this subject</span>
+        <span>Click a status to toggle it</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-line">
+    <span>© 2026 ImatPath. All rights reserved.</span>
+    <span>Not affiliated with Cambridge Assessment or MUR.</span>
+  </div>
+</main>
 
 <script>
 (function(){
 "use strict";
-const $=s=>document.querySelector(s);
-const $$=s=>Array.from(document.querySelectorAll(s));
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ── Dark Mode Toggle & Sync ── */
-window.toggleDarkMode = function() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('imatpath_dark_mode', 'false');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('imatpath_dark_mode', 'true');
-  }
-  updateDarkIcon();
-};
+$('#burger').addEventListener('click',()=>document.body.classList.add('menu'));
+$('#sideX').addEventListener('click',()=>document.body.classList.remove('menu'));
+$('.scrim').addEventListener('click',()=>document.body.classList.remove('menu'));
 
-function updateDarkIcon() {
-  const btn = $('#navDarkToggle');
-  if (btn) {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-  }
-}
-document.addEventListener('DOMContentLoaded', updateDarkIcon);
-
-/* ── Logout Handler ── */
+/* ── User & Auth ── */
 window.handleLogout = async function(e) {
   if (e) e.preventDefault();
-  if (window.ImatAuth) {
+  if (window.ImatAuth && typeof window.ImatAuth.signOut === 'function') {
     await window.ImatAuth.signOut();
   } else {
     localStorage.removeItem('imatpath_user');
@@ -327,277 +328,479 @@ window.handleLogout = async function(e) {
   }
 };
 
-/* ── Sidebar Mobile ── */
-const sb=$("#sidebar"), ov=$("#overlay");
-if ($("#burger")) $("#burger").addEventListener("click",()=>{sb.classList.add("open");ov.classList.add("show");});
-if (ov) ov.addEventListener("click",()=>{sb.classList.remove("open");ov.classList.remove("show");});
+try {
+  const u = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
+  const name = u.full_name || u.name || (u.email ? u.email.split('@')[0] : 'User');
+  const firstName = name.split(' ')[0] || 'User';
+  const initial = firstName.charAt(0).toUpperCase() || 'U';
+  if ($('#userName')) $('#userName').textContent = firstName;
+  if ($('#userAvatar')) $('#userAvatar').textContent = initial;
+} catch(e) {}
 
-/* ── Today & Countdown ── */
-if ($("#todayChip")) {
-  $("#todayChip").textContent = new Date().toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+// Sync Telegram link from configuration if available
+if (window.ImatConfig && window.ImatConfig.TELEGRAM_GROUP_LINK) {
+  const tgBtn = $('#vipTgBtn');
+  if (tgBtn) tgBtn.href = window.ImatConfig.TELEGRAM_GROUP_LINK;
 }
-const examDate = new Date("2026-09-29T09:00:00");
-const diffDays = Math.max(0, Math.ceil((examDate - new Date()) / 864e5));
-if ($("#daysChip")) $("#daysChip").textContent = diffDays;
 
-function showToast(m){
-  const t = $('#toast');
-  if(!t) return;
-  $('#toastText').textContent = m;
+/* Toast feedback */
+function showToast(msg) {
+  const t = $('#toast'), txt = $('#toastText');
+  if (!t || !txt) return;
+  txt.textContent = msg;
   t.classList.add('show');
-  clearTimeout(t._tid);
-  t._tid = setTimeout(() => t.classList.remove('show'), 2500);
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2200);
 }
 
-/* ── Real 86 IMAT Chapters Data (Exact Match from Question Bank) ── */
-const SYLLABUS_DATA = {
-  biology: {
-    id: 'biology',
-    name: 'Biology',
-    section: 'Section 2',
-    chapters: [
-      { id: 'chemistry-of-living-things', name: 'Chemistry of Living Things', qCount: 20 },
-      { id: 'cell-structure-organelles', name: 'Cell Structure & Organelles', qCount: 21 },
-      { id: 'cell-membrane-transport', name: 'Cell Membrane & Transport', qCount: 69 },
-      { id: 'cellular-respiration-glycolysis-krebs', name: 'Cellular Respiration (Glycolysis & Krebs)', qCount: 30 },
-      { id: 'photosynthesis', name: 'Photosynthesis', qCount: 22 },
-      { id: 'cell-division-mitosis-meiosis', name: 'Cell Division (Mitosis & Meiosis)', qCount: 27 },
-      { id: 'molecular-genetics-dna-rna', name: 'Molecular Genetics (DNA & RNA)', qCount: 62 },
-      { id: 'mendelian-genetics-inheritance', name: 'Mendelian Genetics & Inheritance', qCount: 28 },
-      { id: 'evolution-population-genetics', name: 'Evolution & Population Genetics', qCount: 20 },
-      { id: 'animal-tissues-histology', name: 'Animal Tissues & Histology', qCount: 20 },
-      { id: 'human-physiology-cardiovascular', name: 'Human Physiology: Cardiovascular', qCount: 59 },
-      { id: 'human-physiology-respiratory', name: 'Human Physiology: Respiratory', qCount: 20 },
-      { id: 'human-physiology-digestive-excretory', name: 'Human Physiology: Digestive & Excretory', qCount: 21 },
-      { id: 'human-physiology-nervous-endocrine', name: 'Human Physiology: Nervous & Endocrine', qCount: 35 },
-      { id: 'human-physiology-immune-system', name: 'Human Physiology: Immune System', qCount: 28 },
-      { id: 'human-physiology-musculoskeletal', name: 'Human Physiology: Musculoskeletal', qCount: 29 },
-      { id: 'human-physiology-reproductive', name: 'Human Physiology: Reproductive', qCount: 20 },
-      { id: 'sense-organs', name: 'Sense Organs', qCount: 31 },
-      { id: 'embryology-development', name: 'Embryology & Development', qCount: 46 },
-      { id: 'enzymes-metabolism', name: 'Enzymes & Metabolism', qCount: 45 },
-      { id: 'biotechnology-viruses', name: 'Biotechnology & Viruses', qCount: 20 },
-      { id: 'plant-biology', name: 'Plant Biology', qCount: 20 },
-      { id: 'ecology-environment', name: 'Ecology & Environment', qCount: 20 },
-      { id: 'general-biology', name: 'General Biology', qCount: 31 }
-    ]
-  },
-  chemistry: {
-    id: 'chemistry',
-    name: 'Chemistry',
-    section: 'Section 3',
-    chapters: [
-      { id: 'atomic-structure-periodicity', name: 'Atomic Structure & Periodicity', qCount: 25 },
-      { id: 'chemical-bonding-structure', name: 'Chemical Bonding & Structure', qCount: 14 },
-      { id: 'stoichiometry-calculations', name: 'Stoichiometry & Calculations', qCount: 32 },
-      { id: 'acids-bases-ph', name: 'Acids, Bases & pH', qCount: 20 },
-      { id: 'redox-reactions-electrochemistry', name: 'Redox Reactions & Electrochemistry', qCount: 19 },
-      { id: 'organic-chemistry', name: 'Organic Chemistry', qCount: 21 },
-      { id: 'transition-metals-complexes', name: 'Transition Metals & Complexes', qCount: 18 },
-      { id: 'general-chemistry', name: 'General Chemistry', qCount: 21 },
-      { id: 'states-matter-ideal-gas', name: 'States of Matter & Ideal Gas Laws', qCount: 20 },
-      { id: 'solutions-solubility', name: 'Solutions & Solubility', qCount: 20 },
-      { id: 'thermochemistry-kinetics', name: 'Thermochemistry & Reaction Kinetics', qCount: 20 },
-      { id: 'chemical-equilibrium', name: 'Chemical Equilibrium & Le Chatelier\'s Principle', qCount: 20 },
-      { id: 'isomerism-stereochemistry', name: 'Isomerism & Stereochemistry', qCount: 20 },
-      { id: 'organic-reaction-mechanisms', name: 'Organic Reaction Mechanisms', qCount: 20 },
-      { id: 'functional-groups', name: 'Functional Groups (Alcohols, Aldehydes, Acids, Amines)', qCount: 21 },
-      { id: 'hydrocarbons', name: 'Hydrocarbons (Alkanes, Alkenes, Alkynes, Aromatics)', qCount: 20 },
-      { id: 'inorganic-nomenclature', name: 'Inorganic Compounds & Nomenclature', qCount: 20 }
-    ]
-  },
-  physics: {
-    id: 'physics',
-    name: 'Physics',
-    section: 'Section 4',
-    chapters: [
-      { id: 'mechanics-kinematics', name: 'Mechanics: Kinematics', qCount: 28 },
-      { id: 'mechanics-dynamics', name: 'Mechanics: Dynamics & Forces', qCount: 22 },
-      { id: 'mechanics-energy-work', name: 'Mechanics: Energy & Work', qCount: 25 },
-      { id: 'waves-oscillations', name: 'Waves & Oscillations', qCount: 25 },
-      { id: 'electricity-circuits', name: 'Electricity & Circuits', qCount: 24 },
-      { id: 'magnetism-electromagnetism', name: 'Magnetism & Electromagnetism', qCount: 24 },
-      { id: 'thermodynamics', name: 'Thermodynamics', qCount: 25 },
-      { id: 'optics', name: 'Optics', qCount: 26 },
-      { id: 'nuclear-physics', name: 'Nuclear Physics', qCount: 24 },
-      { id: 'fluid-mechanics', name: 'Fluid Mechanics', qCount: 20 },
-      { id: 'circular-motion-gravitation', name: 'Circular Motion & Gravitation', qCount: 21 },
-      { id: 'momentum-collisions', name: 'Momentum & Collisions', qCount: 21 },
-      { id: 'modern-physics-atomic', name: 'Modern Physics & Atomic Structure', qCount: 21 }
-    ]
-  },
-  maths: {
-    id: 'maths',
-    name: 'Mathematics',
-    section: 'Section 4',
-    chapters: [
-      { id: 'algebra', name: 'Algebra & Functions', qCount: 45 },
-      { id: 'geometry', name: 'Geometry', qCount: 20 },
-      { id: 'trigonometry', name: 'Trigonometry', qCount: 20 },
-      { id: 'probability', name: 'Probability & Statistics', qCount: 23 },
-      { id: 'calculus', name: 'Calculus', qCount: 20 },
-      { id: 'coordinate', name: 'Coordinate Geometry', qCount: 20 },
-      { id: 'sequences', name: 'Sequences & Series', qCount: 20 },
-      { id: 'combinatorics', name: 'Combinatorics', qCount: 20 },
-      { id: 'number-sets', name: 'Number Sets', qCount: 21 },
-      { id: 'absolute-value', name: 'Absolute Value', qCount: 21 },
-      { id: 'powers-radicals', name: 'Powers & Radicals', qCount: 21 },
-      { id: 'logarithms-exponential', name: 'Logarithms & Exponential Equations', qCount: 21 },
-      { id: 'ratio-proportions', name: 'Ratio, Proportions & Percentages', qCount: 21 },
-      { id: 'conics', name: 'Conics', qCount: 21 },
-      { id: 'inequalities', name: 'Inequalities', qCount: 21 }
-    ]
-  },
-  critical: {
-    id: 'critical-thinking',
-    name: 'Critical Thinking',
-    section: 'Section 1',
-    chapters: [
-      { id: 'identifying-flaws', name: 'Identifying Flaws in Arguments', qCount: 16 },
-      { id: 'weakening-arguments', name: 'Weakening Arguments', qCount: 17 },
-      { id: 'strengthening-arguments', name: 'Strengthening Arguments', qCount: 10 },
-      { id: 'assumptions', name: 'Identifying Assumptions', qCount: 22 },
-      { id: 'evaluating-evidence', name: 'Evaluating Evidence & Data', qCount: 34 },
-      { id: 'correlation-causation', name: 'Correlation vs Causation', qCount: 22 },
-      { id: 'logical-reasoning', name: 'Logical Reasoning & Structure', qCount: 23 }
-    ]
-  },
-  problem: {
-    id: 'problem-solving',
-    name: 'Problem Solving',
-    section: 'Section 1',
-    chapters: [
-      { id: 'numerical-reasoning', name: 'Numerical Reasoning', qCount: 19 },
-      { id: 'sequences-patterns', name: 'Sequences & Patterns', qCount: 24 },
-      { id: 'spatial-reasoning', name: 'Spatial & Visual Reasoning', qCount: 13 },
-      { id: 'logical-deduction', name: 'Logical Deduction', qCount: 24 },
-      { id: 'rates-time', name: 'Rates, Time & Work', qCount: 17 }
-    ]
-  },
-  data: {
-    id: 'data-analysis',
-    name: 'Data Analysis',
-    section: 'Section 1',
-    chapters: [
-      { id: 'tables-frequency', name: 'Tables & Frequency Data', qCount: 22 },
-      { id: 'graphs-charts', name: 'Graphs & Charts Interpretation', qCount: 20 },
-      { id: 'statistical-measures', name: 'Statistical Measures & Analysis', qCount: 39 },
-      { id: 'probability-risk', name: 'Probability & Risk Assessment', qCount: 27 },
-      { id: 'experimental-design', name: 'Experimental Design & Validity', qCount: 22 }
-    ]
-  }
+/* reveals */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+$$('[data-rv],.lm').forEach(el=>RM?el.classList.add('in'):io.observe(el));
+
+/* countdown (target: IMAT 2027 · September 28, 2027) */
+let target=new Date(window.IMAT_EXAM);
+if(target-Date.now()<=0)target=new Date(Date.now()+356*864e5);
+const pad=n=>String(n).padStart(2,'0');
+function setB(id,v){const el=$('#'+id);if(el&&el.textContent!==v){el.textContent=v;if(!RM){el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');}}}
+function tickCd(){
+  const d=Math.max(0,target-Date.now());
+  const daysEl = $('#cdDays');
+  if (daysEl) daysEl.textContent=Math.floor(d/864e5);
+  setB('cdH',pad(Math.floor(d/36e5)%24));
+  setB('cdM',pad(Math.floor(d/6e4)%60));
+  setB('cdS',pad(Math.floor(d/1e3)%60));
+}
+tickCd();setInterval(tickCd,1000);
+
+/* ============ 86 CHAPTERS ============ */
+const CHAP={
+'Biology':['Cell structure & organelles','Membranes & transport','Cell division & the cell cycle','DNA structure & replication','RNA & transcription','Protein synthesis & translation','Genetics & inheritance','Genetic disorders & pedigrees','Molecular biology techniques','Evolution & natural selection','Classification & taxonomy','Biodiversity & ecosystems','Plant tissues & physiology','Animal tissues & histology','Circulatory system','Respiratory system','Digestive system','Excretory system','Nervous system','Endocrine system','Reproduction & development','Immunology & vaccination','Enzymes & metabolism','Cellular respiration & ATP','Photosynthesis','Microbiology & viruses','Carbohydrates & lipids','Proteins & nucleic acids'],
+'Chemistry':['Atomic structure','Periodic table & periodicity','Chemical bonding','Intermolecular forces','Moles & molar mass','Stoichiometry & equations','States of matter & gas laws','Solutions & concentration','Acids, bases & pH','Buffers & indicators','Redox reactions','Electrochemistry','Chemical kinetics','Chemical equilibrium','Thermodynamics & energetics','Hydrocarbons','Functional groups','Organic reactions & mechanisms','Biochemistry of life','Lab techniques & safety'],
+'Physics':['Units, dimensions & vectors','Kinematics: motion in a line','Projectiles & circular motion','Dynamics & Newton\u2019s laws','Work, energy & power','Momentum & collisions','Fluids & pressure','Thermodynamics & heat','Waves & sound','Light & optics','Electricity & circuits','Magnetism & induction'],
+'Math':['Number systems & sets','Algebraic expressions & factoring','Equations & inequalities','Ratios, proportions & percentages','Functions & graphs','Exponentials & logarithms','Trigonometry','Coordinate geometry','Euclidean geometry','Sequences & series','Derivatives (basics)','Combinatorics & counting','Probability','Statistics & data interpretation'],
+'Logic & GK':['Logical reasoning & syllogisms','Verbal logic & arguments','Reading comprehension','Number sequences','Numerical problem solving','Data interpretation & tables','Spatial reasoning & figures','Analogies & odd-one-out','General knowledge: history','General knowledge: geography','Institutions & civics','Current affairs & culture']
+};
+CHAP.Biology=BIO.LESSONS; /* official syllabus lessons, see biology-syllabus.js */
+/* Chemistry, Physics and Math: official syllabus lessons, see science-syllabus.js */
+const SYLS=Object.assign({Biology:BIO},SYL);
+Object.keys(SYL).forEach(k=>{CHAP[k]=SYL[k].LESSONS;});
+const TOTAL=Object.values(CHAP).reduce((a,b)=>a+b.length,0);
+{const nt=document.getElementById('noteTotal');if(nt)nt.textContent=TOTAL;}
+
+/* Mapping chapters to Question Bank IDs */
+const QB_MAP = {
+  'Cell structure & organelles': 'cell-structure-organelles',
+  'Membranes & transport': 'cell-membrane-transport',
+  'Cell division & the cell cycle': 'cell-division-mitosis-meiosis',
+  'DNA structure & replication': 'molecular-genetics-dna-rna',
+  'RNA & transcription': 'molecular-genetics-dna-rna',
+  'Protein synthesis & translation': 'molecular-genetics-dna-rna',
+  'Genetics & inheritance': 'mendelian-genetics-inheritance',
+  'Genetic disorders & pedigrees': 'mendelian-genetics-inheritance',
+  'Molecular biology techniques': 'biotechnology-viruses',
+  'Evolution & natural selection': 'evolution-population-genetics',
+  'Classification & taxonomy': 'general-biology',
+  'Biodiversity & ecosystems': 'ecology-environment',
+  'Plant tissues & physiology': 'plant-biology',
+  'Animal tissues & histology': 'animal-tissues-histology',
+  'Circulatory system': 'human-physiology-cardiovascular',
+  'Respiratory system': 'human-physiology-respiratory',
+  'Digestive system': 'human-physiology-digestive-excretory',
+  'Excretory system': 'human-physiology-digestive-excretory',
+  'Nervous system': 'human-physiology-nervous-endocrine',
+  'Endocrine system': 'human-physiology-nervous-endocrine',
+  'Reproduction & development': 'human-physiology-reproductive',
+  'Immunology & vaccination': 'human-physiology-immune-system',
+  'Enzymes & metabolism': 'enzymes-metabolism',
+  'Cellular respiration & ATP': 'cellular-respiration-glycolysis-krebs',
+  'Photosynthesis': 'photosynthesis',
+  'Microbiology & viruses': 'biotechnology-viruses',
+  'Carbohydrates & lipids': 'chemistry-of-living-things',
+  'Proteins & nucleic acids': 'chemistry-of-living-things',
+  'Atomic structure': 'atomic-structure-periodicity',
+  'Periodic table & periodicity': 'atomic-structure-periodicity',
+  'Chemical bonding': 'chemical-bonding-structure',
+  'Intermolecular forces': 'chemical-bonding-structure',
+  'Moles & molar mass': 'stoichiometry-calculations',
+  'Stoichiometry & equations': 'stoichiometry-calculations',
+  'States of matter & gas laws': 'states-matter-ideal-gas',
+  'Solutions & concentration': 'solutions-solubility',
+  'Acids, bases & pH': 'acids-bases-ph',
+  'Buffers & indicators': 'acids-bases-ph',
+  'Redox reactions': 'redox-reactions-electrochemistry',
+  'Electrochemistry': 'redox-reactions-electrochemistry',
+  'Chemical kinetics': 'thermochemistry-kinetics',
+  'Chemical equilibrium': 'chemical-equilibrium',
+  'Thermodynamics & energetics': 'thermochemistry-kinetics',
+  'Hydrocarbons': 'hydrocarbons',
+  'Functional groups': 'functional-groups',
+  'Organic reactions & mechanisms': 'organic-reaction-mechanisms',
+  'Biochemistry of life': 'organic-chemistry',
+  'Lab techniques & safety': 'general-chemistry',
+  'Units, dimensions & vectors': 'mechanics-kinematics',
+  'Kinematics: motion in a line': 'mechanics-kinematics',
+  'Projectiles & circular motion': 'circular-motion-gravitation',
+  'Dynamics & Newton\u2019s laws': 'mechanics-dynamics',
+  'Work, energy & power': 'mechanics-energy-work',
+  'Momentum & collisions': 'momentum-collisions',
+  'Fluids & pressure': 'fluid-mechanics',
+  'Thermodynamics & heat': 'thermodynamics',
+  'Waves & sound': 'waves-oscillations',
+  'Light & optics': 'optics',
+  'Electricity & circuits': 'electricity-circuits',
+  'Magnetism & induction': 'magnetism-electromagnetism',
+  'Number systems & sets': 'number-sets',
+  'Algebraic expressions & factoring': 'algebra',
+  'Equations & inequalities': 'inequalities',
+  'Ratios, proportions & percentages': 'ratio-proportions',
+  'Functions & graphs': 'algebra',
+  'Exponentials & logarithms': 'logarithms-exponential',
+  'Trigonometry': 'trigonometry',
+  'Coordinate geometry': 'coordinate',
+  'Euclidean geometry': 'geometry',
+  'Sequences & series': 'sequences',
+  'Derivatives (basics)': 'calculus',
+  'Combinatorics & counting': 'combinatorics',
+  'Probability': 'probability',
+  'Statistics & data interpretation': 'tables-frequency',
+  'Logical reasoning & syllogisms': 'logical-reasoning',
+  'Verbal logic & arguments': 'identifying-flaws',
+  'Reading comprehension': 'assumptions',
+  'Number sequences': 'sequences-patterns',
+  'Numerical problem solving': 'numerical-reasoning',
+  'Data interpretation & tables': 'tables-frequency',
+  'Spatial reasoning & figures': 'spatial-reasoning',
+  'Analogies & odd-one-out': 'logical-deduction',
+  'General knowledge: history': 'general-biology',
+  'General knowledge: geography': 'general-biology',
+  'Institutions & civics': 'general-biology',
+  'Current affairs & culture': 'general-biology'
 };
 
-let activeSubjectKey = 'biology';
-let checklistState = { reviewed: {}, practiced: {} };
+/* Complete mapping from all 86 Question Bank chapter IDs to Checklist chapter names */
+const QB_TO_CHECKLIST_MAP = {
+  // Biology
+  'cell-structure-organelles': ['Cell structure & organelles'],
+  'cell-membrane-transport': ['Membranes & transport'],
+  'cell-division-mitosis-meiosis': ['Cell division & the cell cycle'],
+  'molecular-genetics-dna-rna': ['DNA structure & replication', 'RNA & transcription', 'Protein synthesis & translation'],
+  'mendelian-genetics-inheritance': ['Genetics & inheritance', 'Genetic disorders & pedigrees'],
+  'biotechnology-viruses': ['Molecular biology techniques', 'Microbiology & viruses'],
+  'evolution-population-genetics': ['Evolution & natural selection'],
+  'general-biology': ['Classification & taxonomy', 'General knowledge: history', 'General knowledge: geography', 'Institutions & civics', 'Current affairs & culture'],
+  'ecology-environment': ['Biodiversity & ecosystems'],
+  'plant-biology': ['Plant tissues & physiology'],
+  'animal-tissues-histology': ['Animal tissues & histology'],
+  'human-physiology-cardiovascular': ['Circulatory system'],
+  'human-physiology-respiratory': ['Respiratory system'],
+  'human-physiology-digestive-excretory': ['Digestive system', 'Excretory system'],
+  'human-physiology-nervous-endocrine': ['Nervous system', 'Endocrine system'],
+  'human-physiology-reproductive': ['Reproduction & development'],
+  'human-physiology-immune-system': ['Immunology & vaccination'],
+  'human-physiology-musculoskeletal': ['Animal tissues & histology'],
+  'sense-organs': ['Nervous system'],
+  'embryology-development': ['Reproduction & development'],
+  'enzymes-metabolism': ['Enzymes & metabolism'],
+  'cellular-respiration-glycolysis-krebs': ['Cellular respiration & ATP'],
+  'photosynthesis': ['Photosynthesis'],
+  'chemistry-of-living-things': ['Carbohydrates & lipids', 'Proteins & nucleic acids'],
 
-function loadChecklistState() {
-  const saved = localStorage.getItem('imatpath_checklist');
-  if (saved) {
-    try {
-      checklistState = JSON.parse(saved);
-      checklistState.reviewed = checklistState.reviewed || {};
-      checklistState.practiced = checklistState.practiced || {};
-    } catch(e) {}
-  }
+  // Chemistry
+  'atomic-structure-periodicity': ['Atomic structure', 'Periodic table & periodicity'],
+  'chemical-bonding-structure': ['Chemical bonding', 'Intermolecular forces'],
+  'stoichiometry-calculations': ['Moles & molar mass', 'Stoichiometry & equations'],
+  'states-matter-ideal-gas': ['States of matter & gas laws'],
+  'solutions-solubility': ['Solutions & concentration'],
+  'acids-bases-ph': ['Acids, bases & pH', 'Buffers & indicators'],
+  'redox-reactions-electrochemistry': ['Redox reactions', 'Electrochemistry'],
+  'thermochemistry-kinetics': ['Chemical kinetics', 'Thermodynamics & energetics'],
+  'chemical-equilibrium': ['Chemical equilibrium'],
+  'hydrocarbons': ['Hydrocarbons'],
+  'functional-groups': ['Functional groups'],
+  'organic-reaction-mechanisms': ['Organic reactions & mechanisms'],
+  'organic-chemistry': ['Biochemistry of life'],
+  'general-chemistry': ['Lab techniques & safety'],
+  'transition-metals-complexes': ['Periodic table & periodicity'],
+  'isomerism-stereochemistry': ['Functional groups'],
+  'inorganic-nomenclature': ['Lab techniques & safety'],
+
+  // Physics
+  'mechanics-kinematics': ['Units, dimensions & vectors', 'Kinematics: motion in a line'],
+  'circular-motion-gravitation': ['Projectiles & circular motion'],
+  'mechanics-dynamics': ['Dynamics & Newton\u2019s laws'],
+  'mechanics-energy-work': ['Work, energy & power'],
+  'momentum-collisions': ['Momentum & collisions'],
+  'fluid-mechanics': ['Fluids & pressure'],
+  'thermodynamics': ['Thermodynamics & heat'],
+  'waves-oscillations': ['Waves & sound'],
+  'optics': ['Light & optics'],
+  'electricity-circuits': ['Electricity & circuits'],
+  'magnetism-electromagnetism': ['Magnetism & induction'],
+  'nuclear-physics': ['Magnetism & induction'],
+  'modern-physics-atomic': ['Light & optics'],
+
+  // Math
+  'number-sets': ['Number systems & sets'],
+  'algebra': ['Algebraic expressions & factoring', 'Functions & graphs'],
+  'inequalities': ['Equations & inequalities'],
+  'ratio-proportions': ['Ratios, proportions & percentages'],
+  'logarithms-exponential': ['Exponentials & logarithms'],
+  'trigonometry': ['Trigonometry'],
+  'coordinate': ['Coordinate geometry'],
+  'geometry': ['Euclidean geometry'],
+  'sequences': ['Sequences & series'],
+  'calculus': ['Derivatives (basics)'],
+  'combinatorics': ['Combinatorics & counting'],
+  'probability': ['Probability'],
+  'absolute-value': ['Equations & inequalities'],
+  'powers-radicals': ['Exponentials & logarithms'],
+  'conics': ['Coordinate geometry'],
+
+  // Section 1 (Critical Thinking, Problem Solving, Data Analysis)
+  'logical-reasoning': ['Logical reasoning & syllogisms'],
+  'identifying-flaws': ['Verbal logic & arguments'],
+  'assumptions': ['Reading comprehension'],
+  'weakening-arguments': ['Verbal logic & arguments'],
+  'strengthening-arguments': ['Verbal logic & arguments'],
+  'evaluating-evidence': ['Reading comprehension'],
+  'correlation-causation': ['Logical reasoning & syllogisms'],
+  'sequences-patterns': ['Number sequences'],
+  'numerical-reasoning': ['Numerical problem solving'],
+  'rates-time': ['Numerical problem solving'],
+  'spatial-reasoning': ['Spatial reasoning & figures'],
+  'logical-deduction': ['Analogies & odd-one-out'],
+  'tables-frequency': ['Data interpretation & tables', 'Statistics & data interpretation'],
+  'graphs-charts': ['Data interpretation & tables', 'Statistics & data interpretation'],
+  'statistical-measures': ['Statistics & data interpretation'],
+  'probability-risk': ['Probability'],
+  'experimental-design': ['Data interpretation & tables']
+};
+
+Object.assign(QB_MAP,BIO.QB);
+Object.assign(QB_TO_CHECKLIST_MAP,BIO.QB_TO_LESSONS);
+Object.keys(SYL).forEach(k=>{Object.assign(QB_MAP,SYL[k].QB);Object.assign(QB_TO_CHECKLIST_MAP,SYL[k].QB_TO_LESSONS);});
+Object.assign(QB_TO_CHECKLIST_MAP,SYL_EXTRA_QB_TO_LESSONS);
+BIO.migrateStored();
+SYL_migrateAll();
+
+/* state: bitmask per chapter (1=reviewed, 2=practiced) */
+let state={};
+try{state=JSON.parse(localStorage.getItem('ip_chap')||'{}');}catch(e){}
+
+// Migration from legacy imatpath_checklist if exists and ip_chap is unpopulated
+if (!Object.keys(state).length) {
+  try {
+    const legacy = JSON.parse(localStorage.getItem('imatpath_checklist') || '{}');
+    if (legacy && (legacy.reviewed || legacy.practiced)) {
+      Object.keys(CHAP).forEach(s => {
+        state[s] = CHAP[s].map(chName => {
+          let mask = 0;
+          const qbId = QB_MAP[chName];
+          if (qbId) {
+            if (legacy.reviewed && legacy.reviewed[qbId]) mask |= 1;
+            if (legacy.practiced && legacy.practiced[qbId]) mask |= 2;
+          }
+          return mask;
+        });
+      });
+    }
+  } catch(e) {}
 }
 
-function saveChecklistState() {
-  localStorage.setItem('imatpath_checklist', JSON.stringify(checklistState));
-  if (window.ImatAuth && typeof window.ImatAuth.saveChecklistState === 'function') {
-    window.ImatAuth.saveChecklistState(checklistState);
-  }
-}
-loadChecklistState();
+Object.keys(CHAP).forEach(s=>{if(!Array.isArray(state[s])||state[s].length!==CHAP[s].length)state[s]=CHAP[s].map(()=>0);});
 
-window.setSubject = function(subKey) {
-  activeSubjectKey = subKey;
-  render();
-};
+// Auto-sync practiced chapters from Question Bank state (imatpath_qb & imatpath_checklist)
+try {
+  const qbData = JSON.parse(localStorage.getItem('imatpath_qb') || '{}');
+  const legData = JSON.parse(localStorage.getItem('imatpath_checklist') || '{}');
+  const practicedSet = new Set([
+    ...Object.keys((qbData && qbData.practicedChapters) || {}),
+    ...Object.keys((legData && legData.practiced) || {})
+  ]);
 
-window.toggleStatus = function(chId, type) {
-  const isCurrentlyActive = !!checklistState[type][chId];
-  checklistState[type][chId] = !isCurrentlyActive;
-  saveChecklistState();
-  
-  if (!isCurrentlyActive) {
-    showToast(`${type === 'reviewed' ? 'Reviewed' : 'Practiced'} status saved! +5 XP`);
-    if (typeof XP !== 'undefined') XP.award('answer');
-  }
-  
-  render();
-};
-
-function render() {
-  const subject = SYLLABUS_DATA[activeSubjectKey];
-  $('#currentSubjectTitle').textContent = `${subject.name} (${subject.section})`;
-
-  // Render Tabs with real counts
-  const tabsContainer = $('#subjectTabs');
-  tabsContainer.innerHTML = Object.keys(SYLLABUS_DATA).map(key => {
-    const s = SYLLABUS_DATA[key];
-    const isActive = key === activeSubjectKey;
-    return `
-      <button class="sub-tab ${isActive ? 'active' : ''}" onclick="setSubject('${key}')">
-        ${s.name} &middot; ${s.chapters.length}
-      </button>
-    `;
-  }).join('');
-
-  // Render Chapter Rows
-  const rowsContainer = $('#chapterRows');
-  rowsContainer.innerHTML = subject.chapters.map(ch => {
-    const isRev = !!checklistState.reviewed[ch.id];
-    const isPrac = !!checklistState.practiced[ch.id];
-
-    return `
-      <div class="ch-row">
-        <div class="ch-info" onclick="window.location.href='question-bank.html?chapter=${ch.id}'" title="Click to practice this chapter in Question Bank">
-          <div class="ch-title">${ch.name}</div>
-          <div class="ch-meta">${ch.qCount} practice questions available</div>
-        </div>
-        <div class="ch-badges">
-          <button class="status-pill ${isRev ? 'active' : ''}" onclick="toggleStatus('${ch.id}', 'reviewed')">
-            ${isRev ? 'REVIEWED ✓' : 'REVIEWED'}
-          </button>
-          <button class="status-pill ${isPrac ? 'active' : ''}" onclick="toggleStatus('${ch.id}', 'practiced')">
-            ${isPrac ? 'PRACTICED ✓' : 'PRACTICED'}
-          </button>
-          <a href="question-bank.html?chapter=${ch.id}" class="ch-practice-btn" title="Open in Question Bank">
-            Practice <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    `;
-  }).join('');
-
-  // Calculate Overall KPIs across all 86 chapters
-  let totalChapters = 0;
-  let totalReviewed = 0;
-  let totalPracticed = 0;
-
-  Object.keys(SYLLABUS_DATA).forEach(k => {
-    SYLLABUS_DATA[k].chapters.forEach(c => {
-      totalChapters++;
-      if (checklistState.reviewed[c.id]) totalReviewed++;
-      if (checklistState.practiced[c.id]) totalPracticed++;
-    });
+  let hasSyncUpdate = false;
+  practicedSet.forEach(qbId => {
+    const targets = QB_TO_CHECKLIST_MAP[qbId];
+    if (targets && targets.length) {
+      targets.forEach(targetName => {
+        for (const s in CHAP) {
+          const idx = CHAP[s].indexOf(targetName);
+          if (idx !== -1) {
+            if (!(state[s][idx] & 2)) {
+              state[s][idx] |= 2;
+              hasSyncUpdate = true;
+            }
+            break;
+          }
+        }
+      });
+    }
   });
+  if (hasSyncUpdate) {
+    localStorage.setItem('ip_chap', JSON.stringify(state));
+  }
+} catch(e) {}
 
-  const revPct = Math.round((totalReviewed / totalChapters) * 100);
-  const pracPct = Math.round((totalPracticed / totalChapters) * 100);
-  const overallMastery = Math.round(((totalReviewed + totalPracticed) / (totalChapters * 2)) * 100);
-
-  $('#totalReviewedKpi').textContent = `${totalReviewed} / ${totalChapters}`;
-  $('#reviewedPctSub').textContent = `${revPct}% theory covered`;
-
-  $('#totalPracticedKpi').textContent = `${totalPracticed} / ${totalChapters}`;
-  $('#practicedPctSub').textContent = `${pracPct}% question practice`;
-
-  $('#overallMasteryKpi').textContent = `${overallMastery}%`;
+function save(){
+  try{
+    localStorage.setItem('ip_chap',JSON.stringify(state));
+    // Also sync with cloud / auth if available
+    if (window.ImatAuth && typeof window.ImatAuth.saveChecklistState === 'function') {
+      window.ImatAuth.saveChecklistState(state);
+    }
+  }catch(e){}
 }
 
-render();
+let subj='Biology',bioOpen=-1;
+
+/* totals */
+function totals(){
+  let r=0,p=0;
+  Object.values(state).forEach(arr=>arr.forEach(v=>{if(v&1)r++;if(v&2)p++;}));
+  return{r,p};
+}
+
+/* render everything dynamic */
+function renderStats(pop){
+  const{r,p}=totals();
+  const vr=$('#vR'),vp=$('#vP'),vm=$('#vM');
+  if (vr) vr.innerHTML=r+'<small>/ '+TOTAL+'</small>';
+  if (vp) vp.innerHTML=p+'<small>/ '+TOTAL+'</small>';
+  const m=Math.round((r+p)/(2*TOTAL)*100);
+  if (vm) vm.innerHTML=m+'<small>%</small>';
+  if(pop&&!RM){[vr,vp,vm].forEach(el=>{if(el){el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');}});}
+  if ($('#pctR')) $('#pctR').textContent=Math.round(r/TOTAL*100)+'% theory covered';
+  if ($('#pctP')) $('#pctP').textContent=Math.round(p/TOTAL*100)+'% question practice';
+  if ($('#barR')) $('#barR').style.width=(r/TOTAL*100)+'%';
+  if ($('#barP')) $('#barP').style.width=(p/TOTAL*100)+'%';
+  if ($('#gVal')) $('#gVal').style.strokeDashoffset=100-m;
+}
+
+function renderSubjRows(){
+  const box=$('#subjRows');if(!box)return;box.innerHTML='';
+  Object.keys(CHAP).forEach(s=>{
+    const t=CHAP[s].length;
+    const r=state[s].filter(v=>v&1).length, p=state[s].filter(v=>v&2).length;
+    const pct=Math.round((r+p)/(2*t)*100);
+    const row=document.createElement('div');
+    row.className='srow';
+    row.innerHTML='<span>'+s.toUpperCase().slice(0,10)+'</span><span class="tr"><i style="width:'+pct+'%"></i></span><span class="ct">'+r+'/'+t+' · '+p+'/'+t+'</span>';
+    box.appendChild(row);
+  });
+}
+
+function renderTabs(){
+  const box=$('#tabs');if(!box)return;box.innerHTML='';
+  Object.keys(CHAP).forEach(s=>{
+    const t=CHAP[s].length;
+    const done=state[s].filter(v=>v>0).length;
+    const b=document.createElement('button');
+    b.className='tab'+(s===subj?' act':'');
+    b.innerHTML=s+' <span class="cnt">'+done+'/'+t+'</span>';
+    b.addEventListener('click',()=>{subj=s;bioOpen=-1;renderTabs();renderChips(true);});
+    box.appendChild(b);
+  });
+}
+
+function renderChips(animate){
+  const box=$('#chips');if(!box)return;box.innerHTML='';
+  const T=SYLS[subj]?SYLS[subj].TOPICS:null;
+  if(T&&bioOpen<0){
+    T.forEach((g,gi)=>{
+      const vals=g.items.map(n=>state[subj][CHAP[subj].indexOf(n)]);
+      const b=document.createElement('button');
+      b.type='button';b.className='bigcard';b.dataset.g=gi;
+      b.innerHTML='<span class="bc-t">'+g.t+'</span><span class="bc-m">'+g.items.length+(g.items.length===1?' lesson':' lessons')+' · '+vals.filter(v=>v&1).length+' reviewed · '+vals.filter(v=>v&2).length+' practiced</span><span class="bc-a" aria-hidden="true">→</span>';
+      box.appendChild(b);
+    });
+    const rr=state[subj].filter(v=>v&1).length;
+    if ($('#footCount')) $('#footCount').textContent=rr+' / '+CHAP[subj].length+' reviewed in '+subj;
+    return;
+  }
+  if(T){
+    const h=document.createElement('div');h.className='big-head';
+    h.innerHTML='<button type="button" class="big-back" data-back>← All '+subj+' topics</button><h3>'+T[bioOpen].t+'</h3>';
+    box.appendChild(h);
+  }
+  let shown=0;
+  CHAP[subj].forEach((name,i)=>{
+    if(T&&T[bioOpen].items.indexOf(name)<0)return;
+    const v=state[subj][i];
+    const qbId = QB_MAP[name];
+    const qbLink = qbId ? 'question-bank.html?chapter=' + encodeURIComponent(qbId) : (T&&subj==='Biology' ? 'question-bank.html?bio=' + BIO.ANATOMY_GROUP : 'question-bank.html');
+    const c=document.createElement('div');
+    c.className='cchip';
+    if(animate&&!RM)c.style.animationDelay=((shown++)*0.03)+'s';
+    if(RM)c.style.animation='none';
+    c.innerHTML=
+      '<div class="cc-top"><span class="cc-name">'+name+'</span><a class="cc-link" href="'+qbLink+'" title="Practice '+name+' in the Question Bank" aria-label="Practice in Question Bank">→</a></div>'+
+      '<div class="cc-togs">'+
+        '<button class="tog r'+(v&1?' on':'')+'" data-i="'+i+'" data-t="1"><i></i>Reviewed</button>'+
+        '<button class="tog p'+(v&2?' on':'')+'" data-i="'+i+'" data-t="2"><i></i>Practiced</button>'+
+      '</div>';
+    box.appendChild(c);
+  });
+  const r=state[subj].filter(v=>v&1).length;
+  if ($('#footCount')) $('#footCount').textContent=r+' / '+CHAP[subj].length+' reviewed in '+subj;
+}
+
+$('#chips').addEventListener('click',e=>{
+  const card=e.target.closest('.bigcard');
+  if(card){bioOpen=+card.dataset.g;renderChips(true);return;}
+  if(e.target.closest('[data-back]')){bioOpen=-1;renderChips(true);return;}
+  const t=e.target.closest('.tog');if(!t)return;
+  const i=+t.dataset.i,bit=+t.dataset.t;
+  const willBeOn = !(state[subj][i] & bit);
+  state[subj][i]^=bit;
+  save();
+  t.classList.toggle('on');
+  
+  if (willBeOn) {
+    const label = bit === 1 ? 'Reviewed' : 'Practiced';
+    showToast(label + ' status saved! +5 XP');
+    if (typeof XP !== 'undefined' && typeof XP.award === 'function') {
+      XP.award('answer');
+    }
+  }
+
+  renderStats(true);renderSubjRows();renderTabs();
+  const r=state[subj].filter(v=>v&1).length;
+  if ($('#footCount')) $('#footCount').textContent=r+' / '+CHAP[subj].length+' reviewed in '+subj;
+});
+
+/* reset (two-step) */
+let confirming=false;
+$('#resetBtn').addEventListener('click',function(){
+  if(!confirming){confirming=true;this.textContent='Confirm reset?';return;}
+  confirming=false;this.textContent='Reset progress';
+  Object.keys(state).forEach(s=>state[s]=CHAP[s].map(()=>0));
+  save();
+  showToast('Progress reset successfully');
+  renderStats(true);renderSubjRows();renderTabs();renderChips(true);
+});
+
+/* init */
+renderStats(false);renderSubjRows();renderTabs();renderChips(false);
+
+/* Fast re-sync when navigating back from Question Bank or switching tabs */
+function reloadAndRender(){
+  try{
+    BIO.migrateStored();
+    SYL_migrateAll();
+    const saved = JSON.parse(localStorage.getItem('ip_chap') || '{}');
+    if (saved && Object.keys(saved).length) {
+      state = saved;
+      Object.keys(CHAP).forEach(s=>{if(!Array.isArray(state[s])||state[s].length!==CHAP[s].length)state[s]=CHAP[s].map(()=>0);});
+      renderStats(false);renderSubjRows();renderTabs();renderChips(false);
+    }
+  }catch(e){}
+}
+window.addEventListener('pageshow', reloadAndRender);
+window.addEventListener('storage', (e) => {
+  if (e.key === 'ip_chap' || e.key === 'imatpath_qb' || e.key === 'imatpath_checklist') {
+    reloadAndRender();
+  }
+});
 
 })();
 </script>

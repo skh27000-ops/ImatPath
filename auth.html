@@ -4,414 +4,226 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sign In — ImatPath</title>
-<meta name="description" content="Sign in or create your ImatPath account. Access 2,000+ IMAT practice questions, mock exams, and your personalized IMAT Test.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600-italic.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-700.css">
+<meta name="description" content="Sign in or create your ImatPath account for comprehensive IMAT 2027 preparation, Question Bank practice, mock exams, and analytics.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" href="favicon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="shared.css">
+<script src="mascot.js"></script>
+
 <style>
-/* ── Tokens & Reset ── */
-:root {
-  --cream: #f6f1e6; --cream-2: #efe7d5; --card: #fffdf7;
-  --ink: #152720; --ink-soft: #42574d;
-  --g900: #0a241b; --g800: #0e2f23; --g700: #164534; --g600: #1e5b44;
-  --terra: #c1591f; --terra-d: #a84a15;
-  --gold: #d9a441; --gold-l: #e9c070;
-  --sage: #8aa692; --line: #e2d8c2; --line-d: #23443a;
-  --ok: #2e7d4f; --bad: #b3402e;
-  --serif: "Fraunces", Georgia, serif;
-  --sans: "Inter", system-ui, -apple-system, sans-serif;
-  --sh-sm: 0 1px 2px rgba(21,39,32,.06), 0 4px 14px rgba(21,39,32,.06);
-  --sh-md: 0 2px 6px rgba(21,39,32,.08), 0 14px 34px rgba(21,39,32,.10);
+/* Auth — page layout. Tokens, buttons, mascot live in shared.css */
+:root{--line-l:rgba(255,255,255,.3);--paper-2:var(--lav);--green:var(--grape)}
+html,body{min-height:100vh}
+a{text-decoration:none}
+.noise,.tricolore{display:none}
+@keyframes pulse-dot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.7);opacity:.4}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-8px) rotate(var(--r,0deg))}}
+
+.auth-wrapper{display:flex;width:100%;min-height:100vh}
+
+/* ── Left hero ── */
+.auth-left{flex:0 0 500px;background:var(--grape);background-image:radial-gradient(rgba(255,255,255,.15) 1.6px,transparent 1.6px);background-size:22px 22px;color:#fff;padding:44px 44px;display:flex;flex-direction:column;position:relative;overflow:hidden;border-right:var(--bw) solid var(--ink)}
+.auth-logo{display:flex;align-items:center;gap:8px;text-decoration:none;margin-bottom:26px;position:relative;z-index:2}
+.logo-mark{width:56px;flex:none;display:block}
+.logo-mark img{display:none}
+.auth-left .logo-mark{display:none}
+.logo-word{font:800 1.9rem/1 var(--f-disp);letter-spacing:-.03em;color:var(--sun);text-shadow:2px 0 0 var(--ink),-2px 0 0 var(--ink),0 2px 0 var(--ink),0 -2px 0 var(--ink),2px 2px 0 var(--ink),-2px -2px 0 var(--ink),2px -2px 0 var(--ink),-2px 2px 0 var(--ink),3px 4px 0 var(--ink)}
+.logo-word b{font-weight:800;color:inherit}
+
+.auth-hero{flex:1;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center}
+.auth-hero-badge{font:.7rem var(--f-px);display:inline-flex;align-items:center;gap:9px;color:var(--ink);background:var(--sun);border:var(--bw) solid var(--ink);padding:5px 14px;border-radius:99px;align-self:flex-start;margin-bottom:20px;transform:rotate(-2deg)}
+.auth-hero-badge i{width:8px;height:8px;border-radius:50%;background:var(--coral);animation:pulse-dot 2s infinite}
+.auth-hero h1{font-size:clamp(2.2rem,3.6vw,3.2rem);line-height:1.02;margin-bottom:24px;text-shadow:3px 3px 0 rgba(27,19,64,.35)}
+.auth-hero h1 em{font-style:normal;color:var(--sun)}
+
+.auth-features{display:flex;flex-direction:column;gap:10px;margin-bottom:30px}
+.auth-feat{display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--ink);background:#fff;border:var(--bw) solid var(--ink);border-radius:14px;padding:8px 14px;box-shadow:var(--sh-s);transition:transform .25s var(--e)}
+.auth-feat:nth-child(2n){background:var(--sun-l)}
+.auth-feat:nth-child(3n){background:var(--mint-l)}
+.auth-feat:hover{transform:translate(-3px,-2px) rotate(-.6deg)}
+.auth-feat svg{color:var(--ink);background:var(--mint);border:2.5px solid var(--ink);border-radius:50%;padding:3px;width:24px;height:24px;flex-shrink:0}
+.auth-feat strong{font-weight:800}
+
+.auth-stats{display:flex;gap:12px}
+.auth-stats>div[style]{display:none}
+.auth-stats>div:not([style]){flex:1;background:var(--sun);color:var(--ink);border:var(--bw) solid var(--ink);border-radius:14px;box-shadow:var(--sh-s);padding:10px 14px;text-align:center}
+.auth-stats>div:not([style]):nth-child(3){background:var(--mint)}
+.auth-stats>div:not([style]):nth-child(5){background:var(--coral);color:#fff}
+.auth-stat-val{font:800 1.9rem/1 var(--f-disp);letter-spacing:-.04em}
+.auth-stat-lbl{font:.58rem var(--f-px);margin-top:5px}
+.auth-pip{position:absolute;right:20px;top:40px;width:120px;z-index:1;pointer-events:none}
+
+/* ── Right panel ── */
+.auth-right{flex:1;display:flex;align-items:center;justify-content:center;padding:48px clamp(24px,5vw,64px);position:relative;background:var(--cream)}
+.auth-form-wrap{width:100%;max-width:450px;background:#fff;border:var(--bw) solid var(--ink);border-radius:28px;padding:34px;box-shadow:8px 8px 0 var(--ink);animation:fadeUp .6s var(--e)}
+
+.auth-tabs{display:flex;gap:6px;background:var(--lav);border:var(--bw) solid var(--ink);border-radius:99px;padding:4px;margin-bottom:26px}
+.auth-tab{flex:1;padding:9px 14px;border-radius:99px;border:2.5px solid transparent;background:transparent;font:800 .92rem var(--f-disp);color:var(--ink-2);transition:.2s}
+.auth-tab:hover{color:var(--ink)}
+.auth-tab.active{background:var(--sun);color:var(--ink);border-color:var(--ink)}
+
+.auth-form-header{margin-bottom:22px}
+.auth-form-title{font-size:2.1rem;color:var(--ink);margin-bottom:6px}
+.auth-form-sub{font-size:.95rem;color:var(--ink-2)}
+
+.auth-field{margin-bottom:16px}
+.auth-label{display:block;font:.64rem var(--f-px);color:var(--grape);margin-bottom:8px}
+.auth-input{width:100%;padding:12px 16px;border:var(--bw) solid var(--ink);border-radius:14px;background:var(--cream);color:var(--ink);font:600 1rem var(--f-body);transition:.2s;outline:none}
+.auth-input::placeholder{color:var(--ink-3);font-weight:500}
+.auth-input:hover{background:#fff}
+.auth-input:focus{border-color:var(--grape);box-shadow:4px 4px 0 var(--grape);background:#fff;transform:translate(-2px,-2px)}
+.auth-input-wrap{position:relative}
+.auth-input-wrap .auth-input{padding-right:46px}
+.auth-eye{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--ink-2);font-size:.95rem;padding:4px}
+.auth-eye:hover{color:var(--coral)}
+
+.auth-submit{width:100%;padding:13px 22px;border-radius:99px;border:var(--bw) solid var(--ink);background:var(--grape);color:#fff;font:800 1.05rem var(--f-disp);box-shadow:var(--sh-s);transition:transform .15s,box-shadow .15s;margin-top:6px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:9px}
+.auth-submit:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.auth-submit:disabled{opacity:.6;cursor:not-allowed;transform:none;box-shadow:var(--sh-s)}
+
+.auth-divider{display:flex;align-items:center;gap:12px;margin-bottom:16px;color:var(--ink-3);font:.62rem var(--f-px)}
+.auth-divider::before,.auth-divider::after{content:'';flex:1;height:0;border-top:3px dashed rgba(27,19,64,.2)}
+
+.auth-google{width:100%;padding:11px;border-radius:99px;border:var(--bw) solid var(--ink);background:#fff;color:var(--ink);font:800 .95rem var(--f-disp);box-shadow:var(--sh-s);transition:transform .15s,box-shadow .15s;display:flex;align-items:center;justify-content:center;gap:10px}
+.auth-google:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.auth-google svg{width:18px;height:18px;flex-shrink:0}
+
+.auth-error,.auth-success{padding:11px 16px;border-radius:14px;font-weight:700;font-size:.9rem;margin-bottom:16px;display:none;align-items:center;gap:8px;border:var(--bw) solid var(--ink)}
+.auth-error{background:var(--coral-l);color:#a1163a}
+.auth-success{background:var(--mint-l);color:#0b6b52}
+.auth-error.show,.auth-success.show{display:flex}
+
+.auth-toggle{text-align:center;margin-top:22px;font-weight:600;font-size:.9rem;color:var(--ink-2)}
+.auth-toggle a{color:var(--grape);font-weight:800;cursor:pointer;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.auth-toggle a:hover{color:var(--coral)}
+
+.auth-verify{display:none;text-align:center;padding:20px 8px}
+.auth-verify-icon{width:68px;height:68px;border-radius:50%;background:var(--sun);border:var(--bw) solid var(--ink);box-shadow:var(--sh-s);display:grid;place-items:center;margin:0 auto 18px;font-size:2rem}
+.auth-verify h3{font-size:1.7rem;margin-bottom:8px}
+.auth-verify p{font-size:.95rem;color:var(--ink-2);line-height:1.6}
+.auth-verify strong{color:var(--grape)}
+
+.spinner{width:16px;height:16px;border:3px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none}
+
+@media(max-width:1100px){.auth-left{flex-basis:420px;padding:36px 30px}.auth-pip{width:90px;right:12px}}
+@media(max-width:920px){
+  .auth-left{display:none}
+  .auth-right{padding:28px 18px}
+  #mobileLogo{display:flex !important}
+  .auth-form-wrap{padding:26px 22px;border-radius:24px}
+}
+/* auth2-marker */
+/* Auth v2 — single stage, Pip over the card, floating stickers */
+.auth-wrapper{position:relative;flex-direction:column;align-items:center;justify-content:center;padding:36px 18px 56px;min-height:100vh;background:var(--grape);background-image:radial-gradient(rgba(255,255,255,.16) 1.6px,transparent 1.6px);background-size:22px 22px;overflow:hidden}
+.auth-left,.auth-hero{display:contents}
+.auth-logo{position:absolute;left:30px;top:22px;margin:0;z-index:5}
+.auth-pip{position:static;order:1;width:128px;margin-bottom:6px;z-index:3;right:auto;top:auto}
+.auth-hero-badge{order:2;align-self:center;margin-bottom:14px}
+.auth-hero h1{order:3;text-align:center;font-size:clamp(2rem,4.4vw,3.4rem);max-width:760px;margin:0 0 26px;line-height:1.02}
+.auth-right{order:4;flex:none;padding:0;background:none;width:100%;display:flex;justify-content:center}
+.auth-form-wrap{box-shadow:8px 8px 0 var(--ink);position:relative;z-index:2}
+.auth-stats{order:5;margin-top:30px;width:min(450px,100%)}
+.auth-features{position:absolute;inset:0;margin:0;pointer-events:none}
+.auth-feat{position:absolute;width:262px;pointer-events:auto}
+.auth-feat:nth-child(1){left:3%;top:30%;rotate:-4deg}
+.auth-feat:nth-child(2){left:6%;top:47%;rotate:3deg}
+.auth-feat:nth-child(3){left:2%;top:65%;rotate:-2.5deg}
+.auth-feat:nth-child(4){right:3%;top:34%;rotate:4deg}
+.auth-feat:nth-child(5){right:6%;top:55%;rotate:-3deg}
+.auth-feat:hover{rotate:0deg;translate:0 -4px}
+#mobileLogo{display:none !important}
+@media(max-width:1180px){.auth-features{display:none}}
+@media(max-width:700px){
+  .auth-stats{display:none}
+  .auth-logo{position:static;align-self:flex-start;margin:0 0 4px}
+  .auth-wrapper{justify-content:flex-start;padding-top:20px}
+  .auth-pip{width:104px}
 }
 
-/* ── Dark mode ── */
-[data-theme="dark"] {
-  --cream: #111714; --cream-2: #191f1c; --card: #1a211d;
-  --ink: #e2ddd3; --ink-soft: #a4b3a9;
-  --line: #2a3530; --line-d: #2a3530;
-  --g900: #0a0e0c; --g800: #0f1613;
-}
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { height: 100%; }
-
-body {
-  font-family: var(--sans);
-  background: var(--cream);
-  color: var(--ink);
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  transition: background 0.35s ease, color 0.35s ease;
-}
-
-::selection { background: var(--terra); color: #fff; }
-
-/* ── Layout ── */
-.auth-wrapper {
-  display: flex; width: 100%; min-height: 100vh;
-}
-
-/* ── Left Panel ── */
-.auth-left {
-  flex: 0 0 480px;
-  background: var(--g900);
-  padding: 56px;
-  display: flex; flex-direction: column;
-  position: relative; overflow: hidden;
-  color: #f6f1e6;
-}
-.auth-left::before {
-  content: '';
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(600px 400px at 80% 10%, rgba(217,164,65,.12), transparent 60%),
-    radial-gradient(500px 400px at 10% 90%, rgba(30,91,68,.45), transparent 60%);
-  pointer-events: none;
-}
-.auth-left::after {
-  content: '';
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(246,241,230,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(246,241,230,.04) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse at 50% 50%, #000 20%, transparent 80%);
-  pointer-events: none;
-}
-
-/* Logo */
-.auth-logo {
-  display: flex; align-items: center;
-  text-decoration: none; margin-bottom: 64px; position: relative; z-index: 1;
-  font-family: var(--serif); font-size: 22px; font-weight: 600;
-  letter-spacing: -0.01em; color: #f6f1e6;
-}
-.auth-logo em { font-style: italic; color: var(--gold-l); }
-
-/* Hero */
-.auth-hero { flex: 1; position: relative; z-index: 1; }
-.auth-hero-badge {
-  display: inline-flex; align-items: center; gap: 9px;
-  padding: 7px 14px; border-radius: 999px;
-  border: 1px solid rgba(217,164,65,.4);
-  background: rgba(217,164,65,.08);
-  font-size: 11.5px; font-weight: 600;
-  letter-spacing: .12em; text-transform: uppercase;
-  color: var(--gold-l);
-  margin-bottom: 20px;
-  animation: fadeInUp 0.6s ease;
-}
-.auth-hero-badge .dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: var(--gold);
-  animation: pulse 2s infinite;
-}
-@keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(217,164,65,.5)} 50%{box-shadow:0 0 0 6px rgba(217,164,65,0)} }
-
-.auth-hero h1 {
-  font-family: var(--serif); font-size: 2.4rem; font-weight: 600;
-  color: #f6f1e6; line-height: 1.1; letter-spacing: -1.5px;
-  margin-bottom: 28px;
-  animation: fadeInUp 0.6s ease 0.1s backwards;
-}
-.auth-hero h1 em { font-style: italic; color: var(--gold-l); }
-
-.auth-features {
-  display: flex; flex-direction: column; gap: 12px;
-  margin-bottom: 44px;
-  animation: fadeInUp 0.6s ease 0.2s backwards;
-}
-.auth-feat {
-  display: flex; align-items: center; gap: 12px;
-  padding: 8px 0;
-  font-size: 14px; color: rgba(246,241,230,.7);
-  transition: transform 0.3s ease;
-}
-.auth-feat:hover { transform: translateX(4px); }
-.auth-feat svg { flex-shrink: 0; color: var(--gold); }
-.auth-feat strong { color: #f6f1e6; font-weight: 600; }
-
-.auth-stats {
-  display: flex; gap: 24px;
-  padding: 18px 22px;
-  background: rgba(246,241,230,.06);
-  border: 1px solid rgba(246,241,230,.1);
-  border-radius: 16px;
-  animation: fadeInUp 0.6s ease 0.3s backwards;
-}
-.auth-stat-val {
-  font-family: var(--serif); font-size: 1.5rem; font-weight: 600;
-  color: #f6f1e6; letter-spacing: -1px; line-height: 1;
-}
-.auth-stat-lbl {
-  font-size: 11px; color: rgba(246,241,230,.45);
-  margin-top: 3px; font-weight: 500;
-}
-
-/* ── Right Panel ── */
-.auth-right {
-  flex: 1;
-  display: flex; align-items: center; justify-content: center;
-  padding: 48px 40px;
-  background: var(--cream);
-  transition: background 0.35s ease;
-  position: relative;
-}
-
-/* Dark mode toggle */
-.auth-dark-toggle {
-  position: absolute; top: 24px; right: 24px;
-  width: 38px; height: 38px; border-radius: 10px;
-  border: 1.5px solid var(--line);
-  background: var(--card);
-  color: var(--ink-soft); cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.85rem;
-  transition: all 0.25s ease; z-index: 10;
-}
-.auth-dark-toggle:hover {
-  border-color: var(--terra); color: var(--terra);
-}
-[data-theme="dark"] .auth-dark-toggle {
-  background: var(--cream-2); border-color: var(--line);
-  color: var(--gold);
-}
-
-/* Form card */
-.auth-form-wrap {
-  width: 100%; max-width: 420px;
-  animation: cardSlideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-@keyframes cardSlideIn {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.auth-form-header { margin-bottom: 32px; }
-.auth-form-title {
-  font-family: var(--serif); font-size: 1.9rem; font-weight: 600;
-  color: var(--ink); letter-spacing: -1px; margin-bottom: 8px;
-  transition: color 0.3s;
-}
-.auth-form-sub {
-  font-size: 14.5px; color: var(--ink-soft); transition: color 0.3s;
-}
-
-/* Tabs */
-.auth-tabs {
-  display: inline-flex; gap: 4px;
-  background: var(--cream-2); border: 1px solid var(--line);
-  border-radius: 999px; padding: 5px;
-  margin-bottom: 28px;
-  transition: background 0.3s, border-color 0.3s;
-}
-.auth-tab {
-  padding: 10px 22px; border-radius: 999px; border: none;
-  background: transparent; color: var(--ink-soft);
-  font-family: var(--sans); font-size: 14px; font-weight: 600;
-  cursor: pointer; transition: all 0.25s ease;
-}
-.auth-tab:hover { color: var(--ink); }
-.auth-tab.active {
-  background: var(--g800); color: #f6f1e6;
-  box-shadow: var(--sh-sm);
-}
-
-/* Fields */
-.auth-field { margin-bottom: 18px; }
-.auth-label {
-  display: block; font-size: 12px; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase;
-  color: var(--ink-soft); margin-bottom: 8px;
-  transition: color 0.3s;
-}
-.auth-input {
-  width: 100%; padding: 13px 16px;
-  border: 1.5px solid var(--line); border-radius: 12px;
-  background: var(--card); color: var(--ink);
-  font-family: var(--sans); font-size: 15px; font-weight: 500;
-  transition: all 0.25s ease; outline: none;
-}
-.auth-input:hover { border-color: rgba(21,39,32,.35); }
-.auth-input:focus {
-  border-color: var(--terra);
-  box-shadow: 0 0 0 3px rgba(193,89,31,.1);
-}
-[data-theme="dark"] .auth-input:focus {
-  box-shadow: 0 0 0 3px rgba(193,89,31,.15);
-}
-.auth-input::placeholder { color: var(--sage); }
-.auth-input-wrap { position: relative; }
-.auth-input-wrap .auth-input { padding-right: 44px; }
-.auth-eye {
-  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
-  background: none; border: none; cursor: pointer;
-  color: var(--sage); font-size: 0.85rem; padding: 4px;
-  transition: color 0.2s;
-}
-.auth-eye:hover { color: var(--terra); }
-
-/* Submit */
-.auth-submit {
-  width: 100%; padding: 15px;
-  border-radius: 999px; border: none;
-  background: var(--terra); color: #fff;
-  font-family: var(--sans); font-size: 15.5px; font-weight: 600;
-  cursor: pointer; transition: all 0.25s ease;
-  margin-top: 4px; margin-bottom: 22px;
-  display: flex; align-items: center; justify-content: center; gap: 9px;
-  box-shadow: 0 8px 22px rgba(193,89,31,.28);
-}
-.auth-submit:hover {
-  background: var(--terra-d); transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(193,89,31,.38);
-}
-.auth-submit:active { transform: translateY(0); }
-.auth-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
-
-/* Divider */
-.auth-divider {
-  display: flex; align-items: center; gap: 12px;
-  margin-bottom: 20px; color: var(--sage); font-size: 12px;
-  font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
-}
-.auth-divider::before, .auth-divider::after {
-  content: ''; flex: 1; height: 1px; background: var(--line);
-}
-
-/* Google */
-.auth-google {
-  width: 100%; padding: 13px;
-  border-radius: 999px;
-  border: 1.5px solid var(--line);
-  background: var(--card); color: var(--ink);
-  font-family: var(--sans); font-size: 14.5px; font-weight: 600;
-  cursor: pointer; transition: all 0.25s ease;
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-}
-.auth-google:hover { border-color: var(--ink-soft); transform: translateY(-2px); box-shadow: var(--sh-sm); }
-.auth-google svg { width: 18px; height: 18px; flex-shrink: 0; }
-
-/* Error / Success */
-.auth-error, .auth-success {
-  padding: 12px 16px; border-radius: 12px;
-  font-size: 14px; font-weight: 600;
-  margin-bottom: 16px; display: none;
-  animation: slideIn 0.3s ease;
-}
-.auth-error { background: rgba(179,64,46,.08); color: var(--bad); border: 1px solid rgba(179,64,46,.2); }
-.auth-success { background: rgba(46,125,79,.08); color: var(--ok); border: 1px solid rgba(46,125,79,.2); }
-.auth-error.show, .auth-success.show { display: flex; align-items: center; gap: 8px; }
-@keyframes slideIn { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
-
-/* Toggle */
-.auth-toggle {
-  text-align: center; margin-top: 24px;
-  font-size: 14px; color: var(--ink-soft);
-}
-.auth-toggle a {
-  color: var(--terra); font-weight: 700; text-decoration: none; cursor: pointer;
-}
-.auth-toggle a:hover { text-decoration: underline; }
-
-/* Verification */
-.auth-verify {
-  display: none; text-align: center; padding: 32px 24px;
-}
-.auth-verify-icon {
-  width: 64px; height: 64px; border-radius: 50%;
-  background: rgba(46,125,79,.08); border: 2px solid var(--ok);
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 20px; font-size: 1.8rem;
-}
-.auth-verify h3 {
-  font-family: var(--serif); font-size: 1.3rem; font-weight: 600;
-  margin-bottom: 10px; color: var(--ink);
-}
-.auth-verify p { font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
-.auth-verify strong { color: var(--terra); }
-
-/* Spinner */
-.spinner {
-  width: 18px; height: 18px;
-  border: 2px solid rgba(255,255,255,0.3);
-  border-top-color: white; border-radius: 50%;
-  animation: spin 0.7s linear infinite; display: none;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes fadeInUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
-
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .auth-left { display: none; }
-  .auth-right { padding: 32px 24px; }
-  #mobileLogo { display: flex !important; }
-}
-@media (max-width: 480px) {
-  .auth-right { align-items: flex-start; padding-top: 48px; }
-  .auth-form-title { font-size: 1.6rem; }
-}
+.auth-forgot{text-align:right;margin:-6px 0 14px;font-size:.85rem;font-weight:700}
+.auth-forgot a,.auth-linkbtn{color:var(--grape);cursor:pointer;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;background:none;border:0;font:inherit;font-weight:800;padding:0}
+.auth-forgot a:hover,.auth-linkbtn:hover{color:var(--coral)}
+.auth-hint{display:none;font-size:.8rem;color:var(--ink-2);margin:-8px 0 14px;line-height:1.45}
+.auth-hint.bad{color:#a1163a}.auth-hint.ok{color:#0b6b52}
+.auth-view{display:none;text-align:center;padding:10px 4px}
+.auth-view h3,.auth-verify h3{display:none}
+.auth-view p{font-size:.95rem;color:var(--ink-2);line-height:1.6}
+.auth-view form{text-align:left;margin-top:18px}
+.auth-steps{text-align:left;margin:16px auto 6px;max-width:340px;padding:12px 16px;background:var(--sun-l);border:var(--bw) solid var(--ink);border-radius:14px;font-size:.86rem;line-height:1.55}
+.auth-steps b{font-weight:800}
+.auth-sub-actions{display:flex;flex-direction:column;gap:10px;align-items:center;margin-top:16px;font-size:.9rem;font-weight:600;color:var(--ink-2)}
+.auth-submit.ghost{background:#fff;color:var(--ink)}
+.auth-submit[disabled]{opacity:.65;cursor:not-allowed}
 </style>
+<script src="exam-date.js"></script>
 </head>
 <body>
+<div class="noise" aria-hidden="true"></div>
 
 <div class="auth-wrapper">
 
   <!-- ── Left Panel ── -->
   <div class="auth-left">
-    <a class="auth-logo" href="index.html">Imat<em>Path</em></a>
+    <div class="tricolore" style="position:absolute;top:0;left:0;right:0" aria-hidden="true"><i></i><i></i><i></i></div>
+    <a class="auth-logo" href="index.html" aria-label="ImatPath home">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
+    </a>
+    <span class="auth-pip pip-bob" data-pip data-mood="wow" aria-hidden="true"></span>
 
     <div class="auth-hero">
       <div class="auth-hero-badge">
-        <span class="dot"></span>
-        IMAT 2026 Preparation
+        <i></i>IMAT 2027 Preparation
       </div>
       <h1>Your clear path to <em>medicine in Italy.</em></h1>
 
       <div class="auth-features">
         <div class="auth-feat">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span><strong>2,000+ practice questions</strong> with detailed solutions</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><strong>4,000+ practice questions</strong> with detailed solutions</span>
         </div>
         <div class="auth-feat">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span><strong>20 full mock exams</strong> with real IMAT scoring</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><strong>20 full mock exams</strong> with official MUR/Cambridge scoring</span>
         </div>
         <div class="auth-feat">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span><strong>AI Tutor</strong> powered by Gemini</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><strong>AI Tutor</strong> for instant concept breakdowns</span>
         </div>
         <div class="auth-feat">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span><strong>Progress analytics</strong> & score predictions</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><strong>Performance analytics</strong> &amp; subject mastery predictions</span>
         </div>
         <div class="auth-feat">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span><strong>Non-EU application guide</strong> — step by step</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><strong>Application guidance</strong> &middot; step by step</span>
         </div>
       </div>
 
       <div class="auth-stats">
         <div>
-          <div class="auth-stat-val">2K+</div>
-          <div class="auth-stat-lbl">Practice questions</div>
+          <div class="auth-stat-val">4K+</div>
+          <div class="auth-stat-lbl">Questions</div>
         </div>
-        <div style="width:1px;background:rgba(246,241,230,.1);"></div>
+        <div style="width:1px;background:var(--line-l)"></div>
         <div>
           <div class="auth-stat-val">20</div>
-          <div class="auth-stat-lbl">Mock exams</div>
+          <div class="auth-stat-lbl">Mocks</div>
         </div>
-        <div style="width:1px;background:rgba(246,241,230,.1);"></div>
+        <div style="width:1px;background:var(--line-l)"></div>
         <div>
-          <div class="auth-stat-val">7</div>
-          <div class="auth-stat-lbl">IMAT subjects</div>
+          <div class="auth-stat-val">85</div>
+          <div class="auth-stat-lbl">Chapters</div>
         </div>
       </div>
     </div>
@@ -419,27 +231,22 @@ body {
 
   <!-- ── Right Panel ── -->
   <div class="auth-right">
-
-    <!-- Dark mode toggle -->
-    <button class="auth-dark-toggle" id="authDarkToggle" onclick="toggleAuthDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
-      <i class="fas fa-moon"></i>
-    </button>
-
     <div class="auth-form-wrap">
 
       <!-- Mobile logo -->
-      <a href="index.html" style="display:none;align-items:center;text-decoration:none;margin-bottom:28px;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);" id="mobileLogo">
-        Imat<em style="font-style:italic;color:var(--terra);">Path</em>
+      <a href="index.html" style="display:none;align-items:center;gap:10px;text-decoration:none;margin-bottom:24px" id="mobileLogo">
+        <span class="logo-mark" data-pip style="width:48px"></span>
+        <span class="logo-word" style="color:var(--grape);text-shadow:none">imatpath</span>
       </a>
 
       <!-- Header -->
       <div class="auth-form-header">
         <h1 class="auth-form-title" id="formTitle">Welcome back</h1>
-        <p class="auth-form-sub" id="formSub">Sign in to continue your IMAT preparation.</p>
+        <p class="auth-form-sub" id="formSub">Sign in to continue your IMAT 2027 preparation.</p>
       </div>
 
       <!-- Tabs -->
-      <div class="auth-tabs">
+      <div class="auth-tabs" id="authTabs">
         <button class="auth-tab active" id="tabSignIn" onclick="switchTab('signin')">Sign In</button>
         <button class="auth-tab" id="tabSignUp" onclick="switchTab('signup')">Create Account</button>
       </div>
@@ -456,7 +263,7 @@ body {
 
       <!-- Form -->
       <form id="authForm" onsubmit="handleSubmit(event)">
-        <div class="auth-field" id="fieldName" style="display:none;">
+        <div class="auth-field" id="fieldName" style="display:none">
           <label class="auth-label" for="inputName">First name</label>
           <input class="auth-input" type="text" id="inputName" placeholder="e.g. Marco" autocomplete="given-name">
         </div>
@@ -467,34 +274,76 @@ body {
         <div class="auth-field">
           <label class="auth-label" for="inputPassword">Password</label>
           <div class="auth-input-wrap">
-            <input class="auth-input" type="password" id="inputPassword" placeholder="At least 6 characters" autocomplete="current-password" required>
-            <button type="button" class="auth-eye" onclick="togglePassword('inputPassword', this)">
+            <input class="auth-input" type="password" id="inputPassword" placeholder="Your password" autocomplete="current-password" required>
+            <button type="button" class="auth-eye" onclick="togglePassword('inputPassword', this)" aria-label="Toggle password visibility">
               <i class="fas fa-eye"></i>
             </button>
           </div>
         </div>
+        <p class="auth-hint" id="pwHint">Use at least 6 characters. A mix of letters and numbers is safer.</p>
+        <div class="auth-forgot" id="forgotRow"><a onclick="showView('forgot')">Forgot your password?</a></div>
         <button class="auth-submit" type="submit" id="submitBtn">
           <div class="spinner" id="spinner"></div>
           <span id="submitText">Sign In</span>
-          <svg id="submitIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span id="submitIcon" class="ar">→</span>
         </button>
       </form>
 
       <!-- Verification -->
       <div class="auth-verify" id="verifyMsg">
         <div class="auth-verify-icon">📬</div>
-        <h3>Check your email!</h3>
-        <p>We sent a confirmation link to <strong id="verifyEmail"></strong>. Click the link to activate your account, then sign in.</p>
-        <button onclick="switchTab('signin')" style="margin-top:20px;padding:12px 28px;border-radius:999px;border:none;background:var(--terra);color:white;font-family:var(--sans);font-weight:600;cursor:pointer;box-shadow:0 6px 18px rgba(193,89,31,.25);">
-          Go to Sign In
-        </button>
+        <h3>Check your email</h3>
+        <p>We sent a confirmation link to <strong id="verifyEmail"></strong>. Click it to activate your account. It takes a few seconds to arrive.</p>
+        <div class="auth-steps"><b>Can't find it?</b><br>Look in your spam or promotions folder, and check the address is spelled correctly.</div>
+        <button class="auth-submit ghost" id="resendBtn" type="button" onclick="resendVerify()" style="margin-top:14px"><span id="resendText">Resend the email</span></button>
+        <div class="auth-sub-actions">
+          <span>Already confirmed? <button class="auth-linkbtn" type="button" onclick="switchTab('signin')">Sign in</button></span>
+          <span>Wrong address? <button class="auth-linkbtn" type="button" onclick="switchTab('signup')">Start again</button></span>
+        </div>
       </div>
 
+      <!-- Forgot password -->
+      <div class="auth-view" id="forgotView">
+        <div class="auth-verify-icon" style="margin:0 auto 14px">🔑</div>
+        <h3>Reset your password</h3>
+        <p>Enter your email and we will send you a link to choose a new password.</p>
+        <form onsubmit="handleForgot(event)">
+          <div class="auth-field">
+            <label class="auth-label" for="forgotEmail">Email address</label>
+            <input class="auth-input" type="email" id="forgotEmail" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <button class="auth-submit" type="submit" id="forgotBtn"><span id="forgotText">Send reset link</span></button>
+        </form>
+        <div class="auth-sub-actions"><button class="auth-linkbtn" type="button" onclick="switchTab('signin')">← Back to sign in</button></div>
+      </div>
+
+      <!-- New password (after the reset link) -->
+      <div class="auth-view" id="resetView">
+        <div class="auth-verify-icon" style="margin:0 auto 14px">🔒</div>
+        <h3>Choose a new password</h3>
+        <p>Pick a password you have not used before.</p>
+        <form onsubmit="handleReset(event)">
+          <div class="auth-field">
+            <label class="auth-label" for="newPassword">New password</label>
+            <div class="auth-input-wrap">
+              <input class="auth-input" type="password" id="newPassword" placeholder="At least 6 characters" autocomplete="new-password" required>
+              <button type="button" class="auth-eye" onclick="togglePassword('newPassword', this)" aria-label="Toggle password visibility"><i class="fas fa-eye"></i></button>
+            </div>
+          </div>
+          <div class="auth-field">
+            <label class="auth-label" for="newPassword2">Repeat the password</label>
+            <input class="auth-input" type="password" id="newPassword2" placeholder="Same password again" autocomplete="new-password" required>
+          </div>
+          <button class="auth-submit" type="submit" id="resetBtn"><span id="resetText">Save new password</span></button>
+        </form>
+      </div>
+
+      <div id="altAuth">
       <!-- Divider -->
       <div class="auth-divider">or continue with</div>
 
       <!-- Google -->
-      <button class="auth-google" onclick="handleGoogle()">
+      <button class="auth-google" onclick="handleGoogle()" type="button">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
           <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
@@ -504,59 +353,70 @@ body {
         Continue with Google
       </button>
 
+      <!-- Direct Access (Visible ONLY on local file preview / localhost) -->
+      <a id="localBypassBtn" href="dashboard.html" onclick="if(window.ImatAuth)window.ImatAuth.enterGuestMode();" class="auth-google" style="display:none;margin-top:10px;text-align:center;align-items:center;justify-content:center;gap:10px;background:var(--sun);text-decoration:none">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>
+        Enter Dashboard (Local Dev)
+      </a>
+
+      </div>
       <!-- Toggle -->
       <div class="auth-toggle" id="formToggle">
-        Don't have an account? <a onclick="switchTab('signup')">Create one free</a>
+        Don't have an account? <a onclick="switchTab('signup')">Create an account</a>
       </div>
     </div>
   </div>
 
 </div>
 
+<!-- Core Supabase & Auth Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="supabase.js"></script>
+
 <script>
-// ── Dark mode sync ──
-(function() {
-  const saved = localStorage.getItem('imatpath_dark_mode');
-  if (saved === 'true') document.documentElement.setAttribute('data-theme', 'dark');
-  document.addEventListener('DOMContentLoaded', updateDarkToggleIcon);
-})();
-
-function toggleAuthDarkMode() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('imatpath_dark_mode', 'false');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('imatpath_dark_mode', 'true');
-  }
-  updateDarkToggleIcon();
-}
-
-function updateDarkToggleIcon() {
-  const btn = document.getElementById('authDarkToggle');
-  if (btn) {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-  }
-}
-
-// If already logged in → go to dashboard
+// Auto-enter dashboard directly ONLY on local preview (file:/// or localhost)
 (async function() {
-  if (!window.ImatAuth) return;
-  const session = await window.ImatAuth.getSession();
-  if (session) window.location.replace('dashboard.html');
+  const isLocalEnv = window.location.protocol === 'file:' || 
+                     window.location.hostname === 'localhost' || 
+                     window.location.hostname === '127.0.0.1';
+
+  const bypassBtn = document.getElementById('localBypassBtn');
+  if (isLocalEnv && bypassBtn) {
+    bypassBtn.style.display = 'flex';
+  }
+
+  if (isLocalEnv) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const showForm = urlParams.get('login') === 'true' || urlParams.get('mode') === 'form';
+    if (!showForm) {
+      if (window.ImatAuth && typeof window.ImatAuth.enterGuestMode === 'function') {
+        window.ImatAuth.enterGuestMode();
+      } else {
+        localStorage.removeItem('imatpath_logged_out');
+        window.location.replace('dashboard.html');
+      }
+    }
+  } else {
+    // On LIVE website: only redirect if genuinely authenticated with Supabase
+    if (window.ImatAuth) {
+      const session = await window.ImatAuth.getSession();
+      if (session?.user) {
+        window.location.replace('dashboard.html');
+      }
+    }
+  }
 })();
 
 // Show mobile logo on small screens
-if (window.innerWidth <= 900) {
-  document.getElementById('mobileLogo').style.display = 'flex';
+if (window.innerWidth <= 920) {
+  const ml = document.getElementById('mobileLogo');
+  if (ml) ml.style.display = 'flex';
 }
 
 let currentTab = 'signin';
+// Landing-page "Get Started" / plan buttons open the sign-up tab directly
+if (new URLSearchParams(window.location.search).get('tab') === 'signup') switchTab('signup');
 
 function switchTab(tab) {
   currentTab = tab;
@@ -567,14 +427,16 @@ function switchTab(tab) {
   document.getElementById('fieldName').style.display = isSignUp ? 'block' : 'none';
   document.getElementById('formTitle').textContent = isSignUp ? 'Create your account' : 'Welcome back';
   document.getElementById('formSub').textContent = isSignUp
-    ? 'Join thousands of students preparing for IMAT 2026.'
-    : 'Sign in to continue your IMAT preparation.';
+    ? 'Join thousands of students preparing for IMAT 2027.'
+    : 'Sign in to continue your IMAT 2027 preparation.';
   document.getElementById('submitText').textContent = isSignUp ? 'Create Account' : 'Sign In';
   document.getElementById('formToggle').innerHTML = isSignUp
     ? 'Already have an account? <a onclick="switchTab(\'signin\')">Sign in</a>'
-    : 'Don\'t have an account? <a onclick="switchTab(\'signup\')">Create one free</a>';
+    : 'Don\'t have an account? <a onclick="switchTab(\'signup\')">Create an account</a>';
   document.getElementById('authForm').style.display = 'block';
-  document.getElementById('verifyMsg').style.display = 'none';
+  showView('form');
+  document.getElementById('pwHint').style.display = isSignUp ? 'block' : 'none';
+  document.getElementById('forgotRow').style.display = isSignUp ? 'none' : 'block';
   if (isSignUp) {
     document.getElementById('inputPassword').setAttribute('autocomplete', 'new-password');
     document.getElementById('inputPassword').placeholder = 'Choose a password (min. 6 chars)';
@@ -619,6 +481,73 @@ function hideMessages() {
   document.getElementById('authSuccess').classList.remove('show');
 }
 
+
+/* ---------- views ---------- */
+let pendingEmail = '';
+let recoveryMode = /type=recovery/.test(location.hash) || new URLSearchParams(location.search).get('mode') === 'reset' && /access_token|code=/.test(location.hash + location.search);
+function showView(v) {
+  const map = { form: 'authForm', verify: 'verifyMsg', forgot: 'forgotView', reset: 'resetView' };
+  Object.keys(map).forEach(k => {
+    const el = document.getElementById(map[k]);
+    el.style.display = (k === v) ? 'block' : 'none';
+  });
+  const isForm = v === 'form';
+  document.getElementById('authTabs').style.display = isForm ? '' : 'none';
+  document.getElementById('altAuth').style.display = isForm ? '' : 'none';
+  document.getElementById('formToggle').style.display = isForm ? '' : 'none';
+  if (!isForm) {
+    hideMessages();
+    document.getElementById('formTitle').textContent = v === 'verify' ? 'Check your email' : v === 'forgot' ? 'Reset your password' : 'Choose a new password';
+    document.getElementById('formSub').textContent = v === 'verify' ? 'One last step before you start.' : v === 'forgot' ? 'It happens. We will email you a link.' : 'Pick a password you have not used before.';
+  }
+  if (v === 'forgot') { const e = document.getElementById('inputEmail').value.trim(); if (e) document.getElementById('forgotEmail').value = e; }
+}
+
+function friendly(err) {
+  const msg = (err && err.message) || '';
+  const code = (err && err.code) || '';
+  if (/Invalid login credentials/i.test(msg)) return 'Incorrect email or password. Try again, or reset your password.';
+  if (code === 'user_already_exists' || /already registered|already been registered/i.test(msg)) return 'This email already has an account. Sign in instead, or reset your password.';
+  if (code === 'email_not_confirmed' || /Email not confirmed/i.test(msg)) return 'EMAIL_NOT_CONFIRMED';
+  if (/rate limit|too many|over_email_send_rate_limit|429/i.test(msg + code)) return 'Too many attempts. Please wait a minute and try again.';
+  if (/password.*(short|weak|at least)|weak_password/i.test(msg + code)) return 'Choose a stronger password (at least 6 characters).';
+  if (/valid email|invalid.*email|email_address_invalid/i.test(msg + code)) return 'That email address does not look right. Please check it.';
+  if (/failed to fetch|network|load failed/i.test(msg)) return 'No connection. Check your internet and try again.';
+  if (/same password|different from the old/i.test(msg)) return 'Choose a password different from your old one.';
+  return msg || 'Something went wrong. Please try again.';
+}
+
+function goVerify(email) {
+  pendingEmail = email;
+  document.getElementById('verifyEmail').textContent = email;
+  showView('verify');
+  startCooldown(60);
+}
+
+let cdTimer = null;
+function startCooldown(sec) {
+  const btn = document.getElementById('resendBtn'), txt = document.getElementById('resendText');
+  clearInterval(cdTimer);
+  let left = sec;
+  btn.disabled = true;
+  txt.textContent = 'Resend the email (' + left + 's)';
+  cdTimer = setInterval(() => {
+    left--;
+    if (left <= 0) { clearInterval(cdTimer); btn.disabled = false; txt.textContent = 'Resend the email'; }
+    else txt.textContent = 'Resend the email (' + left + 's)';
+  }, 1000);
+}
+
+async function resendVerify() {
+  if (!pendingEmail) return;
+  try {
+    await window.ImatAuth.resendVerification(pendingEmail);
+    showSuccess('Email sent again. Check your inbox and spam folder.');
+    startCooldown(60);
+  } catch (err) { showError(friendly(err)); }
+}
+
+/* ---------- sign in / create account ---------- */
 async function handleSubmit(e) {
   e.preventDefault();
   hideMessages();
@@ -633,36 +562,80 @@ async function handleSubmit(e) {
     if (currentTab === 'signin') {
       await window.ImatAuth.signIn(email, password);
       showSuccess('Signing you in…');
-      setTimeout(() => window.location.href = 'dashboard.html', 600);
+      const next = new URLSearchParams(location.search).get('next');
+      setTimeout(() => window.location.href = (next && /^[a-z0-9\-_]+\.html$/i.test(next)) ? next : 'dashboard.html', 500);
     } else {
-      const data = await window.ImatAuth.signUp(email, password, name);
+      await window.ImatAuth.signUp(email, password, name);
       setLoading(false);
-      document.getElementById('authForm').style.display = 'none';
-      document.getElementById('verifyMsg').style.display = 'block';
-      document.getElementById('verifyEmail').textContent = email;
+      goVerify(email);
     }
   } catch (err) {
     setLoading(false);
-    const msg = err.message || 'Something went wrong. Please try again.';
-    if (msg.includes('Invalid login credentials')) showError('Incorrect email or password. Try again.');
-    else if (msg.includes('already registered') || msg.includes('already been registered')) showError('This email is already registered. Sign in instead.');
-    else if (msg.includes('Email not confirmed')) showError('Please verify your email first, then sign in.');
-    else showError(msg);
+    const m = friendly(err);
+    if (m === 'EMAIL_NOT_CONFIRMED') {
+      goVerify(email);
+      showError('Your email is not confirmed yet. Click the link we sent you, or resend it below.');
+    } else showError(m);
   }
+}
+
+async function handleForgot(e) {
+  e.preventDefault();
+  hideMessages();
+  const email = document.getElementById('forgotEmail').value.trim();
+  if (!email) { showError('Please enter your email.'); return; }
+  const btn = document.getElementById('forgotBtn'); btn.disabled = true;
+  try {
+    await window.ImatAuth.sendPasswordReset(email);
+    showSuccess('If an account exists for ' + email + ', a reset link is on its way. Check your spam folder too.');
+    setTimeout(() => { btn.disabled = false; }, 30000);
+  } catch (err) { btn.disabled = false; showError(friendly(err)); }
+}
+
+async function handleReset(e) {
+  e.preventDefault();
+  hideMessages();
+  const p1 = document.getElementById('newPassword').value, p2 = document.getElementById('newPassword2').value;
+  if (p1.length < 6) { showError('Password must be at least 6 characters.'); return; }
+  if (p1 !== p2) { showError('The two passwords are not the same.'); return; }
+  const btn = document.getElementById('resetBtn'); btn.disabled = true;
+  try {
+    await window.ImatAuth.updatePassword(p1);
+    showSuccess('Password updated. Taking you to your dashboard…');
+    recoveryMode = false;
+    setTimeout(() => window.location.href = 'dashboard.html', 1200);
+  } catch (err) { btn.disabled = false; showError(friendly(err)); }
 }
 
 async function handleGoogle() {
   try {
     await window.ImatAuth.signInWithGoogle();
   } catch (err) {
-    showError(err.message || 'Google sign-in failed. Please try again.');
+    showError(friendly(err) || 'Google sign-in failed. Please try again.');
   }
 }
 
-// Check for OAuth redirect
-window.ImatAuth?.client?.auth?.onAuthStateChange(function(event, session) {
-  if ((event === 'SIGNED_IN') && session) {
-    window.location.href = 'dashboard.html';
+/* ---------- landing from an email link ---------- */
+(function () {
+  const q = new URLSearchParams(location.search);
+  if (recoveryMode) { showView('reset'); return; }
+  if (q.get('verified') === '1') {
+    // The confirmation link signs the user in. If it did not, ask them to sign in.
+    setTimeout(async () => {
+      const s = window.ImatAuth && await window.ImatAuth.getSession();
+      if (!s || !s.user) { switchTab('signin'); showSuccess('Email confirmed. You can sign in now.'); }
+    }, 1500);
+  }
+  const err = new URLSearchParams(location.hash.replace(/^#/, '')).get('error_description');
+  if (err) { switchTab('signin'); showError(/expired|invalid/i.test(err) ? 'This link has expired or was already used. Sign in, or ask for a new email.' : err.replace(/\+/g, ' ')); }
+})();
+
+window.ImatAuth?.client?.auth?.onAuthStateChange(function (event, session) {
+  if (event === 'PASSWORD_RECOVERY') { recoveryMode = true; showView('reset'); return; }
+  if (event === 'SIGNED_IN' && session && !recoveryMode) {
+    if (window.ImatAuth.isUnverified(session.user)) return;
+    if (new URLSearchParams(location.search).get('verified') === '1') showSuccess('Email confirmed. Welcome to ImatPath!');
+    setTimeout(() => { window.location.href = 'dashboard.html'; }, 400);
   }
 });
 </script>

@@ -1,13 +1,13 @@
-// paywall.js — Neutralized: ImatPath is 100% free with no paywalls or payments
+// paywall.js — Payment & Entitlement Stubs
 function loadPayPalScript() {
   return Promise.resolve(null);
 }
 
 async function renderPayPalButtons(session) {
-  // All features are free — no payment required
+  // Payment integration placeholder
 }
 
 window.openPaywallModal = function() {
-  // All features are free — no modal needed
+  // Modal placeholder
 };
 

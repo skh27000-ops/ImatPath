@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theory Lessons — ImatPath</title>
+<meta name="description" content="Theory lessons for the IMAT: Biology, Chemistry, Physics and Math, chapter by chapter, with a video lesson and a course document for each one.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" href="favicon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
+
+<!-- Core Supabase & Auth Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="supabase.js"></script>
+<script src="auth-guard.js"></script>
+<script src="xp-system.js"></script>
+<script src="biology-syllabus.js"></script>
+<script src="science-syllabus.js"></script>
+
+<script>
+// ── Fast Dark Mode Init ──
+(function() {
+  const saved = localStorage.getItem('imatpath_dark_mode');
+  if (saved === 'true') document.documentElement.setAttribute('data-theme', 'dark');
+})();
+</script>
+
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="app-shell.css">
+<script src="mascot.js"></script>
+<style>
+/* Lessons — page-specific */
+@keyframes rowin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ============ THE SHELF ============ */
+.shelf-wrap{position:relative;margin:34px 0 46px;padding:0 4px}
+.shelf{--H:clamp(250px,34vw,320px);display:flex;align-items:flex-end;justify-content:center;gap:clamp(8px,1.6vw,18px);padding:44px 0 0;position:relative;z-index:2}
+.book{--c:var(--mint);--ct:var(--mint-l);--hh:1;appearance:none;font:inherit;color:var(--ink);cursor:pointer;position:relative;width:clamp(72px,13.5vw,142px);height:calc(var(--H) * var(--hh));margin:0 0 -3px;padding:14px 0 12px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;background:var(--c);border:var(--bw) solid var(--ink);border-radius:16px 16px 6px 6px;box-shadow:5px 0 0 var(--ink);transform-origin:50% 100%;transition:transform .45s var(--e),box-shadow .45s var(--e);-webkit-tap-highlight-color:transparent}
+.book::before,.book::after{content:"";position:absolute;left:0;right:0;height:7px;background:var(--ink)}
+.book::before{top:80px}
+.book::after{bottom:52px}
+.book:nth-child(2){--hh:.93}
+.book:nth-child(3){--hh:.97}
+.book:nth-child(4){--hh:.9}
+.book:hover{transform:translateY(-10px)}
+.book:focus-visible{outline:3px solid var(--grape);outline-offset:4px}
+.book[aria-selected="true"]{transform:translateY(-26px) rotate(-2deg);box-shadow:8px 10px 0 var(--ink)}
+.bk-top{width:clamp(38px,5.4vw,52px);aspect-ratio:1;border-radius:50%;background:#fff;border:var(--bw) solid var(--ink);display:grid;place-items:center;font-size:clamp(1.15rem,2.4vw,1.6rem);line-height:1;box-shadow:2px 2px 0 var(--ink);transition:transform .45s var(--e)}
+.book[aria-selected="true"] .bk-top{transform:rotate(12deg) scale(1.1)}
+.bk-title{writing-mode:vertical-rl;transform:rotate(180deg);font:800 clamp(1rem,2.3vw,1.6rem)/1 var(--f-disp);letter-spacing:-.02em;margin:auto 0;padding:2px 0;position:relative;z-index:1}
+.bk-n{font:.62rem var(--f-px);background:#fff;border:2.5px solid var(--ink);border-radius:8px;padding:3px 6px;position:relative;z-index:1}
+.bk-flag{position:absolute;top:-3px;right:14%;width:18px;height:46px;background:var(--coral);border:var(--bw) solid var(--ink);border-top:0;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%);transform:translateY(-60%);opacity:0;transition:transform .5s var(--e),opacity .3s;z-index:0}
+.book[aria-selected="true"] .bk-flag{transform:translateY(-3px);opacity:1}
+.plank{position:relative;z-index:1;height:24px;border:var(--bw) solid var(--ink);border-radius:10px;background:var(--sun);box-shadow:var(--sh)}
+.plank::after{content:"";position:absolute;inset:5px 14px auto;border-top:3px solid rgba(27,19,64,.18);border-radius:3px}
+.shelf-pip{position:absolute;right:clamp(0px,2vw,24px);bottom:22px;width:clamp(110px,13vw,150px);z-index:3;pointer-events:none}
+.shelf-pip .pip{width:100%;height:auto;display:block;overflow:visible}
+.shelf-bubble{position:absolute;right:clamp(0px,2vw,24px);bottom:calc(22px + clamp(110px,13vw,150px) * 1.2);z-index:3;background:#fff;border:var(--bw) solid var(--ink);border-radius:18px 18px 4px 18px;padding:8px 14px;font:800 .86rem/1.25 var(--f-disp);box-shadow:var(--sh-s);transform:rotate(3deg);max-width:170px}
+
+/* ============ LESSON PANEL ============ */
+.lp{--c:var(--mint);--ct:var(--mint-l);background:#fff;border:var(--bw) solid var(--ink);border-radius:28px;box-shadow:var(--sh);overflow:hidden}
+.lp-head{background:var(--c);background-image:radial-gradient(rgba(27,19,64,.14) 1.7px,transparent 1.7px);background-size:20px 20px;border-bottom:var(--bw) solid var(--ink);padding:26px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;position:relative}
+.lp-emoji{width:76px;height:76px;border-radius:24px;background:#fff;border:var(--bw) solid var(--ink);box-shadow:var(--sh-s);display:grid;place-items:center;font-size:2.4rem;flex:none;transform:rotate(-5deg)}
+.lp-head h2{font:800 clamp(2rem,4.6vw,3.3rem)/1 var(--f-disp);letter-spacing:-.04em;margin:0}
+.lp-head p{margin:6px 0 0;font-weight:700;color:var(--ink);opacity:.8}
+.lp-sticker{margin-left:auto;background:var(--ink);color:#fff;border:var(--bw) solid var(--ink);border-radius:14px;padding:10px 14px;font:.62rem/1.6 var(--f-px);transform:rotate(2.5deg);box-shadow:3px 3px 0 #fff;max-width:230px}
+.lp-sticker b{color:var(--sun);font-weight:400}
+.lp-tools{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:16px 28px;border-bottom:2.5px dashed rgba(27,19,64,.18);background:var(--cream)}
+.srch{flex:1;min-width:200px;position:relative}
+.srch svg{position:absolute;left:14px;top:50%;translate:0 -50%;color:var(--ink-2);pointer-events:none}
+.srch input{width:100%;font:600 .95rem var(--f-body);color:var(--ink);padding:11px 16px 11px 42px;border:var(--bw) solid var(--ink);border-radius:99px;background:#fff;box-shadow:var(--sh-s);outline:none;transition:box-shadow .2s,transform .2s}
+.srch input:focus{box-shadow:5px 5px 0 var(--grape);transform:translate(-1px,-1px)}
+.cnt{font:700 .85rem var(--f-body);color:var(--ink-2)}
+
+.lessons{--pad:28px;list-style:none;margin:0;padding:0;position:relative}
+.lessons::before{content:"";position:absolute;left:calc(var(--pad) + 27px);top:36px;bottom:36px;border-left:3px dashed rgba(27,19,64,.2)}
+.ls{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;padding:16px var(--pad);border-bottom:2.5px dashed rgba(27,19,64,.14);position:relative;transition:background .25s;animation:rowin .5s var(--e) both;animation-delay:calc(var(--i) * 26ms)}
+.ls:last-child{border-bottom:0}
+.ls:hover{background:var(--ct)}
+.ls .n{width:54px;height:54px;border-radius:16px;background:var(--c);border:var(--bw) solid var(--ink);box-shadow:3px 3px 0 var(--ink);display:grid;place-items:center;font:800 1.2rem var(--f-disp);position:relative;z-index:1;transition:transform .35s var(--e)}
+.ls:hover .n{transform:rotate(-7deg) scale(1.1)}
+.ls h3{font:800 1.14rem/1.25 var(--f-disp);letter-spacing:-.01em;margin:0}
+.ls .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:7px}
+.tag{padding:2px 10px;border:2px solid var(--ink);border-radius:99px;background:#fff;font:700 .72rem var(--f-body);color:var(--ink)}
+.tag.ok{background:var(--mint)}
+.tag.start{background:var(--coral);color:#fff;transform:rotate(-2deg);font-family:var(--f-px);font-weight:400;font-size:.55rem;padding:4px 8px}
+.acts{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.tag.read{background:var(--mint)}.tag.mins{background:var(--lav)}
+.acts .btn.pri{background:var(--grape);color:#fff}
+.acts .btn{white-space:nowrap}
+.acts .btn svg{flex:none}
+.soon{font:.48rem var(--f-px);background:var(--sun);color:var(--ink);border:1.5px solid var(--ink);border-radius:6px;padding:2px 4px;margin-left:2px;letter-spacing:0}
+.empty{padding:44px 20px;text-align:center;font-weight:700}
+.empty .pipe{width:110px;margin:0 auto 10px}
+.empty .pipe .pip{width:100%;height:auto;display:block}
+.lp-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 28px;background:var(--grape);background-image:radial-gradient(rgba(255,255,255,.14) 1.6px,transparent 1.6px);background-size:22px 22px;color:#fff;border-top:var(--bw) solid var(--ink)}
+.lp-foot b{font:800 1.25rem var(--f-disp);letter-spacing:-.02em;display:block}
+.lp-foot span{opacity:.9;font-weight:600;font-size:.92rem}
+.lp-foot .go{display:flex;gap:10px;flex-wrap:wrap}
+
+@media(max-width:980px){
+  .cd-chip{flex-wrap:wrap}
+}
+@media(max-width:760px){
+  .lessons{--pad:16px}
+  .lp-head,.lp-tools,.lp-foot{padding-left:16px;padding-right:16px}
+  .ls{grid-template-columns:auto minmax(0,1fr);row-gap:12px}
+  .acts{grid-column:1 / -1;justify-content:stretch}
+  .acts .btn{flex:1;justify-content:center}
+  .lp-sticker{margin-left:0}
+}
+@media(max-width:600px){
+  .shelf-pip,.shelf-bubble{display:none}
+  .shelf{--H:clamp(250px,66vw,290px)}
+  .book::before{top:66px}.book::after{bottom:44px}
+  .book{padding:10px 0 8px}
+  .bk-n{font-size:.52rem;padding:2px 4px}
+  .lp-emoji{width:60px;height:60px;font-size:1.9rem;border-radius:18px}
+}
+.lessons.topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:24px var(--pad)}
+.lessons.topics::before,.lessons.topics::after{display:none}
+.tp{appearance:none;width:100%;height:100%;font:inherit;color:var(--ink);text-align:left;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;padding:18px;background:#fff;border:var(--bw) solid var(--ink);border-radius:20px;box-shadow:var(--sh-s);transition:transform .2s var(--e),background .2s}
+.tp:hover{background:var(--ct);transform:translate(-2px,-2px)}
+.tp:focus-visible{outline:3px solid var(--grape);outline-offset:3px}
+.tp .n{width:54px;height:54px;border-radius:16px;background:var(--c);border:var(--bw) solid var(--ink);box-shadow:3px 3px 0 var(--ink);display:grid;place-items:center;font:800 1.2rem var(--f-disp)}
+.tp b{display:block;font:800 1.14rem/1.25 var(--f-disp);letter-spacing:-.01em}
+.tp small{display:block;margin-top:4px;font-weight:700;font-size:.85rem;color:var(--ink-2)}
+.tp .ar{font:800 1.5rem var(--f-disp)}
+.lp{scroll-margin-top:96px}
+.tp-head{position:relative;z-index:1;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:16px var(--pad);background:var(--ct);border-bottom:2.5px dashed rgba(27,19,64,.14)}
+.tp-head h3{font:800 1.3rem/1.2 var(--f-disp);letter-spacing:-.02em;margin:0}
+@media(max-width:760px){.lessons.topics{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.tp{transition:none}.ls{animation:none}.book,.book *{transition:none}}
+</style>
+<script src="exam-date.js"></script>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div class="scrim" aria-hidden="true"></div>
+<div class="toast" id="toast" role="alert" aria-live="polite"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span id="toastText">Coming soon</span></div>
+
+<aside class="side" id="side">
+  <div class="tricolore" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button class="side-x" id="sideX" aria-label="Close menu">✕</button>
+  <div class="side-in">
+    <a class="logo" href="index.html" aria-label="ImatPath home">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
+    </a>
+    <nav class="snav" aria-label="Dashboard">
+      <a href="dashboard.html" title="Dashboard"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a>
+      <a class="act" href="lessons.html" title="Lessons"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.500-2 10-.5V19c-2.500-1.500-6-1.500-10 .5-4-2-7.500-2-10-.5z"/><path d="M12 6v13.500"/></svg>Lessons</a>
+      <a href="flashcards.html" title="Flashcards"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="14" height="14" rx="2.5"/><path d="M17 17v1.5A2.5 2.5 0 0 1 14.5 21h-9A2.5 2.5 0 0 1 3 18.5v-9A2.5 2.5 0 0 1 5.5 7H7"/><path d="M11 10h6"/></svg>Flashcards</a>
+      <a href="checklist.html" title="Syllabus Checklist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="m8 9 2 2 4-4M8 15h8"/></svg>Syllabus Checklist</a>
+      <a href="question-bank.html" title="Question Bank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.33c-.7.28-.9.87-.9 1.67"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>Question Bank</a>
+      <a href="mock-exam.html" title="Mock Exams"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>Mock Exams</a>
+      <a href="roadmap.html" title="IMAT Past Papers"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/><path d="M9 8h6M9 12h6"/></svg>IMAT Past Papers</a>
+      <a href="analytics.html" title="Analytics"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Analytics</a>
+    </nav>
+    <div class="side-foot">
+      <div class="plan-card">
+        <span class="t"><i></i>IMAT Candidate Access</span>
+        <p>Valid until exam day · Track your progress across all devices.</p>
+      </div>
+      <div class="user-card" id="userCard">
+        <span class="avatar" id="userAvatar">U</span>
+        <span style="flex:1;min-width:0;overflow:hidden"><span class="n" id="userName">User</span><br><span class="r">IMAT 2027 candidate</span></span>
+        <button class="logout-btn" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="mtop">
+    <a class="logo" href="index.html" style="text-decoration:none">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+  </div>
+
+  <header class="top">
+    <div>
+      <span class="eyebrow" data-rv>Theory lessons</span>
+      <h1 class="lm"><span>The Lesson <em>Library.</em></span></h1>
+      <p class="top-sub" data-rv style="--d:.15s">Pick a book from the shelf. Every chapter has a course document and a set of flashcards, so you can learn the theory before you practice it. Video lessons are being recorded and will appear here when they are ready.</p>
+    </div>
+    <div class="cd-chip" data-rv style="--d:.2s" aria-label="Library size">
+      <span class="big"><span id="libTotal">0</span><small> chapters<br>to master</small></span>
+      <div class="cd-boxes" id="libBoxes"></div>
+    </div>
+  </header>
+
+  <!-- the shelf -->
+  <section class="shelf-wrap" aria-label="Choose a subject">
+    <div class="shelf" id="shelf" role="tablist" aria-label="Subjects"></div>
+    <div class="plank" aria-hidden="true"></div>
+    <div class="shelf-bubble" id="bubble" aria-hidden="true">Pick a book!</div>
+    <div class="shelf-pip" aria-hidden="true"><span class="pip-bob" data-pip data-mood="happy"></span></div>
+  </section>
+
+  <!-- the lessons -->
+  <section class="lp" id="panel" aria-live="polite">
+    <div class="lp-head">
+      <span class="lp-emoji" id="lpEmoji" aria-hidden="true">🧬</span>
+      <div>
+        <h2 id="lpTitle">Biology</h2>
+        <p id="lpSub">28 chapters</p>
+      </div>
+      <div class="lp-sticker">📄 <b>DOCUMENT</b> + 🗂 <b>CARDS</b><br>ready for every lesson. Videos are coming.</div>
+    </div>
+    <div class="lp-tools">
+      <label class="srch">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="q" placeholder="Search chapters…" autocomplete="off" aria-label="Search chapters">
+      </label>
+      <span class="cnt" id="cnt"></span>
+    </div>
+    <ol class="lessons" id="list"></ol>
+    <div class="lp-foot">
+      <div><b>Finished a lesson? Lock it in.</b><span>Reading is not the same as answering. Prove the chapter in the Question Bank.</span></div>
+      <div class="go">
+        <a class="btn gold" href="question-bank.html">Open Question Bank →</a>
+        <a class="btn ghost-l" href="checklist.html">Update checklist</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot-line">
+    <span>© 2026 ImatPath. All rights reserved.</span>
+    <span>Not affiliated with Cambridge Assessment or MUR.</span>
+  </div>
+</main>
+
+<script>
+(function(){
+"use strict";
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+$('#burger').addEventListener('click',()=>document.body.classList.add('menu'));
+$('#sideX').addEventListener('click',()=>document.body.classList.remove('menu'));
+$('.scrim').addEventListener('click',()=>document.body.classList.remove('menu'));
+
+/* ── User & Auth ── */
+window.handleLogout = async function(e) {
+  if (e) e.preventDefault();
+  if (window.ImatAuth && typeof window.ImatAuth.signOut === 'function') {
+    await window.ImatAuth.signOut();
+  } else {
+    localStorage.removeItem('imatpath_user');
+    window.location.href = 'auth.html';
+  }
+};
+try {
+  const u = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
+  const name = u.full_name || u.name || (u.email ? u.email.split('@')[0] : 'User');
+  const firstName = name.split(' ')[0] || 'User';
+  if ($('#userName')) $('#userName').textContent = firstName;
+  if ($('#userAvatar')) $('#userAvatar').textContent = firstName.charAt(0).toUpperCase() || 'U';
+} catch(e) {}
+
+function showToast(msg) {
+  const t = $('#toast'), txt = $('#toastText');
+  txt.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+/* reveals */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+$$('[data-rv],.lm').forEach(el=>RM?el.classList.add('in'):io.observe(el));
+
+/* ============ DATA ============ */
+/* Same chapter names as the Syllabus Checklist. */
+const SUBJ=[
+  {k:'Biology',  e:'🧬',c:'--mint', t:'--mint-l'},
+  {k:'Chemistry',e:'🧪',c:'--sky',  t:'--sky-l'},
+  {k:'Physics',  e:'⚛️',c:'--coral',t:'--coral-l'},
+  {k:'Math',     e:'📐',c:'--sun',  t:'--sun-l'}
+];
+const CHAP={
+'Biology':['Cell structure & organelles','Membranes & transport','Cell division & the cell cycle','DNA structure & replication','RNA & transcription','Protein synthesis & translation','Genetics & inheritance','Genetic disorders & pedigrees','Molecular biology techniques','Evolution & natural selection','Classification & taxonomy','Biodiversity & ecosystems','Plant tissues & physiology','Animal tissues & histology','Circulatory system','Respiratory system','Digestive system','Excretory system','Nervous system','Endocrine system','Reproduction & development','Immunology & vaccination','Enzymes & metabolism','Cellular respiration & ATP','Photosynthesis','Microbiology & viruses','Carbohydrates & lipids','Proteins & nucleic acids'],
+'Chemistry':['Atomic structure','Periodic table & periodicity','Chemical bonding','Intermolecular forces','Moles & molar mass','Stoichiometry & equations','States of matter & gas laws','Solutions & concentration','Acids, bases & pH','Buffers & indicators','Redox reactions','Electrochemistry','Chemical kinetics','Chemical equilibrium','Thermodynamics & energetics','Hydrocarbons','Functional groups','Organic reactions & mechanisms','Biochemistry of life','Lab techniques & safety'],
+'Physics':['Units, dimensions & vectors','Kinematics: motion in a line','Projectiles & circular motion','Dynamics & Newton’s laws','Work, energy & power','Momentum & collisions','Fluids & pressure','Thermodynamics & heat','Waves & sound','Light & optics','Electricity & circuits','Magnetism & induction'],
+'Math':['Number systems & sets','Algebraic expressions & factoring','Equations & inequalities','Ratios, proportions & percentages','Functions & graphs','Exponentials & logarithms','Trigonometry','Coordinate geometry','Euclidean geometry','Sequences & series','Derivatives (basics)','Combinatorics & counting','Probability','Statistics & data interpretation']
+};
+
+/* Big titles, then small titles. Follows the official MUR syllabus (DM 1005/2026, Annex A).
+   A subject listed here opens as big-title cards; the others stay as a flat chapter list.
+   Progress in the checklist still uses the chapter names in CHAP. */
+CHAP.Biology=BIO.LESSONS;
+const TOPICS={Biology:BIO.TOPICS};
+/* Chemistry, Physics and Math follow the official syllabus too (science-syllabus.js) */
+Object.keys(SYL).forEach(k=>{CHAP[k]=SYL[k].LESSONS;TOPICS[k]=SYL[k].TOPICS;});
+const lessonsOf=k=>TOPICS[k]?TOPICS[k].reduce((a,g)=>a.concat(g.items),[]):CHAP[k];
+const countOf=k=>lessonsOf(k).length;
+
+/* ── Lesson resources ──
+   Buttons without a link show a "coming soon" message.
+   When a lesson is ready, add its links here and the button goes live (the SOON badge disappears):
+   'Biology|Photosynthesis': { video: 'https://…', doc: 'docs/biology/photosynthesis.pdf' }       */
+const RES={
+  'Biology|Cell theory and cell size': { doc: 'docs/biology/cell-theory-and-cell-size.pdf', cards: 'flashcards.html#deck=bio-01' },
+  'Biology|Cell membrane structure, function and transport': { doc: 'docs/biology/cell-membrane-structure-function-and-transport.pdf', cards: 'flashcards.html#deck=bio-04' },
+  "Biology|Prokaryotic and eukaryotic cells (animal and plant)": { doc: 'docs/biology/02-prokaryotic-and-eukaryotic-cells-animal-and-plant.pdf', cards: 'flashcards.html#deck=bio-02' },
+  "Biology|Viruses": { doc: 'docs/biology/03-viruses.pdf', cards: 'flashcards.html#deck=bio-03' },
+  "Biology|Cellular structures and their functions": { doc: 'docs/biology/05-cellular-structures-and-their-functions.pdf', cards: 'flashcards.html#deck=bio-05' },
+  "Biology|Cell cycle and division: mitosis and meiosis": { doc: 'docs/biology/06-cell-cycle-and-division-mitosis-and-meiosis.pdf', cards: 'flashcards.html#deck=bio-06' },
+  "Biology|Chromosomes and chromosome maps": { doc: 'docs/biology/07-chromosomes-and-chromosome-maps.pdf', cards: 'flashcards.html#deck=bio-07' },
+  "Biology|Biological importance of weak interactions": { doc: 'docs/biology/08-biological-importance-of-weak-interactions.pdf', cards: 'flashcards.html#deck=bio-08' },
+  "Biology|Organic molecules and their functions": { doc: 'docs/biology/09-organic-molecules-and-their-functions.pdf', cards: 'flashcards.html#deck=bio-09' },
+  "Biology|The role of enzymes": { doc: 'docs/biology/10-the-role-of-enzymes.pdf', cards: 'flashcards.html#deck=bio-10' },
+  "Biology|ATP": { doc: 'docs/biology/11-atp.pdf', cards: 'flashcards.html#deck=bio-11' },
+  "Biology|Redox reactions in living things": { doc: 'docs/biology/12-redox-reactions-in-living-things.pdf', cards: 'flashcards.html#deck=bio-12' },
+  "Biology|Photosynthesis": { doc: 'docs/biology/13-photosynthesis.pdf', cards: 'flashcards.html#deck=bio-13' },
+  "Biology|Glycolysis, aerobic respiration and fermentation": { doc: 'docs/biology/14-glycolysis-aerobic-respiration-and-fermentation.pdf', cards: 'flashcards.html#deck=bio-14' },
+  "Biology|Life cycles, sexual and asexual reproduction": { doc: 'docs/biology/15-life-cycles-sexual-and-asexual-reproduction.pdf', cards: 'flashcards.html#deck=bio-15' },
+  "Biology|Mendel’s laws and their applications": { doc: 'docs/biology/16-mendels-laws-and-their-applications.pdf', cards: 'flashcards.html#deck=bio-16' },
+  "Biology|Chromosomal theory of inheritance and inheritance patterns": { doc: 'docs/biology/17-chromosomal-theory-of-inheritance-and-inheritance-patterns.pdf', cards: 'flashcards.html#deck=bio-17' },
+  "Biology|DNA structure and replication": { doc: 'docs/biology/18-dna-structure-and-replication.pdf', cards: 'flashcards.html#deck=bio-18' },
+  "Biology|The genetic code and protein synthesis": { doc: 'docs/biology/19-the-genetic-code-and-protein-synthesis.pdf', cards: 'flashcards.html#deck=bio-19' },
+  "Biology|Prokaryotic DNA and eukaryotic chromosome structure": { doc: 'docs/biology/20-prokaryotic-dna-and-eukaryotic-chromosome-structure.pdf', cards: 'flashcards.html#deck=bio-20' },
+  "Biology|Genes and regulation of gene expression": { doc: 'docs/biology/21-genes-and-regulation-of-gene-expression.pdf', cards: 'flashcards.html#deck=bio-21' },
+  "Biology|Human genetics: mono- and multifactorial transmission": { doc: 'docs/biology/22-human-genetics-mono-and-multifactorial-transmission.pdf', cards: 'flashcards.html#deck=bio-22' },
+  "Biology|Hereditary diseases (autosomal and X-linked)": { doc: 'docs/biology/23-hereditary-diseases-autosomal-and-x-linked.pdf', cards: 'flashcards.html#deck=bio-23' },
+  "Biology|Biotechnology: recombinant DNA and its applications": { doc: 'docs/biology/24-biotechnology-recombinant-dna-and-its-applications.pdf', cards: 'flashcards.html#deck=bio-24' },
+  "Biology|Mutations": { doc: 'docs/biology/25-mutations.pdf', cards: 'flashcards.html#deck=bio-25' },
+  "Biology|Natural and artificial selection": { doc: 'docs/biology/26-natural-and-artificial-selection.pdf', cards: 'flashcards.html#deck=bio-26' },
+  "Biology|Evolutionary theories and the genetic basis of evolution": { doc: 'docs/biology/27-evolutionary-theories-and-the-genetic-basis-of-evolution.pdf', cards: 'flashcards.html#deck=bio-27' },
+  "Biology|Animal tissues": { doc: 'docs/biology/28-animal-tissues.pdf', cards: 'flashcards.html#deck=bio-28' },
+  "Biology|Human systems and their interactions": { doc: 'docs/biology/29-human-systems-and-their-interactions.pdf', cards: 'flashcards.html#deck=bio-29' },
+  "Biology|Homeostasis": { doc: 'docs/biology/30-homeostasis.pdf', cards: 'flashcards.html#deck=bio-30' },
+  'Math|Number sets, order of magnitude and scientific notation': { doc: 'docs/math/01-number-sets-order-of-magnitude-and-scientific-notation.pdf' },
+  'Math|Ratios, proportions and percentages': { doc: 'docs/math/02-ratios-proportions-and-percentages.pdf' },
+  'Math|Powers and radicals': { doc: 'docs/math/03-powers-and-radicals.pdf' },
+  'Math|Logarithms and exponentials': { doc: 'docs/math/04-logarithms-and-exponentials.pdf' },
+  'Math|Combinatorics': { doc: 'docs/math/05-combinatorics.pdf' },
+  'Math|Algebraic expressions, polynomials and factorisation': { doc: 'docs/math/06-algebraic-expressions-polynomials-and-factorisation.pdf' },
+  'Math|Equations, inequalities and systems': { doc: 'docs/math/07-equations-inequalities-and-systems.pdf' },
+  'Math|Functions and graphs: domain, sign, continuity, extrema': { doc: 'docs/math/08-functions-and-graphs.pdf' },
+  'Math|Elementary, composite and inverse functions': { doc: 'docs/math/09-elementary-composite-and-inverse-functions.pdf' },
+  'Math|Plane geometry: polygons, circle, measures': { doc: 'docs/math/10-plane-geometry-polygons-circle-and-measures.pdf' },
+  'Math|Isometries, similarities and loci': { doc: 'docs/math/11-isometries-similarities-and-loci.pdf' },
+  'Math|Trigonometry': { doc: 'docs/math/12-trigonometry.pdf' },
+  'Math|Cartesian plane and the straight line': { doc: 'docs/math/13-cartesian-plane-and-the-straight-line.pdf' },
+  'Math|Conics: circle, parabola, hyperbola and ellipse': { doc: 'docs/math/14-conics-circle-parabola-hyperbola-and-ellipse.pdf' },
+  'Math|Frequency distributions and graphs': { doc: 'docs/math/15-frequency-distributions-and-graphs.pdf' },
+  'Math|Probability': { doc: 'docs/math/16-probability.pdf' },
+  "Chemistry|States of matter, systems, elements and compounds": { doc: 'docs/chemistry/01-states-of-matter-systems-elements-and-compounds.pdf', cards: 'flashcards.html#deck=chem-01' },
+  "Chemistry|Ideal gas laws": { doc: 'docs/chemistry/02-ideal-gas-laws.pdf', cards: 'flashcards.html#deck=chem-02' },
+  "Chemistry|Atomic structure: particles, atomic number, mass number and isotopes": { doc: 'docs/chemistry/03-atomic-structure-particles-atomic-number-mass-number-and-isotopes.pdf', cards: 'flashcards.html#deck=chem-03' },
+  "Chemistry|Electron configuration of the elements": { doc: 'docs/chemistry/04-electron-configuration-of-the-elements.pdf', cards: 'flashcards.html#deck=chem-04' },
+  "Chemistry|The periodic table and periodic properties": { doc: 'docs/chemistry/05-the-periodic-table-and-periodic-properties.pdf', cards: 'flashcards.html#deck=chem-05' },
+  "Chemistry|Ionic, covalent and metallic bonds, polarity and electronegativity": { doc: 'docs/chemistry/06-ionic-covalent-and-metallic-bonds-polarity-and-electronegativity.pdf', cards: 'flashcards.html#deck=chem-06' },
+  "Chemistry|Intermolecular forces": { doc: 'docs/chemistry/07-intermolecular-forces.pdf', cards: 'flashcards.html#deck=chem-07' },
+  "Chemistry|Inorganic compounds: nomenclature and properties of oxides, hydroxides, acids and salts": { doc: 'docs/chemistry/08-inorganic-compounds-nomenclature-and-properties-of-oxides-hydroxides-acids-and-salts.pdf', cards: 'flashcards.html#deck=chem-08' },
+  "Chemistry|Atomic and molecular mass, Avogadro’s number and the mole": { doc: 'docs/chemistry/09-atomic-and-molecular-mass-avogadro-s-number-and-the-mole.pdf', cards: 'flashcards.html#deck=chem-09' },
+  "Chemistry|Stoichiometric calculations and balancing reactions": { doc: 'docs/chemistry/10-stoichiometric-calculations-and-balancing-reactions.pdf', cards: 'flashcards.html#deck=chem-10' },
+  "Chemistry|Types of chemical reaction": { doc: 'docs/chemistry/11-types-of-chemical-reaction.pdf', cards: 'flashcards.html#deck=chem-11' },
+  "Chemistry|Solutions: solvent properties of water, solubility and concentration": { doc: 'docs/chemistry/12-solutions-solvent-properties-of-water-solubility-and-concentration.pdf', cards: 'flashcards.html#deck=chem-12' },
+  "Chemistry|Equilibria in aqueous solution": { doc: 'docs/chemistry/13-equilibria-in-aqueous-solution.pdf', cards: 'flashcards.html#deck=chem-13' },
+  "Chemistry|Chemical kinetics and catalysis": { doc: 'docs/chemistry/14-chemical-kinetics-and-catalysis.pdf', cards: 'flashcards.html#deck=chem-14' },
+  "Chemistry|Oxidation and reduction": { doc: 'docs/chemistry/15-oxidation-and-reduction.pdf', cards: 'flashcards.html#deck=chem-15' },
+  "Chemistry|Acids and bases and pH": { doc: 'docs/chemistry/16-acids-and-bases-and-ph.pdf', cards: 'flashcards.html#deck=chem-16' },
+  "Chemistry|Hydrolysis and buffer solutions": { doc: 'docs/chemistry/17-hydrolysis-and-buffer-solutions.pdf', cards: 'flashcards.html#deck=chem-17' },
+  "Chemistry|Carbon bonds, formulas and nomenclature": { doc: 'docs/chemistry/18-carbon-bonds-formulas-and-nomenclature.pdf', cards: 'flashcards.html#deck=chem-18' },
+  "Chemistry|Isomerism": { doc: 'docs/chemistry/19-isomerism.pdf', cards: 'flashcards.html#deck=chem-19' },
+  "Chemistry|Hydrocarbons: aliphatic, alicyclic and aromatic": { doc: 'docs/chemistry/20-hydrocarbons-aliphatic-alicyclic-and-aromatic.pdf', cards: 'flashcards.html#deck=chem-20' },
+  "Chemistry|Functional groups": { doc: 'docs/chemistry/21-functional-groups.pdf', cards: 'flashcards.html#deck=chem-21' },
+  "Physics|Quantities, units and scientific notation": { doc: 'docs/physics/01-quantities-units-and-scientific-notation.pdf', cards: 'flashcards.html#deck=phys-01' },
+  "Physics|Scalars, vectors and vector operations": { doc: 'docs/physics/02-scalars-vectors-and-vector-operations.pdf', cards: 'flashcards.html#deck=phys-02' },
+  "Physics|Motion, velocity and acceleration": { doc: 'docs/physics/03-motion-velocity-and-acceleration.pdf', cards: 'flashcards.html#deck=phys-03' },
+  "Physics|Circular and harmonic motion": { doc: 'docs/physics/04-circular-and-harmonic-motion.pdf', cards: 'flashcards.html#deck=phys-04' },
+  "Physics|Forces and Newton’s laws": { doc: 'docs/physics/05-forces-and-newtons-laws.pdf', cards: 'flashcards.html#deck=phys-05' },
+  "Physics|Impulse and momentum": { doc: 'docs/physics/06-impulse-and-momentum.pdf', cards: 'flashcards.html#deck=phys-06' },
+  "Physics|Torque and angular momentum": { doc: 'docs/physics/07-torque-and-angular-momentum.pdf', cards: 'flashcards.html#deck=phys-07' },
+  "Physics|Work, energy and power": { doc: 'docs/physics/08-work-energy-and-power.pdf', cards: 'flashcards.html#deck=phys-08' },
+  "Physics|Fluid statics: pressure, Pascal, Stevin and Archimedes": { doc: 'docs/physics/09-fluid-statics-pressure-pascal-stevin-and-archimedes.pdf', cards: 'flashcards.html#deck=phys-09' },
+  "Physics|Fluid dynamics: continuity, Bernoulli and viscosity": { doc: 'docs/physics/10-fluid-dynamics-continuity-bernoulli-and-viscosity.pdf', cards: 'flashcards.html#deck=phys-10' },
+  "Physics|Temperature, heat and calorimetry": { doc: 'docs/physics/11-temperature-heat-and-calorimetry.pdf', cards: 'flashcards.html#deck=phys-11' },
+  "Physics|Heat propagation and changes of state": { doc: 'docs/physics/12-heat-propagation-and-changes-of-state.pdf', cards: 'flashcards.html#deck=phys-12' },
+  "Physics|Ideal gas laws and the laws of thermodynamics": { doc: 'docs/physics/13-ideal-gas-laws-and-the-laws-of-thermodynamics.pdf', cards: 'flashcards.html#deck=phys-13' },
+  "Physics|Electric charge, Coulomb’s law, field and potential": { doc: 'docs/physics/14-electric-charge-coulombs-law-field-and-potential.pdf', cards: 'flashcards.html#deck=phys-14' },
+  "Physics|Capacitors": { doc: 'docs/physics/15-capacitors.pdf', cards: 'flashcards.html#deck=phys-15' },
+  "Physics|Current, resistance and circuits": { doc: 'docs/physics/16-current-resistance-and-circuits.pdf', cards: 'flashcards.html#deck=phys-16' },
+  "Physics|Direct and alternating current, Joule effect": { doc: 'docs/physics/17-direct-and-alternating-current-joule-effect.pdf', cards: 'flashcards.html#deck=phys-17' },
+  "Physics|Magnetic field and electromagnetic induction": { doc: 'docs/physics/18-magnetic-field-and-electromagnetic-induction.pdf', cards: 'flashcards.html#deck=phys-18' }
+};
+
+/* checklist state (read-only): bitmask per chapter, 1 = reviewed */
+let state={};
+BIO.migrateStored();
+SYL_migrateAll();
+try{state=JSON.parse(localStorage.getItem('ip_chap')||'{}')||{};}catch(e){}
+
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const pad2=n=>String(n+1).padStart(2,'0');
+const total=SUBJ.reduce((a,s)=>a+countOf(s.k),0);
+
+$('#libTotal').textContent=total;
+$('#libBoxes').innerHTML=SUBJ.map(s=>'<div class="cd-b"><b>'+countOf(s.k)+'</b><span>'+s.k.slice(0,4).toLowerCase()+'</span></div>').join('');
+
+/* ============ SHELF ============ */
+let cur='Biology',openTopic=-1;
+/* #biology = big titles, #biology/1 = the small titles of big title 1 */
+function readHash(){
+  try{
+    const p=decodeURIComponent(location.hash.slice(1)).toLowerCase().split('/');
+    const S=SUBJ.find(x=>x.k.toLowerCase()===p[0]);if(!S)return null;
+    const T=TOPICS[S.k],n=p[1]===undefined||p[1]===''?-1:+p[1];
+    return {k:S.k,t:T&&T[n]?n:-1};
+  }catch(e){return null;}
+}
+const startAt=readHash();
+try{
+  const saved=localStorage.getItem('ip_lessons_subj');
+  if(startAt)cur=startAt.k;else if(saved&&CHAP[saved])cur=saved;
+}catch(e){}
+
+const shelf=$('#shelf');
+shelf.innerHTML=SUBJ.map(s=>
+  '<button class="book" role="tab" type="button" data-s="'+s.k+'" style="--c:var('+s.c+');--ct:var('+s.t+')" aria-label="'+s.k+', '+countOf(s.k)+' lessons">'+
+  '<span class="bk-flag"></span><span class="bk-top">'+s.e+'</span><span class="bk-title">'+s.k+'</span><span class="bk-n">'+countOf(s.k)+'</span></button>'
+).join('');
+
+function pick(k,focus,topic){
+  cur=k;openTopic=topic===undefined?-1:topic;
+  if(openTopic<0&&location.hash.indexOf('/')>=0)try{history.replaceState(null,'','#'+k.toLowerCase());}catch(e){}
+  try{localStorage.setItem('ip_lessons_subj',k);}catch(e){}
+  $$('.book',shelf).forEach(b=>{const on=b.dataset.s===k;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;if(on&&focus)b.focus();});
+  const s=SUBJ.find(x=>x.k===k),p=$('#panel');
+  p.style.setProperty('--c','var('+s.c+')');p.style.setProperty('--ct','var('+s.t+')');
+  $('#lpEmoji').textContent=s.e;$('#lpTitle').textContent=k;
+  const T=TOPICS[k];
+  $('#lpSub').textContent=T?T.length+' big topics · '+countOf(k)+' lessons · organised like the official IMAT syllabus':CHAP[k].length+' chapters · each one with a video lesson and a course document';
+  $('#q').placeholder=T?'Search lessons…':'Search chapters…';
+  $('#q').value='';
+  $('#bubble').textContent={Biology:'Life, up close!',Chemistry:'Mix it up!',Physics:'Feel the force!',Math:'Let’s count on it!'}[k];
+  renderList();
+}
+shelf.addEventListener('click',e=>{const b=e.target.closest('.book');if(b)pick(b.dataset.s);});
+shelf.addEventListener('keydown',e=>{
+  const i=SUBJ.findIndex(s=>s.k===cur);
+  if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();pick(SUBJ[(i+(e.key==='ArrowRight'?1:SUBJ.length-1))%SUBJ.length].k,true);}
+});
+
+/* ============ LESSON LIST ============ */
+const ICO_PLAY='<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>';
+const ICO_CARDS='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="14" height="14" rx="2.5"/><path d="M17 17v1.5A2.5 2.5 0 0 1 14.5 21h-9A2.5 2.5 0 0 1 3 18.5v-9A2.5 2.5 0 0 1 5.5 7H7"/></svg>';
+const ICO_DOC='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>';
+
+function readState(){try{return JSON.parse(localStorage.getItem('ip_docs_read_v1')||'{}')}catch(e){return {}}}
+function qbLink(subject,name){
+  try{
+    const sets=subject==='Biology'?(window.BIO&&window.BIO.SETS):(window.SYL&&window.SYL[subject]&&window.SYL[subject].SETS);
+    const hit=(sets||[]).find(x=>x.lesson===name);
+    return hit?'question-bank.html?chapter='+encodeURIComponent(hit.id):null;
+  }catch(e){return null}
+}
+function renderList(){
+  const q=$('#q').value.trim().toLowerCase(),T=TOPICS[cur],list=$('#list');
+  const grid=!!T&&!q&&openTopic<0;
+  list.classList.toggle('topics',grid);
+  if(grid){
+    list.innerHTML=T.map((g,i)=>'<li><button class="tp" type="button" data-t="'+i+'"><span class="n">'+pad2(i)+'</span><span><b>'+esc(g.t)+'</b><small>'+g.items.length+(g.items.length===1?' lesson':' lessons')+'</small></span><span class="ar" aria-hidden="true">→</span></button></li>').join('');
+    $('#cnt').textContent=T.length+' big topics';
+    return;
+  }
+  const inTopic=!!T&&!q;
+  const names=inTopic?T[openTopic].items:lessonsOf(cur),rev=state[cur]||[],all=lessonsOf(cur);
+  const rows=[];
+  if(inTopic)rows.push('<li class="tp-head"><button class="btn sm ghost" type="button" data-back>← All '+cur+' topics</button><h3>'+esc(T[openTopic].t)+'</h3></li>');
+  const unit=T?'lessons':'chapters';
+  const readMap=readState();
+  names.forEach((name,i)=>{
+    if(q&&name.toLowerCase().indexOf(q)<0)return;
+    const r=RES[cur+'|'+name]||{};
+    const gi=all.indexOf(name);
+    const reviewed=rev[gi]&1;
+    const isRead=r.doc&&readMap[r.doc];
+    const qb=qbLink(cur,name);
+    rows.push('<li class="ls" style="--i:'+rows.length+'">'+
+      '<span class="n" title="Lesson '+(gi+1)+' of '+all.length+'">'+(gi+1)+'</span>'+
+      '<div><h3>'+esc(name)+'</h3><div class="meta">'+
+        (gi===0&&!q?'<span class="tag start">START HERE</span>':'')+
+        (isRead?'<span class="tag read">✓ Document read</span>':'')+
+        (reviewed?'<span class="tag ok">✓ Reviewed in checklist</span>':'')+
+        (r.doc?'<span class="tag mins">Lesson '+(gi+1)+' of '+all.length+'</span>':'<span class="tag">Document coming soon</span>')+
+      '</div></div>'+
+      '<div class="acts">'+
+        (r.doc?'<button class="btn sm pri" type="button" data-k="doc" data-n="'+esc(name)+'">'+ICO_DOC+(isRead?'Read again':'Read the lesson')+'</button>':'')+
+        (r.cards?'<button class="btn sm ghost" type="button" data-k="cards" data-n="'+esc(name)+'">'+ICO_CARDS+'Flashcards</button>':'')+
+        (qb?'<button class="btn sm ghost" type="button" data-k="qb" data-n="'+esc(name)+'">Practice questions</button>':'')+
+        (r.video?'<button class="btn sm ghost" type="button" data-k="video" data-n="'+esc(name)+'">'+ICO_PLAY+'Watch video</button>':'')+
+      '</div></li>');
+  });
+  list.innerHTML=rows.length?rows.join(''):'<li class="empty"><div class="pipe" data-pip data-mood="sad"></div>No '+(T?'lesson':'chapter')+' matches “'+esc($('#q').value.trim())+'”.<br><span style="font-weight:500">Try a shorter word, like “cell” or “acid”.</span></li>';
+  if(!rows.length&&window.pipFill)window.pipFill(list);
+  $('#cnt').textContent=q?rows.length+' of '+names.length+' '+unit:names.length+' '+unit;
+}
+
+$('#q').addEventListener('input',renderList);
+$('#list').addEventListener('click',e=>{
+  const t=e.target.closest('button[data-t]');
+  if(t){location.hash=cur.toLowerCase()+'/'+t.dataset.t;return;}
+  if(e.target.closest('button[data-back]')){location.hash=cur.toLowerCase();return;}
+  const b=e.target.closest('button[data-k]');if(!b)return;
+  const name=b.dataset.n,r=RES[cur+'|'+name]||{},url=r[b.dataset.k];
+  if(b.dataset.k==='qb'){const l=qbLink(cur,name);if(l)location.href=l;return;}
+  if(url&&b.dataset.k==='cards'){location.href=url;return;}
+  if(url&&b.dataset.k==='doc'){const all=lessonsOf(cur);location.href='reader.html?doc='+encodeURIComponent(url)+'&t='+encodeURIComponent(name)+'&n='+(all.indexOf(name)+1)+'&of='+all.length+'&s='+encodeURIComponent(cur);return;}
+  if(url){window.open(url,'_blank','noopener');return;}
+  showToast(({video:'Video lesson',doc:'Course document',cards:'Flashcards'})[b.dataset.k]+' coming soon: '+name);
+});
+
+window.addEventListener('hashchange',()=>{
+  const h=readHash();
+  if(h)pick(h.k,false,h.t);else{openTopic=-1;renderList();}
+  if(h&&h.t>=0){
+    $('#panel').scrollIntoView({block:'start',behavior:RM?'auto':'smooth'});
+    const back=$('#list button[data-back]');if(back)back.focus({preventScroll:true});
+  }
+});
+pick(cur,false,startAt?startAt.t:-1);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Chemistry::Types of chemical reaction
+#guid column:1
+#tags column:4
+chem11-019	<small>The reactivity series</small><br><b>K, Na, Ca</b><br><i>Reaction with water · Reaction with dilute acid?</i>	<b>Reaction with water:</b> React with cold water: hydroxide + H<sub>2</sub><br><b>Reaction with dilute acid:</b> Violent	ImatPath Chemistry recall
+chem11-020	<small>The reactivity series</small><br><b>Mg, Al, Zn, Fe</b><br><i>Reaction with water · Reaction with dilute acid?</i>	<b>Reaction with water:</b> Hardly any reaction with cold water. Mg, Zn and Fe react with steam<br><b>Reaction with dilute acid:</b> Salt + H<sub>2</sub>	ImatPath Chemistry recall
+chem11-021	<small>The reactivity series</small><br><b>Cu, Ag, Au</b><br><i>Reaction with water · Reaction with dilute acid?</i>	<b>Reaction with water:</b> No reaction<br><b>Reaction with dilute acid:</b> No reaction	ImatPath Chemistry recall
+chem11-022	<small>Answers & explanations</small><br><b>Synthesis</b><br><i>Pattern?</i>	A + B → AB	ImatPath Chemistry recall
+chem11-023	<small>Answers & explanations</small><br><b>Decomposition</b><br><i>Pattern?</i>	AB → A + B (heat, light, electricity)	ImatPath Chemistry recall
+chem11-024	<small>Answers & explanations</small><br><b>Single displacement</b><br><i>Pattern?</i>	A + BC → AC + B	ImatPath Chemistry recall
+chem11-025	<small>Answers & explanations</small><br><b>Double displacement</b><br><i>Pattern?</i>	AB + CD → AD + CB	ImatPath Chemistry recall
+chem11-026	<small>Answers & explanations</small><br><b>Combustion</b><br><i>Pattern?</i>	fuel + O<sub>2</sub> → oxides (+ heat)	ImatPath Chemistry recall
+chem11-001	Formula to know: <b>Synthesis</b>	2Mg + O<sub>2</sub> → 2MgO        H<sub>2</sub> + Cl<sub>2</sub> → 2HCl	ImatPath Chemistry formula
+chem11-002	Formula to know: <b>Decomposition</b>	CaCO<sub>3</sub> → CaO + CO<sub>2</sub>        2H<sub>2</sub>O<sub>2</sub> → 2H<sub>2</sub>O + O<sub>2</sub>	ImatPath Chemistry formula
+chem11-003	Formula to know: <b>Single displacement</b>	Zn + CuSO<sub>4</sub> → ZnSO<sub>4</sub> + Cu	ImatPath Chemistry formula
+chem11-004	Formula to know: <b>Combustion</b>	CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O	ImatPath Chemistry formula
+chem11-005	Formula to know: <b>Combustion</b>	2CH<sub>4</sub> + 3O<sub>2</sub> → 2CO + 4H<sub>2</sub>O	ImatPath Chemistry formula
+chem11-006	Formula to know: <b>Double displacement</b>	AgNO<sub>3</sub>(aq) + NaCl(aq) → AgCl(s) + NaNO<sub>3</sub>(aq)	ImatPath Chemistry formula
+chem11-007	Formula to know: <b>Double displacement</b>	2HCl + Na<sub>2</sub>CO<sub>3</sub> → 2NaCl + H<sub>2</sub>O + CO<sub>2</sub>	ImatPath Chemistry formula
+chem11-016	Key points: <b>Reactivity</b>	• A <b>more reactive metal displaces a less reactive one</b> from its compounds.<br>• Order: K, Na, Ca, Mg, Al, Zn, Fe, Pb, <b>H</b>, Cu, Ag, Au.<br>• Metals above H react with dilute acid to give salt + H<sub>2</sub>.	ImatPath Chemistry summary
+chem11-017	Key points: <b>Reactions in solution</b>	• Double displacement needs a <b>precipitate, gas or water</b>.<br>• <b>Spectator ions</b> appear unchanged on both sides and are left out of the ionic equation.<br>• Neutralisation: H<sup>+</sup> + OH<sup>-</sup> → H<sub>2</sub>O.	ImatPath Chemistry summary
+chem11-018	Key points: <b>Combustion</b>	• Complete: CO<sub>2</sub> and H<sub>2</sub>O. Incomplete: CO (poisonous) or carbon.	ImatPath Chemistry summary
+chem11-008	How many of these four mixtures show a reaction: Zn + CuSO<sub>4</sub>, Cu + ZnSO<sub>4</sub>, Mg + FeCl<sub>2</sub>, Fe + MgCl<sub>2</sub>?<br><br><br>A) 1<br>B) 2<br>C) 3<br>D) 4<br>E) 0	<b>B) 2</b><br><br>A more reactive metal displaces a less reactive one. Zn displaces Cu (reaction). Mg displaces Fe (reaction). Cu cannot displace Zn, and Fe cannot displace Mg.	ImatPath Chemistry practice
+chem11-010	4.4 g of propane (<i>M = 44</i> g/mol) burn completely in oxygen: C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub> → 3CO<sub>2</sub> + 4H<sub>2</sub>O. What mass of oxygen is used?<br><br><br>A) 16 g<br>B) 8.0 g<br>C) 32 g<br>D) 3.2 g<br>E) 160 g	<b>A) 16 g</b><br><br><i>n(C<sub>3</sub>H<sub>8</sub>) = 4.4/44 = 0.10</i> mol. Oxygen: <i>5 × 0.10 = 0.50</i> mol, mass <i>= 0.50 × 32 = 16</i> g. Check: reactants <i>4.4 + 16 = 20.4</i> g, and the products are 13.2 g of CO<sub>2</sub> and 7.2 g of H<sub>2</sub>O, total 20.4 g.	ImatPath Chemistry practice
+chem11-012	Potassium chlorate decomposes on heating: 2KClO<sub>3</sub> → 2KCl + 3O<sub>2</sub>. What volume of oxygen at STP forms from 12.25 g of KClO<sub>3</sub>? (<i>M = 122.5</i> g/mol)<br><br><br>A) 2.24 L<br>B) 5.04 L<br>C) 1.12 L<br>D) 7.50 L<br>E) 3.36 L	<b>E) 3.36 L</b><br><br><i>n(KClO<sub>3</sub>) = 12.25/122.5 = 0.100</i> mol. The ratio KClO<sub>3</sub> : O<sub>2</sub> is 2 : 3, so <i>n(O<sub>2</sub>) = 0.150</i> mol. <i>V = 0.150 × 22.4 = 3.36</i> L.	ImatPath Chemistry practice
+chem11-014	5.0 g of CaCO<sub>3</sub> (<i>M = 100</i>) are added to 50 cm<sup>3</sup> of 2.0 mol/L HCl. What volume of CO<sub>2</sub> forms at STP?<br><br><br>A) 2.24 L<br>B) 0.56 L<br>C) 2.80 L<br>D) 1.12 L<br>E) 5.60 L	<b>D) 1.12 L</b><br><br>CaCO<sub>3</sub> + 2HCl → CaCl<sub>2</sub> + H<sub>2</sub>O + CO<sub>2</sub>. <i>n(CaCO<sub>3</sub>) = 0.050</i> mol. <i>n(HCl) = 0.050 × 2.0 = 0.10</i> mol, which is exactly the 0.10 mol needed. So <i>n(CO<sub>2</sub>) = 0.050</i> mol and <i>V = 0.050 × 22.4 = 1.12</i> L.	ImatPath Chemistry practice

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcards — ImatPath</title>
+<meta name="description" content="IMAT flashcards for every lesson, with spaced repetition like Anki. Study on the site or download the deck for Anki.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" href="favicon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
+
+<!-- Core Supabase & Auth Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="supabase.js"></script>
+<script src="auth-guard.js"></script>
+<script src="xp-system.js"></script>
+<script src="flashcards-data.js"></script>
+<script src="flashcards-data-chem.js"></script>
+<script src="flashcards-data-bio.js"></script>
+<script src="flashcards-data-phys.js"></script>
+
+<script>
+(function() {
+  const saved = localStorage.getItem('imatpath_dark_mode');
+  if (saved === 'true') document.documentElement.setAttribute('data-theme', 'dark');
+})();
+</script>
+
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="app-shell.css">
+<script src="mascot.js"></script>
+<style>
+/* Flashcards — page-specific */
+.decks{display:grid;gap:20px}
+.deck{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;background:#fff;border:var(--bw) solid var(--ink);border-radius:var(--r);box-shadow:var(--sh);padding:22px 24px}
+.deck .ic{width:64px;height:64px;border-radius:20px;background:var(--mint);border:var(--bw) solid var(--ink);box-shadow:var(--sh-s);display:grid;place-items:center;font-size:2rem;transform:rotate(-5deg)}
+.deck h2{font:800 1.5rem/1.15 var(--f-disp);letter-spacing:-.03em;margin:0}
+.deck .sub{font:700 .85rem var(--f-body);color:var(--ink-2);margin-top:4px}
+.counts{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.cn{display:inline-flex;align-items:center;gap:6px;border:2px solid var(--ink);border-radius:99px;padding:3px 12px;font:700 .8rem var(--f-body);background:#fff}
+.cn b{font:800 1rem var(--f-disp)}
+.cn.new b{color:#2463d6}.cn.lrn b{color:#d4313d}.cn.rev b{color:#0F9972}
+.deck .acts{display:flex;flex-direction:column;gap:10px;align-items:stretch}
+.deck .acts .btn{justify-content:center;white-space:nowrap}
+.linkbtn{background:none;border:0;padding:0;font:700 .78rem var(--f-body);color:var(--ink-3);text-decoration:underline;cursor:pointer;text-align:center}
+.how{margin-top:26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.how div{background:var(--lav);border:2.5px solid var(--ink);border-radius:18px;padding:16px 18px;font-weight:600;font-size:.92rem;color:var(--ink-2)}
+.how b{display:block;font:800 1.05rem var(--f-disp);color:var(--ink);margin-bottom:4px}
+
+/* study */
+.study{display:none;max-width:760px;margin:0 auto}
+body.studying .study{display:block}
+body.studying .home{display:none}
+.st-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.st-top h2{font:800 1.3rem var(--f-disp);margin:0;letter-spacing:-.02em}
+.st-counts{display:flex;gap:14px;font:800 1.15rem var(--f-disp)}
+.st-counts span{opacity:.45}.st-counts span.on{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.st-counts .new{color:#2463d6}.st-counts .lrn{color:#d4313d}.st-counts .rev{color:#0F9972}
+.fc{background:#fff;border:var(--bw) solid var(--ink);border-radius:28px;box-shadow:var(--sh);min-height:320px;display:flex;flex-direction:column;overflow:hidden}
+.fc-tag{align-self:flex-start;margin:18px 0 0 22px;font:.6rem var(--f-px);background:var(--sun);border:2px solid var(--ink);border-radius:8px;padding:3px 8px}
+.fc-q,.fc-a{padding:22px 34px;text-align:center;font:600 1.3rem/1.45 var(--f-body)}
+.fc-q{font:800 1.55rem/1.3 var(--f-disp);letter-spacing:-.02em;flex:1;display:grid;place-items:center}
+.fc-a{border-top:3px dashed rgba(27,19,64,.2);background:var(--mint-l);display:none}
+.fc.show .fc-a{display:block;animation:fadeup .35s var(--e) both}
+.fc b{font-weight:800}
+@keyframes fadeup{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.bar{margin-top:22px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.ans{display:none}
+.fc.show ~ .bar .reveal{display:none}
+.fc.show ~ .bar .ans{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;width:100%}
+.ab{appearance:none;font:inherit;cursor:pointer;border:var(--bw) solid var(--ink);border-radius:18px;box-shadow:var(--sh-s);padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--ink);transition:transform .15s,box-shadow .15s}
+.ab:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.ab b{font:800 1.05rem var(--f-disp)}
+.ab small{font:700 .78rem var(--f-body);opacity:.75}
+.ab.again{background:#FFD3DC}.ab.hard{background:var(--sun-l)}.ab.good{background:#C9F5E6}.ab.easy{background:var(--sky-l)}
+.kbd{font:.55rem var(--f-px);opacity:.5}
+.reveal{min-width:260px}
+.done{display:none;text-align:center;background:#fff;border:var(--bw) solid var(--ink);border-radius:28px;box-shadow:var(--sh);padding:40px 24px}
+.done .pipe{width:120px;margin:0 auto 12px}
+.done .pipe .pip{width:100%;height:auto;display:block}
+.done h3{font:800 1.8rem var(--f-disp);margin:0 0 8px}
+.done p{color:var(--ink-2);font-weight:600;margin:0 0 18px}
+body.finished .fc,body.finished .bar{display:none}
+body.finished .done{display:block}
+.st-foot{margin-top:18px;text-align:center;font:600 .82rem var(--f-body);color:var(--ink-3)}
+
+@media(max-width:760px){
+  .deck{grid-template-columns:auto minmax(0,1fr)}
+  .deck .acts{grid-column:1 / -1;flex-direction:row;flex-wrap:wrap}
+  .deck .acts .btn{flex:1}
+  .how{grid-template-columns:1fr}
+  .fc-q{font-size:1.25rem}.fc-a{font-size:1.05rem;padding:18px 20px}
+  .fc.show ~ .bar .ans{gap:8px}
+  .ab{padding:8px 2px;border-radius:14px}
+  .kbd{display:none}
+}
+@media(prefers-reduced-motion:reduce){.fc.show .fc-a{animation:none}}
+
+.subj-chips{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+.subj-chips button{border:2.5px solid var(--ink);border-radius:99px;background:#fff;color:var(--ink);padding:8px 16px;font:800 .9rem var(--f-body);cursor:pointer}
+.subj-chips button[aria-selected="true"]{background:var(--grape);color:#fff}
+.subj-chips button:focus-visible{outline:3px solid var(--grape);outline-offset:2px}
+.st-counts span b{font-weight:800}
+.st-counts span{font-size:.8rem;font-weight:700}
+</style>
+<script src="exam-date.js"></script>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div class="scrim" aria-hidden="true"></div>
+<div class="toast" id="toast" role="alert" aria-live="polite"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span id="toastText"></span></div>
+
+<aside class="side" id="side">
+  <div class="tricolore" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button class="side-x" id="sideX" aria-label="Close menu">✕</button>
+  <div class="side-in">
+    <a class="logo" href="index.html" aria-label="ImatPath home">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
+    </a>
+    <nav class="snav" aria-label="Dashboard">
+      <a href="dashboard.html" title="Dashboard"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a>
+      <a href="lessons.html" title="Lessons"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.500-2 10-.5V19c-2.500-1.500-6-1.500-10 .5-4-2-7.500-2-10-.5z"/><path d="M12 6v13.500"/></svg>Lessons</a>
+      <a class="act" href="flashcards.html" title="Flashcards"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="14" height="14" rx="2.5"/><path d="M17 17v1.5A2.5 2.5 0 0 1 14.5 21h-9A2.5 2.5 0 0 1 3 18.5v-9A2.5 2.5 0 0 1 5.5 7H7"/><path d="M11 10h6"/></svg>Flashcards</a>
+      <a href="checklist.html" title="Syllabus Checklist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="m8 9 2 2 4-4M8 15h8"/></svg>Syllabus Checklist</a>
+      <a href="question-bank.html" title="Question Bank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.33c-.7.28-.9.87-.9 1.67"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>Question Bank</a>
+      <a href="mock-exam.html" title="Mock Exams"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>Mock Exams</a>
+      <a href="roadmap.html" title="IMAT Past Papers"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/><path d="M9 8h6M9 12h6"/></svg>IMAT Past Papers</a>
+      <a href="analytics.html" title="Analytics"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Analytics</a>
+    </nav>
+    <div class="side-foot">
+      <div class="plan-card">
+        <span class="t"><i></i>IMAT Candidate Access</span>
+        <p>Valid until exam day · Track your progress across all devices.</p>
+      </div>
+      <div class="user-card" id="userCard">
+        <span class="avatar" id="userAvatar">U</span>
+        <span style="flex:1;min-width:0;overflow:hidden"><span class="n" id="userName">User</span><br><span class="r">IMAT 2027 candidate</span></span>
+        <button class="logout-btn" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="mtop">
+    <a class="logo" href="index.html" style="text-decoration:none">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+  </div>
+
+  <div class="home">
+    <header class="top">
+      <div>
+        <span class="eyebrow" data-rv>Spaced repetition</span>
+        <h1 class="lm"><span>Flash<em>cards.</em></span></h1>
+        <p class="top-sub" data-rv style="--d:.15s">One deck per lesson. Answer, rate how well you knew it, and each card comes back just before you would forget it, the same way Anki works.</p>
+      </div>
+      <div class="cd-chip" data-rv style="--d:.2s" aria-label="Due today">
+        <span class="big"><span id="dueTotal">0</span><small> cards<br>in today's goal</small></span>
+      </div>
+    </header>
+
+    <div class="subj-chips" id="chips" role="tablist" aria-label="Filter decks by subject"></div>
+    <section class="decks" id="decks" aria-label="Decks"></section>
+
+    <div class="how">
+      <div><b>1. Recall first</b>Read the question and answer it in your head before you flip the card.</div>
+      <div><b>2. Be honest</b>Again if you forgot, Hard if it was a struggle, Good if you knew it, Easy if it was instant.</div>
+      <div><b>3. Come back daily</b>Today's goal shows at most 30 new cards, 20 per deck. Reviews show up only when they are due.</div>
+    </div>
+  </div>
+
+  <section class="study" id="study" aria-live="polite">
+    <div class="st-top">
+      <button class="btn sm ghost" type="button" id="back">← Decks</button>
+      <h2 id="stTitle"></h2>
+      <div class="st-counts" aria-label="New, learning and review cards left"><span class="new"><b id="cNew">0</b> new</span><span class="lrn"><b id="cLrn">0</b> learning</span><span class="rev"><b id="cRev">0</b> to review</span></div>
+    </div>
+    <div class="fc" id="card">
+      <span class="fc-tag" id="fcTag"></span>
+      <div class="fc-q" id="fcQ"></div>
+      <div class="fc-a" id="fcA"></div>
+    </div>
+    <div class="bar">
+      <button class="btn reveal" type="button" id="reveal">Show answer <span class="kbd">SPACE</span></button>
+      <div class="ans" role="group" aria-label="How well did you know it?">
+        <button class="ab again" type="button" data-r="1"><b>Again</b><small id="i1"></small><span class="kbd">1</span></button>
+        <button class="ab hard" type="button" data-r="2"><b>Hard</b><small id="i2"></small><span class="kbd">2</span></button>
+        <button class="ab good" type="button" data-r="3"><b>Good</b><small id="i3"></small><span class="kbd">3</span></button>
+        <button class="ab easy" type="button" data-r="4"><b>Easy</b><small id="i4"></small><span class="kbd">4</span></button>
+      </div>
+    </div>
+    <div class="done" id="done">
+      <div class="pipe" data-pip data-mood="happy"></div>
+      <h3>Done for now!</h3>
+      <p id="doneTxt"></p>
+      <button class="btn gold" type="button" id="doneBack">Back to decks</button>
+    </div>
+    <p class="st-foot">Your progress is saved in this browser.</p>
+  </section>
+
+  <div class="foot-line">
+    <span>© 2026 ImatPath. All rights reserved.</span>
+    <span>Not affiliated with Cambridge Assessment or MUR.</span>
+  </div>
+</main>
+
+<script>
+(function(){
+"use strict";
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('#burger').addEventListener('click',()=>document.body.classList.add('menu'));
+$('#sideX').addEventListener('click',()=>document.body.classList.remove('menu'));
+$('.scrim').addEventListener('click',()=>document.body.classList.remove('menu'));
+
+window.handleLogout = async function(e) {
+  if (e) e.preventDefault();
+  if (window.ImatAuth && typeof window.ImatAuth.signOut === 'function') await window.ImatAuth.signOut();
+  else { localStorage.removeItem('imatpath_user'); window.location.href = 'auth.html'; }
+};
+try {
+  const u = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
+  const name = u.full_name || u.name || (u.email ? u.email.split('@')[0] : 'User');
+  const firstName = name.split(' ')[0] || 'User';
+  $('#userName').textContent = firstName;
+  $('#userAvatar').textContent = firstName.charAt(0).toUpperCase() || 'U';
+} catch(e) {}
+function toast(msg){const t=$('#toast');$('#toastText').textContent=msg;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2600);}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
+$$('[data-rv],.lm').forEach(el=>RM?el.classList.add('in'):io.observe(el));
+
+/* ============ SCHEDULER (Anki defaults) ============
+   New and relearning cards go through short steps in minutes; graduated cards get intervals in days
+   that grow with an ease factor (starts at 250%). Same buttons and defaults as Anki:
+   learning steps 1m 10m, graduating interval 1d, easy interval 4d, relearning step 10m,
+   hard ×1.2, easy bonus ×1.3, ease −20% on a lapse, −15% on Hard, +15% on Easy, minimum 130%,
+   20 new cards a day. A new day starts at 4:00, like Anki. */
+const MIN=60e3, DAY=864e5;
+const CFG={learn:[1,10],relearn:[10],grad:1,easyIvl:4,ease0:2.5,hard:1.2,bonus:1.3,minEase:1.3,newPerDay:20,learnAhead:20,maxIvl:36500};
+const KEY='ip_fc_v1';
+let DB={cards:{},days:{}};
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&s.cards)DB=s;if(!DB.days)DB.days={};}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(DB));}catch(e){}};
+
+function dayStart(t){const d=new Date(t-4*3600e3);d.setHours(0,0,0,0);return d.getTime()+4*3600e3;}
+const today=()=>new Date(dayStart(Date.now())).toISOString().slice(0,10);
+const st=id=>DB.cards[id]||{t:'new'};
+const newDone=deck=>(DB.days[today()]||{})[deck]||0;
+
+// What a rating would do, without saving it.
+function next(c,r,now){
+  c=Object.assign({ease:CFG.ease0,ivl:0,step:0,reps:0,lapses:0},c);c.reps++;c.last=now;
+  const toReview=ivl=>{c.t='review';c.ivl=Math.min(CFG.maxIvl,Math.max(1,Math.round(ivl)));c.step=0;c.due=dayStart(now)+c.ivl*DAY;return c;};
+  if(c.t==='new'||c.t==='learn'||c.t==='relearn'){
+    const re=c.t==='relearn',steps=re?CFG.relearn:CFG.learn;
+    if(c.t==='new'){c.t='learn';c.step=0;}
+    if(r===1){c.step=0;c.due=now+steps[0]*MIN;return c;}
+    if(r===2){const d=c.step===0?(steps.length>1?(steps[0]+steps[1])/2:steps[0]*1.5):steps[c.step];c.due=now+d*MIN;return c;}
+    if(r===3){if(c.step+1<steps.length){c.step++;c.due=now+steps[c.step]*MIN;return c;}return toReview(re?c.ivl:CFG.grad);}
+    return toReview(re?c.ivl+1:CFG.easyIvl);
+  }
+  // review
+  const ivl=c.ivl||1;
+  if(r===1){c.lapses++;c.ease=Math.max(CFG.minEase,c.ease-.2);c.ivl=1;c.t='relearn';c.step=0;c.due=now+CFG.relearn[0]*MIN;return c;}
+  // each button gives at least one day more than the one before it (as in Anki)
+  const hardI=Math.max(ivl+1,Math.round(ivl*CFG.hard)),goodI=Math.max(hardI+1,Math.round(ivl*c.ease)),easyI=Math.max(goodI+1,Math.round(ivl*c.ease*CFG.bonus));
+  if(r===2){c.ease=Math.max(CFG.minEase,c.ease-.15);return toReview(hardI);}
+  if(r===3)return toReview(goodI);
+  c.ease+=.15;return toReview(easyI);
+}
+function fmt(ms){
+  const m=ms/MIN;if(m<1)return '<1m';if(m<60)return Math.round(m)+'m';
+  const h=m/60;if(h<24)return Math.round(h)+'h';
+  const d=ms/DAY;if(d<30)return Math.round(d)+'d';if(d<365)return (d/30).toFixed(1).replace('.0','')+'mo';
+  return (d/365).toFixed(1).replace('.0','')+'y';
+}
+
+// Queue for a deck right now.
+function queue(deck,now){
+  const lrn=[],ahead=[],rev=[],nw=[],end=dayStart(now)+DAY;
+  deck.cards.forEach(card=>{const c=st(card.id);
+    if(c.t==='new')nw.push(card);
+    else if(c.t==='review'){if(c.due<=now)rev.push(card);}
+    else if(c.due<=now)lrn.push(card);
+    else if(c.due<end)ahead.push(card);
+  });
+  const by=(a,b)=>st(a.id).due-st(b.id).due;
+  lrn.sort(by);ahead.sort(by);rev.sort(by);
+  const left=Math.max(0,CFG.newPerDay-newDone(deck.id));
+  return {lrn,ahead,rev,nw:nw.slice(0,left),lrnAll:lrn.length+ahead.length};
+}
+
+/* ============ DECK LIST ============ */
+const SUBJ_ORDER=['Biology','Chemistry','Physics','Math'];
+const DECKS=(window.FC_DECKS||[]).slice().sort((x,y)=>{const sx=SUBJ_ORDER.indexOf(x.subject),sy=SUBJ_ORDER.indexOf(y.subject);if(sx!==sy)return sx-sy;return (parseInt(String(x.id).replace(/\D+/g,''),10)||0)-(parseInt(String(y.id).replace(/\D+/g,''),10)||0);});
+const EMO={Biology:'🧬',Chemistry:'🧪',Physics:'⚛️',Math:'📐'};
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+let FILTER=(function(){try{return localStorage.getItem('ip_fc_filter')||'All'}catch(e){return 'All'}})();
+const GOAL_NEW=30;
+function renderChips(){
+  const subs=['All'].concat(SUBJ_ORDER.filter(x=>DECKS.some(d=>d.subject===x)));
+  $('#chips').innerHTML=subs.map(x=>'<button type="button" role="tab" data-f="'+x+'" aria-selected="'+(x===FILTER)+'">'+(x==='All'?'All subjects':(EMO[x]||'')+' '+x)+'</button>').join('');
+}
+function renderDecks(){
+  const now=Date.now();let newT=0,other=0;
+  renderChips();
+  $('#decks').innerHTML=DECKS.filter(d=>FILTER==='All'||d.subject===FILTER).map(d=>{
+    const q=queue(d,now),n=q.nw.length,l=q.lrnAll,r=q.rev.length;newT+=n;other+=l+r;
+    const seen=d.cards.filter(c=>st(c.id).t!=='new').length;
+    const num=parseInt(String(d.id).replace(/\D+/g,''),10)||'';
+    return '<article class="deck"><span class="ic" aria-hidden="true">'+(EMO[d.subject]||'📚')+'</span>'+
+      '<div><h2>'+esc(d.title)+'</h2><div class="sub">'+esc(d.subject)+(num?' · lesson '+num:'')+' · '+d.cards.length+' cards · '+seen+' studied</div>'+
+      '<div class="counts"><span class="cn new"><b>'+n+'</b>new</span><span class="cn lrn"><b>'+l+'</b>learning</span><span class="cn rev"><b>'+r+'</b>to review</span></div></div>'+
+      '<div class="acts"><button class="btn" type="button" data-study="'+d.id+'">'+(n+l+r?'Study now':'Open deck')+'</button>'+
+      '<a class="btn ghost sm" href="docs/flashcards/'+d.id+'.txt" download="ImatPath - '+esc(d.title)+' (Anki).txt">Download for Anki</a>'+
+      (d.doc?'<a class="btn ghost sm" href="reader.html?doc='+encodeURIComponent(d.doc)+'&t='+encodeURIComponent(d.title)+'&s='+encodeURIComponent(d.subject)+'">Course document</a>':'')+
+      '<button class="linkbtn" type="button" data-reset="'+d.id+'">Reset progress</button></div></article>';
+  }).join('')||'<p>No decks yet.</p>';
+  $('#dueTotal').textContent=Math.min(newT,GOAL_NEW)+other;
+}
+$('#chips').addEventListener('click',e=>{const b=e.target.closest('[data-f]');if(!b)return;FILTER=b.dataset.f;try{localStorage.setItem('ip_fc_filter',FILTER)}catch(x){}renderDecks();});
+$('#decks').addEventListener('click',e=>{
+  const s=e.target.closest('[data-study]');if(s){location.hash='deck='+s.dataset.study;return;}
+  const r=e.target.closest('[data-reset]');
+  if(r&&confirm('Reset your progress on this deck? Every card becomes new again.')){
+    const d=DECKS.find(x=>x.id===r.dataset.reset);d.cards.forEach(c=>delete DB.cards[c.id]);
+    Object.values(DB.days).forEach(o=>delete o[d.id]);save();renderDecks();toast('Progress reset');
+  }
+});
+
+/* ============ STUDY ============ */
+let deck=null,cur=null,curKind='',flip=false,ahead=false,newTurn=false;
+function pickCard(){
+  const now=Date.now(),q=queue(deck,now);
+  $('#cNew').textContent=q.nw.length;$('#cLrn').textContent=q.lrnAll;$('#cRev').textContent=q.rev.length;
+  if(q.lrn.length){curKind='lrn';return q.lrn[0];}
+  // mix new cards with reviews
+  if(q.rev.length&&q.nw.length){newTurn=!newTurn;if(newTurn){curKind='new';return q.nw[0];}curKind='rev';return q.rev[0];}
+  if(q.rev.length){curKind='rev';return q.rev[0];}
+  if(q.nw.length){curKind='new';return q.nw[0];}
+  if(q.ahead.length&&st(q.ahead[0].id).due-now<=CFG.learnAhead*MIN){curKind='lrn';return q.ahead[0];}
+  if(ahead&&q.ahead.length){curKind='lrn';return q.ahead[0];}
+  return null;
+}
+function show(){
+  cur=pickCard();flip=false;$('#card').classList.remove('show');
+  $$('.st-counts span').forEach(s=>s.classList.toggle('on',s.classList.contains(curKind)));
+  if(!cur){
+    document.body.classList.add('finished');
+    const q=queue(deck,Date.now()),nx=q.ahead.length?st(q.ahead[0].id).due-Date.now():0;
+    $('#doneTxt').textContent=(nx?'The next learning card is due in '+fmt(nx)+'. ':'')+'Come back tomorrow for your reviews'+(newDone(deck.id)>=CFG.newPerDay?' and 20 new cards.':'.');
+    return;
+  }
+  document.body.classList.remove('finished');
+  $('#fcTag').textContent=cur.t.replace('-',' ').toUpperCase();
+  $('#fcQ').innerHTML='<div>'+cur.q+'</div>';$('#fcA').innerHTML=cur.a;
+  $('#reveal').focus({preventScroll:true});
+}
+function reveal(){
+  if(!cur||flip)return;flip=true;$('#card').classList.add('show');
+  const now=Date.now(),c=st(cur.id);
+  for(let r=1;r<=4;r++){const n=next(c,r,now);$('#i'+r).textContent=fmt(n.t==='review'?n.ivl*DAY:n.due-now);}
+}
+function rate(r){
+  if(!cur||!flip)return;
+  const now=Date.now(),c=st(cur.id);
+  if(c.t==='new'){const t=today();DB.days[t]=DB.days[t]||{};DB.days[t][deck.id]=(DB.days[t][deck.id]||0)+1;}
+  DB.cards[cur.id]=next(c,r,now);
+  save();show();
+}
+function open(id){
+  deck=DECKS.find(d=>d.id===id);if(!deck){close();return;}
+  ahead=false;$('#stTitle').textContent=deck.title;document.body.classList.add('studying');
+  window.scrollTo(0,0);show();
+}
+function close(){document.body.classList.remove('studying','finished');deck=null;cur=null;renderDecks();}
+$('#reveal').addEventListener('click',reveal);
+$('#card').addEventListener('click',reveal);
+$('.ans').addEventListener('click',e=>{const b=e.target.closest('[data-r]');if(b)rate(+b.dataset.r);});
+$('#back').addEventListener('click',()=>{location.hash='';});
+$('#doneBack').addEventListener('click',()=>{location.hash='';});
+document.addEventListener('keydown',e=>{
+  if(!deck||e.ctrlKey||e.metaKey||e.altKey)return;
+  if((e.key===' '||e.key==='Enter')&&!flip){e.preventDefault();reveal();}
+  else if(flip&&/^[1-4]$/.test(e.key)){e.preventDefault();rate(+e.key);}
+  else if(flip&&(e.key===' '||e.key==='Enter')){e.preventDefault();rate(3);}
+});
+function route(){const m=location.hash.match(/deck=([\w-]+)/);if(m)open(m[1]);else close();}
+window.addEventListener('hashchange',route);
+renderDecks();route();
+})();
+</script>
+</body>
+</html>

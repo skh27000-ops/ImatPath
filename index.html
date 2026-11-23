@@ -1,1280 +1,702 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ImatPath — Your clear path to medicine in Italy</title>
-<meta name="description" content="A structured study plan, 2,000+ IMAT-style questions, timed mock exams and the non-EU application guide — everything you need for the IMAT, 100% free.">
-<meta name="keywords" content="IMAT, IMAT preparation, IMAT past papers, IMAT 2023, IMAT 2024, IMAT 2025, IMAT mock exam, study medicine in Italy, Italian medical school in English, IMAT question bank free">
-<link rel="canonical" href="https://imat-path.vercel.app/">
-
-<!-- Open Graph / Facebook / Instagram / WhatsApp -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="ImatPath">
-<meta property="og:url" content="https://imat-path.vercel.app/">
-<meta property="og:title" content="ImatPath — Free IMAT Preparation & Practice Questions">
-<meta property="og:description" content="100% Free IMAT study platform. 2,000+ practice questions, official past papers with solutions, 20 timed mock exams, and complete application guide for medicine in Italy.">
-<meta property="og:image" content="https://imat-path.vercel.app/favicon.png">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ImatPath — Free IMAT Preparation & Practice Questions">
-<meta name="twitter:description" content="100% Free IMAT study platform. 2,000+ practice questions, official past papers with solutions, 20 timed mock exams, and complete application guide.">
-<meta name="twitter:image" content="https://imat-path.vercel.app/favicon.png">
-
-<!-- Google Structured Data (JSON-LD) for Site Name & App -->
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "ImatPath",
-    "alternateName": ["ImatPath App", "Imat Path"],
-    "url": "https://imat-path.vercel.app/"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "ImatPath",
-    "url": "https://imat-path.vercel.app/",
-    "description": "Free prep platform for the IMAT exam to study medicine in Italy in English. Includes 2,000+ practice questions, official past papers, and timed mock exams.",
-    "applicationCategory": "EducationalApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
-  }
-]
-</script>
-
-<!-- Favicons for Google Search & Browsers -->
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="shortcut icon" href="/favicon.png">
-<link rel="apple-touch-icon" href="/favicon.png">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600-italic.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-700.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" href="favicon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;700&family=Silkscreen&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
 <style>
-/* ============ TOKENS & RESET ============ */
-:root{
-  --cream:#f6f1e6; --cream-2:#efe7d5; --card:#fffdf7;
-  --ink:#152720; --ink-soft:#42574d;
-  --g900:#0a241b; --g800:#0e2f23; --g700:#164534; --g600:#1e5b44;
-  --terra:#c1591f; --terra-d:#a84a15; --terra-l:#e0713a;
-  --gold:#d9a441; --gold-l:#e9c070;
-  --sage:#8aa692; --line:#e2d8c2; --line-d:#23443a;
-  --ok:#2e7d4f; --bad:#b3402e;
-  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
-  --sh-sm:0 1px 2px rgba(21,39,32,.06),0 4px 14px rgba(21,39,32,.06);
-  --sh-md:0 2px 6px rgba(21,39,32,.08),0 14px 34px rgba(21,39,32,.10);
-  --sh-lg:0 8px 20px rgba(10,36,27,.18),0 30px 70px rgba(10,36,27,.28);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:96px}
-body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img,svg{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-::selection{background:var(--terra);color:#fff}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-section{position:relative}
-.pad{padding:110px 0}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra)}
-.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
-.dark .eyebrow{color:var(--gold)}
-.lead{color:var(--ink-soft);font-size:18px;max-width:640px}
-.dark .lead{color:#b9c9bd}
-h2{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:14px 0 16px}
-:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:6px}
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.mq-track{animation:none!important}*{animation-duration:.001s!important}}
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:15.5px;padding:14px 28px;border-radius:999px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;white-space:nowrap}
-.btn svg{flex:none}
-.btn-primary{background:var(--terra);color:#fff;box-shadow:0 8px 22px rgba(193,89,31,.32)}
-.btn-primary:hover{background:var(--terra-d);transform:translateY(-2px);box-shadow:0 12px 28px rgba(193,89,31,.4)}
-.btn-ghost{border:1.5px solid rgba(246,241,230,.4);color:var(--cream)}
-.btn-ghost:hover{border-color:var(--cream);transform:translateY(-2px)}
-.btn-ghost.on-light{border-color:rgba(21,39,32,.28);color:var(--ink)}
-.btn-ghost.on-light:hover{border-color:var(--ink)}
-.btn-lg{padding:17px 36px;font-size:16.5px}
-.btn-block{width:100%}
-
-/* ============ NAV ============ */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(246,241,230,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
-.nav.scrolled{border-color:var(--line);box-shadow:0 6px 24px rgba(21,39,32,.07)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
-.logo{display:flex;align-items:center;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em}
-.logo em{font-style:italic;color:var(--terra)}
-.nav-links{display:flex;align-items:center;gap:30px}
-.nav-links a{font-size:14.5px;font-weight:500;color:var(--ink-soft);transition:color .2s}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{display:flex;align-items:center;gap:16px}
-.nav-login{font-size:14.5px;font-weight:600;color:var(--ink-soft)}
-.nav-login:hover{color:var(--ink)}
-.nav .btn{padding:10px 22px;font-size:14px}
-.burger{display:none;flex-direction:column;gap:5px;padding:8px}
-.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
-.mobile-menu{display:none;flex-direction:column;gap:4px;padding:12px 24px 20px;background:var(--cream);border-bottom:1px solid var(--line)}
-.mobile-menu a{padding:11px 4px;font-weight:500;color:var(--ink-soft);border-bottom:1px solid var(--line)}
-.mobile-menu .btn{margin-top:12px}
-.mobile-menu.open{display:flex}
-
-/* ============ HERO ============ */
-.hero{background:var(--g900);color:var(--cream);padding:170px 0 100px;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(700px 420px at 82% 8%,rgba(217,164,65,.14),transparent 60%),
-  radial-gradient(600px 500px at 8% 90%,rgba(30,91,68,.5),transparent 60%)}
-.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(246,241,230,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(246,241,230,.045) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 60% 30%,#000 30%,transparent 75%)}
-.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border:1px solid rgba(217,164,65,.4);border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-l);background:rgba(217,164,65,.08)}
-.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,164,65,.5)}50%{box-shadow:0 0 0 6px rgba(217,164,65,0)}}
-.hero h1{font-size:clamp(2.5rem,5.4vw,4.2rem);margin:26px 0 20px;color:var(--cream)}
-.hero h1 em{font-style:italic;color:var(--gold-l)}
-.hero-sub{font-size:18.5px;color:#c3d2c6;max-width:520px;margin-bottom:34px}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
-.hero-chips{display:flex;gap:22px;flex-wrap:wrap;font-size:13.5px;color:#9db3a5}
-.hero-chips span{display:inline-flex;align-items:center;gap:7px}
-.hero-chips svg{color:var(--gold)}
-
-/* dashboard mockup */
-.hero-visual{position:relative}
-.dash{background:var(--card);border-radius:20px;box-shadow:var(--sh-lg);overflow:hidden;color:var(--ink);transform:rotate(.6deg)}
-.dash-bar{display:flex;align-items:center;gap:7px;padding:13px 18px;background:var(--cream-2);border-bottom:1px solid var(--line)}
-.dash-bar i{width:10px;height:10px;border-radius:50%;background:#d9cdb4}
-.dash-bar i:first-child{background:#e0a294}.dash-bar i:nth-child(2){background:#e5cf9a}.dash-bar i:nth-child(3){background:#a9c4a1}
-.dash-url{margin-left:auto;font-size:11.5px;color:var(--ink-soft);background:var(--card);border:1px solid var(--line);padding:3px 12px;border-radius:999px}
-.dash-body{padding:22px}
-.dash-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
-.dash-head h4{font-family:var(--serif);font-size:19px;font-weight:600}
-.dash-chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:rgba(46,125,79,.12);color:var(--ok);padding:5px 11px;border-radius:999px;white-space:nowrap}
-.dash-exam{font-size:13px;color:var(--ink-soft);margin-bottom:16px}
-.dash-exam b{color:var(--terra);font-weight:700}
-.chart-box{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:16px 16px 10px;margin-bottom:14px}
-.chart-cap{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-soft);margin-bottom:8px;font-weight:600}
-.chart-cap b{color:var(--ok)}
-.trend{stroke-dasharray:620;stroke-dashoffset:620;animation:draw 2.2s .5s ease forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-.trend-pt{opacity:0;animation:pop .3s ease forwards}
-.trend-pt:nth-of-type(1){animation-delay:1s}.trend-pt:nth-of-type(2){animation-delay:1.3s}.trend-pt:nth-of-type(3){animation-delay:1.6s}.trend-pt:nth-of-type(4){animation-delay:1.9s}.trend-pt:nth-of-type(5){animation-delay:2.2s}
-@keyframes pop{to{opacity:1}}
-.chap-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;font-size:13px;background:var(--card)}
-.chap-row:last-child{margin-bottom:0}
-.chap-name{font-weight:600}
-.pill{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:3.5px 9px;border-radius:999px;border:1.5px solid var(--line);color:var(--ink-soft);text-transform:uppercase;transition:.25s}
-.pill.done{background:rgba(46,125,79,.12);border-color:rgba(46,125,79,.5);color:var(--ok)}
-.float-card{position:absolute;background:var(--card);color:var(--ink);border-radius:14px;box-shadow:var(--sh-md);padding:13px 18px;font-size:13px;line-height:1.45;border:1px solid var(--line)}
-.float-card b{display:block;font-size:15px;font-family:var(--serif)}
-.fc-1{top:-26px;right:-14px;transform:rotate(-2deg);animation:bob 5s ease-in-out infinite}
-.fc-2{bottom:-24px;left:-20px;transform:rotate(1.5deg);animation:bob 6s .8s ease-in-out infinite}
-@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -8px}}
-
-/* marquee */
-.marquee{background:var(--g800);border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d);overflow:hidden;padding:15px 0}
-.mq-track{display:flex;gap:0;width:max-content;animation:mq 36s linear infinite}
-.marquee:hover .mq-track{animation-play-state:paused}
+:root{--ink:#1B1340;--grape:#6C3BFF;--sun:#FFC83D;--coral:#FF5C7A;--mint:#27D3A2;--sky:#49C5F5;--cream:#FFF8EA;--lav:#EDE6FF;--e:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{font:17px/1.55 Figtree,system-ui,sans-serif;color:var(--ink);background:var(--cream) radial-gradient(rgba(27,19,64,.09) 1.6px,transparent 1.6px) 0 0/24px 24px;overflow-x:hidden}
+h1,h2,h3,.big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.035em;line-height:1}
+h1{font-size:clamp(2.8rem,7vw,5.6rem)}h2{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:12px}h3{font-size:1.35rem;letter-spacing:-.02em}
+.px{font-family:Silkscreen,monospace;font-size:.72rem;color:var(--grape)}
+section{padding:84px 22px}.w{max-width:1120px;margin:auto}.lead{max-width:600px;opacity:.8;margin-bottom:36px}
+.card{background:#fff;border:3px solid var(--ink);border-radius:22px;box-shadow:5px 5px 0 var(--ink);padding:24px}
+.btn{display:inline-block;font:800 1rem 'Bricolage Grotesque';background:var(--sun);color:var(--ink);border:3px solid var(--ink);border-radius:99px;padding:13px 26px;text-decoration:none;box-shadow:4px 4px 0 var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}.btn.g{background:var(--grape);color:#fff}.btn.w2{background:#fff}
+.tick{background:var(--ink);color:var(--sun);overflow:hidden;white-space:nowrap;font:.78rem Silkscreen}
+.tick div{display:inline-block;padding:9px 0;animation:mq 38s linear infinite}.tick span{margin:0 18px}
 @keyframes mq{to{transform:translateX(-50%)}}
-.mq-track span{display:inline-flex;align-items:center;gap:26px;padding-right:26px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8fa897;white-space:nowrap}
-.mq-track span::after{content:"✦";color:var(--gold);font-size:11px}
+nav{position:sticky;top:16px;margin:14px auto 0;max-width:1120px;padding:0 14px;z-index:9;animation:drop 1s var(--e) backwards}
+.nb{display:grid;grid-template-columns:1fr 150px 1fr;align-items:center;height:68px;background:#fff;border:3px solid var(--ink);border-radius:99px;padding:0 10px 0 14px;box-shadow:4px 4px 0 var(--ink)}
+.nl,.nr{display:flex;align-items:center;gap:4px}.nr{justify-content:flex-end}
+.nl a,.nr a:not(.btn){font-weight:700;text-decoration:none;color:var(--ink);padding:6px 12px;border-radius:99px;font-size:.92rem;transition:background .25s,translate .25s var(--e)}
+.nl a:hover,.nr a:not(.btn):hover{background:var(--lav);translate:0 -2px}
+.nb .btn{padding:8px 18px;font-size:.9rem;box-shadow:3px 3px 0 var(--ink)}
+.brand{position:relative;align-self:stretch;display:block;text-decoration:none}
+.brand [data-pip]{position:absolute;left:50%;top:-14px;width:80px;margin-left:-40px}.brand .pip{width:100%}
+.brand .wm{position:absolute;left:50%;top:80px;translate:-50% 0;font:800 1.6rem/1 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;color:var(--sun);white-space:nowrap;text-shadow:2px 0 0 var(--ink),-2px 0 0 var(--ink),0 2px 0 var(--ink),0 -2px 0 var(--ink),2px 2px 0 var(--ink),-2px -2px 0 var(--ink),2px -2px 0 var(--ink),-2px 2px 0 var(--ink),4px 5px 0 var(--ink);transition:scale .4s cubic-bezier(.34,1.56,.64,1)}
+.brand:hover .wm{scale:1.08}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center;padding-top:84px;position:relative}.hero>div:not(.deco){position:relative;z-index:1}
+.chip{display:inline-block;background:var(--mint);border:3px solid var(--ink);border-radius:99px;padding:4px 14px;font-weight:700;font-size:.85rem;margin-bottom:20px;transform:rotate(-2deg)}
+.hl{background:linear-gradient(var(--sun),var(--sun)) 0 92%/100% 42% no-repeat;animation:sweep 1s var(--e) 1.1s backwards}.hero p{font-size:1.2rem;margin:22px 0 28px;max-width:540px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.pills span{background:#fff;border:2.5px solid var(--ink);border-radius:99px;padding:5px 13px;font-weight:700;font-size:.85rem}
+.pills span:nth-child(2n){background:var(--lav)}.pills span:nth-child(3n){background:#FFE3E8}
+.hv{position:relative;z-index:1;margin-top:120px;background:var(--grape);color:#fff}.hv .big{font-size:4.2rem;color:var(--sun)}
+.row{display:flex;justify-content:space-between;gap:8px;background:#fff;color:var(--ink);border:2.5px solid var(--ink);border-radius:14px;padding:9px 14px;margin-top:9px;font-weight:700;font-size:.92rem}
+.ok{background:var(--mint);border-radius:99px;padding:0 9px;font-size:.78rem;line-height:1.7}
+.pip{width:130px;display:block;overflow:visible;animation:bob 3.4s ease-in-out infinite}
+.hv .pip{position:absolute;right:-6px;top:-157px;width:128px;transform:rotate(5deg)}
+@keyframes bob{50%{translate:0 -8px}}
+.pip .o,.pip .s{display:none}.pip.wow .h,.pip.sad .h{display:none}.pip.wow .o{display:block}.pip.sad .s{display:block}
+.pip .eye{animation:blink 5.5s infinite}.pip .e1{transform-origin:77px 94px}.pip .e2{transform-origin:123px 94px}
+@keyframes blink{0%,93%,100%{transform:scaleY(1)}96.5%{transform:scaleY(.07)}}
+.pip .pu{transform:translate(var(--px,0px),var(--py,0px));transition:transform .18s ease-out}
+.pip .brow{transition:transform .35s var(--e)}.pip.wow .brow{transform:translateY(-5px)}.pip.sad .brow{transform:translateY(3px)}
+.pip .wave{transform-origin:138px 158px;animation:wave 3s ease-in-out infinite}
+@keyframes wave{0%,62%,100%{transform:rotate(0)}10%{transform:rotate(-13deg)}22%{transform:rotate(7deg)}34%{transform:rotate(-12deg)}46%{transform:rotate(6deg)}54%{transform:rotate(-4deg)}}
+.pip .st{transform-origin:100px 146px;animation:sway 4.2s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(-3.5deg)}0%,100%{transform:rotate(3.5deg)}}
+.pip .tw{transform-box:fill-box;transform-origin:center;animation:tw 2.8s ease-in-out infinite}.pip .t2{animation-delay:1.3s}
+@keyframes tw{0%,100%{scale:.4;opacity:.25}50%{scale:1.15;opacity:1}}
+.pip .ecg{stroke-dasharray:46;animation:ecg 2.6s linear infinite}
+@keyframes ecg{from{stroke-dashoffset:46}to{stroke-dashoffset:-46}}
+.pip .gl{animation:gl 3.8s ease-in-out infinite}
+@keyframes gl{0%,68%,100%{opacity:.2}80%{opacity:1}}
+.pip .gs{transform-box:fill-box;transform-origin:center;animation:gs 3.4s ease-in-out infinite}
+@keyframes gs{50%{scale:.86;opacity:.1}}
+.brand:hover .wave{animation-duration:.9s}
+.stk{animation:fl 5s ease-in-out infinite;position:absolute;font:800 1rem 'Bricolage Grotesque';border:3px solid var(--ink);border-radius:12px;padding:5px 11px;color:var(--ink)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:start}
+.plan{position:relative}.plan h3{margin:4px 0}.plan .pr{font:800 3.6rem 'Bricolage Grotesque';letter-spacing:-.04em;margin:10px 0 0}.plan .pr small{font:500 1rem Figtree}
+.plan ul{list-style:none;padding:0;margin:18px 0}.plan li{padding:5px 0 5px 28px;position:relative;font-size:.93rem}.plan li:before{content:"✓";position:absolute;left:0;color:var(--grape);font-weight:800}
+.plan li.no:before{content:"–";color:var(--ink);opacity:.45}.plan .btn{width:100%;text-align:center}
+.pop{background:var(--grape);color:#fff}.pop li:before{color:var(--sun)}.pop .btn{background:var(--sun)}.pop p{opacity:.9}
+.tag{position:absolute;top:-17px;right:18px;background:var(--sun);color:var(--ink);border:3px solid var(--ink);border-radius:99px;padding:3px 14px;font-weight:800;font-size:.82rem;transform:rotate(3deg)}
+.coa{background:#FFE3E8}.bar{height:12px;border:2.5px solid var(--ink);border-radius:9px;background:#fff;margin:10px 0 0;overflow:hidden}.bar i{display:block;height:100%;background:var(--coral);width:70%}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:22px}.g4 .card:nth-child(4n+1){background:#E6F8FF}.g4 .card:nth-child(4n+2){background:#FFF1C9}.g4 .card:nth-child(4n+3){background:#E5FBF3}.g4 .card:nth-child(4n){background:#FFE3E8}
+.g4 .card p{font-size:.94rem;margin-top:8px;opacity:.85}.n{font:800 2.3rem 'Bricolage Grotesque';color:var(--grape)}
+.dash{display:grid;grid-template-columns:150px 1fr;padding:0;overflow:hidden}.dash aside{background:var(--ink);color:#fff;padding:18px;font-size:.85rem;display:flex;flex-direction:column;gap:9px}.dash aside b{color:var(--sun);font-family:'Bricolage Grotesque'}
+.dash main{padding:24px;background:var(--lav)}.cd{display:flex;gap:10px;margin:12px 0}.cd div{background:#fff;border:2.5px solid var(--ink);border-radius:12px;padding:6px 12px;text-align:center}.cd b{font:800 1.7rem 'Bricolage Grotesque';display:block;line-height:1.1}
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.st div{background:#fff;border:2.5px solid var(--ink);border-radius:12px;padding:10px;font-size:.78rem}.st b{font:800 1.5rem 'Bricolage Grotesque';display:block}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}.tabs button{font:800 .95rem 'Bricolage Grotesque';border:3px solid var(--ink);border-radius:99px;background:#fff;padding:8px 18px;cursor:pointer}.tabs button.on{background:var(--grape);color:#fff}
+.nums{display:flex;flex-wrap:wrap;gap:30px;margin-bottom:30px}.nums b{font:800 2.8rem 'Bricolage Grotesque';color:var(--grape);display:block;line-height:1}
+.demo{display:grid;grid-template-columns:1fr 190px;gap:24px;align-items:center}.opt{display:block;width:100%;text-align:left;font:600 1rem Figtree;background:#fff;border:2.5px solid var(--ink);border-radius:14px;padding:10px 14px;margin-top:9px;cursor:pointer}.opt:hover{background:var(--lav)}.opt.r{background:var(--mint)}.opt.x{background:#FFB3C0}
+input[type=range]{width:100%;accent-color:var(--grape)}.sc{font:800 4rem 'Bricolage Grotesque';color:var(--grape)}
+.ck{display:flex;gap:10px;align-items:center;padding:8px 0;cursor:pointer;font-weight:600}.ck i{width:24px;height:24px;border:3px solid var(--ink);border-radius:8px;background:#fff;display:grid;place-items:center;font-style:normal;font-size:.8rem}.ck.d i{background:var(--mint)}
+.f6{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}.f6 .px{display:block;margin-bottom:6px}.f6 p{opacity:.85;font-size:.95rem;margin-top:6px}
+.tl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;counter-reset:s}.tl .card{position:relative}.tl .card:before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:18px;width:34px;height:34px;border-radius:50%;background:var(--sun);border:3px solid var(--ink);display:grid;place-items:center;font:800 1rem 'Bricolage Grotesque'}
+.tl small{background:var(--lav);border-radius:99px;padding:2px 10px;font-weight:700;font-size:.75rem}.tl p{font-size:.9rem;margin-top:8px;opacity:.85}
+.sw{display:inline-flex;border:3px solid var(--ink);border-radius:99px;background:#fff;margin:18px 0 34px;overflow:hidden}.sw button{border:0;background:0;font:800 .95rem 'Bricolage Grotesque';padding:9px 20px;cursor:pointer}.sw .on{background:var(--ink);color:#fff}
+.ch{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;font:700 .95rem Figtree;background:#fff;border:2.5px solid var(--ink);border-radius:14px;padding:10px 14px;margin-top:9px;cursor:pointer;text-align:left}
+.ch em{font-style:normal;font-size:.76rem;border-radius:99px;padding:2px 11px;border:2px solid var(--ink);background:#eee}.ch.s1 em{background:var(--sun)}.ch.s2 em{background:var(--mint)}
+.uni{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:30px}.uni .card{text-align:center}.uni .card:nth-child(odd){transform:rotate(-1.5deg)}.uni .card:nth-child(even){transform:rotate(1.5deg)}
+.q{font:800 clamp(1.5rem,3vw,2.2rem)/1.2 'Bricolage Grotesque';letter-spacing:-.02em;max-width:760px}
+details{background:#fff;border:3px solid var(--ink);border-radius:18px;margin-top:14px;box-shadow:4px 4px 0 var(--ink)}summary{font:800 1.15rem 'Bricolage Grotesque';padding:16px 20px;cursor:pointer;list-style:none;display:flex;justify-content:space-between}summary:after{content:"+";color:var(--grape)}details[open] summary:after{content:"–"}details p{padding:0 20px 18px;opacity:.85}
+.cta{background:var(--grape);color:#fff;text-align:center;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}.cta .pip{margin:0 auto 14px}.cta h2{font-size:clamp(2.4rem,6vw,4.6rem)}
+footer{background:var(--ink);color:#fff;padding:44px 22px;font-size:.9rem}footer .w{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}footer a{display:block;color:#fff;opacity:.75;text-decoration:none;margin:6px 0}footer b{color:var(--sun)}
+@media(max-width:1000px){.nl a,.nr a:not(.btn){display:none}}
+@media(max-width:860px){.hero,.plans,.demo,footer .w{grid-template-columns:1fr}.nb{grid-template-columns:1fr 110px 1fr}.nl a,.nr a:not(.g){display:none}.brand [data-pip]{width:64px;margin-left:-32px}.brand .wm{font-size:1.3rem;top:68px}.dash{grid-template-columns:1fr}.dash aside{display:none}.st{grid-template-columns:1fr 1fr}.hv{margin-top:100px}.hv .pip{width:100px;top:-126px}.hero{padding-top:90px}.pip{margin:auto}}
 
-/* ============ PROBLEM ============ */
-.problem{background:var(--cream)}
-.sec-head{max-width:680px;margin-bottom:56px}
-.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.pain{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 32px;box-shadow:var(--sh-sm);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
-.pain:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
-.pain .num{font-family:var(--serif);font-size:56px;font-weight:600;color:transparent;-webkit-text-stroke:1.2px rgba(21,39,32,.18);line-height:1;position:absolute;top:20px;right:24px}
-.pain h3{font-size:20px;margin-bottom:10px;max-width:80%}
-.pain p{color:var(--ink-soft);font-size:15px}
+/* ---------- motion ---------- */
+@keyframes up{from{opacity:0;translate:0 28px}}
+@keyframes drop{from{opacity:0;translate:0 -44px}}
+@keyframes pop{from{opacity:0;translate:0 56px;scale:.95}}
+@keyframes hello{from{opacity:0;scale:.3;rotate:-14deg}}
+@keyframes sweep{from{background-size:0% 42%}}
+@keyframes fl{50%{translate:0 -7px}}
+@keyframes breathe{50%{scale:1.18}}
+@keyframes grow{from{width:0}}
+@keyframes pulse{50%{scale:1.08}}
+@keyframes fade{from{opacity:0;translate:0 -8px}}
+@keyframes jump{0%,100%{translate:0 0}30%{translate:0 -24px}58%{translate:0 0}78%{translate:0 -7px}}
+@keyframes shake{25%{rotate:-5deg}75%{rotate:5deg}}
+.nb .pip,.hv .pip{animation:hello 1.1s cubic-bezier(.34,1.56,.64,1) .55s backwards,bob 3.4s ease-in-out infinite}
+.pip.wow{animation:jump .8s var(--e),bob 3.4s ease-in-out .8s infinite}
+.pip.sad{animation:shake .6s ease-in-out,bob 3.4s ease-in-out .6s infinite}
+.hero>div:not(.deco)>:not(h1){animation:up .9s var(--e) backwards;animation-delay:var(--d,0s)}
+.hero>div:not(.deco)>:nth-child(1){--d:.15s}.hero>div:not(.deco)>:nth-child(3){--d:.75s}.hero>div:not(.deco)>:nth-child(4){--d:.9s}.hero>div:not(.deco)>:nth-child(5){--d:1s}.hero>div:not(.deco)>:nth-child(6){--d:1.15s}
+.wd{display:inline-block;animation:up .9s var(--e) backwards;animation-delay:calc(.3s + var(--i)*.08s)}
+.hv{animation:pop 1.2s var(--e) .4s backwards}
+.stk:nth-of-type(2){animation-delay:-2.2s}
+.deco{position:absolute;inset:0;pointer-events:none;z-index:0}
+.orb{position:absolute;border-radius:50%;filter:blur(46px);opacity:.55;transform:translateY(var(--par,0px));animation:breathe 11s ease-in-out infinite}.o1{width:300px;height:300px;left:-90px;top:-30px;background:#CDBBFF}.o2{width:260px;height:260px;right:-60px;top:36%;background:#9BE9FF;animation-delay:-4s}.o3{width:220px;height:220px;left:34%;bottom:-70px;background:#FFE08A;animation-delay:-8s}
+.tag{animation:pulse 2.6s ease-in-out infinite}
+.g4 .card,.f6 .card,.plan,.tl .card{transition:translate .4s var(--e),box-shadow .4s var(--e)}
+.g4 .card:hover,.f6 .card:hover,.plan:hover,.tl .card:hover{translate:0 -6px;box-shadow:9px 11px 0 var(--ink)}
+.uni .card{transition:transform .45s var(--e)}.uni .card:hover{transform:rotate(0) translateY(-8px)}
+.opt,.ch,.ck i,.tabs button,.sw button,.nb .btn{transition:background .25s,color .25s,transform .25s var(--e),box-shadow .25s}
+.opt:hover,.ch:hover{transform:translateX(4px)}
+.bar i{transition:width .7s var(--e)}
+.coa.in .bar i{animation:grow 1.4s var(--e) .5s backwards}
+details p{animation:fade .5s var(--e)}
+.ent{animation:up .6s var(--e) backwards}
+.nums b{font-variant-numeric:tabular-nums}
+.js .rv{opacity:0;translate:0 32px;transition:opacity .85s var(--e),translate .85s var(--e);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;translate:0 0}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--grape);outline-offset:3px}
 
-/* ============ PLATFORM / DEMO ============ */
-.platform{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.stats-row{display:flex;gap:44px;flex-wrap:wrap;margin-top:34px}
-.stat b{font-family:var(--serif);font-size:34px;font-weight:600;display:flex;align-items:baseline;gap:2px}
-.stat b .acc{color:var(--terra)}
-.stat span{font-size:13px;color:var(--ink-soft);font-weight:500}
-.demo-tabs{display:inline-flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px;margin-bottom:26px;flex-wrap:wrap}
-.demo-tab{padding:11px 24px;border-radius:999px;font-size:14.5px;font-weight:600;color:var(--ink-soft);transition:.25s}
-.demo-tab:hover{color:var(--ink)}
-.demo-tab.active{background:var(--g800);color:var(--cream);box-shadow:var(--sh-sm)}
-.demo-panel{display:none}
-.demo-panel.active{display:block;animation:fadeUp .45s ease}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.demo-card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-md);overflow:hidden;max-width:820px}
-.demo-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 26px;background:var(--g800);color:var(--cream);flex-wrap:wrap}
-.demo-top .dt-l{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600}
-.demo-top .dt-l .mdot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
-.demo-top .dt-r{font-size:12px;color:#9db3a5}
-.demo-body{padding:30px}
-.q-subj{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
-.q-text{font-size:18.5px;font-weight:600;line-height:1.5;margin-bottom:22px;font-family:var(--serif)}
-.opts{display:grid;gap:10px}
-.opt{display:flex;align-items:center;gap:14px;text-align:left;padding:14px 18px;border:1.5px solid var(--line);border-radius:14px;font-size:15px;font-weight:500;background:var(--card);transition:.2s}
-.opt:hover:not(:disabled){border-color:var(--g700);transform:translateX(3px)}
-.opt:disabled{cursor:default}
-.opt .letter{flex:none;width:30px;height:30px;border-radius:9px;background:var(--cream-2);display:grid;place-items:center;font-size:12.5px;font-weight:700;color:var(--ink-soft);transition:.2s}
-.opt.correct{border-color:var(--ok);background:rgba(46,125,79,.08)}
-.opt.correct .letter{background:var(--ok);color:#fff}
-.opt.wrong{border-color:var(--bad);background:rgba(179,64,46,.07)}
-.opt.wrong .letter{background:var(--bad);color:#fff}
-.opt .mark{margin-left:auto;font-weight:700;font-size:14px}
-.opt.correct .mark{color:var(--ok)}.opt.wrong .mark{color:var(--bad)}
-.explain{display:none;margin-top:20px;padding:18px 20px;border-radius:14px;background:rgba(217,164,65,.12);border:1px solid rgba(217,164,65,.4);font-size:14.5px;line-height:1.6}
-.explain.show{display:block;animation:fadeUp .4s ease}
-.explain b{color:#8a6413;display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
-.demo-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:22px;flex-wrap:wrap}
-.score-note{font-size:13px;color:var(--ink-soft)}
-.score-note b{color:var(--ink)}
-.btn-sm{padding:11px 22px;font-size:14px}
+/* ---------- pro motion layer ---------- */
+.prog{position:fixed;left:0;top:0;height:5px;width:100%;z-index:20;background:linear-gradient(90deg,var(--grape),var(--coral),var(--sun));transform:scaleX(var(--p,0));transform-origin:0 50%;pointer-events:none}
+.nb{transition:box-shadow .5s var(--e),translate .5s var(--e)}
+nav.scd .nb{box-shadow:6px 9px 0 var(--ink)}
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.55) 50%,transparent 65%);translate:-120% 0;transition:translate .8s var(--e)}
+.btn:hover::after{translate:120% 0}
+.btn{will-change:translate}
+.js p.rv{filter:blur(8px);transition:opacity .9s var(--e),translate .9s var(--e),filter .9s var(--e);transition-delay:var(--d,0s)}
+.js p.rv.in{filter:blur(0)}
+.tick:hover div{animation-play-state:paused}
+.pip{transition:filter .4s}
+.brand:hover .pip{filter:drop-shadow(0 6px 0 rgba(27,19,64,.18))}
+.hv .row,.hv .px{transition:translate .5s var(--e)}
+.hv .row:hover{translate:6px 0}
 
-/* mock exam */
-.mock-start{padding:14px 6px}
-.mock-info{display:grid;gap:0;margin:18px 0 26px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.mock-info div{display:flex;align-items:center;gap:14px;padding:15px 20px;font-size:14.5px;border-bottom:1px solid var(--line);background:var(--card)}
-.mock-info div:last-child{border-bottom:none}
-.mock-info b{min-width:110px;font-weight:700}
-.mock-info span{color:var(--ink-soft)}
-.mock-hud{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px;flex-wrap:wrap}
-.mock-timer{font-family:var(--serif);font-size:26px;font-weight:600;background:var(--g800);color:var(--gold-l);padding:6px 18px;border-radius:12px;font-variant-numeric:tabular-nums}
-.mock-timer.low{color:#ff9c7a;animation:pulse 1.2s infinite}
-.mock-count{font-size:13.5px;font-weight:600;color:var(--ink-soft)}
-.mock-nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px;flex-wrap:wrap}
-.btn-line{border:1.5px solid var(--line);color:var(--ink);padding:12px 24px;border-radius:999px;font-weight:600;font-size:14.5px;transition:.2s}
-.btn-line:hover:not(:disabled){border-color:var(--ink)}
-.btn-line:disabled{opacity:.4;cursor:default}
-.btn-danger-line{border:1.5px solid rgba(179,64,46,.5);color:var(--bad);padding:12px 24px;border-radius:999px;font-weight:600;font-size:14.5px;transition:.2s}
-.btn-danger-line:hover{background:rgba(179,64,46,.08)}
-.mock-result{text-align:center;padding:8px 0}
-.mr-score{font-family:var(--serif);font-size:64px;font-weight:600;line-height:1;margin:8px 0 2px}
-.mr-score span{font-size:24px;color:var(--ink-soft)}
-.mr-sub{font-size:14px;color:var(--ink-soft);margin-bottom:26px}
-.mr-bars{display:grid;gap:10px;text-align:left;margin-bottom:26px}
-.mr-bar{display:grid;grid-template-columns:110px 1fr 44px;align-items:center;gap:12px;font-size:13.5px}
-.mr-bar .track{height:9px;background:var(--cream-2);border-radius:99px;overflow:hidden}
-.mr-bar .fill{height:100%;background:var(--g600);border-radius:99px;width:0;transition:width 1s ease .2s}
-.mr-bar b{text-align:right;font-variant-numeric:tabular-nums}
-.mr-review{text-align:left;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:8px;margin-bottom:24px}
-.mr-r{display:flex;gap:12px;font-size:13.5px;padding:10px 14px;border:1px solid var(--line);border-radius:11px;background:var(--card)}
-.mr-r .ic{flex:none;font-weight:800}
-.mr-r.ok .ic{color:var(--ok)}.mr-r.bad .ic{color:var(--bad)}.mr-r.blank .ic{color:var(--ink-soft)}
-.mr-r small{display:block;color:var(--ink-soft)}
+/* ---------- v2 upgrade ---------- */
+.tick{-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
+.btn .ar{display:inline-block;transition:translate .35s var(--e)}.btn:hover .ar{translate:5px 0}
+.rp{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:rgba(255,255,255,.65);pointer-events:none;z-index:-1;animation:rp .65s var(--e) forwards}
+@keyframes rp{to{scale:26;opacity:0}}
+.opt:active,.ch:active,.ck:active i{scale:.97}
+/* nav: active link + mobile menu */
+.nl a,.nr a:not(.btn){position:relative}
+.nl a.on,.nr a.on:not(.btn){background:var(--lav)}
+.nl a::after,.nr a:not(.btn)::after{content:"";position:absolute;left:50%;bottom:1px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--grape);scale:0;transition:scale .4s cubic-bezier(.34,1.56,.64,1)}
+.nl a.on::after,.nr a.on::after{scale:1}
+.mb{display:none;width:44px;height:44px;border:2.5px solid var(--ink);border-radius:50%;background:var(--sun);cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding:0;box-shadow:2px 2px 0 var(--ink);transition:transform .25s var(--e)}
+.mb:active{transform:translate(2px,2px);box-shadow:none}
+.mb i{display:block;width:18px;height:2.5px;background:var(--ink);border-radius:2px;transition:transform .45s var(--e),opacity .3s}
+.mb.x i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}.mb.x i:nth-child(2){opacity:0;transform:scaleX(0)}.mb.x i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mm{position:absolute;left:14px;right:14px;top:122px;background:#fff;border:3px solid var(--ink);border-radius:26px;box-shadow:6px 6px 0 var(--ink);padding:12px;display:grid;gap:4px;opacity:0;visibility:hidden;translate:0 -16px;scale:.96;transform-origin:top center;transition:opacity .35s var(--e),translate .5s var(--e),scale .5s var(--e),visibility 0s .5s}
+.mm.open{opacity:1;visibility:visible;translate:0 0;scale:1;transition-delay:0s}
+.mm a{font:800 1.2rem 'Bricolage Grotesque';text-decoration:none;color:var(--ink);padding:12px 16px;border-radius:16px;opacity:0;translate:0 10px;transition:opacity .45s var(--e),translate .45s var(--e),background .2s}
+.mm.open a{opacity:1;translate:0 0;transition-delay:calc(.06s + var(--i)*.05s),calc(.06s + var(--i)*.05s),0s}
+.mm a:not(.btn):hover{background:var(--lav)}.mm .btn{text-align:center;margin-top:6px}
+@media(max-width:1000px){.mb{display:flex}}
+@media(min-width:1001px){.mm{display:none}}
+/* hero floating subject stickers */
+.fx{position:absolute;display:grid;place-items:center;width:58px;height:58px;font:800 1.6rem 'Bricolage Grotesque';background:#fff;border:3px solid var(--ink);border-radius:18px;box-shadow:3px 3px 0 var(--ink);rotate:var(--r,0deg);transform:translate(calc(var(--hx,0)*var(--k)*1px),calc(var(--hy,0)*var(--k)*1px));transition:transform .8s var(--e);animation:hello .9s cubic-bezier(.34,1.56,.64,1) var(--a) backwards,fl 6s ease-in-out var(--b) infinite}
+@media(max-width:860px){.fx{display:none}}
+/* cursor spotlight + tilt */
+.glow{position:relative}
+.glow::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.6),transparent 65%);opacity:0;transition:opacity .45s}
+.glow:hover::after{opacity:1}
+.plan,.hv{transition:translate .4s var(--e),box-shadow .4s var(--e),transform .6s var(--e)}
+/* pricing extras */
+.pm{display:inline-block;margin-top:8px;font-size:.8rem;font-weight:700;background:rgba(255,255,255,.75);color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:2px 10px}
+.gu{margin:0 0 16px;padding:12px 14px;border:2px dashed var(--ink);border-radius:14px;background:rgba(255,255,255,.6);color:var(--ink)}
+.gu p{font-size:.84rem;font-weight:700;line-height:1.35;padding-left:24px;position:relative}.gu p+p{margin-top:6px;font-weight:600;opacity:.85}
+.gu p:before{content:"🛡";position:absolute;left:0;top:0}
+.plan .btn.msg{margin-top:10px}
+.plan .tier{border-top:3px solid currentColor;margin-top:18px;padding-top:6px}.plan .tier h4{margin:6px 0 2px;font:800 1.15rem 'Bricolage Grotesque'}.plan .tier .btn{margin-top:10px}.plan .pr small{white-space:nowrap}.plan .pr.fr{font-size:2.9rem}.plan .pr.fr small:first-child{font-weight:700}
+/* heading word reveal */
+.w8{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.w8>span{display:inline-block;transform:translateY(108%);transition:transform 1s var(--e);transition-delay:calc(var(--d,0s) + var(--k)*.05s)}
+.in .w8>span,.in.w8>span{transform:none}
+/* dashboard xp bar */
+.xp{height:14px;margin-top:14px}.xp i{width:64%;background:linear-gradient(90deg,var(--grape),var(--sky))}
+.dash.in .xp i{animation:grow 1.6s var(--e) .6s backwards}
+/* segmented switch with sliding pill */
+.sw{position:relative}.sw button{position:relative;z-index:1;transition:color .35s}.sw .on{background:transparent}
+.sw .ind{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--ink);border-radius:99px;transition:left .55s var(--e),width .55s var(--e)}
+.tabs button.on{box-shadow:3px 3px 0 var(--ink);transform:translateY(-2px)}
+/* quiz */
+.qh{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.qd{display:flex;gap:6px}.qd i{width:10px;height:10px;border-radius:50%;border:2px solid var(--ink);background:#fff;transition:background .3s,scale .3s}.qd i.on{background:var(--grape);scale:1.25}.qd i.r{background:var(--mint)}.qd i.x{background:var(--coral)}
+.opt kbd{display:inline-grid;place-items:center;width:26px;height:26px;margin-right:10px;border:2px solid var(--ink);border-radius:8px;font:800 .8rem 'Bricolage Grotesque';background:var(--cream)}
+.opt.r kbd,.opt.x kbd{background:#fff}
+.opt.shk{animation:shake .45s ease-in-out}
+.opt[disabled]{cursor:default;color:var(--ink)}.opt[disabled]:not(.r):not(.x){opacity:.55}
+.nx{margin-top:4px;padding:9px 20px;font-size:.92rem}
+#fb{transition:opacity .3s}
+/* score predictor gauge */
+.pwrap{display:flex;align-items:center;gap:26px;margin:4px 0 18px;flex-wrap:wrap}
+.gw{position:relative;width:170px;height:170px;flex:none}
+.gauge{width:100%;height:100%;rotate:-90deg;overflow:visible}
+.gb{fill:#fff;stroke:var(--ink);stroke-width:3}
+.gt{fill:none;stroke:var(--lav);stroke-width:12}
+.gf{fill:none;stroke:var(--grape);stroke-width:12;stroke-linecap:round;stroke-dasharray:314.16;stroke-dashoffset:314.16;transition:stroke-dashoffset .7s var(--e),stroke .4s}
+.gc{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.gc .sc{font-size:2.7rem;line-height:1}.gc small{font-weight:700;opacity:.6}
+.vd{display:inline-block;font:800 1.05rem 'Bricolage Grotesque';border:3px solid var(--ink);border-radius:99px;padding:6px 16px;background:var(--lav);box-shadow:3px 3px 0 var(--ink);transition:background .35s}
+.vd.bump{animation:bump .45s cubic-bezier(.34,1.56,.64,1)}
+@keyframes bump{40%{scale:1.15}}
+/* trackers */
+.ch em.bump,.ck.d i{animation:bump .45s cubic-bezier(.34,1.56,.64,1)}
+.ck{transition:opacity .3s}.ck.d{opacity:.75}.ck.d span{text-decoration:line-through;text-decoration-thickness:2px}
+#chb{transition:width .7s var(--e)}
+/* back to top + sticky mobile CTA */
+.tt{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:var(--sun);border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);display:grid;place-items:center;font:800 1.3rem 'Bricolage Grotesque';color:var(--ink);cursor:pointer;z-index:15;opacity:0;scale:.5;pointer-events:none;transition:opacity .4s var(--e),scale .55s cubic-bezier(.34,1.56,.64,1),translate .3s var(--e)}
+.tt.on{opacity:1;scale:1;pointer-events:auto}.tt:hover{translate:0 -4px}
+.tt svg{position:absolute;inset:-8px;width:calc(100% + 16px);height:calc(100% + 16px);rotate:-90deg;pointer-events:none}
+.tt circle{fill:none;stroke:var(--grape);stroke-width:4;stroke-linecap:round;stroke-dasharray:188.5;stroke-dashoffset:calc(188.5 - 188.5*var(--p,0))}
+.nb .btn{white-space:nowrap}
+.mcta{position:fixed;left:12px;right:88px;bottom:18px;z-index:14;display:none;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:3px solid var(--ink);border-radius:99px;box-shadow:4px 4px 0 var(--ink);padding:6px 6px 6px 18px;font-weight:700;font-size:.9rem;translate:0 160%;transition:translate .6s var(--e)}
+.mcta.on{translate:0 0}.mcta .btn{padding:8px 16px;font-size:.88rem;box-shadow:2px 2px 0 var(--ink)}
+@media(max-width:860px){.mcta{display:flex}}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:30}
+@media(max-width:860px){.gw{width:150px;height:150px}.pwrap{gap:16px}}
 
-/* guide panel */
-.guide-toggle{display:inline-flex;background:var(--cream-2);border:1px solid var(--line);border-radius:999px;padding:5px;gap:4px;margin-bottom:24px}
-.guide-toggle button{padding:9px 20px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink-soft);transition:.2s}
-.guide-toggle button.active{background:var(--g800);color:var(--cream)}
-.checklist{display:grid;gap:9px;margin-bottom:24px}
-.check{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1.5px solid var(--line);border-radius:13px;background:var(--card);font-size:14.5px;font-weight:500;cursor:pointer;transition:.2s;user-select:none}
-.check:hover{border-color:var(--g600)}
-.check input{display:none}
-.check .box{flex:none;width:21px;height:21px;border:2px solid #c9bfa6;border-radius:6px;display:grid;place-items:center;transition:.2s;color:transparent;font-size:12px}
-.check input:checked ~ .box{background:var(--ok);border-color:var(--ok);color:#fff}
-.check input:checked ~ .txt{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:rgba(46,125,79,.6)}
-.g-progress{border-top:1px solid var(--line);padding-top:20px}
-.g-progress .gp-t{display:flex;justify-content:space-between;font-size:13.5px;font-weight:600;margin-bottom:9px}
-.g-progress .gp-t b{color:var(--terra)}
-.gp-track{height:10px;background:var(--cream-2);border-radius:99px;overflow:hidden}
-.gp-fill{height:100%;width:0;background:linear-gradient(90deg,var(--g600),var(--terra));border-radius:99px;transition:width .5s ease}
-.guide-note{font-size:13px;color:var(--ink-soft);margin-top:18px}
-
-/* ============ FEATURES BENTO ============ */
-.features{background:var(--cream)}
-.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
-.b-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--sh-sm);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;gap:12px}
-.b-card:hover{transform:translateY(-5px);box-shadow:var(--sh-md)}
-.b-tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
-.b-card h3{font-size:21px}
-.b-card p{color:var(--ink-soft);font-size:14.5px}
-.b-ui{margin-top:auto;padding-top:18px}
-.s2{grid-column:span 2}.s3{grid-column:span 3}.s6{grid-column:span 6}
-/* past papers */
-.paper{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid var(--line);border-radius:11px;background:var(--card);font-size:13px;margin-bottom:7px}
-.paper b{font-family:var(--serif);font-size:15px}
-.paper .tag-off{font-size:10px;font-weight:700;letter-spacing:.08em;background:rgba(217,164,65,.18);color:#8a6413;padding:3px 9px;border-radius:99px;text-transform:uppercase}
-.paper .arr{color:var(--terra);font-weight:700}
-/* mock timer */
-.big-timer{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--g800);font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:12px}
-.big-timer .rec{width:9px;height:9px;border-radius:50%;background:var(--bad);animation:pulse 1.5s infinite}
-.mini-meta{display:flex;gap:8px;flex-wrap:wrap}
-.mini-meta span{font-size:11.5px;font-weight:600;background:var(--cream-2);border:1px solid var(--line);padding:4px 11px;border-radius:99px;color:var(--ink-soft)}
-/* bank chips */
-.subj-chips{display:flex;gap:7px;flex-wrap:wrap}
-.subj-chips span{font-size:12px;font-weight:600;padding:6px 13px;border-radius:99px;border:1.5px solid var(--line);background:var(--card)}
-.subj-chips span i{font-style:normal;color:var(--terra);font-weight:700}
-/* analytics bars */
-.bars{display:flex;align-items:flex-end;gap:12px;height:110px;padding:0 6px}
-.bar-w{flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;height:100%;justify-content:flex-end}
-.bar{width:100%;border-radius:8px 8px 4px 4px;background:linear-gradient(180deg,var(--g600),var(--g800));transform-origin:bottom;transform:scaleY(0);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.b-card.in .bar{transform:scaleY(1)}
-.bar-l{font-size:10px;font-weight:700;color:var(--ink-soft);letter-spacing:.05em}
-/* guide mini */
-.gmini{display:flex;align-items:center;gap:10px;font-size:13px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);margin-bottom:7px}
-.gmini .box{width:17px;height:17px;border-radius:5px;background:var(--ok);color:#fff;display:grid;place-items:center;font-size:10px;flex:none}
-.gmini .box.empty{background:transparent;border:2px solid #c9bfa6}
-/* predictor */
-.pred-wrap{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:center;width:100%}
-.pred-left{background:var(--g900);color:var(--cream);padding:24px;border-radius:18px;position:relative;overflow:hidden;box-shadow:var(--sh-sm);display:flex;flex-direction:column;gap:4px}
-.pred-left label{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-l);display:block}
-.pred-score{font-family:var(--serif);font-size:50px;font-weight:600;line-height:1;color:var(--cream);margin:4px 0 8px}
-.pred-score span{font-size:18px;color:#9db3a5;font-family:var(--sans)}
-.pred-verdict{font-size:12.5px;font-weight:700;color:var(--gold-l);background:rgba(217,164,65,.15);padding:4px 10px;border-radius:99px;display:inline-block;width:fit-content;margin-bottom:8px}
-.pred-math{font-size:12.5px;color:#9db3a5;border-top:1px solid rgba(255,255,255,.1);padding-top:10px}
-.pred-math b{color:var(--cream)}
-.pred-controls{display:flex;flex-direction:column;gap:14px}
-.pred-ctrl-head{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;font-weight:600;color:var(--ink)}
-.pred-ctrl-head span{font-size:12px;color:var(--ink-soft);font-weight:500}
-.pred-ctrl-head b{color:var(--terra);font-family:var(--serif);font-size:16px}
-.pred-stats-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
-.pred-chip{font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--cream);border:1px solid var(--line);color:var(--ink-soft)}
-.pred-chip b{color:var(--ink)}
-.pred-note{font-size:12px;color:var(--ink-soft);margin-top:10px}
-input[type=range]{width:100%;margin:8px 0 4px;accent-color:var(--terra);height:6px}
-
-/* ============ NON-EU ============ */
-.noneu{background:var(--g900);color:var(--cream);overflow:hidden}
-.noneu::before{content:"";position:absolute;inset:0;background:radial-gradient(640px 400px at 12% 0%,rgba(217,164,65,.1),transparent 60%),radial-gradient(700px 500px at 95% 100%,rgba(30,91,68,.55),transparent 60%)}
-.noneu .wrap{position:relative;z-index:2}
-.track-toggle{display:inline-flex;background:rgba(246,241,230,.07);border:1px solid var(--line-d);border-radius:999px;padding:5px;gap:4px;margin:6px 0 40px}
-.track-toggle button{padding:10px 22px;border-radius:999px;font-size:14px;font-weight:600;color:#9db3a5;transition:.25s}
-.track-toggle button.active{background:var(--gold);color:var(--g900)}
-.timeline{display:none;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
-.timeline.eu{grid-template-columns:repeat(3,1fr)}
-.timeline.active{display:grid;animation:fadeUp .45s ease}
-.timeline::before{content:"";position:absolute;top:26px;left:5%;right:5%;height:2px;background:linear-gradient(90deg,transparent,var(--gold) 15%,var(--gold) 85%,transparent);opacity:.5}
-.t-step{position:relative;padding-top:0}
-.t-num{width:52px;height:52px;border-radius:50%;background:var(--g800);border:2px solid var(--gold);color:var(--gold-l);display:grid;place-items:center;font-family:var(--serif);font-size:20px;font-weight:600;margin-bottom:18px;position:relative;z-index:1}
-.t-step h3{font-size:19px;color:var(--cream);margin-bottom:8px}
-.t-step p{font-size:13.5px;color:#a9bcae;line-height:1.6;margin-bottom:12px}
-.t-when{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-l);border:1px solid rgba(217,164,65,.4);padding:5px 12px;border-radius:99px}
-.noneu-foot{margin-top:44px;font-size:13.5px;color:#8fa897;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.noneu-foot a{color:var(--gold-l);font-weight:600;border-bottom:1px solid rgba(217,164,65,.5);padding-bottom:1px}
-
-/* ============ SYLLABUS ============ */
-.syllabus{background:var(--cream)}
-.syl-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
-.syl-points{display:grid;gap:16px;margin-top:28px}
-.syl-pt{display:flex;gap:14px;font-size:15px;color:var(--ink-soft)}
-.syl-pt svg{flex:none;margin-top:3px;color:var(--terra)}
-.syl-pt b{color:var(--ink)}
-.tracker{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-md);overflow:hidden}
-.tracker-head{padding:20px 26px;background:var(--g800);color:var(--cream);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.tracker-head h4{font-family:var(--serif);font-size:18px;font-weight:600}
-.tracker-head span{font-size:12px;color:#9db3a5}
-.subj-pills{display:flex;gap:7px;padding:16px 22px 0;flex-wrap:wrap}
-.subj-pill{font-size:12.5px;font-weight:600;padding:7px 15px;border-radius:99px;border:1.5px solid var(--line);color:var(--ink-soft)}
-.subj-pill.active{background:var(--g800);color:var(--cream);border-color:var(--g800)}
-.tracker-body{padding:18px 22px 8px}
-.st-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.st-row:last-child{border-bottom:none}
-.st-name{font-size:14px;font-weight:600}
-.st-status{display:flex;gap:7px}
-.st-pill{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 11px;border-radius:99px;border:1.5px solid var(--line);color:var(--ink-soft);transition:.25s}
-.st-pill:hover{border-color:var(--g600)}
-.st-pill.done{background:rgba(46,125,79,.12);border-color:rgba(46,125,79,.5);color:var(--ok)}
-.tracker-foot{padding:16px 26px;background:var(--cream-2);font-size:13px;color:var(--ink-soft);border-top:1px solid var(--line)}
-.tracker-foot b{color:var(--terra)}
-
-/* ============ HOW ============ */
-.how{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
-.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px;position:relative;transition:transform .3s,box-shadow .3s}
-.step:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
-.step .s-num{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--terra);display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.step .s-num::after{content:"";flex:1;height:1px;background:var(--line)}
-.step h3{font-size:19px;margin-bottom:9px}
-.step p{font-size:14px;color:var(--ink-soft)}
-.step .date-tag{display:inline-block;margin-top:14px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:rgba(193,89,31,.1);color:var(--terra);padding:5px 12px;border-radius:99px}
-
-/* ============ FOUNDERS ============ */
-.founders{background:var(--cream);text-align:center}
-.f-quote{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:500;line-height:1.5;max-width:820px;margin:26px auto 30px;font-style:italic;color:var(--ink)}
-.f-quote em{color:var(--terra);font-style:italic}
-.f-sig{font-size:14px;font-weight:600;color:var(--ink-soft);margin-bottom:26px}
-.f-contact{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;background:var(--card);border:1px solid var(--line);padding:10px 20px;border-radius:99px;color:var(--ink-soft)}
-.f-contact b{color:var(--ink)}
-
-/* ============ PRICING ============ */
-.pricing{background:var(--cream)}
-.price-anchor{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:44px}
-.anchor-chip{font-size:13.5px;background:var(--card);border:1px solid var(--line);padding:10px 20px;border-radius:99px;color:var(--ink-soft)}
-.anchor-chip b{color:var(--ink)}
-.anchor-chip.hl{background:var(--g800);color:var(--cream);border-color:var(--g800)}
-.anchor-chip.hl b{color:var(--gold-l)}
-.price-card{max-width:540px;margin:0 auto;background:var(--g900);color:var(--cream);border-radius:26px;padding:46px 44px;box-shadow:var(--sh-lg);position:relative;overflow:hidden}
-.price-card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 260px at 90% -10%,rgba(217,164,65,.16),transparent 60%)}
-.price-card>*{position:relative}
-.pc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px;flex-wrap:wrap;gap:10px}
-.pc-badge{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);color:var(--g900);padding:6px 14px;border-radius:99px}
-.pc-until{font-size:12.5px;color:#9db3a5}
-.pc-price{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
-.pc-old{font-family:var(--serif);font-size:26px;color:#6e8779;text-decoration:line-through;text-decoration-color:rgba(224,113,58,.8)}
-.pc-now{font-family:var(--serif);font-size:72px;font-weight:600;line-height:1;color:var(--cream)}
-.pc-per{font-size:14px;color:#9db3a5}
-.pc-count{margin:22px 0 26px;padding:16px 18px;background:rgba(246,241,230,.06);border:1px solid var(--line-d);border-radius:14px}
-.pc-count .pcc-t{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);margin-bottom:12px}
-.pcc-boxes{display:flex;gap:10px}
-.pcc-box{flex:1;text-align:center;background:var(--g800);border:1px solid var(--line-d);border-radius:10px;padding:9px 4px}
-.pcc-box b{display:block;font-family:var(--serif);font-size:23px;font-variant-numeric:tabular-nums;color:var(--cream)}
-.pcc-box span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8fa897}
-.pc-list{display:grid;gap:11px;margin-bottom:30px}
-.pc-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;list-style:none}
-.pc-list svg{flex:none;margin-top:3px;color:var(--gold)}
-.pc-note{text-align:center;font-size:12.5px;color:#8fa897;margin-top:16px;line-height:1.7}
-.pc-note b{color:#c3d2c6}
-
-/* ============ FAQ ============ */
-.faq{background:var(--cream-2);border-top:1px solid var(--line)}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
-.faq-item{background:var(--card);border:1px solid var(--line);border-radius:15px;overflow:hidden;transition:box-shadow .3s}
-.faq-item.open{box-shadow:var(--sh-sm)}
-.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;padding:20px 24px;font-size:15px;font-weight:600;color:var(--ink);line-height:1.4}
-.faq-q .fx{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:15px;color:var(--terra);transition:transform .3s;font-weight:500}
-.faq-item.open .fx{transform:rotate(45deg);background:var(--terra);border-color:var(--terra);color:#fff}
-.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
-.faq-item.open .faq-a{grid-template-rows:1fr}
-.faq-a>div{overflow:hidden}
-.faq-a p{padding:0 24px 22px;font-size:14.5px;color:var(--ink-soft);line-height:1.7}
-
-/* ============ FINAL CTA ============ */
-.final{background:var(--g900);color:var(--cream);text-align:center;overflow:hidden}
-.final::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 340px at 50% 0%,rgba(217,164,65,.14),transparent 65%)}
-.final .wrap{position:relative;z-index:2}
-.final h2{color:var(--cream);font-size:clamp(2.2rem,4.5vw,3.4rem)}
-.final .lead{margin:18px auto 36px;text-align:center}
-.final-line{margin-top:26px;font-size:13.5px;color:#8fa897;display:flex;justify-content:center;gap:26px;flex-wrap:wrap}
-.final-line b{color:var(--gold-l)}
-
-/* ============ FOOTER ============ */
-footer{background:#071a13;color:#8fa897;padding:64px 0 34px;font-size:14px}
-.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:48px}
-.foot-brand .logo{color:var(--cream);margin-bottom:14px}
-.foot-brand p{max-width:300px;line-height:1.7;font-size:13.5px}
-footer h5{color:var(--cream);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;font-family:var(--sans)}
-footer ul{list-style:none;display:grid;gap:10px}
-footer ul a{transition:color .2s;font-size:13.5px}
-footer ul a:hover{color:var(--cream)}
-.foot-bottom{border-top:1px solid #12352a;padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
-.foot-social{display:flex;align-items:center;gap:12px;margin-top:18px}
-.social-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(246,241,230,.08);border:1px solid #1c4a39;color:var(--cream);font-size:16px;transition:all .25s ease;text-decoration:none}
-.social-btn:hover{background:var(--terra);border-color:var(--terra);color:#fff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(193,89,31,.35)}
-.nav-social{display:flex;align-items:center;gap:8px}
-.nav-social-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:var(--ink-soft);border:1px solid var(--line);background:var(--card);font-size:15px;transition:all .2s ease;text-decoration:none}
-.nav-social-btn:hover{color:var(--terra);border-color:var(--terra);background:#fff;transform:translateY(-1px);box-shadow:0 2px 8px rgba(21,39,32,.08)}
-.mobile-social{display:flex;gap:12px;padding:12px 4px 6px;border-bottom:1px solid var(--line)}
-.mobile-social a{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--ink-soft);border:1px solid var(--line);padding:8px 14px;border-radius:99px;background:var(--card);text-decoration:none}
-.mobile-social a:hover{color:var(--terra);border-color:var(--terra)}
-
-/* ============ RESPONSIVE ============ */
-@media(max-width:1020px){
-  .hero .wrap{grid-template-columns:1fr;gap:70px}
-  .hero{padding:150px 0 90px}
-  .s2,.s3{grid-column:span 3}.s6{grid-column:span 6}
-  .timeline,.timeline.eu{grid-template-columns:1fr 1fr;gap:34px}
-  .timeline::before{display:none}
-  .steps{grid-template-columns:1fr 1fr}
-  .syl-grid{grid-template-columns:1fr;gap:44px}
-  .pred-wrap{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr 1fr}
+/* ---------- v3 hero: centered, giant headline, draggable stickers ---------- */
+.hc .stx,.hc .fx{-webkit-touch-callout:none}
+.hero.hc{display:flex;flex-direction:column;justify-content:center;min-height:min(calc(100vh - 100px),900px);padding:100px 22px 110px;text-align:center}
+.hc>div:not(.deco){max-width:1000px;margin:0 auto}
+.hc h1{font-size:clamp(3.3rem,9.6vw,8.6rem);line-height:.9;letter-spacing:-.055em;margin-top:8px}
+.hc h1 .wd{transition:translate .4s cubic-bezier(.34,1.56,.64,1),rotate .4s cubic-bezier(.34,1.56,.64,1)}
+.hc h1 .wd:hover{translate:0 -10px;rotate:-3deg}
+.hc .hl{padding:0 .06em}
+.it{position:relative;display:inline-block}
+.it::after{content:"";position:absolute;left:3%;right:12%;bottom:-.06em;height:.15em;border:3px solid var(--ink);border-radius:99px;background:linear-gradient(90deg,#009246 33.3%,#fff 0 66.6%,#CE2B37 0);transform-origin:left;animation:uline 1s var(--e) 1.5s backwards}
+@keyframes uline{from{transform:scaleX(0)}}
+.hc p{margin:34px auto 32px;max-width:620px;font-size:1.25rem}
+.cta2{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hc .cta2 .btn{font-size:1.1rem;padding:16px 30px}
+.cdn{display:inline-flex;align-items:center;gap:12px;margin-top:30px;background:var(--ink);color:#fff;border:3px solid var(--ink);border-radius:99px;padding:7px 8px 7px 18px;font-weight:700;font-size:.92rem;box-shadow:4px 4px 0 var(--grape)}
+.cdn b{font:800 1.35rem 'Bricolage Grotesque';color:var(--sun);font-variant-numeric:tabular-nums}
+.cdn .tk{font:800 1rem 'Bricolage Grotesque';color:var(--sun);font-variant-numeric:tabular-nums}
+.cdn .tk span{display:inline-block;min-width:1.4em;color:var(--ink);background:#fff;border-radius:8px;padding:1px 5px;margin:0 2px}
+.cdn .cl{background:var(--sun);color:var(--ink);border-radius:99px;padding:4px 12px;font-size:.82rem}
+.cdn .dot{width:9px;height:9px;border-radius:50%;background:var(--coral);animation:pulse 1.2s ease-in-out infinite}
+.hc .pills{justify-content:center;max-width:780px;margin:30px auto 0}
+.stx{position:absolute;top:0;bottom:0;left:50%;width:min(100vw,1440px);translate:-50% 0;z-index:2;pointer-events:none}
+.stx .fx{pointer-events:auto;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
+.fx.tx{width:auto;padding:0 13px;font-size:1.05rem}
+.fx.drag{cursor:grabbing;scale:1.15;z-index:5;box-shadow:8px 10px 0 var(--ink);animation-play-state:paused;transition:none}
+.fx.drop{animation:wob .65s cubic-bezier(.34,1.56,.64,1),fl 6s ease-in-out var(--b) infinite}
+@keyframes wob{30%{rotate:calc(var(--r) + 14deg)}60%{rotate:calc(var(--r) - 9deg)}}
+.fx.pipx{width:150px;height:auto;background:none;border:0;box-shadow:none;display:block}
+.fx.pipx.drag{box-shadow:none}.fx.pipx .pip{width:100%}
+.bub{position:absolute;bottom:92%;right:58%;white-space:nowrap;background:#fff;border:3px solid var(--ink);border-radius:16px 16px 4px 16px;padding:6px 12px;font:800 .85rem 'Bricolage Grotesque';box-shadow:3px 3px 0 var(--ink);animation:up .6s var(--e) 2.6s backwards;transition:opacity .4s,scale .4s var(--e)}
+.bub.gone{opacity:0;scale:.6}
+@media(max-width:1100px){.fx.pipx{width:118px}}
+@media(max-width:860px){
+ .hero.hc{padding:64px 16px 84px;min-height:0}
+ .stx .fx{display:none}
+ .hc p{font-size:1.08rem;margin:26px auto}
+ .cdn{flex-wrap:wrap;justify-content:center;border-radius:22px;padding:8px 12px}
 }
-@media(max-width:760px){
-  .nav-links,.nav-cta .nav-login,.nav-cta .btn,.nav-cta .nav-social{display:none}
-  .burger{display:flex}
-  .pain-grid{grid-template-columns:1fr}
-  .s2,.s3,.s6{grid-column:span 6}
-  .faq-grid{grid-template-columns:1fr}
-  .pad{padding:80px 0}
-  .steps{grid-template-columns:1fr}
-  .timeline,.timeline.eu{grid-template-columns:1fr}
-  .fc-1{right:0}.fc-2{left:0}
-  .price-card{padding:36px 26px}
-  .pc-now{font-size:58px}
-  .hero-btns .btn{width:100%}
-}
-</style>
-</head>
-<body>
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1!important;translate:none!important;filter:none!important}.prog{display:none}}
+/* ---------- iPad + Apple Pencil mockup ---------- */
+.ipad-stage{position:relative;max-width:1000px;margin:46px auto 0;overflow-x:clip;padding:0 0 4px}
+.ipad-stage::before{content:"";position:absolute;inset:6% -2% 10%;background:radial-gradient(closest-side,rgba(108,59,255,.24),transparent 72%);z-index:0;pointer-events:none}
+.ipad{position:relative;z-index:1;container-type:inline-size;perspective:1600px;outline:none}
+.ipad:focus-visible .ip-body{outline:3px solid var(--grape);outline-offset:6px}
+.ip-body{--bz:clamp(9px,1.7cqw,18px);position:relative;background:linear-gradient(145deg,#2f2569,var(--ink) 60%);border:3px solid var(--ink);border-radius:clamp(18px,3.4cqw,36px);padding:var(--bz);box-shadow:inset 0 0 0 2px rgba(255,255,255,.1),clamp(6px,1.1cqw,11px) clamp(8px,1.4cqw,14px) 0 var(--grape),0 46px 60px -26px rgba(27,19,64,.5);transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .6s var(--e);animation:ipin 1.1s var(--e) backwards}
+.ip-cam{position:absolute;top:calc(var(--bz) / 2 - 3px);left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#0b0824;box-shadow:inset 0 0 0 1.5px #4a3f86}
+.ip-screen{position:relative;aspect-ratio:1194/834;border-radius:clamp(8px,1.8cqw,20px);overflow:hidden;background:var(--cream);touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
+.ip-screen.drag{cursor:grabbing}
+.ip-track{display:flex;height:100%;transform:translate3d(calc(var(--i,0) * -100% + var(--dx,0px)),0,0);transition:transform .85s var(--e);will-change:transform}
+.ip-track.dragging{transition:none}
+.ip-slide{flex:0 0 100%;height:100%;margin:0;position:relative}
+.ip-slide img{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ip-ink{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.ip-ink path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ip-ink .o{stroke:var(--ink);stroke-width:13}
+.ip-ink .i{stroke:var(--coral);stroke-width:7}
+.ipad-stage.manual .ip-ink path{transition:stroke-dashoffset .9s var(--e)}
+.ip-glare{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.26) 49%,transparent 58%);translate:-130% 0;animation:ipglare 7s var(--e) 2.5s infinite}
+.ip-ripple{position:absolute;left:0;top:0;width:clamp(26px,4.4cqw,46px);aspect-ratio:1;margin:calc(clamp(26px,4.4cqw,46px) / -2) 0 0 calc(clamp(26px,4.4cqw,46px) / -2);border-radius:50%;border:3px solid #fff;background:rgba(255,255,255,.28);box-shadow:0 0 0 3px rgba(27,19,64,.35);opacity:0;pointer-events:none}
+.ip-ripple.go{animation:iprip .75s var(--e)}
+/* pencil: the element origin is the pencil TIP, JS moves it */
+.ip-pencil{--pw:clamp(13px,2.3cqw,24px);position:absolute;left:0;top:0;width:0;height:0;z-index:5;pointer-events:none;transition:transform var(--pt,0ms) var(--e)}
+.ip-pencil svg{position:absolute;width:var(--pw);height:calc(var(--pw) * 12.5);left:calc(var(--pw) / -2);top:calc(var(--pw) * -12.5);overflow:visible;transform-origin:50% 100%;transform:rotate(var(--rot,27deg));transition:transform .5s var(--e);filter:drop-shadow(4px 7px 0 rgba(27,19,64,.26));animation:ipbob 3.4s ease-in-out infinite}
+.ip-pencil.down svg{--rot:36deg;animation:none;filter:drop-shadow(2px 3px 0 rgba(27,19,64,.3))}
+.ip-chip{position:absolute;z-index:6;background:#fff;border:3px solid var(--ink);border-radius:99px;padding:8px 16px;font:800 .95rem 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;box-shadow:4px 4px 0 var(--ink);animation:ipfloat 5.5s ease-in-out infinite}
+.ip-chip.c1{left:2%;top:63%;--r:-4deg}
+.ip-chip.c2{right:2%;top:71%;--r:3deg;animation-delay:-2.5s;background:var(--sun)}
+.ip-ctrl{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:40px}
+.ip-tabs{display:inline-flex;gap:4px;padding:5px;background:#fff;border:3px solid var(--ink);border-radius:99px;box-shadow:4px 4px 0 var(--ink)}
+.ip-tabs button{font:800 .95rem 'Bricolage Grotesque',sans-serif;padding:8px 20px;border:3px solid transparent;border-radius:99px;background:none;color:var(--ink);cursor:pointer;transition:background .25s,border-color .25s,transform .25s var(--e)}
+.ip-tabs button:hover{transform:translateY(-2px)}
+.ip-tabs button[aria-selected="true"]{background:var(--sun);border-color:var(--ink);box-shadow:2px 2px 0 var(--ink)}
+.ip-hint{font:.68rem Silkscreen,monospace;color:var(--grape);display:inline-flex;gap:10px;align-items:center}
+.ip-hint b{font-weight:400;display:inline-block;animation:iparrowL 1.6s var(--e) infinite}
+.ip-hint b:last-child{animation-name:iparrowR}
+.ip-cap{text-align:center;max-width:520px;margin:14px auto 0;font-weight:600;opacity:.85;min-height:3.1em}
+@keyframes ipin{from{opacity:0;transform:translateY(60px) rotateX(18deg) scale(.94)}}
+@keyframes ipglare{0%,72%{translate:-130% 0}100%{translate:130% 0}}
+@keyframes iprip{0%{opacity:.95;transform:scale(.35)}100%{opacity:0;transform:scale(1.7)}}
+@keyframes ipbob{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@keyframes ipfloat{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-9px) rotate(var(--r,0deg))}}
+@keyframes iparrowL{0%,100%{transform:translateX(0)}50%{transform:translateX(-6px)}}
+@keyframes iparrowR{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+@media(max-width:900px){.ip-chip{display:none}}
+@media(max-width:560px){.ip-tabs button{padding:7px 14px;font-size:.86rem}.ip-ctrl{margin-top:30px;gap:14px}}
+@media(prefers-reduced-motion:reduce){.ip-body,.ip-glare,.ip-chip,.ip-pencil svg,.ip-hint b{animation:none}.ip-track{transition:none}}
+</style><script src="exam-date.js"></script>
+</head><body>
+<div class="tick" aria-hidden="true"><div id="tk"></div></div>
+<div class="prog" id="prog" aria-hidden="true"></div>
+<nav><div class="nb">
+<div class="nl"><button class="mb" id="mb" aria-label="Open menu" aria-expanded="false" aria-controls="mm"><i></i><i></i><i></i></button><a href="#features">Features</a><a href="#platform">Platform</a><a href="#guide">Guide</a></div>
+<a class="brand" href="#" aria-label="imatpath — back to top"><span data-pip></span><span class="wm">imatpath</span></a>
+<div class="nr"><a href="#pricing">Plans &amp; Pricing</a><a href="#faq">FAQ</a><a class="btn w2" href="auth.html?mode=form">Log in</a><a class="btn g" href="auth.html?mode=form&amp;tab=signup">Get Started</a></div>
+</div><div class="mm" id="mm"><a href="#features" style="--i:0">Features</a><a href="#platform" style="--i:1">Platform</a><a href="#guide" style="--i:2">Guide</a><a href="#pricing" style="--i:3">Plans &amp; Pricing</a><a href="#faq" style="--i:4">FAQ</a><a href="auth.html?mode=form" style="--i:5">Log in</a><a class="btn g" href="auth.html?mode=form&amp;tab=signup" style="--i:6">Get Started</a></div></nav>
 
-<!-- ================= NAV ================= -->
-<nav class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a class="logo" href="#top">Imat<em>Path</em></a>
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#platform">Platform</a>
-      <a href="#noneu">Non-EU Guide</a>
-      <a href="#pricing">Free Access</a>
-      <a href="#faq">FAQ</a>
-    </div>
-    <div class="nav-cta">
-      <div class="nav-social">
-        <a href="https://www.instagram.com/imatpath.app/" target="_blank" rel="noopener noreferrer" class="nav-social-btn" aria-label="Follow us on Instagram" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61590083533551" target="_blank" rel="noopener noreferrer" class="nav-social-btn" aria-label="Follow us on Facebook" title="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </div>
-      <a class="nav-login" href="auth.html">Log in</a>
-      <a class="btn btn-primary" href="auth.html">Start for free</a>
-      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#features">Features</a>
-    <a href="#platform">Platform</a>
-    <a href="#noneu">Non-EU Guide</a>
-    <a href="#pricing">Free Access</a>
-    <a href="#faq">FAQ</a>
-    <div class="mobile-social">
-      <a href="https://www.instagram.com/imatpath.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61590083533551" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i> Facebook
-      </a>
-    </div>
-    <a class="btn btn-primary" href="auth.html">Start for free</a>
-  </div>
-</nav>
+<section class="w hero hc"><div class="deco" aria-hidden="true"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i></div>
+<aside class="stx" aria-hidden="true">
+<span class="fx pipx" style="right:3%;top:40%;--k:-6;--r:4deg;--a:1.9s;--b:-2.5s"><span data-pip></span></span>
+</aside>
+<div>
+<span class="chip">Updated for the official IMAT 2027 syllabus</span>
+<h1><span class="wd" style="--i:0">Your</span> <span class="wd" style="--i:1">clear</span> <span class="wd" style="--i:2">path</span><br><span class="wd" style="--i:3">to</span> <span class="wd" style="--i:4"><span class="hl">medicine</span></span><br><span class="wd" style="--i:5">in</span> <span class="wd" style="--i:6"><span class="it">Italy.</span></span></h1>
+<p>A structured study plan, real practice questions and timed mock exams — built specifically for the IMAT, with the application guidance candidates actually need.</p>
+<div class="cta2"><a class="btn" href="#pricing">Explore Plans <span class="ar">→</span></a><a class="btn w2" href="#try">Try a real question <span class="ar">↓</span></a></div>
+<div><div class="cdn" role="timer" aria-label="Time left until IMAT 2027"><i class="dot"></i><span><b id="d1">000</b> days</span><span class="tk"><span id="hh">00</span>:<span id="hm">00</span>:<span id="hs">00</span></span><span class="cl">until IMAT 2027</span></div></div>
+<div class="pills"><span>Built for IMAT 2027</span><span>+1.5 / −0.4 official scoring</span><span>One-time access until exam day</span><span>4,000+ questions</span><span>20 full mocks</span><span>85 chapters</span><span>Past papers 2017–2026</span><span>Score predictor</span></div></div></section>
 
-<!-- ================= HERO ================= -->
-<header class="hero" id="top">
-  <div class="wrap">
-    <div>
-      <span class="hero-badge"><span class="dot"></span>Updated for the official IMAT 2026 syllabus</span>
-      <h1>Your clear path to <em>medicine in Italy.</em></h1>
-      <p class="hero-sub">A structured study plan, real practice questions and timed mock exams — built specifically for the IMAT, with the application guidance non-EU students actually need.</p>
-      <div class="hero-btns">
-        <a class="btn btn-primary btn-lg" href="auth.html">Start for free
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost btn-lg" href="#platform">Try a real question</a>
-      </div>
-      <div class="hero-chips">
-        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Built for IMAT 2026</span>
-        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>100% Free Access</span>
-        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>No Credit Card Required</span>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="float-card fc-1"><b>+1.5 / −0.4</b>Official IMAT scoring, on every mock</div>
-      <div class="dash">
-        <div class="dash-bar"><i></i><i></i><i></i><span class="dash-url">imatpath — your IMAT Test</span></div>
-        <div class="dash-body">
-          <div class="dash-head"><h4>Biology · Week 6</h4><span class="dash-chip">On track</span></div>
-          <p class="dash-exam">Exam day: <b>September 29, 2026</b> — <b><span class="exam-days">31</span> days</b> to go</p>
-          <div class="chart-box">
-            <div class="chart-cap"><span>Mock score trend · /90</span><span><b>+19</b> since Mock 1</span></div>
-            <svg viewBox="0 0 280 120" fill="none" aria-hidden="true">
-              <g stroke="#e2d8c2" stroke-width="1"><line x1="10" y1="20" x2="270" y2="20"/><line x1="10" y1="50" x2="270" y2="50"/><line x1="10" y1="80" x2="270" y2="80"/><line x1="10" y1="110" x2="270" y2="110"/></g>
-              <polyline class="trend" points="20,76 83,66 146,57 209,45 262,38" stroke="#c1591f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <g fill="#c1591f">
-                <circle class="trend-pt" cx="20" cy="76" r="4.5"/><circle class="trend-pt" cx="83" cy="66" r="4.5"/><circle class="trend-pt" cx="146" cy="57" r="4.5"/><circle class="trend-pt" cx="209" cy="45" r="4.5"/><circle class="trend-pt" cx="262" cy="38" r="4.5"/>
-              </g>
-            </svg>
-          </div>
-          <div class="chap-row"><span class="chap-name">Cell structure &amp; organelles</span><span><span class="pill done">Reviewed ✓</span> <span class="pill done">Practiced ✓</span></span></div>
-          <div class="chap-row"><span class="chap-name">DNA, RNA &amp; protein synthesis</span><span><span class="pill done">Reviewed ✓</span> <span class="pill">Practiced</span></span></div>
-          <div class="chap-row"><span class="chap-name">Genetics &amp; inheritance</span><span><span class="pill">Reviewed</span> <span class="pill">Practiced</span></span></div>
-        </div>
-      </div>
-      <div class="float-card fc-2"><b>2,000+ questions</b>Every chapter of the syllabus, explained</div>
-    </div>
-  </div>
-</header>
-
-<!-- ================= MARQUEE ================= -->
-<div class="marquee" aria-hidden="true">
-  <div class="mq-track" id="mqTrack">
-    <span>Cell biology</span><span>Genetics</span><span>Stoichiometry</span><span>Organic chemistry</span><span>Kinematics</span><span>Electricity</span><span>Algebra &amp; functions</span><span>Probability</span><span>Logic puzzles</span><span>Apostille &amp; DoV</span><span>Universitaly</span><span>Student visa</span><span>Past papers 2017–2025</span><span>Score predictor</span>
-  </div>
+<section id="platform"><div class="w"><span class="px">The app</span><h2>Your whole preparation, on one screen.</h2><p class="lead">Countdown, daily mission, question bank, mocks and analytics — one clean dashboard that follows you from your desk to your tablet.</p>
+<div class="ipad-stage" id="ipStage">
+<span class="ip-chip c1" aria-hidden="true">⏱ Live countdown</span>
+<span class="ip-chip c2" aria-hidden="true">📚 85 chapters</span>
+<div class="ipad" id="ipad" tabindex="0" role="group" aria-roledescription="carousel" aria-label="ImatPath app preview on an iPad. Use the left and right arrow keys, or swipe, to switch screens.">
+<div class="ip-body">
+<i class="ip-cam" aria-hidden="true"></i>
+<div class="ip-screen" id="ipScreen">
+<div class="ip-track" id="ipTrack">
+<figure class="ip-slide" aria-label="Course document"><img src="img/app-course-document.webp" alt="A course document open in ImatPath: pages of the Cell theory and cell size lesson with drawings of a bacterium and an animal cell." width="2388" height="1668" loading="lazy" decoding="async" draggable="false">
+<svg class="ip-ink" viewBox="0 0 1194 834" aria-hidden="true"><path class="o" d="M760 560C770 500 960 490 1000 560C1030 630 940 690 870 688C790 684 740 640 762 570C772 535 840 515 930 520"/><path class="i" d="M760 560C770 500 960 490 1000 560C1030 630 940 690 870 688C790 684 740 640 762 570C772 535 840 515 930 520"/></svg></figure>
+<figure class="ip-slide" aria-label="Dashboard"><img src="img/app-dashboard.webp" alt="The ImatPath dashboard: a live countdown to the IMAT, your daily mission and your road to medicine." width="2388" height="1668" loading="lazy" decoding="async" draggable="false">
+<svg class="ip-ink" viewBox="0 0 1194 834" aria-hidden="true"><path class="o" d="M806 236C838 168 990 170 1024 250C1046 322 960 358 900 350C830 344 790 300 812 240C822 206 880 190 940 190"/><path class="i" d="M806 236C838 168 990 170 1024 250C1046 322 960 358 900 350C830 344 790 300 812 240C822 206 880 190 940 190"/></svg></figure>
+<figure class="ip-slide" aria-label="Lessons"><img src="img/app-lessons.webp" alt="The ImatPath lesson library: Biology, Chemistry, Physics and Math books, with a course document button and flashcards on every chapter." width="2388" height="1668" loading="lazy" decoding="async" draggable="false">
+<svg class="ip-ink" viewBox="0 0 1194 834" aria-hidden="true"><path class="o" d="M694 746C720 708 880 704 915 742C930 775 860 800 800 798C730 797 684 780 696 744C704 722 760 716 830 716"/><path class="i" d="M694 746C720 708 880 704 915 742C930 775 860 800 800 798C730 797 684 780 696 744C704 722 760 716 830 716"/></svg></figure>
 </div>
+<span class="ip-glare" aria-hidden="true"></span>
+<i class="ip-ripple" id="ipRip" aria-hidden="true"></i>
+</div>
+</div>
+<div class="ip-pencil" id="ipPencil" aria-hidden="true"><svg viewBox="0 0 24 300"><path d="M5 15C5 7 8 3 12 3s7 4 7 12v221H5z" fill="#fff" stroke="#1B1340" stroke-width="2.4" stroke-linejoin="round"/><rect x="5" y="38" width="14" height="14" fill="#FFC83D" stroke="#1B1340" stroke-width="2.4"/><path d="M9 62V226" stroke="#DCD3F7" stroke-width="2.4" stroke-linecap="round"/><path d="M5 236h14l-4.500 48h-5z" fill="#F3EEFF" stroke="#1B1340" stroke-width="2.4" stroke-linejoin="round"/><path d="M9.500 284h5L12 300z" fill="#1B1340" stroke="#1B1340" stroke-width="2" stroke-linejoin="round"/></svg></div>
+</div>
+<div class="ip-ctrl">
+<div class="ip-tabs" role="tablist" aria-label="App screens"><button type="button" role="tab" aria-selected="true">Course document</button><button type="button" role="tab" aria-selected="false">Dashboard</button><button type="button" role="tab" aria-selected="false">Lessons</button></div>
+<span class="ip-hint" aria-hidden="true"><b>←</b> swipe <b>→</b></span>
+</div>
+<p class="ip-cap" id="ipCap" aria-live="polite"></p>
+</div></div></section>
 
-<!-- ================= PROBLEM ================= -->
-<section class="problem pad" id="problem">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">The problem</span>
-      <h2>Preparing for the IMAT is genuinely hard.</h2>
-      <p class="lead">The resources are scattered, the syllabus is wide, and most students have no idea where to start — or how much time they have left.</p>
-    </div>
-    <div class="pain-grid">
-      <div class="pain reveal"><span class="num">01</span><h3>No clear starting point</h3><p>Students spend weeks figuring out what to study before they actually start studying.</p></div>
-      <div class="pain reveal"><span class="num">02</span><h3>Resources are all over the place</h3><p>YouTube, Reddit, A-level books, paid courses — none of them talk to each other.</p></div>
-      <div class="pain reveal"><span class="num">03</span><h3>No way to measure progress</h3><p>Without mock exams and tracking, students walk into the test not knowing where they stand.</p></div>
-      <div class="pain reveal"><span class="num">04</span><h3>The process is confusing for non-EU students</h3><p>Pre-enrollment, visa, university selection — the admin side alone can derail months of prep.</p></div>
-    </div>
-  </div>
-</section>
+<section id="pricing" style="background:var(--lav);border-block:3px solid var(--ink)"><div class="w"><span class="px">Enrolment &amp; Pricing</span>
+<h2>One payment. Zero subscriptions. Full access until exam day.</h2><p class="lead">Study on your own, learn live with teachers, or get a personal guide through the whole application. Everything stays open until IMAT exam day in September 2027.</p>
+<div class="plans" id="plans"></div>
+<p style="text-align:center;margin-top:30px;font-weight:700">Already on Self-Study? Upgrade to a course anytime and pay only the difference.</p>
+<div class="pills" style="justify-content:center"><span>One-time payment</span><span>Access until IMAT exam day</span><span>Pay only difference to upgrade</span><span>Instant platform access</span></div></div></section>
 
-<!-- ================= PLATFORM / DEMO ================= -->
-<section class="platform pad" id="platform">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Inside ImatPath</span>
-      <h2>These aren't mockups. Try them now.</h2>
-      <p class="lead">Every tool below is fully functional. Answer a question, run a timed mini mock, or walk through the application checklist — right here.</p>
-      <div class="stats-row">
-        <div class="stat"><b><span data-count="2000">0</span><span class="acc">+</span></b><span>IMAT-style questions</span></div>
-        <div class="stat"><b><span data-count="20">0</span></b><span>full mock exams</span></div>
-        <div class="stat"><b><span data-count="48">0</span></b><span>syllabus chapters tracked</span></div>
-        <div class="stat"><b><span data-count="5">0</span></b><span>subjects, fully covered</span></div>
-      </div>
-    </div>
+<section><div class="w"><span class="px">The problem</span><h2>Preparing for the IMAT is genuinely hard.</h2><p class="lead">The resources are scattered, the syllabus is wide, and most students have no idea where to start — or how much time they have left.</p><div class="g4" id="pb"></div></div></section>
 
-    <div class="reveal">
-      <div class="demo-tabs" role="tablist">
-        <button class="demo-tab active" data-dtab="question">Sample question</button>
-        <button class="demo-tab" data-dtab="mock">Mini mock exam</button>
-        <button class="demo-tab" data-dtab="guide">Application guide</button>
-      </div>
 
-      <!-- PANEL 1 : sample question -->
-      <div class="demo-panel active" data-dpanel="question">
-        <div class="demo-card">
-          <div class="demo-top">
-            <div class="dt-l"><span class="mdot"></span>ImatPath — Question Bank</div>
-            <div class="dt-r">From a pool of 2,000+ IMAT-style questions</div>
-          </div>
-          <div class="demo-body" id="sqBox"></div>
-        </div>
-      </div>
 
-      <!-- PANEL 2 : mini mock -->
-      <div class="demo-panel" data-dpanel="mock">
-        <div class="demo-card">
-          <div class="demo-top">
-            <div class="dt-l"><span class="mdot"></span>ImatPath — Mini Mock Exam</div>
-            <div class="dt-r" id="mockTopInfo">10 questions · 15 minutes · official scoring</div>
-          </div>
-          <div class="demo-body" id="mockBox"></div>
-        </div>
-      </div>
+<section id="try" style="background:var(--sun);border-block:3px solid var(--ink)"><div class="w"><span class="px" style="color:var(--ink)">Inside ImatPath</span><h2>These aren’t mockups. Try them now.</h2><p class="lead">Every tool below is fully functional. Answer a question, simulate your score, or walk through the application checklist — right here.</p>
+<div class="nums"><div><b>4,000+</b>IMAT-style questions</div><div><b>20</b>Full mock exams</div><div><b>85</b>Syllabus chapters tracked</div><div><b>5</b>Subjects, fully covered</div></div>
+<div class="tabs" id="tabs"><button class="on">Sample question</button><button>Score predictor</button><button>Application guide</button></div>
+<div class="card" id="tp0"><div class="qh"><span class="px"><span id="ql">Biology · Q1 of 3</span> · Session score: <span id="ss">0.0</span></span><span class="qd" id="qd"></span></div>
+<div class="demo"><div><h3 style="margin:8px 0" id="qt"></h3><div id="op"></div><p id="fb" style="margin-top:12px;font-weight:700;min-height:1.5em" aria-live="polite"></p><button class="btn w2 nx" id="nx" hidden>Next question →</button><p style="font-size:.85rem;opacity:.7;margin-top:10px">Tip: press A–E to answer, Enter for the next one. From a pool of 4,000+ IMAT-style questions.</p></div><span data-pip data-big></span></div></div>
+<div class="card" id="tp1" hidden><span class="px">Official IMAT Score Predictor</span><h3>Calculate your predicted score out of 90.0</h3><p style="margin:6px 0 14px;font-size:.93rem">+1.5 per correct, −0.4 per incorrect, 0 for blank. Adjust the sliders to simulate your results.</p>
+<div class="pwrap"><div class="gw"><svg class="gauge" viewBox="0 0 120 120" aria-hidden="true"><circle class="gb" cx="60" cy="60" r="57"/><circle class="gt" cx="60" cy="60" r="44"/><circle class="gf" id="gf" cx="60" cy="60" r="44"/></svg><div class="gc"><div class="sc" id="sv">0.0</div><small>/ 90.0</small></div></div><div><span class="vd" id="vd">Move the sliders 👇</span><p id="sb" style="margin-top:12px;font-weight:700"></p></div></div>
+<label>Questions correct (+1.5 pts each): <b id="cv">0</b><input type="range" id="rc" min="0" max="60" value="0"></label><br><br><label>Questions incorrect (−0.4 penalty): <b id="iv">0</b><input type="range" id="ri" min="0" max="60" value="0"></label>
+<p style="font-size:.85rem;opacity:.7;margin-top:6px">Inside ImatPath, your score is calculated live from your real mock results and question-bank accuracy.</p></div>
+<div class="card" id="tp2" hidden><span class="px">Application guide · EU &amp; non-EU checklists</span><h3 style="margin:6px 0">Your progress <span id="gp">0%</span></h3><div class="bar"><i id="gb" style="width:0;background:var(--mint)"></i></div><div id="gl" style="margin-top:10px"></div><p style="font-size:.85rem;opacity:.7;margin-top:6px">A preview — the full guide lives inside ImatPath. Tick items off as you complete them.</p></div></div></section>
 
-      <!-- PANEL 3 : application guide -->
-      <div class="demo-panel" data-dpanel="guide">
-        <div class="demo-card">
-          <div class="demo-top">
-            <div class="dt-l"><span class="mdot"></span>ImatPath — Application Guide</div>
-            <div class="dt-r">A preview — the full guide lives inside</div>
-          </div>
-          <div class="demo-body">
-            <div class="guide-toggle">
-              <button class="active" data-gtrack="noneu">Non-EU Students</button>
-              <button data-gtrack="eu">EU Students</button>
-            </div>
-            <div class="checklist" id="guideList"></div>
-            <div class="g-progress">
-              <div class="gp-t"><span>Your progress</span><b id="guidePct">0%</b></div>
-              <div class="gp-track"><div class="gp-fill" id="guideFill"></div></div>
-            </div>
-            <p class="guide-note">Tick items off as you complete them — the real guide adds documents, links, embassy-specific notes and deadlines for each step.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="features"><div class="w"><span class="px">What ImatPath gives you</span><h2>Everything in one place. Nothing you don’t need.</h2><p class="lead">Six tools working together so your preparation is structured, measurable, and actually manageable.</p><div class="f6" id="f6"></div></div></section>
 
-<!-- ================= FEATURES ================= -->
-<section class="features pad" id="features">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">What ImatPath gives you</span>
-      <h2>Everything in one place.<br>Nothing you don't need.</h2>
-      <p class="lead">Six tools working together so your preparation is structured, measurable, and actually manageable.</p>
-    </div>
-    <div class="bento">
-      <div class="b-card s2 reveal">
-        <span class="b-tag">Past papers</span>
-        <h3>Official IMAT papers</h3>
-        <p>Practice with real past IMAT papers — the format, difficulty and question styles, exactly as they appear on exam day.</p>
-        <div class="b-ui">
-          <div class="paper"><b>2025</b><span class="tag-off">Official</span><span class="arr">→</span></div>
-          <div class="paper"><b>2024</b><span class="tag-off">Official</span><span class="arr">→</span></div>
-          <div class="paper"><b>2023</b><span class="tag-off">Official</span><span class="arr">→</span></div>
-        </div>
-      </div>
-      <div class="b-card s2 reveal">
-        <span class="b-tag">Timed mocks</span>
-        <h3>Exam-day simulation</h3>
-        <p>Full 100-minute simulations under real conditions, with official +1.5 / −0.4 scoring and a score trend after every attempt.</p>
-        <div class="b-ui">
-          <div class="big-timer"><span class="rec"></span><span id="mockChipTimer">1:40:00</span></div>
-          <div class="mini-meta" style="margin-top:12px"><span>60 questions</span><span>Official formula</span><span>20 full mocks</span></div>
-        </div>
-      </div>
-      <div class="b-card s2 reveal">
-        <span class="b-tag">Question bank</span>
-        <h3>2,000+ questions</h3>
-        <p>Structured exactly like the real exam across all five subjects, with a full explanation for every single answer.</p>
-        <div class="b-ui subj-chips">
-          <span>Biology</span><span>Chemistry</span><span>Physics</span><span>Math</span><span>Logic &amp; GK</span>
-        </div>
-      </div>
-      <div class="b-card s3 reveal">
-        <span class="b-tag">Progress analytics</span>
-        <h3>Know exactly what to fix</h3>
-        <p>Accuracy by subject, score trends over time, and a clear next step — so no study session is ever wasted.</p>
-        <div class="b-ui">
-          <div class="bars" id="anaBars">
-            <div class="bar-w"><div class="bar" style="height:74%;transition-delay:.05s"></div><span class="bar-l">BIO</span></div>
-            <div class="bar-w"><div class="bar" style="height:63%;transition-delay:.15s"></div><span class="bar-l">CHEM</span></div>
-            <div class="bar-w"><div class="bar" style="height:52%;transition-delay:.25s"></div><span class="bar-l">PHYS</span></div>
-            <div class="bar-w"><div class="bar" style="height:68%;transition-delay:.35s"></div><span class="bar-l">MATH</span></div>
-            <div class="bar-w"><div class="bar" style="height:81%;transition-delay:.45s"></div><span class="bar-l">LOGIC</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="b-card s3 reveal">
-        <span class="b-tag">Application guide</span>
-        <h3>The admin, handled</h3>
-        <p>Step-by-step checklists for EU and non-EU students — pre-enrollment, Apostille, Declaration of Value, visa and deadlines.</p>
-        <div class="b-ui">
-          <div class="gmini"><span class="box">✓</span>Apostille diploma &amp; transcripts</div>
-          <div class="gmini"><span class="box">✓</span>Universitaly pre-enrollment</div>
-          <div class="gmini"><span class="box empty"></span>Student visa application</div>
-        </div>
-      </div>
-      <div class="b-card s6 reveal">
-        <span class="b-tag">Score predictor</span>
-        <h3>Official IMAT Score Predictor</h3>
-        <p>Calculate your predicted test score out of 90.0 using the official formula (+1.5 per correct, −0.4 per incorrect, 0 for blank). Adjust the sliders to simulate your results.</p>
-        <div class="b-ui">
-          <div class="pred-wrap">
-            <div class="pred-left">
-              <label>Estimated IMAT Score</label>
-              <div class="pred-score"><span id="predVal">53.0</span><span> / 90.0</span></div>
-              <div class="pred-verdict" id="predVerdict">Competitive Tier</div>
-              <div class="pred-math" id="predMath">
-                <span><b>+57.0</b> earned</span> &middot; <span><b>-4.0</b> penalty</span>
-              </div>
-            </div>
-            <div class="pred-controls">
-              <div class="pred-ctrl-row">
-                <div class="pred-ctrl-head">
-                  <div>Questions Correct <span>(+1.5 pts each)</span></div>
-                  <b id="lblCorrect">38</b>
-                </div>
-                <input type="range" id="rngCorrect" min="0" max="60" value="38" step="1">
-              </div>
-              <div class="pred-ctrl-row">
-                <div class="pred-ctrl-head">
-                  <div>Questions Incorrect <span>(−0.4 penalty)</span></div>
-                  <b id="lblWrong">10</b>
-                </div>
-                <input type="range" id="rngWrong" min="0" max="60" value="10" step="1">
-              </div>
-              <div class="pred-stats-chips">
-                <span class="pred-chip"><b id="chipCorrect">38</b> Correct</span>
-                <span class="pred-chip"><b id="chipWrong">10</b> Incorrect</span>
-                <span class="pred-chip"><b id="chipBlank">12</b> Blank (0.0)</span>
-              </div>
-              <p class="pred-note">Inside ImatPath, your score is calculated live from your real mock exam results and question bank accuracy.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="guide" style="background:var(--lav);border-block:3px solid var(--ink)"><div class="w"><span class="px">The part nobody prepares you for</span><h2>Passing the IMAT is only half the battle.</h2><p class="lead">If you’re applying from outside the EU, there’s a second exam no one warns you about: pre-enrollment, Apostille, Declaration of Value, visas. ImatPath walks you through both halves.</p>
+<div class="sw" id="sw"><button class="on">Non-EU students</button><button>EU students</button></div><div class="tl" id="tl"></div>
+<p style="margin-top:26px;font-size:.9rem;opacity:.8">Deadlines differ by embassy and change every year — the guide inside ImatPath is updated as procedures change.</p></div></section>
 
-<!-- ================= NON-EU ================= -->
-<section class="noneu pad dark" id="noneu">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">The part nobody prepares you for</span>
-      <h2>Passing the IMAT is only half the battle.</h2>
-      <p class="lead">If you're applying from outside the EU, there's a second exam no one warns you about: pre-enrollment, Apostille, Declaration of Value, visas. ImatPath walks you through both halves.</p>
-    </div>
-    <div class="reveal">
-      <div class="track-toggle">
-        <button class="active" data-ttrack="noneu">Non-EU students</button>
-        <button data-ttrack="eu">EU students</button>
-      </div>
-      <div class="timeline active" data-tpanel="noneu">
-        <div class="t-step"><div class="t-num">1</div><h3>Prepare your documents</h3><p>Passport, diploma and transcripts — legalized or Apostilled, plus your Declaration of Value. The guide lists exactly what your country requires.</p><span class="t-when">Start 3–4 months early</span></div>
-        <div class="t-step"><div class="t-num">2</div><h3>Pre-enrol on Universitaly</h3><p>Choose your university, submit the pre-enrollment application, and follow it through embassy validation.</p><span class="t-when">Spring – Summer</span></div>
-        <div class="t-step"><div class="t-num">3</div><h3>Apply for your visa</h3><p>Student visa at the Italian embassy or consulate — financial proof, accommodation, insurance — with the full document checklist.</p><span class="t-when">Summer</span></div>
-        <div class="t-step"><div class="t-num">4</div><h3>Arrive &amp; enrol</h3><p>Permesso di soggiorno within 8 days of arrival, then final enrolment once the rankings are published.</p><span class="t-when">September – October</span></div>
-      </div>
-      <div class="timeline eu" data-tpanel="eu">
-        <div class="t-step"><div class="t-num">1</div><h3>Register on Universitaly</h3><p>Create your account and pre-enrol at your chosen universities in a few minutes.</p><span class="t-when">Spring</span></div>
-        <div class="t-step"><div class="t-num">2</div><h3>Sit the IMAT</h3><p>One test on September 29, 2026 — your score is considered by every university you selected.</p><span class="t-when">September 29, 2026</span></div>
-        <div class="t-step"><div class="t-num">3</div><h3>Enrol</h3><p>If you rank within your chosen university's cutoff, complete enrolment directly. No visas, no consulates.</p><span class="t-when">October</span></div>
-      </div>
-      <p class="noneu-foot">Deadlines differ by embassy and change every year — the guide is updated as procedures change. <a href="#pricing">See the full guide inside →</a></p>
-    </div>
-  </div>
-</section>
+<section><div class="w" style="display:grid;grid-template-columns:1fr 1fr;gap:44px" id="cg"><div><span class="px">Chapter-level planning</span><h2>Not “revise Biology”. Every single chapter.</h2><p class="lead" style="margin-bottom:18px">ImatPath breaks the official syllabus into individual chapters, each with its own status — so you always know exactly which chapter to study next, and why.</p>
+<p><b>Direct links to practice.</b> Every chapter connects straight to its matching questions in the Question Bank.</p><br><p><b>Two statuses per chapter.</b> Reading a chapter isn’t the same as being able to answer questions on it — ImatPath tracks both.</p><br><p><b>No vague weekly phases.</b> Try it yourself — click any chapter to cycle its status.</p></div>
+<div class="card"><span class="px">Your IMAT Test — Biology</span><p style="font-size:.85rem"><b id="cc">0 reviewed · 0 practiced</b> · 85 chapters / 4 subjects</p><div class="bar" style="margin-bottom:6px"><i id="chb" style="width:0;background:var(--grape)"></i></div><div id="chs"></div><p style="font-size:.78rem;margin-top:12px;opacity:.7">Not started · Reviewed — studied · Practiced — proven in the bank</p></div></div></section>
 
-<!-- ================= SYLLABUS ================= -->
-<section class="syllabus pad" id="syllabus">
-  <div class="wrap syl-grid">
-    <div class="reveal">
-      <span class="eyebrow">Chapter-level planning</span>
-      <h2>Not "revise Biology".<br>Every single chapter.</h2>
-      <p class="lead">The IMAT Test breaks the official syllabus into individual chapters, each with its own status — <b style="color:var(--ink)">Reviewed</b> when you've studied it, <b style="color:var(--ink)">Practiced</b> when you've proven it in the question bank.</p>
-      <div class="syl-points">
-        <div class="syl-pt"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>No vague weekly phases.</b> You always know exactly which chapter to study next — and why.</span></div>
-        <div class="syl-pt"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Direct links to practice.</b> Every chapter connects straight to its matching questions in the Question Bank.</span></div>
-        <div class="syl-pt"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Two statuses per chapter.</b> Reading a chapter isn't the same as being able to answer questions on it — ImatPath tracks both.</span></div>
-      </div>
-    </div>
-    <div class="tracker reveal">
-      <div class="tracker-head"><h4>Your IMAT Test — Biology</h4><span>Click a status to toggle it</span></div>
-      <div class="subj-pills">
-        <span class="subj-pill active">Biology · 13</span>
-        <span class="subj-pill">Chemistry · 11</span>
-        <span class="subj-pill">Physics · 8</span>
-        <span class="subj-pill">Math · 9</span>
-        <span class="subj-pill">Logic &amp; GK · 7</span>
-      </div>
-      <div class="tracker-body" id="chapList"></div>
-      <div class="tracker-foot"><b>48 chapters</b> across 5 subjects — each with Reviewed &amp; Practiced status, each linked to its Question Bank filter.</div>
-    </div>
-  </div>
-</section>
+<section style="background:var(--mint);border-block:3px solid var(--ink)"><div class="w"><span class="px" style="color:var(--ink)">How it works</span><h2>Your complete path to the IMAT.</h2><br><div class="tl" id="hw"></div></div></section>
 
-<!-- ================= HOW ================= -->
-<section class="how pad" id="how">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">How it works</span>
-      <h2>Your complete path to the IMAT.</h2>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><div class="s-num">Step 01</div><h3>Create your account</h3><p>Sign up and get instant access to every tool on the platform — no waiting, no setup.</p></div>
-      <div class="step reveal"><div class="s-num">Step 02</div><h3>Practice &amp; track</h3><p>Work through 2,000+ IMAT-like questions chapter by chapter and watch your performance data build.</p></div>
-      <div class="step reveal"><div class="s-num">Step 03</div><h3>Past papers &amp; mocks</h3><p>Take official past IMAT papers and full mock exams under real timed conditions.</p></div>
-      <div class="step reveal"><div class="s-num">Step 04</div><h3>The big day</h3><p>Walk into the exam knowing exactly where you stand.</p><span class="date-tag">September 29, 2026</span></div>
-    </div>
-  </div>
-</section>
+<section><div class="w"><span class="px">Where you’re headed</span><h2>Medicine, in the country that invented the university.</h2>
+<div class="uni"><div class="card" style="background:#FFF1C9"><h3>Bologna</h3>Est. 1088</div><div class="card" style="background:#E6F8FF"><h3>Pavia</h3>Harvey Med</div><div class="card" style="background:#FFE3E8"><h3>Milano</h3>La Statale</div><div class="card" style="background:#E5FBF3"><h3>Roma</h3>Sapienza</div></div>
+<div style="margin:70px 0 10px"><span class="px">Who’s behind ImatPath</span><p class="q" style="margin-top:10px">“Serious preparation needs a system. ImatPath turns months of scattered studying into a clear path: what to study, how to practice, and exactly how far you’ve come.”</p><p style="margin-top:12px;font-weight:700">— The ImatPath team · Medical admissions &amp; test prep specialists</p><p style="margin-top:6px">✉ Questions? <a href="mailto:imatpathpro@gmail.com">imatpathpro@gmail.com</a> · we reply within 24 hours</p></div></div></section>
 
-<!-- ================= FOUNDERS ================= -->
-<section class="founders pad">
-  <div class="wrap reveal">
-    <span class="eyebrow" style="justify-content:center;display:inline-flex">Who's behind ImatPath</span>
-    <p class="f-quote">"We lived the scattered resources, the unclear starting point, and the frustration of not knowing where we stood. ImatPath is the platform we wish we'd had — a clear plan, a real question bank, and honest progress tracking."</p>
-    <p class="f-sig">— The ImatPath team · built by students who went through the IMAT themselves</p>
-    <span class="f-contact">Questions? <b>imatpathpro@gmail.com</b> · we reply within 24 hours</span>
-  </div>
-</section>
+<section id="faq" style="padding-top:20px"><div class="w" style="max-width:820px"><span class="px">FAQ</span><h2>Common questions, honest answers.</h2><p class="lead">Anything else? Write to imatpathpro@gmail.com — we reply within 24 hours.</p><div id="fq"></div></div></section>
 
-<!-- ================= PRICING ================= -->
-<section class="pricing pad" id="pricing">
-  <div class="wrap">
-    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
-      <span class="eyebrow" style="justify-content:center;display:inline-flex">100% Free</span>
-      <h2>Everything you need. Completely free.</h2>
-      <p class="lead" style="margin:0 auto">Full access to every question, mock exam, and study tool — no payment, no paywalls.</p>
-    </div>
-    <div class="price-card reveal">
-      <div class="pc-top"><span class="pc-badge">100% Free Forever</span><span class="pc-until">Full access until exam day</span></div>
-      <div class="pc-price"><span class="pc-now">Free</span><span class="pc-per">/ no credit card required</span></div>
-      <ul class="pc-list">
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Full access until the IMAT exam — September 29, 2026</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Official IMAT past papers</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>2,000+ IMAT-like questions with full explanations</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>20 full mock exams with official scoring</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Progress analytics dashboard &amp; chapter tracker</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Official IMAT score predictor &amp; negative marking breakdown</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Application guide — EU &amp; non-EU tracks</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Community Telegram study group</li>
-      </ul>
-      <a class="btn btn-primary btn-lg btn-block" href="auth.html">Start preparing free</a>
-      <p class="pc-note"><b>No credit card required</b> — create your free account in 30 seconds and start practicing immediately.</p>
-    </div>
-  </div>
-</section>
+<section class="cta"><div class="w"><span data-pip data-big></span><span class="px" style="color:var(--sun)">Ready?</span><h2>Start your path today.</h2><p style="max-width:540px;margin:0 auto 26px">Your study plan is ready in minutes. Everything you need to secure your medical seat in Italy, in one structured platform.</p><a class="btn" href="#pricing">Choose your plan</a><div class="pills" style="justify-content:center"><span>Preparation for IMAT 2027</span><span>One-Time Payment</span><span>Valid until exam day</span></div></div></section>
 
-<!-- ================= FAQ ================= -->
-<section class="faq pad" id="faq">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">FAQ</span>
-      <h2>Common questions.</h2>
-    </div>
-    <div class="faq-grid reveal" id="faqGrid"></div>
-  </div>
-</section>
+<footer><div class="w"><div><b style="font:800 1.4rem 'Bricolage Grotesque'">ImatPath</b><p style="opacity:.75;margin-top:8px;max-width:340px">The structured way to prepare for the IMAT — study plan, question bank, mock exams and application guidance in one place.</p></div>
+<div><b>Product</b><a href="#features">Features</a><a href="#platform">Platform</a><a href="#pricing">Plans &amp; Pricing</a><a href="#guide">Guide</a><a href="#cg">Chapter Tracker</a></div>
+<div><b>Support &amp; Community</b><a href="#faq">FAQ</a><a href="mailto:imatpathpro@gmail.com">imatpathpro@gmail.com</a><a href="#">Instagram</a><a href="#">Facebook</a></div>
+<div><b>Legal</b><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Refund Policy</a><a href="#">Contact</a></div></div>
+<div class="w" style="display:block;margin-top:26px;opacity:.6">© 2026 ImatPath. All rights reserved. Not affiliated with Cambridge Assessment or MUR.</div></footer>
 
-<!-- ================= FINAL CTA ================= -->
-<section class="final pad">
-  <div class="wrap reveal">
-    <span class="eyebrow" style="justify-content:center;display:inline-flex">Ready?</span>
-    <h2>Start your path today.</h2>
-    <p class="lead">Your study plan is ready in minutes. Everything you need, in one place — completely free until exam day.</p>
-    <a class="btn btn-primary btn-lg" href="auth.html">Start for free
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <div class="final-line">
-      <span>The IMAT is in <b><span class="exam-days">31</span> days</b></span>
-      <span>100% Free Access</span>
-      <span>No credit card required</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a class="logo" href="#top">Imat<em>Path</em></a>
-        <p>The structured way to prepare for the IMAT — study plan, question bank, mock exams and application guidance in one place.</p>
-        <div class="foot-social">
-          <a href="https://www.instagram.com/imatpath.app/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow us on Instagram" title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61590083533551" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow us on Facebook" title="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </div>
-      </div>
-      <div><h5>Product</h5><ul>
-        <li><a href="#features">Features</a></li><li><a href="#platform">Platform</a></li><li><a href="#pricing">Free Access</a></li><li><a href="#noneu">Non-EU Guide</a></li>
-      </ul></div>
-      <div><h5>Support &amp; Community</h5><ul>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="mailto:imatpathpro@gmail.com">imatpathpro@gmail.com</a></li>
-        <li><a href="https://www.instagram.com/imatpath.app/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" style="margin-right:7px"></i>Instagram</a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=61590083533551" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" style="margin-right:7px"></i>Facebook</a></li>
-      </ul></div>
-      <div><h5>Legal</h5><ul>
-        <li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Contact</a></li>
-      </ul></div>
-    </div>
-    <div class="foot-bottom"><span>© 2026 ImatPath. All rights reserved.</span><span>Not affiliated with Cambridge Assessment or MUR.</span></div>
-  </div>
-</footer>
-
+<button class="tt" id="tt" aria-label="Back to top"><svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="30"/></svg>↑</button>
+<div class="mcta" id="mcta"><span>IMAT 2027 · from <b id="mp"></b></span><a class="btn" href="#pricing">See plans</a></div>
 <script>
-(function(){
-"use strict";
+const $=s=>document.querySelector(s),EXAM=new Date(window.IMAT_EXAM),ML=Math.max(1,(EXAM-new Date())/2.63e9);
+// Prices live here: edit once, the page updates.
+const PLANS=[
+{k:'Self-study',n:'Self-Study',d:'Everything you need to prepare on your own, at your own pace, until exam day.',p:79,v:'Full access until IMAT Exam Day (Sept 2027)',b:'Get Self-Study',c:'#E6F8FF',l:['4,000+ practice questions with worked solutions','Flashcards for every lesson, with Anki-style spaced repetition (Anki export included)','Course documents: full written lessons as downloadable PDFs','20 timed mock exams with official +1.5 / −0.4 scoring','Official IMAT past papers (2017–2026) with explanations','Progress analytics, syllabus checklist & score predictor']},
+{k:'Live course + coaching',n:'Courses',d:'Learn with teachers, live. Add your own 1-on-1 tutor if you want a personal plan.',pop:1,msg:1,tiers:[
+ {n:'Live Course',p:449,v:'Everything in Self-Study, plus the live classes',b:'Get the Live Course',slug:'course',l:['One live 2-hour class every week, November 2026 to exam day','About 44 live classes, all recorded in your library','Private Telegram study group']},
+ {n:'Live Course + 1-on-1 Coaching',p:1190,v:'10 seats only · waitlist open',b:'Join the waitlist',slug:'coaching',l:['Everything in the Live Course','30 hours of 1-on-1 tutoring, one dedicated tutor per subject','A personal study plan and direct messaging with your tutor']}],
+ g:['Attend the first 2 live classes. Not worth it? Full refund.','If classes stop, you get back the share not yet taught.']},
+{k:'Application 1-on-1 guide',n:'Application',d:'A real person next to you at every step, from choosing your university to your first day in class.',p:349,v:'Works with any plan · personal sessions by video call',b:'Get the Application Guide',coa:1,l:['University choice based on your score, budget and city','Pre-evaluation, documents, translations, Apostille & Declaration of Value, checked one by one','Universitaly pre-enrolment and the visa file for non-EU students (or direct enrolment for EU students)','Help after you are admitted: enrolment, tax code, residence permit, settling in your city','Your questions answered by message between sessions'],g:['Bundle: Live Course + Coaching + Application Guide for $1,390 (save $149). Message us to book it.']}];
+$('#plans').innerHTML=PLANS.map(x=>`<div class="card plan ${x.pop?'pop':''} ${x.coa?'coa':''}" ${x.c?`style="background:${x.c}"`:''}>${x.pop?'<span class="tag">★ Recommended · Live course</span>':''}<span class="px" ${x.pop?'style="color:var(--sun)"':''}>${x.k}</span><h3>${x.n}</h3><p style="font-size:.93rem;margin-top:6px">${x.d}</p>${x.tiers?x.tiers.map(t=>`<div class="tier"><div class="pr fr">$${t.p.toLocaleString('en-US')} <small>/ one-time</small></div><h4>${t.n}</h4><p style="font-size:.83rem;opacity:.85">${t.v}</p><ul>${t.l.map(i=>`<li>${i}</li>`).join('')}</ul><a class="btn" href="auth.html?mode=form&tab=signup&plan=${t.slug}">${t.b}</a></div>`).join(''):`<div class="pr">$${x.p.toLocaleString('en-US')} <small>/ one-time</small></div><p style="font-size:.83rem;opacity:.8">${x.v}</p><ul>${x.l.map(i=>`<li>${i}</li>`).join('')}</ul>`}${x.g?`<div class="gu">${x.g.map(i=>`<p>${i}</p>`).join('')}</div>`:''}${x.tiers?'':`<a class="btn" href="auth.html?mode=form&tab=signup&plan=${x.n.toLowerCase()}">${x.b}</a>`}${x.msg?'<a class="btn w2 msg" href="https://ig.me/m/imatpath.app" target="_blank" rel="noopener">Questions? Message us</a>':''}</div>`).join('');
+$('#pb').innerHTML=[['No clear starting point','Students spend weeks figuring out what to study before they actually start studying.'],['Resources are all over the place','YouTube, Reddit, A-level books, paid courses — none of them talk to each other.'],['No way to measure progress','Without mock exams and tracking, students walk into the test not knowing where they stand.'],['The process is confusing for non-EU students','Pre-enrollment, visa, university selection — the admin side alone can derail months of prep.']].map((x,i)=>`<div class="card"><div class="n">${i+1}</div><h3>${x[0]}</h3><p>${x[1]}</p></div>`).join('');
+$('#f6').innerHTML=[['Past papers','Official IMAT papers','Practice with real past IMAT papers — the format, difficulty and question styles, exactly as they appear on exam day. 2026, 2025 and 2024 Official and more.','#FFF1C9'],['Timed mocks','Exam-day simulation','Full simulations under real conditions (60 questions, 1:40:00, official formula), with a score trend after every attempt. 20 full mocks.','#E6F8FF'],['Question bank','4,000+ questions','Structured exactly like the real exam across all five subjects, with a full explanation for every answer. Biology 23 · Chemistry 14 · Physics 7 · Math 7 · Logic 5 · Gen. knowledge 4.','#E5FBF3'],['Score predictor','Official IMAT Score Predictor','Calculate your predicted score out of 90.0 using the official formula: +1.5 per correct, −0.4 per incorrect, 0 for blank.','#FFE3E8'],['Progress analytics','Know exactly what to fix','Accuracy by subject, score trends over time, and a clear next step — so no study session is ever wasted. BIO 78% · CHEM 64% · PHYS 52% · MATH 71% · LOGIC 83%.','#EDE6FF'],['Application guide','The admin, handled','Step-by-step checklists for EU and non-EU students — pre-enrollment, Apostille, Declaration of Value, visa and deadlines.','#FFF1C9']].map(x=>`<div class="card" style="background:${x[3]}"><span class="px">${x[0]}</span><h3>${x[1]}</h3><p>${x[2]}</p></div>`).join('');
+const TL={0:[['Prepare your documents','Start 3–4 months early','Passport, diploma and transcripts — legalized or Apostilled, plus your Declaration of Value. The guide lists exactly what your country requires.'],['Pre-enrol on Universitaly','Spring – Summer','Choose your university, submit the pre-enrollment application, and follow it through embassy validation.'],['Apply for your visa','Summer','Student visa at the Italian embassy or consulate — financial proof, accommodation, insurance — with the full document checklist.'],['Arrive & enrol','September – October','Permesso di soggiorno within 8 days of arrival, then final enrolment once the rankings are published.']],1:[['Register on Universitaly','Spring','Create your account and pre-enrol at your chosen universities in a few minutes.'],['Sit the IMAT','September 2027','One test in September 2027 — your score is considered by every university you selected. 60 questions, 100 minutes.'],['Enrol','October','If you rank within your chosen university’s cutoff, complete enrolment directly. No visas, no consulates.']]};
+const card=x=>`<div class="card"><small>${x[1]}</small><h3 style="margin-top:10px">${x[0]}</h3><p>${x[2]}</p></div>`;
+const ent=(el,d)=>{el.classList.remove('ent');void el.offsetWidth;el.style.animationDelay=(d||0)+'s';el.classList.add('ent')};
+const rt=(i,a)=>{$('#tl').innerHTML=TL[i].map(card).join('');if(a)[...$('#tl').children].forEach((c,k)=>ent(c,k*.09));document.querySelectorAll('#sw button').forEach((b,j)=>b.classList.toggle('on',i==j));swp()};
+const swi=document.createElement('i');swi.className='ind';$('#sw').prepend(swi);const swp=()=>{const b=$('#sw .on');if(b){swi.style.left=b.offsetLeft+'px';swi.style.width=b.offsetWidth+'px'}};rt(0);addEventListener('resize',swp);document.fonts&&document.fonts.ready.then(swp);
+document.querySelectorAll('#sw button').forEach((b,i)=>b.onclick=()=>rt(i,1));
+$('#hw').innerHTML=[['Create your account','Sign up and get instant access to every tool on the platform — no waiting, no setup.'],['Practice & track','Work through 4,000+ IMAT-like questions chapter by chapter and watch your performance data build.'],['Past papers & mocks','Take official past IMAT papers and full mock exams under real timed conditions.'],['The big day','Walk into the exam knowing exactly where you stand. September 2027']].map(x=>card([x[0],'',x[1]]).replace('<small></small>','')).join('');
+$('#fq').innerHTML=[['How does pricing and access work?','ImatPath has three one-time payment options: Self-Study ($'+PLANS[0].p+') with the question bank, flashcards, course documents, mocks and past papers; Courses, either the Live Course ($'+PLANS[1].tiers[0].p+', one 2-hour class a week from November 2026 to exam day, about 44 classes, all recorded, plus everything in Self-Study) or the Live Course with 1-on-1 Coaching ($'+PLANS[1].tiers[1].p.toLocaleString('en-US')+', 30 hours of 1-on-1 tutoring, 10 seats, waitlist open); and the Application 1-on-1 Guide ($'+PLANS[2].p+'), personal help at every step from choosing your university to joining it, which works with any plan. Self-Study and Courses stay open until IMAT exam day in September 2027. There are no monthly subscriptions, and you can upgrade anytime by paying only the difference.'],['What if the live course doesn\'t work for me?','Attend the first 2 live classes. If it isn\'t worth it for you, you get a full refund. And if the live classes ever stop, you get back the share of the course not yet taught.'],['What exactly do I get access to?','Official IMAT past papers (2017–2026), 4,000+ IMAT-style questions with full explanations, 20 timed mock exams with official +1.5 / −0.4 scoring, a chapter-by-chapter syllabus tracker, progress analytics, the official score predictor, and flashcards with spaced repetition and course documents. The Live Course adds weekly live classes and a Telegram study group; the Application 1-on-1 Guide covers the EU & non-EU admission steps with a real person.'],['Are the questions aligned with the IMAT 2027 syllabus?','Yes. The whole bank is updated for the official IMAT 2027 syllabus published by MUR, and the question distribution mirrors the real exam: 23 Biology, 14 Chemistry, 7 Physics, 7 Mathematics, plus logic and general knowledge.'],['How is the IMAT score calculated?','+1.5 points per correct answer, −0.4 per incorrect, 0 for blanks — out of a maximum of 90.0. Every mock on ImatPath uses this exact formula, and the score predictor shows you precisely how the penalty works before exam day.'],['I’m a non-EU student — where do I start?','Start with the application guide inside ImatPath and begin documents 3–4 months early: Apostille and Declaration of Value take time. Then follow the Universitaly pre-enrollment and arrival steps — each with country-specific notes and deadlines.'],['When is the IMAT 2027?','September 2027 (date to be confirmed) — one national test date, 60 questions in 100 minutes. Your score is considered by every university you selected during pre-enrollment.']].map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('');
+$('#tk').innerHTML=('<span>IMAT 2027 · September 2027 ✦</span><span>60 questions · 100 minutes ✦</span><span>+1.5 correct · −0.4 incorrect ✦</span><span>Official MUR syllabus ✦</span><span>One-time access until exam day ✦</span><span>Plans from $'+PLANS[0].p+' ✦</span>').repeat(6);
+// Mascot "Dr. Pip": a chibi doctor — head mirror, stethoscope, mask, clipboard with a live ECG. Mouth + brows react to the quiz (.wow / .sad).
+const PIP=`<svg class="pip" viewBox="0 0 200 250" aria-hidden="true"><ellipse class="gs" cx="100" cy="236" rx="44" ry="5" fill="#1B1340" opacity=".16"/><rect x="88" y="120" width="24" height="34" fill="#FFCFA3" stroke="#1B1340" stroke-width="4"/><path d="M62 150C54 156 50 176 52 204Q52 214 62 214H138Q148 214 148 204C150 176 146 156 138 150Z" fill="#fff" stroke="#1B1340" stroke-width="4" stroke-linejoin="round"/><path d="M84 146h32l-16 40z" fill="#27D3A2"/><g fill="#fff" stroke="#1B1340" stroke-width="4" stroke-linejoin="round"><path d="M66 154L84 147L99 184L85 197L70 178Z"/><path d="M134 154L116 147L101 184L115 197L130 178Z"/></g><path d="M100 186V213" stroke="#1B1340" stroke-width="4" stroke-linecap="round"/><rect x="110" y="166" width="4" height="15" rx="1.5" fill="#FF5C7A" stroke="#1B1340" stroke-width="2"/><rect x="116" y="168" width="4" height="14" rx="1.5" fill="#49C5F5" stroke="#1B1340" stroke-width="2"/><g transform="rotate(-10 45 204)"><rect x="28" y="182" width="34" height="44" rx="4" fill="#49C5F5" stroke="#1B1340" stroke-width="4"/><rect x="33" y="191" width="24" height="29" rx="1.5" fill="#fff" stroke="#1B1340" stroke-width="2"/><rect x="37" y="178" width="16" height="9" rx="2.5" fill="#FFC83D" stroke="#1B1340" stroke-width="3"/><path class="ecg" d="M35 207h5l3-9 5 15 3-6h4" fill="none" stroke="#FF5C7A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g><g class="st"><path d="M79 146C68 186 84 204 100 198C116 204 132 186 121 146" fill="none" stroke="#1B1340" stroke-width="4" stroke-linecap="round"/><circle cx="100" cy="200" r="8" fill="#CFD6E4" stroke="#1B1340" stroke-width="4"/><circle cx="100" cy="200" r="3" fill="#1B1340"/></g><path d="M63 158Q36 178 58 196" fill="none" stroke="#1B1340" stroke-width="22" stroke-linecap="round"/><path d="M63 158Q36 178 58 196" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/><circle cx="58" cy="199" r="9.5" fill="#FFCFA3" stroke="#1B1340" stroke-width="4"/><g class="wave"><path d="M138 158Q168 164 172 136" fill="none" stroke="#1B1340" stroke-width="22" stroke-linecap="round"/><path d="M138 158Q168 164 172 136" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/><g fill="#FFCFA3" stroke="#1B1340" stroke-width="3.5"><circle cx="165" cy="118" r="4.6"/><circle cx="172" cy="115" r="4.6"/><circle cx="179" cy="118" r="4.6"/><circle cx="163" cy="129" r="4.4"/><circle cx="172" cy="127" r="10"/></g></g><ellipse cx="100" cy="72" rx="56" ry="50" fill="#6C3BFF" stroke="#1B1340" stroke-width="4"/><g fill="#FFCFA3" stroke="#1B1340" stroke-width="4"><circle cx="49" cy="92" r="9"/><circle cx="151" cy="92" r="9"/><ellipse cx="100" cy="86" rx="50" ry="46"/></g><circle cx="66" cy="107" r="8" fill="#FF5C7A" opacity=".55"/><circle cx="134" cy="107" r="8" fill="#FF5C7A" opacity=".55"/><path d="M98 101q-3 6 3 8" fill="none" stroke="#1B1340" stroke-width="2.6" stroke-linecap="round"/><g class="brow" fill="none" stroke="#1B1340" stroke-width="3.6" stroke-linecap="round"><path d="M64 77Q77 70 90 76"/><path d="M110 76Q123 70 136 77"/></g><g class="eye e1"><ellipse cx="77" cy="94" rx="11" ry="13" fill="#fff" stroke="#1B1340" stroke-width="3.5"/><g class="pu"><circle cx="78" cy="96" r="7.5" fill="#1B1340"/><circle cx="80.5" cy="92.5" r="2.8" fill="#fff"/><circle cx="76" cy="99" r="1.4" fill="#fff"/></g></g><g class="eye e2"><ellipse cx="123" cy="94" rx="11" ry="13" fill="#fff" stroke="#1B1340" stroke-width="3.5"/><g class="pu"><circle cx="122" cy="96" r="7.5" fill="#1B1340"/><circle cx="124.5" cy="92.5" r="2.8" fill="#fff"/><circle cx="120" cy="99" r="1.4" fill="#fff"/></g></g><path class="h" d="M84 112Q100 132 116 112Z" fill="#1B1340" stroke="#1B1340" stroke-width="3" stroke-linejoin="round"/><ellipse class="h" cx="100" cy="119.5" rx="6.5" ry="3" fill="#FF5C7A"/><ellipse class="o" cx="100" cy="118" rx="8.5" ry="10" fill="#1B1340"/><ellipse class="o" cx="100" cy="123" rx="5" ry="3.5" fill="#FF5C7A"/><path class="s" d="M88 122Q100 110 112 122" fill="none" stroke="#1B1340" stroke-width="4" stroke-linecap="round"/><path d="M97 30Q90 14 104 12Q100 20 110 26" fill="#6C3BFF" stroke="#1B1340" stroke-width="4" stroke-linejoin="round"/><path d="M50 84C44 44 72 28 100 28s56 16 50 56c-6-14-18-22-32-22-8 0-12 6-18 6s-10-6-18-6c-14 0-26 8-32 22z" fill="#6C3BFF" stroke="#1B1340" stroke-width="4" stroke-linejoin="round"/><path d="M64 50Q74 38 90 36" fill="none" stroke="#A98BFF" stroke-width="4" stroke-linecap="round"/><path d="M52 78Q100 34 148 78" fill="none" stroke="#1B1340" stroke-width="12" stroke-linecap="round"/><path d="M52 78Q100 34 148 78" fill="none" stroke="#CFD6E4" stroke-width="5" stroke-linecap="round"/><circle cx="100" cy="52" r="17" fill="#CFD6E4" stroke="#1B1340" stroke-width="4"/><circle cx="100" cy="52" r="11" fill="#E6F8FF" stroke="#1B1340" stroke-width="2.5"/><circle cx="100" cy="52" r="3.4" fill="#1B1340"/><path class="gl" d="M91 48Q94 42 101 41" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M82 129Q60 126 53 100M118 129Q140 126 147 100" fill="none" stroke="#1B1340" stroke-width="2.4" stroke-linecap="round"/><path d="M82 128Q100 140 118 128L116 148Q100 158 84 148Z" fill="#BFEAFB" stroke="#1B1340" stroke-width="4" stroke-linejoin="round"/><path d="M87 136Q100 146 113 136M87 142Q100 152 113 142" fill="none" stroke="#1B1340" stroke-width="2" opacity=".45"/></svg>`;
+document.querySelectorAll('[data-pip]').forEach(e=>{e.innerHTML=PIP;if(e.dataset.big!==undefined)e.firstChild.style.width='170px'});
+let hold=1;const tick=()=>{let t=Math.max(0,EXAM-new Date()),D=Math.floor(t/864e5);if(!hold)$('#d1').textContent=D;};tick();setInterval(tick,1e3);
+document.querySelectorAll('#tabs button').forEach((b,i)=>b.onclick=()=>{document.querySelectorAll('#tabs button').forEach((x,j)=>{x.classList.toggle('on',i==j);$('#tp'+j).hidden=i!=j});ent($('#tp'+i))});
+// sample question — 3-question mini quiz
+const QS=[
+{s:'Biology',q:'Which organelle is the main site of ATP production in eukaryotic cells?',o:['Golgi apparatus','Mitochondrion','Ribosome','Lysosome','Nucleus'],a:1,e:'Mitochondria run oxidative phosphorylation, which makes most of the cell’s ATP.'},
+{s:'Chemistry',q:'What is the pH of a 0.01 M solution of HCl, a strong acid?',o:['1','2','7','12','0.01'],a:1,e:'HCl dissociates completely, so [H⁺] = 10⁻² M and pH = −log(10⁻²) = 2.'},
+{s:'Physics',q:'A car starts from rest and accelerates at 2 m/s² for 5 s. What is its final speed?',o:['2.5 m/s','5 m/s','7 m/s','10 m/s','20 m/s'],a:3,e:'v = u + at = 0 + 2 × 5 = 10 m/s.'}];
+let sc=0,qi=0,done=0;const RES=[];
+const qpip=()=>document.querySelector('#tp0 .pip');
+const qd=()=>{$('#qd').innerHTML=QS.map((_,i)=>`<i class="${RES[i]===1?'r':RES[i]===0?'x':i==qi?'on':''}"></i>`).join('')};
+const showQ=()=>{const Q=QS[qi];done=0;$('#ql').textContent=Q.s+' · Q'+(qi+1)+' of '+QS.length;$('#qt').textContent=Q.q;$('#fb').textContent='';$('#nx').hidden=1;const p=qpip();if(p)p.classList.remove('wow','sad');
+ $('#op').innerHTML=Q.o.map((o,i)=>`<button class="opt"><kbd>${'ABCDE'[i]}</kbd>${o}</button>`).join('');
+ document.querySelectorAll('#op .opt').forEach((b,i)=>{ent(b,i*.06);b.onclick=()=>answer(i)});qd();ent($('#qt'))};
+const answer=i=>{if(done)return;done=1;const Q=QS[qi],ok=i==Q.a,bs=document.querySelectorAll('#op .opt'),b=bs[i],p=qpip();
+ bs.forEach(x=>x.disabled=true);b.classList.add(ok?'r':'x');if(!ok){bs[Q.a].classList.add('r');b.classList.add('shk')}
+ sc+=ok?1.5:-.4;RES[qi]=ok?1:0;$('#ss').textContent=sc.toFixed(1);p.classList.remove('wow','sad');void p.offsetWidth;p.classList.add(ok?'wow':'sad');
+ $('#fb').textContent=(ok?'Correct! +1.5. ':'Not this one: −0.4. ')+Q.e;
+ if(ok){const r=b.getBoundingClientRect();burst(r.left+r.width*.3,r.top+r.height/2,60)}
+ const last=qi==QS.length-1;$('#nx').textContent=last?'Play again ↺':'Next question →';$('#nx').hidden=0;ent($('#nx'),.15);qd();
+ if(last&&RES.every(x=>x==1)){$('#fb').textContent+=' Perfect run — 4.5 / 4.5!';burst(innerWidth/2,innerHeight*.35,160)}};
+$('#nx').onclick=()=>{if(qi==QS.length-1){qi=0;sc=0;RES.length=0;$('#ss').textContent='0.0'}else qi++;showQ()};
+addEventListener('keydown',e=>{if($('#tp0').hidden||e.target.matches('input,textarea'))return;const r=$('#tp0').getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const k='abcde'.indexOf(e.key.toLowerCase());if(k>-1&&!done){answer(k)}else if(e.key=='Enter'&&done&&document.activeElement.tagName!='BUTTON'){$('#nx').click()}});
+showQ();
+// predictor — animated gauge + verdict
+let shown=0,want=0,praf=0,lastV='';
+const VD=[[20,'Just getting started 🌱','#FFE3E8','#FF5C7A'],[40,'Building momentum 💪','#FFF1C9','#FFC83D'],[55,'Getting competitive 🔥','#E6F8FF','#49C5F5'],[70,'Strong score ⭐','#E5FBF3','#27D3A2'],[91,'Outstanding 🏆','#EDE6FF','#6C3BFF']];
+const tween=()=>{shown+=(want-shown)*.18;if(Math.abs(want-shown)<.05)shown=want;$('#sv').textContent=shown.toFixed(1);praf=shown!=want?requestAnimationFrame(tween):0};
+const pr=()=>{let c=+$('#rc').value,i=+$('#ri').value;if(c+i>60){i=60-c;$('#ri').value=i}$('#cv').textContent=c;$('#iv').textContent=i;want=Math.max(0,1.5*c-.4*i);
+ if(!praf)praf=requestAnimationFrame(tween);$('#gf').style.strokeDashoffset=(276.46*(1-want/90)).toFixed(2);
+ const v=VD.find(x=>want<x[0]),vd=$('#vd');$('#gf').style.stroke=v[3];vd.style.background=v[2];
+ if(c+i>0&&v[1]!=lastV){vd.textContent=v[1];vd.classList.remove('bump');void vd.offsetWidth;vd.classList.add('bump');if(lastV&&v[0]==91)burst(innerWidth/2,innerHeight*.4,120);lastV=v[1]}
+ $('#sb').textContent='+'+(1.5*c).toFixed(1)+' earned · −'+(.4*i).toFixed(1)+' penalty · '+(60-c-i)+' blank (0.0)'};
+document.querySelectorAll('#gf').forEach(g=>g.style.strokeDasharray=276.46);
+$('#rc').oninput=$('#ri').oninput=pr;pr();
+// guide checklist
+const GL=['Apostille diploma & transcripts','Declaration of Value (DoV)','Universitaly pre-enrollment','Student visa application','Permesso di soggiorno','Final enrolment & rankings'];
+$('#gl').innerHTML=GL.map(g=>`<div class="ck" role="checkbox" aria-checked="false" tabindex="0"><i></i><span>${g}</span></div>`).join('');
+document.querySelectorAll('.ck').forEach(c=>c.onclick=()=>{c.classList.toggle('d');c.firstChild.textContent=c.classList.contains('d')?'✓':'';const n=document.querySelectorAll('.ck.d').length,p=Math.round(n/GL.length*100);$('#gp').textContent=p+'%';$('#gb').style.width=p+'%';c.setAttribute('aria-checked',c.classList.contains('d'));if(p==100){const r=$('#gp').getBoundingClientRect();burst(r.left,r.top,130)}});
+document.querySelectorAll('.ck').forEach(c=>c.onkeydown=e=>{if(e.key==' '||e.key=='Enter'){e.preventDefault();c.click()}});
+// chapter tracker
+const CH=['Cell structure & organelles','DNA, RNA & protein synthesis','Genetics & inheritance','Stoichiometry','Organic chemistry','Kinematics','Electricity & circuits','Algebra & functions','Probability'],ST=['Not started','Reviewed','Practiced'],S=CH.map(_=>0);
+const cupd=()=>{$('#cc').textContent=S.filter(x=>x>0).length+' reviewed · '+S.filter(x=>x==2).length+' practiced';$('#chb').style.width=(S.reduce((a,b)=>a+b,0)/(2*S.length)*100)+'%'};
+$('#chs').innerHTML=CH.map((c,i)=>`<button class="ch s0" data-i="${i}">${c}<em>${ST[0]}</em></button>`).join('');
+document.querySelectorAll('.ch').forEach(b=>b.onclick=()=>{const i=b.dataset.i;S[i]=(S[i]+1)%3;b.className='ch s'+S[i];const em=b.lastChild;em.textContent=ST[S[i]];em.classList.remove('bump');void em.offsetWidth;em.classList.add('bump');cupd();if(S.every(x=>x==2)){const r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top,150)}});cupd();
 
-// Always light mode on landing page
-document.documentElement.removeAttribute('data-theme');
-
-const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
-
-/* ---------- nav ---------- */
-const nav=$("#nav");
-addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>10),{passive:true});
-$("#burger").addEventListener("click",()=>$("#mobileMenu").classList.toggle("open"));
-$$("#mobileMenu a").forEach(a=>a.addEventListener("click",()=>$("#mobileMenu").classList.remove("open")));
-
-/* ---------- marquee duplicate ---------- */
-const mq=$("#mqTrack"); mq.innerHTML+=mq.innerHTML;
-
-/* ---------- reveal ---------- */
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.14});
-$$(".reveal").forEach(el=>io.observe(el));
-
-/* ---------- count-up ---------- */
-const cio=new IntersectionObserver(es=>es.forEach(e=>{
-  if(!e.isIntersecting)return; cio.unobserve(e.target);
-  const el=e.target,target=+el.dataset.count,t0=performance.now();
-  (function step(t){const p=Math.min((t-t0)/1300,1);el.textContent=Math.round(target*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(step);})(t0);
-}),{threshold:.5});
-$$("[data-count]").forEach(el=>cio.observe(el));
-
-/* ---------- countdowns ---------- */
-const examDay=new Date("2026-09-29T09:00:00");
-const pad2=n=>String(n).padStart(2,"0");
-function tickClock(){
-  const now=new Date();
-  const days=Math.max(0,Math.ceil((examDay-now)/864e5));
-  $$(".exam-days").forEach(x=>x.textContent=days);
+// ---------- motion ----------
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const cnt=(b,ms)=>{const m=b.textContent.match(/^([\d,]+)(.*)$/);if(!m||RM)return;const to=+m[1].replace(/,/g,''),sx=m[2],t0=performance.now();const f=t=>{const k=Math.min(1,(t-t0)/ms),v=Math.round(to*(1-Math.pow(1-k,4)));b.textContent=v.toLocaleString('en-US')+sx;if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
+// hero day counter counts up once, then the live clock takes over
+(()=>{const b=$('#d1'),to=Math.max(0,Math.floor((EXAM-new Date())/864e5));if(RM){hold=0;return}const t0=performance.now()+1000,f=t=>{const k=Math.max(0,Math.min(1,(t-t0)/1800));b.textContent=String(Math.round(to*(1-Math.pow(1-k,4)))).padStart(3,'0');if(k<1)requestAnimationFrame(f);else hold=0};requestAnimationFrame(f)})();
+if(!RM){
+  // headings: word-by-word mask reveal
+  document.querySelectorAll('section:not(.hero) h2').forEach(h=>{h.innerHTML=h.textContent.trim().split(/\s+/).map((w,k)=>`<span class="w8"><span style="--k:${k}">${w}</span></span>`).join(' ')});
+  // scroll reveal, staggered inside grids
+  const R=[];document.querySelectorAll('section:not(.hero) .w > *').forEach(e=>{if(e.hidden)return;if(e.matches('.plans,.g4,.f6,.tl,.uni,.nums,#fq'))[...e.children].forEach((c,i)=>R.push([c,Math.min(i,5)*.1]));else R.push([e,0])});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;t.classList.add('in');io.unobserve(t);if(t.matches('.nums>div'))cnt(t.querySelector('b'),1500);if(t.matches('.dash'))t.querySelectorAll('.st b').forEach(b=>cnt(b,1600));setTimeout(()=>t.classList.remove('rv'),1800+(parseFloat(t.style.getPropertyValue('--d'))||0)*1000)}),{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+  R.forEach(([e,d])=>{e.classList.add('rv');e.style.setProperty('--d',d+'s');io.observe(e)});
+  // the doctor's eyes follow the cursor
+  let raf=0;addEventListener('pointermove',ev=>{if(raf)return;raf=requestAnimationFrame(()=>{raf=0;document.querySelectorAll('.pip').forEach(sv=>{const r=sv.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;const dx=ev.clientX-(r.left+r.width/2),dy=ev.clientY-(r.top+r.height*.36),d=Math.hypot(dx,dy)||1,k=Math.min(3.2,d/70);sv.style.setProperty('--px',(dx/d*k).toFixed(2)+'px');sv.style.setProperty('--py',(dy/d*k*.8).toFixed(2)+'px')})})},{passive:true});
 }
-tickClock();setInterval(tickClock,1000);
 
-/* ---------- feature card live timer ---------- */
-let chipSec=6000;
-setInterval(()=>{chipSec--;if(chipSec<0)chipSec=6000;
-  const h=Math.floor(chipSec/3600),m=Math.floor(chipSec/60)%60,s=chipSec%60;
-  const el=$("#mockChipTimer"); if(el)el.textContent=h+":"+pad2(m)+":"+pad2(s);
-},1000);
+// ---------- pro motion layer ----------
+if(!RM){
+  const nav=$('nav'),pg=$('#prog');let tk=0;
+  const onS=()=>{tk=0;const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;pg.style.setProperty('--p',h>0?(y/h).toFixed(4):0);nav.classList.toggle('scd',y>30);if(y<1400)document.querySelectorAll('.orb').forEach((o,i)=>o.style.setProperty('--par',(y*(.08+i*.05)).toFixed(1)+'px'))};
+  addEventListener('scroll',()=>{if(!tk)tk=requestAnimationFrame(onS)},{passive:true});onS();
+  // magnetic buttons
+  document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.translate=((e.clientX-r.left-r.width/2)*.18).toFixed(1)+'px '+((e.clientY-r.top-r.height/2)*.3).toFixed(1)+'px';b.style.transition='translate .15s ease-out, transform .1s, box-shadow .1s'});b.addEventListener('pointerleave',()=>{b.style.transition='translate .7s cubic-bezier(.34,1.56,.64,1), transform .1s, box-shadow .1s';b.style.translate=''})});
+}
 
-/* ---------- demo tabs ---------- */
-$$(".demo-tab").forEach(b=>b.addEventListener("click",()=>{
-  $$(".demo-tab").forEach(x=>x.classList.remove("active"));
-  $$(".demo-panel").forEach(x=>x.classList.remove("active"));
-  b.classList.add("active");
-  document.querySelector("[data-dpanel='"+b.dataset.dtab+"']").classList.add("active");
-}));
+// ---------- v2: confetti ----------
+function burst(x,y,n){if(RM)return;let c=$('#fx');if(!c){c=document.createElement('canvas');c.id='fx';document.body.appendChild(c)}
+ const d=devicePixelRatio||1,g=c.getContext('2d');c.width=innerWidth*d;c.height=innerHeight*d;g.setTransform(d,0,0,d,0,0);
+ const C=['#6C3BFF','#FFC83D','#FF5C7A','#27D3A2','#49C5F5','#1B1340'];
+ burst.P=(burst.P||[]).concat(Array.from({length:n||80},()=>{const a=Math.random()*Math.PI*2,v=4+Math.random()*7;return{x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-5,r:Math.random()*6.28,vr:(Math.random()-.5)*.35,w:6+Math.random()*6,h:4+Math.random()*5,c:C[Math.random()*C.length|0],l:1}}));
+ if(burst.run)return;burst.run=1;const f=()=>{g.clearRect(0,0,innerWidth,innerHeight);burst.P=burst.P.filter(p=>p.l>0&&p.y<innerHeight+40);
+  burst.P.forEach(p=>{p.vy+=.28;p.vx*=.985;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.l-=.009;g.save();g.globalAlpha=Math.min(1,p.l*2);g.translate(p.x,p.y);g.rotate(p.r);g.fillStyle=p.c;g.fillRect(-p.w/2,-p.h/2,p.w,p.h*Math.abs(Math.cos(p.r*2)));g.restore()});
+  if(burst.P.length)requestAnimationFrame(f);else{burst.run=0;g.clearRect(0,0,innerWidth,innerHeight)}};requestAnimationFrame(f)}
 
-/* ---------- SAMPLE QUESTIONS ---------- */
-const SQ=[
- {sub:"Biology",tag:"Question 42 of 2,000+",q:"Which organelle is known as the \u201cpowerhouse\u201d of the cell, responsible for most ATP production?",o:["Ribosome","Mitochondrion","Golgi apparatus","Lysosome","Smooth endoplasmic reticulum"],a:1,e:"Mitochondria generate most of the cell's supply of ATP through oxidative phosphorylation — which is why they're called the powerhouse of the cell."},
- {sub:"Chemistry",tag:"Question 87 of 2,000+",q:"What is the oxidation state of sulfur in H\u2082SO\u2084?",o:["\u22122","+2","+4","+6","0"],a:3,e:"Hydrogen is +1 and oxygen is \u22122: 2(+1) + S + 4(\u22122) = 0, so sulfur must be +6."},
- {sub:"Logic",tag:"Question 129 of 2,000+",q:"Find the next term in the sequence: 2, 6, 18, 54, \u2026",o:["108","148","162","180","216"],a:2,e:"Each term is multiplied by 3 to get the next: 54 \u00d7 3 = 162."}
-];
-let sqIdx=0, sqLocked=false;
-const LETTERS=["A","B","C","D","E"];
-function renderSQ(){
-  const q=SQ[sqIdx]; sqLocked=false;
-  $("#sqBox").innerHTML=
-    '<span class="q-subj">'+q.sub+' \u00b7 '+q.tag+'</span>'+
-    '<p class="q-text">'+q.q+'</p>'+
-    '<div class="opts">'+q.o.map((o,i)=>'<button class="opt" data-i="'+i+'"><span class="letter">'+LETTERS[i]+'</span><span>'+o+'</span><span class="mark"></span></button>').join("")+'</div>'+
-    '<div class="explain" id="sqExpl"><b>Explanation</b>'+q.e+'</div>'+
-    '<div class="demo-foot"><span class="score-note">Official IMAT scoring: <b>+1.5</b> correct \u00b7 <b>\u22120.4</b> wrong \u00b7 <b>0</b> blank</span>'+
-    '<button class="btn btn-primary btn-sm" id="sqNext" style="display:none">Next question \u2192</button></div>';
-  $$("#sqBox .opt").forEach(btn=>btn.addEventListener("click",()=>{
-    if(sqLocked)return; sqLocked=true;
-    const pick=+btn.dataset.i;
-    $$("#sqBox .opt").forEach((b,i)=>{
-      b.disabled=true;
-      if(i===q.a){b.classList.add("correct");b.querySelector(".mark").textContent="\u2713";}
-      else if(i===pick){b.classList.add("wrong");b.querySelector(".mark").textContent="\u2717";}
-    });
-    $("#sqExpl").classList.add("show");
-    $("#sqNext").style.display="inline-flex";
-  }));
-  $("#sqNext").addEventListener("click",()=>{sqIdx=(sqIdx+1)%SQ.length;renderSQ();});
-}
-renderSQ();
+// ---------- v2: mobile menu ----------
+const mb=$('#mb'),mm=$('#mm');
+const menu=o=>{mm.classList.toggle('open',o);mb.classList.toggle('x',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Open menu')};
+mb.onclick=e=>{e.stopPropagation();menu(!mm.classList.contains('open'))};
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu(false)));
+addEventListener('click',e=>{if(mm.classList.contains('open')&&!mm.contains(e.target))menu(false)});
+addEventListener('keydown',e=>{if(e.key=='Escape')menu(false)});
 
-/* ---------- MINI MOCK ---------- */
-const MOCK_QS=[
- {s:"Biology",q:"Which organelle is known as the \u201cpowerhouse\u201d of the cell, responsible for most ATP production?",o:["Ribosome","Mitochondrion","Golgi apparatus","Lysosome","Smooth endoplasmic reticulum"],a:1,e:"Mitochondria produce most of the cell's ATP through oxidative phosphorylation."},
- {s:"Biology",q:"During which phase of mitosis do chromosomes align along the cell's equatorial plate?",o:["Prophase","Metaphase","Anaphase","Telophase","Cytokinesis"],a:1,e:"In metaphase, chromosomes attach to spindle fibres and line up at the equator before separating."},
- {s:"Chemistry",q:"What is the oxidation state of sulfur in H\u2082SO\u2084?",o:["\u22122","+2","+4","+6","0"],a:3,e:"2(+1) + S + 4(\u22122) = 0, therefore S = +6."},
- {s:"Chemistry",q:"Which of the following is a strong electrolyte in aqueous solution?",o:["Glucose","Ethanol","Acetic acid","Sodium chloride","Ammonia"],a:3,e:"NaCl is an ionic compound that fully dissociates in water, conducting electricity strongly."},
- {s:"Physics",q:"A 2 kg object accelerates at 3 m/s\u00b2. What is the net force acting on it?",o:["1.5 N","5 N","6 N","9 N","0.67 N"],a:2,e:"Newton's second law: F = m\u00b7a = 2 kg \u00d7 3 m/s\u00b2 = 6 N."},
- {s:"Physics",q:"Which of the following quantities is a vector?",o:["Speed","Mass","Velocity","Temperature","Energy"],a:2,e:"Velocity has both magnitude and direction; the other options are scalars."},
- {s:"Mathematics",q:"Solve for x: 2x + 6 = 18",o:["x = 3","x = 4","x = 6","x = 9","x = 12"],a:2,e:"2x = 18 \u2212 6 = 12, therefore x = 6."},
- {s:"Mathematics",q:"A fair six-sided die is rolled once. What is the probability of rolling an even number?",o:["1/6","1/3","1/2","2/3","5/6"],a:2,e:"Three even faces out of six (2, 4, 6): 3/6 = 1/2."},
- {s:"Logic & GK",q:"Find the next term in the sequence: 2, 6, 18, 54, \u2026",o:["108","148","162","180","216"],a:2,e:"Each term is multiplied by 3: 54 \u00d7 3 = 162."},
- {s:"Logic & GK",q:"The IMAT is designed and delivered in collaboration with which assessment body?",o:["College Board","Cambridge Assessment","British Council","European Commission","Bocconi University"],a:1,e:"The IMAT is developed by Cambridge Assessment Admissions Assessments, working with the Italian ministry (MUR)."}
-];
-const N=MOCK_QS.length;
-let mock={answers:[],idx:0,remain:0,timer:null,running:false};
-const mockBox=$("#mockBox");
-function fmtT(sec){const m=Math.floor(sec/60),s=sec%60;return pad2(m)+":"+pad2(s);}
-function renderMockStart(){
-  clearInterval(mock.timer); mock.running=false;
-  $("#mockTopInfo").textContent="10 questions \u00b7 15 minutes \u00b7 official scoring";
-  mockBox.innerHTML=
-   '<div class="mock-start"><p class="q-text" style="margin-bottom:4px">IMAT Mini Mock Exam</p>'+
-   '<p style="color:var(--ink-soft);font-size:14.5px;margin-bottom:6px">10 IMAT-style questions across all subjects, timed to simulate real exam pressure. You\u2019ll see your score breakdown by subject when you finish.</p>'+
-   '<div class="mock-info">'+
-   '<div><b>10 questions</b><span>Across Biology, Chemistry, Physics, Math &amp; GK</span></div>'+
-   '<div><b>15 minutes</b><span>Timed \u2014 just like the real thing. Timer pauses if you switch tabs.</span></div>'+
-   '<div><b>IMAT scoring</b><span>+1.5 correct, \u22120.4 wrong, 0 blank</span></div>'+
-   '</div><button class="btn btn-primary btn-lg" id="mockStartBtn">Start mock exam</button></div>';
-  $("#mockStartBtn").addEventListener("click",startMock);
-}
-function startMock(){
-  mock={answers:Array(N).fill(null),idx:0,remain:15*60,timer:null,running:true};
-  renderMockQ();
-  clearInterval(mock.timer);
-  mock.timer=setInterval(()=>{
-    if(document.hidden)return;               // pause when tab hidden
-    mock.remain--; updateTimerUI();
-    if(mock.remain<=0)finishMock();
-  },1000);
-  updateTimerUI();
-}
-function updateTimerUI(){
-  const t=$("#mockTimer"); if(!t)return;
-  t.textContent=fmtT(Math.max(0,mock.remain));
-  t.classList.toggle("low",mock.remain<=60);
-}
-function renderMockQ(){
-  const q=MOCK_QS[mock.idx],i=mock.idx;
-  const answered=mock.answers.filter(a=>a!==null).length;
-  mockBox.innerHTML=
-   '<div class="mock-hud"><span class="mock-timer" id="mockTimer">'+fmtT(Math.max(0,mock.remain))+'</span>'+
-   '<span class="mock-count">'+answered+' / '+N+' answered</span></div>'+
-   '<span class="q-subj">'+q.s+' \u00b7 Question '+(i+1)+' of '+N+'</span>'+
-   '<p class="q-text">'+q.q+'</p>'+
-   '<div class="opts">'+q.o.map((o,j)=>'<button class="opt'+(mock.answers[i]===j?' selected" style="border-color:var(--g700);background:rgba(22,69,52,.07)"':'"')+' data-i="'+j+'"><span class="letter">'+LETTERS[j]+'</span><span>'+o+'</span></button>').join("")+'</div>'+
-   '<div class="mock-nav"><button class="btn-line" id="mPrev" '+(i===0?"disabled":"")+'\u2190>\u2190 Previous</button>'+
-   '<div style="display:flex;gap:10px;flex-wrap:wrap">'+
-   (i<N-1?'<button class="btn-line" id="mNext">Next \u2192</button>':'')+
-   '<button class="btn-danger-line" id="mEnd">End exam</button></div></div>';
-  updateTimerUI();
-  $$("#mockBox .opt").forEach(btn=>btn.addEventListener("click",()=>{
-    mock.answers[mock.idx]=+btn.dataset.i; renderMockQ();
-  }));
-  const pv=$("#mPrev"),nx=$("#mNext");
-  if(pv)pv.addEventListener("click",()=>{mock.idx--;renderMockQ();});
-  if(nx)nx.addEventListener("click",()=>{mock.idx++;renderMockQ();});
-  $("#mEnd").addEventListener("click",()=>{
-    const blank=mock.answers.filter(a=>a===null).length;
-    if(blank>0&&!confirm(blank+" question"+(blank>1?"s are":" is")+" still blank. End the exam anyway?"))return;
-    finishMock();
-  });
-}
-function finishMock(){
-  clearInterval(mock.timer); mock.running=false;
-  let score=0,correct=0,wrong=0,blank=0;
-  const subj={};
-  MOCK_QS.forEach((q,i)=>{
-    subj[q.s]=subj[q.s]||{c:0,t:0}; subj[q.s].t++;
-    const a=mock.answers[i];
-    if(a===null){blank++;}
-    else if(a===q.a){score+=1.5;correct++;subj[q.s].c++;}
-    else{score-=0.4;wrong++;}
-  });
-  $("#mockTopInfo").textContent="Results \u00b7 official scoring applied";
-  let bars="",review="";
-  Object.keys(subj).forEach(s=>{
-    const pct=Math.round(subj[s].c/subj[s].t*100);
-    bars+='<div class="mr-bar"><span>'+s+'</span><div class="track"><div class="fill" data-w="'+pct+'"></div></div><b>'+pct+'%</b></div>';
-  });
-  MOCK_QS.forEach((q,i)=>{
-    const a=mock.answers[i];
-    const cls=a===null?"blank":(a===q.a?"ok":"bad");
-    const ic=a===null?"\u2014":(a===q.a?"\u2713":"\u2717");
-    const extra=a===null?"Left blank":(a===q.a?"+1.5":"\u22120.4 \u00b7 correct answer: "+LETTERS[q.a]);
-    review+='<div class="mr-r '+cls+'"><span class="ic">'+ic+'</span><span>'+q.s+' \u2014 Q'+(i+1)+'<small>'+extra+'</small></span></div>';
-  });
-  mockBox.innerHTML=
-   '<div class="mock-result"><span class="q-subj" style="justify-content:center;display:inline-flex">Your result</span>'+
-   '<div class="mr-score">'+score.toFixed(1)+'<span> / 15.0</span></div>'+
-   '<div class="mr-sub">'+correct+' correct \u00b7 '+wrong+' wrong \u00b7 '+blank+' blank \u00b7 official formula applied</div>'+
-   '<div class="mr-bars">'+bars+'</div>'+
-   '<div class="mr-review">'+review+'</div>'+
-   '<button class="btn btn-primary" id="mRetake">Retake mock</button></div>';
-  requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    $$("#mockBox .fill").forEach(f=>f.style.width=f.dataset.w+"%");
-  }));
-  $("#mRetake").addEventListener("click",renderMockStart);
-}
-renderMockStart();
+// ---------- v2: active nav link ----------
+const NL=[...document.querySelectorAll('.nl a,.nr a:not(.btn)')];
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)NL.forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+['features','platform','guide','pricing','faq','try'].forEach(id=>{const el=document.getElementById(id);if(el)spy.observe(el)});
 
-/* ---------- APPLICATION GUIDE ---------- */
-const GUIDES={
- noneu:["Check document requirements for your country","Legalize / Apostille your diploma and transcripts","Obtain the Declaration of Value (DoV)","Submit your Universitaly pre-enrollment","Follow pre-enrollment through embassy validation","Prepare financial proof and accommodation","Apply for your student visa at the embassy","Arrive in Italy \u2192 permit of stay within 8 days"],
- eu:["Create your Universitaly account","Pre-enrol at your chosen university","Sit the IMAT \u2014 September 29, 2026","Check your ranking against cutoffs","Complete enrolment at your assigned university"]
+// ---------- v2: FAQ smooth accordion (one open at a time) ----------
+if(!RM)document.querySelectorAll('#fq details').forEach(d=>{const s=d.firstElementChild;
+ const anim=open=>{const a0=d.offsetHeight;if(open)d.open=true;const a1=open?d.offsetHeight:s.offsetHeight+6;d.style.overflow='hidden';
+  d.animate({height:[a0+'px',a1+'px']},{duration:450,easing:'cubic-bezier(.22,1,.36,1)'}).onfinish=()=>{if(!open)d.open=false;d.style.overflow=''}};
+ s.addEventListener('click',e=>{e.preventDefault();if(d.open)anim(false);else{document.querySelectorAll('#fq details[open]').forEach(o=>o!==d&&o.firstElementChild.click());anim(true)}})});
+
+// ---------- v2: back to top + sticky mobile CTA ----------
+$('#mp').textContent='$'+PLANS[0].p;
+const tt=$('#tt'),mc=$('#mcta');let pv=0;
+new IntersectionObserver(es=>es.forEach(e=>{e.target.dataset.v=e.isIntersecting?1:''}),{threshold:.05}).observe($('#pricing'));
+const ui=()=>{const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;tt.classList.toggle('on',y>innerHeight*.8);tt.style.setProperty('--p',h>0?(y/h).toFixed(3):0);
+ const nearEnd=y>h-700;mc.classList.toggle('on',y>innerHeight*.9&&!$('#pricing').dataset.v&&!nearEnd)};
+addEventListener('scroll',()=>{if(!pv)pv=requestAnimationFrame(()=>{pv=0;ui()})},{passive:true});ui();
+tt.onclick=()=>scrollTo({top:0,behavior:RM?'auto':'smooth'});
+
+// ---------- v2: pointer effects (desktop only) ----------
+if(!RM&&matchMedia('(hover:hover) and (pointer:fine)').matches){
+ // spotlight that follows the cursor on cards
+ document.querySelectorAll('.g4 .card,.f6 .card,.plan,.tl .card,.hv,.dash').forEach(c=>{c.classList.add('glow');c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')})});
+ // gentle 3D tilt on pricing cards and the hero card
+ document.querySelectorAll('.plan,.hv').forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(1000px) rotateX(${(-y*5).toFixed(2)}deg) rotateY(${(x*7).toFixed(2)}deg)`});c.addEventListener('pointerleave',()=>c.style.transform='')});
+ // hero stickers drift with the cursor
+ const hero=$('.hero');addEventListener('pointermove',e=>{if(scrollY>900)return;hero.style.setProperty('--hx',(e.clientX/innerWidth-.5).toFixed(3));hero.style.setProperty('--hy',(e.clientY/innerHeight-.5).toFixed(3))},{passive:true});
+}
+// press ripple on every button
+if(!RM)document.addEventListener('pointerdown',e=>{const b=e.target.closest('.btn');if(!b)return;const r=b.getBoundingClientRect(),s=document.createElement('span');s.className='rp';s.style.left=e.clientX-r.left+'px';s.style.top=e.clientY-r.top+'px';b.appendChild(s);setTimeout(()=>s.remove(),700)});
+
+// ---------- v3: hero countdown clock ----------
+const hcl=()=>{const t=Math.max(0,EXAM-new Date()),z=n=>String(n).padStart(2,'0');$('#hh').textContent=z(Math.floor(t/36e5)%24);$('#hm').textContent=z(Math.floor(t/6e4)%60);$('#hs').textContent=z(Math.floor(t/1e3)%60)};hcl();setInterval(hcl,1000);
+
+// ---------- v3: draggable hero stickers (mouse + touch) ----------
+document.querySelectorAll('.stx .fx').forEach(el=>{let ox=0,oy=0,lx=0;
+ el.addEventListener('pointerdown',e=>{e.preventDefault();const r=el.getBoundingClientRect();ox=e.clientX-r.left;oy=e.clientY-r.top;lx=e.clientX;el.setPointerCapture(e.pointerId);el.classList.add('drag');
+  const p=el.querySelector('.pip');if(p){p.classList.remove('sad');p.classList.add('wow')}const bb=$('.bub');if(bb)bb.classList.add('gone')});
+ el.addEventListener('pointermove',e=>{if(!el.classList.contains('drag'))return;const P=el.parentElement.getBoundingClientRect();
+  el.style.left=(e.clientX-P.left-ox)+'px';el.style.top=(e.clientY-P.top-oy)+'px';el.style.right=el.style.bottom='auto';
+  el.style.rotate=Math.max(-28,Math.min(28,(e.clientX-lx)*1.6)).toFixed(1)+'deg';lx=e.clientX});
+ const up=()=>{if(!el.classList.contains('drag'))return;el.classList.remove('drag');el.style.rotate='';el.classList.remove('drop');void el.offsetWidth;el.classList.add('drop');
+  const p=el.querySelector('.pip');if(p)setTimeout(()=>p.classList.remove('wow'),600)};
+ el.addEventListener('pointerup',up);el.addEventListener('pointercancel',up)});
+</script><script>
+/* ---------- iPad + Pencil: swipeable app preview ---------- */
+(()=>{
+const stage=document.getElementById('ipStage');if(!stage)return;
+const pad=stage.querySelector('#ipad'),screen=stage.querySelector('#ipScreen'),track=stage.querySelector('#ipTrack'),pencil=stage.querySelector('#ipPencil'),rip=stage.querySelector('#ipRip'),cap=stage.querySelector('#ipCap'),body=stage.querySelector('.ip-body');
+const slides=[...stage.querySelectorAll('.ip-slide')],tabs=[...stage.querySelectorAll('.ip-tabs button')];
+const REDUCED=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const W=1194,H=834,REST=[W*.88,H*1.05];
+const CAPS=['Every course document has clear drawings of cells, tables and worked examples.','Your countdown, daily mission and road to medicine, all on one screen.','Pick a subject, then open the course document, the flashcards or the practice questions.'];
+let cur=0,auto=!REDUCED,run=0,pos=[W*1.15,H*.3];
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const ease=k=>k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
+const inks=slides.map(s=>{const ps=[...s.querySelectorAll('.ip-ink path')],L=ps[0].getTotalLength();ps.forEach(p=>{p.style.strokeDasharray=L;p.style.strokeDashoffset=L});return{ps,L,main:ps[1]}});
+const setInk=(i,p)=>inks[i].ps.forEach(q=>{q.style.strokeDashoffset=inks[i].L*(1-p)});
+
+/* screenshot coordinates (1194x834) -> pixels inside .ipad */
+function place(x,y,ms){
+  pos=[x,y];
+  const a=pad.getBoundingClientRect(),s=screen.getBoundingClientRect();
+  pencil.style.setProperty('--pt',ms+'ms');
+  pencil.style.transform='translate('+(s.left-a.left+x*s.width/W)+'px,'+(s.top-a.top+y*s.height/H)+'px)';
+}
+function ping(x,y){rip.style.left=(x/W*100)+'%';rip.style.top=(y/H*100)+'%';rip.classList.remove('go');void rip.offsetWidth;rip.classList.add('go')}
+function setSlide(n){
+  cur=n;track.style.setProperty('--i',n);
+  tabs.forEach((b,i)=>b.setAttribute('aria-selected',i===n));
+  slides.forEach((s,i)=>s.setAttribute('aria-hidden',i===n?'false':'true'));
+  cap.textContent=CAPS[n];
+}
+const tween=(ms,fn,my)=>new Promise(res=>{const t0=performance.now(),f=t=>{if(my!==run)return res(false);const k=Math.min(1,(t-t0)/ms);fn(k);k<1?requestAnimationFrame(f):res(true)};requestAnimationFrame(f)});
+const hold=async(ms,my)=>{await sleep(ms);return my===run};
+
+/* the pencil circles something on the current screen */
+async function draw(my){
+  const ink=inks[cur],p0=ink.main.getPointAtLength(0);
+  setInk(cur,0);
+  place(p0.x,p0.y,900);
+  if(!await hold(950,my))return false;
+  pencil.classList.add('down');ping(p0.x,p0.y);
+  const ok=await tween(1500,k=>{const e=ease(k);setInk(cur,e);const pt=ink.main.getPointAtLength(ink.L*e);place(pt.x,pt.y,0)},my);
+  if(!ok)return false;
+  pencil.classList.remove('down');place(pos[0]+80,pos[1]+70,700);
+  return true;
+}
+/* the pencil swipes to the next screen, dragging it along */
+async function swipe(n,my){
+  const dir=n>cur?-1:1,sx=dir<0?1010:180,ex=dir<0?230:960,y=520;
+  place(sx,y,800);
+  if(!await hold(850,my))return false;
+  pencil.classList.add('down');ping(sx,y);track.classList.add('dragging');
+  const sw=screen.clientWidth;
+  const ok=await tween(950,k=>{const x=sx+(ex-sx)*ease(k);place(x,y,0);track.style.setProperty('--dx',((x-sx)/W*sw)+'px')},my);
+  track.classList.remove('dragging');track.style.setProperty('--dx','0px');
+  if(!ok)return false;
+  const old=cur;setSlide(n);pencil.classList.remove('down');place(REST[0],REST[1],900);
+  setTimeout(()=>{if(auto)setInk(old,0)},900);
+  return true;
+}
+async function loop(){
+  const my=++run;
+  inks.forEach((_,i)=>setInk(i,0));
+  place(REST[0],REST[1],1200);
+  if(!await hold(1300,my))return;
+  while(auto&&my===run){
+    if(!await draw(my))return;
+    if(!await hold(2400,my))return;
+    if(!await swipe((cur+1)%slides.length,my))return;
+    if(!await hold(700,my))return;
+  }
+}
+
+/* manual control: the user takes over */
+function manual(n){
+  if(auto){auto=false;stage.classList.add('manual')}
+  run++;pencil.classList.remove('down');track.classList.remove('dragging');
+  place(REST[0],REST[1],800);
+  if(n!=null)setSlide(n);
+  inks.forEach((_,i)=>setInk(i,i===cur?1:0));
+}
+tabs.forEach((b,i)=>b.addEventListener('click',()=>manual(i)));
+pad.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'&&cur<slides.length-1){e.preventDefault();manual(cur+1)}
+  if(e.key==='ArrowLeft'&&cur>0){e.preventDefault();manual(cur-1)}
+});
+let sx0=0,dx=0,dragging=false;
+screen.addEventListener('pointerdown',e=>{
+  if(e.button>0)return;
+  dragging=true;sx0=e.clientX;dx=0;manual();
+  track.classList.add('dragging');screen.classList.add('drag');screen.setPointerCapture(e.pointerId);
+});
+screen.addEventListener('pointermove',e=>{
+  if(!dragging)return;
+  dx=e.clientX-sx0;
+  const edge=(cur===0&&dx>0)||(cur===slides.length-1&&dx<0);
+  track.style.setProperty('--dx',(edge?dx*.28:dx)+'px');
+});
+const release=()=>{
+  if(!dragging)return;dragging=false;
+  track.classList.remove('dragging');screen.classList.remove('drag');
+  track.style.setProperty('--dx','0px');
+  let n=cur;if(Math.abs(dx)>screen.clientWidth*.14)n=dx<0?cur+1:cur-1;
+  manual(Math.max(0,Math.min(slides.length-1,n)));
 };
-const guideState={noneu:Array(GUIDES.noneu.length).fill(false),eu:Array(GUIDES.eu.length).fill(false)};
-let guideTrack="noneu";
-function renderGuide(){
-  const items=GUIDES[guideTrack],state=guideState[guideTrack];
-  $("#guideList").innerHTML=items.map((it,i)=>
-    '<label class="check"><input type="checkbox" data-gi="'+i+'" '+(state[i]?"checked":"")+'><span class="box">\u2713</span><span class="txt">'+it+'</span></label>').join("");
-  $$("#guideList input").forEach(inp=>inp.addEventListener("change",()=>{
-    guideState[guideTrack][+inp.dataset.gi]=inp.checked; guideProgress();
-  }));
-  guideProgress();
-}
-function guideProgress(){
-  const st=guideState[guideTrack];
-  const done=st.filter(Boolean).length;
-  const pct=Math.round(done/st.length*100);
-  $("#guidePct").textContent=pct+"%";
-  $("#guideFill").style.width=pct+"%";
-}
-$$("[data-gtrack]").forEach(b=>b.addEventListener("click",()=>{
-  $$("[data-gtrack]").forEach(x=>x.classList.remove("active"));
-  b.classList.add("active"); guideTrack=b.dataset.gtrack; renderGuide();
-}));
-renderGuide();
+screen.addEventListener('pointerup',release);screen.addEventListener('pointercancel',release);
 
-/* ---------- SCORE PREDICTOR ---------- */
-const rngCorrect = $("#rngCorrect");
-const rngWrong = $("#rngWrong");
-if (rngCorrect && rngWrong) {
-  const updateScore = () => {
-    let c = +rngCorrect.value;
-    let w = +rngWrong.value;
-    if (c + w > 60) {
-      w = 60 - c;
-      rngWrong.value = w;
-    }
-    const b = Math.max(0, 60 - c - w);
-    const score = Math.max(0, Math.min(90, Math.round((c * 1.5 - w * 0.4) * 10) / 10));
-
-    $("#predVal").textContent = score.toFixed(1);
-    $("#lblCorrect").textContent = c;
-    $("#lblWrong").textContent = w;
-    $("#chipCorrect").textContent = c;
-    $("#chipWrong").textContent = w;
-    $("#chipBlank").textContent = b;
-
-    const earned = (c * 1.5).toFixed(1);
-    const penalty = (w * 0.4).toFixed(1);
-    $("#predMath").innerHTML = `<span><b>+${earned}</b> earned</span> &middot; <span><b>-${penalty}</b> penalty</span>`;
-
-    let verdict = "Developing Tier (Below 40.0)";
-    if (score >= 65) verdict = "Elite Tier (Top 5% Score)";
-    else if (score >= 55) verdict = "High Competitive Tier";
-    else if (score >= 42) verdict = "Competitive Tier (Passing Range)";
-    $("#predVerdict").textContent = verdict;
-  };
-
-  rngCorrect.addEventListener("input", updateScore);
-  rngWrong.addEventListener("input", updateScore);
-  updateScore();
+/* little 3D tilt on desktop */
+if(!REDUCED&&matchMedia('(hover:hover) and (pointer:fine)').matches){
+  stage.addEventListener('pointermove',e=>{const r=pad.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;body.style.setProperty('--rx',(-y*5).toFixed(2)+'deg');body.style.setProperty('--ry',(x*7).toFixed(2)+'deg')});
+  stage.addEventListener('pointerleave',()=>{body.style.setProperty('--rx','0deg');body.style.setProperty('--ry','0deg')});
 }
 
-/* ---------- CHAPTER TRACKER ---------- */
-const CHAPS=[
- ["Cell structure & organelles",true,true],
- ["Membranes & transport",true,true],
- ["DNA, RNA & protein synthesis",true,false],
- ["Cell division: mitosis & meiosis",false,false],
- ["Genetics & inheritance",false,false],
- ["Human physiology: nervous system",false,false]
-];
-const chapList=$("#chapList");
-chapList.innerHTML=CHAPS.map((c,i)=>
- '<div class="st-row"><span class="st-name">'+c[0]+'</span><span class="st-status">'+
- '<button class="st-pill'+(c[1]?" done":"")+'" data-c="'+i+'" data-k="0">Reviewed'+(c[1]?" \u2713":"")+'</button>'+
- '<button class="st-pill'+(c[2]?" done":"")+'" data-c="'+i+'" data-k="1">Practiced'+(c[2]?" \u2713":"")+'</button>'+
- '</span></div>').join("");
-$$(".st-pill").forEach(p=>p.addEventListener("click",()=>{
-  const r=CHAPS[+p.dataset.c],k=+p.dataset.k;
-  r[k]=!r[k];
-  p.classList.toggle("done",r[k]);
-  p.textContent=(k===0?"Reviewed":"Practiced")+(r[k]?" \u2713":"");
-}));
-
-/* ---------- FAQ ---------- */
-const FAQS=[
- ["Is this updated for the IMAT 2026 syllabus?","Yes. All questions, mock exams, and study plans are aligned with the latest IMAT syllabus published by Cambridge Assessment. We update content as soon as changes are announced."],
- ["I'm a non-EU student — does this cover the visa process?","The Application Guide has a dedicated non-EU track with step-by-step checklists for document preparation (Declaration of Value, Apostille), pre-enrollment at the embassy, student visa application, and what to do after arriving in Italy."],
- ["Can I use this alongside my current preparation?","Absolutely. ImatPath doesn't replace your textbooks or courses — it organizes them. The IMAT Test tells you what to study and when, the question bank tests what you've learned, and the mocks measure your progress. It works with whatever resources you're already using."],
- ["How accurate are the mock exams compared to the real IMAT?","Very close. Questions follow the same format, difficulty distribution, and topic weightings as real IMAT papers. The scoring uses the official formula (+1.5 correct, −0.4 wrong, 0 blank). Students consistently report that our mocks feel like the real thing."],
- ["Can I access ImatPath on my phone?","Yes. ImatPath works fully on mobile, tablet, and desktop — your IMAT Test, question bank, and mock exams are all accessible from any device with a browser."],
- ["Do I need to buy other IMAT prep resources too?","Not necessarily. ImatPath is designed to be a complete, standalone prep system — the IMAT Test, question bank, and mock exams cover everything you need. That said, if you're already using textbooks or a course, ImatPath works well alongside them by organizing what to study and tracking your progress."],
- ["Who's behind ImatPath?","ImatPath is built by a team with firsthand experience going through IMAT preparation — we've lived the scattered resources, the unclear starting point, and the frustration of not knowing where we stood before mock exams existed for us. We built the platform we wish we'd had: a clear IMAT Test, a real question bank, and honest progress tracking. Every feature comes from a problem we personally ran into while preparing."],
- ["What if I have a question or need help?","Reach out anytime at imatpathpro@gmail.com — we typically respond within 24 hours, whether it's a question about the platform, a technical issue, or anything else."]
-];
-const grid=$("#faqGrid");
-grid.innerHTML=FAQS.map((f,i)=>
- '<div class="faq-item"><button class="faq-q" data-f="'+i+'"><span>'+f[0]+'</span><span class="fx">+</span></button>'+
- '<div class="faq-a"><div><p>'+f[1]+'</p></div></div></div>').join("");
-$$(".faq-q").forEach(b=>b.addEventListener("click",()=>{
-  b.parentElement.classList.toggle("open");
-}));
-
-/* ---------- non-eu timeline toggle ---------- */
-$$("[data-ttrack]").forEach(b=>b.addEventListener("click",()=>{
-  $$("[data-ttrack]").forEach(x=>x.classList.remove("active"));
-  b.classList.add("active");
-  $$(".timeline").forEach(t=>t.classList.remove("active"));
-  document.querySelector("[data-tpanel='"+b.dataset.ttrack+"']").classList.add("active");
-}));
+/* start when visible, pause when not */
+setSlide(0);
+place(pos[0],pos[1],0);
+addEventListener('resize',()=>place(pos[0],pos[1],0));
+if(REDUCED){inks.forEach((_,i)=>setInk(i,1));place(REST[0],REST[1],0)}
+else new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){if(auto&&!stage.dataset.on){stage.dataset.on=1;loop()}}
+  else if(stage.dataset.on){stage.dataset.on='';run++;pencil.classList.remove('down');track.classList.remove('dragging');track.style.setProperty('--dx','0px');place(REST[0],REST[1],600)}
+}),{threshold:.4}).observe(stage);
 })();
 </script>
-</body>
-</html>
+</body></html>

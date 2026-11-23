@@ -1,0 +1,17 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Biology::Chromosomes & chromosome maps
+#guid column:1
+#tags column:4
+bio07-013	<b>chromosome</b>: what is it?	A <b>chromosome</b> is one very long DNA molecule wound around proteins called <b>histones</b>.	ImatPath Biology term
+bio07-014	<b>karyotype</b>: what is it?	A <b>karyotype</b> is a picture of all the chromosomes of a cell, arranged in pairs by size and shape.	ImatPath Biology term
+bio07-015	<b>linked genes</b>: what is it?	Genes on the <b>same chromosome</b> are called <b>linked genes</b>.	ImatPath Biology term
+bio07-001	Formula to know: <b>Recombination frequency</b>	Recombination frequency = (number of recombinant offspring ÷ total offspring) × 100%	ImatPath Biology formula
+bio07-010	Key points: <b>Chromosomes</b>	• Humans: 23 pairs (22 autosomes + XX or XY). Karyotype from <b>metaphase</b> cells.<br>• <b>Locus</b> = position of a gene. Homologues carry the same genes, maybe different alleles.	ImatPath Biology summary
+bio07-011	Key points: <b>Linkage</b>	• Genes on the <b>same chromosome</b> are inherited together unless <b>crossing over</b> separates them.<br>• <b>Recombination frequency</b> = recombinants ÷ total × 100. <b>1% = 1 map unit (cM)</b>.<br>• Maximum 50% (independent assortment).<br>• Map order: the two genes furthest apart are at the ends.	ImatPath Biology summary
+bio07-012	Key points: <b>Sex chromosomes</b>	• <b>SRY</b> on Y makes a male. Males XY, females XX.<br>• X-linked recessive traits are more common in men (hemizygous).	ImatPath Biology summary
+bio07-002	In a test cross of a double heterozygote, 1000 offspring are obtained: 410 and 390 are parental types, and 100 and 100 are recombinant. What is the distance between the two genes?<br><br><br>A) 10 map units<br>B) 20 map units<br>C) 80 map units<br>D) 50 map units<br>E) 100 map units	<b>B) 20 map units</b><br><br>Recombination frequency <i>= (100 + 100)/(1000) × 100 = 20%</i>. One map unit (cM) equals 1% recombination, so the genes are 20 cM apart.	ImatPath Biology practice
+bio07-004	A colour-blind man (X<sup>c</sup>Y) and a carrier woman (X<sup>C</sup>X<sup>c</sup>) have a daughter. What is the probability that she is colour-blind?<br><br><br>A) 1/2<br>B) 0<br>C) 1/4<br>D) 1<br>E) 3/4	<b>A) 1/2</b><br><br>The daughter gets X<sup>c</sup> from her father for certain. From her mother she receives X<sup>C</sup> or X<sup>c</sup> with equal chance. She is colour-blind (X<sup>c</sup>X<sup>c</sup>) with probability 1/2.	ImatPath Biology practice
+bio07-006	A karyotype is written 47, XY, +21. How many autosomes does this person have?<br><br><br>A) 44<br>B) 46<br>C) 47<br>D) 23<br>E) 45	<b>E) 45</b><br><br>Total chromosomes: 47. Two are sex chromosomes (X and Y), so there are <i>47 - 2 = 45</i> autosomes (the normal 44 plus an extra chromosome 21).	ImatPath Biology practice
+bio07-008	Two genes are far apart on the same chromosome (more than 50 map units). What recombination frequency will be observed?<br><br><br>A) 100%<br>B) More than 50%<br>C) About 25%<br>D) About 50%, the same as unlinked genes<br>E) 0%	<b>D) About 50%, the same as unlinked genes</b><br><br>When genes are far apart, there is almost always at least one crossover between them, so half of the gametes are recombinant. The observed frequency cannot exceed 50%, and the genes appear to assort independently.	ImatPath Biology practice

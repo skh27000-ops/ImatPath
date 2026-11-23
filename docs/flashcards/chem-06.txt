@@ -1,0 +1,41 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Chemistry::Ionic, covalent and metallic bonds, polarity and electronegativity
+#guid column:1
+#tags column:4
+chem06-037	<b>covalent bond</b>: what is it?	In a <b>covalent bond</b> two atoms <b>share a pair of electrons</b>.	ImatPath Chemistry term
+chem06-038	<b>electronegative</b>: what is it?	When two <b>different</b> atoms share electrons, the more <b>electronegative</b> atom pulls the pair closer.	ImatPath Chemistry term
+chem06-012	<small>Ionic bonding</small><br><b>High melting and boiling points</b><br><i>Explanation?</i>	Strong attractions in all directions need a lot of energy to break	ImatPath Chemistry recall
+chem06-013	<small>Ionic bonding</small><br><b>Hard but brittle</b><br><i>Explanation?</i>	A blow shifts a layer so like charges meet and repel, and the crystal splits	ImatPath Chemistry recall
+chem06-014	<small>Ionic bonding</small><br><b>Do not conduct when solid</b><br><i>Explanation?</i>	The ions are fixed in place	ImatPath Chemistry recall
+chem06-015	<small>Ionic bonding</small><br><b>Conduct when molten or dissolved</b><br><i>Explanation?</i>	The ions are free to move and carry charge	ImatPath Chemistry recall
+chem06-016	<small>Ionic bonding</small><br><b>Often dissolve in water</b><br><i>Explanation?</i>	Water molecules are attracted to the ions and pull them out	ImatPath Chemistry recall
+chem06-017	<small>Ionic bonding</small><br><b>Ammonium</b><br><i>Formula?</i>	NH<sub>4</sub><sup>+</sup>	ImatPath Chemistry recall
+chem06-018	<small>Ionic bonding</small><br><b>Hydroxide</b><br><i>Formula?</i>	OH<sup>-</sup>	ImatPath Chemistry recall
+chem06-019	<small>Ionic bonding</small><br><b>Nitrate</b><br><i>Formula?</i>	NO<sub>3</sub><sup>-</sup>	ImatPath Chemistry recall
+chem06-021	<small>Ionic bonding</small><br><b>Carbonate</b><br><i>Formula?</i>	CO<sub>3</sub><sup>2-</sup>	ImatPath Chemistry recall
+chem06-022	<small>Ionic bonding</small><br><b>Phosphate</b><br><i>Formula?</i>	PO<sub>4</sub><sup>3-</sup>	ImatPath Chemistry recall
+chem06-023	<small>Covalent bonding</small><br><b>Simple molecules</b><br><i>Examples · Properties?</i>	<b>Examples:</b> H<sub>2</sub>O, CO<sub>2</sub>, I<sub>2</sub><br><b>Properties:</b> Low melting and boiling points, do not conduct. Only weak forces between molecules break when they melt	ImatPath Chemistry recall
+chem06-024	<small>Covalent bonding</small><br><b>Giant covalent networks</b><br><i>Examples · Properties?</i>	<b>Examples:</b> Diamond, graphite, SiO<sub>2</sub><br><b>Properties:</b> Very high melting points, hard, do not conduct (graphite does, it has free electrons). Every atom is bonded to its neighbours	ImatPath Chemistry recall
+chem06-025	<small>Covalent bonding</small><br><b>C–C</b><br><i>Bond energy (kJ/mol)?</i>	346	ImatPath Chemistry recall
+chem06-026	<small>Covalent bonding</small><br><b>C=C</b><br><i>Bond energy (kJ/mol)?</i>	614	ImatPath Chemistry recall
+chem06-027	<small>Covalent bonding</small><br><b>C≡C</b><br><i>Bond energy (kJ/mol)?</i>	839	ImatPath Chemistry recall
+chem06-029	<small>Covalent bonding</small><br><b>N=N</b><br><i>Bond energy (kJ/mol)?</i>	418	ImatPath Chemistry recall
+chem06-030	<small>Covalent bonding</small><br><b>N≡N</b><br><i>Bond energy (kJ/mol)?</i>	945	ImatPath Chemistry recall
+chem06-031	<small>Electronegativity and polarity</small><br><b>Below about 0.4</b><br><i>Bond type · Example?</i>	<b>Bond type:</b> Non-polar covalent<br><b>Example:</b> H–H, C–H	ImatPath Chemistry recall
+chem06-032	<small>Electronegativity and polarity</small><br><b>About 0.4 to 1.8</b><br><i>Bond type · Example?</i>	<b>Bond type:</b> Polar covalent<br><b>Example:</b> H–Cl, O–H	ImatPath Chemistry recall
+chem06-033	<small>Electronegativity and polarity</small><br><b>Above about 1.8</b><br><i>Bond type · Example?</i>	<b>Bond type:</b> Ionic<br><b>Example:</b> NaCl	ImatPath Chemistry recall
+chem06-034	<small>Answers & explanations</small><br><b>Ionic</b><br><i>Formed by · Properties?</i>	<b>Formed by:</b> Metal + non-metal (transfer)<br><b>Properties:</b> High mp, brittle, conducts molten or dissolved	ImatPath Chemistry recall
+chem06-035	<small>Answers & explanations</small><br><b>Covalent</b><br><i>Formed by · Properties?</i>	<b>Formed by:</b> Non-metals (sharing)<br><b>Properties:</b> Molecules: low mp, no conduction. Networks: very high mp	ImatPath Chemistry recall
+chem06-039	<small>Metallic bonding</small><br><b>Conduct electricity and heat</b>	the free electrons carry charge and energy.	ImatPath Chemistry key idea
+chem06-040	<small>Metallic bonding</small><br><b>Malleable and ductile</b>	layers of ions slide over each other without breaking the bond, because the electron sea moves with them.	ImatPath Chemistry key idea
+chem06-041	<small>Metallic bonding</small><br><b>High melting points</b>	the attraction is strong, and stronger with more delocalised electrons and smaller ions (Mg is stronger than Na).	ImatPath Chemistry key idea
+chem06-042	<small>Metallic bonding</small><br><b>Shiny</b>	free electrons reflect light.	ImatPath Chemistry key idea
+chem06-001	Formula to know: <b>The coordinate (dative) bond</b>	NH<sub>3</sub> + H<sup>+</sup> → NH<sub>4</sub><sup>+</sup>	ImatPath Chemistry formula
+chem06-010	Key points: <b>Ionic and covalent</b>	• Ionic compounds are lattices. Formula = simplest neutral ratio of ions.<br>• Single, double and triple bonds: more pairs means <b>shorter and stronger</b>.<br>• Coordinate bond: both shared electrons from one atom (NH<sub>4</sub><sup>+</sup>).<br>• Melting a molecular solid breaks <b>forces between molecules</b>, not bonds inside.	ImatPath Chemistry summary
+chem06-011	Key points: <b>Shape and polarity</b>	• Shape from electron pair repulsion: 180°, 120°, 109.5°, 107° (1 lone pair), 104.5° (2 lone pairs).<br>• <i>Δχ</i> below 0.4 non-polar, 0.4 to 1.8 polar, above 1.8 ionic.<br>• The more electronegative atom is <b>δ-</b>.<br>• A molecule is polar only if the dipoles do <b>not cancel</b>.	ImatPath Chemistry summary
+chem06-002	How many ions are present in one formula unit of aluminium sulfate?<br><br><br>A) 2<br>B) 5<br>C) 3<br>D) 6<br>E) 17	<b>B) 5</b><br><br>Al<sup>3+</sup> and SO<sub>4</sub><sup>2-</sup> combine as Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>: 2 Al<sup>3+</sup> and 3 SO<sub>4</sub><sup>2-</sup>, so 5 ions (the sulfate ion counts as one particle).	ImatPath Chemistry practice
+chem06-004	Which molecule has the smallest bond angle?<br><br><br>A) H<sub>2</sub>O<br>B) NH<sub>3</sub><br>C) CH<sub>4</sub><br>D) BF<sub>3</sub><br>E) CO<sub>2</sub>	<b>A) H<sub>2</sub>O</b><br><br>Lone pairs repel more than bonding pairs. H<sub>2</sub>O has two lone pairs (104.5°), NH<sub>3</sub> has one (107°), CH<sub>4</sub> has none (109.5°). BF<sub>3</sub> is 120° and CO<sub>2</sub> is 180°.	ImatPath Chemistry practice
+chem06-006	How many of NH<sub>4</sub><sup>+</sup>, H<sub>3</sub>O<sup>+</sup>, CH<sub>4</sub>, CO and NH<sub>3</sub> contain at least one coordinate (dative) bond?<br><br><br>A) 2<br>B) 4<br>C) 5<br>D) 1<br>E) 3	<b>E) 3</b><br><br>NH<sub>4</sub><sup>+</sup> (N donates a lone pair to H<sup>+</sup>), H<sub>3</sub>O<sup>+</sup> (O donates a lone pair to H<sup>+</sup>) and CO (O donates a lone pair to C) each have a dative bond. CH<sub>4</sub> and NH<sub>3</sub> have only ordinary covalent bonds.	ImatPath Chemistry practice
+chem06-008	Four solids have these properties. W: very high melting point, hard, does not conduct. X: high melting point, conducts only when molten. Y: conducts when solid, malleable. Z: low melting point, does not conduct. Which row matches W, X, Y, Z?<br><br><br>A) Ionic, giant covalent, metallic, simple molecular<br>B) Giant covalent, metallic, ionic, simple molecular<br>C) Simple molecular, ionic, metallic, giant covalent<br>D) Giant covalent, ionic, metallic, simple molecular<br>E) Metallic, ionic, giant covalent, simple molecular	<b>D) Giant covalent, ionic, metallic, simple molecular</b><br><br>W (very hard, high mp, no free charges) is giant covalent. X conducts only when its ions are free to move, so it is ionic. Y has delocalised electrons in the solid, so it is metallic. Z has weak forces between molecules, so it is simple molecular.	ImatPath Chemistry practice

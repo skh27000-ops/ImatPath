@@ -1,0 +1,30 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Physics::Torque and angular momentum
+#guid column:1
+#tags column:4
+phys07-001	<b>Torque</b>: what is it?	The <b>torque</b> of a force about a pivot is <i>τ = rFsinθ</i>, where <i>r</i> is the distance from the pivot to the point where the force acts, and <i>θ</i> is the angle between <i>r</i> and <i>F</i>. The unit is the <b>newton metre (N m)</b>.	ImatPath Physics definition
+phys07-006	<b>Conservation of angular momentum</b>: what is it?	If <b>no external torque</b> acts on a system, its <b>total angular momentum is constant</b>.	ImatPath Physics definition
+phys07-017	<small>Rotational dynamics</small><br><b>Thin ring or hoop, mass <i>M</i>, radius <i>R</i></b><br><i>Moment of inertia?</i>	<i>MR<sup>2</sup></i>	ImatPath Physics recall
+phys07-018	<small>Rotational dynamics</small><br><b>Solid disc or cylinder</b><br><i>Moment of inertia?</i>	<i>(1)/(2)MR<sup>2</sup></i>	ImatPath Physics recall
+phys07-019	<small>Rotational dynamics</small><br><b>Solid sphere</b><br><i>Moment of inertia?</i>	<i>(2)/(5)MR<sup>2</sup></i>	ImatPath Physics recall
+phys07-020	<small>Rotational dynamics</small><br><b>Thin rod, about its centre, length <i>L</i></b><br><i>Moment of inertia?</i>	<i>(1)/(12)ML<sup>2</sup></i>	ImatPath Physics recall
+phys07-021	<small>Rotational dynamics</small><br><b>Thin rod, about one end</b><br><i>Moment of inertia?</i>	<i>(1)/(3)ML<sup>2</sup></i>	ImatPath Physics recall
+phys07-022	<small>Rotational dynamics</small><br><b>displacement <i>s</i></b><br><i>Rotational?</i>	angle <i>θ</i>	ImatPath Physics recall
+phys07-023	<small>Rotational dynamics</small><br><b>velocity <i>v</i></b><br><i>Rotational?</i>	angular velocity <i>ω</i>	ImatPath Physics recall
+phys07-024	<small>Rotational dynamics</small><br><b>acceleration <i>a</i></b><br><i>Rotational?</i>	angular acceleration <i>α</i>	ImatPath Physics recall
+phys07-025	<small>Rotational dynamics</small><br><b>mass <i>m</i></b><br><i>Rotational?</i>	moment of inertia <i>I</i>	ImatPath Physics recall
+phys07-026	<small>Rotational dynamics</small><br><b>force <i>F</i></b><br><i>Rotational?</i>	torque <i>τ</i>	ImatPath Physics recall
+phys07-027	<small>Rotational dynamics</small><br><b>momentum <i>p = mv</i></b><br><i>Rotational?</i>	angular momentum <i>L = Iω</i>	ImatPath Physics recall
+phys07-028	<small>Rotational dynamics</small><br><b>kinetic energy <i>(1)/(2)mv<sup>2</sup></i></b><br><i>Rotational?</i>	rotational KE <i>(1)/(2)Iω<sup>2</sup></i>	ImatPath Physics recall
+phys07-002	Formula to know: <b>Two conditions</b>	<i>∑ F = 0</i> (no net force)<br><i>∑ τ = 0</i> about any point (no net torque)	ImatPath Physics formula
+phys07-003	Formula to know: <b>Moment of inertia</b>	<i>I = ∑ m r<sup>2</sup></i>	ImatPath Physics formula
+phys07-004	Formula to know: <b>Newton's second law for rotation</b>	<i>τ<sub>net</sub> = Iα</i>	ImatPath Physics formula
+phys07-005	Formula to know: <b>Definition</b>	<i>L = Iω &nbsp;&nbsp;&nbsp;</i> for a point mass: <i>L = mvr</i>	ImatPath Physics formula
+phys07-015	Key points: <b>Torque and equilibrium</b>	• <i>τ = rFsinθ = F ×</i> lever arm. Unit N m.<br>• Equilibrium: <i>∑ F = 0</i> <b>and</b> <i>∑τ = 0</i>. Clockwise = anticlockwise.<br>• A <b>couple</b>: net force zero, net torque <i>Fd</i>.	ImatPath Physics summary
+phys07-016	Key points: <b>Rotation</b>	• <i>I = ∑ mr<sup>2</sup></i>. <i>τ<sub>net</sub> = Iα</i>.<br>• <i>L = Iω</i>. <i>τ = Δ L/Δ t</i>. KE <i>= (1)/(2)Iω<sup>2</sup></i>.<br>• No external torque: <b><i>L</i> is conserved</b>, so smaller <i>I</i> means larger <i>ω</i>.	ImatPath Physics summary
+phys07-007	A uniform 5.0 m ladder of mass 20 kg leans against a smooth vertical wall at 60° to the ground. A 70 kg person stands 3.0 m along the ladder from the base. What is the horizontal force of the wall on the ladder? (<i>g = 9.8</i> m/s<sup>2</sup>)<br><br><br>A) 510 N<br>B) 294 N<br>C) 882 N<br>D) 147 N<br>E) 588 N	<b>B) 294 N</b><br><br>Torques about the base: <i>N<sub>w</sub>(5.0sin 60<sup>°</sup>) = 196(2.5cos 60<sup>°</sup>) + 686(3.0cos 60<sup>°</sup>)</i>. So <i>4.33N<sub>w</sub> = 245 + 1029 = 1274</i> and <i>N<sub>w</sub> = 294</i> N.	ImatPath Physics practice
+phys07-009	A solid disc of mass 8.0 kg and radius 0.40 m is at rest. A constant torque of 4.8 N m acts on it for 5.0 s. What is its final rotational kinetic energy?<br><br><br>A) 450 J<br>B) 900 J<br>C) 225 J<br>D) 37.5 J<br>E) 112 J	<b>A) 450 J</b><br><br><i>I = (1)/(2)MR<sup>2</sup> = 0.64</i> kg m<sup>2</sup>. <i>α = τ/I = 7.5</i> rad/s<sup>2</sup>, <i>ω = α t = 37.5</i> rad/s. <i>E<sub>k</sub> = (1)/(2)Iω<sup>2</sup> = 450</i> J.	ImatPath Physics practice
+phys07-011	A solid sphere rolls without slipping from rest down a slope, dropping through a height of 1.5 m. What is its speed at the bottom? (<i>g = 9.8</i> m/s<sup>2</sup>)<br><br><br>A) 5.42 m/s<br>B) 3.83 m/s<br>C) 4.43 m/s<br>D) 5.5 m/s<br>E) 4.58 m/s	<b>E) 4.58 m/s</b><br><br>Energy: <i>mgh = (1)/(2)mv<sup>2</sup> + (1)/(2)Iω<sup>2</sup></i> with <i>I = (2)/(5)mR<sup>2</sup></i> and <i>ω = v/R</i>. So <i>gh = (7)/(10)v<sup>2</sup></i> and <i>v = √(10gh/7) = 4.58</i> m/s.	ImatPath Physics practice
+phys07-013	A force <i>F = (3, 4)</i> N acts at the position <i>r = (2, 1)</i> m relative to a pivot at the origin. What is the torque about the pivot?<br><br><br>A) 11 N m, anticlockwise<br>B) 5 N m, clockwise<br>C) 10 N m, anticlockwise<br>D) 5 N m, anticlockwise<br>E) 11 N m, clockwise	<b>D) 5 N m, anticlockwise</b><br><br><i>τ<sub>z</sub> = xF<sub>y</sub> - yF<sub>x</sub> = (2)(4) - (1)(3) = 8 - 3 = 5</i> N m. The sign is positive, which means anticlockwise.	ImatPath Physics practice

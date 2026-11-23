@@ -1,0 +1,18 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Physics::Fluid dynamics
+#guid column:1
+#tags column:4
+phys10-001	Formula to know: <b>Flow rate</b>	<i>Q = Av &nbsp;&nbsp;&nbsp;</i> (unit: m<sup>3</sup>/s)	ImatPath Physics formula
+phys10-002	Formula to know: <b>Conservation of mass for a flowing fluid</b>	<i>A<sub>1</sub>v<sub>1</sub> = A<sub>2</sub>v<sub>2</sub></i>	ImatPath Physics formula
+phys10-003	Formula to know: <b>Energy for a flowing fluid</b>	<i>p + (1)/(2)ρ v<sup>2</sup> + ρ gh = constant</i>	ImatPath Physics formula
+phys10-004	Formula to know: <b>Stokes' law</b>	<i>F = 6πη r v</i>	ImatPath Physics formula
+phys10-005	Formula to know: <b>Poiseuille's law</b>	<i>Q = (π r<sup>4</sup> Δ p)/(8η L)</i>	ImatPath Physics formula
+phys10-014	Key points: <b>Flow</b>	• Ideal fluid: incompressible, no viscosity, steady, laminar.<br>• <i>Q = Av</i>. <b>Continuity</b>: <i>A<sub>1</sub>v<sub>1</sub> = A<sub>2</sub>v<sub>2</sub></i>. Area <i>∝</i> radius<sup>2</sup>.	ImatPath Physics summary
+phys10-015	Key points: <b>Bernoulli</b>	• <i>p + (1)/(2)ρ v<sup>2</sup> + ρ gh = const</i>. Faster flow means lower pressure.<br>• Torricelli: <i>v = √(2gh)</i>. Applications: wing lift, Venturi meter, sprayers.	ImatPath Physics summary
+phys10-016	Key points: <b>Viscosity</b>	• Unit Pa s. Stokes: <i>F = 6πη rv</i>.<br>• Poiseuille: <i>Q = π r<sup>4</sup>Δ p/(8η L)</i>. <b>Fourth power of radius</b>.<br>• Laminar at low Reynolds number, turbulent at high.	ImatPath Physics summary
+phys10-006	Blood flows at 0.30 m/s in an aorta of radius 1.0 cm. The total cross-sectional area of all the capillaries it feeds is 2000 cm<sup>2</sup>. What is the average speed of the blood in the capillaries?<br><br><br>A) 0.0471 m/s<br>B) 4.71 × 10<sup>-4</sup> m/s<br>C) 9.42 × 10<sup>-4</sup> m/s<br>D) 191 m/s<br>E) 1.5 × 10<sup>-4</sup> m/s	<b>B) 4.71 × 10<sup>-4</sup> m/s</b><br><br>Continuity: <i>A<sub>1</sub>v<sub>1</sub> = A<sub>2</sub>v<sub>2</sub></i>. <i>A<sub>1</sub> = π(1.0)<sup>2</sup> = 3.14</i> cm<sup>2</sup>. <i>v<sub>2</sub> = 0.30 × 3.14/2000 = 4.71 × 10<sup>-4</sup></i> m/s. The slow flow gives time for exchange with the tissues.	ImatPath Physics practice
+phys10-008	A large open tank has a small hole 1.8 m below the water surface and 1.0 m above the ground. How far from the base of the tank does the water jet land? (<i>g = 9.8</i> m/s<sup>2</sup>)<br><br><br>A) 2.68 m<br>B) 5.94 m<br>C) 4.49 m<br>D) 3.35 m<br>E) 1.34 m	<b>A) 2.68 m</b><br><br>Torricelli: <i>v = √(2gh) = √(2(9.8)(1.8)) = 5.94</i> m/s. Fall time from 1.0 m: <i>t = √(2(1.0)/9.8) = 0.452</i> s. Range <i>= vt = 2.68</i> m.	ImatPath Physics practice
+phys10-010	Fatty deposits narrow an artery so that its radius is 10% smaller. By what percentage must the pressure difference across it increase to keep the same blood flow rate (laminar flow)?<br><br><br>A) 10%<br>B) 23%<br>C) 19%<br>D) 100%<br>E) 52%	<b>E) 52%</b><br><br>Poiseuille: <i>Q ∝ r<sup>4</sup>Δ p</i>. For the same <i>Q</i>, <i>Δ p ∝ 1/r<sup>4</sup></i>. With <i>r</i> now <i>0.90r</i>: <i>Δ p</i> increases by <i>1/0.90<sup>4</sup> = 1.52</i>, so by 52%.	ImatPath Physics practice
+phys10-012	Water drains from a large tank through a pipe of diameter 3.0 cm whose exit is 2.0 m below the water surface. What is the volume flow rate? (<i>g = 9.8</i> m/s<sup>2</sup>)<br><br><br>A) 8.9 L/s<br>B) 2.2 L/s<br>C) 18 L/s<br>D) 4.4 L/s<br>E) 6.3 L/s	<b>D) 4.4 L/s</b><br><br><i>v = √(2gh) = √(2(9.8)(2.0)) = 6.26</i> m/s. <i>A = π(0.015)<sup>2</sup> = 7.07 × 10<sup>-4</sup></i> m<sup>2</sup>. <i>Q = Av = 4.4 × 10<sup>-3</sup></i> m<sup>3</sup>/s <i>= 4.4</i> L/s.	ImatPath Physics practice

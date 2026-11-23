@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IMAT Past Papers — ImatPath</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-700.css">
+<meta name="description" content="Official IMAT past paper simulations with real exam conditions, official +1.5 / −0.4 scoring, question navigator and detailed solutions.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" href="favicon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- Core Supabase & Auth Scripts -->
@@ -19,6 +20,7 @@
 <script src="config.js"></script>
 <script src="supabase.js"></script>
 <script src="auth-guard.js"></script>
+<script src="xp-system.js"></script>
 
 <script>
 // ── Fast Dark Mode Init ──
@@ -28,246 +30,235 @@
 })();
 </script>
 
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="app-shell.css">
+<script src="mascot.js"></script>
 <style>
-:root{
-  --cream:#f6f1e6; --cream-2:#efe7d5; --card:#fffdf7;
-  --ink:#152720; --ink-soft:#42574d;
-  --g900:#0a241b; --g800:#0e2f23; --g700:#164534; --g600:#1e5b44;
-  --terra:#c1591f; --terra-d:#a84a15;
-  --gold:#d9a441; --gold-l:#e9c070;
-  --line:#e2d8c2; --line-d:#23443a;
-  --ok:#2e7d4f; --bad:#b3402e;
-  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
-  --sh-sm:0 1px 2px rgba(21,39,32,.06),0 4px 14px rgba(21,39,32,.06);
-  --sh-md:0 2px 6px rgba(21,39,32,.08),0 14px 34px rgba(21,39,32,.10);
-}
-
-[data-theme="dark"] {
-  --cream: #111714; --cream-2: #191f1c; --card: #1a211d;
-  --ink: #e2ddd3; --ink-soft: #a4b3a9;
-  --line: #2a3530; --line-d: #2a3530;
-  --g900: #0a0e0c; --g800: #0f1613;
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;transition:background 0.3s, color 0.3s;}
-a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-svg{display:block}
-::selection{background:var(--terra);color:#fff}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
-
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,164,65,.5)}50%{box-shadow:0 0 0 6px rgba(217,164,65,0)}}
-@keyframes pulseT{0%,100%{box-shadow:0 0 0 0 rgba(193,89,31,.45)}50%{box-shadow:0 0 0 7px rgba(193,89,31,0)}}
-@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
-
-/* ============ SIDEBAR ============ */
-.sidebar{position:fixed;inset:0 auto 0 0;width:264px;background:var(--g900);color:var(--cream);display:flex;flex-direction:column;z-index:60;transition:transform .35s ease}
-.logo{display:flex;align-items:center;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em;padding:26px 26px 22px;color:var(--cream)}
-.logo em{font-style:italic;color:var(--gold-l)}
-.sb-nav{display:flex;flex-direction:column;gap:4px;padding:6px 14px}
-.sb-nav a{display:flex;align-items:center;gap:13px;padding:12px 14px;border-radius:12px;font-size:14.5px;font-weight:500;color:#9db3a5;position:relative;transition:.2s}
-.sb-nav a svg{flex:none;opacity:.85}
-.sb-nav a:hover{color:var(--cream);background:rgba(246,241,230,.06)}
-.sb-nav a.active{color:var(--cream);background:rgba(217,164,65,.12);font-weight:600}
-.sb-nav a.active::before{content:"";position:absolute;left:-14px;top:9px;bottom:9px;width:3px;border-radius:3px;background:var(--gold)}
-.sb-spacer{flex:1}
-
-.access-card{margin:0 16px 14px;padding:16px 18px;border:1px solid rgba(217,164,65,.45);border-radius:16px;background:linear-gradient(150deg,rgba(217,164,65,.14),rgba(217,164,65,.04));position:relative;overflow:hidden;cursor:pointer;transition:transform .2s;}
-.access-card:hover{transform:translateY(-2px);}
-.access-card::after{content:"";position:absolute;top:-30px;right:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.25),transparent 70%)}
-.access-card .ac-l{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);display:flex;align-items:center;gap:7px;margin-bottom:6px}
-.access-card .ac-l i{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-.access-card b{font-family:var(--serif);font-size:16.5px;font-weight:600;display:block;color:var(--cream)}
-.access-card span{font-size:12px;color:#9db3a5}
-
-.user-row{display:flex;align-items:center;gap:12px;padding:16px 20px;border-top:1px solid var(--line-d)}
-.avatar{width:38px;height:38px;border-radius:12px;background:var(--g700);border:1.5px solid var(--line-d);display:grid;place-items:center;font-weight:700;font-size:15px;color:var(--gold-l)}
-.user-row .u-t{flex:1;min-width:0}
-.user-row .u-t b{display:block;font-size:14px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.user-row .u-t small{font-size:11.5px;color:#8fa897}
-.logout{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;color:#8fa897;transition:.2s;cursor:pointer;}
-.logout:hover{color:#ff9c7a;background:rgba(179,64,46,.15)}
-
-/* ============ MAIN ============ */
-.main{margin-left:264px;min-height:100vh;display:flex;flex-direction:column}
-.topbar{position:sticky;top:0;z-index:40;background:rgba(246,241,230,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:18px;transition:background 0.3s, border-color 0.3s;}
-[data-theme="dark"] .topbar { background: rgba(17,23,20,.85); }
-.burger{display:none;flex-direction:column;gap:5px;padding:8px;margin-right:4px}
-.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px}
-.topbar h1{font-size:clamp(1.3rem,2.2vw,1.7rem)}
-.topbar p{font-size:13px;color:var(--ink-soft);max-width:520px}
-.top-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-.date-chip{font-size:12.5px;font-weight:600;color:var(--ink-soft);background:var(--card);border:1px solid var(--line);padding:8px 15px;border-radius:999px}
-.count-chip{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;background:var(--g800);color:var(--cream);padding:8px 16px;border-radius:999px;white-space:nowrap}
-.count-chip b{color:var(--gold-l);font-family:var(--serif);font-size:15px}
-.count-chip .fl{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-
-.nav-dark-toggle{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);display:flex;align-items:center;justify-content:center;font-size:14px;transition:.25s;cursor:pointer;}
-.nav-dark-toggle:hover{border-color:var(--terra);color:var(--terra)}
-[data-theme="dark"] .nav-dark-toggle{border-color:var(--line);color:var(--gold)}
-
-.content-container{padding:32px 36px 60px;max-width:1160px;width:100%;margin:0 auto}
-
-/* ============ BUTTONS & CARDS ============ */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:999px;transition:.2s}
-.btn-primary{background:var(--terra);color:#fff;box-shadow:0 6px 18px rgba(193,89,31,.3)}
-.btn-primary:hover{background:var(--terra-d);transform:translateY(-2px)}
-.btn-line{border:1.5px solid var(--line);color:var(--ink-soft);background:var(--card)}
-.btn-line:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
-.btn-danger-line{border:1.5px solid rgba(179,64,46,.4);color:var(--bad);background:var(--card)}
-.btn-danger-line:hover{background:rgba(179,64,46,.08)}
-
+/* Past Papers — page-specific */
 /* ============ PAPERS GRID ============ */
-.papers-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:18px;margin-top:24px;}
-.paper-card{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--sh-sm);cursor:pointer;transition:transform .28s, box-shadow .28s, border-color .28s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:12px;}
-.paper-card:hover{transform:translateY(-5px);border-color:var(--terra);box-shadow:var(--sh-md);}
-.paper-top{display:flex;align-items:center;justify-content:space-between;}
-.paper-tag{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:rgba(217,164,65,.16);color:#8a6413;padding:4px 10px;border-radius:99px;}
-[data-theme="dark"] .paper-tag{color:var(--gold-l);background:rgba(217,164,65,.15);}
-.paper-card h3{font-size:22px;color:var(--ink);}
-.paper-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
-.paper-meta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-soft);}
-.paper-cta{color:var(--terra);font-weight:700;display:inline-flex;align-items:center;gap:6px;}
-
-/* ============ EXAM INTERFACE ============ */
-.exam-hud{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:var(--sh-sm);margin-bottom:20px;}
-.timer-chip{font-family:var(--serif);font-size:24px;font-weight:600;background:var(--g800);color:var(--gold-l);padding:6px 18px;border-radius:12px;font-variant-numeric:tabular-nums;display:inline-flex;align-items:center;gap:10px;}
-.timer-chip.warning{color:#ff9c7a;animation:pulse 1s infinite;}
-.hud-title{font-size:13.5px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.08em;}
-.hud-progress{font-size:14px;font-weight:600;color:var(--ink);}
-
-.q-box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px;box-shadow:var(--sh-sm);margin-bottom:22px;}
-.q-sub-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--terra);}
-.q-passage{background:var(--cream-2);border:1px solid var(--line);border-radius:14px;padding:18px 22px;font-size:14.5px;line-height:1.7;color:var(--ink);margin-bottom:20px;}
-.q-text{font-size:18px;font-weight:600;line-height:1.5;color:var(--ink);margin-bottom:22px;font-family:var(--serif);}
-.q-opts{display:grid;gap:10px;}
-.q-opt{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1.5px solid var(--line);border-radius:14px;background:var(--cream);font-size:15px;font-weight:500;text-align:left;color:var(--ink);transition:.2s;}
-.q-opt:hover:not(:disabled){border-color:var(--terra);transform:translateX(3px);}
-.q-opt.selected{border-color:var(--terra);background:rgba(193,89,31,.08);color:var(--terra-d);}
-[data-theme="dark"] .q-opt.selected{color:var(--gold-l);}
-.q-opt-letter{flex:none;width:30px;height:30px;border-radius:9px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font-size:12.5px;font-weight:700;color:var(--ink-soft);}
-.q-opt.selected .q-opt-letter{background:var(--terra);border-color:var(--terra);color:#fff;}
-.q-opt.correct{border-color:var(--ok);background:rgba(46,125,79,.1);}
-.q-opt.correct .q-opt-letter{background:var(--ok);border-color:var(--ok);color:#fff;}
-.q-opt.wrong{border-color:var(--bad);background:rgba(179,64,46,.1);}
-.q-opt.wrong .q-opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
-
-.q-nav-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:20px;}
-.nav-grid-box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;margin-top:28px;}
-.nav-grid-title{font-size:14.5px;font-weight:700;color:var(--ink);margin-bottom:14px;}
-.nav-pills{display:grid;grid-template-columns:repeat(auto-fill, minmax(42px, 1fr));gap:8px;}
-.nav-pill{height:42px;border-radius:10px;border:1.5px solid var(--line);background:var(--cream);font-size:13px;font-weight:700;display:grid;place-items:center;cursor:pointer;transition:.2s;color:var(--ink);}
-.nav-pill:hover{border-color:var(--terra);}
-.nav-pill.current{border-color:var(--terra);background:var(--terra);color:#fff;}
-.nav-pill.answered{border-color:rgba(46,125,79,.6);background:rgba(46,125,79,.12);color:var(--ok);}
-
-/* ============ RESULTS ============ */
-.results-card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:36px;box-shadow:var(--sh-md);text-align:center;max-width:760px;margin:0 auto;}
-.res-score{font-family:var(--serif);font-size:76px;font-weight:600;line-height:1;color:var(--ink);margin:12px 0 4px;}
-.res-score span{font-size:24px;color:var(--ink-soft);}
-.res-kpi-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;margin:28px 0;}
-.res-kpi{background:var(--cream-2);border:1px solid var(--line);border-radius:16px;padding:16px;}
-.res-kpi b{font-family:var(--serif);font-size:26px;display:block;color:var(--ink);}
-.res-kpi span{font-size:12px;color:var(--ink-soft);text-transform:uppercase;font-weight:700;letter-spacing:.05em;}
-
-.breakdown-list{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow-y:auto;text-align:left;padding-right:8px;margin-top:20px;}
-.bd-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:var(--cream);font-size:13.5px;}
-.bd-icon{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;flex-shrink:0;}
-.bd-icon.ok{background:rgba(46,125,79,.15);color:var(--ok);}
-.bd-icon.fail{background:rgba(179,64,46,.15);color:var(--bad);}
-.bd-icon.skip{background:var(--cream-2);color:var(--ink-soft);}
-
-
-
-.overlay{position:fixed;inset:0;background:rgba(10,36,27,.5);z-index:55;opacity:0;pointer-events:none;transition:.3s}
-.overlay.show{opacity:1;pointer-events:auto}
-
-@media(max-width:960px){
-  .sidebar{transform:translateX(-100%)}
-  .sidebar.open{transform:none;box-shadow:0 0 60px rgba(0,0,0,.4)}
-  .main{margin-left:0}
-  .burger{display:flex}
-  .topbar{padding:16px 20px}
-  .content-container{padding:22px 20px 40px}
-  .papers-grid{grid-template-columns:1fr;}
+.papers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px;margin-top:20px}
+.paper-card{background:var(--sky-l);border:var(--bw) solid var(--ink);border-radius:var(--r);padding:24px;box-shadow:var(--sh);cursor:pointer;transition:transform .3s var(--e),box-shadow .3s var(--e);position:relative;display:flex;flex-direction:column;gap:12px;animation:cardin .5s var(--e) backwards}
+.paper-card:nth-child(4n+2){background:var(--sun-l)}
+.paper-card:nth-child(4n+3){background:var(--coral-l)}
+.paper-card:nth-child(4n){background:var(--mint-l)}
+.paper-card:hover{transform:translate(-3px,-6px) rotate(-.5deg);box-shadow:9px 12px 0 var(--ink)}
+.paper-top{display:flex;align-items:center;justify-content:space-between}
+.paper-tag{font:.62rem var(--f-px);letter-spacing:0;text-transform:none;background:#fff;color:var(--ink);border:2.5px solid var(--ink);padding:4px 11px;border-radius:99px}
+.paper-card h3{font-size:1.7rem;color:var(--ink)}
+.paper-card p{font-size:.95rem;color:var(--ink-2);line-height:1.5}
+.paper-meta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:3px dashed rgba(27,19,64,.25);font:700 .85rem var(--f-body);letter-spacing:0;color:var(--ink-2)}
+.paper-cta{color:var(--ink);font:800 .95rem var(--f-disp);display:inline-flex;align-items:center;gap:6px;background:var(--sun);border:var(--bw) solid var(--ink);border-radius:99px;padding:3px 13px;transition:transform .25s var(--e)}
+.paper-card:hover .paper-cta{transform:translateX(3px)}
+/* ============ EXAM HUD & CARDS ============ */
+.exam-hud{background:#fff;border:var(--bw) solid var(--ink);border-radius:var(--r);padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:var(--sh);margin-bottom:24px}
+.timer-chip{font:800 1.5rem/1 var(--f-disp);background:var(--grape);color:var(--sun);border:var(--bw) solid var(--ink);padding:8px 20px;border-radius:99px;display:inline-flex;align-items:center;gap:10px;letter-spacing:-.01em;box-shadow:var(--sh-s)}
+.timer-chip.warning{background:var(--coral);color:#fff;animation:tickpop .5s infinite alternate}
+.hud-title{font:.7rem var(--f-px);letter-spacing:0;text-transform:none;color:var(--grape)}
+.hud-progress{font:800 1.05rem var(--f-disp);color:var(--ink);margin-top:2px}
+.q-box{background:#fff;border:var(--bw) solid var(--ink);border-radius:var(--r);padding:30px;box-shadow:var(--sh);margin-bottom:24px}
+.q-sub-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;font:.7rem var(--f-px);letter-spacing:0;text-transform:none;color:var(--grape)}
+.q-passage{background:var(--lav);border:var(--bw) dashed var(--ink-3);border-radius:var(--r-s);padding:16px 20px;font-size:.98rem;line-height:1.7;color:var(--ink);margin-bottom:22px}
+.q-text{font:700 1.15rem/1.55 var(--f-disp);letter-spacing:-.01em;color:var(--ink);margin-bottom:22px}
+.q-text table{border-collapse:separate;border-spacing:0;margin:16px 0;font-size:.9rem;background:#fff;border:var(--bw) solid var(--ink);border-radius:var(--r-s);overflow:hidden;width:100%;max-width:540px}
+.q-text th,.q-text td{border:1px solid rgba(27,19,64,.18);padding:7px 12px;text-align:center;font-family:var(--f-body)}
+.q-text th{background:var(--sun-l);font-weight:800}
+.q-img{margin:18px 0;text-align:center}
+.q-img img{max-width:100%;max-height:460px;border-radius:var(--r-s);border:var(--bw) solid var(--ink);box-shadow:var(--sh-s);margin:0 auto;display:block}
+.q-opts{display:grid;gap:12px}
+.q-opt{display:flex;align-items:center;gap:14px;padding:12px 16px;border:var(--bw) solid var(--ink);border-radius:var(--r-s);background:var(--cream);font:600 1rem var(--f-body);text-align:left;color:var(--ink);transition:transform .15s,box-shadow .15s,background .15s;cursor:pointer}
+.q-opt:hover:not(:disabled){background:#fff;transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.q-opt.selected{background:var(--sun-l);box-shadow:4px 4px 0 var(--grape);transform:translate(-2px,-2px);font-weight:700}
+.q-opt-letter{flex:none;width:34px;height:34px;border-radius:50%;background:#fff;border:var(--bw) solid var(--ink);display:grid;place-items:center;font:800 .95rem var(--f-disp);color:var(--ink)}
+.q-opt.selected .q-opt-letter{background:var(--grape);color:#fff}
+.q-opt.correct{background:var(--mint-l);box-shadow:4px 4px 0 var(--mint);transform:translate(-2px,-2px)}
+.q-opt.correct .q-opt-letter{background:var(--mint);color:var(--ink)}
+.q-opt.wrong{background:var(--coral-l);box-shadow:4px 4px 0 var(--coral);transform:translate(-2px,-2px)}
+.q-opt.wrong .q-opt-letter{background:var(--coral);color:#fff}
+.q-nav-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:22px}
+.nav-grid-box{background:#fff;border:var(--bw) solid var(--ink);border-radius:var(--r);padding:22px;margin-top:28px;box-shadow:var(--sh)}
+.nav-grid-title{font:.7rem var(--f-px);letter-spacing:0;text-transform:none;color:var(--grape);margin-bottom:14px}
+.nav-pills{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:8px}
+.nav-pill{width:100%;height:40px;border-radius:50%;border:2.5px solid var(--ink);background:#fff;display:grid;place-items:center;font:800 .85rem var(--f-disp);color:var(--ink);cursor:pointer;transition:transform .15s,background .15s}
+.nav-pill:hover{transform:scale(1.12) rotate(-4deg)}
+.nav-pill.current{background:var(--sun)}
+.nav-pill.answered{background:var(--mint)}
+/* Results */
+.results-card{background:#fff;border:var(--bw) solid var(--ink);border-radius:28px;padding:40px;box-shadow:8px 8px 0 var(--grape);max-width:760px;margin:0 auto;text-align:center}
+.res-score{font:800 clamp(4rem,8vw,6rem)/1 var(--f-disp);letter-spacing:-.05em;color:var(--grape);text-shadow:4px 4px 0 var(--sun);margin:14px 0 6px}
+.res-score span{font-size:1.6rem;color:var(--ink-2);font-weight:700;text-shadow:none;letter-spacing:0}
+.res-kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
+.res-kpi{background:var(--sky-l);border:var(--bw) solid var(--ink);border-radius:var(--r-s);box-shadow:var(--sh-s);padding:16px}
+.res-kpi:nth-child(2){background:var(--sun-l)}
+.res-kpi:nth-child(3){background:var(--mint-l)}
+.res-kpi b{font:800 2rem/1.1 var(--f-disp);letter-spacing:-.03em;display:block}
+.res-kpi span{font:.58rem var(--f-px);letter-spacing:0;text-transform:none;color:var(--ink-2)}
+.breakdown-list{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow-y:auto;text-align:left;padding:4px 8px 6px 4px;margin-top:24px}
+.bd-row{display:flex;align-items:center;gap:12px;padding:10px 14px;border:2.5px solid var(--ink);border-radius:var(--r-s);background:var(--cream);font:600 .92rem var(--f-body);transition:transform .2s var(--e),background .2s}
+.bd-row:hover{background:#fff;transform:translateX(3px)}
+.bd-icon{width:28px;height:28px;border-radius:50%;border:2.5px solid var(--ink);display:grid;place-items:center;font-size:12px;font-weight:800;flex-shrink:0}
+.bd-icon.ok{background:var(--mint);color:var(--ink)}
+.bd-icon.fail{background:var(--coral);color:#fff}
+.bd-icon.skip{background:var(--lav);color:var(--ink-2)}
+@media(max-width:900px){
+  .papers-grid{grid-template-columns:1fr}
+  .res-kpi-grid{grid-template-columns:1fr}
 }
+@media(max-width:640px){.q-box{padding:22px 18px}.q-text{font-size:1.2rem}.results-card{padding:28px 18px}}
+/* Past Papers v2 — archive folders, answer sheet */
+.top{margin-bottom:22px}
+.cd-chip{display:none}
+.ecg-div{display:none}
+
+/* hero */
+.arch-hero{position:relative;overflow:hidden;background:var(--grape);background-image:radial-gradient(rgba(255,255,255,.16) 1.6px,transparent 1.6px);background-size:22px 22px;color:#fff;border:var(--bw) solid var(--ink);border-radius:28px;box-shadow:var(--sh);padding:30px 34px;margin-bottom:46px;min-height:230px}
+.arch-hero .eyebrow{background:var(--sun);color:var(--ink)}
+.arch-hero h2{font-size:clamp(1.9rem,3.6vw,3rem);line-height:1}
+.arch-hero h2 em{font-style:normal;color:var(--sun);text-shadow:3px 3px 0 var(--ink)}
+.arch-hero p{color:rgba(255,255,255,.9);max-width:420px;margin-top:10px}
+.arch-tiles{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;position:relative;z-index:2}
+.arch-tiles div{background:#fff;color:var(--ink);border:var(--bw) solid var(--ink);border-radius:16px;padding:8px 16px;box-shadow:var(--sh-s);min-width:104px}
+.arch-tiles b{display:block;font:800 1.5rem/1 var(--f-disp);letter-spacing:-.04em}
+.arch-tiles span{font:700 .78rem var(--f-body);color:var(--ink-2)}
+.arch-pip{position:absolute;right:34px;bottom:-12px;width:170px;pointer-events:none;animation:pipbob 3.4s ease-in-out infinite}
+
+/* folders */
+.papers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:46px 24px;margin-top:0}
+.folder{position:relative;cursor:pointer;animation:cardin .5s var(--e) backwards;transition:transform .3s var(--e);--fc:var(--sky-l)}
+.folder.f1{--fc:var(--sun-l)}.folder.f2{--fc:var(--coral-l)}.folder.f3{--fc:var(--mint-l)}
+.f-tab{position:absolute;top:-34px;left:22px;height:36px;padding:0 22px;display:flex;align-items:center;background:var(--fc);border:var(--bw) solid var(--ink);border-bottom:0;border-radius:16px 16px 0 0;font:800 1.2rem var(--f-disp);letter-spacing:-.02em;z-index:2}
+.f-body{position:relative;background:var(--fc);border:var(--bw) solid var(--ink);border-radius:0 24px 24px 24px;box-shadow:var(--sh);padding:22px 22px 18px;display:flex;flex-direction:column;gap:10px;min-height:236px;transition:box-shadow .3s var(--e)}
+.f-body::before{content:"";position:absolute;left:0;top:-3px;width:calc(22px + 62px + 28px);height:3px;background:var(--fc);z-index:3;display:none}
+.folder:hover{transform:translate(-3px,-6px) rotate(-.4deg)}
+.folder:hover .f-body{box-shadow:9px 12px 0 var(--ink)}
+.folder h3{font-size:1.6rem}
+.folder p{font-size:.94rem;color:var(--ink-2);line-height:1.45}
+.paper-top{display:flex;align-items:center;justify-content:space-between}
+.f-q{font:700 .82rem var(--f-body);color:var(--ink-2)}
+.folder .paper-meta{margin-top:auto}
+
+/* setup */
+.setup-wrap{max-width:640px;margin:0 auto}
+.setup-wrap>.btn{margin-bottom:22px}
+.setup-card{position:relative;background:#fff;border:var(--bw) solid var(--ink);border-radius:28px;box-shadow:8px 8px 0 var(--grape);padding:32px}
+.setup-card h2{font-size:2.2rem;margin:10px 0 8px}
+.setup-card p{color:var(--ink-2);margin-bottom:22px;max-width:380px}
+.setup-pip{position:absolute;right:20px;top:-34px;width:130px;pointer-events:none}
+.setup-rules{background:var(--lav);border:var(--bw) solid var(--ink);border-radius:var(--r-s);padding:6px 18px;margin-bottom:22px}
+.setup-rules div{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:3px dashed rgba(27,19,64,.2)}
+.setup-rules div:last-child{border-bottom:0}
+.setup-rules span{font:.62rem var(--f-px);color:var(--grape)}
+.setup-rules b{font:800 1.1rem var(--f-disp)}
+.setup-rules em{font-style:normal}.setup-rules .g{color:#0b6b52}.setup-rules .r{color:var(--coral)}
+
+/* exam layout */
+.ex-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.ex-main{min-width:0}
+.ex-side{position:sticky;top:96px;display:flex;flex-direction:column;gap:18px}
+.exam-hud{flex-direction:column;align-items:stretch;gap:12px;background:var(--sun-l);margin:0;padding:18px;text-align:center}
+.exam-hud .timer-chip{justify-content:center;font-size:2.2rem;padding:10px 18px}
+.nav-grid-box{margin-top:0;padding:18px}
+.nav-pills{grid-template-columns:repeat(6,1fr)}
+.nav-pill{height:34px;font-size:.78rem}
+.sol{margin-top:24px;padding:18px 20px;border-radius:20px;border:var(--bw) solid var(--ink);box-shadow:var(--sh-s)}
+.sol.ok{background:var(--mint-l)}.sol.no{background:var(--coral-l)}
+.sol-verdict{font:800 1.2rem var(--f-disp);margin-bottom:8px}
+.sol-body{line-height:1.65}
+.q-nav-bar{margin-top:20px}
+
+/* results */
+.results-card{position:relative}
+.res-pip{width:130px;display:block;margin:0 auto 6px}
+.res-sub{color:var(--ink-2);font-size:1rem;margin-bottom:14px}
+.res-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+.bd-q{font:800 .95rem var(--f-disp);width:38px}
+.bd-label{font:800 .85rem var(--f-body)}
+
+@media(max-width:980px){
+  .ex-grid{grid-template-columns:1fr}
+  .ex-side{position:static;order:-1;flex-direction:row;flex-wrap:wrap}
+  .ex-side>*{flex:1;min-width:260px}
+  .arch-pip{position:static;display:block;margin:-10px 0 -14px auto;width:120px}
+}
+@media(max-width:560px){.papers-grid{grid-template-columns:1fr}.setup-card{padding:24px 18px}}
+
 </style>
+<script src="exam-date.js"></script>
 </head>
 <body>
-
-<div class="overlay" id="overlay"></div>
-
-
-</div>
+<div class="noise" aria-hidden="true"></div>
+<div class="scrim" aria-hidden="true"></div>
 
 <!-- ================= SIDEBAR ================= -->
-<aside class="sidebar" id="sidebar">
-  <a class="logo" href="index.html">Imat<em>Path</em></a>
-  <nav class="sb-nav">
-    <a href="dashboard.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
-      Dashboard</a>
-    <a href="checklist.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-      Syllabus Checklist</a>
-    <a href="question-bank.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-      Question Bank</a>
-    <a href="mock-exam.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg>
-      Mock Exams</a>
-    <a class="active" href="roadmap.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
-      IMAT Past Papers</a>
-    <a href="analytics.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M8 17v-6M13 17V7M18 17v-4"/></svg>
-      Analytics</a>
-  </nav>
-  <div class="sb-spacer"></div>
-  
-  <div class="access-card" id="accessPlanCard" onclick="window.location.href='dashboard.html'">
-    <span class="ac-l"><i></i><span id="accessPlanTitle">Free Plan</span></span>
-    <b id="accessPlanStatus">Full access</b>
-    <span id="accessPlanSub">All features included · no payment required</span>
-  </div>
-  
-  <div class="user-row">
-    <span class="avatar" id="userAvatar">U</span>
-    <div class="u-t">
-      <b id="userName">User</b>
-      <small>IMAT 2026 candidate</small>
-    </div>
-    <a class="logout" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+<aside class="side" id="side">
+  <div class="tricolore" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button class="side-x" id="sideX" aria-label="Close menu">✕</button>
+  <div class="side-in">
+    <a class="logo" href="index.html" aria-label="ImatPath home">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
     </a>
+    <nav class="snav" aria-label="Dashboard navigation">
+      <a href="dashboard.html" title="Dashboard"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a><a href="lessons.html" title="Lessons"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.500-2 10-.5V19c-2.500-1.500-6-1.500-10 .5-4-2-7.500-2-10-.5z"/><path d="M12 6v13.500"/></svg>Lessons</a>
+      <a href="flashcards.html" title="Flashcards"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="14" height="14" rx="2.5"/><path d="M17 17v1.5A2.5 2.5 0 0 1 14.5 21h-9A2.5 2.5 0 0 1 3 18.5v-9A2.5 2.5 0 0 1 5.5 7H7"/><path d="M11 10h6"/></svg>Flashcards</a>
+      <a href="checklist.html" title="Syllabus Checklist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="m8 9 2 2 4-4M8 15h8"/></svg>Syllabus Checklist</a>
+      <a href="question-bank.html" title="Question Bank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.33c-.7.28-.9.87-.9 1.67"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>Question Bank</a>
+      <a href="mock-exam.html" title="Mock Exams"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>Mock Exams</a>
+      <a class="act" href="roadmap.html" title="IMAT Past Papers"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/><path d="M9 8h6M9 12h6"/></svg>IMAT Past Papers</a>
+      <a href="analytics.html" title="Analytics"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Analytics</a>
+    </nav>
+    <div class="side-foot">
+      <div class="plan-card">
+        <span class="t"><i></i>IMAT Candidate Access</span>
+        <p>Valid until exam day · Track your progress across all devices.</p>
+      </div>
+      <div class="user-card" id="userCard">
+        <span class="avatar" id="userAvatar">U</span>
+        <span style="flex:1;min-width:0;overflow:hidden"><span class="n" id="userName">User</span><br><span class="r">IMAT 2027 candidate</span></span>
+        <button class="logout-btn" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        </button>
+      </div>
+    </div>
   </div>
 </aside>
 
 <!-- ================= MAIN ================= -->
-<div class="main">
-  <header class="topbar">
-    <div style="display:flex;align-items:center;gap:12px">
-      <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
-      <div>
-        <h1 id="pageHeadingTitle">IMAT Past Papers</h1>
-        <p>Official past exam simulations with official +1.5 / −0.4 scoring.</p>
-      </div>
+<main class="main">
+  <div class="mtop">
+    <a class="logo" href="index.html" style="text-decoration:none">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+  </div>
+
+  <header class="top">
+    <div>
+      <span class="eyebrow" data-rv>Official Cambridge &amp; MUR Papers</span>
+      <h1 class="lm"><span>IMAT Past <em>Papers.</em></span></h1>
+      <p class="top-sub" data-rv style="--d:.15s">Simulate official past exams under timed conditions with authentic +1.5 / −0.4 scoring.</p>
     </div>
-    <div class="top-right">
-      <button class="nav-dark-toggle" id="navDarkToggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-      </button>
-      <span class="date-chip" id="todayChip">—</span>
-      <span class="count-chip"><span class="fl"></span><b id="daysChip">31</b>&nbsp;days to IMAT</span>
+    <div class="cd-chip" data-rv style="--d:.2s" role="timer" aria-label="Countdown to IMAT 2027">
+      <span class="big"><span id="cdDays">356</span><small> days<br>to IMAT</small></span>
+      <div class="cd-boxes">
+        <div class="cd-b"><b id="cdH">--</b><span>hrs</span></div>
+        <div class="cd-b"><b id="cdM">--</b><span>min</span></div>
+        <div class="cd-b"><b id="cdS">--</b><span>sec</span></div>
+      </div>
     </div>
   </header>
 
-  <div class="content-container">
-    <div id="app"></div>
+  <div class="ecg-div" aria-hidden="true">
+    <svg viewBox="0 0 1200 56" preserveAspectRatio="none"><path class="ecg-path" pathLength="1000" d="M0 30 H120 l14 0 8-16 10 30 8-14 h60 H320 l14 0 8-16 10 30 8-14 h60 H620 l14 0 8-16 10 30 8-14 h60 H920 l14 0 8-16 10 30 8-14 h60 H1200"/></svg>
   </div>
-</div>
+
+  <div id="app"></div>
+
+  <div class="foot-line">
+    <span>© 2026 ImatPath. All rights reserved.</span>
+    <span>Not affiliated with Cambridge Assessment or MUR.</span>
+  </div>
+</main>
 
 <script src="past-papers-data.js"></script>
 <script src="xp-system.js"></script>
@@ -276,35 +267,17 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spa
 <script>
 (function(){
 "use strict";
-const $=s=>document.querySelector(s);
-const $$=s=>Array.from(document.querySelectorAll(s));
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ── Dark Mode Toggle & Sync ── */
-window.toggleDarkMode = function() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('imatpath_dark_mode', 'false');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('imatpath_dark_mode', 'true');
-  }
-  updateDarkIcon();
-};
+$('#burger').addEventListener('click',()=>document.body.classList.add('menu'));
+$('#sideX').addEventListener('click',()=>document.body.classList.remove('menu'));
+$('.scrim').addEventListener('click',()=>document.body.classList.remove('menu'));
 
-function updateDarkIcon() {
-  const btn = $('#navDarkToggle');
-  if (btn) {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-  }
-}
-document.addEventListener('DOMContentLoaded', updateDarkIcon);
-
-/* ── Logout Handler ── */
+/* ── User & Auth ── */
 window.handleLogout = async function(e) {
   if (e) e.preventDefault();
-  if (window.ImatAuth) {
+  if (window.ImatAuth && typeof window.ImatAuth.signOut === 'function') {
     await window.ImatAuth.signOut();
   } else {
     localStorage.removeItem('imatpath_user');
@@ -312,24 +285,38 @@ window.handleLogout = async function(e) {
   }
 };
 
-/* ── Sidebar Mobile ── */
-const sb=$("#sidebar"), ov=$("#overlay");
-if ($("#burger")) $("#burger").addEventListener("click",()=>{sb.classList.add("open");ov.classList.add("show");});
-if (ov) ov.addEventListener("click",()=>{sb.classList.remove("open");ov.classList.remove("show");});
+try {
+  const u = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
+  const name = u.full_name || u.name || (u.email ? u.email.split('@')[0] : 'User');
+  const firstName = name.split(' ')[0] || 'User';
+  const initial = firstName.charAt(0).toUpperCase() || 'U';
+  if ($('#userName')) $('#userName').textContent = firstName;
+  if ($('#userAvatar')) $('#userAvatar').textContent = initial;
+} catch(e) {}
 
-/* ── Today & Countdown ── */
-if ($("#todayChip")) {
-  $("#todayChip").textContent = new Date().toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+/* reveals */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+$$('[data-rv],.lm').forEach(el=>RM?el.classList.add('in'):io.observe(el));
+
+/* countdown (target: IMAT 2027 · September 28, 2027) */
+let target=new Date(window.IMAT_EXAM);
+if(target-Date.now()<=0)target=new Date(Date.now()+356*864e5);
+const pad=n=>String(n).padStart(2,'0');
+function setB(id,v){const el=$('#'+id);if(el&&el.textContent!==v){el.textContent=v;if(!RM){el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');}}}
+function tickCd(){
+  const d=Math.max(0,target-Date.now());
+  const daysEl = $('#cdDays');
+  if (daysEl) daysEl.textContent=Math.floor(d/864e5);
+  setB('cdH',pad(Math.floor(d/36e5)%24));
+  setB('cdM',pad(Math.floor(d/6e4)%60));
+  setB('cdS',pad(Math.floor(d/1e3)%60));
 }
-const examDate = new Date("2026-09-29T09:00:00");
-const diffDays = Math.max(0, Math.ceil((examDate - new Date()) / 864e5));
-if ($("#daysChip")) $("#daysChip").textContent = diffDays;
+tickCd();setInterval(tickCd,1000);
 
 /* ── Scoring & Constants ── */
 const IMAT_CORRECT = 1.5;
 const IMAT_WRONG = -0.4;
 const EXAM_DURATION_MINUTES = 100;
-const QUESTIONS_PER_EXAM = 60;
 
 let state = {
   view: 'select-exam',
@@ -444,10 +431,12 @@ window.submitExam = function() {
   state.view = 'results';
   saveState();
   const score = calculateScore();
-  if (window.ImatAuth) {
+  if (window.ImatAuth && typeof window.ImatAuth.saveMockResult === 'function') {
     window.ImatAuth.saveMockResult('past-' + state.selectedExamId, score);
   }
-  if (typeof XP !== 'undefined') setTimeout(() => XP.award('mock'), 500);
+  if (typeof XP !== 'undefined' && typeof XP.award === 'function') {
+    setTimeout(() => XP.award('mock'), 500);
+  }
   render();
 };
 
@@ -498,60 +487,71 @@ function render() {
   else if (state.view === 'exam') app.innerHTML = renderExam();
   else if (state.view === 'results') app.innerHTML = renderResults();
   else if (state.view === 'review') app.innerHTML = renderReview();
+  if (window.pipFill) window.pipFill(app);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+/* rm2-marker */
+const PAPERS = [
+  ['2026','Official MUR','The latest official exam (AY 2026/2027) with full worked solutions, official scoring formula, and complete syllabus coverage.'],
+  ['2025','Official MUR','Official 2025 exam with full detailed explanations, real time constraints, and complete syllabus coverage.'],
+  ['2024','Official MUR','Official 2024 exam covering Reading Skills, Knowledge, Biology, Chemistry, Physics & Mathematics.'],
+  ['2023','Official MUR','Complete official past paper with authentic question stems and step-by-step verified solutions.'],
+  ['2022','Official Cambridge','Authentic Cambridge exam with official diagrams, problem-solving, biology, chemistry, physics and math.'],
+  ['2021','Official Cambridge','Complete Cambridge exam featuring official problem solving, scientific diagrams, worked solutions, and full syllabus questions.'],
+  ['2020','Official Cambridge','Official Cambridge exam with authentic data interpretation, scientific graphs, complete worked solutions, and full syllabus questions.'],
+  ['2019','Official Cambridge','Official Cambridge exam with authentic logic puzzles, diagrams, genetics problems, and full syllabus questions.'],
+  ['2018','Official Cambridge','Official Cambridge exam featuring critical reasoning, charts, organic nomenclature, genetics, and mathematics.'],
+  ['2017','Official Cambridge','Official Cambridge exam featuring logic problems, diagrams, molecular genetics, redox chemistry, and mechanics.']
+];
+
 function renderSelectExam() {
-  return `
-    <div style="animation:fadeInUp .5s ease">
-      <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:6px">Official Cambridge & MUR Papers</span>
-      <h2>Official IMAT Past Papers</h2>
-      <p style="color:var(--ink-soft);font-size:14.5px;max-width:600px;margin-bottom:24px;">Practice with real official IMAT papers under timed simulation conditions (+1.5 / −0.4 scoring).</p>
-      
-      <div class="papers-grid">
-        <div class="paper-card" onclick="selectExam('2025')">
-          <div class="paper-top"><span class="paper-tag">Official MUR</span><span style="font-size:12px;color:var(--ink-soft);font-weight:600">60 Questions</span></div>
-          <h3>IMAT 2025 Past Paper</h3>
-          <p>The latest official exam with full detailed explanations and syllabus coverage.</p>
-          <div class="paper-meta"><span>100 Minutes &middot; Real Scoring</span><span class="paper-cta">Start Paper <i class="fas fa-arrow-right"></i></span></div>
-        </div>
-
-        <div class="paper-card" onclick="selectExam('2024')">
-          <div class="paper-top"><span class="paper-tag">Official MUR</span><span style="font-size:12px;color:var(--ink-soft);font-weight:600">60 Questions</span></div>
-          <h3>IMAT 2024 Past Paper</h3>
-          <p>Official 2024 exam covering Section 1, Biology, Chemistry, Physics & Mathematics.</p>
-          <div class="paper-meta"><span>100 Minutes &middot; Real Scoring</span><span class="paper-cta">Start Paper <i class="fas fa-arrow-right"></i></span></div>
-        </div>
-
-        <div class="paper-card" onclick="selectExam('2023')">
-          <div class="paper-top"><span class="paper-tag">Official Cambridge</span><span style="font-size:12px;color:var(--ink-soft);font-weight:600">60 Questions</span></div>
-          <h3>IMAT 2023 Past Paper</h3>
-          <p>Complete official past paper with question-by-question solutions.</p>
-          <div class="paper-meta"><span>100 Minutes &middot; Real Scoring</span><span class="paper-cta">Start Paper <i class="fas fa-arrow-right"></i></span></div>
+  let html = `
+    <div class="arch-hero">
+      <div>
+        <span class="eyebrow">The official archive</span>
+        <h2>Ten real exams.<br><em>Zero surprises.</em></h2>
+        <p>Sit a real past paper under exam conditions — 100 minutes, official scoring, full worked solutions afterwards.</p>
+        <div class="arch-tiles">
+          <div><b>${PAPERS.length}</b><span>past papers</span></div>
+          <div><b>${PAPERS.length * 60}</b><span>real questions</span></div>
+          <div><b>100</b><span>minutes each</span></div>
         </div>
       </div>
+      <span class="arch-pip" data-pip data-mood="wow" aria-hidden="true"></span>
     </div>
-  `;
+    <div class="papers-grid">`;
+  PAPERS.forEach(([year, issuer, desc], i) => {
+    html += `
+      <div class="folder f${i % 4}" onclick="selectExam('${year}')" style="animation-delay:${i*0.05}s">
+        <div class="f-tab">${year}</div>
+        <div class="f-body">
+          <div class="paper-top"><span class="paper-tag">${issuer}</span><span class="f-q">60 questions</span></div>
+          <h3>IMAT ${year} Past Paper</h3>
+          <p>${desc}</p>
+          <div class="paper-meta"><span>100 min · +1.5 / −0.4</span><span class="paper-cta">Simulate <span class="ar">→</span></span></div>
+        </div>
+      </div>`;
+  });
+  html += `</div>`;
+  return html;
 }
 
 function renderSetup() {
-  const hasProgress = state.examQuestions.length > 0;
   return `
-    <div style="max-width:640px;margin:0 auto;animation:fadeInUp .5s ease">
-      <button class="btn-line" onclick="goBack()" style="margin-bottom:20px;padding:9px 18px;font-size:13px"><i class="fas fa-arrow-left"></i> All Past Papers</button>
-      
-      <div style="background:var(--card);border:1.5px solid var(--line);border-radius:24px;padding:34px;box-shadow:var(--sh-md);">
-        <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);background:var(--g900);padding:4px 12px;border-radius:99px;">IMAT ${state.selectedExamId}</span>
-        <h2 style="font-size:2rem;margin:14px 0 8px;">Official Past Paper Setup</h2>
-        <p style="color:var(--ink-soft);font-size:14px;margin-bottom:24px;">Simulate real exam conditions: 60 questions across all subjects in 100 minutes.</p>
-        
-        <div style="background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:18px 22px;display:flex;flex-direction:column;gap:12px;font-size:14px;margin-bottom:24px;">
-          <div style="display:flex;justify-content:space-between;"><span><b>Duration:</b></span> <span>100 Minutes</span></div>
-          <div style="display:flex;justify-content:space-between;"><span><b>Questions:</b></span> <span>60 Official Questions</span></div>
-          <div style="display:flex;justify-content:space-between;"><span><b>Scoring:</b></span> <span><b style="color:var(--ok)">+1.5</b> / <b style="color:var(--bad)">−0.4</b> / 0</span></div>
+    <div class="setup-wrap">
+      <button class="btn ghost sm" onclick="goBack()"><span class="ar">←</span> All Past Papers</button>
+      <div class="setup-card">
+        <span class="setup-pip" data-pip aria-hidden="true"></span>
+        <span class="eyebrow">IMAT ${state.selectedExamId}</span>
+        <h2>Official simulation</h2>
+        <p>Authentic exam conditions: 60 questions across all test sections in 100 continuous minutes.</p>
+        <div class="setup-rules">
+          <div><span>Duration</span><b>100 minutes</b></div>
+          <div><span>Questions</span><b>60 official</b></div>
+          <div><span>Scoring</span><b><em class="g">+1.5</em> / <em class="r">−0.4</em> / 0</b></div>
         </div>
-
-        <button class="btn btn-primary" onclick="startExam()" style="width:100%;font-size:16px;padding:15px">Start Past Paper ${state.selectedExamId} <i class="fas fa-arrow-right"></i></button>
+        <button class="btn red" onclick="startExam()" style="width:100%;padding:15px;font-size:1.05rem">Start Past Paper ${state.selectedExamId} <span class="ar">→</span></button>
       </div>
     </div>
   `;
@@ -562,57 +562,60 @@ function renderExam() {
   const answer = state.answers[state.currentQuestion];
   const isWarning = state.timeRemaining < 300;
   const L = ['A','B','C','D','E'];
+  const done = Object.keys(state.answers).length;
 
   return `
-    <div style="max-width:860px;margin:0 auto;animation:fadeInUp .4s ease">
-      <div class="exam-hud">
-        <div>
-          <div class="hud-title">IMAT ${state.selectedExamId} Past Paper</div>
-          <div class="hud-progress">${Object.keys(state.answers).length} / ${state.examQuestions.length} answered</div>
-        </div>
-        <div class="timer-chip ${isWarning?'warning':''}"><i class="fas fa-clock" style="font-size:18px"></i> <span class="timer-val">${formatTime(state.timeRemaining)}</span></div>
-      </div>
+    <div class="ex-grid">
+      <div class="ex-main">
+        <div class="q-box">
+          <div class="q-sub-bar">
+            <span>${q.section || 'Official Section'} · ${q.subjectName || ''}</span>
+            <span>Question ${state.currentQuestion + 1} of ${state.examQuestions.length}</span>
+          </div>
+          ${q.passage ? `<div class="q-passage">${q.passage}</div>` : ''}
+          <div class="q-text">${q.question}</div>
+          ${q.image ? `<div class="q-img"><img src="${q.image}" alt="Question diagram"></div>` : ''}
 
-      <div class="q-box">
-        <div class="q-sub-bar">
-          <span>${q.section || 'Official Section'} &middot; ${q.subjectName || ''}</span>
-          <span>Question ${state.currentQuestion + 1} of ${state.examQuestions.length}</span>
+          <div class="q-opts">
+            ${q.options.map((opt, i) => `
+              <button class="q-opt ${answer === i ? 'selected' : ''}" onclick="selectAnswer(${state.currentQuestion}, ${i})">
+                <span class="q-opt-letter">${L[i]}</span>
+                <span>${opt}</span>
+              </button>
+            `).join('')}
+          </div>
         </div>
-        ${q.passage ? `<div class="q-passage">${q.passage}</div>` : ''}
-        <div class="q-text">${q.question}</div>
-        
-        <div class="q-opts">
-          ${q.options.map((opt, i) => `
-            <button class="q-opt ${answer === i ? 'selected' : ''}" onclick="selectAnswer(${state.currentQuestion}, ${i})">
-              <span class="q-opt-letter">${L[i]}</span>
-              <span>${opt}</span>
-            </button>
-          `).join('')}
-        </div>
-      </div>
 
-      <div class="q-nav-bar">
-        <button class="btn-danger-line" onclick="quitExam()"><i class="fas fa-times"></i> Quit</button>
-        <div style="display:flex;gap:10px">
-          <button class="btn-line" onclick="prevQuestion()" ${state.currentQuestion === 0 ? 'disabled' : ''}><i class="fas fa-chevron-left"></i> Previous</button>
-          ${state.currentQuestion < state.examQuestions.length - 1 
-            ? `<button class="btn btn-primary" onclick="nextQuestion()">Next <i class="fas fa-chevron-right"></i></button>`
-            : `<button class="btn btn-primary" onclick="submitExam()" style="background:var(--ok)"><i class="fas fa-check-circle"></i> Submit Exam</button>`
+        <div class="q-nav-bar">
+          <button class="btn ghost sm" onclick="prevQuestion()" ${state.currentQuestion === 0 ? 'disabled style="opacity:.4;pointer-events:none"' : ''}><span class="ar">←</span> Previous</button>
+          ${state.currentQuestion < state.examQuestions.length - 1
+            ? `<button class="btn sm" onclick="nextQuestion()">Next <span class="ar">→</span></button>`
+            : `<button class="btn green sm" onclick="submitExam()"><i class="fas fa-check-circle"></i> Submit Exam</button>`
           }
         </div>
       </div>
 
-      <div class="nav-grid-box">
-        <div class="nav-grid-title">Question Navigator</div>
-        <div class="nav-pills">
-          ${state.examQuestions.map((qi, i) => {
-            let cls = '';
-            if (i === state.currentQuestion) cls = 'current';
-            else if (state.answers[i] !== undefined) cls = 'answered';
-            return `<div class="nav-pill ${cls}" onclick="jumpTo(${i})">${i + 1}</div>`;
-          }).join('')}
+      <aside class="ex-side">
+        <div class="exam-hud">
+          <div>
+            <div class="hud-title">IMAT ${state.selectedExamId} Past Paper</div>
+            <div class="hud-progress">${done} / ${state.examQuestions.length} answered</div>
+          </div>
+          <div class="timer-chip ${isWarning?'warning':''}"><i class="fas fa-clock" style="font-size:16px"></i> <span class="timer-val">${formatTime(state.timeRemaining)}</span></div>
         </div>
-      </div>
+        <div class="nav-grid-box">
+          <div class="nav-grid-title">Answer sheet · ${done}/${state.examQuestions.length}</div>
+          <div class="nav-pills">
+            ${state.examQuestions.map((qi, i) => {
+              let cls = '';
+              if (i === state.currentQuestion) cls = 'current';
+              else if (state.answers[i] !== undefined) cls = 'answered';
+              return `<div class="nav-pill ${cls}" onclick="jumpTo(${i})">${i + 1}</div>`;
+            }).join('')}
+          </div>
+          <button class="btn ghost sm" onclick="quitExam()" style="width:100%;margin-top:14px"><i class="fas fa-times"></i> Quit Exam</button>
+        </div>
+      </aside>
     </div>
   `;
 }
@@ -623,20 +626,21 @@ function renderResults() {
   const pct = Math.round((score.correct / total) * 100);
 
   return `
-    <div class="results-card" style="animation:fadeInUp .5s ease">
-      <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);background:var(--g900);padding:5px 14px;border-radius:99px;">Simulation Complete</span>
+    <div class="results-card">
+      <span class="res-pip" data-pip data-mood="${pct >= 50 ? 'wow' : 'sad'}" aria-hidden="true"></span>
+      <span class="eyebrow">Simulation complete</span>
       <div class="res-score">${score.score} <span>/ 90.0</span></div>
-      <p style="color:var(--ink-soft);font-size:14.5px;">Official IMAT score for Paper ${state.selectedExamId}</p>
+      <p class="res-sub">Official IMAT score for Paper ${state.selectedExamId}</p>
 
       <div class="res-kpi-grid">
-        <div class="res-kpi"><b style="color:var(--ok)">${score.correct}</b><span>Correct (+1.5)</span></div>
-        <div class="res-kpi"><b style="color:var(--bad)">${score.wrong}</b><span>Incorrect (−0.4)</span></div>
+        <div class="res-kpi"><b>${score.correct}</b><span>Correct (+1.5)</span></div>
+        <div class="res-kpi"><b>${score.wrong}</b><span>Incorrect (−0.4)</span></div>
         <div class="res-kpi"><b>${pct}%</b><span>Accuracy</span></div>
       </div>
 
-      <div style="display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap">
-        <button class="btn btn-primary" onclick="startReview()"><i class="fas fa-search"></i> Review All Questions</button>
-        <button class="btn-line" onclick="goBack()"><i class="fas fa-rotate-right"></i> Back to Past Papers</button>
+      <div class="res-btns">
+        <button class="btn red sm" onclick="startReview()"><i class="fas fa-search"></i> Review All Solutions</button>
+        <button class="btn ghost sm" onclick="goBack()"><i class="fas fa-rotate-right"></i> Back to Past Papers</button>
       </div>
 
       <div class="breakdown-list">
@@ -649,9 +653,9 @@ function renderResults() {
           return `
             <div class="bd-row" onclick="jumpTo(${i});startReview();" style="cursor:pointer">
               <div class="bd-icon ${iconCls}">${icon}</div>
-              <div style="font-weight:700;width:38px">Q${i+1}</div>
-              <div style="flex:1"><b>${q.subjectName || ''}</b> &middot; <small>${q.section || ''}</small></div>
-              <div style="font-weight:700">${label}</div>
+              <div class="bd-q">Q${i+1}</div>
+              <div style="flex:1"><b>${q.subjectName || ''}</b> · <small>${q.section || ''}</small></div>
+              <div class="bd-label">${label}</div>
             </div>
           `;
         }).join('')}
@@ -664,69 +668,71 @@ function renderReview() {
   const q = state.examQuestions[state.currentQuestion];
   const answer = state.answers[state.currentQuestion];
   const L = ['A','B','C','D','E'];
+  const ok = answer === q.correct;
 
   return `
-    <div style="max-width:860px;margin:0 auto;animation:fadeInUp .4s ease">
-      <div class="exam-hud">
-        <div>
-          <div class="hud-title">Review Mode &middot; Paper ${state.selectedExamId}</div>
-          <div class="hud-progress">Question ${state.currentQuestion + 1} of ${state.examQuestions.length}</div>
-        </div>
-        <button class="btn-line" onclick="state.view='results';render();" style="padding:8px 16px;font-size:13px"><i class="fas fa-arrow-left"></i> Results</button>
-      </div>
-
-      <div class="q-box">
-        <div class="q-sub-bar">
-          <span>${q.section || ''} &middot; ${q.subjectName || ''}</span>
-          <span>Official Solution</span>
-        </div>
-        ${q.passage ? `<div class="q-passage">${q.passage}</div>` : ''}
-        <div class="q-text">${q.question}</div>
-        
-        <div class="q-opts">
-          ${q.options.map((opt, i) => {
-            let cls = '';
-            if (i === q.correct) cls = 'correct';
-            else if (i === answer) cls = 'wrong';
-            return `
-              <button class="q-opt ${cls}" disabled>
-                <span class="q-opt-letter">${L[i]}</span>
-                <span>${opt}</span>
-              </button>
-            `;
-          }).join('')}
-        </div>
-
-        <div style="margin-top:24px;padding:20px;border-radius:16px;background:var(--cream-2);border:1px solid var(--line);">
-          <div style="font-weight:700;margin-bottom:8px;color:${answer === q.correct ? 'var(--ok)' : 'var(--bad)'}">
-            ${answer === q.correct ? '&#10003; Correct Answer' : '&#10007; Incorrect'}
+    <div class="ex-grid">
+      <div class="ex-main">
+        <div class="q-box">
+          <div class="q-sub-bar">
+            <span>${q.section || ''} · ${q.subjectName || ''}</span>
+            <span>Official solution</span>
           </div>
-          <div style="font-size:14.5px;line-height:1.6;color:var(--ink);">${q.solution || q.explanation || 'Solution available in answer key.'}</div>
+          ${q.passage ? `<div class="q-passage">${q.passage}</div>` : ''}
+          <div class="q-text">${q.question}</div>
+          ${q.image ? `<div class="q-img"><img src="${q.image}" alt="Question diagram"></div>` : ''}
+
+          <div class="q-opts">
+            ${q.options.map((opt, i) => {
+              let cls = '';
+              if (i === q.correct) cls = 'correct';
+              else if (i === answer) cls = 'wrong';
+              return `
+                <div class="q-opt ${cls}" style="cursor:default">
+                  <span class="q-opt-letter">${L[i]}</span>
+                  <span>${opt}</span>
+                </div>
+              `;
+            }).join('')}
+          </div>
+
+          <div class="sol ${ok ? 'ok' : 'no'}">
+            <div class="sol-verdict">${ok ? '✓ Correct choice' : (answer === undefined ? '— Left blank' : '✗ Incorrect choice')}</div>
+            <div class="sol-body">${q.solution || q.explanation || 'Detailed solution available in the official answer key.'}</div>
+          </div>
+        </div>
+
+        <div class="q-nav-bar">
+          <button class="btn ghost sm" onclick="prevQuestion()" ${state.currentQuestion === 0 ? 'disabled style="opacity:.4;pointer-events:none"' : ''}><span class="ar">←</span> Previous</button>
+          <button class="btn sm" onclick="nextQuestion()" ${state.currentQuestion === state.examQuestions.length - 1 ? 'disabled style="opacity:.4;pointer-events:none"' : ''}>Next <span class="ar">→</span></button>
         </div>
       </div>
 
-      <div class="q-nav-bar">
-        <button class="btn-line" onclick="prevQuestion()" ${state.currentQuestion === 0 ? 'disabled' : ''}><i class="fas fa-chevron-left"></i> Previous</button>
-        <button class="btn-line" onclick="nextQuestion()" ${state.currentQuestion === state.examQuestions.length - 1 ? 'disabled' : ''}>Next <i class="fas fa-chevron-right"></i></button>
-      </div>
-
-      <div class="nav-grid-box">
-        <div class="nav-grid-title">Jump to Question</div>
-        <div class="nav-pills">
-          ${state.examQuestions.map((qi, i) => {
-            let cls = '';
-            if (i === state.currentQuestion) cls = 'current';
-            else if (state.answers[i] === qi.correct) cls = 'answered';
-            return `<div class="nav-pill ${cls}" onclick="jumpTo(${i})">${i + 1}</div>`;
-          }).join('')}
+      <aside class="ex-side">
+        <div class="exam-hud">
+          <div>
+            <div class="hud-title">Review · Paper ${state.selectedExamId}</div>
+            <div class="hud-progress">Question ${state.currentQuestion + 1} of ${state.examQuestions.length}</div>
+          </div>
         </div>
-      </div>
+        <div class="nav-grid-box">
+          <div class="nav-grid-title">Jump to question</div>
+          <div class="nav-pills">
+            ${state.examQuestions.map((qi, i) => {
+              let cls = '';
+              if (i === state.currentQuestion) cls = 'current';
+              else if (state.answers[i] === qi.correct) cls = 'answered';
+              return `<div class="nav-pill ${cls}" onclick="jumpTo(${i})">${i + 1}</div>`;
+            }).join('')}
+          </div>
+          <button class="btn ghost sm" onclick="state.view='results';render();" style="width:100%;margin-top:14px"><span class="ar">←</span> Back to Results</button>
+        </div>
+      </aside>
     </div>
   `;
 }
 
 render();
-
 })();
 </script>
 </body>

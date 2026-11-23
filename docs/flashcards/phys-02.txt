@@ -1,0 +1,29 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Physics::Scalars, vectors and vector operations
+#guid column:1
+#tags column:4
+phys02-001	<b>Scalar and vector</b>: what is it?	A <b>scalar</b> has <b>magnitude only</b> (size and unit). A <b>vector</b> has <b>magnitude and direction</b>.	ImatPath Physics definition
+phys02-026	<b>scalar</b>: what is it?	A <b>scalar</b> has <b>magnitude only</b> (size and unit).	ImatPath Physics term
+phys02-027	<b>vector</b>: what is it?	A <b>vector</b> has <b>magnitude and direction</b>.	ImatPath Physics term
+phys02-017	<small>Scalars and vectors</small><br><b>distance, mass, time</b><br><i>Vectors?</i>	displacement, velocity, acceleration	ImatPath Physics recall
+phys02-018	<small>Scalars and vectors</small><br><b>speed, temperature</b><br><i>Vectors?</i>	force, momentum, weight	ImatPath Physics recall
+phys02-019	<small>Scalars and vectors</small><br><b>energy, work, power</b><br><i>Vectors?</i>	electric field, magnetic field	ImatPath Physics recall
+phys02-020	<small>Scalars and vectors</small><br><b>density, pressure, charge</b><br><i>Vectors?</i>	impulse, torque	ImatPath Physics recall
+phys02-021	<small>Products of vectors</small><br><b>Result</b><br><i>Scalar product · Vector product?</i>	<b>Scalar product:</b> a number<br><b>Vector product:</b> a vector	ImatPath Physics recall
+phys02-022	<small>Products of vectors</small><br><b>Size</b><br><i>Scalar product · Vector product?</i>	<b>Scalar product:</b> <i>abcosθ</i><br><b>Vector product:</b> <i>absinθ</i>	ImatPath Physics recall
+phys02-023	<small>Products of vectors</small><br><b>Zero when</b><br><i>Scalar product · Vector product?</i>	<b>Scalar product:</b> perpendicular<br><b>Vector product:</b> parallel	ImatPath Physics recall
+phys02-024	<small>Products of vectors</small><br><b>Order</b><br><i>Scalar product · Vector product?</i>	<b>Scalar product:</b> does not matter<br><b>Vector product:</b> reverses the sign	ImatPath Physics recall
+phys02-025	<small>Products of vectors</small><br><b>Appears in</b><br><i>Scalar product · Vector product?</i>	<b>Scalar product:</b> work, power<br><b>Vector product:</b> torque, magnetic force	ImatPath Physics recall
+phys02-002	Formula to know: <b>Resolving a vector</b>	<i>A<sub>x</sub> = Acosθ &nbsp;&nbsp;&nbsp; A<sub>y</sub> = Asinθ</i>	ImatPath Physics formula
+phys02-003	Formula to know: <b>Resolving a vector</b>	<i>A = √(A<sub>x</sub><sup>2</sup> + A<sub>y</sub><sup>2</sup>) &nbsp;&nbsp;&nbsp; tanθ = (A<sub>y</sub>)/(A<sub>x</sub>)</i>	ImatPath Physics formula
+phys02-004	Formula to know: <b>The scalar (dot) product</b>	<i>a·b = abcosθ = a<sub>x</sub> b<sub>x</sub> + a<sub>y</sub> b<sub>y</sub></i>	ImatPath Physics formula
+phys02-005	Formula to know: <b>The vector (cross) product</b>	<i>|a×b| = absinθ</i>	ImatPath Physics formula
+phys02-014	Key points: <b>Scalars and vectors</b>	• <b>Scalar</b>: magnitude only (distance, speed, mass, time, energy, temperature).<br>• <b>Vector</b>: magnitude <b>and</b> direction (displacement, velocity, acceleration, force, momentum).	ImatPath Physics summary
+phys02-015	Key points: <b>Operations</b>	• Add <b>head to tail</b>. <i>a - b = a + (-b)</i>.<br>• <i>A<sub>x</sub> = Acosθ</i>, <i>A<sub>y</sub> = Asinθ</i>, <i>A = √(A<sub>x</sub><sup>2</sup> + A<sub>y</sub><sup>2</sup>)</i>, <i>tanθ = A<sub>y</sub>/A<sub>x</sub></i>.<br>• Resultant of <i>a</i> and <i>b</i> lies between <i>|a - b|</i> and <i>a + b</i>.	ImatPath Physics summary
+phys02-016	Key points: <b>Products</b>	• Dot: <i>abcosθ</i>, a <b>number</b>. Zero when perpendicular. Work <i>= F·d</i>.<br>• Cross: <i>absinθ</i>, a <b>vector</b>. Zero when parallel. Torque, magnetic force.	ImatPath Physics summary
+phys02-006	Force <i>F<sub>1</sub> = 40</i> N acts east and <i>F<sub>2</sub> = 30</i> N acts <i>60<sup>°</sup></i> north of east. What is the size of the resultant?<br><br><br>A) 70 N<br>B) 60.8 N<br>C) 50 N<br>D) 36.1 N<br>E) 26 N	<b>B) 60.8 N</b><br><br><i>R<sub>x</sub> = 40 + 30cos 60<sup>°</sup> = 55.0</i> N and <i>R<sub>y</sub> = 30sin 60<sup>°</sup> = 26.0</i> N. <i>R = √(55.0<sup>2</sup> + 26.0<sup>2</sup>) = 60.8</i> N.	ImatPath Physics practice
+phys02-008	A boat can move at 4.0 m/s across a river, heading straight at the opposite bank. The current is 3.0 m/s and the river is 120 m wide. How far downstream does the boat land?<br><br><br>A) 90 m<br>B) 120 m<br>C) 160 m<br>D) 30 m<br>E) 150 m	<b>A) 90 m</b><br><br>The crossing time is set by the cross-stream speed: <i>t = 120/4.0 = 30</i> s. The current carries the boat <i>3.0 × 30 = 90</i> m downstream.	ImatPath Physics practice
+phys02-010	What is the angle between <i>a = (1, 2)</i> and <i>b = (3, -1)</i>?<br><br><br>A) 90°<br>B) 98.1°<br>C) 45°<br>D) 8.13°<br>E) 81.9°	<b>E) 81.9°</b><br><br><i>cosθ = (a·b)/(|a||b|) = (3 - 2)/(√(5)√(10)) = 0.141</i>, so <i>θ = 81.9<sup>°</sup></i>.	ImatPath Physics practice
+phys02-012	Forces of 10 N east and 6 N north act on an object. What third force keeps it in equilibrium?<br><br><br>A) 11.7 N, 31° north of east<br>B) 16 N, due west<br>C) 11.7 N, 59° south of west<br>D) 11.7 N, 31° south of west<br>E) 4 N, due west	<b>D) 11.7 N, 31° south of west</b><br><br>The third force must cancel the resultant of the first two. The resultant is <i>√(10<sup>2</sup> + 6<sup>2</sup>) = 11.7</i> N at <i>tan<sup>-1</sup>(6/10) = 31<sup>°</sup></i> north of east, so the third force is 11.7 N at <i>31<sup>°</sup></i> south of west.	ImatPath Physics practice

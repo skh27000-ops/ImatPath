@@ -1,0 +1,20 @@
+# not part of the website (same list the Vercel deploy ignored)
+_archive/
+_scripts/
+scratch/
+test-results/
+AGAIN_backup/
+imatpath-promo/
+.claude/
+.vercel/
+social/
+lesson-docs/
+hold/
+skills-ootto/
+portofolio/
+node_modules/
+/*.pdf
+*.backup.*
+wrangler.jsonc
+.dev.vars
+.env*

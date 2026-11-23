@@ -1,0 +1,19 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Chemistry::Stoichiometric calculations and balancing reactions
+#guid column:1
+#tags column:4
+chem10-017	<b>limiting reactant</b>: what is it?	The reactant that <b>runs out first</b> is the <b>limiting reactant</b>.	ImatPath Chemistry term
+chem10-001	Formula to know: <b>Reading an equation as a mole ratio</b>	2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O	ImatPath Chemistry formula
+chem10-002	Formula to know: <b>Percentage yield</b>	<i>%  yield = (actual yield)/(theoretical yield) × 100</i>	ImatPath Chemistry formula
+chem10-003	Formula to know: <b>Atom economy</b>	<i>%  atom economy = (M<sub>r</sub>  of the desired product)/(sum of  M<sub>r</sub>  of all products) × 100</i>	ImatPath Chemistry formula
+chem10-004	Formula to know: <b>Reactions in solution</b>	<i>n = c × V</i>	ImatPath Chemistry formula
+chem10-013	Key points: <b>Balancing</b>	• Same atoms of each element on both sides. Change <b>coefficients only</b>.<br>• Start with the most complex formula, leave single elements for last.	ImatPath Chemistry summary
+chem10-014	Key points: <b>Calculating</b>	• <i>n = m/M &nbsp;&nbsp;&nbsp; n = V/22.4  (STP) &nbsp;&nbsp;&nbsp; n = cV</i><br>• Gases at the same T and P: <b>volume ratio = mole ratio</b>.	ImatPath Chemistry summary
+chem10-015	Key points: <b>Limiting reactant</b>	• Moles ÷ coefficient: the <b>smaller</b> is limiting. It decides the yield.	ImatPath Chemistry summary
+chem10-016	Key points: <b>Yield</b>	• % yield = (actual / theoretical) × 100.<br>• % atom economy = (<i>M<sub>r</sub></i> desired product / total <i>M<sub>r</sub></i> of products) × 100.	ImatPath Chemistry summary
+chem10-005	28 g of nitrogen react with 10 g of hydrogen: N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub>. What mass of ammonia can form? (<i>A<sub>r</sub></i>: N 14, H 1)<br><br><br>A) 38 g<br>B) 34 g<br>C) 57 g<br>D) 17 g<br>E) 68 g	<b>B) 34 g</b><br><br><i>n(N<sub>2</sub>) = 28/28 = 1.0</i> mol. <i>n(H<sub>2</sub>) = 10/2 = 5.0</i> mol. 1.0 mol of N<sub>2</sub> needs 3.0 mol of H<sub>2</sub>, so N<sub>2</sub> is the <b>limiting</b> reagent. It forms 2.0 mol of NH<sub>3</sub> <i>= 2.0 × 17 = 34</i> g.	ImatPath Chemistry practice
+chem10-007	2.4 g of magnesium (<i>A<sub>r</sub> = 24</i>) are added to 100 cm<sup>3</sup> of 1.0 mol/L hydrochloric acid. What volume of hydrogen forms at STP?<br><br><br>A) 1.12 L<br>B) 2.24 L<br>C) 4.48 L<br>D) 0.56 L<br>E) 22.4 L	<b>A) 1.12 L</b><br><br>Mg + 2HCl → MgCl<sub>2</sub> + H<sub>2</sub>. <i>n(Mg) = 0.10</i> mol and <i>n(HCl) = 0.100 × 1.0 = 0.10</i> mol. 0.10 mol of Mg needs 0.20 mol of HCl, so the acid is limiting. <i>n(H<sub>2</sub>) = 0.10/2 = 0.050</i> mol, <i>V = 0.050 × 22.4 = 1.12</i> L.	ImatPath Chemistry practice
+chem10-009	0.46 g of a compound containing only C, H and O burn to give 0.88 g of CO<sub>2</sub> and 0.54 g of H<sub>2</sub>O. What is its empirical formula?<br><br><br>A) CH<sub>3</sub>O<br>B) C<sub>2</sub>H<sub>4</sub>O<br>C) C<sub>3</sub>H<sub>8</sub>O<br>D) CH<sub>2</sub>O<br>E) C<sub>2</sub>H<sub>6</sub>O	<b>E) C<sub>2</sub>H<sub>6</sub>O</b><br><br>C: <i>0.88/44 = 0.020</i> mol, mass <i>0.24</i> g. H: <i>0.54/18 = 0.030</i> mol of H<sub>2</sub>O, so 0.060 mol of H, mass 0.060 g. O by difference: <i>0.46 - 0.24 - 0.060 = 0.16</i> g <i>= 0.010</i> mol. Ratio C : H : O <i>= 2 : 6 : 1</i>.	ImatPath Chemistry practice
+chem10-011	20.0 cm<sup>3</sup> of sulfuric acid are neutralised by 25.0 cm<sup>3</sup> of 0.100 mol/L NaOH. What is the concentration of the acid?<br><br><br>A) 0.125 mol/L<br>B) 0.0500 mol/L<br>C) 0.250 mol/L<br>D) 0.0625 mol/L<br>E) 0.0313 mol/L	<b>D) 0.0625 mol/L</b><br><br><i>n(NaOH) = 0.0250 × 0.100 = 2.50 × 10<sup>-3</sup></i> mol. The acid is diprotic: 1 mol of H<sub>2</sub>SO<sub>4</sub> reacts with 2 mol of NaOH, so <i>n(acid) = 1.25 × 10<sup>-3</sup></i> mol. <i>c = 1.25 × 10<sup>-3</sup>/0.0200 = 0.0625</i> mol/L.	ImatPath Chemistry practice

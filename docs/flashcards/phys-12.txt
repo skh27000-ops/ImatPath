@@ -1,0 +1,25 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Physics::Heat propagation and changes of state
+#guid column:1
+#tags column:4
+phys12-003	<b>Specific latent heat</b>: what is it?	The <b>specific latent heat</b> <i>L</i> is the energy needed to change the state of <b>1 kg</b> of a substance <b>without changing its temperature</b>: <i>Q = mL</i>. The unit is J/kg.	ImatPath Physics definition
+phys12-015	<small>How heat travels</small><br><b>Copper</b><br><i>k (W m-1 K-1)?</i>	400	ImatPath Physics recall
+phys12-016	<small>How heat travels</small><br><b>Aluminium</b><br><i>k (W m-1 K-1)?</i>	240	ImatPath Physics recall
+phys12-017	<small>How heat travels</small><br><b>Glass</b><br><i>k (W m-1 K-1)?</i>	1.0	ImatPath Physics recall
+phys12-018	<small>How heat travels</small><br><b>Water</b><br><i>k (W m-1 K-1)?</i>	0.6	ImatPath Physics recall
+phys12-019	<small>How heat travels</small><br><b>Wood</b><br><i>k (W m-1 K-1)?</i>	0.15	ImatPath Physics recall
+phys12-020	<small>How heat travels</small><br><b>Air</b><br><i>k (W m-1 K-1)?</i>	0.025	ImatPath Physics recall
+phys12-021	<small>Changes of state</small><br><b>Latent heat of fusion (melting) <i>L<sub>f</sub></i></b><br><i>Value?</i>	<i>3.34 × 10<sup>5</sup></i> J/kg	ImatPath Physics recall
+phys12-022	<small>Changes of state</small><br><b>Latent heat of vaporisation <i>L<sub>v</sub></i></b><br><i>Value?</i>	<i>2.26 × 10<sup>6</sup></i> J/kg	ImatPath Physics recall
+phys12-023	<small>Answers & explanations</small><br><b>Conduction</b>	<i>Q/t = kAΔ T/L</i>. <b>Convection</b> (fluids): warm, less dense fluid rises. <b>Radiation</b>: <i>P = eσ AT<sup>4</sup></i>, T in kelvin, no medium needed.	ImatPath Physics key idea
+phys12-001	Formula to know: <b>Conduction</b>	<i>(Q)/(t) = (kA Δ T)/(L)</i>	ImatPath Physics formula
+phys12-002	Formula to know: <b>Radiation</b>	Power emitted: <i>P = eσ A T<sup>4</sup> &nbsp;&nbsp;&nbsp; σ = 5.67 × 10<sup>-8</sup> W m<sup>-2</sup>K<sup>-4</sup></i>	ImatPath Physics formula
+phys12-012	Key points: <b>Heat transfer</b>	• <b>Conduction</b> (solids): <i>Q/t = kAΔ T/L</i>. <b>Convection</b> (fluids): warm, less dense fluid rises. <b>Radiation</b>: <i>P = eσ AT<sup>4</sup></i>, T in kelvin, no medium needed.	ImatPath Physics summary
+phys12-013	Key points: <b>Changes of state</b>	• <i>Q = mL</i> at a constant temperature. Water: <i>L<sub>f</sub> = 3.34 × 10<sup>5</sup></i>, <i>L<sub>v</sub> = 2.26 × 10<sup>6</sup></i> J/kg.<br>• Heating curve: slopes use <i>mcΔ T</i>, flat parts use <i>mL</i>.	ImatPath Physics summary
+phys12-014	Key points: <b>Evaporation and humidity</b>	• Evaporation: any temperature, surface only, cools the liquid. Boiling: one temperature, whole liquid.<br>• Boiling point falls with lower pressure. Relative humidity = vapour pressure / saturated vapour pressure.	ImatPath Physics summary
+phys12-004	0.10 kg of ice at <i>-10</i> °C is added to 0.50 kg of water at 30 °C (<i>c<sub>ice</sub> = 2100</i>, <i>L<sub>f</sub> = 3.34 × 10<sup>5</sup></i> J/kg). What is the final temperature?<br><br><br>A) 28.3 °C<br>B) 10.9 °C<br>C) 0.0 °C<br>D) 23.3 °C<br>E) 21.8 °C	<b>B) 10.9 °C</b><br><br>Heat to warm and melt the ice: <i>0.10(2100)(10) + 0.10(3.34 × 10<sup>5</sup>) = 35 500</i> J. The water can give up <i>0.50(4200)(30) = 63 000</i> J cooling to 0 °C, so all the ice melts. The remaining <i>27 500</i> J warms 0.60 kg: <i>T = 27 500/(0.60 × 4200) = 10.9</i> °C.	ImatPath Physics practice
+phys12-006	A wall of area 10 m<sup>2</sup> has a brick layer (thickness 0.20 m, <i>k = 0.60</i> W m<sup>-1</sup> K<sup>-1</sup>) and an insulation layer (thickness 0.10 m, <i>k = 0.04</i> W m<sup>-1</sup> K<sup>-1</sup>). The temperature difference across the wall is 25 K. What is the rate of heat flow?<br><br><br>A) 88.2 W<br>B) 750 W<br>C) 100 W<br>D) 425 W<br>E) 176 W	<b>A) 88.2 W</b><br><br>The layers are in series, so the thermal resistances (per unit area) add: <i>L/k = 0.20/0.60 + 0.10/0.04 = 0.333 + 2.50 = 2.83</i> m<sup>2</sup>K/W. <i>P = AΔ T/∑(L/k) = 10 × 25/2.83 = 88.2</i> W.	ImatPath Physics practice
+phys12-008	A 2.0 kW kettle contains 1.0 kg of water at 20 °C. How long does it take to heat the water to 100 °C and then boil away 0.20 kg of it? (No losses; <i>L<sub>v</sub> = 2.26 × 10<sup>6</sup></i> J/kg)<br><br><br>A) 168 s<br>B) 226 s<br>C) 1300 s<br>D) 788 s<br>E) 394 s	<b>E) 394 s</b><br><br>Warming: <i>1.0 × 4200 × 80 = 336 000</i> J. Boiling: <i>0.20 × 2.26 × 10<sup>6</sup> = 452 000</i> J. Total <i>788 000</i> J at 2000 W: <i>t = 394</i> s.	ImatPath Physics practice
+phys12-010	Sphere A has radius <i>r</i> and absolute temperature <i>T</i>. Sphere B has radius <i>2r</i> and absolute temperature <i>T/2</i>. Both are perfect black bodies. What is the ratio <i>P<sub>B</sub>/P<sub>A</sub></i> of the powers they radiate?<br><br><br>A) 1/2<br>B) 1<br>C) 2<br>D) 1/4<br>E) 1/16	<b>D) 1/4</b><br><br><i>P ∝ AT<sup>4</sup> ∝ r<sup>2</sup>T<sup>4</sup></i>. For B: <i>(2)<sup>2</sup>(1/2)<sup>4</sup> = 4/16 = 1/4</i>.	ImatPath Physics practice

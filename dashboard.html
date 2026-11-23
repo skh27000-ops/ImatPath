@@ -4,599 +4,529 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard — ImatPath</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-700.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" href="favicon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="app-shell.css">
 
 <!-- Core Supabase & Auth Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="supabase.js"></script>
 <script src="auth-guard.js"></script>
-
-<script>
-// ── Fast Dark Mode Init ──
-(function() {
-  const saved = localStorage.getItem('imatpath_dark_mode');
-  if (saved === 'true') document.documentElement.setAttribute('data-theme', 'dark');
-})();
-</script>
+<script src="xp-system.js"></script>
+<script src="mascot.js"></script>
 
 <style>
-:root{
-  --cream:#f6f1e6; --cream-2:#efe7d5; --card:#fffdf7;
-  --ink:#152720; --ink-soft:#42574d;
-  --g900:#0a241b; --g800:#0e2f23; --g700:#164534; --g600:#1e5b44;
-  --terra:#c1591f; --terra-d:#a84a15;
-  --gold:#d9a441; --gold-l:#e9c070;
-  --line:#e2d8c2; --line-d:#23443a;
-  --ok:#2e7d4f; --bad:#b3402e;
-  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
-  --sh-sm:0 1px 2px rgba(21,39,32,.06),0 4px 14px rgba(21,39,32,.06);
-  --sh-md:0 2px 6px rgba(21,39,32,.08),0 14px 34px rgba(21,39,32,.10);
+/* dash2-marker */
+/* Dashboard v2 — bento layout. Shell (nav, buttons, tokens) comes from shared.css + app-shell.css */
+@keyframes bob2{50%{transform:translateY(-10px)}}
+@keyframes tape{to{transform:translateX(-50%)}}
+@keyframes flame{0%,100%{transform:scale(1) rotate(-3deg)}50%{transform:scale(1.18) rotate(4deg)}}
+@keyframes draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:var(--off)}}
+@keyframes nodepop{0%{transform:translate(-50%,-50%) scale(.3);opacity:0}100%{transform:translate(-50%,-50%) scale(1);opacity:1}}
+
+.main{overflow-x:clip}
+/* ---------- bento ---------- */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:22px;margin-bottom:22px}
+.b{border:var(--bw) solid var(--ink);border-radius:28px;box-shadow:var(--sh);background:#fff;padding:26px;position:relative;overflow:hidden;transition:transform .3s var(--e),box-shadow .3s var(--e)}
+.b:hover{transform:translate(-2px,-3px);box-shadow:8px 9px 0 var(--ink)}
+.s3{grid-column:span 3}.s4{grid-column:span 4}.s5{grid-column:span 5}.s6{grid-column:span 6}.s7{grid-column:span 7}.s8{grid-column:span 8}.s12{grid-column:span 12}
+.b h2{font-size:clamp(1.6rem,2.6vw,2.2rem)}
+.b h3{font-size:1.5rem}
+.dots{background-image:radial-gradient(rgba(27,19,64,.09) 1.6px,transparent 1.6px);background-size:22px 22px}
+.dots-w{background-image:radial-gradient(rgba(255,255,255,.16) 1.6px,transparent 1.6px);background-size:22px 22px}
+
+/* ---------- hero ---------- */
+.hero{background-color:var(--sky-l);min-height:340px;display:flex;flex-direction:column;justify-content:center}
+.hero .eyebrow{align-self:flex-start}
+.hero h1{font-size:clamp(2.4rem,5vw,4.4rem);line-height:.98;max-width:640px;position:relative;z-index:2}
+.hero h1 em{font-style:normal;background:linear-gradient(var(--sun),var(--sun)) 0 90%/100% 42% no-repeat;padding:0 .06em}
+.hero .top-sub{position:relative;z-index:2;max-width:430px;margin-top:14px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;position:relative;z-index:2}
+.say{position:absolute;right:20px;bottom:-4px;width:min(46%,330px);z-index:1;display:flex;flex-direction:column;align-items:flex-end;pointer-events:none}
+.say .bubble{pointer-events:auto;position:relative;background:#fff;border:var(--bw) solid var(--ink);border-radius:20px 20px 4px 20px;box-shadow:var(--sh-s);padding:10px 15px;font-weight:700;font-size:.92rem;line-height:1.35;margin-bottom:6px;animation:bubin .5s var(--e);max-width:290px}
+.say .bubble small{display:block;font:.58rem var(--f-px);color:var(--grape);margin-bottom:3px}
+@keyframes bubin{from{opacity:0;transform:translateY(8px) scale(.96)}to{opacity:1;transform:none}}
+.say-pip{width:190px;pointer-events:auto;cursor:pointer;transition:transform .3s var(--e);margin-right:6px;margin-bottom:-14px}
+.say-pip:hover{transform:rotate(-5deg) scale(1.06)}
+
+/* ---------- countdown ---------- */
+.cd{background-color:var(--grape);color:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:340px}
+.cd .lbl{font:.68rem var(--f-px);color:var(--sun);line-height:1.5}
+.cd-num{font:800 clamp(5rem,9vw,7.4rem)/.85 var(--f-disp);letter-spacing:-.07em;color:var(--sun);text-shadow:5px 5px 0 var(--ink)}
+.cd-num small{display:block;font:800 1.1rem var(--f-body);color:#fff;letter-spacing:0;text-shadow:none;margin-top:10px}
+.cd-boxes{display:flex;gap:8px}
+.cd-b{flex:1;text-align:center;border:var(--bw) solid var(--ink);border-radius:14px;padding:7px 4px 5px;background:#fff;color:var(--ink)}
+.cd-b b{display:block;font:800 1.35rem/1 var(--f-disp)}
+.cd-b b.pop{animation:tickpop .4s var(--e)}
+.cd-b span{font:.52rem var(--f-px);color:var(--grape)}
+.cd-date{font-size:.9rem;color:rgba(255,255,255,.9);font-weight:600}
+.cd-date b{color:var(--sun)}
+
+/* ---------- caution tape ---------- */
+.tape{margin:34px -18px 38px;transform:rotate(-1.2deg);background:var(--sun);color:var(--ink);border-top:var(--bw) solid var(--ink);border-bottom:var(--bw) solid var(--ink);overflow:hidden;white-space:nowrap;font:.74rem var(--f-px)}
+.tape div{display:inline-block;padding:10px 0;animation:tape 42s linear infinite}
+.tape span{margin:0 16px}
+.tape span:nth-child(3n+2){color:var(--grape)}
+.tape span:nth-child(3n){color:var(--coral)}
+
+/* ---------- path / road map ---------- */
+.pathcard{background-color:var(--mint-l);padding:26px 26px 18px}
+.p-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.p-head .eyebrow{margin-bottom:10px}
+.j-pct{font:800 4rem/1 var(--f-disp);color:var(--grape);letter-spacing:-.06em;text-shadow:3px 3px 0 var(--sun)}
+.j-pct small{font-size:.38em;color:var(--ink-2);font-weight:800;text-shadow:none;letter-spacing:0}
+.next-stop{display:inline-flex;align-items:center;gap:8px;background:#fff;border:var(--bw) solid var(--ink);border-radius:99px;padding:5px 15px;font-weight:800;font-size:.9rem;box-shadow:var(--sh-s);margin-top:8px}
+.next-stop i{font-style:normal}
+.map{overflow-x:auto;overflow-y:hidden;margin:0 -10px;padding:0 10px;scrollbar-width:thin}
+.map-in{position:relative;min-width:880px;aspect-ratio:1100/320}
+.map-in>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.road-o{fill:none;stroke:var(--ink);stroke-width:30;stroke-linecap:round}
+.road-i{fill:none;stroke:#fff;stroke-width:21;stroke-linecap:round}
+.road-d{fill:none;stroke:var(--ink-3);stroke-width:3;stroke-linecap:round;stroke-dasharray:2 14;opacity:.55}
+.road-p{fill:none;stroke:var(--grape);stroke-width:21;stroke-linecap:round}
+.node{position:absolute;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:#fff;border:var(--bw) solid var(--ink);display:grid;place-items:center;font-size:1.5rem;box-shadow:var(--sh-s);animation:nodepop .5s var(--e) backwards;animation-delay:var(--d,0s);z-index:2;transition:scale .25s var(--e)}
+.node:hover{scale:1.12}
+.node.on{background:var(--sun)}
+.node.off{background:var(--cream);border-style:dashed;filter:grayscale(.9);opacity:.75}
+.node.off b{opacity:.55}
+.node.goal{background:var(--mint);width:66px;height:66px}
+.node b{font-weight:400;line-height:1}
+.node .lab{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;text-align:center;font:800 .86rem/1.15 var(--f-disp);letter-spacing:-.01em;pointer-events:none}
+.node .lab small{display:block;font:700 .72rem var(--f-body);color:var(--ink-2);letter-spacing:0}
+.node.down .lab{top:calc(100% + 10px)}
+.node.up .lab{bottom:calc(100% + 10px)}
+.node.cur.up .lab{bottom:auto;top:calc(100% + 12px)}
+.node.cur::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:3px dashed var(--grape);animation:spin 9s linear infinite}
+.pipmark{position:absolute;width:104px;translate:-50% -100%;margin-top:-30px;z-index:3;pointer-events:none;animation:bob2 3s ease-in-out infinite}
+.pipmark .pip{width:100%}
+
+/* ---------- tool tiles ---------- */
+.tool{display:flex;flex-direction:column;min-height:300px}
+.tool .bk{font:.62rem var(--f-px);color:var(--ink-2);margin-bottom:10px;display:flex;justify-content:space-between}
+.tool h3{font-size:1.75rem;margin-bottom:6px}
+.tool p{font-size:.95rem;color:var(--ink-2);margin-bottom:16px;max-width:300px}
+.tool .vis{margin-top:auto;margin-bottom:18px}
+.tool .btn{align-self:flex-start}
+.tool.t-ls{background:var(--grape);background-image:radial-gradient(rgba(255,255,255,.14) 1.6px,transparent 1.6px);background-size:22px 22px;color:#fff;min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:28px;overflow:hidden;padding-bottom:0}
+.t-ls .t-txt{padding-bottom:26px}
+.t-ls .bk{color:var(--sun);gap:18px}
+.t-ls h3{color:#fff;font-size:clamp(1.9rem,3.4vw,2.6rem)}
+.t-ls p{color:rgba(255,255,255,.92);max-width:430px}
+.t-ls .new{display:inline-block;font:.6rem var(--f-px);background:var(--coral);color:#fff;border:2.5px solid var(--ink);border-radius:8px;padding:3px 7px;margin-left:8px;vertical-align:middle;transform:rotate(-3deg)}
+.ls-books{display:flex;align-items:flex-end;gap:10px;flex:none}
+.ls-books i{--c:var(--mint);width:clamp(52px,6.4vw,74px);height:var(--h,130px);background:var(--c);border:3px solid var(--ink);border-bottom:0;border-radius:14px 14px 0 0;display:grid;place-items:center;color:var(--ink);font:800 1.05rem var(--f-disp);writing-mode:vertical-rl;transform:rotate(180deg);transition:transform .45s var(--e);box-shadow:4px 0 0 var(--ink);font-style:normal}
+.ls-books i:nth-child(1){--h:150px}.ls-books i:nth-child(2){--c:var(--sky);--h:124px}.ls-books i:nth-child(3){--c:var(--coral);--h:140px}.ls-books i:nth-child(4){--c:var(--sun);--h:112px}
+.t-ls:hover .ls-books i{transform:rotate(180deg) translateX(10px)}
+.t-ls:hover .ls-books i:nth-child(even){transform:rotate(180deg) translateX(-6px)}
+@media(max-width:700px){.tool.t-ls{flex-direction:column;align-items:flex-start;gap:12px}.t-ls .t-txt{padding-bottom:0}.ls-books{align-self:stretch;justify-content:center}}
+.t-qb{background-color:var(--sky-l)}
+.t-mock{background-color:var(--coral-l)}
+.t-pp{background-color:var(--sun-l)}
+.t-an{background-color:var(--mint-l)}
+.big-n{font:800 clamp(3rem,5vw,4.2rem)/.9 var(--f-disp);letter-spacing:-.06em;color:var(--grape);text-shadow:3px 3px 0 #fff}
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pill-s{font-weight:800;font-size:.82rem;padding:4px 12px;border-radius:99px;border:2.5px solid var(--ink);background:#fff}
+.pill-s:nth-child(2n){background:var(--lav)}
+.pill-s:nth-child(3n){background:var(--coral-l)}
+.pill-s.hot{background:var(--grape);color:#fff}
+.mini-timer{font:800 3rem/1 var(--f-disp);color:var(--grape);letter-spacing:-.04em}
+.mini-timer .colon{animation:blink 1s steps(1) infinite}
+.mini-tag{font:.62rem var(--f-px);color:var(--coral);margin-top:8px;display:block}
+.pp-stack{position:relative;height:100px}
+.pp{position:absolute;left:50%;top:0;width:88%;padding:8px 14px;border:var(--bw) solid var(--ink);border-radius:12px;background:#fff;display:flex;justify-content:space-between;font:700 .85rem var(--f-body);transition:transform .5s var(--e);box-shadow:3px 3px 0 var(--ink)}
+.pp b{font-family:var(--f-disp);font-weight:800}
+.pp .off{color:var(--grape);font-weight:800}
+.pp:nth-child(1){transform:translateX(-50%) rotate(-3deg);z-index:3}
+.pp:nth-child(2){transform:translateX(-50%) translateY(16px) rotate(2deg);z-index:2}
+.pp:nth-child(3){transform:translateX(-50%) translateY(32px) rotate(-1.5deg);z-index:1}
+.t-pp:hover .pp:nth-child(1){transform:translateX(-70%) rotate(-7deg)}
+.t-pp:hover .pp:nth-child(2){transform:translateX(-30%) translateY(18px) rotate(5deg)}
+.t-pp:hover .pp:nth-child(3){transform:translateX(-52%) translateY(36px) rotate(-2deg)}
+.mini-bars{display:grid;gap:9px}
+.mb{display:grid;grid-template-columns:50px 1fr;gap:10px;align-items:center;font:.6rem var(--f-px);color:var(--ink-2)}
+.mb .tr{height:16px;border-radius:99px;background:#fff;border:2.5px solid var(--ink);overflow:hidden}
+.mb .tr i{display:block;height:100%;width:0;background:var(--mint);transition:width 1.2s var(--e);transition-delay:var(--d,0s)}
+.mb.hot .tr i{background:var(--coral)}
+
+/* ---------- level + stats ---------- */
+.xp{background-color:var(--ink);color:#fff;display:flex;flex-direction:column;gap:12px;border-color:var(--ink);box-shadow:var(--sh)}
+.xp .row1{display:flex;align-items:center;gap:16px}
+.lvl-badge{width:92px;height:92px;border-radius:50%;background:var(--sun);color:var(--ink);border:var(--bw) solid #fff;display:grid;place-items:center;text-align:center;flex:none;box-shadow:4px 4px 0 var(--grape);transform:rotate(-6deg)}
+.lvl-badge small{display:block;font:.5rem var(--f-px);margin-bottom:-2px}
+.lvl-badge b{font:800 2.6rem/1 var(--f-disp);letter-spacing:-.05em}
+.xp .rank{display:inline-block;font:.62rem var(--f-px);color:var(--ink);background:var(--mint);border:2.5px solid #fff;border-radius:99px;padding:3px 11px;margin:0}
+.xp .title{font:800 1.3rem var(--f-disp);margin-top:6px;display:block}
+.xp-bar{height:20px;border-radius:99px;background:rgba(255,255,255,.12);border:2.5px solid #fff;overflow:hidden}
+.xp-bar i{display:block;height:100%;width:0;background:repeating-linear-gradient(-45deg,var(--sun) 0 8px,#ffd96e 8px 16px);transition:width 1.4s var(--e) .2s}
+.xp .cap{font-size:.85rem;color:rgba(255,255,255,.8)}
+.xp .cap b{color:var(--sun)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;height:100%}
+.stile{border:var(--bw) solid var(--ink);border-radius:20px;background:var(--sky-l);box-shadow:var(--sh-s);padding:16px 14px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:150px;transition:transform .25s var(--e),box-shadow .25s var(--e)}
+.stile:nth-child(2){background:var(--sun-l)}
+.stile:nth-child(3){background:var(--mint-l)}
+.stile:nth-child(4){background:var(--coral-l)}
+.stile:nth-child(5){background:var(--lav)}
+.stile:hover{transform:translate(-2px,-4px) rotate(-1deg);box-shadow:6px 8px 0 var(--ink)}
+.stile .ic{font-size:1.5rem;position:absolute;top:12px;left:14px}
+.stile .v{font:800 clamp(2rem,2.8vw,2.8rem)/1 var(--f-disp);letter-spacing:-.05em;display:flex;align-items:baseline;gap:4px}
+.stile .v .fl{font-size:.55em;animation:flame 1.6s ease-in-out infinite;display:inline-block}
+.stile .l{font:800 .85rem/1.2 var(--f-disp);margin-top:6px;display:block}
+.stile .s{font-size:.72rem;color:var(--ink-2);display:block}
+
+/* ---------- week ---------- */
+.week{background-color:var(--sun-l)}
+.week h3{margin-bottom:2px}
+.week p{font-size:.92rem;color:var(--ink-2);margin-bottom:18px}
+.days{display:flex;gap:10px;justify-content:space-between}
+.dy{display:flex;flex-direction:column;align-items:center;gap:6px;font:.58rem var(--f-px);color:var(--ink-2)}
+.dy i{width:clamp(38px,4.4vw,54px);aspect-ratio:1;border-radius:50%;background:#fff;border:var(--bw) solid var(--ink);display:grid;place-items:center;font-style:normal;font-size:1.3rem;transition:transform .3s var(--e)}
+.dy.on i{background:var(--coral);box-shadow:var(--sh-s)}
+.dy.on i::after{content:"🔥"}
+.dy.today i{outline:3px dashed var(--grape);outline-offset:3px}
+.dy.today:not(.on) i::after{content:"?";font:800 1.1rem var(--f-disp);color:var(--grape)}
+.dy:hover i{transform:translateY(-4px) rotate(-6deg)}
+
+/* ---------- badges ---------- */
+.badges-card{background-color:var(--lav)}
+.bh{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.bh .eyebrow{margin-bottom:10px}
+.bcount{font:800 1.1rem var(--f-disp);background:#fff;border:var(--bw) solid var(--ink);border-radius:99px;padding:3px 16px;box-shadow:var(--sh-s)}
+.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:700px){.badges{grid-template-columns:repeat(2,1fr)}}
+.bdg{border:var(--bw) solid var(--ink);border-radius:20px;background:#fff;padding:16px 14px;text-align:center;box-shadow:var(--sh-s);transition:transform .25s var(--e);position:relative}
+.bdg:nth-child(4n+1).got{background:var(--sun-l)}
+.bdg:nth-child(4n+2).got{background:var(--mint-l)}
+.bdg:nth-child(4n+3).got{background:var(--coral-l)}
+.bdg:nth-child(4n).got{background:var(--sky-l)}
+.bdg .em{width:62px;height:62px;border-radius:50%;background:#fff;border:var(--bw) solid var(--ink);display:grid;place-items:center;font-size:1.9rem;margin:0 auto 10px;transition:transform .3s var(--e)}
+.bdg.got:hover{transform:translate(-2px,-4px) rotate(-1.5deg)}
+.bdg.got:hover .em{transform:rotate(12deg) scale(1.1)}
+.bdg b{display:block;font:800 1rem var(--f-disp)}
+.bdg small{display:block;font-size:.76rem;color:var(--ink-2);line-height:1.3;margin-top:3px}
+.bdg.lock{background:var(--cream);border-style:dashed;box-shadow:none}
+.bdg.lock .em{filter:grayscale(1);opacity:.45;border-style:dashed}
+.bdg.lock b,.bdg.lock small{opacity:.6}
+.bdg.lock::after{content:"🔒";position:absolute;top:8px;right:10px;font-size:.85rem}
+
+/* ---------- activity / vip / feedback ---------- */
+.act-card{min-height:280px;display:flex;flex-direction:column}
+.act-card h3{margin-bottom:16px}
+.empty{flex:1;border:3px dashed var(--ink-3);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;gap:6px;background:var(--cream)}
+.empty .ring{width:100px;display:block}
+.empty h4{font-size:1.35rem}
+.empty p{font-size:.92rem;color:var(--ink-2);max-width:340px}
+.empty .btn{margin-top:12px}
+.act-item{display:flex;gap:14px;align-items:center;padding:12px 4px;border-bottom:3px dashed rgba(27,19,64,.15);font-weight:600;font-size:.95rem;text-decoration:none;color:inherit;transition:transform .2s}
+.act-item:hover{transform:translateX(4px)}
+.act-item .dot{width:14px;height:14px;border-radius:5px;background:var(--mint);border:2.5px solid var(--ink);flex:none;transform:rotate(45deg)}
+.act-item.mock .dot{background:var(--coral)}
+.act-item .t{font-size:.78rem;color:var(--ink-2);margin-left:auto;white-space:nowrap}
+.vip{background-color:var(--grape);color:#fff}
+.vip::before{content:"✦";position:absolute;font-size:150px;color:rgba(255,200,61,.22);top:-30px;right:-10px;line-height:1}
+.vip .tag{font:.66rem var(--f-px);color:var(--ink);background:var(--sun);border:2.5px solid var(--ink);border-radius:99px;padding:3px 12px;display:inline-flex;align-items:center;gap:8px;margin-bottom:14px}
+.vip .tag i{width:8px;height:8px;border-radius:50%;background:var(--coral);animation:pulse-dot 2s infinite}
+.vip-tg-badge{width:44px;height:44px;border-radius:50%;background:#fff;color:#229ED9;display:grid;place-items:center;border:var(--bw) solid var(--ink);flex:none;transition:transform .3s var(--e)}
+.vip:hover .vip-tg-badge{transform:rotate(10deg) scale(1.08)}
+.vip h3{font-size:1.55rem;margin-bottom:8px}
+.vip p{font-size:.95rem;color:rgba(255,255,255,.9);margin-bottom:20px}
+.fb{background-color:var(--sun-l);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:20px 26px;transition:opacity .5s var(--e),transform .5s var(--e)}
+.fb.gone{opacity:0;transform:translateY(14px) scale(.97);pointer-events:none}
+.fb h4{font-size:1.3rem}
+.fb p{font-size:.92rem;color:var(--ink-2)}
+.fb-row{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ---------- responsive ---------- */
+@media(max-width:1060px){
+  .s8,.s7,.s5,.s4{grid-column:span 12}
+  .s3{grid-column:span 6}
+  .tool{min-height:0}
+  .hero{min-height:360px}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .cd{min-height:0}
 }
-
-[data-theme="dark"] {
-  --cream: #111714; --cream-2: #191f1c; --card: #1a211d;
-  --ink: #e2ddd3; --ink-soft: #a4b3a9;
-  --line: #2a3530; --line-d: #2a3530;
-  --g900: #0a0e0c; --g800: #0f1613;
+@media(max-width:700px){
+  .s3{grid-column:span 12}
+  .hero h1{font-size:2.4rem}
+  .say{position:static;width:100%;flex-direction:row;align-items:flex-end;margin-top:14px}
+  .say .bubble{border-radius:20px 20px 20px 4px;order:2;margin-bottom:10px}
+  .say-pip{width:96px;margin:0 8px 0 0;order:1}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .tape{margin-left:-14px;margin-right:-14px}
+  .b{padding:20px}
+  .j-pct{font-size:3rem}
 }
-
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;transition:background 0.3s, color 0.3s;}
-a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-svg{display:block}
-::selection{background:var(--terra);color:#fff}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
-.up{opacity:0;transform:translateY(16px);animation:up .6s ease forwards}
-@keyframes up{to{opacity:1;transform:none}}
-.d1{animation-delay:.05s}.d2{animation-delay:.12s}.d3{animation-delay:.19s}.d4{animation-delay:.26s}.d5{animation-delay:.33s}.d6{animation-delay:.4s}.d7{animation-delay:.47s}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,164,65,.5)}50%{box-shadow:0 0 0 6px rgba(217,164,65,0)}}
-@keyframes pulseT{0%,100%{box-shadow:0 0 0 0 rgba(193,89,31,.45)}50%{box-shadow:0 0 0 7px rgba(193,89,31,0)}}
-
-/* ============ SIDEBAR ============ */
-.sidebar{position:fixed;inset:0 auto 0 0;width:264px;background:var(--g900);color:var(--cream);display:flex;flex-direction:column;z-index:60;transition:transform .35s ease}
-.logo{display:flex;align-items:center;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em;padding:26px 26px 22px;color:var(--cream)}
-.logo em{font-style:italic;color:var(--gold-l)}
-.sb-nav{display:flex;flex-direction:column;gap:4px;padding:6px 14px}
-.sb-nav a{display:flex;align-items:center;gap:13px;padding:12px 14px;border-radius:12px;font-size:14.5px;font-weight:500;color:#9db3a5;position:relative;transition:.2s}
-.sb-nav a svg{flex:none;opacity:.85}
-.sb-nav a:hover{color:var(--cream);background:rgba(246,241,230,.06)}
-.sb-nav a.active{color:var(--cream);background:rgba(217,164,65,.12);font-weight:600}
-.sb-nav a.active::before{content:"";position:absolute;left:-14px;top:9px;bottom:9px;width:3px;border-radius:3px;background:var(--gold)}
-.sb-spacer{flex:1}
-
-.access-card{margin:0 16px 14px;padding:16px 18px;border:1px solid rgba(217,164,65,.45);border-radius:16px;background:linear-gradient(150deg,rgba(217,164,65,.14),rgba(217,164,65,.04));position:relative;overflow:hidden;cursor:pointer;transition:transform .2s;}
-.access-card:hover{transform:translateY(-2px);}
-.access-card::after{content:"";position:absolute;top:-30px;right:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.25),transparent 70%)}
-.access-card .ac-l{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);display:flex;align-items:center;gap:7px;margin-bottom:6px}
-.access-card .ac-l i{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-.access-card b{font-family:var(--serif);font-size:16.5px;font-weight:600;display:block;color:var(--cream)}
-.access-card span{font-size:12px;color:#9db3a5}
-
-.user-row{display:flex;align-items:center;gap:12px;padding:16px 20px;border-top:1px solid var(--line-d)}
-.avatar{width:38px;height:38px;border-radius:12px;background:var(--g700);border:1.5px solid var(--line-d);display:grid;place-items:center;font-weight:700;font-size:15px;color:var(--gold-l)}
-.user-row .u-t{flex:1;min-width:0}
-.user-row .u-t b{display:block;font-size:14px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.user-row .u-t small{font-size:11.5px;color:#8fa897}
-.logout{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;color:#8fa897;transition:.2s;cursor:pointer;}
-.logout:hover{color:#ff9c7a;background:rgba(179,64,46,.15)}
-
-/* ============ MAIN ============ */
-.main{margin-left:264px;min-height:100vh;display:flex;flex-direction:column}
-.topbar{position:sticky;top:0;z-index:40;background:rgba(246,241,230,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:18px;transition:background 0.3s, border-color 0.3s;}
-[data-theme="dark"] .topbar { background: rgba(17,23,20,.85); }
-.burger{display:none;flex-direction:column;gap:5px;padding:8px;margin-right:4px}
-.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px}
-.topbar h1{font-size:clamp(1.3rem,2.2vw,1.7rem)}
-.topbar p{font-size:13px;color:var(--ink-soft);max-width:520px}
-.top-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-.date-chip{font-size:12.5px;font-weight:600;color:var(--ink-soft);background:var(--card);border:1px solid var(--line);padding:8px 15px;border-radius:999px}
-.count-chip{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;background:var(--g800);color:var(--cream);padding:8px 16px;border-radius:999px;white-space:nowrap}
-.count-chip b{color:var(--gold-l);font-family:var(--serif);font-size:15px}
-.count-chip .fl{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-
-.nav-dark-toggle{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);display:flex;align-items:center;justify-content:center;font-size:14px;transition:.25s;cursor:pointer;}
-.nav-dark-toggle:hover{border-color:var(--terra);color:var(--terra)}
-[data-theme="dark"] .nav-dark-toggle{border-color:var(--line);color:var(--gold)}
-
-.content{padding:30px 36px 46px;display:flex;flex-direction:column;gap:20px;max-width:1240px;width:100%;margin:0 auto}
-
-/* ---- 1 · HERO : mission + countdown ---- */
-.hero-band{display:grid;grid-template-columns:1.45fr .95fr;gap:18px}
-.mission{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-md);padding:30px 34px;position:relative;overflow:hidden}
-.mission::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 240px at 100% 0%,rgba(193,89,31,.09),transparent 65%)}
-.mission>*{position:relative}
-.m-eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);display:inline-flex;align-items:center;gap:8px}
-.m-eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--terra);animation:pulseT 2s infinite}
-.mission h2{font-size:clamp(1.5rem,2.5vw,2.15rem);margin:12px 0 10px;max-width:560px}
-.mission h2 em{font-style:italic;color:var(--terra)}
-.mission p{color:var(--ink-soft);font-size:14.5px;max-width:540px}
-.m-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:999px;transition:.2s}
-.btn-primary{background:var(--terra);color:#fff;box-shadow:0 6px 18px rgba(193,89,31,.3)}
-.btn-primary:hover{background:var(--terra-d);transform:translateY(-2px)}
-.btn-line{border:1.5px solid var(--line);color:var(--ink-soft)}
-.btn-line:hover{border-color:var(--ink);color:var(--ink)}
-.m-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.m-meta span{font-size:11.5px;font-weight:600;background:var(--cream-2);border:1px solid var(--line);padding:5px 12px;border-radius:99px;color:var(--ink-soft)}
-.count-card{background:var(--g900);color:var(--cream);border-radius:22px;padding:26px 28px;position:relative;overflow:hidden;box-shadow:var(--sh-md);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
-.count-card::before{content:"";position:absolute;inset:0;background:radial-gradient(340px 220px at 90% -20%,rgba(217,164,65,.22),transparent 65%)}
-.count-card>*{position:relative}
-.cc-l{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l)}
-.cc-num{font-family:var(--serif);font-size:84px;font-weight:600;line-height:1;color:var(--cream)}
-.cc-num small{font-size:18px;color:#9db3a5;font-family:var(--sans);font-weight:500;margin-left:10px}
-.cc-sub{font-size:12.5px;color:#9db3a5;margin-top:-6px}
-.cc-boxes{display:flex;gap:8px}
-.cc-box{flex:1;text-align:center;background:var(--g800);border:1px solid var(--line-d);border-radius:10px;padding:7px 2px}
-.cc-box b{display:block;font-family:var(--serif);font-size:17px;font-variant-numeric:tabular-nums;color:var(--gold-l)}
-.cc-box span{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#8fa897}
-
-/* ---- 2 · START HERE tiles ---- */
-.start-here{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-sm);padding:26px 26px 24px}
-.sh-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
-.sh-eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:4px}
-.sh-head h3{font-size:21px}
-.sh-head>span{font-size:13px;color:var(--ink-soft)}
-.sh-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.sh-tile{--acc:#c1591f;--acc-soft:rgba(193,89,31,.12);position:relative;display:flex;flex-direction:column;gap:7px;padding:20px 20px 18px;border:1.5px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden;transition:transform .28s cubic-bezier(.2,.7,.3,1.25),box-shadow .28s,border-color .28s}
-.sh-tile:hover{transform:translateY(-6px);border-color:var(--acc);box-shadow:0 16px 38px rgba(21,39,32,.16)}
-.sh-tile:active{transform:translateY(-2px) scale(.985)}
-.sh-tile::after{content:"";position:absolute;top:0;left:-75%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:left .7s ease;pointer-events:none}
-.sh-tile:hover::after{left:135%}
-.sh-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:2px}
-.sh-ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--acc-soft);color:var(--acc);animation:breathe 3.2s ease-in-out infinite}
-.sh-tile:nth-child(2) .sh-ic{animation-delay:.6s}
-.sh-tile:nth-child(3) .sh-ic{animation-delay:1.2s}
-.sh-tile:nth-child(4) .sh-ic{animation-delay:1.8s}
-@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-.sh-num{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--acc)}
-.sh-tile h4{font-family:var(--serif);font-size:19px;font-weight:600}
-.sh-tile>p{font-size:13px;color:var(--ink-soft)}
-.sh-vis{margin-top:4px;min-height:36px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
-.sh-cta{margin-top:8px;display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-size:13px;font-weight:700;color:var(--acc);background:var(--acc-soft);padding:9px 17px;border-radius:999px;transition:.25s}
-.sh-cta svg{transition:transform .25s}
-.sh-tile:hover .sh-cta{background:var(--acc);color:#fff;box-shadow:0 8px 20px rgba(21,39,32,.22)}
-.sh-tile:hover .sh-cta svg{transform:translateX(4px)}
-.pp{font-size:11.5px;font-weight:700;background:var(--cream-2);border:1.5px solid var(--line);border-radius:9px;padding:5px 10px;display:inline-flex;gap:7px;align-items:center;transition:transform .3s}
-.pp i{font-style:normal;font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:#8a6413;background:rgba(217,164,65,.18);padding:2px 7px;border-radius:99px}
-.sh-tile:hover .pp:nth-child(1){transform:translateY(-3px) rotate(-2deg)}
-.sh-tile:hover .pp:nth-child(2){transform:translateY(-1px)}
-.sh-tile:hover .pp:nth-child(3){transform:translateY(-3px) rotate(2deg)}
-.schip{font-size:11px;font-weight:600;border:1.5px solid var(--line);background:var(--cream-2);border-radius:99px;padding:5px 11px;transition:.25s}
-.sh-tile:hover .schip{border-color:var(--acc)}
-.schip.plus{background:var(--acc-soft);border-color:transparent;color:var(--acc);font-weight:800}
-.sh-timer{display:inline-flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--g800);background:var(--cream-2);border:1.5px solid var(--line);border-radius:12px;padding:5px 14px;font-variant-numeric:tabular-nums}
-.sh-timer .rec{width:8px;height:8px;border-radius:50%;background:var(--bad);animation:pulse 1.4s infinite}
-.sh-tmeta{font-size:11px;color:var(--ink-soft);font-weight:600}
-.sh-bars{display:flex;align-items:flex-end;gap:5px;height:34px}
-.sh-bars i{width:9px;border-radius:4px;background:var(--acc);opacity:.85;transform-origin:bottom;animation:eq 1.5s ease-in-out infinite alternate}
-@keyframes eq{from{transform:scaleY(.5)}to{transform:scaleY(1)}}
-
-/* ---- 3 · STATS ---- */
-.stats-panel{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh-sm);padding:22px 26px 20px}
-.sp-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
-.sp-head h3{font-size:17px}
-.sp-head span{font-size:12.5px;color:var(--ink-soft)}
-.dsp-grid{display:grid;grid-template-columns:repeat(5,1fr)}
-.dsp{padding:14px 18px 12px;border-left:1px dashed var(--line)}
-.dsp:first-child{border-left:none;padding-left:4px}
-.dsp .v{font-family:var(--serif);font-size:32px;font-weight:600;color:var(--ink);line-height:1.1}
-.dsp .l{font-size:12.5px;font-weight:600;color:var(--ink);margin-top:2px}
-.dsp .h{font-size:11px;color:var(--ink-soft);margin-top:3px;line-height:1.45}
-.xp-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px dashed var(--line);margin-top:8px;padding-top:16px}
-.lvl{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700}
-.lvl .lv{background:var(--g800);color:var(--gold-l);font-family:var(--serif);font-size:13px;padding:4px 11px;border-radius:9px}
-.xp-track{flex:1;min-width:180px;height:10px;background:var(--cream-2);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
-.xp-fill{height:100%;width:0;background:linear-gradient(90deg,var(--g600),var(--terra));border-radius:99px;transition:width .5s ease}
-.xp-note{font-size:12px;color:var(--ink-soft)}
-.xp-note b{color:var(--terra)}
-
-/* ---- 4 · JOURNEY + ACTIVITY ---- */
-.row3{display:grid;grid-template-columns:1.15fr 1.25fr;gap:18px}
-.journey{background:var(--g900);color:var(--cream);border-radius:20px;padding:26px 30px;box-shadow:var(--sh-md);position:relative;overflow:hidden}
-.journey::before{content:"";position:absolute;inset:0;background:radial-gradient(320px 200px at 100% 0%,rgba(217,164,65,.16),transparent 65%)}
-.journey>*{position:relative}
-.journey h3{font-size:18px;color:var(--cream)}
-.j-sub{font-size:12.5px;color:#9db3a5;margin-top:2px}
-.j-track{position:relative;margin:44px 8px 6px;height:8px}
-.j-line{position:absolute;inset:0;border-radius:8px;background:var(--line-d)}
-.j-fill{position:absolute;left:0;top:0;bottom:0;width:2%;border-radius:8px;background:linear-gradient(90deg,var(--terra),var(--gold));transition:width .5s ease}
-.j-dot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);background:var(--g900);border:4px solid var(--terra)}
-.j-dot.start{left:1%}
-.j-dot.end{left:99%;border-color:var(--gold)}
-.j-marker{position:absolute;left:2%;top:-34px;transform:translateX(-50%);display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-l);white-space:nowrap;transition:left .5s ease}
-.j-marker i{width:9px;height:9px;border-radius:50%;background:var(--gold);animation:pulse 1.8s infinite}
-.j-ends{display:flex;justify-content:space-between;font-size:12px;color:#9db3a5;margin-top:14px}
-.j-ends b{color:var(--cream);font-weight:600}
-.j-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.p-chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 13px;border-radius:999px;border:1px solid var(--line-d);color:#c3d2c6}
-.p-chip.gold{border-color:rgba(217,164,65,.5);color:var(--gold-l);background:rgba(217,164,65,.1)}
-
-.activity-card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh-sm);padding:24px 26px;display:flex;flex-direction:column}
-.activity-card h3{font-size:17px;margin-bottom:14px}
-.activity-list{display:flex;flex-direction:column;gap:10px;}
-.activity-item{display:flex;align-items:center;gap:14px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--cream);cursor:pointer;transition:transform .2s, border-color .2s;}
-.activity-item:hover{transform:translateX(3px);border-color:var(--terra);}
-.activity-icon{width:36px;height:36px;border-radius:10px;background:rgba(193,89,31,.1);color:var(--terra);display:grid;place-items:center;font-size:15px;flex-shrink:0;}
-.activity-content{flex:1;min-width:0;}
-.activity-title{font-size:14px;font-weight:600;color:var(--ink);}
-.activity-time{font-size:12px;color:var(--ink-soft);}
-.activity-arrow{color:var(--ink-soft);font-size:13px;}
-
-.empty{flex:1;border:2px dashed var(--line);border-radius:16px;background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;padding:34px 24px}
-.empty .e-ic{width:52px;height:52px;border-radius:16px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;color:var(--terra);box-shadow:var(--sh-sm);margin-bottom:4px}
-.empty b{font-family:var(--serif);font-size:17px;font-weight:600}
-.empty p{font-size:13px;color:var(--ink-soft);max-width:380px}
-
-/* ---- Telegram VIP Banner ---- */
-.telegram-banner{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:var(--sh-sm);flex-wrap:wrap;transition:border-color .2s, transform .2s;}
-.telegram-banner:hover{border-color:var(--terra);transform:translateY(-2px);}
-.tg-left{display:flex;align-items:center;gap:18px;flex:1;min-width:280px;}
-.tg-icon{width:48px;height:48px;border-radius:14px;background:#229ed9;color:#fff;display:grid;place-items:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 14px rgba(34,158,217,.3);}
-.tg-tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);display:flex;align-items:center;gap:6px;margin-bottom:4px;}
-.tg-pulse{width:7px;height:7px;border-radius:50%;background:var(--terra);animation:pulse 2s infinite;}
-.telegram-banner h3{font-size:18px;margin-bottom:2px;}
-.telegram-banner p{font-size:13px;color:var(--ink-soft);}
-.tg-right{flex-shrink:0;}
-
-/* ---- feedback ---- */
-.feedback{background:var(--cream-2);border:1px solid var(--line);border-radius:18px;padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.feedback .f-t b{font-family:var(--serif);font-size:16px;font-weight:600;display:block}
-.feedback .f-t p{font-size:13px;color:var(--ink-soft)}
-.f-btns{display:flex;gap:10px}
-.f-thanks{font-size:14px;font-weight:600;color:var(--ok);display:flex;align-items:center;gap:9px}
-
-.overlay{position:fixed;inset:0;background:rgba(10,36,27,.5);z-index:55;opacity:0;pointer-events:none;transition:.3s}
-.overlay.show{opacity:1;pointer-events:auto}
-
-@media(max-width:1180px){
-  .hero-band,.row3{grid-template-columns:1fr}
-  .dsp-grid{grid-template-columns:repeat(3,1fr)}
-  .dsp{border-left:none;padding-left:4px}
-}
-@media(max-width:960px){
-  .sidebar{transform:translateX(-100%)}
-  .sidebar.open{transform:none;box-shadow:0 0 60px rgba(0,0,0,.4)}
-  .main{margin-left:0}
-  .burger{display:flex}
-  .topbar{padding:16px 20px}
-  .content{padding:22px 20px 40px}
-}
-@media(max-width:640px){
-  .sh-grid{grid-template-columns:1fr}
-  .dsp-grid{grid-template-columns:1fr 1fr}
-  .cc-num{font-size:64px}
-  .top-right{justify-content:flex-start}
-}
+@media (prefers-reduced-motion: reduce){.tape div{animation:none}}
 </style>
+<script src="exam-date.js"></script>
 </head>
 <body>
+<div class="scrim" aria-hidden="true"></div>
 
-<div class="overlay" id="overlay"></div>
-
-<!-- ================= SIDEBAR ================= -->
-<aside class="sidebar" id="sidebar">
-  <a class="logo" href="index.html">Imat<em>Path</em></a>
-  <nav class="sb-nav">
-    <a class="active" href="dashboard.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
-      Dashboard</a>
-    <a href="checklist.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-      Syllabus Checklist</a>
-    <a href="question-bank.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-      Question Bank</a>
-    <a href="mock-exam.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg>
-      Mock Exams</a>
-    <a href="roadmap.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
-      IMAT Past Papers</a>
-    <a href="analytics.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M8 17v-6M13 17V7M18 17v-4"/></svg>
-      Analytics</a>
-  </nav>
-  <div class="sb-spacer"></div>
-  
-  <!-- Access plan badge in sidebar -->
-  <div class="access-card" id="accessPlanCard">
-    <span class="ac-l"><i id="accessPulse"></i><span id="accessPlanTitle">Free Plan</span></span>
-    <b id="accessPlanStatus">Full access</b>
-    <span id="accessPlanSub">All features included · no payment required</span>
-  </div>
-  
-  <div class="user-row">
-    <span class="avatar" id="userAvatar">U</span>
-    <div class="u-t">
-      <b id="userName">User</b>
-      <small>IMAT 2026 candidate</small>
-    </div>
-    <a class="logout" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+<aside class="side" id="side">
+  <div class="tricolore" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button class="side-x" id="sideX" aria-label="Close menu">✕</button>
+  <div class="side-in">
+    <a class="logo" href="index.html" aria-label="ImatPath home">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
     </a>
+    <nav class="snav" aria-label="Dashboard">
+      <a class="act" href="dashboard.html" title="Dashboard"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a><a href="lessons.html" title="Lessons"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.500-2 10-.5V19c-2.500-1.500-6-1.500-10 .5-4-2-7.500-2-10-.5z"/><path d="M12 6v13.500"/></svg>Lessons</a>
+      <a href="flashcards.html" title="Flashcards"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="14" height="14" rx="2.5"/><path d="M17 17v1.5A2.5 2.5 0 0 1 14.5 21h-9A2.5 2.5 0 0 1 3 18.5v-9A2.5 2.5 0 0 1 5.5 7H7"/><path d="M11 10h6"/></svg>Flashcards</a>
+      <a href="checklist.html" title="Syllabus Checklist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="m8 9 2 2 4-4M8 15h8"/></svg>Syllabus Checklist</a>
+      <a href="question-bank.html" title="Question Bank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.33c-.7.28-.9.87-.9 1.67"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>Question Bank</a>
+      <a href="mock-exam.html" title="Mock Exams"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>Mock Exams</a>
+      <a href="roadmap.html" title="IMAT Past Papers"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/><path d="M9 8h6M9 12h6"/></svg>IMAT Past Papers</a>
+      <a href="analytics.html" title="Analytics"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Analytics</a>
+    </nav>
+    <div class="side-foot">
+      <div class="plan-card">
+        <span class="t"><i></i>IMAT Candidate Access</span>
+        <p>Valid until exam day · Track your progress across all devices.</p>
+      </div>
+      <div class="user-card" id="userCard">
+        <span class="avatar" id="userAvatar">U</span>
+        <span style="flex:1;min-width:0;overflow:hidden"><span class="n" id="userName">User</span><br><span class="r">IMAT 2027 candidate</span></span>
+        <button class="logout-btn" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        </button>
+      </div>
+    </div>
   </div>
 </aside>
 
-<!-- ================= MAIN ================= -->
-<div class="main">
-  <header class="topbar">
-    <div style="display:flex;align-items:center;gap:12px">
-      <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
-      <div>
-        <h1>Welcome back, <span id="topUserName">User</span></h1>
-        <p>Your personalized IMAT preparation journey. Track your progress, practice with real questions, and ace the exam.</p>
-      </div>
-    </div>
-    <div class="top-right">
-      <button class="nav-dark-toggle" id="navDarkToggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-      </button>
-      <span class="date-chip" id="todayChip">—</span>
-      <span class="count-chip"><span class="fl"></span><b id="daysChip">31</b>&nbsp;days to IMAT</span>
-    </div>
-  </header>
-
-  <div class="content">
-
-    <!-- 1 · HERO : mission + countdown -->
-    <section class="hero-band">
-      <div class="mission up d1">
-        <span class="m-eyebrow"><i></i>Today's mission</span>
-        <h2>Find out exactly where you stand — <em>in 15 minutes.</em></h2>
-        <p>Take a timed mock exam. You'll get your score calculated with the official IMAT formula, your accuracy by subject, and a clear picture of what to study first.</p>
-        <div class="m-btns">
-          <a class="btn btn-primary" href="mock-exam.html">Take a mock exam
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="btn btn-line" href="question-bank.html">Or answer a few questions first</a>
-        </div>
-        <div class="m-meta"><span>Timed, like the real thing</span><span>+1.5 / −0.4 official scoring</span><span>Instant subject breakdown</span></div>
-      </div>
-      <div class="count-card up d2">
-        <div>
-          <div class="cc-l">Days until the IMAT</div>
-          <div class="cc-num"><span id="heroDays">31</span><small>days</small></div>
-          <div class="cc-sub">September 29, 2026 — make every day count.</div>
-        </div>
-        <div class="cc-boxes">
-          <div class="cc-box"><b id="cdD">--</b><span>days</span></div>
-          <div class="cc-box"><b id="cdH">--</b><span>hrs</span></div>
-          <div class="cc-box"><b id="cdM">--</b><span>min</span></div>
-          <div class="cc-box"><b id="cdS">--</b><span>sec</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2 · START HERE -->
-    <section class="start-here up d3">
-      <div class="sh-head">
-        <div>
-          <span class="sh-eyebrow">Your tools</span>
-          <h3>Start here</h3>
-        </div>
-        <span>Jump into your study session</span>
-      </div>
-      <div class="sh-grid">
-        <a class="sh-tile" style="--acc:#a97b1c;--acc-soft:rgba(217,164,65,.16)" href="roadmap.html">
-          <div class="sh-top">
-            <span class="sh-ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
-            <span class="sh-num">01</span>
-          </div>
-          <h4>IMAT Past Papers</h4>
-          <p>Practice with official past papers</p>
-          <div class="sh-vis">
-            <span class="pp">2025 <i>Official</i></span>
-            <span class="pp">2024 <i>Official</i></span>
-            <span class="pp">2023 <i>Official</i></span>
-          </div>
-          <span class="sh-cta">Open Past Papers
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a class="sh-tile" style="--acc:#c1591f;--acc-soft:rgba(193,89,31,.12)" href="question-bank.html">
-          <div class="sh-top">
-            <span class="sh-ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
-            <span class="sh-num">02</span>
-          </div>
-          <h4>Question Bank</h4>
-          <p>2,000+ IMAT-style questions</p>
-          <div class="sh-vis">
-            <span class="schip">Biology</span>
-            <span class="schip">Chemistry</span>
-            <span class="schip">Physics</span>
-            <span class="schip">Math</span>
-            <span class="schip plus">+2,000</span>
-          </div>
-          <span class="sh-cta">Start practicing
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a class="sh-tile" style="--acc:#1e5b44;--acc-soft:rgba(30,91,68,.12)" href="mock-exam.html">
-          <div class="sh-top">
-            <span class="sh-ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg></span>
-            <span class="sh-num">03</span>
-          </div>
-          <h4>Mock Exams</h4>
-          <p>Full 100-minute timed simulations</p>
-          <div class="sh-vis">
-            <span class="sh-timer"><span class="rec"></span><span id="shTimer">1:40:00</span></span>
-            <span class="sh-tmeta">+1.5 / −0.4 official scoring</span>
-          </div>
-          <span class="sh-cta">Take exam
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a class="sh-tile" style="--acc:#557a63;--acc-soft:rgba(85,122,99,.14)" href="analytics.html">
-          <div class="sh-top">
-            <span class="sh-ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M8 17v-6M13 17V7M18 17v-4"/></svg></span>
-            <span class="sh-num">04</span>
-          </div>
-          <h4>Analytics</h4>
-          <p>Performance tracking &amp; insights</p>
-          <div class="sh-vis">
-            <div class="sh-bars">
-              <i style="height:14px;animation-delay:0s"></i>
-              <i style="height:22px;animation-delay:.15s"></i>
-              <i style="height:17px;animation-delay:.3s"></i>
-              <i style="height:27px;animation-delay:.45s"></i>
-              <i style="height:20px;animation-delay:.6s"></i>
-              <i style="height:30px;animation-delay:.75s"></i>
-            </div>
-            <span class="sh-tmeta">Accuracy by subject</span>
-          </div>
-          <span class="sh-cta">View stats
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-      </div>
-    </section>
-
-    <!-- 3 · STATS -->
-    <section class="stats-panel up d4">
-      <div class="sp-head">
-        <h3>Your stats</h3>
-        <span>Tracked live — every correct answer earns 10 XP.</span>
-      </div>
-      <div class="dsp-grid">
-        <div class="dsp">
-          <div class="v" id="statQuestions">—</div>
-          <div class="l">Questions Completed</div>
-          <div class="h">From 2,000+ pool</div>
-        </div>
-        <div class="dsp">
-          <div class="v" id="statMocks">—</div>
-          <div class="l">Mock Exams Taken</div>
-          <div class="h">Full simulations</div>
-        </div>
-        <div class="dsp">
-          <div class="v" id="statAccuracy">—</div>
-          <div class="l">Accuracy Rate</div>
-          <div class="h">Overall performance</div>
-        </div>
-        <div class="dsp">
-          <div class="v" id="statStreak">—</div>
-          <div class="l">Day Streak 🔥</div>
-          <div class="h">Consecutive study days</div>
-        </div>
-        <div class="dsp">
-          <div class="v" id="statBestStreak">—</div>
-          <div class="l">Best Streak</div>
-          <div class="h">Your all-time record</div>
-        </div>
-      </div>
-      <div class="xp-row">
-        <span class="lvl"><span class="lv" id="xpLevelBadge">Lv.1</span> XP Level</span>
-        <div class="xp-track"><div class="xp-fill" id="xpFillBar"></div></div>
-        <span class="xp-note"><b id="xpToNext">100 XP</b> to next level · Total: <span id="xpTotalVal">0</span> XP</span>
-      </div>
-    </section>
-
-    <!-- 4 · JOURNEY + ACTIVITY -->
-    <section class="row3">
-      <div class="journey up d5">
-        <h3>Your journey to IMAT 2026</h3>
-        <p class="j-sub">Overall progress — moves forward as you complete chapters and mocks.</p>
-        <div class="j-track">
-          <div class="j-line"></div>
-          <div class="j-fill" id="journeyFill"></div>
-          <div class="j-dot start"></div>
-          <div class="j-dot end"></div>
-          <div class="j-marker" id="journeyMarker"><i></i><span id="journeyText">Day 1 · 0%</span></div>
-        </div>
-        <div class="j-ends"><span><b>Today</b> · <span id="journeyToday">Aug 29</span></span><span><b>IMAT</b> · Sep 29, 2026</span></div>
-        <div class="j-chips">
-          <span class="p-chip gold" id="journeyPlanChip">Free Plan</span>
-          <span class="p-chip"><span class="days-left-count">31</span> days left</span>
-          <span class="p-chip">Access until exam day</span>
-        </div>
-      </div>
-      <div class="activity-card up d6">
-        <h3>Recent activity</h3>
-        <div class="activity-list" id="activityList">
-          <div class="empty">
-            <span class="e-ic">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            </span>
-            <b>No activity yet</b>
-            <p>Your journey starts with your first question — everything you complete will show up here.</p>
-            <a class="btn btn-primary" href="question-bank.html">Answer your first question</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5 · TELEGRAM VIP COMMUNITY -->
-    <section class="telegram-banner up d7" id="telegramBanner" style="margin-bottom:18px;">
-      <div class="tg-left">
-        <div class="tg-icon"><i class="fab fa-telegram-plane"></i></div>
-        <div>
-          <div class="tg-tag"><span class="tg-pulse"></span> <span id="tgTagText">VIP Study Group</span></div>
-          <h3>Private IMAT 2026 Telegram Community</h3>
-          <p>Connect with other candidates, ask questions directly, and get daily study accountability.</p>
-        </div>
-      </div>
-      <div class="tg-right" id="tgActionContainer">
-        <a class="btn btn-primary" id="tgActionBtn" href="https://t.me/+2JUJEOZ6YzNhNzVk" target="_blank" rel="noopener noreferrer">
-          Join Telegram Group
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </section>
-
-    <!-- feedback -->
-    <div class="feedback up d7" id="feedback">
-      <div class="f-t">
-        <b>How is your experience?</b>
-        <p>You've been using ImatPath — we'd love to hear your thoughts to help us improve.</p>
-      </div>
-      <div class="f-btns">
-        <button class="btn btn-line" id="fbLater">Later</button>
-        <button class="btn btn-primary" id="fbSubmit">Submit feedback</button>
-      </div>
-    </div>
-
+<main class="main">
+  <div class="mtop">
+    <a class="logo" href="index.html" aria-label="ImatPath home">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
   </div>
-</div>
 
-<script src="xp-system.js"></script>
+  <!-- ══════════ HERO + COUNTDOWN ══════════ -->
+  <div class="bento">
+    <section class="b hero s8 dots" data-rv>
+      <span class="eyebrow">IMAT 2027 · Candidate dashboard</span>
+      <h1 class="lm"><span><span id="greetWord">Welcome back</span>,<br><em id="topUserName">User</em>.</span></h1>
+      <p class="top-sub">Your personalized IMAT preparation journey. Track your progress, practice with real questions, and ace the exam.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="question-bank.html">Start practicing <span class="ar">→</span></a>
+        <a class="btn ghost" href="mock-exam.html">Take a mock exam</a>
+      </div>
+      <div class="say">
+        <p class="bubble" id="sayBubble"><small>PIP SAYS</small><span id="sayText">Ready when you are!</span></p>
+        <span class="say-pip" id="sayPip" data-pip title="Click me!"></span>
+      </div>
+    </section>
+
+    <section class="b cd s4 dots-w" data-rv style="--d:.1s" role="timer" aria-label="Countdown to the IMAT">
+      <span class="lbl">DAYS UNTIL<br>THE IMAT</span>
+      <div class="cd-num"><span id="cdDays">--</span><small>days to make it count</small></div>
+      <div>
+        <div class="cd-boxes">
+          <div class="cd-b"><b id="cdD">--</b><span>days</span></div>
+          <div class="cd-b"><b id="cdH">--</b><span>hrs</span></div>
+          <div class="cd-b"><b id="cdM">--</b><span>min</span></div>
+          <div class="cd-b"><b id="cdS">--</b><span>sec</span></div>
+        </div>
+        <p class="cd-date" style="margin-top:12px"><b>September 2027</b> — every day counts.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="tape" aria-hidden="true"><div>
+    <span>OFFICIAL MUR SYLLABUS ✦</span><span>+1.5 CORRECT ✦</span><span>−0.4 INCORRECT ✦</span><span>0 IF BLANK ✦</span><span>100 MINUTES ✦</span><span>60 QUESTIONS ✦</span>
+    <span>OFFICIAL MUR SYLLABUS ✦</span><span>+1.5 CORRECT ✦</span><span>−0.4 INCORRECT ✦</span><span>0 IF BLANK ✦</span><span>100 MINUTES ✦</span><span>60 QUESTIONS ✦</span>
+  </div></div>
+
+  <!-- ══════════ THE ROAD TO MEDICINE ══════════ -->
+  <section class="b pathcard s12 dots" data-rv id="journey" style="margin-bottom:22px">
+    <div class="p-head">
+      <div>
+        <span class="eyebrow">Your journey to IMAT 2027</span>
+        <h2>The road to medicine</h2>
+        <span class="next-stop" id="nextStop"><i>📍</i><span>Loading your next stop…</span></span>
+      </div>
+      <span class="j-pct"><span id="jPct">0</span><small>%</small></span>
+    </div>
+    <div class="map"><div class="map-in" id="mapIn">
+      <svg viewBox="0 0 1100 320" preserveAspectRatio="none" aria-hidden="true">
+        <path id="roadO" class="road-o" d="M60 235 C190 70, 300 70, 420 175 S650 300, 770 170 S960 40, 1040 130"/>
+        <path class="road-i" d="M60 235 C190 70, 300 70, 420 175 S650 300, 770 170 S960 40, 1040 130"/>
+        <path class="road-d" d="M60 235 C190 70, 300 70, 420 175 S650 300, 770 170 S960 40, 1040 130"/>
+        <path id="roadP" class="road-p" d="M60 235 C190 70, 300 70, 420 175 S650 300, 770 170 S960 40, 1040 130"/>
+      </svg>
+    </div></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+      <span class="pill-s" style="background:var(--sun-l)">Candidate Access</span>
+      <span class="pill-s" style="background:var(--coral-l)"><span id="jDaysLeft">--</span> days left</span>
+      <span class="pill-s" id="jTodayDate">Today</span>
+    </div>
+  </section>
+
+  <!-- ══════════ TOOLS ══════════ -->
+  <div class="bento">
+    <article class="b tool t-ls s12" data-rv>
+      <div class="t-txt">
+        <span class="bk"><span>THEORY · VIDEO + NOTES</span></span>
+        <h3>Theory Lessons <span class="new">NEW</span></h3>
+        <p>Learn every chapter of Biology, Chemistry, Physics and Math before you practice it, with a course document and flashcards for each one. Video lessons are on the way.</p>
+        <a class="btn gold" href="lessons.html">Open the Lesson Library <span class="ar">→</span></a>
+      </div>
+      <div class="ls-books" aria-hidden="true"><i>Biology</i><i>Chemistry</i><i>Physics</i><i>Math</i></div>
+    </article>
+    <article class="b tool t-qb s5 dots" data-rv>
+      <span class="bk"><span>01 · BANK</span><span>PRACTICE</span></span>
+      <h3>Question Bank</h3>
+      <p>Chapter-by-chapter IMAT-style questions with worked solutions.</p>
+      <div class="vis"><div class="big-n">4,000+</div>
+        <div class="pills" style="margin-top:12px" aria-hidden="true"><span class="pill-s hot">Biology</span><span class="pill-s">Chemistry</span><span class="pill-s">Physics</span><span class="pill-s">Math</span><span class="pill-s">Logic</span></div>
+      </div>
+      <a class="btn" href="question-bank.html">Start practicing <span class="ar">→</span></a>
+    </article>
+    <article class="b tool t-mock s4 dots" data-rv style="--d:.08s">
+      <span class="bk"><span>02 · MOCKS</span><span>100 MIN</span></span>
+      <h3>Mock Exams</h3>
+      <p>Full timed simulations with official scoring.</p>
+      <div class="vis"><div class="mini-timer" aria-hidden="true">1<span class="colon">:</span>40<span class="colon">:</span>00</div><span class="mini-tag">+1.5 / −0.4 OFFICIAL SCORING</span></div>
+      <a class="btn red" href="mock-exam.html">Take exam <span class="ar">→</span></a>
+    </article>
+    <article class="b tool t-pp s3 dots" data-rv style="--d:.16s">
+      <span class="bk"><span>03 · PAPERS</span></span>
+      <h3>Past Papers</h3>
+      <p>Official MUR exams.</p>
+      <div class="vis pp-stack" aria-hidden="true">
+        <div class="pp"><b>2026</b><span class="off">Official →</span></div>
+        <div class="pp"><b>2025</b><span class="off">Official →</span></div>
+        <div class="pp"><b>2024</b><span class="off">Official →</span></div>
+      </div>
+      <a class="btn gold" href="roadmap.html" style="margin-top:20px">Open</a>
+    </article>
+  </div>
+
+  <!-- ══════════ LEVEL + STATS ══════════ -->
+  <div class="bento">
+    <section class="b xp s4 dots-w" data-rv>
+      <div class="row1">
+        <span class="lvl-badge"><span><small>LEVEL</small><b id="xpLv">1</b></span></span>
+        <div><span class="rank" id="xpRank">Freshman</span><span class="title">Keep climbing</span></div>
+      </div>
+      <div class="xp-bar" aria-hidden="true"><i id="xpFill"></i></div>
+      <span class="cap"><b id="xpNext">100</b> XP to next level · Total <b id="xpTotal">0</b> XP</span>
+      <span class="cap" style="font-size:.78rem;opacity:.7">Every correct answer earns XP.</span>
+    </section>
+    <section class="s8" data-rv style="--d:.1s">
+      <div class="stats">
+        <div class="stile"><span class="ic">📝</span><span class="v"><span id="stQ">0</span></span><span class="l">Questions done</span><span class="s">From 4,000+ pool</span></div>
+        <div class="stile"><span class="ic">⏱️</span><span class="v"><span id="stM">0</span></span><span class="l">Mocks taken</span><span class="s">Full simulations</span></div>
+        <div class="stile"><span class="ic">🎯</span><span class="v"><span id="stA">—</span></span><span class="l">Accuracy</span><span class="s">Overall</span></div>
+        <div class="stile"><span class="ic">📅</span><span class="v"><span id="stS">0</span><span class="fl">🔥</span></span><span class="l">Day streak</span><span class="s">Consecutive days</span></div>
+        <div class="stile"><span class="ic">🏅</span><span class="v"><span id="stB">0</span></span><span class="l">Best streak</span><span class="s">All-time record</span></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════ WEEK + ANALYTICS ══════════ -->
+  <div class="bento">
+    <section class="b week s7 dots" data-rv>
+      <h3>Your week</h3>
+      <p id="weekNote">Study today to start your streak.</p>
+      <div class="days" id="weekDays"></div>
+    </section>
+    <article class="b tool t-an s5 dots" id="toolAnalyt" data-rv style="--d:.1s;min-height:0">
+      <span class="bk"><span>04 · DATA</span></span>
+      <h3>Analytics</h3>
+      <div class="vis mini-bars" aria-hidden="true" style="margin-top:6px">
+        <div class="mb"><span>BIO</span><span class="tr"><i style="--w:78%"></i></span></div>
+        <div class="mb hot"><span>PHYS</span><span class="tr"><i style="--w:52%;--d:.15s"></i></span></div>
+        <div class="mb"><span>LOGIC</span><span class="tr"><i style="--w:83%;--d:.3s"></i></span></div>
+      </div>
+      <a class="btn" href="analytics.html">View stats</a>
+    </article>
+  </div>
+
+  <!-- ══════════ BADGES ══════════ -->
+  <section class="b badges-card s12 dots" data-rv style="margin-bottom:22px">
+    <div class="bh">
+      <div><span class="eyebrow">Collection</span><h2>Your badges</h2></div>
+      <span class="bcount" id="badgeCount">0 / 8</span>
+    </div>
+    <div class="badges" id="badges"></div>
+  </section>
+
+  <!-- ══════════ ACTIVITY + VIP ══════════ -->
+  <div class="bento">
+    <section class="b act-card s7" data-rv>
+      <h3>Recent activity</h3>
+      <div id="actList" style="display:none"></div>
+      <div class="empty" id="actEmpty">
+        <span class="ring pip-bob" data-pip data-mood="sad" aria-hidden="true"></span>
+        <h4>No activity yet</h4>
+        <p>Your journey starts with your first question — everything you complete will show up here.</p>
+        <a class="btn red" href="question-bank.html">Answer your first question <span class="ar">→</span></a>
+      </div>
+    </section>
+    <section class="b vip s5 dots-w" data-rv style="--d:.1s">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px">
+        <span class="tag" style="margin-bottom:0"><i></i>VIP Study Group</span>
+        <span class="vip-tg-badge" aria-hidden="true" title="Telegram Community">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </span>
+      </div>
+      <h3>Private IMAT 2027 Telegram Community</h3>
+      <p>Connect with other candidates, ask questions directly, and get daily study accountability.</p>
+      <a class="btn gold" id="vipTgBtn" href="https://t.me/+2JUJEOZ6YzNhNzVk" target="_blank" rel="noopener">Join Private Telegram Group <span class="ar">→</span></a>
+    </section>
+  </div>
+
+  <section class="b fb s12" id="fbCard" data-rv>
+    <div><h4>How is your experience?</h4><p>You've been using ImatPath — we'd love to hear your thoughts to help us improve.</p></div>
+    <div class="fb-row">
+      <button class="btn ghost sm" id="fbLater">Later</button>
+      <a class="btn sm" id="fbSubmit" href="mailto:imatpathpro@gmail.com?subject=ImatPath%20feedback">Submit feedback</a>
+    </div>
+  </section>
+
+  <div class="foot-line">
+    <span>© 2026 ImatPath. All rights reserved.</span>
+    <span>Not affiliated with Cambridge Assessment or MUR.</span>
+  </div>
+</main>
+
 <script>
 (function(){
 "use strict";
-const $=s=>document.querySelector(s);
-const $$=s=>Array.from(document.querySelectorAll(s));
+const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ── Dark Mode Toggle & Sync ── */
-window.toggleDarkMode = function() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('imatpath_dark_mode', 'false');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('imatpath_dark_mode', 'true');
-  }
-  updateDarkIcon();
-};
+/* ---------- mobile sidebar ---------- */
+const burger = $('#burger');
+const sideX = $('#sideX');
+const scrim = $('.scrim');
+if (burger) burger.addEventListener('click',()=>document.body.classList.add('menu'));
+if (sideX) sideX.addEventListener('click',()=>document.body.classList.remove('menu'));
+if (scrim) scrim.addEventListener('click',()=>document.body.classList.remove('menu'));
+$$('.snav a').forEach(a => a.addEventListener('click',()=>document.body.classList.remove('menu')));
 
-function updateDarkIcon() {
-  const btn = $('#navDarkToggle');
-  if (btn) {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-  }
-}
-document.addEventListener('DOMContentLoaded', updateDarkIcon);
+/* ---------- reveals ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+}),{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+$$('[data-rv],.lm').forEach(el=>RM?el.classList.add('in'):io.observe(el));
 
-/* ── Logout Handler ── */
+/* ---------- logout handler ---------- */
 window.handleLogout = async function(e) {
   if (e) e.preventDefault();
-  if (window.ImatAuth) {
+  if (window.ImatAuth && typeof window.ImatAuth.signOut === 'function') {
     await window.ImatAuth.signOut();
   } else {
     localStorage.removeItem('imatpath_user');
@@ -604,198 +534,386 @@ window.handleLogout = async function(e) {
   }
 };
 
-/* ── Sidebar Mobile ── */
-const sb=$("#sidebar"), ov=$("#overlay");
-if ($("#burger")) {
-  $("#burger").addEventListener("click",function(){sb.classList.add("open");ov.classList.add("show");});
-}
-if (ov) {
-  ov.addEventListener("click",function(){sb.classList.remove("open");ov.classList.remove("show");});
-}
+/* ---------- countdown ---------- */
+/* Target: IMAT 2027 day (September 2027) */
+let target=new Date(window.IMAT_EXAM);
+if(target-Date.now()<=0) target=new Date(Date.now()+350*864e5);
+const pad=n=>String(n).padStart(2,'0');
 
-/* ── Today's Date & Countdown ── */
-const todayDate = new Date();
-if ($("#todayChip")) {
-  $("#todayChip").textContent = todayDate.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
+function tick(){
+  let d=Math.max(0,target-Date.now());
+  const days=Math.floor(d/864e5), hrs=Math.floor(d/36e5)%24, min=Math.floor(d/6e4)%60, sec=Math.floor(d/1e3)%60;
+  if ($('#cdDays')) $('#cdDays').textContent=days;
+  setBox('cdD',pad(days)); setBox('cdH',pad(hrs)); setBox('cdM',pad(min)); setBox('cdS',pad(sec));
+  const jDays = $('#jDaysLeft'); if(jDays) jDays.textContent = days;
 }
-if ($("#journeyToday")) {
-  $("#journeyToday").textContent = todayDate.toLocaleDateString("en-US",{month:"short",day:"numeric"});
+function setBox(id,v){
+  const el=$('#'+id);
+  if(el && el.textContent!==v){ el.textContent=v; if(!RM){ el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); } }
 }
+tick(); setInterval(tick,1000);
 
-const exam = new Date("2026-09-29T09:00:00");
-const p2 = n => String(n).padStart(2,"0");
+/* ---------- today marker ---------- */
+const now = new Date();
+const todayLabel = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+const jT = $('#jTodayDate');
+if (jT) jT.textContent = 'Today · ' + todayLabel;
 
-function tickCountdown(){
-  const now = new Date();
-  const d = Math.max(0, exam - now);
-  const dd = Math.floor(d/864e5), hh = Math.floor(d/36e5)%24, mm = Math.floor(d/6e4)%60, ss = Math.floor(d/1e3)%60;
-  
-  if ($("#heroDays")) $("#heroDays").textContent = dd;
-  if ($("#daysChip")) $("#daysChip").textContent = dd;
-  $$(".days-left-count").forEach(el => el.textContent = dd);
-  
-  if ($("#cdD")) $("#cdD").textContent = p2(dd);
-  if ($("#cdH")) $("#cdH").textContent = p2(hh);
-  if ($("#cdM")) $("#cdM").textContent = p2(mm);
-  if ($("#cdS")) $("#cdS").textContent = p2(ss);
-}
-tickCountdown();
-setInterval(tickCountdown, 1000);
-
-/* ── Live Mock Timer in Tile 03 ── */
-let shSec = 6000;
-setInterval(function(){
-  shSec--; if (shSec < 0) shSec = 6000;
-  const h = Math.floor(shSec/3600), m = Math.floor(shSec/60)%60, s = shSec%60;
-  const el = $("#shTimer");
-  if (el) el.textContent = h + ":" + p2(m) + ":" + p2(s);
+/* ---------- mock exam live timer ---------- */
+let mockSec = 6000;
+setInterval(() => {
+  mockSec--; if (mockSec < 0) mockSec = 6000;
+  const h = Math.floor(mockSec / 3600), m = Math.floor(mockSec / 60) % 60, s = mockSec % 60;
+  const mt = $('.mini-timer');
+  if (mt) mt.innerHTML = `${h}<span class="colon">:</span>${pad(m)}<span class="colon">:</span>${pad(s)}`;
 }, 1000);
 
-/* ── Feedback Handlers ── */
-if ($("#fbLater")) {
-  $("#fbLater").addEventListener("click",function(){
-    const f=$("#feedback");
-    f.style.transition="opacity .3s,transform .3s"; f.style.opacity="0"; f.style.transform="translateY(8px)";
-    setTimeout(function(){f.style.display="none";},300);
-  });
-}
-if ($("#fbSubmit")) {
-  $("#fbSubmit").addEventListener("click", async function(){
-    const comment = prompt("Tell us your thoughts or feedback for ImatPath:");
-    if (comment && comment.trim()) {
-      if (window.ImatAuth) {
-        await window.ImatAuth.submitFeedback(5, comment.trim());
-      }
-      $("#feedback").innerHTML='<div class="f-thanks"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Thank you! Your feedback helps us make ImatPath better.</div>';
-    }
-  });
+/* ---------- number count up ---------- */
+function countUp(el,to){
+  if (!el) return;
+  if(RM){el.textContent=to.toLocaleString('en');return;}
+  const t0=performance.now(),dur=1400;
+  (function run(t){
+    const p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
+    el.textContent=Math.round(to*e).toLocaleString('en');
+    if(p<1)requestAnimationFrame(run);
+  })(t0);
 }
 
-/* ── Live Data Population ── */
-async function loadLiveDashboardData() {
-  // 1. User details & plan status
-  if (window.ImatAuth) {
-    const user = await window.ImatAuth.getUser();
-    if (user) {
-      let firstName = user?.user_metadata?.first_name || user?.user_metadata?.full_name || user?.user_metadata?.name || user?.email?.split('@')[0] || 'User';
-      if (firstName.includes(' ')) firstName = firstName.split(' ')[0];
-      const initial = firstName.charAt(0).toUpperCase();
-      
-      if ($('#userName')) $('#userName').textContent = firstName;
-      if ($('#topUserName')) $('#topUserName').textContent = firstName;
-      if ($('#userAvatar')) $('#userAvatar').textContent = initial;
+/* ---------- stats & data loading ---------- */
+let S={q:0,mocks:0,acc:null,streak:0,best:0,xp:0};
 
-      if ($('#accessPlanTitle')) $('#accessPlanTitle').textContent = 'Free Plan';
-      if ($('#accessPlanStatus')) $('#accessPlanStatus').textContent = 'Full access';
-      if ($('#accessPlanSub')) $('#accessPlanSub').textContent = 'All features included · no payment required';
-      if ($('#journeyPlanChip')) $('#journeyPlanChip').textContent = 'Free Plan';
-
-      // Telegram Community Card
-      const tgLink = window.ImatConfig?.TELEGRAM_GROUP_LINK || 'https://t.me/+2JUJEOZ6YzNhNzVk';
-      const tgBtn = $('#tgActionBtn');
-      const tgTag = $('#tgTagText');
-      if (tgBtn && tgTag) {
-        tgTag.textContent = 'Community Access';
-        tgBtn.textContent = 'Join Telegram Group';
-        tgBtn.href = tgLink;
-        tgBtn.target = '_blank';
-        tgBtn.onclick = null;
+async function loadData() {
+  // 1. User info from Supabase/Auth
+  if (window.ImatAuth && typeof window.ImatAuth.getUser === 'function') {
+    try {
+      const user = await window.ImatAuth.getUser();
+      if (user) {
+        let firstName = user?.user_metadata?.first_name || user?.user_metadata?.full_name || user?.user_metadata?.name || user?.email?.split('@')[0] || 'User';
+        if (firstName.includes(' ')) firstName = firstName.split(' ')[0];
+        const initial = firstName.charAt(0).toUpperCase();
+        if ($('#userName')) $('#userName').textContent = firstName;
+        if ($('#topUserName')) $('#topUserName').textContent = firstName;
+        if ($('#userAvatar')) $('#userAvatar').textContent = initial;
       }
-    }
+    } catch(e){}
   }
 
-  // 2. Questions Completed & Accuracy
+  // 2. Telegram Group link from config
+  if (window.ImatConfig?.TELEGRAM_GROUP_LINK) {
+    const tg = $('#vipTgBtn');
+    if (tg) tg.href = window.ImatConfig.TELEGRAM_GROUP_LINK;
+  }
+
+  // 3. Question Bank stats
   const qbRaw = localStorage.getItem('imatpath_qb');
   let qbCount = 0;
   if (qbRaw) {
     try {
       const qb = JSON.parse(qbRaw);
       qbCount = Object.keys(qb.revealed || {}).length;
-    } catch(e) {}
+    } catch(e){}
   }
-  if ($('#statQuestions')) $('#statQuestions').textContent = qbCount > 0 ? qbCount : '0';
-
   const correctRaw = localStorage.getItem('imatpath_qb_correct');
-  let correctCount = parseInt(correctRaw || '0');
-  let accuracy = 0;
+  const correctCount = parseInt(correctRaw || '0', 10);
+  let accRate = null;
   if (qbCount > 0) {
-    accuracy = Math.round((correctCount / qbCount) * 100);
-    if ($('#statAccuracy')) $('#statAccuracy').textContent = accuracy + '%';
-  } else {
-    if ($('#statAccuracy')) $('#statAccuracy').textContent = '—';
+    accRate = Math.round((correctCount / qbCount) * 100);
   }
 
-  // 3. Mock Exams Taken
+  // 4. Mock Exams stats
   let mocksCount = 0;
   let mockList = [];
-  if (window.ImatAuth) {
+  if (window.ImatAuth && typeof window.ImatAuth.loadMockResults === 'function') {
     try {
-      mockList = await window.ImatAuth.loadMockResults() || [];
+      mockList = (await window.ImatAuth.loadMockResults()) || [];
       mocksCount = mockList.length;
-    } catch(e) {}
+    } catch(e){}
   }
   if (!mocksCount) {
-    const mockState = localStorage.getItem('imatpath_mock');
-    if (mockState) {
+    const mockRaw = localStorage.getItem('imatpath_mock');
+    if (mockRaw) {
       try {
-        const mock = JSON.parse(mockState);
+        const mock = JSON.parse(mockRaw);
         mocksCount = Object.keys(mock.results || {}).length;
-      } catch(e) {}
+      } catch(e){}
     }
   }
-  if ($('#statMocks')) $('#statMocks').textContent = mocksCount > 0 ? mocksCount : '0';
 
-  // 4. XP & Streaks
-  if (typeof XP !== 'undefined') {
+  // 5. XP & Streaks
+  let xpVal = 0, streakVal = 0, bestVal = 0;
+  if (typeof XP !== 'undefined' && typeof XP.getState === 'function') {
     const xpState = XP.getState();
-    if ($('#statStreak')) $('#statStreak').textContent = xpState.streak > 0 ? xpState.streak : '0';
-    if ($('#statBestStreak')) $('#statBestStreak').textContent = xpState.longestStreak > 0 ? xpState.longestStreak : '0';
-    if ($('#xpLevelBadge')) $('#xpLevelBadge').textContent = 'Lv.' + xpState.level;
-    if ($('#xpTotalVal')) $('#xpTotalVal').textContent = xpState.xp;
-
-    const curLvlXp = XP.xpForLevel(xpState.level);
-    const nextLvlXp = XP.xpForLevel(xpState.level + 1);
-    const needed = nextLvlXp - xpState.xp;
-    if ($('#xpToNext')) $('#xpToNext').textContent = Math.max(0, needed) + ' XP';
-
-    const pct = Math.min(100, Math.max(0, ((xpState.xp - curLvlXp) / (nextLvlXp - curLvlXp)) * 100));
-    if ($('#xpFillBar')) $('#xpFillBar').style.width = pct + '%';
+    xpVal = xpState.xp || 0;
+    streakVal = xpState.streak || 0;
+    bestVal = xpState.longestStreak || 0;
+  } else {
+    try {
+      const xpRaw = JSON.parse(localStorage.getItem('imatpath_xp') || '{}');
+      xpVal = xpRaw.xp || 0;
+      streakVal = xpRaw.streak || 0;
+      bestVal = xpRaw.longestStreak || 0;
+    } catch(e){}
   }
 
-  // 5. Journey progress
-  const ESTIMATED_TOTAL = 2000;
-  const journeyPct = Math.min(100, Math.max(2, Math.round((qbCount / ESTIMATED_TOTAL) * 100)));
-  if ($('#journeyFill')) $('#journeyFill').style.width = journeyPct + '%';
-  if ($('#journeyMarker')) {
-    $('#journeyMarker').style.left = journeyPct + '%';
-    if ($('#journeyText')) $('#journeyText').textContent = journeyPct + '% Progress';
+  // Fallback to ip_stats
+  try {
+    const ip = JSON.parse(localStorage.getItem('ip_stats') || '{}');
+    if (ip.q && ip.q > qbCount) qbCount = ip.q;
+    if (ip.mocks && ip.mocks > mocksCount) mocksCount = ip.mocks;
+    if (ip.acc != null && accRate == null) accRate = ip.acc;
+    if (ip.streak && ip.streak > streakVal) streakVal = ip.streak;
+    if (ip.best && ip.best > bestVal) bestVal = ip.best;
+    if (ip.xp && ip.xp > xpVal) xpVal = ip.xp;
+  } catch(e){}
+
+  S = {
+    q: qbCount,
+    mocks: mocksCount,
+    acc: accRate,
+    streak: streakVal,
+    best: bestVal,
+    xp: xpVal
+  };
+
+  renderStats();
+
+  // 6. Recent Activity
+  let A = [];
+  try { A = JSON.parse(localStorage.getItem('ip_activity') || '[]'); } catch(e){}
+  if (!A.length && mockList && mockList.length) {
+    A = mockList.map(m => ({
+      type: 'mock',
+      label: `Mock Exam ${m.exam_id || ''} · ${m.score !== undefined ? m.score + '/90' : 'Completed'}`,
+      when: m.taken_at ? new Date(m.taken_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : ''
+    }));
   }
 
-  // 6. Recent Activity List
-  if (mockList && mockList.length > 0) {
-    const actList = $('#activityList');
-    if (actList) {
-      let html = '';
-      mockList.slice(0, 3).forEach(m => {
-        const dateStr = new Date(m.taken_at).toLocaleDateString("en-US", { month: "short", day: "numeric" });
-        html += `
-          <div class="activity-item" onclick="window.location.href='mock-exam.html'">
-            <div class="activity-icon"><i class="fas fa-file-alt"></i></div>
-            <div class="activity-content">
-              <div class="activity-title">Mock Exam ${m.exam_id || ''}</div>
-              <div class="activity-time">Score: ${m.score} / 90 &middot; ${dateStr}</div>
-            </div>
-            <i class="fas fa-chevron-right activity-arrow"></i>
-          </div>
-        `;
+  if (A.length) {
+    const emptyEl = $('#actEmpty');
+    const listEl = $('#actList');
+    if (emptyEl) emptyEl.style.display = 'none';
+    if (listEl) {
+      listEl.style.display = 'block';
+      listEl.innerHTML = '';
+      A.slice(0, 8).forEach(a => {
+        const d = document.createElement(a.type === 'mock' ? 'a' : 'div');
+        d.className = 'act-item' + (a.type === 'mock' ? ' mock' : '');
+        if (a.type === 'mock') d.href = 'mock-exam.html';
+        d.innerHTML = '<span class="dot"></span><span>' + a.label + '</span><span class="t">' + (a.when || '') + '</span>';
+        listEl.appendChild(d);
       });
-      actList.innerHTML = html;
     }
   }
 }
 
-document.addEventListener('DOMContentLoaded', loadLiveDashboardData);
-window.addEventListener('load', loadLiveDashboardData);
+function renderStats() {
+  countUp($('#stQ'), S.q);
+  countUp($('#stM'), S.mocks);
+  countUp($('#stS'), S.streak);
+  countUp($('#stB'), S.best);
+  if ($('#stA')) $('#stA').textContent = S.acc == null ? '—' : S.acc + '%';
+
+  /* XP — same level curve as the XP system (level = floor(sqrt(xp/100))) */
+  const hasXP = (typeof XP !== 'undefined' && XP.calcLevel);
+  const lv = hasXP ? XP.calcLevel(S.xp) : Math.max(1, Math.floor(Math.sqrt(S.xp / 100)));
+  const base = lv === 1 ? 0 : lv * lv * 100, nextAt = (lv + 1) * (lv + 1) * 100;
+  const inLv = Math.max(0, Math.min(100, Math.round((S.xp - base) / (nextAt - base) * 100)));
+  if ($('#xpLv')) $('#xpLv').textContent = lv;
+  if ($('#xpTotal')) $('#xpTotal').textContent = S.xp.toLocaleString('en');
+  if ($('#xpNext')) $('#xpNext').textContent = Math.max(0, nextAt - S.xp).toLocaleString('en');
+  requestAnimationFrame(() => {
+    const f = $('#xpFill');
+    if (f) f.style.width = inLv + '%';
+  });
+
+  renderRank(lv); renderWeek(); pipSay();
+
+  /* Journey */
+  const prog = Math.min(100, Math.round((S.q / 4000) * 60 + (S.mocks / 20) * 40));
+  if ($('#jPct')) $('#jPct').textContent = prog;
+  renderPath(); renderBadges();
+}
+
+/* ---------- rank by level ---------- */
+function renderRank(lv){
+  const ranks=[[1,'Freshman'],[2,'Apprentice'],[4,'Intern'],[6,'Resident'],[9,'Surgeon'],[13,'Chief of Medicine']];
+  let r=ranks[0][1]; ranks.forEach(x=>{ if(lv>=x[0]) r=x[1]; });
+  const el=$('#xpRank'); if(el) el.textContent=r;
+}
+
+/* ---------- week streak (last 7 days, lit from the current streak) ---------- */
+function renderWeek(){
+  const box=$('#weekDays'); if(!box) return;
+  const names=['SUN','MON','TUE','WED','THU','FRI','SAT'];
+  const today=new Date(), lit=Math.min(S.streak,7);
+  box.innerHTML='';
+  for(let i=6;i>=0;i--){
+    const d=new Date(today); d.setDate(today.getDate()-i);
+    const on=i<lit, isToday=i===0;
+    const el=document.createElement('div');
+    el.className='dy'+(on?' on':'')+(isToday?' today':'');
+    el.innerHTML='<i></i><span>'+names[d.getDay()]+'</span>';
+    box.appendChild(el);
+  }
+  const note=$('#weekNote');
+  if(note) note.textContent = S.streak>0
+    ? S.streak+' day'+(S.streak>1?'s':'')+' in a row — keep the flame alive!'
+    : 'Study today to start your streak.';
+}
+
+/* ---------- Pip speaks ---------- */
+let quipI=0;
+function quips(){
+  const h=new Date().getHours();
+  const g=h<12?'Good morning':h<18?'Good afternoon':'Good evening';
+  const l=[];
+  if(S.q===0) l.push(g+'! Zero questions so far — let’s fix that.');
+  else l.push(g+'! '+S.q.toLocaleString('en')+' question'+(S.q===1?'':'s')+' done. Nice.');
+  if(S.streak>=3) l.push(S.streak+'-day streak! Don’t break it now.');
+  else l.push('Even 10 questions a day adds up by September.');
+  l.push('Remember: a wrong answer costs only −0.4. Educated guesses win.');
+  l.push('Skipped a question? Blank answers score 0 — no penalty.');
+  return l;
+}
+function pipSay(next){
+  const l=quips(); if(next) quipI=(quipI+1)%l.length;
+  const t=$('#sayText'), b=$('#sayBubble');
+  if(!t||!b) return;
+  t.textContent=l[quipI%l.length];
+  b.style.animation='none'; void b.offsetWidth; b.style.animation='';
+}
+const sp=$('#sayPip');
+if(sp) sp.addEventListener('click',()=>{
+  pipSay(true);
+  const s=sp.firstChild; if(s){ s.classList.add('wow'); setTimeout(()=>s.classList.remove('wow'),1200); }
+});
+
+/* ---------- greeting ---------- */
+(function(){
+  const h=new Date().getHours();
+  const g=$('#greetWord');
+  if(g) g.textContent = h<12?'Good morning':h<18?'Good afternoon':'Good evening';
+})();
+
+/* ---------- milestones (shared by the road and the badges) ---------- */
+function milestones(){
+  return [
+    {icon:'🚀', label:'Start',          sub:'Day 1',          done:true},
+    {icon:'✏️', label:'First question', sub:'answer 1',       done:S.q>=1,     need:()=>'Answer your first question'},
+    {icon:'📚', label:'100 questions',  sub:'a solid base',   done:S.q>=100,   need:()=>(100-S.q)+' more question'+((100-S.q)===1?'':'s')+' to reach 100'},
+    {icon:'⏱️', label:'First mock',     sub:'100 minutes',    done:S.mocks>=1, need:()=>'Take your first mock exam'},
+    {icon:'🧠', label:'500 questions',  sub:'getting sharp',  done:S.q>=500,   need:()=>(500-S.q)+' more questions to reach 500'},
+    {icon:'🏆', label:'5 mocks',        sub:'exam ready',     done:S.mocks>=5, need:()=>(5-S.mocks)+' more mock'+((5-S.mocks)===1?'':'s')+' to reach 5'},
+    {icon:'🎓', label:'IMAT day',       sub:'Sep 2027',       done:false,      goal:true}
+  ];
+}
+
+/* ---------- the road to medicine ---------- */
+function renderPath(){
+  const mapIn=$('#mapIn'), road=$('#roadO'), prog=$('#roadP');
+  if(!mapIn||!road||!prog||!road.getTotalLength) return;
+  const ms=milestones(), n=ms.length, len=road.getTotalLength();
+  let far=0; ms.forEach((m,i)=>{ if(i<n-1&&m.done) far=i; });
+  const VBW=1100, VBH=320;
+  $$('.node,.pipmark',mapIn).forEach(e=>e.remove());
+  const pos=i=>{ const p=road.getPointAtLength(len*i/(n-1)); return {x:p.x/VBW*100, y:p.y/VBH*100}; };
+  ms.forEach((m,i)=>{
+    const p=pos(i), el=document.createElement('div');
+    const state = m.goal?'goal':(m.done?'on':(i<far?'off':'off'));
+    el.className='node '+state+(i%2?' up':' down')+(i===far?' cur':'');
+    el.style.left=p.x+'%'; el.style.top=p.y+'%'; el.style.setProperty('--d',(i*.08)+'s');
+    el.innerHTML='<b>'+m.icon+'</b><span class="lab">'+m.label+'<small>'+m.sub+'</small></span>';
+    mapIn.appendChild(el);
+  });
+  // progress overlay up to the furthest unlocked node
+  const upTo=len*far/(n-1);
+  prog.style.strokeDasharray=len+' '+len;
+  prog.style.setProperty('--len',len); prog.style.setProperty('--off',(len-upTo));
+  prog.style.strokeDashoffset=len;
+  requestAnimationFrame(()=>{ prog.style.transition='stroke-dashoffset 1.6s cubic-bezier(.22,1,.36,1) .2s'; prog.style.strokeDashoffset=(len-upTo); });
+  // Pip stands on the furthest node
+  const pp=pos(far), pm=document.createElement('div');
+  pm.className='pipmark'; pm.style.left=pp.x+'%'; pm.style.top=pp.y+'%';
+  pm.innerHTML=window.PIP_SVG||''; mapIn.appendChild(pm);
+  // next stop
+  const next=ms.find((m,i)=>!m.done&&!m.goal);
+  const ns=$('#nextStop span');
+  if(ns) ns.textContent = next ? 'Next stop: '+next.label+' — '+next.need() : 'All milestones unlocked — now beat the IMAT!';
+}
+
+/* ---------- badges ---------- */
+function renderBadges(){
+  const box=$('#badges'); if(!box) return;
+  const list=[
+    {e:'✏️', t:'First Steps',   d:'Answer your first question',  ok:S.q>=1},
+    {e:'💯', t:'Century',       d:'Answer 100 questions',        ok:S.q>=100},
+    {e:'🧠', t:'Scholar',       d:'Answer 500 questions',        ok:S.q>=500},
+    {e:'⏱️', t:'Exam Day',      d:'Finish a mock exam',          ok:S.mocks>=1},
+    {e:'🏆', t:'Marathoner',    d:'Finish 5 mock exams',         ok:S.mocks>=5},
+    {e:'🔥', t:'On Fire',       d:'Reach a 3-day streak',        ok:S.best>=3||S.streak>=3},
+    {e:'⚡', t:'Week Warrior',  d:'Reach a 7-day streak',        ok:S.best>=7||S.streak>=7},
+    {e:'🎯', t:'Sharp Mind',    d:'80%+ accuracy over 50 questions', ok:S.q>=50&&S.acc!=null&&S.acc>=80}
+  ];
+  box.innerHTML='';
+  list.forEach(b=>{
+    const el=document.createElement('div');
+    el.className='bdg '+(b.ok?'got':'lock');
+    el.innerHTML='<div class="em">'+b.e+'</div><b>'+b.t+'</b><small>'+b.d+'</small>';
+    box.appendChild(el);
+  });
+  const c=$('#badgeCount'); if(c) c.textContent=list.filter(b=>b.ok).length+' / '+list.length;
+}
+
+
+// Observe stats trigger
+const statsIO = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  statsIO.disconnect();
+  renderStats();
+}), { threshold: .25 });
+const stEl = $('.stats');
+if (stEl) statsIO.observe(stEl);
+
+// Analytics mini-bars animation
+const ta = $('#toolAnalyt');
+if (ta) {
+  new IntersectionObserver((es, o) => es.forEach(e => {
+    if (e.isIntersecting) {
+      $$('.mb i', ta).forEach(b => b.style.width = getComputedStyle(b).getPropertyValue('--w'));
+      o.disconnect();
+    }
+  }), { threshold: .4 }).observe(ta);
+}
+
+/* ---------- feedback ---------- */
+const fbL = $('#fbLater');
+if (fbL) {
+  fbL.addEventListener('click', () => {
+    const c = $('#fbCard');
+    if (c) {
+      c.classList.add('gone');
+      setTimeout(() => { c.style.display = 'none'; }, RM ? 0 : 500);
+    }
+  });
+}
+const fbS = $('#fbSubmit');
+if (fbS) {
+  fbS.addEventListener('click', async (e) => {
+    const comment = prompt("Tell us your thoughts or feedback for ImatPath:");
+    if (comment && comment.trim()) {
+      e.preventDefault();
+      if (window.ImatAuth && typeof window.ImatAuth.submitFeedback === 'function') {
+        try { await window.ImatAuth.submitFeedback(5, comment.trim()); } catch(err){}
+      }
+      const c = $('#fbCard');
+      if (c) c.innerHTML = '<h4 style="color:var(--grape)">Thank you!</h4><p>Your feedback helps us make ImatPath better.</p>';
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', loadData);
+window.addEventListener('load', loadData);
 
 })();
 </script>

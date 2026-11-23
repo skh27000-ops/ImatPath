@@ -1,0 +1,14 @@
+_archive
+_scripts
+scratch
+test-results
+AGAIN_backup
+imatpath-promo
+*.backup.*
+.claude
+social
+lesson-docs
+hold
+skills-ootto
+portofolio
+/*.pdf

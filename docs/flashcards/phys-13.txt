@@ -1,0 +1,22 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Physics::Ideal gas laws and the laws of thermodynamics
+#guid column:1
+#tags column:4
+phys13-003	<b>First law of thermodynamics</b>: what is it?	The change in the internal energy of a system equals the heat <b>added to</b> the system minus the work done <b>by</b> the system: <i>Δ U = Q - W</i>.	ImatPath Physics definition
+phys13-018	<small>The first law of thermodynamics</small><br><b>Adiabatic</b><br><i>What is fixed · Result?</i>	<b>What is fixed:</b> <i>Q = 0</i><br><b>Result:</b> <i>Δ U = -W</i>. Temperature changes. <i>pV<sup>γ</sup> = const</i>	ImatPath Physics recall
+phys13-019	<small>The second law and heat engines</small><br><b>Clausius</b>	heat cannot flow by itself from a colder body to a hotter body.	ImatPath Physics key idea
+phys13-020	<small>The second law and heat engines</small><br><b>Kelvin-Planck</b>	no engine can take heat from a hot source and turn <b>all</b> of it into work. Some heat must always be rejected to a colder reservoir.	ImatPath Physics key idea
+phys13-001	Formula to know: <b>The gas laws</b>	<i>pV = nRT &nbsp;&nbsp;&nbsp; pV = Nk<sub>B</sub>T</i>	ImatPath Physics formula
+phys13-002	Formula to know: <b>The kinetic model</b>	<i>pV = (1)/(3)Nmc̄<sup>2</sup> &nbsp;&nbsp;&nbsp; Ē<sub>k</sub> = (3)/(2)k<sub>B</sub>T</i>	ImatPath Physics formula
+phys13-004	Formula to know: <b>Work done by a gas</b>	<i>W = pΔ V</i>	ImatPath Physics formula
+phys13-005	Formula to know: <b>Heat engines and efficiency</b>	<i>η = (W)/(Q<sub>H</sub>) = 1 - (Q<sub>C</sub>)/(Q<sub>H</sub>)</i>	ImatPath Physics formula
+phys13-006	Formula to know: <b>Heat engines and efficiency</b>	<i>η<sub>Carnot</sub> = 1 - (T<sub>C</sub>)/(T<sub>H</sub>)</i>	ImatPath Physics formula
+phys13-015	Key points: <b>Ideal gas</b>	• <i>pV = nRT = Nk<sub>B</sub>T</i> (T in kelvin). <i>R = 8.31</i>, <i>k<sub>B</sub> = 1.38 × 10<sup>-23</sup></i>.<br>• <i>Ē<sub>k</sub> = (3)/(2)k<sub>B</sub>T</i>. <i>c<sub>rms</sub> = √(3RT/M)</i>. <i>U = (3)/(2)nRT</i> (monatomic).	ImatPath Physics summary
+phys13-016	Key points: <b>First law</b>	• <i>Δ U = Q - W</i>. Work by gas at constant <i>p</i>: <i>W = pΔ V</i>. Work = area under <i>p</i>-<i>V</i> curve.<br>• Isothermal <i>Δ U = 0</i>. Isochoric <i>W = 0</i>. Adiabatic <i>Q = 0</i>. Isobaric <i>W = pΔ V</i>.	ImatPath Physics summary
+phys13-017	Key points: <b>Second law</b>	• Heat flows hot to cold. Entropy never decreases. No engine is 100% efficient.<br>• <i>η = W/Q<sub>H</sub> = 1 - Q<sub>C</sub>/Q<sub>H</sub></i>. Carnot: <i>η<sub>max</sub> = 1 - T<sub>C</sub>/T<sub>H</sub></i>.	ImatPath Physics summary
+phys13-007	A fixed mass of gas at <i>2.0 × 10<sup>5</sup></i> Pa, 4.0 L and 300 K is heated to 450 K while its volume is changed to 5.0 L. What is the new pressure?<br><br><br>A) 3.75 × 10<sup>5</sup> Pa<br>B) 2.4 × 10<sup>5</sup> Pa<br>C) 1.6 × 10<sup>5</sup> Pa<br>D) 3 × 10<sup>5</sup> Pa<br>E) 1.07 × 10<sup>5</sup> Pa	<b>B) 2.4 × 10<sup>5</sup> Pa</b><br><br><i>(p<sub>1</sub>V<sub>1</sub>)/(T<sub>1</sub>) = (p<sub>2</sub>V<sub>2</sub>)/(T<sub>2</sub>)</i>, so <i>p<sub>2</sub> = p<sub>1</sub>(V<sub>1</sub>)/(V<sub>2</sub>)(T<sub>2</sub>)/(T<sub>1</sub>) = 2.0 × 10<sup>5</sup> × 0.80 × 1.5 = 2.4 × 10<sup>5</sup></i> Pa.	ImatPath Physics practice
+phys13-009	Helium (<i>M = 4</i> g/mol) and oxygen (<i>M = 32</i> g/mol) are at the same temperature. What is the ratio of the rms speed of helium atoms to that of oxygen molecules?<br><br><br>A) 2.83<br>B) 8<br>C) 4<br>D) 1<br>E) 0.354	<b>A) 2.83</b><br><br><i>c<sub>rms</sub> = √(3RT/M)</i>, so <i>c<sub>He</sub>/c<sub>O<sub>2</sub></sub> = √M<sub>O<sub>2</sub></sub>/M<sub>He</sub> = √(32/4) = √(8) = 2.83</i>.	ImatPath Physics practice
+phys13-011	A heat engine takes in 1200 J of heat per cycle. On a <i>p</i>-<i>V</i> diagram its cycle is a triangle with a base of 3.0 L and a height of <i>2.0 × 10<sup>5</sup></i> Pa. What is its efficiency?<br><br><br>A) 50%<br>B) 12.5%<br>C) 75%<br>D) 33%<br>E) 25%	<b>E) 25%</b><br><br>Net work = area of the triangle <i>= (1)/(2)(3.0 × 10<sup>-3</sup>)(2.0 × 10<sup>5</sup>) = 300</i> J. <i>η = 300/1200 = 25%</i>.	ImatPath Physics practice
+phys13-013	A Carnot engine works between 500 K and 300 K and does 1200 J of work per cycle. How much heat does it reject to the cold reservoir per cycle?<br><br><br>A) 3000 J<br>B) 1200 J<br>C) 720 J<br>D) 1800 J<br>E) 800 J	<b>D) 1800 J</b><br><br><i>η = 1 - 300/500 = 0.40</i>. Heat input <i>= W/η = 1200/0.40 = 3000</i> J. Heat rejected <i>= 3000 - 1200 = 1800</i> J.	ImatPath Physics practice

@@ -8,11 +8,37 @@
   // Wait for ImatAuth to be ready
   if (!window.ImatAuth) return;
 
-  const session = await window.ImatAuth.getSession();
+  const isLocalEnv = window.location.protocol === 'file:' || 
+                     window.location.hostname === 'localhost' || 
+                     window.location.hostname === '127.0.0.1';
+
+  let session = await window.ImatAuth.getSession();
+
+  // A password account must confirm its email before using the app.
+  if (session && session.user && window.ImatAuth.isUnverified && window.ImatAuth.isUnverified(session.user)) {
+    try { await window.ImatAuth.client.auth.signOut(); } catch {}
+    window.location.replace('auth.html?login=true');
+    return;
+  }
 
   if (!session) {
-    window.location.replace('auth.html');
-    return;
+    if (isLocalEnv) {
+      session = {
+        user: {
+          id: 'local-candidate',
+          email: 'candidate@imatpath.com',
+          user_metadata: {
+            first_name: 'Candidate',
+            full_name: 'IMAT Candidate',
+            is_premium: true
+          }
+        }
+      };
+    } else {
+      // LIVE PRODUCTION: unauthenticated users are immediately locked out and redirected
+      window.location.replace('auth.html');
+      return;
+    }
   }
 
   // Populate nav safely

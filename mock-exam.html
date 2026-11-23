@@ -4,307 +4,416 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mock Exams — ImatPath</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-500.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@latest/latin-700.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="description" content="20 full 100-minute timed IMAT simulations with official +1.5 / −0.4 scoring, instant subject breakdown and XP tracking.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" href="favicon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
 
 <!-- Core Supabase & Auth Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="supabase.js"></script>
 <script src="auth-guard.js"></script>
+<script src="xp-system.js"></script>
 
-<script>
-// ── Fast Dark Mode Init ──
-(function() {
-  const saved = localStorage.getItem('imatpath_dark_mode');
-  if (saved === 'true') document.documentElement.setAttribute('data-theme', 'dark');
-})();
-</script>
-
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="app-shell.css">
+<script src="mascot.js"></script>
 <style>
-:root{
-  --cream:#f6f1e6; --cream-2:#efe7d5; --card:#fffdf7;
-  --ink:#152720; --ink-soft:#42574d;
-  --g900:#0a241b; --g800:#0e2f23; --g700:#164534; --g600:#1e5b44;
-  --terra:#c1591f; --terra-d:#a84a15;
-  --gold:#d9a441; --gold-l:#e9c070;
-  --line:#e2d8c2; --line-d:#23443a;
-  --ok:#2e7d4f; --bad:#b3402e;
-  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
-  --sh-sm:0 1px 2px rgba(21,39,32,.06),0 4px 14px rgba(21,39,32,.06);
-  --sh-md:0 2px 6px rgba(21,39,32,.08),0 14px 34px rgba(21,39,32,.10);
+/* Mock Exams — page-specific */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(3px)}}
+@keyframes popcheck{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
+
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-bottom:24px}
+.sec-head .eyebrow{margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.7rem,2.8vw,2.4rem)}
+.sec-head .note{font-weight:700;font-size:.88rem;color:var(--ink-2);display:flex;align-items:center;gap:8px;letter-spacing:0;text-transform:none;font-family:var(--f-body)}
+.sec-head .note i{width:10px;height:10px;background:var(--coral);border:2px solid var(--ink);transform:rotate(45deg)}
+.rules-strip{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.rchip{font:700 .82rem var(--f-body);letter-spacing:0;text-transform:none;padding:5px 14px;border-radius:99px;border:2.5px solid var(--ink);color:var(--ink);background:#fff}
+.rchip.hot{background:var(--coral-l)}
+.rchip.gold{background:var(--sun-l)}
+
+/* ============ CATALOG ============ */
+.mocks{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.mcard{border:var(--bw) solid var(--ink);border-radius:var(--r);background:var(--sky-l);box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:12px;position:relative;transition:transform .3s var(--e),box-shadow .3s var(--e)}
+.mcard:nth-child(4n+2){background:var(--sun-l)}
+.mcard:nth-child(4n+3){background:var(--coral-l)}
+.mcard:nth-child(4n){background:var(--mint-l)}
+.mcard:hover{transform:translate(-3px,-5px) rotate(-.6deg);box-shadow:9px 11px 0 var(--ink)}
+.mcard .hd{display:flex;justify-content:space-between;align-items:center}
+.mcard .num{font:800 2.4rem/1 var(--f-disp);letter-spacing:-.04em;color:var(--grape)}
+.mcard .tag{font:.58rem var(--f-px);letter-spacing:0;text-transform:none;color:var(--ink);background:#fff;border:2.5px solid var(--ink);padding:3px 10px;border-radius:99px}
+.mcard h3{font-size:1.35rem}
+.mcard .meta{font:700 .8rem var(--f-body);letter-spacing:0;color:var(--ink-2);text-transform:none}
+.mcard .best{font:800 .82rem var(--f-body);letter-spacing:0;color:var(--ink);background:var(--mint);border:2.5px solid var(--ink);padding:3px 11px;border-radius:99px;width:max-content}
+.mcard .best.none{color:var(--ink-2);background:#fff}
+
+/* ============ RUNNER ============ */
+.view{display:none}
+.view.act{display:block;animation:fadeUp .55s var(--e)}
+.intro{background:var(--grape);background-image:radial-gradient(rgba(255,255,255,.14) 1.6px,transparent 1.6px);background-size:22px 22px;color:#fff;border:var(--bw) solid var(--ink);border-radius:28px;box-shadow:8px 8px 0 var(--ink);padding:clamp(26px,3.4vw,44px);position:relative;overflow:hidden;max-width:860px}
+.intro .eyebrow{background:var(--sun);color:var(--ink)}
+.intro h2{font-size:clamp(1.8rem,3.4vw,2.8rem);margin-bottom:12px}
+.intro h2 em{color:var(--sun);font-style:normal}
+.intro p{color:rgba(255,255,255,.9);max-width:600px;font-size:1.02rem}
+.intro .dist{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}
+.dist span{font:700 .8rem var(--f-body);letter-spacing:0;text-transform:none;padding:5px 13px;border-radius:99px;border:2.5px solid var(--ink);background:#fff;color:var(--ink)}
+.dist span b{color:var(--grape)}
+.intro-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;position:relative;z-index:2}
+.intro .ecg{position:absolute;left:0;right:0;bottom:0;height:48px;opacity:.5;pointer-events:none}
+/* exam */
+.run-bar{position:sticky;top:96px;z-index:40;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border:var(--bw) solid var(--ink);border-radius:var(--r);background:#fff;padding:12px 20px;margin-bottom:22px;box-shadow:var(--sh)}
+.run-timer{font:800 2rem/1 var(--f-disp);letter-spacing:-.02em;color:var(--grape)}
+.run-timer .colon{animation:blink 1s steps(1) infinite}
+.run-timer.low{color:var(--coral)}
+.run-mid{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.run-count{font:.62rem var(--f-px);letter-spacing:0;text-transform:none;color:var(--ink-2)}
+.run-dots{display:flex;gap:5px;flex-wrap:wrap;max-width:560px}
+.rdot{width:18px;height:18px;border-radius:50%;border:2.5px solid var(--ink);background:#fff;padding:0;transition:.2s;position:relative;cursor:pointer}
+.rdot:hover{transform:scale(1.2)}
+.rdot.answered{background:var(--grape)}
+.rdot.flagged{box-shadow:0 0 0 3px var(--sun)}
+.rdot.cur{background:var(--sun);transform:scale(1.25)}
+.rdot.correct{background:var(--mint)}
+.rdot.wrong{background:var(--coral)}
+.rdot.blank{background:var(--lav)}
+.qcard{border:var(--bw) solid var(--ink);border-radius:var(--r);background:#fff;padding:clamp(22px,3vw,34px);box-shadow:var(--sh)}
+.q-tag{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.q-tag span{font:.64rem var(--f-px);letter-spacing:0;text-transform:none;color:#fff;background:var(--grape);border:2.5px solid var(--ink);padding:5px 13px;border-radius:99px}
+.q-tag em{font:700 .85rem var(--f-body);font-style:normal;color:var(--ink-2);align-self:center}
+.q-text{font:800 clamp(1.3rem,2.3vw,1.7rem)/1.3 var(--f-disp);letter-spacing:-.02em;margin-bottom:24px;max-width:820px}
+.opts{display:grid;gap:12px;max-width:780px}
+.opt{display:flex;align-items:center;gap:14px;text-align:left;background:var(--cream);border:var(--bw) solid var(--ink);border-radius:var(--r-s);padding:12px 16px;font:600 1rem var(--f-body);color:var(--ink);transition:transform .15s,box-shadow .15s,background .15s}
+.opt:hover:not(:disabled){background:#fff;transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.opt .key{font:800 .95rem var(--f-disp);width:34px;height:34px;border-radius:50%;border:var(--bw) solid var(--ink);background:#fff;display:grid;place-items:center;flex:none}
+.opt.sel{background:var(--sun-l);box-shadow:4px 4px 0 var(--grape);transform:translate(-2px,-2px)}
+.opt.sel .key{background:var(--grape);color:#fff}
+.opt.correct{background:var(--mint-l);box-shadow:4px 4px 0 var(--mint);transform:translate(-2px,-2px);color:var(--ink)}
+.opt.correct .key{background:var(--mint);color:var(--ink)}
+.opt.wrong{background:var(--coral-l);box-shadow:4px 4px 0 var(--coral);transform:translate(-2px,-2px);color:var(--ink)}
+.opt.wrong .key{background:var(--coral);color:#fff}
+.q-exp{margin-top:22px;padding:16px 20px;border-radius:var(--r-s);background:var(--sun-l);border:var(--bw) solid var(--ink)}
+.q-exp b{display:block;font:.64rem var(--f-px);letter-spacing:0;text-transform:none;color:var(--grape);margin-bottom:6px}
+.q-exp p{font-size:.98rem;color:var(--ink);line-height:1.55}
+.run-nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
+.run-nav .grp{display:flex;gap:10px;flex-wrap:wrap}
+/* results */
+.res{max-width:900px;margin:0 auto;text-align:center}
+.res .lbl{font:.7rem var(--f-px);letter-spacing:0;text-transform:none;color:var(--grape)}
+.res .big{font:800 clamp(5rem,10vw,8rem)/1 var(--f-disp);letter-spacing:-.05em;color:var(--grape);text-shadow:4px 4px 0 var(--sun)}
+.res .big small{font-size:.32em;color:var(--ink-2);font-weight:700;text-shadow:none}
+.res .tier{font:.8rem var(--f-px);letter-spacing:0;text-transform:none;color:var(--ink);background:var(--sun);border:var(--bw) solid var(--ink);border-radius:99px;padding:5px 16px;margin:14px auto 30px;display:inline-block;transform:rotate(-1.5deg)}
+.res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:26px}
+.rk{border:var(--bw) solid var(--ink);border-radius:var(--r-s);padding:16px;background:var(--sky-l);box-shadow:var(--sh-s)}
+.rk.g{background:var(--mint-l)}
+.rk.r{background:var(--coral-l)}
+.rk.gold{background:var(--sun-l)}
+.rk .v{font:800 2rem var(--f-disp);letter-spacing:-.03em}
+.rk.g .v,.rk.r .v,.rk.gold .v{color:var(--ink)}
+.rk .t{font:.56rem var(--f-px);letter-spacing:0;text-transform:none;color:var(--ink-2)}
+.res-bars{border:var(--bw) solid var(--ink);border-radius:var(--r);background:#fff;box-shadow:var(--sh);padding:26px;text-align:left;margin-bottom:28px}
+.res-bars h3{font-size:1.4rem;margin-bottom:18px}
+.rb{display:grid;grid-template-columns:110px 1fr 48px;gap:14px;align-items:center;font:700 .85rem var(--f-body);letter-spacing:0;margin-bottom:11px}
+.rb .tr{height:16px;border-radius:99px;background:var(--lav);border:2.5px solid var(--ink);overflow:hidden}
+.rb .tr i{display:block;height:100%;width:0;background:var(--mint);transition:width 1.2s var(--e);transition-delay:var(--d,0s)}
+.rb .pc{text-align:right;color:var(--ink-2)}
+.res-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+@media(max-width:1180px){
+  .mocks{grid-template-columns:repeat(3,1fr)}
+  .res-grid{grid-template-columns:repeat(2,1fr)}
 }
-
-[data-theme="dark"] {
-  --cream: #111714; --cream-2: #191f1c; --card: #1a211d;
-  --ink: #e2ddd3; --ink-soft: #a4b3a9;
-  --line: #2a3530; --line-d: #2a3530;
-  --g900: #0a0e0c; --g800: #0f1613;
+@media(max-width:900px){.mocks{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .mocks{grid-template-columns:1fr}
+  .res-grid{grid-template-columns:1fr 1fr}
+  .rb{grid-template-columns:80px 1fr 44px}
 }
+/* Mock Exams v2 — tickets, briefing, answer sheet */
+.top{margin-bottom:22px}
+.cd-chip{display:none}
+.ecg-div{display:none}
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;transition:background 0.3s, color 0.3s;}
-a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-svg{display:block}
-::selection{background:var(--terra);color:#fff}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+/* ---------- briefing ---------- */
+.brief{position:relative;overflow:hidden;background:var(--grape);background-image:radial-gradient(rgba(255,255,255,.16) 1.6px,transparent 1.6px);background-size:22px 22px;color:#fff;border:var(--bw) solid var(--ink);border-radius:28px;box-shadow:var(--sh);padding:28px 32px;display:grid;grid-template-columns:1fr auto;gap:20px 24px;align-items:center;margin-bottom:34px}
+.brief .eyebrow{background:var(--sun);color:var(--ink)}
+.brief h2{font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1}
+.brief h2 em{font-style:normal;color:var(--sun);text-shadow:3px 3px 0 var(--ink)}
+.brief p{color:rgba(255,255,255,.9);margin-top:10px;max-width:420px}
+.brief-tiles{grid-column:1/-1;display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
+.bt{background:#fff;color:var(--ink);border:var(--bw) solid var(--ink);border-radius:16px;padding:8px 18px;box-shadow:var(--sh-s);text-align:center;min-width:92px}
+.bt b{display:block;font:800 1.7rem/1 var(--f-disp);letter-spacing:-.04em}
+.bt span{font:700 .75rem var(--f-body);color:var(--ink-2)}
+.bt.g{background:var(--mint)}.bt.r{background:var(--coral);color:#fff}.bt.r span{color:#fff}
+.brief-pip{position:absolute;right:30px;top:-6px;width:150px;pointer-events:none;animation:pipbob 3.4s ease-in-out infinite}
 
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,164,65,.5)}50%{box-shadow:0 0 0 6px rgba(217,164,65,0)}}
-@keyframes pulseT{0%,100%{box-shadow:0 0 0 0 rgba(193,89,31,.45)}50%{box-shadow:0 0 0 7px rgba(193,89,31,0)}}
-@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+/* ---------- tickets ---------- */
+.mocks{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.mcard{display:grid;grid-template-columns:118px 1fr;padding:0;gap:0;overflow:hidden;background:var(--sky-l);border-radius:24px}
+.mcard:nth-child(4n+2){background:var(--sun-l)}.mcard:nth-child(4n+3){background:var(--coral-l)}.mcard:nth-child(4n){background:var(--mint-l)}
+.stub{background:var(--grape);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:14px 8px;border-right:var(--bw) dashed var(--ink);position:relative;background-image:radial-gradient(rgba(255,255,255,.18) 1.4px,transparent 1.4px);background-size:14px 14px}
+.stub .adm{font:.5rem var(--f-px);color:var(--sun);letter-spacing:.04em}
+.stub .num{font:800 3.1rem/1 var(--f-disp);letter-spacing:-.06em;color:#fff;text-shadow:3px 3px 0 var(--ink)}
+.stub::after{content:"✂";position:absolute;right:-12px;top:10px;font-size:1.1rem;background:var(--cream);border-radius:50%;width:22px;height:22px;display:grid;place-items:center;color:var(--ink);z-index:2}
+.tk-main{padding:18px 20px;display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.mcard .tag{font:.56rem var(--f-px);letter-spacing:0;text-transform:none;background:#fff;color:var(--ink);border:2.5px solid var(--ink);padding:3px 10px;border-radius:99px}
+.mcard h3{font-size:1.5rem}
+.mcard .num{color:#fff}
+.mcard .best{margin-top:2px}
+.mcard .btn{margin-top:6px}
 
-/* ============ SIDEBAR ============ */
-.sidebar{position:fixed;inset:0 auto 0 0;width:264px;background:var(--g900);color:var(--cream);display:flex;flex-direction:column;z-index:60;transition:transform .35s ease}
-.logo{display:flex;align-items:center;font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:-.01em;padding:26px 26px 22px;color:var(--cream)}
-.logo em{font-style:italic;color:var(--gold-l)}
-.sb-nav{display:flex;flex-direction:column;gap:4px;padding:6px 14px}
-.sb-nav a{display:flex;align-items:center;gap:13px;padding:12px 14px;border-radius:12px;font-size:14.5px;font-weight:500;color:#9db3a5;position:relative;transition:.2s}
-.sb-nav a svg{flex:none;opacity:.85}
-.sb-nav a:hover{color:var(--cream);background:rgba(246,241,230,.06)}
-.sb-nav a.active{color:var(--cream);background:rgba(217,164,65,.12);font-weight:600}
-.sb-nav a.active::before{content:"";position:absolute;left:-14px;top:9px;bottom:9px;width:3px;border-radius:3px;background:var(--gold)}
-.sb-spacer{flex:1}
+/* ---------- exam layout: question + answer sheet ---------- */
+.exam-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.exam-grid .run-bar{position:sticky;top:96px;flex-direction:column;align-items:stretch;gap:14px;margin:0;padding:20px;background:var(--sun-l);z-index:5}
+.exam-grid .run-timer{font-size:3.3rem;text-align:center;color:var(--ink);text-shadow:3px 3px 0 #fff}
+.exam-grid .run-timer.low{color:var(--coral)}
+.exam-grid .run-mid{flex-direction:column;align-items:stretch;gap:10px}
+.exam-grid .run-count{text-align:center;font-size:.64rem}
+.exam-grid .run-dots{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;max-width:none;justify-items:center}
+.exam-grid .rdot{width:30px;height:30px;font:800 .62rem var(--f-disp)}
+.exam-grid .run-bar .btn{width:100%}
+.qcard{min-width:0}
+.run-nav .btn.red{font-size:1rem}
 
-.access-card{margin:0 16px 14px;padding:16px 18px;border:1px solid rgba(217,164,65,.45);border-radius:16px;background:linear-gradient(150deg,rgba(217,164,65,.14),rgba(217,164,65,.04));position:relative;overflow:hidden;cursor:pointer;transition:transform .2s;}
-.access-card:hover{transform:translateY(-2px);}
-.access-card::after{content:"";position:absolute;top:-30px;right:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(217,164,65,.25),transparent 70%)}
-.access-card .ac-l{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);display:flex;align-items:center;gap:7px;margin-bottom:6px}
-.access-card .ac-l i{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-.access-card b{font-family:var(--serif);font-size:16.5px;font-weight:600;display:block;color:var(--cream)}
-.access-card span{font-size:12px;color:#9db3a5}
+/* ---------- results ---------- */
+.res-pip{width:130px;display:block;margin:0 auto 4px}
 
-.user-row{display:flex;align-items:center;gap:12px;padding:16px 20px;border-top:1px solid var(--line-d)}
-.avatar{width:38px;height:38px;border-radius:12px;background:var(--g700);border:1.5px solid var(--line-d);display:grid;place-items:center;font-weight:700;font-size:15px;color:var(--gold-l)}
-.user-row .u-t{flex:1;min-width:0}
-.user-row .u-t b{display:block;font-size:14px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.user-row .u-t small{font-size:11.5px;color:#8fa897}
-.logout{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;color:#8fa897;transition:.2s;cursor:pointer;}
-.logout:hover{color:#ff9c7a;background:rgba(179,64,46,.15)}
-
-/* ============ MAIN ============ */
-.main{margin-left:264px;min-height:100vh;display:flex;flex-direction:column}
-.topbar{position:sticky;top:0;z-index:40;background:rgba(246,241,230,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:18px;transition:background 0.3s, border-color 0.3s;}
-[data-theme="dark"] .topbar { background: rgba(17,23,20,.85); }
-.burger{display:none;flex-direction:column;gap:5px;padding:8px;margin-right:4px}
-.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px}
-.topbar h1{font-size:clamp(1.3rem,2.2vw,1.7rem)}
-.topbar p{font-size:13px;color:var(--ink-soft);max-width:520px}
-.top-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-.date-chip{font-size:12.5px;font-weight:600;color:var(--ink-soft);background:var(--card);border:1px solid var(--line);padding:8px 15px;border-radius:999px}
-.count-chip{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;background:var(--g800);color:var(--cream);padding:8px 16px;border-radius:999px;white-space:nowrap}
-.count-chip b{color:var(--gold-l);font-family:var(--serif);font-size:15px}
-.count-chip .fl{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-
-.nav-dark-toggle{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink-soft);display:flex;align-items:center;justify-content:center;font-size:14px;transition:.25s;cursor:pointer;}
-.nav-dark-toggle:hover{border-color:var(--terra);color:var(--terra)}
-[data-theme="dark"] .nav-dark-toggle{border-color:var(--line);color:var(--gold)}
-
-.content-container{padding:32px 36px 60px;max-width:1160px;width:100%;margin:0 auto}
-
-/* ============ BUTTONS & CARDS ============ */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:999px;transition:.2s}
-.btn-primary{background:var(--terra);color:#fff;box-shadow:0 6px 18px rgba(193,89,31,.3)}
-.btn-primary:hover{background:var(--terra-d);transform:translateY(-2px)}
-.btn-line{border:1.5px solid var(--line);color:var(--ink-soft);background:var(--card)}
-.btn-line:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
-.btn-danger-line{border:1.5px solid rgba(179,64,46,.4);color:var(--bad);background:var(--card)}
-.btn-danger-line:hover{background:rgba(179,64,46,.08)}
-
-/* ============ MOCKS GRID ============ */
-.mocks-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:18px;margin-top:24px;}
-.mock-card{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--sh-sm);cursor:pointer;transition:transform .28s, box-shadow .28s, border-color .28s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;}
-.mock-card:hover{transform:translateY(-5px);border-color:var(--terra);box-shadow:var(--sh-md);}
-.mock-top{display:flex;align-items:center;justify-content:space-between;}
-.mock-badge{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:rgba(30,91,68,.12);color:var(--g600);padding:4px 10px;border-radius:99px;}
-[data-theme="dark"] .mock-badge{color:#8aa692;background:rgba(30,91,68,.25);}
-.mock-card h3{font-size:20px;color:var(--ink);}
-.mock-card p{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
-.mock-meta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-soft);}
-.mock-cta{color:var(--terra);font-weight:700;display:inline-flex;align-items:center;gap:6px;}
-
-/* ============ EXAM INTERFACE ============ */
-.exam-hud{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:var(--sh-sm);margin-bottom:20px;}
-.timer-chip{font-family:var(--serif);font-size:24px;font-weight:600;background:var(--g800);color:var(--gold-l);padding:6px 18px;border-radius:12px;font-variant-numeric:tabular-nums;display:inline-flex;align-items:center;gap:10px;}
-.timer-chip.warning{color:#ff9c7a;animation:pulse 1s infinite;}
-.hud-title{font-size:13.5px;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.08em;}
-.hud-progress{font-size:14px;font-weight:600;color:var(--ink);}
-
-.q-box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px;box-shadow:var(--sh-sm);margin-bottom:22px;}
-.q-sub-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--terra);}
-.q-passage{background:var(--cream-2);border:1px solid var(--line);border-radius:14px;padding:18px 22px;font-size:14.5px;line-height:1.7;color:var(--ink);margin-bottom:20px;}
-.q-text{font-size:18px;font-weight:600;line-height:1.5;color:var(--ink);margin-bottom:22px;font-family:var(--serif);}
-.q-opts{display:grid;gap:10px;}
-.q-opt{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1.5px solid var(--line);border-radius:14px;background:var(--cream);font-size:15px;font-weight:500;text-align:left;color:var(--ink);transition:.2s;}
-.q-opt:hover:not(:disabled){border-color:var(--terra);transform:translateX(3px);}
-.q-opt.selected{border-color:var(--terra);background:rgba(193,89,31,.08);color:var(--terra-d);}
-[data-theme="dark"] .q-opt.selected{color:var(--gold-l);}
-.q-opt-letter{flex:none;width:30px;height:30px;border-radius:9px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font-size:12.5px;font-weight:700;color:var(--ink-soft);}
-.q-opt.selected .q-opt-letter{background:var(--terra);border-color:var(--terra);color:#fff;}
-.q-opt.correct{border-color:var(--ok);background:rgba(46,125,79,.1);}
-.q-opt.correct .q-opt-letter{background:var(--ok);border-color:var(--ok);color:#fff;}
-.q-opt.wrong{border-color:var(--bad);background:rgba(179,64,46,.1);}
-.q-opt.wrong .q-opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
-
-.q-nav-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:20px;}
-.nav-grid-box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;margin-top:28px;}
-.nav-grid-title{font-size:14.5px;font-weight:700;color:var(--ink);margin-bottom:14px;}
-.nav-pills{display:grid;grid-template-columns:repeat(auto-fill, minmax(42px, 1fr));gap:8px;}
-.nav-pill{height:42px;border-radius:10px;border:1.5px solid var(--line);background:var(--cream);font-size:13px;font-weight:700;display:grid;place-items:center;cursor:pointer;transition:.2s;color:var(--ink);}
-.nav-pill:hover{border-color:var(--terra);}
-.nav-pill.current{border-color:var(--terra);background:var(--terra);color:#fff;}
-.nav-pill.answered{border-color:rgba(46,125,79,.6);background:rgba(46,125,79,.12);color:var(--ok);}
-
-/* ============ RESULTS ============ */
-.results-card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:36px;box-shadow:var(--sh-md);text-align:center;max-width:760px;margin:0 auto;}
-.res-score{font-family:var(--serif);font-size:76px;font-weight:600;line-height:1;color:var(--ink);margin:12px 0 4px;}
-.res-score span{font-size:24px;color:var(--ink-soft);}
-.res-kpi-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:14px;margin:28px 0;}
-.res-kpi{background:var(--cream-2);border:1px solid var(--line);border-radius:16px;padding:16px;}
-.res-kpi b{font-family:var(--serif);font-size:26px;display:block;color:var(--ink);}
-.res-kpi span{font-size:12px;color:var(--ink-soft);text-transform:uppercase;font-weight:700;letter-spacing:.05em;}
-
-.breakdown-list{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow-y:auto;text-align:left;padding-right:8px;margin-top:20px;}
-.bd-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:var(--cream);font-size:13.5px;}
-.bd-icon{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;flex-shrink:0;}
-.bd-icon.ok{background:rgba(46,125,79,.15);color:var(--ok);}
-.bd-icon.fail{background:rgba(179,64,46,.15);color:var(--bad);}
-.bd-icon.skip{background:var(--cream-2);color:var(--ink-soft);}
-
-
-
-.overlay{position:fixed;inset:0;background:rgba(10,36,27,.5);z-index:55;opacity:0;pointer-events:none;transition:.3s}
-.overlay.show{opacity:1;pointer-events:auto}
-
-@media(max-width:960px){
-  .sidebar{transform:translateX(-100%)}
-  .sidebar.open{transform:none;box-shadow:0 0 60px rgba(0,0,0,.4)}
-  .main{margin-left:0}
-  .burger{display:flex}
-  .topbar{padding:16px 20px}
-  .content-container{padding:22px 20px 40px}
-  .mocks-grid{grid-template-columns:1fr;}
+@media(max-width:1100px){.mocks{grid-template-columns:1fr}}
+@media(max-width:900px){
+  .exam-grid{grid-template-columns:1fr}
+  .exam-grid .run-bar{position:static;order:-1;flex-direction:row;flex-wrap:wrap;align-items:center;padding:12px 16px}
+  .exam-grid .run-timer{font-size:2rem}
+  .exam-grid .run-mid{flex:1;min-width:200px}
+  .exam-grid .run-dots{grid-template-columns:repeat(10,1fr)}
+  .exam-grid .rdot{width:22px;height:22px}
+  .exam-grid .run-bar .btn{width:auto}
+  .brief{grid-template-columns:1fr}
+  .brief-pip{position:static;width:110px;margin:-10px 0 -8px auto}
 }
+@media(max-width:560px){.mcard{grid-template-columns:96px 1fr}.stub .num{font-size:2.4rem}.tk-main{padding:14px}}
+
 </style>
+<script src="exam-date.js"></script>
 </head>
 <body>
+<div class="noise" aria-hidden="true"></div>
+<div class="scrim" aria-hidden="true"></div>
 
-<div class="overlay" id="overlay"></div>
-
-
-</div>
-
-<!-- ================= SIDEBAR ================= -->
-<aside class="sidebar" id="sidebar">
-  <a class="logo" href="index.html">Imat<em>Path</em></a>
-  <nav class="sb-nav">
-    <a href="dashboard.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
-      Dashboard</a>
-    <a href="checklist.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-      Syllabus Checklist</a>
-    <a href="question-bank.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-      Question Bank</a>
-    <a class="active" href="mock-exam.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg>
-      Mock Exams</a>
-    <a href="roadmap.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
-      IMAT Past Papers</a>
-    <a href="analytics.html">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M8 17v-6M13 17V7M18 17v-4"/></svg>
-      Analytics</a>
-  </nav>
-  <div class="sb-spacer"></div>
-  
-  <div class="access-card" id="accessPlanCard" onclick="window.location.href='dashboard.html'">
-    <span class="ac-l"><i></i><span id="accessPlanTitle">Free Plan</span></span>
-    <b id="accessPlanStatus">Full access</b>
-    <span id="accessPlanSub">All features included · no payment required</span>
-  </div>
-  
-  <div class="user-row">
-    <span class="avatar" id="userAvatar">U</span>
-    <div class="u-t">
-      <b id="userName">User</b>
-      <small>IMAT 2026 candidate</small>
-    </div>
-    <a class="logout" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="side" id="side">
+  <div class="tricolore" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button class="side-x" id="sideX" aria-label="Close menu">✕</button>
+  <div class="side-in">
+    <a class="logo" href="index.html" aria-label="ImatPath home">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
     </a>
+    <nav class="snav" aria-label="Dashboard navigation">
+      <a href="dashboard.html" title="Dashboard"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Dashboard</a><a href="lessons.html" title="Lessons"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.500-2 10-.5V19c-2.500-1.500-6-1.500-10 .5-4-2-7.500-2-10-.5z"/><path d="M12 6v13.500"/></svg>Lessons</a>
+      <a href="flashcards.html" title="Flashcards"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="14" height="14" rx="2.5"/><path d="M17 17v1.5A2.5 2.5 0 0 1 14.5 21h-9A2.5 2.5 0 0 1 3 18.5v-9A2.5 2.5 0 0 1 5.5 7H7"/><path d="M11 10h6"/></svg>Flashcards</a>
+      <a href="checklist.html" title="Syllabus Checklist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="m8 9 2 2 4-4M8 15h8"/></svg>Syllabus Checklist</a>
+      <a href="question-bank.html" title="Question Bank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.33c-.7.28-.9.87-.9 1.67"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>Question Bank</a>
+      <a class="act" href="mock-exam.html" title="Mock Exams"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>Mock Exams</a>
+      <a href="roadmap.html" title="IMAT Past Papers"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/><path d="M9 8h6M9 12h6"/></svg>IMAT Past Papers</a>
+      <a href="analytics.html" title="Analytics"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Analytics</a>
+    </nav>
+    <div class="side-foot">
+      <div class="plan-card">
+        <span class="t"><i></i>IMAT Candidate Access</span>
+        <p>Valid until exam day · Track your progress across all devices.</p>
+      </div>
+      <div class="user-card" id="userCard">
+        <span class="avatar" id="userAvatar">U</span>
+        <span style="flex:1;min-width:0;overflow:hidden"><span class="n" id="userName">User</span><br><span class="r">IMAT 2027 candidate</span></span>
+        <button class="logout-btn" id="logoutBtn" onclick="handleLogout(event)" title="Log out" aria-label="Log out">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        </button>
+      </div>
+    </div>
   </div>
 </aside>
 
-<!-- ================= MAIN ================= -->
-<div class="main">
-  <header class="topbar">
-    <div style="display:flex;align-items:center;gap:12px">
-      <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
-      <div>
-        <h1 id="pageHeadingTitle">Full Mock Exams</h1>
-        <p>20 full 100-minute timed exam simulations with official +1.5 / −0.4 scoring.</p>
-      </div>
+<!-- ══════════ MAIN CONTENT ══════════ -->
+<main class="main">
+  <div class="mtop">
+    <a class="logo" href="index.html" style="text-decoration:none">
+      <span class="logo-mark" data-pip></span>
+      <span class="logo-word">imatpath</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+  </div>
+
+  <header class="top">
+    <div>
+      <span class="eyebrow" data-rv>The exam hall</span>
+      <h1 class="lm"><span>Full <em>Mock Exams.</em></span></h1>
+      <p class="top-sub" data-rv style="--d:.15s">20 full 100-minute timed exam simulations with official +1.5 / −0.4 scoring.</p>
     </div>
-    <div class="top-right">
-      <button class="nav-dark-toggle" id="navDarkToggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-      </button>
-      <span class="date-chip" id="todayChip">—</span>
-      <span class="count-chip"><span class="fl"></span><b id="daysChip">31</b>&nbsp;days to IMAT</span>
+    <div class="cd-chip" data-rv style="--d:.2s" role="timer" aria-label="Countdown to IMAT 2027">
+      <span class="big"><span id="cdDays">356</span><small> days<br>to IMAT</small></span>
+      <div class="cd-boxes">
+        <div class="cd-b"><b id="cdH">--</b><span>hrs</span></div>
+        <div class="cd-b"><b id="cdM">--</b><span>min</span></div>
+        <div class="cd-b"><b id="cdS">--</b><span>sec</span></div>
+      </div>
     </div>
   </header>
 
-  <div class="content-container">
-    <div id="app"></div>
-  </div>
-</div>
+  <!-- ═══ CATALOG VIEW ═══ -->
+  <section class="view act" id="vCatalog">
+    <!-- mock2-marker -->
+    <div class="brief" data-rv>
+      <div class="brief-txt">
+        <span class="eyebrow">Choose your simulation</span>
+        <h2>Twenty tickets to <em>the real thing.</em></h2>
+        <p>Official timing and scoring. Questions are shuffled on every attempt.</p>
+      </div>
+      <div class="brief-tiles">
+        <div class="bt"><b>60</b><span>questions</span></div>
+        <div class="bt"><b>100</b><span>minutes</span></div>
+        <div class="bt g"><b>+1.5</b><span>correct</span></div>
+        <div class="bt r"><b>−0.4</b><span>incorrect</span></div>
+        <div class="bt"><b>0</b><span>if blank</span></div>
+      </div>
+      <span class="brief-pip" data-pip data-mood="wow" aria-hidden="true"></span>
+    </div>
+    <div class="mocks" id="mockGrid"></div>
+  </section>
 
-<script src="questions-data.js"></script>
-<script src="xp-system.js"></script>
-<script src="ai-tutor.js"></script>
+  <!-- ═══ INTRO VIEW ═══ -->
+  <section class="view" id="vIntro">
+    <div class="intro">
+      <span class="eyebrow" id="inTag">Mock 01 · Official conditions</span>
+      <h2>One hundred minutes. <em>Sixty questions.</em> No pauses.</h2>
+      <p>Exactly like exam day: the timer never stops, blanks score zero, and every wrong answer costs you 0.4. Flag anything you're unsure about and come back to it before you submit.</p>
+      <div class="dist" aria-label="Subject distribution">
+        <span>Biology <b>23</b></span>
+        <span>Chemistry <b>14</b></span>
+        <span>Physics <b>7</b></span>
+        <span>Math <b>7</b></span>
+        <span>Logic <b>5</b></span>
+        <span>Gen. knowledge <b>4</b></span>
+      </div>
+      <div class="intro-ctas">
+        <button class="btn light" id="beginBtn">Begin the exam <span class="ar">→</span></button>
+        <button class="btn ghost-l" id="backBtn1">← Back to mocks</button>
+      </div>
+      <svg class="ecg" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true"><path class="ecg-path" pathLength="1000" d="M0 30 H120 l14 0 8-16 10 30 8-14 h60 H320 l14 0 8-16 10 30 8-14 h60 H620 l14 0 8-16 10 30 8-14 h60 H920 l14 0 8-16 10 30 8-14 h60 H1200"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══ EXAM RUNNER VIEW ═══ -->
+  <section class="view" id="vExam">
+    <div class="exam-grid">
+<div class="qcard">
+      <div class="q-tag"><span id="qSubj">Biology</span><em id="qPts">+1.5 / −0.4</em></div>
+      <p class="q-text" id="qText"></p>
+      <div class="opts" id="qOpts"></div>
+      <div class="run-nav">
+        <div class="grp">
+          <button class="btn ghost" id="prevBtn">← Previous</button>
+          <button class="btn ghost" id="flagBtn">⚑ Flag for review</button>
+        </div>
+        <div class="grp">
+          <button class="btn ghost" id="nextBtn">Next →</button>
+          <button class="btn red" id="submitBtn">Submit exam</button>
+        </div>
+      </div>
+    </div>
+<div class="run-bar">
+      <span class="run-timer" id="runTimer">100<span class="colon">:</span>00</span>
+      <div class="run-mid">
+        <span class="run-count" id="runCount">Question 1 / 60</span>
+        <div class="run-dots" id="runDots"></div>
+      </div>
+      <button class="btn ghost sm" id="exitBtn">Exit exam</button>
+    </div>
+</div>
+  </section>
+
+  <!-- ═══ RESULTS VIEW ═══ -->
+  <section class="view" id="vRes">
+    <div class="res">
+      <span class="res-pip" data-pip data-mood="wow" aria-hidden="true"></span>
+      <span class="lbl">Estimated IMAT Score · <span id="resMock">Mock 01</span></span>
+      <div class="big"><span id="resScore">0.0</span><small> / 90.0</small></div>
+      <span class="tier" id="resTier">—</span>
+      <div class="res-grid">
+        <div class="rk g"><div class="v" id="resC">0</div><div class="t">Correct · +1.5</div></div>
+        <div class="rk r"><div class="v" id="resW">0</div><div class="t">Incorrect · −0.4</div></div>
+        <div class="rk"><div class="v" id="resB">0</div><div class="t">Blank · 0.0</div></div>
+        <div class="rk gold"><div class="v" id="resXP">+0</div><div class="t">XP earned</div></div>
+      </div>
+      <div class="res-bars" id="resBars">
+        <h3>Accuracy by subject</h3>
+        <div id="resBarsIn"></div>
+      </div>
+      <div class="res-ctas">
+        <button class="btn red" id="reviewBtn">Review solutions</button>
+        <button class="btn ghost" id="retakeBtn">Retake this mock</button>
+        <button class="btn" id="catalogBtn">Back to all mocks</button>
+        <a class="btn ghost" href="dashboard.html">Dashboard <span class="ar">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REVIEW MODE VIEW ═══ -->
+  <section class="view" id="vReview">
+    <div class="exam-grid">
+<div class="qcard">
+      <div class="q-tag"><span id="revSubj">Biology</span><em id="revStatus"></em></div>
+      <p class="q-text" id="revText"></p>
+      <div class="opts" id="revOpts"></div>
+      <div class="q-exp" id="revExp">
+        <b>Official Explanation</b>
+        <p id="revExpText"></p>
+      </div>
+      <div class="run-nav">
+        <div class="grp">
+          <button class="btn ghost" id="revPrevBtn">← Previous</button>
+        </div>
+        <div class="grp">
+          <button class="btn ghost" id="revNextBtn">Next →</button>
+          <button class="btn red" id="revResBtn">View score summary</button>
+        </div>
+      </div>
+    </div>
+<div class="run-bar">
+      <span class="run-timer" style="font-size:20px;color:var(--green)">Review mode</span>
+      <div class="run-mid">
+        <span class="run-count" id="revCount">Question 1 / 60</span>
+        <div class="run-dots" id="revDots"></div>
+      </div>
+      <button class="btn ghost sm" id="revBackBtn">← Back to results</button>
+    </div>
+</div>
+  </section>
+
+  <div class="foot-line">
+    <span>© 2026 ImatPath. All rights reserved.</span>
+    <span>Not affiliated with Cambridge Assessment or MUR.</span>
+  </div>
+</main>
 
 <script>
 (function(){
 "use strict";
-const $=s=>document.querySelector(s);
-const $$=s=>Array.from(document.querySelectorAll(s));
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('#burger').addEventListener('click',()=>document.body.classList.add('menu'));
+$('#sideX').addEventListener('click',()=>document.body.classList.remove('menu'));
+$('.scrim').addEventListener('click',()=>document.body.classList.remove('menu'));
 
-/* ── Dark Mode Toggle & Sync ── */
-window.toggleDarkMode = function() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('imatpath_dark_mode', 'false');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('imatpath_dark_mode', 'true');
-  }
-  updateDarkIcon();
-};
-
-function updateDarkIcon() {
-  const btn = $('#navDarkToggle');
-  if (btn) {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-  }
-}
-document.addEventListener('DOMContentLoaded', updateDarkIcon);
-
-/* ── Logout Handler ── */
+/* ── User & Auth ── */
 window.handleLogout = async function(e) {
   if (e) e.preventDefault();
-  if (window.ImatAuth) {
+  if (window.ImatAuth && typeof window.ImatAuth.signOut === 'function') {
     await window.ImatAuth.signOut();
   } else {
     localStorage.removeItem('imatpath_user');
@@ -312,456 +421,402 @@ window.handleLogout = async function(e) {
   }
 };
 
-/* ── Sidebar Mobile ── */
-const sb=$("#sidebar"), ov=$("#overlay");
-if ($("#burger")) $("#burger").addEventListener("click",()=>{sb.classList.add("open");ov.classList.add("show");});
-if (ov) ov.addEventListener("click",()=>{sb.classList.remove("open");ov.classList.remove("show");});
+try {
+  const u = JSON.parse(localStorage.getItem('imatpath_user') || '{}');
+  const name = u.full_name || u.name || (u.email ? u.email.split('@')[0] : 'User');
+  const firstName = name.split(' ')[0] || 'User';
+  const initial = firstName.charAt(0).toUpperCase() || 'U';
+  if ($('#userName')) $('#userName').textContent = firstName;
+  if ($('#userAvatar')) $('#userAvatar').textContent = initial;
+} catch(e) {}
 
-/* ── Today & Countdown ── */
-if ($("#todayChip")) {
-  $("#todayChip").textContent = new Date().toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+/* reveals */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+function watch(scope){$$('[data-rv],.lm',scope||document).forEach(el=>RM?el.classList.add('in'):io.observe(el));}
+watch();
+
+/* countdown (target: IMAT 2027 · September 28, 2027) */
+let target=new Date(window.IMAT_EXAM);
+if(target-Date.now()<=0)target=new Date(Date.now()+356*864e5);
+const pad=n=>String(n).padStart(2,'0');
+function setB(id,v){const el=$('#'+id);if(el&&el.textContent!==v){el.textContent=v;if(!RM){el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');}}}
+function tickCd(){
+  const d=Math.max(0,target-Date.now());
+  const days=Math.floor(d/864e5);
+  if($('#cdDays')) $('#cdDays').textContent=days;
+  setB('cdH',pad(Math.floor(d/36e5)%24));
+  setB('cdM',pad(Math.floor(d/6e4)%60));
+  setB('cdS',pad(Math.floor(d/1e3)%60));
 }
-const examDate = new Date("2026-09-29T09:00:00");
-const diffDays = Math.max(0, Math.ceil((examDate - new Date()) / 864e5));
-if ($("#daysChip")) $("#daysChip").textContent = diffDays;
+tickCd();setInterval(tickCd,1000);
 
-/* ── Scoring & Constants ── */
-const IMAT_CORRECT = 1.5;
-const IMAT_WRONG = -0.4;
-const EXAM_DURATION_MINUTES = 100;
-const QUESTIONS_PER_EXAM = 60;
+/* ============ 60-QUESTION POOL (Official IMAT Distribution) ============ */
+const POOL=[
+/* BIOLOGY · 23 */
+{s:'Biology',q:'Which organelle is the primary site of ATP production through oxidative phosphorylation?',o:['Golgi apparatus','Mitochondrion','Lysosome','Nucleolus','Ribosome'],a:1,e:'Oxidative phosphorylation runs on the inner mitochondrial membrane (cristae).'},
+{s:'Biology',q:'The structure that controls what enters and leaves the cell is the:',o:['cell wall','nuclear envelope','plasma membrane','cytoskeleton','capsule'],a:2,e:'The phospholipid bilayer is selectively permeable with embedded transport proteins.'},
+{s:'Biology',q:'In which mitotic phase do chromosomes align at the cell equator?',o:['Prophase','Metaphase','Anaphase','Telophase','Interphase'],a:1,e:'Metaphase = middle alignment along the metaphase plate.'},
+{s:'Biology',q:'The synthesis of mRNA from a DNA template is called:',o:['translation','replication','transcription','reverse transcription','splicing'],a:2,e:'RNA polymerase builds mRNA complementary to the DNA template strand.'},
+{s:'Biology',q:'How many chromosomes are in a normal human gamete?',o:['46','44','23','22','24'],a:2,e:'Gametes are haploid (n = 23 chromosomes), formed via meiosis.'},
+{s:'Biology',q:'Aa × Aa (complete dominance) gives which phenotypic ratio?',o:['1 : 1','3 : 1','1 : 2 : 1','9 : 3 : 3 : 1','2 : 1'],a:1,e:'Three dominant phenotype offspring to one recessive (3 : 1). Genotypic ratio is 1:2:1.'},
+{s:'Biology',q:'The molecule that delivers amino acids to the ribosome during translation is:',o:['mRNA','rRNA','tRNA','DNA','ligase'],a:2,e:'The tRNA anticodon base-pairs with the mRNA codon and carries the corresponding amino acid.'},
+{s:'Biology',q:'Vessels that carry oxygenated or deoxygenated blood away from the heart are:',o:['veins','capillaries','arteries','venules','valves'],a:2,e:'Arteries carry blood away from the heart ventricles; veins return blood to the atria.'},
+{s:'Biology',q:'Gas exchange in the human lungs occurs across the walls of the:',o:['bronchi','trachea','alveoli','pleura','diaphragm'],a:2,e:'Thin-walled alveoli provide a massive surface area directly adjacent to pulmonary capillaries.'},
+{s:'Biology',q:'The enzyme that unwinds the DNA double helix during replication is:',o:['ligase','helicase','polymerase','primase','topoisomerase'],a:1,e:'Helicase breaks the hydrogen bonds connecting complementary base pairs.'},
+{s:'Biology',q:'Which human cell type typically contains the highest density of mitochondria?',o:['skin epithelial cell','skeletal muscle fiber','adipocyte','mature red blood cell','osteocyte'],a:1,e:'Skeletal muscle fibers require rapid, constant ATP turnover for contraction.'},
+{s:'Biology',q:'Water moving down its concentration gradient across a semipermeable membrane is:',o:['simple diffusion','active transport','osmosis','endocytosis','exocytosis'],a:2,e:'Osmosis is the passive net movement of solvent molecules across a selectively permeable barrier.'},
+{s:'Biology',q:'Which organelle/structure is present in plant cells but absent from animal cells?',o:['mitochondrion','cell wall','ribosome','plasma membrane','Golgi apparatus'],a:1,e:'Cellulose cell walls, chloroplasts, and large central vacuoles are characteristic of plant cells.'},
+{s:'Biology',q:'The theory of evolution by natural selection is primarily credited to:',o:['Gregor Mendel','Charles Darwin','Louis Pasteur','James Watson','Carl Linnaeus'],a:1,e:'Charles Darwin published On the Origin of Species in 1859.'},
+{s:'Biology',q:'Oxygen is transported in human blood primarily by:',o:['blood plasma','hemoglobin','serum albumin','platelets','fibrinogen'],a:1,e:'Hemoglobin inside erythrocytes binds up to four oxygen molecules cooperatively.'},
+{s:'Biology',q:'The part of a multipolar neuron that conducts electrical impulses away from the cell body is the:',o:['dendrite','axon','soma','synapse','myelin sheath'],a:1,e:'Axons transmit action potentials outward to target synapses; dendrites receive input.'},
+{s:'Biology',q:'Which endocrine hormone lowers blood glucose concentrations?',o:['glucagon','insulin','cortisol','adrenaline','thyroxine'],a:1,e:'Beta cells of pancreatic islets secrete insulin, facilitating cellular glucose uptake.'},
+{s:'Biology',q:'Oxygenic photosynthesis uses light energy, water, and CO₂ to produce glucose and:',o:['carbon monoxide','oxygen','nitrogen','methane','ozone'],a:1,e:'6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂.'},
+{s:'Biology',q:'Alternative nucleotide sequences of the same gene occupying the same locus are:',o:['chromatids','alleles','operons','karyotypes','codons'],a:1,e:'Alleles represent sequence variants of a specific gene.'},
+{s:'Biology',q:'Bile is synthesized by the liver and stored/concentrated in the:',o:['gallbladder','pancreas','duodenum','stomach','spleen'],a:0,e:'The hepatocytes produce bile; the gallbladder concentrates and stores it until release.'},
+{s:'Biology',q:'Active immunization through vaccination provides which type of immunity?',o:['natural active','artificial active','natural passive','artificial passive','innate non-specific'],a:1,e:'Vaccination introduces antigens to induce host antibody and memory cell production (artificial active).'},
+{s:'Biology',q:'How many teeth are present in a complete adult permanent dentition?',o:['28','30','32','34','36'],a:2,e:'Adults normally have 32 teeth (8 incisors, 4 canines, 8 premolars, 12 molars).'},
+{s:'Biology',q:'Which heart chamber pumps oxygenated blood into the systemic aorta?',o:['right atrium','right ventricle','left atrium','left ventricle','pulmonary trunk'],a:3,e:'The thick muscular left ventricle drives oxygenated blood into the aorta.'},
 
-const QUESTION_DISTRIBUTION = {
-  'critical-thinking': 4,
-  'problem-solving': 5,
-  'data-analysis': 4,
-  'biology': 18,
-  'chemistry': 12,
-  'physics': 8,
-  'maths': 9
-};
+/* CHEMISTRY · 14 */
+{s:'Chemistry',q:'What is the oxidation state of sulfur in H₂SO₄?',o:['−2','+2','+4','+6','0'],a:3,e:'H = +1 (×2 = +2) and O = −2 (×4 = −8). Total is 0, so S = +6.'},
+{s:'Chemistry',q:'Complete stoichiometric combustion of 2 mol of propane (C₃H₈) yields how many moles of CO₂?',o:['2','3','4','6','8'],a:3,e:'C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. 2 mol propane × 3 = 6 mol CO₂.'},
+{s:'Chemistry',q:'What is the pH of an aqueous solution with [H⁺] = 1.0 × 10⁻³ mol/L?',o:['1','3','7','10','11'],a:1,e:'pH = −log₁₀[H⁺] = −log₁₀(10⁻³) = 3.'},
+{s:'Chemistry',q:'A chemical bond formed by the electrostatic sharing of electron pairs is:',o:['ionic bond','covalent bond','metallic bond','hydrogen bond','London dispersion force'],a:1,e:'Covalent bonds involve shared electron pairs between nonmetal atoms.'},
+{s:'Chemistry',q:'The ground-state electronic configuration 1s² 2s² 2p⁶ 3s¹ belongs to:',o:['Neon (Z=10)','Sodium (Z=11)','Magnesium (Z=12)','Potassium (Z=19)','Fluorine (Z=9)'],a:1,e:'11 electrons in total corresponds to neutral sodium (Na).'},
+{s:'Chemistry',q:'Molecules with identical molecular formulas but different structural connectivity are:',o:['isotopes','structural isomers','allotropes','polymers','enantiomers'],a:1,e:'Constitutional/structural isomers differ in the connectivity of their atoms.'},
+{s:'Chemistry',q:'During the electrolysis of acidified water, which gas is evolved at the cathode?',o:['oxygen','hydrogen','chlorine','ozone','steam'],a:1,e:'Reduction occurs at the cathode: 2H⁺ + 2e⁻ → H₂(g).'},
+{s:'Chemistry',q:'Molarity (M) expresses the concentration of a solution in moles of solute per:',o:['kilogram of solvent','liter of solution','liter of solvent','100 g of solution','mole of solvent'],a:1,e:'Molarity = mol of solute / liters of total solution.'},
+{s:'Chemistry',q:'The functional group –COOH is characteristic of which family of organic compounds?',o:['alcohol','aldehyde','ketone','carboxylic acid','ester'],a:3,e:'–COOH represents the carboxyl group defining carboxylic acids.'},
+{s:'Chemistry',q:'According to Le Chatelier’s principle, adding extra reactant to an equilibrium mixture causes the system to:',o:['shift toward reactants','shift toward products','remain unchanged','freeze reaction kinetics','decrease equilibrium constant K'],a:1,e:'The equilibrium shifts toward products to consume added reactant.'},
+{s:'Chemistry',q:'In organic chemistry, a neutral carbon atom typically forms how many covalent bonds?',o:['1','2','3','4','6'],a:3,e:'Carbon has four valence electrons and forms four covalent bonds (tetravalent).'},
+{s:'Chemistry',q:'In aqueous solution, a strong Brønsted acid:',o:['ionizes partially','ionizes completely','does not ionize','reacts only at 100°C','forms only insoluble salts'],a:1,e:'Strong acids dissociate completely into H⁺ (H₃O⁺) and conjugate bases.'},
+{s:'Chemistry',q:'According to modern chemical definitions, oxidation is fundamentally the:',o:['gain of electrons','loss of electrons','gain of protons','loss of neutrons','addition of hydrogen'],a:1,e:'OIL RIG: Oxidation Is Loss of electrons, Reduction Is Gain.'},
+{s:'Chemistry',q:'The IUPAC name for CH₃–CH₂–OH is:',o:['methanol','ethanol','propan-1-ol','ethanal','ethanoic acid'],a:1,e:'Two carbon chain with single hydroxyl group = ethanol.'},
 
-let state = {
-  view: 'select-exam',
-  selectedExamId: null,
-  timer: null,
-  timeRemaining: EXAM_DURATION_MINUTES * 60,
-  currentQuestion: 0,
-  answers: {},
-  examQuestions: []
-};
+/* PHYSICS · 7 */
+{s:'Physics',q:'A resultant net force imparts an acceleration of 3.0 m/s² to a 2.0 kg mass. What is the force?',o:['1.5 N','5.0 N','6.0 N','9.0 N','12.0 N'],a:2,e:'Newton’s second law: F = ma = 2.0 kg × 3.0 m/s² = 6.0 N.'},
+{s:'Physics',q:'The approximate speed of light in vacuum is:',o:['3.0 × 10⁶ m/s','3.0 × 10⁸ m/s','3.0 × 10⁵ m/s','3.0 × 10¹⁰ m/s','3.0 × 10⁷ m/s'],a:1,e:'c ≈ 3.0 × 10⁸ m/s (300,000 km/s).'},
+{s:'Physics',q:'The SI derived unit of power is the:',o:['joule','watt','newton','pascal','volt'],a:1,e:'Power is energy transferred per unit time: 1 Watt = 1 Joule/second.'},
+{s:'Physics',q:'What is the uniform density of a 200 g solid object occupying 100 cm³?',o:['0.5 g/cm³','1.0 g/cm³','2.0 g/cm³','20 g/cm³','200 g/cm³'],a:2,e:'Density ρ = m / V = 200 g / 100 cm³ = 2.0 g/cm³.'},
+{s:'Physics',q:'What current flows through a 4.0 Ω resistor connected across a 12 V potential difference?',o:['0.33 A','3.0 A','48 A','8.0 A','16 A'],a:1,e:'Ohm’s law: I = V / R = 12 V / 4.0 Ω = 3.0 A.'},
+{s:'Physics',q:'The gravitational potential energy of a 2.0 kg block elevated 5.0 m (g = 10 m/s²) is:',o:['10 J','50 J','100 J','200 J','1000 J'],a:2,e:'Ep = mgh = 2.0 × 10 × 5.0 = 100 J.'},
+{s:'Physics',q:'A wave has frequency f = 50 Hz and wavelength λ = 2.0 m. Its propagation speed is:',o:['25 m/s','52 m/s','100 m/s','200 m/s','48 m/s'],a:2,e:'Wave speed v = f × λ = 50 × 2.0 = 100 m/s.'},
 
-function loadState(){
-  const saved = localStorage.getItem('imatpath_mock');
-  if (saved) {
-    try {
-      const parsed = JSON.parse(saved);
-      state = { ...state, ...parsed };
-    } catch(e) {}
+/* MATH · 7 */
+{s:'Math',q:'Solve for x: 2x − 5 = 11',o:['3','6','8','13','16'],a:2,e:'2x = 11 + 5 = 16 → x = 8.'},
+{s:'Math',q:'Two fair standard coins are tossed simultaneously. What is P(both show heads)?',o:['1/2','1/3','1/4','1/6','1/8'],a:2,e:'Independent events: 1/2 × 1/2 = 1/4.'},
+{s:'Math',q:'Compute the value of 3² + 4²:',o:['7','12','24','25','49'],a:3,e:'3² = 9 and 4² = 16 → 9 + 16 = 25.'},
+{s:'Math',q:'If x² = 49 and x > 0, then x equals:',o:['6','7','8','9','49'],a:1,e:'The positive square root of 49 is 7.'},
+{s:'Math',q:'What is the arithmetic mean of the dataset {2, 4, 6, 8, 10}?',o:['5','6','7','8','10'],a:1,e:'Sum = 30; count = 5. Mean = 30 / 5 = 6.'},
+{s:'Math',q:'Identify the next term in the geometric progression: 3, 6, 12, 24, …',o:['30','36','42','48','96'],a:3,e:'Common ratio r = 2. 24 × 2 = 48.'},
+{s:'Math',q:'What is the area of a right-angled triangle with base 10 cm and height 6 cm?',o:['16 cm²','30 cm²','60 cm²','36 cm²','26 cm²'],a:1,e:'Area = (base × height) / 2 = (10 × 6) / 2 = 30 cm².'},
+
+/* LOGIC · 5 */
+{s:'Logic',q:'Find the next number in the pattern: 2, 6, 12, 20, 30, …',o:['36','40','42','44','48'],a:2,e:'Differences increase by 2: +4, +6, +8, +10, so next is +12 → 30 + 12 = 42.'},
+{s:'Logic',q:'All medical students study human anatomy. Giulia studies human anatomy. Therefore:',o:['Giulia is definitely a medical student','Giulia is not a medical student','no valid deductive conclusion can be drawn','everyone who studies human anatomy is a medical student','Giulia will pass the IMAT'],a:2,e:'Affirming the consequent is a formal fallacy. Non-medical students can also study anatomy.'},
+{s:'Logic',q:'Which integer does not belong: 3, 5, 7, 9, 11?',o:['3','5','7','9','11'],a:3,e:'9 is a composite number (3 × 3), whereas all others are prime numbers.'},
+{s:'Logic',q:'All B are F. Some F are Q. Which statement is necessarily true?',o:['Some Q are B','All B are Q','No B are Q','none of these is necessarily true','All F are B'],a:3,e:'The subset of F that are Q might have zero overlap with B.'},
+{s:'Logic',q:'Find the next letter in the series: A, C, F, J, O, …',o:['P','Q','R','S','U'],a:4,e:'Alphabet position gaps increase: +2 (C), +3 (F), +4 (J), +5 (O), +6 → U (21st letter).'},
+
+/* GENERAL KNOWLEDGE · 4 */
+{s:'General Knowledge',q:'Founded in 1088, which is recognized as the world’s oldest continuously operating university?',o:['University of Padua','University of Bologna','University of Pisa','Sapienza University of Rome','University of Turin'],a:1,e:'The Alma Mater Studiorum – University of Bologna was founded in 1088.'},
+{s:'General Knowledge',q:'The constitutional capital and seat of government of the Italian Republic is:',o:['Milan','Rome','Florence','Venice','Naples'],a:1,e:'Rome is the capital city of Italy.'},
+{s:'General Knowledge',q:'The official nationwide IMAT 2027 test date is scheduled for:',o:['September 14, 2027','September 28, 2027','October 2, 2027','August 31, 2027','September 21, 2027'],a:1,e:'The national single examination sits in late September 2027.'},
+{s:'General Knowledge',q:'Which of the following bodies of water does NOT border the Italian peninsula?',o:['Adriatic Sea','Tyrrhenian Sea','Ionian Sea','Baltic Sea','Ligurian Sea'],a:3,e:'The Baltic Sea is located in Northern Europe.'}
+];
+
+/* ============ CATALOG ============ */
+let best={};
+try{best=JSON.parse(localStorage.getItem('ip_best')||'{}');}catch(e){}
+
+const grid=$('#mockGrid');
+for(let i=1;i<=20;i++){
+  const id='m'+i,b=best[id];
+  const c=document.createElement('article');
+  c.className='mcard';
+  c.setAttribute('data-rv','');c.style.setProperty('--d',((i-1)%4)*0.08+'s');
+  c.innerHTML='<div class="stub"><span class="adm">ADMIT ONE</span><span class="num">'+pad(i)+'</span><span class="adm">MOCK</span></div>'+
+    '<div class="tk-main"><span class="tag">Full simulation</span>'+
+    '<h3>Mock '+pad(i)+'</h3>'+
+    '<span class="meta">60 Q · 100 min · shuffled</span>'+
+    '<span class="best'+(b==null?' none':'')+'">'+(b!=null?'Best: '+b.toFixed(1)+' / 90':'Not attempted yet')+'</span>'+
+    '<button class="btn sm" data-mock="'+i+'">Start <span class="ar">→</span></button></div>';
+  grid.appendChild(c);
+}
+watch(grid);
+grid.addEventListener('click',e=>{
+  const b=e.target.closest('[data-mock]');if(!b)return;
+  openIntro(+b.dataset.mock);
+});
+
+// Sync from Supabase cloud if logged in
+if (window.ImatAuth && typeof window.ImatAuth.loadMockResults === 'function') {
+  window.ImatAuth.loadMockResults().then(list => {
+    if (Array.isArray(list) && list.length > 0) {
+      list.forEach(m => {
+        const id = 'm' + m.exam_id;
+        const s = parseFloat(m.score);
+        if (!isNaN(s)) {
+          best[id] = Math.max(best[id] || 0, s);
+        }
+      });
+      localStorage.setItem('ip_best', JSON.stringify(best));
+      refreshCatalog();
+    }
+  }).catch(() => {});
+}
+
+/* ============ VIEWS ============ */
+function show(id){
+  $$('.view').forEach(v=>v.classList.remove('act'));
+  $('#'+id).classList.add('act');
+  scrollTo({top:0,behavior:RM?'auto':'smooth'});
+}
+
+/* ============ EXAM STATE ============ */
+let mockId=1,order=[],cur=0,ans=[],flags=new Set(),tLeft=6000,tInt=null,confirming=false;
+let curRev=0;
+const KEYS=['A','B','C','D','E'];
+function shuffle(a){
+  const copy=[...a];
+  for(let i=copy.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [copy[i],copy[j]]=[copy[j],copy[i]];
   }
-  if (state.view === 'exam' || state.view === 'results') {
-    state.view = 'select-exam';
-    state.selectedExamId = null;
-    state.answers = {};
-    state.examQuestions = [];
-    state.currentQuestion = 0;
-    state.timeRemaining = EXAM_DURATION_MINUTES * 60;
+  return copy;
+}
+
+function openIntro(id){
+  mockId=id;
+  $('#inTag').textContent='Mock '+pad(id)+' · Official conditions';
+  show('vIntro');
+}
+$('#backBtn1').addEventListener('click',()=>show('vCatalog'));
+$('#beginBtn').addEventListener('click',startExam);
+
+function startExam(){
+  order=shuffle(POOL.map((_,i)=>i));
+  ans=Array(60).fill(null);
+  flags=new Set();
+  cur=0;
+  tLeft=6000;
+  confirming=false;
+  $('#submitBtn').textContent='Submit exam';
+  buildDots();
+  show('vExam');
+  renderQ();
+  clearInterval(tInt);
+  tInt=setInterval(()=>{
+    tLeft--;
+    renderTimer();
+    if(tLeft<=0)finish();
+  },1000);
+  renderTimer();
+}
+
+function renderTimer(){
+  const m=Math.floor(Math.max(0,tLeft)/60),s=Math.max(0,tLeft)%60;
+  $('#runTimer').innerHTML=m+'<span class="colon">:</span>'+pad(s);
+  $('#runTimer').classList.toggle('low',tLeft<=600);
+}
+
+function buildDots(){
+  const d=$('#runDots');d.innerHTML='';
+  for(let i=0;i<60;i++){
+    const b=document.createElement('button');b.className='rdot';b.title='Question '+(i+1);
+    b.addEventListener('click',()=>{cur=i;resetConfirm();renderQ();});
+    d.appendChild(b);
   }
 }
-function saveState(){ localStorage.setItem('imatpath_mock', JSON.stringify(state)); }
-loadState();
 
-function shuffleArray(arr){
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
+function renderQ(){
+  const q=POOL[order[cur]];
+  $('#qSubj').textContent=q.s;
+  $('#runCount').textContent='Question '+(cur+1)+' / 60';
+  $('#qText').textContent=q.q;
+  const box=$('#qOpts');box.innerHTML='';
+  q.o.forEach((opt,i)=>{
+    const b=document.createElement('button');
+    b.className='opt'+(ans[cur]===i?' sel':'');
+    b.innerHTML='<span class="key">'+KEYS[i]+'</span><span>'+opt+'</span>';
+    b.addEventListener('click',()=>{ans[cur]=i;renderQ();});
+    box.appendChild(b);
+  });
+  $('#prevBtn').style.visibility=cur===0?'hidden':'visible';
+  $('#nextBtn').style.display=cur===59?'none':'inline-flex';
+  $('#flagBtn').textContent=flags.has(cur)?'⚑ Flagged ✓':'⚑ Flag for review';
+  $$('#runDots .rdot').forEach((d,i)=>{
+    d.className='rdot'+(ans[i]!==null?' answered':'')+(flags.has(i)?' flagged':'')+(i===cur?' cur':'');
+  });
+}
+
+function resetConfirm(){confirming=false;$('#submitBtn').textContent='Submit exam';}
+$('#prevBtn').addEventListener('click',()=>{if(cur>0){cur--;resetConfirm();renderQ();}});
+$('#nextBtn').addEventListener('click',()=>{if(cur<59){cur++;resetConfirm();renderQ();}});
+$('#flagBtn').addEventListener('click',()=>{flags.has(cur)?flags.delete(cur):flags.add(cur);renderQ();});
+$('#exitBtn').addEventListener('click',()=>{
+  if(confirm('Are you sure you want to exit the exam? Your current progress will be lost.')){
+    clearInterval(tInt);
+    show('vCatalog');
+    refreshCatalog();
   }
-  return a;
-}
+});
 
-function formatTime(seconds){
-  const mins = Math.floor(seconds / 60);
-  const secs = seconds % 60;
-  return `${mins.toString().padStart(2,'0')}:${secs.toString().padStart(2,'0')}`;
-}
+$('#submitBtn').addEventListener('click',()=>{
+  const blanks=ans.filter(a=>a===null).length;
+  if(blanks>0&&!confirming){
+    confirming=true;
+    $('#submitBtn').textContent='Confirm — '+blanks+' blank';
+    return;
+  }
+  finish();
+});
 
-window.selectExam = function(examId) {
-  state.selectedExamId = examId;
-  state.view = 'setup';
-  state.answers = {};
-  state.examQuestions = [];
-  state.currentQuestion = 0;
-  state.timeRemaining = EXAM_DURATION_MINUTES * 60;
-  saveState();
-  render();
-};
-
-window.startExam = function() {
-  if (!confirm('Start 100-minute mock simulation? The timer runs continuously.')) return;
+/* ============ RESULTS ============ */
+function finish(){
+  clearInterval(tInt);
+  let c=0,w=0,b=0;const per={};
+  order.forEach((qi,i)=>{
+    const q=POOL[qi];
+    per[q.s]=per[q.s]||{c:0,t:0};
+    per[q.s].t++;
+    if(ans[i]===null)b++;
+    else if(ans[i]===q.a){c++;per[q.s].c++;}
+    else w++;
+  });
+  const score=Math.max(0,1.5*c-0.4*w);
+  $('#resMock').textContent='Mock '+pad(mockId);
+  $('#resScore').textContent=score.toFixed(1);
+  $('#resTier').textContent=score>=55?'Top tier':score>=45?'Highly competitive':score>=35?'Competitive':score>=25?'Borderline':'Keep building — the trend starts here';
+  $('#resC').textContent=c;$('#resW').textContent=w;$('#resB').textContent=b;$('#resXP').textContent='+'+(c*10);
   
-  if (typeof subjects === 'undefined' || !Array.isArray(subjects) || subjects.length === 0) {
-    alert('Question bank data is loading. Please check questions-data.js.');
-    return;
+  const bin=$('#resBarsIn');bin.innerHTML='';
+  Object.keys(per).forEach((s,i)=>{
+    const p=Math.round(per[s].c/per[s].t*100);
+    const r=document.createElement('div');r.className='rb';
+    r.innerHTML='<span>'+s.toUpperCase().slice(0,8)+'</span><span class="tr"><i style="--w:'+p+'%;--d:'+(i*0.1)+'s"></i></span><span class="pc">'+p+'%</span>';
+    bin.appendChild(r);
+  });
+  
+  /* persist */
+  try{
+    best['m'+mockId]=Math.max(best['m'+mockId]||0,score);
+    localStorage.setItem('ip_best',JSON.stringify(best));
+    
+    // Save to Supabase if authenticated
+    if(window.ImatAuth && typeof window.ImatAuth.saveMockResult==='function'){
+      window.ImatAuth.saveMockResult(mockId, {
+        score: score.toFixed(1),
+        correct: c,
+        wrong: w,
+        unanswered: b
+      });
+    }
+
+    // Award XP
+    if(typeof XP !== 'undefined' && typeof XP.award === 'function'){
+      XP.award('mock');
+    }
+
+    const S=JSON.parse(localStorage.getItem('ip_stats')||'{}');
+    S.q=(S.q||0)+(60-b);
+    S.mocks=(S.mocks||0)+1;
+    S.xp=(S.xp||0)+c*10;
+    S.tc=(S.tc||0)+c;
+    S.ta=(S.ta||0)+(60-b);
+    S.acc=S.ta?Math.round(S.tc/S.ta*100):null;
+    localStorage.setItem('ip_stats',JSON.stringify(S));
+    
+    const A=JSON.parse(localStorage.getItem('ip_activity')||'[]');
+    A.unshift({type:'mock',label:'Mock '+pad(mockId)+' · '+score.toFixed(1)+'/90',when:'Today'});
+    localStorage.setItem('ip_activity',JSON.stringify(A.slice(0,10)));
+  }catch(e){}
+  
+  show('vRes');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    $$('#resBarsIn .tr i').forEach(i=>i.style.width=getComputedStyle(i).getPropertyValue('--w'));
+  }));
+}
+
+/* ============ REVIEW MODE ============ */
+$('#reviewBtn').addEventListener('click',()=>{
+  curRev=0;
+  buildRevDots();
+  show('vReview');
+  renderRev();
+});
+$('#revBackBtn').addEventListener('click',()=>show('vRes'));
+$('#revResBtn').addEventListener('click',()=>show('vRes'));
+$('#retakeBtn').addEventListener('click',()=>{openIntro(mockId);startExam();});
+$('#catalogBtn').addEventListener('click',()=>{show('vCatalog');refreshCatalog();});
+
+function buildRevDots(){
+  const d=$('#revDots');d.innerHTML='';
+  for(let i=0;i<60;i++){
+    const b=document.createElement('button');b.className='rdot';b.title='Review Q '+(i+1);
+    const q=POOL[order[i]];
+    if(ans[i]===null) b.classList.add('blank');
+    else if(ans[i]===q.a) b.classList.add('correct');
+    else b.classList.add('wrong');
+    b.addEventListener('click',()=>{curRev=i;renderRev();});
+    d.appendChild(b);
+  }
+}
+
+function renderRev(){
+  const q=POOL[order[curRev]];
+  $('#revSubj').textContent=q.s;
+  $('#revCount').textContent='Question '+(curRev+1)+' / 60 (Review)';
+  $('#revText').textContent=q.q;
+  
+  const userChoice=ans[curRev];
+  const isCorrect = userChoice === q.a;
+  const isBlank = userChoice === null;
+  const statEl = $('#revStatus');
+  if(isBlank){
+    statEl.textContent='Omitted · 0.0 pts';
+    statEl.style.color='var(--ink-2)';
+  } else if(isCorrect){
+    statEl.textContent='Correct · +1.5 pts';
+    statEl.style.color='var(--green)';
+  } else {
+    statEl.textContent='Incorrect · −0.4 pts';
+    statEl.style.color='var(--red)';
   }
 
-  let examQuestions = [];
-  subjects.forEach(s => {
-    const count = QUESTION_DISTRIBUTION[s.id] || 0;
-    if (count > 0 && s.questions && s.questions.length > 0) {
-      const pool = s.questions.map(q => ({...q, subjectId: s.id, subjectName: s.name, section: s.section}));
-      const shuffled = shuffleArray(pool);
-      const selected = shuffled.slice(0, Math.min(count, shuffled.length));
-      examQuestions.push(...selected);
-    }
+  const box=$('#revOpts');box.innerHTML='';
+  q.o.forEach((opt,i)=>{
+    const b=document.createElement('button');
+    b.disabled=true;
+    let cls='opt';
+    if(i===q.a) cls += ' correct';
+    else if(userChoice===i && !isCorrect) cls += ' wrong';
+    b.className=cls;
+    b.innerHTML='<span class="key">'+KEYS[i]+'</span><span>'+opt+'</span>';
+    box.appendChild(b);
   });
 
-  if (examQuestions.length === 0) {
-    alert('No questions available to generate mock exam.');
-    return;
-  }
+  const expBox=$('#revExp');
+  $('#revExpText').textContent=q.e;
+  expBox.style.display='block';
 
-  state.examQuestions = shuffleArray(examQuestions);
-  state.view = 'exam';
-  state.timeRemaining = EXAM_DURATION_MINUTES * 60;
-  state.currentQuestion = 0;
-  state.answers = {};
-  saveState();
-  startTimer();
-  render();
-};
+  $('#revPrevBtn').style.visibility=curRev===0?'hidden':'visible';
+  $('#revNextBtn').style.display=curRev===59?'none':'inline-flex';
 
-function startTimer() {
-  if (state.timer) clearInterval(state.timer);
-  state.timer = setInterval(() => {
-    state.timeRemaining--;
-    if (state.timeRemaining <= 0) {
-      clearInterval(state.timer);
-      submitExam();
-    }
-    saveState();
-    const timerEls = $$('.timer-val');
-    timerEls.forEach(el => {
-      el.textContent = formatTime(state.timeRemaining);
-      if (state.timeRemaining < 300) el.parentElement.classList.add('warning');
-    });
-  }, 1000);
-}
-
-window.selectAnswer = function(qIdx, optIdx) {
-  state.answers[qIdx] = optIdx;
-  saveState();
-  render();
-};
-
-window.nextQuestion = function() {
-  if (state.currentQuestion < state.examQuestions.length - 1) {
-    state.currentQuestion++;
-    saveState();
-    render();
-  }
-};
-
-window.prevQuestion = function() {
-  if (state.currentQuestion > 0) {
-    state.currentQuestion--;
-    saveState();
-    render();
-  }
-};
-
-window.jumpTo = function(idx) {
-  state.currentQuestion = idx;
-  saveState();
-  render();
-};
-
-window.submitExam = function() {
-  clearInterval(state.timer);
-  state.view = 'results';
-  saveState();
-  const score = calculateScore();
-  if (window.ImatAuth) {
-    window.ImatAuth.saveMockResult(state.selectedExamId, score);
-  }
-  if (typeof XP !== 'undefined') setTimeout(() => XP.award('mock'), 500);
-  render();
-};
-
-function calculateScore() {
-  let correct = 0, wrong = 0, unanswered = 0, score = 0;
-  state.examQuestions.forEach((q, i) => {
-    const ans = state.answers[i];
-    if (ans === undefined) unanswered++;
-    else if (ans === q.correct) { correct++; score += IMAT_CORRECT; }
-    else { wrong++; score += IMAT_WRONG; }
+  $$('#revDots .rdot').forEach((d,i)=>{
+    d.classList.toggle('cur',i===curRev);
   });
-  return { correct, wrong, unanswered, score: score.toFixed(1) };
 }
 
-window.goBack = function() {
-  clearInterval(state.timer);
-  state.view = 'select-exam';
-  saveState();
-  render();
-};
+$('#revPrevBtn').addEventListener('click',()=>{if(curRev>0){curRev--;renderRev();}});
+$('#revNextBtn').addEventListener('click',()=>{if(curRev<59){curRev++;renderRev();}});
 
-window.quitExam = function() {
-  if (confirm('Quit mock exam? Your current progress will be lost.')) {
-    clearInterval(state.timer);
-    state.selectedExamId = null;
-    state.view = 'select-exam';
-    state.answers = {};
-    state.examQuestions = [];
-    state.currentQuestion = 0;
-    saveState();
-    render();
-  }
-};
-
-window.startReview = function() {
-  state.view = 'review';
-  state.currentQuestion = 0;
-  saveState();
-  render();
-};
-
-/* ── Renderers ── */
-function render() {
-  const app = $('#app');
-  if (!app) return;
-  if (state.view === 'select-exam') app.innerHTML = renderSelectExam();
-  else if (state.view === 'setup') app.innerHTML = renderSetup();
-  else if (state.view === 'exam') app.innerHTML = renderExam();
-  else if (state.view === 'results') app.innerHTML = renderResults();
-  else if (state.view === 'review') app.innerHTML = renderReview();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+function refreshCatalog(){
+  $$('#mockGrid [data-mock]').forEach(btn=>{
+    const id='m'+btn.dataset.mock,b=best[id],chip=btn.closest('.mcard').querySelector('.best');
+    if(b!=null){chip.classList.remove('none');chip.textContent='Best: '+b.toFixed(1)+' / 90';}
+  });
 }
-
-function renderSelectExam() {
-  let cardsHtml = '';
-  for (let i = 1; i <= 20; i++) {
-    cardsHtml += `
-      <div class="mock-card" onclick="selectExam(${i})">
-        <div class="mock-top">
-          <span class="mock-badge">100 min</span>
-          <span style="font-size:12px;color:var(--ink-soft);font-weight:600">60 Qs</span>
-        </div>
-        <h3>Mock Exam ${i}</h3>
-        <p>Full-length exam simulation with official distribution and IMAT scoring.</p>
-        <div class="mock-meta">
-          <span>+1.5 / −0.4 scoring</span>
-          <span class="mock-cta">Start <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-    `;
-  }
-
-  return `
-    <div style="animation:fadeInUp .5s ease">
-      <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:6px">Exam Day Simulations</span>
-      <h2>Full Mock Exams</h2>
-      <p style="color:var(--ink-soft);font-size:14.5px;max-width:600px;margin-bottom:24px;">20 full-length practice exams structured exactly like the real IMAT test.</p>
-      
-      <div class="mocks-grid">
-        ${cardsHtml}
-      </div>
-    </div>
-  `;
-}
-
-function renderSetup() {
-  return `
-    <div style="max-width:640px;margin:0 auto;animation:fadeInUp .5s ease">
-      <button class="btn-line" onclick="goBack()" style="margin-bottom:20px;padding:9px 18px;font-size:13px"><i class="fas fa-arrow-left"></i> All Mock Exams</button>
-      
-      <div style="background:var(--card);border:1.5px solid var(--line);border-radius:24px;padding:34px;box-shadow:var(--sh-md);">
-        <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);background:var(--g900);padding:4px 12px;border-radius:99px;">Mock Exam ${state.selectedExamId}</span>
-        <h2 style="font-size:2rem;margin:14px 0 8px;">Exam Setup</h2>
-        <p style="color:var(--ink-soft);font-size:14px;margin-bottom:24px;">Simulate real exam conditions: 60 questions across all subjects in 100 minutes.</p>
-        
-        <div style="background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:18px 22px;display:flex;flex-direction:column;gap:12px;font-size:14px;margin-bottom:24px;">
-          <div style="display:flex;justify-content:space-between;"><span><b>Duration:</b></span> <span>100 Minutes</span></div>
-          <div style="display:flex;justify-content:space-between;"><span><b>Questions:</b></span> <span>60 Questions (Fixed Distribution)</span></div>
-          <div style="display:flex;justify-content:space-between;"><span><b>Scoring:</b></span> <span><b style="color:var(--ok)">+1.5</b> / <b style="color:var(--bad)">−0.4</b> / 0</span></div>
-        </div>
-
-        <button class="btn btn-primary" onclick="startExam()" style="width:100%;font-size:16px;padding:15px">Start Mock Exam ${state.selectedExamId} <i class="fas fa-arrow-right"></i></button>
-      </div>
-    </div>
-  `;
-}
-
-function renderExam() {
-  const q = state.examQuestions[state.currentQuestion];
-  const answer = state.answers[state.currentQuestion];
-  const isWarning = state.timeRemaining < 300;
-  const L = ['A','B','C','D','E'];
-
-  return `
-    <div style="max-width:860px;margin:0 auto;animation:fadeInUp .4s ease">
-      <div class="exam-hud">
-        <div>
-          <div class="hud-title">Mock Exam ${state.selectedExamId}</div>
-          <div class="hud-progress">${Object.keys(state.answers).length} / ${state.examQuestions.length} answered</div>
-        </div>
-        <div class="timer-chip ${isWarning?'warning':''}"><i class="fas fa-clock" style="font-size:18px"></i> <span class="timer-val">${formatTime(state.timeRemaining)}</span></div>
-      </div>
-
-      <div class="q-box">
-        <div class="q-sub-bar">
-          <span>${q.section || 'Section'} &middot; ${q.subjectName || ''}</span>
-          <span>Question ${state.currentQuestion + 1} of ${state.examQuestions.length}</span>
-        </div>
-        ${q.passage ? `<div class="q-passage">${q.passage}</div>` : ''}
-        <div class="q-text">${q.question}</div>
-        
-        <div class="q-opts">
-          ${q.options.map((opt, i) => `
-            <button class="q-opt ${answer === i ? 'selected' : ''}" onclick="selectAnswer(${state.currentQuestion}, ${i})">
-              <span class="q-opt-letter">${L[i]}</span>
-              <span>${opt}</span>
-            </button>
-          `).join('')}
-        </div>
-      </div>
-
-      <div class="q-nav-bar">
-        <button class="btn-danger-line" onclick="quitExam()"><i class="fas fa-times"></i> Quit</button>
-        <div style="display:flex;gap:10px">
-          <button class="btn-line" onclick="prevQuestion()" ${state.currentQuestion === 0 ? 'disabled' : ''}><i class="fas fa-chevron-left"></i> Previous</button>
-          ${state.currentQuestion < state.examQuestions.length - 1 
-            ? `<button class="btn btn-primary" onclick="nextQuestion()">Next <i class="fas fa-chevron-right"></i></button>`
-            : `<button class="btn btn-primary" onclick="submitExam()" style="background:var(--ok)"><i class="fas fa-check-circle"></i> Submit Exam</button>`
-          }
-        </div>
-      </div>
-
-      <div class="nav-grid-box">
-        <div class="nav-grid-title">Question Navigator</div>
-        <div class="nav-pills">
-          ${state.examQuestions.map((qi, i) => {
-            let cls = '';
-            if (i === state.currentQuestion) cls = 'current';
-            else if (state.answers[i] !== undefined) cls = 'answered';
-            return `<div class="nav-pill ${cls}" onclick="jumpTo(${i})">${i + 1}</div>`;
-          }).join('')}
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-function renderResults() {
-  const score = calculateScore();
-  const total = state.examQuestions.length;
-  const pct = Math.round((score.correct / total) * 100);
-
-  return `
-    <div class="results-card" style="animation:fadeInUp .5s ease">
-      <span style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);background:var(--g900);padding:5px 14px;border-radius:99px;">Mock Complete</span>
-      <div class="res-score">${score.score} <span>/ 90.0</span></div>
-      <p style="color:var(--ink-soft);font-size:14.5px;">Official IMAT score for Mock ${state.selectedExamId}</p>
-
-      <div class="res-kpi-grid">
-        <div class="res-kpi"><b style="color:var(--ok)">${score.correct}</b><span>Correct (+1.5)</span></div>
-        <div class="res-kpi"><b style="color:var(--bad)">${score.wrong}</b><span>Incorrect (−0.4)</span></div>
-        <div class="res-kpi"><b>${pct}%</b><span>Accuracy</span></div>
-      </div>
-
-      <div style="display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap">
-        <button class="btn btn-primary" onclick="startReview()"><i class="fas fa-search"></i> Review All Questions</button>
-        <button class="btn-line" onclick="goBack()"><i class="fas fa-rotate-right"></i> Take Another Mock</button>
-      </div>
-
-      <div class="breakdown-list">
-        ${state.examQuestions.map((q, i) => {
-          const isCorrect = state.answers[i] === q.correct;
-          const isAnswered = state.answers[i] !== undefined;
-          let iconCls = 'skip', icon = '&mdash;', label = 'Unanswered';
-          if (isAnswered && isCorrect) { iconCls = 'ok'; icon = '&#10003;'; label = 'Correct'; }
-          else if (isAnswered) { iconCls = 'fail'; icon = '&#10007;'; label = 'Incorrect'; }
-          return `
-            <div class="bd-row" onclick="jumpTo(${i});startReview();" style="cursor:pointer">
-              <div class="bd-icon ${iconCls}">${icon}</div>
-              <div style="font-weight:700;width:38px">Q${i+1}</div>
-              <div style="flex:1"><b>${q.subjectName || ''}</b> &middot; <small>${q.section || ''}</small></div>
-              <div style="font-weight:700">${label}</div>
-            </div>
-          `;
-        }).join('')}
-      </div>
-    </div>
-  `;
-}
-
-function renderReview() {
-  const q = state.examQuestions[state.currentQuestion];
-  const answer = state.answers[state.currentQuestion];
-  const L = ['A','B','C','D','E'];
-
-  return `
-    <div style="max-width:860px;margin:0 auto;animation:fadeInUp .4s ease">
-      <div class="exam-hud">
-        <div>
-          <div class="hud-title">Review Mode &middot; Mock ${state.selectedExamId}</div>
-          <div class="hud-progress">Question ${state.currentQuestion + 1} of ${state.examQuestions.length}</div>
-        </div>
-        <button class="btn-line" onclick="state.view='results';render();" style="padding:8px 16px;font-size:13px"><i class="fas fa-arrow-left"></i> Results</button>
-      </div>
-
-      <div class="q-box">
-        <div class="q-sub-bar">
-          <span>${q.section || ''} &middot; ${q.subjectName || ''}</span>
-          <span>Solution & Explanation</span>
-        </div>
-        ${q.passage ? `<div class="q-passage">${q.passage}</div>` : ''}
-        <div class="q-text">${q.question}</div>
-        
-        <div class="q-opts">
-          ${q.options.map((opt, i) => {
-            let cls = '';
-            if (i === q.correct) cls = 'correct';
-            else if (i === answer) cls = 'wrong';
-            return `
-              <button class="q-opt ${cls}" disabled>
-                <span class="q-opt-letter">${L[i]}</span>
-                <span>${opt}</span>
-              </button>
-            `;
-          }).join('')}
-        </div>
-
-        <div style="margin-top:24px;padding:20px;border-radius:16px;background:var(--cream-2);border:1px solid var(--line);">
-          <div style="font-weight:700;margin-bottom:8px;color:${answer === q.correct ? 'var(--ok)' : 'var(--bad)'}">
-            ${answer === q.correct ? '&#10003; Correct Answer' : '&#10007; Incorrect'}
-          </div>
-          <div style="font-size:14.5px;line-height:1.6;color:var(--ink);">${q.solution || q.explanation || 'No explanation available.'}</div>
-        </div>
-      </div>
-
-      <div class="q-nav-bar">
-        <button class="btn-line" onclick="prevQuestion()" ${state.currentQuestion === 0 ? 'disabled' : ''}><i class="fas fa-chevron-left"></i> Previous</button>
-        <button class="btn-line" onclick="nextQuestion()" ${state.currentQuestion === state.examQuestions.length - 1 ? 'disabled' : ''}>Next <i class="fas fa-chevron-right"></i></button>
-      </div>
-
-      <div class="nav-grid-box">
-        <div class="nav-grid-title">Jump to Question</div>
-        <div class="nav-pills">
-          ${state.examQuestions.map((qi, i) => {
-            let cls = '';
-            if (i === state.currentQuestion) cls = 'current';
-            else if (state.answers[i] === qi.correct) cls = 'answered';
-            return `<div class="nav-pill ${cls}" onclick="jumpTo(${i})">${i + 1}</div>`;
-          }).join('')}
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-render();
-
 })();
 </script>
 </body>

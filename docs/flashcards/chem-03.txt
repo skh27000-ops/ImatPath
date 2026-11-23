@@ -1,0 +1,33 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Chemistry::Atomic structure, atomic number, mass number and isotopes
+#guid column:1
+#tags column:4
+chem03-001	<b>Atomic number Z</b>: what is it?	The <b>atomic number</b> <i>Z</i> is the <b>number of protons</b> in the nucleus. It identifies the element: every atom with 6 protons is carbon.	ImatPath Chemistry definition
+chem03-002	<b>Mass number A</b>: what is it?	The <b>mass number</b> <i>A</i> is the <b>number of protons plus neutrons</b>: the total count of particles in the nucleus.	ImatPath Chemistry definition
+chem03-004	<b>Isotopes</b>: what is it?	<b>Isotopes</b> are atoms of the <b>same element</b> (same number of protons) with a <b>different number of neutrons</b>, so a different mass number.	ImatPath Chemistry definition
+chem03-029	<b>atomic number</b>: what is it?	The <b>atomic number</b> <i>Z</i> is the <b>number of protons</b> in the nucleus.	ImatPath Chemistry term
+chem03-030	<b>mass number</b>: what is it?	The <b>mass number</b> <i>A</i> is the <b>number of protons plus neutrons</b>: the total count of particles in the nucleus.	ImatPath Chemistry term
+chem03-031	<b>ion</b>: what is it?	An atom becomes an <b>ion</b> when it <b>gains or loses electrons</b>.	ImatPath Chemistry term
+chem03-018	<small>Inside the atom</small><br><b>Proton</b><br><i>Where · Charge · Relative mass?</i>	<b>Where:</b> Nucleus<br><b>Charge:</b> +1<br><b>Relative mass:</b> 1	ImatPath Chemistry recall
+chem03-019	<small>Inside the atom</small><br><b>Neutron</b><br><i>Where · Charge · Relative mass?</i>	<b>Where:</b> Nucleus<br><b>Charge:</b> 0<br><b>Relative mass:</b> 1	ImatPath Chemistry recall
+chem03-020	<small>Inside the atom</small><br><b>Electron</b><br><i>Where · Charge · Relative mass?</i>	<b>Where:</b> Outside the nucleus<br><b>Charge:</b> -1<br><b>Relative mass:</b> about 1/1840 (almost nothing)	ImatPath Chemistry recall
+chem03-021	<small>Atomic number, mass number and notation</small><br><b><i><sup>23</sup><sub>11</sub>Na</i></b><br><i>Protons · Neutrons · Electrons?</i>	<b>Protons:</b> 11<br><b>Neutrons:</b> 12<br><b>Electrons:</b> 11	ImatPath Chemistry recall
+chem03-022	<small>Atomic number, mass number and notation</small><br><b><i><sup>23</sup><sub>11</sub>Na<sup>+</sup></i></b><br><i>Protons · Neutrons · Electrons?</i>	<b>Protons:</b> 11<br><b>Neutrons:</b> 12<br><b>Electrons:</b> 10	ImatPath Chemistry recall
+chem03-023	<small>Atomic number, mass number and notation</small><br><b><i><sup>56</sup><sub>26</sub>Fe<sup>3+</sup></i></b><br><i>Protons · Neutrons · Electrons?</i>	<b>Protons:</b> 26<br><b>Neutrons:</b> 30<br><b>Electrons:</b> 23	ImatPath Chemistry recall
+chem03-024	<small>Isotopes</small><br><b>Chemical properties</b><br><i>Isotopes of one element?</i>	<b>Same</b>: they have the same electrons, and electrons decide chemistry	ImatPath Chemistry recall
+chem03-025	<small>Isotopes</small><br><b>Physical properties</b><br><i>Isotopes of one element?</i>	<b>Different</b>: mass, density, rate of diffusion, melting point slightly	ImatPath Chemistry recall
+chem03-026	<small>Isotopes</small><br><b>Stability</b><br><i>Isotopes of one element?</i>	Some isotopes are <b>radioactive</b>	ImatPath Chemistry recall
+chem03-027	<small>Answers & explanations</small><br><b>Proton</b><br><i>Charge · Relative mass?</i>	<b>Charge:</b> +1<br><b>Relative mass:</b> 1	ImatPath Chemistry recall
+chem03-028	<small>Answers & explanations</small><br><b>Electron</b><br><i>Charge · Relative mass?</i>	<b>Charge:</b> -1<br><b>Relative mass:</b> about 1/1840	ImatPath Chemistry recall
+chem03-003	Formula to know: <b>The two numbers</b>	<i>neutrons = A - Z &nbsp;&nbsp;&nbsp; electrons (neutral atom) = Z</i>	ImatPath Chemistry formula
+chem03-005	Formula to know: <b>The weighted average</b>	<i>A<sub>r</sub> = (∑ (mass number × abundance %))/(100)</i>	ImatPath Chemistry formula
+chem03-014	Key points: <b>Particles</b>	• Atoms are neutral. The nucleus holds almost all the mass.<br>• Rutherford: mostly empty space, small dense positive nucleus.	ImatPath Chemistry summary
+chem03-015	Key points: <b>Numbers</b>	• <i>Z</i> = protons. <i>A</i> = protons + neutrons.<br>• Neutrons <i>= A - Z</i>. Electrons in an ion <i>= Z - charge</i>.<br>• Ions: only the <b>electrons</b> change.	ImatPath Chemistry summary
+chem03-016	Key points: <b>Isotopes</b>	• Same <i>Z</i>, different <i>A</i> (different neutrons).<br>• <b>Same chemistry</b>, different physical properties.<br>• Radioactive isotopes are used in medicine (I-131, Tc-99m) and dating (C-14).	ImatPath Chemistry summary
+chem03-017	Key points: <b>Relative atomic mass</b>	• Weighted average: <i>∑ (mass number × abundance %) / 100</i>. Not a whole number.<br>• A mass spectrum gives the masses (peak position) and abundances (peak height).	ImatPath Chemistry summary
+chem03-006	Copper has two isotopes, <sup>63</sup>Cu and <sup>65</sup>Cu, and its relative atomic mass is 63.55. What is the percentage abundance of <sup>63</sup>Cu?<br><br><br>A) 27.5%<br>B) 72.5%<br>C) 63.55%<br>D) 55%<br>E) 50%	<b>B) 72.5%</b><br><br>Let <i>x</i> be the fraction of <i><sup>63</sup></i>Cu: <i>63x + 65(1 - x) = 63.55</i>, so <i>65 - 2x = 63.55</i> and <i>x = 0.725</i>. The abundance is 72.5% (and 27.5% for <i><sup>65</sup></i>Cu).	ImatPath Chemistry practice
+chem03-008	Bromine has two isotopes, <sup>79</sup>Br and <sup>81</sup>Br. Its relative atomic mass is 79.9. Which percentage abundance is closest to that of <sup>81</sup>Br?<br><br><br>A) 45%<br>B) 55%<br>C) 90%<br>D) 10%<br>E) 25%	<b>A) 45%</b><br><br>Let <i>x</i> be the fraction of <i><sup>81</sup></i>Br: <i>79 + 2x = 79.9</i>, so <i>x = 0.45</i>. The abundance is 45%. (The relative atomic mass sits a bit closer to 79 than to 81, so more than half is <i><sup>79</sup></i>Br.)	ImatPath Chemistry practice
+chem03-010	How many of these species have exactly 10 electrons: Na<sup>+</sup>, Mg<sup>2+</sup>, O<sup>2-</sup>, F<sup>-</sup>, K<sup>+</sup>, Al<sup>3+</sup>, Ar?<br><br><br>A) 4<br>B) 6<br>C) 7<br>D) 3<br>E) 5	<b>E) 5</b><br><br>Na<sup>+</sup> (<i>11 - 1</i>), Mg<sup>2+</sup> (<i>12 - 2</i>), O<sup>2-</sup> (<i>8 + 2</i>), F<sup>-</sup> (<i>9 + 1</i>) and Al<sup>3+</sup> (<i>13 - 3</i>) all have 10. K<sup>+</sup> (<i>19 - 1 = 18</i>) and Ar (18) do not.	ImatPath Chemistry practice
+chem03-012	Neon is 90.5% <sup>20</sup>Ne, 0.3% <sup>21</sup>Ne and 9.2% <sup>22</sup>Ne. What is its relative atomic mass?<br><br><br>A) 21.0<br>B) 20.0<br>C) 20.9<br>D) 20.2<br>E) 22.0	<b>D) 20.2</b><br><br><i>A<sub>r</sub> = (20 × 90.5 + 21 × 0.3 + 22 × 9.2)/100 = (1810 + 6.3 + 202.4)/100 = 20.2</i>.	ImatPath Chemistry practice

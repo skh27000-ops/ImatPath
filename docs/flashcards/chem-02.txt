@@ -1,0 +1,33 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Chemistry::Ideal gas laws
+#guid column:1
+#tags column:4
+chem02-001	<b>Ideal gas</b>: what is it?	An <b>ideal gas</b> is a gas that follows the gas laws exactly. Real gases behave almost ideally at <b>low pressure and high temperature</b>.	ImatPath Chemistry definition
+chem02-023	<small>The ideal gas model</small><br><b>Pressure</b><br><i>Unit · Conversion?</i>	<b>Unit:</b> atm, kPa, mmHg<br><b>Conversion:</b> 1 atm = 101.3 kPa = 760 mmHg	ImatPath Chemistry recall
+chem02-024	<small>The ideal gas model</small><br><b>Volume</b><br><i>Unit · Conversion?</i>	<b>Unit:</b> L, mL, m<sup>3</sup><br><b>Conversion:</b> 1 L = 1000 mL = 1 dm<sup>3</sup>	ImatPath Chemistry recall
+chem02-025	<small>The ideal gas model</small><br><b>Amount</b><br><i>Unit · Conversion?</i>	<b>Unit:</b> mol<br><b>Conversion:</b> n = mass / molar mass	ImatPath Chemistry recall
+chem02-026	<small>The combined law and the ideal gas equation</small><br><b>Pa</b><br><i>Volume · R?</i>	<b>Volume:</b> m<sup>3</sup><br><b>R:</b> 8.31 J / (mol K)	ImatPath Chemistry recall
+chem02-027	<small>Answers & explanations</small><br><b>Boyle</b><br><i>Fixed · Relation?</i>	<b>Fixed:</b> T, n<br><b>Relation:</b> <i>P<sub>1</sub>V<sub>1</sub> = P<sub>2</sub>V<sub>2</sub></i>	ImatPath Chemistry recall
+chem02-028	<small>Answers & explanations</small><br><b>Charles</b><br><i>Fixed · Relation?</i>	<b>Fixed:</b> P, n<br><b>Relation:</b> <i>V<sub>1</sub>/T<sub>1</sub> = V<sub>2</sub>/T<sub>2</sub></i>	ImatPath Chemistry recall
+chem02-029	<small>Answers & explanations</small><br><b>Gay-Lussac</b><br><i>Fixed · Relation?</i>	<b>Fixed:</b> V, n<br><b>Relation:</b> <i>P<sub>1</sub>/T<sub>1</sub> = P<sub>2</sub>/T<sub>2</sub></i>	ImatPath Chemistry recall
+chem02-030	<small>Answers & explanations</small><br><b>Avogadro</b><br><i>Fixed · Relation?</i>	<b>Fixed:</b> P, T<br><b>Relation:</b> <i>V<sub>1</sub>/n<sub>1</sub> = V<sub>2</sub>/n<sub>2</sub></i>	ImatPath Chemistry recall
+chem02-031	<small>Answers & explanations</small><br><b>Always use kelvin</b>	<i>T(K) = θ(<sup>°</sup>C) + 273</i>.	ImatPath Chemistry key idea
+chem02-002	Formula to know: <b>Units you must handle</b>	<i>T(K) = θ(<sup>°</sup>C) + 273</i>	ImatPath Chemistry formula
+chem02-003	Formula to know: <b>Boyle's law: pressure and volume</b>	<i>P<sub>1</sub> V<sub>1</sub> = P<sub>2</sub> V<sub>2</sub></i>	ImatPath Chemistry formula
+chem02-004	Formula to know: <b>Charles' law: volume and temperature</b>	<i>(V<sub>1</sub>)/(T<sub>1</sub>) = (V<sub>2</sub>)/(T<sub>2</sub>)</i>	ImatPath Chemistry formula
+chem02-005	Formula to know: <b>Gay-Lussac's law: pressure and temperature</b>	<i>(P<sub>1</sub>)/(T<sub>1</sub>) = (P<sub>2</sub>)/(T<sub>2</sub>)</i>	ImatPath Chemistry formula
+chem02-006	Formula to know: <b>Avogadro's law: volume and amount</b>	<i>(V<sub>1</sub>)/(n<sub>1</sub>) = (V<sub>2</sub>)/(n<sub>2</sub>)</i>	ImatPath Chemistry formula
+chem02-007	Formula to know: <b>Avogadro's law: volume and amount</b>	<i>V<sub>m</sub> = 22.4 L/mol</i>	ImatPath Chemistry formula
+chem02-008	Formula to know: <b>The combined gas law</b>	<i>(P<sub>1</sub> V<sub>1</sub>)/(T<sub>1</sub>) = (P<sub>2</sub> V<sub>2</sub>)/(T<sub>2</sub>)</i>	ImatPath Chemistry formula
+chem02-009	Formula to know: <b>The ideal gas equation</b>	<i>PV = nRT</i>	ImatPath Chemistry formula
+chem02-010	Formula to know: <b>Molar mass and density from the equation</b>	<i>M = (mRT)/(PV) &nbsp;&nbsp;&nbsp; ρ = (PM)/(RT)</i>	ImatPath Chemistry formula
+chem02-011	Formula to know: <b>Dalton's law of partial pressures</b>	<i>P<sub>total</sub> = P<sub>A</sub> + P<sub>B</sub> + … &nbsp;&nbsp;&nbsp; P<sub>A</sub> = x<sub>A</sub>   P<sub>total</sub></i>	ImatPath Chemistry formula
+chem02-020	Key points: <b>The gas laws</b>	• <b>Always use kelvin</b>: <i>T(K) = θ(<sup>°</sup>C) + 273</i>.<br>• Combined law: <i>P<sub>1</sub>V<sub>1</sub>/T<sub>1</sub> = P<sub>2</sub>V<sub>2</sub>/T<sub>2</sub></i>.<br>• Ideal gas equation: <i>PV = nRT</i>. <i>R = 0.0821</i> L atm/(mol K) or 8.31 J/(mol K).	ImatPath Chemistry summary
+chem02-021	Key points: <b>Useful values</b>	• Molar volume at STP: <b>22.4 L/mol</b> (0 °C, 1 atm).<br>• <i>M = mRT/PV</i> and <i>ρ = PM/RT</i>: bigger M means denser gas.<br>• 1 atm = 101.3 kPa = 760 mmHg.	ImatPath Chemistry summary
+chem02-022	Key points: <b>Mixtures and real gases</b>	• Dalton: <i>P<sub>total</sub></i> is the sum of partial pressures. <i>P<sub>A</sub> = x<sub>A</sub> P<sub>total</sub></i>.<br>• Real gases deviate at <b>high pressure and low temperature</b>.	ImatPath Chemistry summary
+chem02-012	A gas occupies 2.0 L at 1.0 atm and 27 °C. What volume does it occupy at 4.0 atm and 127 °C?<br><br><br>A) 10.7 L<br>B) 0.667 L<br>C) 2.35 L<br>D) 0.5 L<br>E) 6 L	<b>B) 0.667 L</b><br><br>Use <i>P<sub>1</sub>V<sub>1</sub>/T<sub>1</sub> = P<sub>2</sub>V<sub>2</sub>/T<sub>2</sub></i> with kelvin: <i>T<sub>1</sub> = 300</i> K, <i>T<sub>2</sub> = 400</i> K. <i>V<sub>2</sub> = 2.0 × (1.0/4.0) × (400/300) = 0.667</i> L.	ImatPath Chemistry practice
+chem02-014	A 10 L vessel at 27 °C contains 2.0 mol of N<sub>2</sub> and 3.0 mol of O<sub>2</sub>. What is the partial pressure of N<sub>2</sub>? (<i>R = 0.0821</i> L atm/(mol K))<br><br><br>A) 4.93 atm<br>B) 12.3 atm<br>C) 7.39 atm<br>D) 49.3 atm<br>E) 2.46 atm	<b>A) 4.93 atm</b><br><br>Total <i>n = 5.0</i> mol, so <i>P<sub>total</sub> = nRT/V = 5.0 × 0.0821 × 300/10 = 12.3</i> atm. N<sub>2</sub> is 2.0/5.0 = 0.40 of the moles, so <i>P<sub>N<sub>2</sub></sub> = 0.40 × 12.3 = 4.93</i> atm.	ImatPath Chemistry practice
+chem02-016	A 2.0 L flask holds a gas at 3.0 atm. It is connected by a tap to a 3.0 L flask holding the same gas at 1.0 atm. The temperature is constant. What is the final pressure after the tap is opened?<br><br><br>A) 2.0 atm<br>B) 1.0 atm<br>C) 4.0 atm<br>D) 1 atm<br>E) 1.8 atm	<b>E) 1.8 atm</b><br><br>Boyle: the product <i>PV</i> for each flask is the amount of gas. Total <i>PV = 2.0 × 3.0 + 3.0 × 1.0 = 9.0</i> L atm. The total volume is 5.0 L, so <i>P = 9.0/5.0 = 1.8</i> atm.	ImatPath Chemistry practice
+chem02-018	A balloon of volume 5.0 L is released at 1.00 atm and 25 °C. It rises to a height where the pressure is 0.50 atm and the temperature is <i>-23</i> °C. What is its new volume?<br><br><br>A) 11.9 L<br>B) 10 L<br>C) -9.2 L<br>D) 8.39 L<br>E) 2.1 L	<b>D) 8.39 L</b><br><br><i>T<sub>1</sub> = 298</i> K and <i>T<sub>2</sub> = 250</i> K. <i>V<sub>2</sub> = V<sub>1</sub> × (P<sub>1</sub>/P<sub>2</sub>) × (T<sub>2</sub>/T<sub>1</sub>) = 5.0 × 2.0 × (250/298) = 8.39</i> L. Lower pressure expands the gas, lower temperature shrinks it.	ImatPath Chemistry practice

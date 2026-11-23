@@ -14,44 +14,118 @@
 
   const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+  const isLocalEnv = window.location.protocol === 'file:' || 
+                     window.location.hostname === 'localhost' || 
+                     window.location.hostname === '127.0.0.1';
+
+  const DEFAULT_USER = {
+    id: 'local-candidate',
+    email: 'candidate@imatpath.com',
+    user_metadata: {
+      first_name: 'Candidate',
+      full_name: 'IMAT Candidate',
+      is_premium: true
+    }
+  };
+
   // ── Auth helpers ──────────────────────────────────────────────
   async function getSession() {
     try {
       const { data } = await client.auth.getSession();
-      return data?.session || null;
-    } catch { return null; }
+      if (data?.session) return data.session;
+    } catch {}
+
+    // LOCAL ONLY: Allow instant dashboard access when running offline on your computer
+    if (isLocalEnv) {
+      if (localStorage.getItem('imatpath_logged_out') === '1') {
+        return null;
+      }
+      return {
+        user: DEFAULT_USER,
+        access_token: 'local-candidate-token'
+      };
+    }
+
+    // LIVE PRODUCTION WEBSITE: Strictly enforce authentic session (no unauthorized access)
+    return null;
   }
 
   async function getUser() {
     const session = await getSession();
     if (session?.user) {
-      if (!session.user.user_metadata) session.user.user_metadata = {};
-      session.user.user_metadata.is_premium = true;
+      return session.user;
     }
-    return session?.user || null;
+    return isLocalEnv ? DEFAULT_USER : null;
   }
+
+  // A password account must have a verified email before it can use the app.
+  function isUnverified(user) {
+    if (!user || user.id === 'local-candidate') return false;
+    const provider = user.app_metadata && user.app_metadata.provider;
+    return (!provider || provider === 'email') && !user.email_confirmed_at;
+  }
+
+  const AUTH_RETURN = () => window.location.origin + '/auth.html';
 
   async function signIn(email, password) {
     const { data, error } = await client.auth.signInWithPassword({ email, password });
     if (error) throw error;
+    if (isUnverified(data && data.user)) {
+      try { await client.auth.signOut(); } catch {}
+      const e = new Error('Email not confirmed');
+      e.code = 'email_not_confirmed';
+      throw e;
+    }
+    localStorage.removeItem('imatpath_logged_out');
+    // Make sure the profile row exists (never overwrite an existing one, it holds the plan).
+    try {
+      await client.from('profiles').upsert({
+        id: data.user.id,
+        first_name: (data.user.user_metadata && data.user.user_metadata.first_name) || null,
+        is_premium: false
+      }, { onConflict: 'id', ignoreDuplicates: true });
+    } catch {}
     return data;
   }
 
   async function signUp(email, password, firstName) {
     const { data, error } = await client.auth.signUp({
       email, password,
-      options: { data: { first_name: firstName, is_premium: true } }
+      options: {
+        data: { first_name: firstName, is_premium: false },
+        emailRedirectTo: AUTH_RETURN() + '?verified=1'
+      }
     });
     if (error) throw error;
-    // Create profile row
-    if (data.user) {
-      await client.from('profiles').upsert({
-        id: data.user.id,
-        first_name: firstName,
-        is_premium: true
-      });
+    // Supabase hides "already registered" for confirmed accounts: it returns a user with no identities.
+    if (data.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) {
+      const e = new Error('User already registered');
+      e.code = 'user_already_exists';
+      throw e;
     }
-    return data;
+    // If the project does not require confirmation it returns a session: end it, the user must verify first.
+    if (data.session) {
+      try { await client.auth.signOut(); } catch {}
+    }
+    return { user: data.user, needsVerification: true };
+  }
+
+  async function resendVerification(email) {
+    const { error } = await client.auth.resend({
+      type: 'signup', email,
+      options: { emailRedirectTo: AUTH_RETURN() + '?verified=1' }
+    });
+    if (error) throw error;
+  }
+
+  async function sendPasswordReset(email) {
+    const { error } = await client.auth.resetPasswordForEmail(email, { redirectTo: AUTH_RETURN() + '?mode=reset' });
+    if (error) throw error;
+  }
+
+  async function updatePassword(newPassword) {
+    const { error } = await client.auth.updateUser({ password: newPassword });
+    if (error) throw error;
   }
 
   async function signInWithGoogle() {
@@ -63,8 +137,18 @@
   }
 
   async function signOut() {
-    await client.auth.signOut();
-    window.location.href = 'auth.html';
+    localStorage.setItem('imatpath_logged_out', '1');
+    try { await client.auth.signOut(); } catch {}
+    window.location.href = 'auth.html?login=true';
+  }
+
+  function enterGuestMode() {
+    if (isLocalEnv) {
+      localStorage.removeItem('imatpath_logged_out');
+      window.location.href = 'dashboard.html';
+    } else {
+      window.location.href = 'auth.html';
+    }
   }
 
   // ── Nav population ────────────────────────────────────────────
@@ -223,12 +307,27 @@
       const localCount = localQb ? Object.keys(localQb.revealed || {}).length : 0;
 
       if (cloudCount > localCount) {
-        // Pull from cloud
-        localStorage.setItem('imatpath_qb', JSON.stringify(qbData));
+        // Pull from cloud, preserving local metadata and merging sessions
+        const merged = { ...(localQb || {}), ...qbData };
+        if (qbData.bookmarks && qbData.bookmarks._chapter_sessions) {
+          merged.chapterSessions = qbData.bookmarks._chapter_sessions.active || merged.chapterSessions || {};
+          merged.sessionHistory = qbData.bookmarks._chapter_sessions.history || merged.sessionHistory || [];
+        }
+        localStorage.setItem('imatpath_qb', JSON.stringify(merged));
         updated = true;
       } else if (localCount > cloudCount) {
         // Push to cloud
         await saveQuestionState(localQb.answers || {}, localQb.revealed || {}, localQb.bookmarks || {});
+      } else if (localQb && qbData) {
+        // Same count: reconcile chapter sessions between cloud and local
+        if (qbData.bookmarks && qbData.bookmarks._chapter_sessions && (!localQb.chapterSessions || !Object.keys(localQb.chapterSessions).length)) {
+          localQb.chapterSessions = qbData.bookmarks._chapter_sessions.active || {};
+          localQb.sessionHistory = qbData.bookmarks._chapter_sessions.history || [];
+          localStorage.setItem('imatpath_qb', JSON.stringify(localQb));
+          updated = true;
+        } else if (localQb.chapterSessions && Object.keys(localQb.chapterSessions).length) {
+          await saveQuestionState(localQb.answers || {}, localQb.revealed || {}, localQb.bookmarks || {});
+        }
       }
     } catch (e) { console.warn('Cloud sync QB failed', e); }
 
@@ -261,8 +360,13 @@
     getUser,
     signIn,
     signUp,
+    resendVerification,
+    sendPasswordReset,
+    updatePassword,
+    isUnverified,
     signInWithGoogle,
     signOut,
+    enterGuestMode,
     populateNav,
     saveXPProgress,
     loadXPProgress,

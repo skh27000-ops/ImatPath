@@ -1,0 +1,83 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Biology::Cell theory & cell size
+#guid column:1
+#tags column:4
+bio01-001	Name the 8 properties that a living organism shows <b>all together</b>.	Organisation, metabolism, homeostasis, growth and development, reproduction, response to stimuli, heredity, evolution.	ImatPath Biology life
+bio01-002	A crystal gets bigger by adding material. Why is that not "growth" in the biological sense?	Biological growth also includes <b>development</b>: cells <b>differentiate</b> (become specialised in structure and function). A crystal only adds material.	ImatPath Biology life
+bio01-003	Which two features are found in <b>every</b> living organism?	A <b>genome</b> (its genetic information, stored as DNA) and a <b>metabolism</b> (the reactions that build molecules, release energy as ATP and remove waste).	ImatPath Biology life
+bio01-004	Define a <b>cell</b>.	The smallest unit of an organism that can carry out all the activities of life. Every cell has a <b>plasma membrane</b>, <b>cytoplasm</b> and <b>DNA</b>.	ImatPath Biology life
+bio01-005	Unicellular, colonial, multicellular: what is the difference?	<b>Unicellular</b>: one cell does everything (bacteria, yeast, <i>Amoeba</i>). <b>Colonial</b>: cells live together but each can survive alone (<i>Volvox</i>). <b>Multicellular</b>: many specialised cells that depend on each other (plants, fungi, animals).	ImatPath Biology life
+bio01-006	Put the levels of organisation in order, from the smallest.	Cell → tissue → organ → organ system → organism.<br>(e.g. cardiac muscle cell → cardiac muscle → heart → circulatory system → human)	ImatPath Biology life
+bio01-007	What are the 4 basic animal tissue types?	<b>Epithelial</b> (cover and line), <b>connective</b> (support and connect), <b>muscle</b> (contract), <b>nervous</b> (conduct signals).	ImatPath Biology life
+bio01-008	About how many cells, and how many cell types, make up the human body?	About <b>30 trillion</b> cells (about 80% are red blood cells) of about <b>200</b> types.	ImatPath Biology life
+bio01-009	A neuron and a red blood cell have the <b>same DNA</b>. Why do they look and work so differently?	<b>Cell differentiation</b>: each cell type uses (expresses) different genes, so it makes different proteins.	ImatPath Biology life
+bio01-010	Starting from one zygote, how many cells are there after <i>n</i> rounds of division?	2<sup>n</sup> cells. About 45 doublings would be enough to reach ~3.5 × 10<sup>13</sup> cells.	ImatPath Biology life
+bio01-011	State the <b>three ideas</b> of the cell theory.	1) All living organisms are made of one or more cells. 2) The cell is the basic unit of structure and function. 3) All cells come from pre-existing cells (by division).	ImatPath Biology cell-theory
+bio01-012	Why is the <b>cell</b>, and not an organelle, the basic unit of life?	A part of a cell cannot live alone: a mitochondrion or a nucleus removed from a cell cannot carry out the activities of life by itself.	ImatPath Biology cell-theory
+bio01-013	What does the <b>modern</b> cell theory add to the three classic ideas?	1) DNA is passed from cell to cell during division; 2) all cells share the same basic chemistry and use ATP; 3) energy flow happens inside cells; 4) an organism's activity is the sum of its cells' activities.	ImatPath Biology cell-theory
+bio01-014	Why do viruses <b>not</b> follow the cell theory?	They are <b>acellular</b>: nucleic acid in a protein coat, with <b>no cytoplasm, no ribosomes and no metabolism</b>. They multiply only inside a host cell.	ImatPath Biology cell-theory
+bio01-015	Exam exception: what is unusual about a <b>mature red blood cell</b>?	It has <b>no nucleus</b> (and no mitochondria), but it is still a cell.	ImatPath Biology cell-theory
+bio01-016	Exam exception: what is unusual about a <b>skeletal muscle fibre</b>?	It is a giant cell with <b>many nuclei</b> (a syncytium).	ImatPath Biology cell-theory
+bio01-017	Are <b>platelets</b> complete cells?	No. They are <b>fragments</b> of large cells in the bone marrow.	ImatPath Biology cell-theory
+bio01-018	Which single feature separates prokaryotic from eukaryotic cells?	A <b>true nucleus</b> surrounded by a nuclear envelope (eukaryotes). Prokaryotes have none.	ImatPath Biology cell-types
+bio01-019	Where is the DNA of a prokaryote, and what does it look like?	Free in the cytoplasm, in a region called the <b>nucleoid</b>: one <b>circular</b> chromosome (plus small rings called plasmids).	ImatPath Biology cell-types
+bio01-020	What are the <b>three domains</b> of life?	<b>Archaea</b> and <b>Bacteria</b> (prokaryotes), and <b>Eukarya</b> (animals, plants, fungi, protists).	ImatPath Biology cell-types
+bio01-021	Which 4 structures do <b>all</b> cells have, prokaryotic and eukaryotic?	Plasma membrane, cytoplasm, DNA, ribosomes.	ImatPath Biology cell-types
+bio01-022	What is the cell wall made of in bacteria, plants, fungi and animals?	Bacteria: <b>peptidoglycan</b>. Plants: <b>cellulose</b>. Fungi: <b>chitin</b>. Animal cells: <b>no cell wall</b>.	ImatPath Biology cell-types
+bio01-023	What are <b>plasmids</b>?	Small extra rings of DNA in bacteria, often carrying useful genes such as <b>antibiotic resistance</b>.	ImatPath Biology cell-types
+bio01-024	Fimbriae vs sex pili: what does each do?	<b>Fimbriae</b> help the bacterium attach to surfaces. <b>Sex pili</b> pass DNA from one cell to another (<b>conjugation</b>, a form of horizontal gene transfer).	ImatPath Biology cell-types
+bio01-025	Ribosomes: prokaryotes vs eukaryotes?	Prokaryotes: <b>70S</b>. Eukaryotes: <b>80S</b> in the cytoplasm, but <b>70S</b> inside mitochondria and chloroplasts.	ImatPath Biology cell-types
+bio01-026	A 70S ribosome is made of a 50S and a 30S subunit. Why don't they add up to 80S?	S values are <b>sedimentation coefficients</b>, not sizes, so they are not additive.	ImatPath Biology cell-types
+bio01-027	What is the advantage of <b>compartmentalisation</b> in eukaryotic cells?	Different jobs happen in different organelles, so incompatible reactions do not interfere with each other.	ImatPath Biology cell-types
+bio01-028	Cytoplasm vs cytosol?	<b>Cytoplasm</b> = everything between the plasma membrane and the nucleus. <b>Cytosol</b> = its fluid part (about half the cell volume), where many reactions happen.	ImatPath Biology cell-types
+bio01-029	Which organelles have a <b>double</b> membrane?	Nucleus, mitochondria, chloroplasts.	ImatPath Biology cell-types
+bio01-030	Which cell structures have <b>no</b> membrane?	Ribosomes and the cytoskeleton.	ImatPath Biology cell-types
+bio01-031	Rough ER vs smooth ER: what does each make?	<b>Rough ER</b> (ribosomes on it): makes and folds proteins for export or membranes. <b>Smooth ER</b>: makes lipids, detoxifies, stores calcium.	ImatPath Biology cell-types
+bio01-032	What does the <b>Golgi apparatus</b> do?	Modifies, sorts and packages proteins and lipids.	ImatPath Biology cell-types
+bio01-033	Lysosomes vs peroxisomes?	<b>Lysosomes</b> digest worn-out parts and engulfed material. <b>Peroxisomes</b> break down fatty acids and hydrogen peroxide.	ImatPath Biology cell-types
+bio01-034	Which organelle makes most of the cell's ATP?	The <b>mitochondrion</b> (about 90% of the ATP).	ImatPath Biology cell-types
+bio01-035	Which 3 structures does a plant cell have that an animal cell lacks?	A <b>cellulose cell wall</b>, <b>chloroplasts</b> and a large <b>central vacuole</b>.	ImatPath Biology cell-types
+bio01-036	Typical size: prokaryotic vs eukaryotic cell?	Prokaryotic: <b>1 to 5 µm</b>. Eukaryotic: <b>10 to 100 µm</b>.	ImatPath Biology cell-types
+bio01-037	How do prokaryotes and eukaryotes divide?	Prokaryotes: <b>binary fission</b>. Eukaryotes: <b>mitosis</b> (and meiosis to make gametes).	ImatPath Biology cell-types
+bio01-038	About 2 metres of DNA fit in a nucleus of what size?	About <b>6 to 10 µm</b> across: the DNA is ~200 000 times longer than the nucleus is wide.	ImatPath Biology cell-types
+bio01-039	Why is a red blood cell a <b>biconcave disc</b>?	Large surface and short diffusion path for oxygen; it is also flexible. It is 7 to 8 µm and has no nucleus.	ImatPath Biology cell-types
+bio01-040	Largest human cell? Longest human cell?	Largest: the <b>egg cell</b> (about 0.1 mm). Longest: the <b>neuron</b> (axon up to about 1 m).	ImatPath Biology cell-types
+bio01-041	How do intestinal cells increase their absorbing surface?	<b>Microvilli</b>: finger-like folds of the membrane.	ImatPath Biology cell-types
+bio01-042	1 mm = ? µm = ? nm	1 mm = <b>1000 µm</b> = <b>1 000 000 nm</b>. (1 µm = 1000 nm)	ImatPath Biology microscopy
+bio01-043	1 mm<sup>2</sup> = ? µm<sup>2</sup> and 1 mm<sup>3</sup> = ? µm<sup>3</sup>	1 mm<sup>2</sup> = <b>10<sup>6</sup> µm<sup>2</sup></b>; 1 mm<sup>3</sup> = <b>10<sup>9</sup> µm<sup>3</sup></b>. Square or cube the factor 1000.	ImatPath Biology microscopy
+bio01-044	Convert 4500 nm to µm, and 0.35 mm to µm.	4500 nm = <b>4.5 µm</b> (÷1000). 0.35 mm = <b>350 µm</b> (×1000).	ImatPath Biology microscopy
+bio01-045	Magnification vs resolution?	<b>Magnification</b>: how many times bigger the image is. <b>Resolution</b>: the smallest distance at which two points are still seen as separate (the detail). Enlarging a blurry image adds no detail.	ImatPath Biology microscopy
+bio01-046	What is the resolution limit of the naked eye, and of a light microscope?	Eye: about <b>0.1 mm</b> (100 µm). Light microscope: about <b>0.2 µm</b> (200 nm), about half the wavelength of light.	ImatPath Biology microscopy
+bio01-047	Why do electron microscopes resolve so much more than light microscopes?	Electrons have a far <b>shorter wavelength</b> than visible light (about 100 000 times shorter), and a shorter wavelength separates closer points.	ImatPath Biology microscopy
+bio01-048	TEM vs SEM?	<b>TEM</b>: electrons pass through ultra-thin slices; 2D internal detail; best resolution. <b>SEM</b>: electrons scan the surface; <b>3D</b> surface view. Both: black and white, no living specimens.	ImatPath Biology microscopy
+bio01-049	Can you see a virus with a light microscope? Which microscope shows living cells?	No: viruses (20 to 300 nm) are below the 0.2 µm limit, you need an <b>electron microscope</b>. Only the <b>light microscope</b> can show living cells.	ImatPath Biology microscopy
+bio01-050	Magnification formula? How do you get the actual size?	Magnification = image size ÷ actual size. So <b>actual size = image size ÷ magnification</b>. Put both in the same unit first.	ImatPath Biology microscopy
+bio01-051	A scale bar 25 mm long is labelled 10 µm. A cell in the photo is 60 mm long. Real length?	Magnification = 25 000 µm ÷ 10 µm = ×2500. Real length = 60 000 µm ÷ 2500 = <b>24 µm</b>.	ImatPath Biology microscopy
+bio01-052	A bacterium is 2 µm long. How long is its image at ×5000?	2 µm × 5000 = 10 000 µm = <b>10 mm</b>.	ImatPath Biology microscopy
+bio01-053	Typical sizes: ribosome, virus, bacterium, human cell?	Ribosome <b>20 to 25 nm</b>; virus <b>20 to 300 nm</b>; bacterium <b>1 to 5 µm</b>; human cell <b>10 to 30 µm</b>.	ImatPath Biology sizes
+bio01-054	What is the smallest cell, and why can't a cell be much smaller?	<i>Mycoplasma</i> bacteria, <b>0.2 to 0.3 µm</b>. Below that, a cell could not hold the DNA, ribosomes and enzymes it needs.	ImatPath Biology sizes
+bio01-055	An elephant and a mouse: who has bigger liver cells?	Neither: the cells are about the <b>same size</b>. A bigger organism has <b>more cells</b>, not bigger cells (because of SA/V).	ImatPath Biology sizes
+bio01-056	Why can the yolk of a hen's egg be one cell about 3 cm across?	It is a store of food with a very <b>low metabolism</b>, so it needs little exchange through its surface.	ImatPath Biology sizes
+bio01-057	How many 20 µm cube-shaped cells fit in 1 cm<sup>3</sup>?	1 cm = 10 000 µm → 500 cells per edge → 500<sup>3</sup> = <b>1.25 × 10<sup>8</sup></b> cells.	ImatPath Biology sizes
+bio01-058	Why does the <b>SA/V ratio</b> limit cell size?	Exchange (O<sub>2</sub>, nutrients, waste) happens across the <b>surface</b>, but the needs depend on the <b>volume</b>. As a cell grows, volume grows faster than surface, so supply cannot keep up.	ImatPath Biology sa-v
+bio01-059	SA/V of a cube of side <i>a</i>? Of a sphere of radius <i>r</i>?	Cube: 6a<sup>2</sup> ÷ a<sup>3</sup> = <b>6 ÷ a</b>. Sphere: 4πr<sup>2</sup> ÷ (4/3)πr<sup>3</sup> = <b>3 ÷ r</b>.	ImatPath Biology sa-v
+bio01-060	A shape is enlarged by a factor <i>k</i>. What happens to length, surface, volume and SA/V?	Length ×k; surface ×k<sup>2</sup>; volume ×k<sup>3</sup>; <b>SA/V ÷k</b>.	ImatPath Biology sa-v
+bio01-061	SA/V of a cube-shaped cell with a 4 µm side?	SA = 96 µm<sup>2</sup>, V = 64 µm<sup>3</sup> → SA/V = <b>1.5 µm<sup>-1</sup></b> (check: 6 ÷ 4).	ImatPath Biology sa-v
+bio01-062	A cube-shaped cell grows from 2 µm to 6 µm per side. Factor change in surface, volume and SA/V?	Side ×3 → surface <b>×9</b>, volume <b>×27</b>, SA/V <b>÷3</b> (from 3 to 1).	ImatPath Biology sa-v
+bio01-063	One 2 mm cube vs eight 1 mm cubes (same volume): which has more surface?	The eight small cubes: <b>48 mm<sup>2</sup></b> vs 24 mm<sup>2</sup>, so twice the SA/V. Dividing into smaller units increases SA/V.	ImatPath Biology sa-v
+bio01-064	How does diffusion time change with distance?	It grows with the <b>square</b> of the distance: 10 times further takes about <b>100 times</b> longer. Diffusion only works over cell-sized distances.	ImatPath Biology sa-v
+bio01-065	Fick's law in words: what makes diffusion faster?	Rate ∝ (surface area × concentration difference) ÷ distance. So: <b>large surface</b>, <b>steep gradient</b>, <b>short distance</b>.	ImatPath Biology sa-v
+bio01-066	Besides SA/V and diffusion, what third limit keeps cells small?	The <b>nucleocytoplasmic ratio</b>: one nucleus can only control a limited volume of cytoplasm.	ImatPath Biology sa-v
+bio01-067	Why does <b>cell division</b> solve the SA/V problem?	Two smaller cells together have <b>more surface</b> than one big cell of the same volume, so SA/V goes back up.	ImatPath Biology sa-v
+bio01-068	Name 4 ways cells keep a high SA/V while being big or long.	1) Flattening (squamous cells, red blood cells); 2) long and thin (neurons, root hairs); 3) folding the membrane (microvilli) or inside (cristae); 4) many nuclei (muscle fibre). Also a big central vacuole in plants.	ImatPath Biology sa-v
+bio01-069	How does the big central vacuole let plant cells be large?	It pushes the cytoplasm into a <b>thin layer</b> against the membrane, so every part of the cytoplasm is close to the surface.	ImatPath Biology sa-v
+bio01-070	How big is the gas exchange surface of the human lungs?	About <b>70 m<sup>2</sup></b> (several hundred million alveoli): organs use the same "big folded surface" trick.	ImatPath Biology sa-v
+bio01-071	List the 5 steps of <b>binary fission</b>.	1) DNA replication (from oriC to Ter); 2) segregation of the two copies; 3) cell elongation; 4) septum formation; 5) cytokinesis. The two daughter cells are genetically identical.	ImatPath Biology division-viruses
+bio01-072	One bacterium divides every 20 minutes. How many cells after 2 hours?	120 ÷ 20 = 6 divisions → 2<sup>6</sup> = <b>64</b> cells.	ImatPath Biology division-viruses
+bio01-073	What is a virus made of?	A nucleic acid core (<b>DNA or RNA, never both</b>), a protein <b>capsid</b> made of capsomeres, and in some viruses an <b>envelope</b> taken from the host membrane.	ImatPath Biology division-viruses
+bio01-074	Name the 4 virus shapes with one example each.	<b>Helical</b> (tobacco mosaic virus); <b>icosahedral</b> (adenovirus); <b>enveloped</b> (influenza, HIV); <b>complex</b> (bacteriophage T4).	ImatPath Biology division-viruses
+bio01-075	Give the steps of the <b>lytic cycle</b> of a bacteriophage.	1) Attachment; 2) entry (DNA injected); 3) replication of viral DNA and proteins by the host; 4) assembly; 5) release by <b>lysis</b> (the cell bursts).	ImatPath Biology division-viruses
+bio01-076	Lytic vs lysogenic cycle?	<b>Lytic</b>: new viruses are made quickly and the host cell bursts. <b>Lysogenic</b>: viral DNA is inserted into the host chromosome (a <b>prophage</b>) and copied with each division; it can switch to lytic later.	ImatPath Biology division-viruses
+bio01-077	Are viruses alive? What to remember for the IMAT.	They are <b>acellular</b> particles on the border of life: they have genes and evolve, but no metabolism and cannot multiply outside a host. Remember: not cells, contain DNA <b>or</b> RNA.	ImatPath Biology division-viruses

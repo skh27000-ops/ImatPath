@@ -1,0 +1,36 @@
+#separator:tab
+#html:true
+#notetype:Basic
+#deck:ImatPath::Biology::Cell cycle: mitosis & meiosis
+#guid column:1
+#tags column:4
+bio06-026	<b>cell cycle</b>: what is it?	The <b>cell cycle</b> is the life of a dividing cell.	ImatPath Biology term
+bio06-027	<b>Meiosis</b>: what is it?	<b>Meiosis</b> halves it: one diploid cell makes <b>four haploid cells</b>, each <b>genetically different</b>.	ImatPath Biology term
+bio06-013	<small>The cell cycle</small><br><b>Interphase (most of the time)</b><br><i>Phase · What happens?</i>	<b>Phase:</b> <b>G<sub>1</sub></b><br><b>What happens:</b> Cell grows and makes proteins and organelles	ImatPath Biology recall
+bio06-014	<small>The cell cycle</small><br><b>M phase</b><br><i>Phase · What happens?</i>	<b>Phase:</b> <b>Mitosis</b><br><b>What happens:</b> The nucleus divides	ImatPath Biology recall
+bio06-015	<small>Mitosis</small><br><b>Prophase</b><br><i>What you see?</i>	Chromosomes <b>condense</b> and become visible as pairs of chromatids. The nucleolus disappears. The <b>spindle</b> starts to form and the nuclear envelope breaks up	ImatPath Biology recall
+bio06-016	<small>Mitosis</small><br><b>Metaphase</b><br><i>What you see?</i>	Chromosomes line up on the <b>equator</b> (the metaphase plate). Each chromatid is attached to spindle fibres	ImatPath Biology recall
+bio06-017	<small>Mitosis</small><br><b>Anaphase</b><br><i>What you see?</i>	<b>Centromeres split</b> and sister chromatids are pulled to <b>opposite poles</b>. They are now called chromosomes	ImatPath Biology recall
+bio06-018	<small>Mitosis</small><br><b>Telophase</b><br><i>What you see?</i>	Chromosomes reach the poles and unwind. <b>New nuclear envelopes</b> form. The spindle disappears	ImatPath Biology recall
+bio06-019	<small>Meiosis</small><br><b>Purpose</b><br><i>Mitosis · Meiosis?</i>	<b>Mitosis:</b> Growth, repair, asexual reproduction<br><b>Meiosis:</b> Makes gametes	ImatPath Biology recall
+bio06-020	<small>Meiosis</small><br><b>Divisions</b><br><i>Mitosis · Meiosis?</i>	<b>Mitosis:</b> <b>One</b><br><b>Meiosis:</b> <b>Two</b>	ImatPath Biology recall
+bio06-021	<small>Meiosis</small><br><b>DNA replication</b><br><i>Mitosis · Meiosis?</i>	<b>Mitosis:</b> Once<br><b>Meiosis:</b> Once	ImatPath Biology recall
+bio06-022	<small>Meiosis</small><br><b>Chromosome number</b><br><i>Mitosis · Meiosis?</i>	<b>Mitosis:</b> Stays <b>2n</b><br><b>Meiosis:</b> Halves to <b>n</b>	ImatPath Biology recall
+bio06-023	<small>Meiosis</small><br><b>Daughter cells identical?</b><br><i>Mitosis · Meiosis?</i>	<b>Mitosis:</b> <b>Yes</b><br><b>Meiosis:</b> <b>No</b>, all different	ImatPath Biology recall
+bio06-024	<small>Meiosis</small><br><b>Crossing over</b><br><i>Mitosis · Meiosis?</i>	<b>Mitosis:</b> No<br><b>Meiosis:</b> <b>Yes</b>, in prophase I	ImatPath Biology recall
+bio06-025	<small>Meiosis</small><br><b>Homologous pairs</b><br><i>Mitosis · Meiosis?</i>	<b>Mitosis:</b> Do not pair up<br><b>Meiosis:</b> <b>Pair up</b> (bivalents)	ImatPath Biology recall
+bio06-028	<small>Meiosis</small><br><b>Prophase I</b>	homologous chromosomes pair up. Non-sister chromatids swap pieces: this is <b>crossing over</b> at points called <b>chiasmata</b>.	ImatPath Biology key idea
+bio06-029	<small>Meiosis</small><br><b>Metaphase I</b>	homologous pairs line up on the equator, in <b>random orientation</b>.	ImatPath Biology key idea
+bio06-030	<small>Meiosis</small><br><b>Anaphase I</b>	whole chromosomes of each pair go to <b>opposite poles</b>. Chromatids stay together.	ImatPath Biology key idea
+bio06-031	<small>Meiosis</small><br><b>Telophase I</b>	two haploid cells, each chromosome still made of two chromatids.	ImatPath Biology key idea
+bio06-032	<small>Meiosis</small><br><b>Independent assortment</b>	each pair lines up at random, so there are 2<sup>23</sup> (about 8 million) possible combinations of chromosomes in a human gamete.	ImatPath Biology key idea
+bio06-033	<small>Meiosis</small><br><b>Random fertilisation</b>	any sperm can fuse with any egg.	ImatPath Biology key idea
+bio06-034	<small>Answers & explanations</small><br><b>PMAT</b>	condense, line up, separate chromatids, two nuclei.	ImatPath Biology key idea
+bio06-009	Key points: <b>Cell cycle</b>	• Interphase: <b>G<sub>1</sub></b> (grow), <b>S</b> (copy DNA), <b>G<sub>2</sub></b> (prepare). Then <b>mitosis</b> and <b>cytokinesis</b>.<br>• Checkpoints in G<sub>1</sub>, G<sub>2</sub> and at the spindle. Cyclins and CDKs drive it.	ImatPath Biology summary
+bio06-010	Key points: <b>Mitosis</b>	• <b>PMAT</b>: condense, line up, separate chromatids, two nuclei.<br>• 2 identical cells, 2n. For growth, repair, asexual reproduction.	ImatPath Biology summary
+bio06-011	Key points: <b>Meiosis</b>	• Two divisions, <b>4 haploid</b> different cells. Meiosis I separates <b>homologues</b>, II separates <b>chromatids</b>.<br>• Variation: <b>crossing over</b>, <b>independent assortment</b>, random fertilisation.	ImatPath Biology summary
+bio06-012	Key points: <b>Errors</b>	• Non-disjunction → aneuploidy (Down = trisomy 21).<br>• Cancer = loss of cell-cycle control (p53 is a tumour suppressor).	ImatPath Biology summary
+bio06-001	A human cell has 46 chromosomes. How many chromatids are present in a cell at metaphase II of meiosis?<br><br><br>A) 23<br>B) 46<br>C) 92<br>D) 184<br>E) 69	<b>B) 46</b><br><br>After meiosis I each cell has 23 chromosomes, each still made of 2 chromatids. At metaphase II the 23 chromosomes are lined up: <i>23 × 2 = 46</i> chromatids. They separate at anaphase II.	ImatPath Biology practice
+bio06-003	In a root tip, 250 cells are counted and 20 are in mitosis. Mitosis lasts 1.5 hours. Approximately how long is the whole cell cycle?<br><br><br>A) 19 hours<br>B) 1.5 hours<br>C) 12 hours<br>D) 24 hours<br>E) 3.75 hours	<b>A) 19 hours</b><br><br>Mitotic index <i>= 20/250 = 0.08</i> (8%). The fraction of time spent in mitosis is about the same, so cycle length <i>= 1.5/0.08 = 18.75 ≈ 19</i> hours.	ImatPath Biology practice
+bio06-005	A non-disjunction of one chromosome pair happens in meiosis II (not meiosis I). What fraction of the four gametes is chromosomally normal for that chromosome?<br><br><br>A) 0<br>B) 1/4<br>C) 3/4<br>D) All of them<br>E) 1/2	<b>E) 1/2</b><br><br>In meiosis II, the sister chromatids fail to separate in only <b>one</b> of the two cells. That cell makes one gamete with an extra chromosome (n + 1) and one with a missing chromosome (n − 1). The other cell makes two normal gametes, so half are normal. (In meiosis I non-disjunction, all four are abnormal.)	ImatPath Biology practice
+bio06-007	Which events occur in meiosis I but <b>not</b> in mitosis?<br><br><br>A) Replication of DNA and condensation of chromosomes<br>B) Separation of sister chromatids and formation of a spindle<br>C) Breakdown of the nuclear envelope and cytokinesis<br>D) Pairing of homologous chromosomes and their separation into different cells<br>E) Chromosomes line up on the equator	<b>D) Pairing of homologous chromosomes and their separation into different cells</b><br><br>Only meiosis I has synapsis (homologues pair, with crossing over) and separation of the homologues. Replication, spindle formation, chromosome condensation, equator alignment and cytokinesis occur in both.	ImatPath Biology practice
