@@ -35655,16 +35655,16 @@ const subjects = [
         "name": "Mechanics: Kinematics",
         "questions": [
           {
-            "question": "A ball is thrown vertically upwards at 20 m/s. Neglecting air resistance, how long to return to starting position? (g = 10 m/s²)",
+            "question": "A cyclist moving at 10 m/s accelerates uniformly at 2 m/s² for 7 s. What distance does she cover in that time?",
             "options": [
-              "2.0 s",
-              "3.0 s",
-              "4.0 s",
-              "5.0 s",
-              "8.0 s"
+              "70 m",
+              "119 m",
+              "49 m",
+              "126 m",
+              "238 m"
             ],
-            "correct": 2,
-            "solution": "Time to max height: v = u + at → 0 = 20 - 10t → t = 2.0 s. By symmetry, time to fall = time to rise. Total = 2 × 2.0 = 4.0 s."
+            "correct": 1,
+            "solution": "\\(s=v_0t+\\tfrac12at^2=10(7)+\\tfrac12(2)(7)^2=119\\) m."
           },
           {
             "question": "A wave has frequency 500 Hz and wavelength 0.68 m. If it enters a medium where speed halves, what happens to wavelength?",
@@ -35679,28 +35679,28 @@ const subjects = [
             "solution": "v = fλ = 500 × 0.68 = 340 m/s. When entering new medium, frequency stays constant. New speed = 170 m/s. New λ = 170/500 = 0.34 m. Original λ = 0.68 m → wavelength halves."
           },
           {
-            "question": "A 1200 kg car at 15 m/s brakes uniformly to rest in 5 s. What is the average braking force?",
+            "question": "Take g = 10 m/s². A 10 kg block slides down a rough incline of angle θ where sin θ = 0.6 and cos θ = 0.8. The coefficient of kinetic friction is 0.5. What is the acceleration of the block?",
             "options": [
-              "1,800 N",
-              "2,400 N",
-              "3,600 N",
-              "6,000 N",
-              "9,000 N"
-            ],
-            "correct": 2,
-            "solution": "Deceleration: a = (0-15)/5 = -3 m/s². Force: F = ma = 1200 × 3 = 3,600 N."
-          },
-          {
-            "question": "A 2 kg object on a frictionless 30° incline. What is its acceleration down the slope? (g = 10 m/s²)",
-            "options": [
-              "2.5 m/s²",
-              "5.0 m/s²",
-              "7.5 m/s²",
-              "8.7 m/s²",
-              "10.0 m/s²"
+              "10 m/s²",
+              "2 m/s²",
+              "4 m/s²",
+              "5 m/s²",
+              "6 m/s²"
             ],
             "correct": 1,
-            "solution": "On a frictionless incline, a = g sin θ = 10 × sin 30° = 10 × 0.5 = 5.0 m/s². Mass cancels out."
+            "solution": "Along the slope: \\(ma=mg\\sin\\theta-\\mu mg\\cos\\theta\\), so \\(a=10(0.6-0.5\\times0.8)=2\\) m/s². The mass cancels."
+          },
+          {
+            "question": "Take g = 10 m/s². Masses of 3 kg and 2 kg are joined by a light string over a smooth light pulley. What is the tension in the string?",
+            "options": [
+              "6 N",
+              "20 N",
+              "25 N",
+              "24 N",
+              "30 N"
+            ],
+            "correct": 3,
+            "solution": "Heavier mass: \\(3g-T=3a\\); lighter: \\(T-2g=2a\\). Adding: \\(a=\\dfrac{(3-2)10}{5}=2\\) m/s². Then \\(T=2(10+2)=24\\) N."
           },
           {
             "question": "A train speeds up uniformly from rest to 12 m/s in 4.0 s, keeps 12 m/s for 6.0 s, then brakes uniformly to rest in 3.0 s. What is its average speed for the whole journey?",
@@ -35715,16 +35715,16 @@ const subjects = [
             "solution": "Area under the \\(v\\)-\\(t\\) graph: \\(\\tfrac{1}{2}(4)(12) + (6)(12) + \\tfrac{1}{2}(3)(12) = 24 + 72 + 18 = 114\\) m. Total time \\(13\\) s, so the average speed is \\(114/13 = 8.8\\) m/s."
           },
           {
-            "question": "A 100 W light bulb is left on for 2 hours. How much energy is consumed in kilowatt-hours (kWh)?",
+            "question": "A spring of constant 200 N/m is compressed by 0.3 m and then releases a 0.1 kg block on a smooth horizontal surface. What is the block’s speed as it leaves the spring?",
             "options": [
-              "0.2 kWh",
-              "0.5 kWh",
-              "1.0 kWh",
-              "2.0 kWh",
-              "5.0 kWh"
+              "90 m/s",
+              "9.487 m/s",
+              "13.42 m/s",
+              "24.49 m/s",
+              "600 m/s"
             ],
-            "correct": 0,
-            "solution": "Energy = Power × Time = 100 W × 2 h = 200 Wh = 0.2 kWh. 1 kWh = 1000 Wh."
+            "correct": 2,
+            "solution": "Stored energy \\(\\tfrac12kx^2=\\tfrac12(200)(0.3)^2=9\\) J becomes kinetic: \\(v=\\sqrt{2E/m}=\\sqrt{180}=13.42\\) m/s."
           },
           {
             "question": "Sound travels at 340 m/s in air. If a lightning flash is seen 3 seconds before thunder is heard, approximately how far away is the storm?",
@@ -35763,28 +35763,28 @@ const subjects = [
             "solution": "For the fundamental mode, wavelength = 2 × node spacing = 2 × 0.5 = 1 m. f = v/λ = 200/1 = 200 Hz."
           },
           {
-            "question": "What is the work done by a 50 N force moving an object 4 m in the direction of the force?",
+            "question": "Take g = 10 m/s². A motor lifts a 500 kg load through 5 m in 25 s and is 80% efficient. What electrical power does it draw?",
             "options": [
-              "100 J",
-              "150 J",
-              "200 J",
-              "250 J",
-              "400 J"
+              "500 W",
+              "1000 W",
+              "800 W",
+              "1600 W",
+              "1250 W"
             ],
-            "correct": 2,
-            "solution": "Work = Force × distance = 50 × 4 = 200 J."
+            "correct": 4,
+            "solution": "Useful power: \\(\\dfrac{mgh}{t}=\\dfrac{500\\times10\\times5}{25}=1000\\) W. Efficiency = useful/input, so input = 1000/0.8 = 1250 W."
           },
           {
-            "question": "A 3 kg object and a 5 kg object are connected by a light string over a frictionless pulley. What is the acceleration of the system? (g = 10 m/s²)",
+            "question": "Take g = 10 m/s². A 80 kg person stands on a scale in a lift that accelerates upwards at 2.5 m/s². What force does the scale show?",
             "options": [
-              "1.25 m/s²",
-              "2.0 m/s²",
-              "2.5 m/s²",
-              "5.0 m/s²",
-              "10 m/s²"
+              "800 N",
+              "1200 N",
+              "600 N",
+              "1000 N",
+              "200 N"
             ],
-            "correct": 2,
-            "solution": "Net force = (5-3)g = 2 × 10 = 20 N. Total mass = 8 kg. a = F/m = 20/8 = 2.5 m/s²."
+            "correct": 3,
+            "solution": "Newton II: \\(N-mg=ma\\Rightarrow N=m(g+a)\\) = \\(80(10+2.5)=1000\\) N."
           },
           {
             "question": "What is the escape velocity from Earth's surface? (g = 10 m/s², R = 6.4 × 10⁶ m)",
@@ -35799,16 +35799,16 @@ const subjects = [
             "solution": "vₑ = √(2gR) = √(2 × 10 × 6.4 × 10⁶) = √(128 × 10⁶) = 11,300 m/s ≈ 11.2 km/s."
           },
           {
-            "question": "A 2 kg block slides down a 30° incline with friction (μ = 0.2). What is the acceleration? (g = 10 m/s²)",
+            "question": "A horizontal force of 24 N pushes block A (3 kg), which is in contact with block B (1 kg), on a smooth table. What force does A exert on B?",
             "options": [
-              "2.3 m/s²",
-              "3.3 m/s²",
-              "4.3 m/s²",
-              "5.0 m/s²",
-              "7.0 m/s²"
+              "8 N",
+              "18 N",
+              "12 N",
+              "6 N",
+              "24 N"
             ],
-            "correct": 1,
-            "solution": "Component of weight down slope = mg sin θ = 20 × 0.5 = 10 N. Normal reaction = mg cos θ = 20 × 0.866 = 17.3 N. Friction = μN = 0.2 × 17.3 = 3.46 N. Net force = 10 - 3.46 = 6.54 N. a = F/m = 6.54/2 = 3.27 ≈ 3.3 m/s²."
+            "correct": 3,
+            "solution": "Both move with \\(a=\\dfrac{F}{m_1+m_2}=\\dfrac{24}{4}=6\\) m/s². The only horizontal force on B is the contact force: \\(m_2a=1\\times6=6\\) N."
           },
           {
             "question": "Car A moves at a constant 25 m/s. As it passes a point, car B starts from rest there and accelerates at 2.5 m/s<sup>2</sup>. How far from the point does B catch A?",
@@ -35835,16 +35835,16 @@ const subjects = [
             "solution": "\\(v = 6 - 2t\\), so it stops at \\(t = 3\\) s where \\(x = 13\\) m, having moved 9 m. Then it returns to \\(x = 4\\) m at \\(t = 6\\) s, another 9 m. The distance is 18 m (the displacement is 0)."
           },
           {
-            "question": "A 1000 kg car accelerates from 0 to 20 m/s in 5 seconds. What is the average power delivered by the engine?",
+            "question": "A 1200 kg car moving at 10 m/s is brought to rest over 25 m by a constant braking force. What is the size of that force?",
             "options": [
-              "20 kW",
-              "40 kW",
-              "80 kW",
-              "160 kW",
-              "200 kW"
+              "2400 N",
+              "60000 N",
+              "480 N",
+              "1200 N",
+              "4800 N"
             ],
-            "correct": 1,
-            "solution": "Work = ΔKE = ½mv² = 0.5 × 1000 × 400 = 200,000 J. Power = Work/time = 200,000/5 = 40,000 W = 40 kW."
+            "correct": 0,
+            "solution": "Work–energy: \\(Fd=\\tfrac12mv^2\\), so \\(F=\\dfrac{0.5\\times1200\\times100}{25}=2400\\) N."
           },
           {
             "question": "What is the intensity of a sound wave with pressure amplitude 0.01 Pa in air? (density = 1.2 kg/m³, speed = 340 m/s)",
@@ -35859,28 +35859,28 @@ const subjects = [
             "solution": "I = p₀²/(2ρv) = (0.01)²/(2 × 1.2 × 340) = 0.0001/(816) = 1.23 × 10⁻⁷ W/m² ≈ 0.12 μW/m². Wait, recalc: 0.01² = 0.0001. 2 × 1.2 × 340 = 816. 0.0001/816 = 1.23×10⁻⁷ = 0.123 μW/m². Closest to 0.12."
           },
           {
-            "question": "A 5 kg object moving at 4 m/s collides elastically with a 10 kg object at rest. What is the velocity of the 5 kg object after collision?",
+            "question": "A 0.4 kg ball hits a wall at 20 m/s and rebounds along the same line at 5 m/s. The contact lasts 0.02 s. What is the average force on the ball?",
             "options": [
-              "−1.33 m/s",
-              "0 m/s",
-              "1.33 m/s",
-              "2.67 m/s",
-              "4 m/s"
+              "250 N",
+              "400 N",
+              "300 N",
+              "500 N",
+              "10 N"
             ],
-            "correct": 0,
-            "solution": "Using conservation of momentum and KE for elastic collision: v₁ = (m₁-m₂)/(m₁+m₂) × u₁ = (5-10)/(15) × 4 = (-5/15) × 4 = -1.33 m/s (reverses direction)."
+            "correct": 3,
+            "solution": "The velocity reverses, so the change is \\(\\Delta v=20+5=25\\) m/s. Impulse \\(F\\Delta t=m\\Delta v\\) gives \\(F=\\dfrac{0.4\\times25}{0.02}=500\\) N."
           },
           {
-            "question": "What is the magnetic field strength at a distance of 0.1 m from a straight wire carrying 5 A current? (μ₀ = 4π × 10⁻⁷ Tm/A)",
+            "question": "A coil of 50 turns and area 0.02 m² has its plane perpendicular to a magnetic field that rises uniformly from 0.4 T to 1 T in 0.5 s. What is the magnitude of the induced emf?",
             "options": [
-              "1 × 10⁻⁵ T",
-              "2 × 10⁻⁵ T",
-              "4 × 10⁻⁵ T",
-              "8 × 10⁻⁵ T",
-              "1.6 × 10⁻⁴ T"
+              "0.024 V",
+              "1.2 V",
+              "2 V",
+              "0.6 V",
+              "2.4 V"
             ],
             "correct": 1,
-            "solution": "B = μ₀I/(2πr) = 4π×10⁻⁷ × 5/(2π × 0.1) = 10⁻⁶/0.1 = 10⁻⁵ T = 1 × 10⁻⁵ T."
+            "solution": "Faraday: \\(\\varepsilon=N\\dfrac{\\Delta\\Phi}{\\Delta t}=N\\dfrac{A\\,\\Delta B}{\\Delta t}=50\\times\\dfrac{0.02\\times0.6}{0.5}=1.2\\) V."
           },
           {
             "question": "A 0.5 kg ball moving at 10 m/s collides elastically with a stationary 1.5 kg ball. What is the speed of the 0.5 kg ball after collision?",
@@ -35895,28 +35895,28 @@ const subjects = [
             "solution": "Using conservation of momentum and kinetic energy for elastic collision: v1f = (m1-m2)/(m1+m2) × v1i = (0.5-1.5)/(0.5+1.5) × 10 = (-1/2) × 10 = -5 m/s. Speed = 5 m/s (direction reverses)."
           },
           {
-            "question": "A 100 W light bulb is left on for 24 hours. How much energy is consumed in kWh?",
+            "question": "Take g = 10 m/s². A motor lifts a 100 kg load through 20 m in 20 s and is 40% efficient. What electrical power does it draw?",
             "options": [
-              "0.24 kWh",
-              "1.2 kWh",
-              "2.4 kWh",
-              "4.8 kWh",
-              "24 kWh"
+              "2500 W",
+              "1000 W",
+              "400 W",
+              "500 W",
+              "800 W"
             ],
-            "correct": 2,
-            "solution": "Energy = Power × Time = 100 W × 24 h = 2400 Wh = 2.4 kWh."
+            "correct": 0,
+            "solution": "Useful power: \\(\\dfrac{mgh}{t}=\\dfrac{100\\times10\\times20}{20}=1000\\) W. Efficiency = useful/input, so input = 1000/0.4 = 2500 W."
           },
           {
-            "question": "A sound wave has frequency 440 Hz and wavelength 0.78 m. What is the speed of sound?",
+            "question": "The electric field at a distance r from a point charge has magnitude 9 N/C. What is the field magnitude at a distance of 3r?",
             "options": [
-              "243 m/s",
-              "343 m/s",
-              "443 m/s",
-              "543 m/s",
-              "643 m/s"
+              "81 N/C",
+              "1 N/C",
+              "27 N/C",
+              "0.3333 N/C",
+              "3 N/C"
             ],
             "correct": 1,
-            "solution": "v = fλ = 440 × 0.78 = 343.2 m/s ≈ 343 m/s."
+            "solution": "\\(E\\propto1/r^2\\), so the field is \\(9/9=1\\) N/C."
           },
           {
             "question": "What is the escape velocity from Earth? (M = 6 × 10²⁴ kg, R = 6.4 × 10⁶ m, G = 6.67 × 10⁻¹¹ Nm²/kg²)",
@@ -35943,28 +35943,28 @@ const subjects = [
             "solution": "During the reaction time: \\(30 \\times 0.70 = 21\\) m. Braking: \\(v^2 = u^2 + 2as\\) gives \\(s = 30^2/(2 \\times 6.0) = 75\\) m. Total \\(= 96\\) m."
           },
           {
-            "question": "A 2 kg block slides down a 30° incline with coefficient of kinetic friction 0.2. What is the acceleration? (g = 10 m/s²)",
+            "question": "Take g = 10 m/s². Masses of 6 kg and 4 kg are joined by a light string over a smooth light pulley. What is the tension in the string?",
             "options": [
-              "2.3 m/s²",
-              "3.3 m/s²",
-              "4.3 m/s²",
-              "5.0 m/s²",
-              "6.7 m/s²"
+              "60 N",
+              "48 N",
+              "50 N",
+              "40 N",
+              "12 N"
             ],
             "correct": 1,
-            "solution": "Net force = mg sin θ - μmg cos θ = 2×10×0.5 - 0.2×2×10×0.866 = 10 - 3.46 = 6.54 N. a = F/m = 6.54/2 = 3.27 ≈ 3.3 m/s²."
+            "solution": "Heavier mass: \\(6g-T=6a\\); lighter: \\(T-4g=4a\\). Adding: \\(a=\\dfrac{(6-4)10}{10}=2\\) m/s². Then \\(T=4(10+2)=48\\) N."
           },
           {
-            "question": "A 0.5 kg ball moving at 10 m/s collides elastically with a stationary 1 kg ball. What is the speed of the 1 kg ball after collision?",
+            "question": "A 0.5 kg ball hits a wall at 20 m/s and rebounds along the same line at 15 m/s. The contact lasts 0.1 s. What is the average force on the ball?",
             "options": [
-              "3.3 m/s",
-              "5.0 m/s",
-              "6.7 m/s",
-              "10 m/s",
-              "0 m/s"
+              "17.5 N",
+              "25 N",
+              "87.5 N",
+              "175 N",
+              "100 N"
             ],
-            "correct": 2,
-            "solution": "Using conservation of momentum and kinetic energy for elastic collision: v2f = 2m₁v1i/(m₁+m₂) = 2×0.5×10/1.5 = 10/1.5 = 6.67 m/s ≈ 6.7 m/s."
+            "correct": 3,
+            "solution": "The velocity reverses, so the change is \\(\\Delta v=20+15=35\\) m/s. Impulse \\(F\\Delta t=m\\Delta v\\) gives \\(F=\\dfrac{0.5\\times35}{0.1}=175\\) N."
           },
           {
             "question": "An electron enters a uniform electric field of \\(1.0 \\times 10^{3}\\) N/C at \\(3.0 \\times 10^{7}\\) m/s, perpendicular to the field. The field region is 5.0 cm long. What is the electron's sideways deflection when it leaves?",
@@ -35979,76 +35979,76 @@ const subjects = [
             "solution": "Time in the field: \\(t = 0.050/3.0 \\times 10^7 = 1.67 \\times 10^{-9}\\) s. Acceleration: \\(a = eE/m = 1.76 \\times 10^{14}\\) m/s<sup>2</sup>. Deflection \\(= \\tfrac{1}{2}at^2 = 2.44 × 10<sup>-4</sup>\\) m \\(= 0.24\\) mm."
           },
           {
-            "question": "A 500 W heater operates for 2 hours. How much energy is consumed in kWh?",
+            "question": "Take g = 10 m/s². A skier starts from rest and slides down a slope, dropping 5 m in height. Friction removes 36% of the lost potential energy. What is the speed at the bottom?",
             "options": [
-              "0.5 kWh",
-              "1 kWh",
-              "1.5 kWh",
-              "2 kWh",
-              "2.5 kWh"
+              "64 m/s",
+              "10 m/s",
+              "11.66 m/s",
+              "4 m/s",
+              "8 m/s"
+            ],
+            "correct": 4,
+            "solution": "Energy available as motion: \\(\\tfrac12mv^2=mgh(1-0.36)\\), so \\(v=\\sqrt{2(10)(5)(0.64)}=8\\) m/s."
+          },
+          {
+            "question": "A cyclist moving at 2 m/s accelerates uniformly at 2 m/s² for 2 s. What distance does she cover in that time?",
+            "options": [
+              "8 m",
+              "4 m",
+              "12 m",
+              "16 m",
+              "10 m"
+            ],
+            "correct": 0,
+            "solution": "\\(s=v_0t+\\tfrac12at^2=2(2)+\\tfrac12(2)(2)^2=8\\) m."
+          },
+          {
+            "question": "A cyclist moving at 7 m/s accelerates uniformly at 2 m/s² for 6 s. What distance does she cover in that time?",
+            "options": [
+              "42 m",
+              "84 m",
+              "36 m",
+              "156 m",
+              "78 m"
+            ],
+            "correct": 4,
+            "solution": "\\(s=v_0t+\\tfrac12at^2=7(6)+\\tfrac12(2)(6)^2=78\\) m."
+          },
+          {
+            "question": "A car moving at 8 m/s brakes with a constant deceleration of 4 m/s². How long does it take to stop?",
+            "options": [
+              "1 s",
+              "16 s",
+              "2 s",
+              "32 s",
+              "4 s"
+            ],
+            "correct": 2,
+            "solution": "\\(t=v/a=8/4=2\\) s."
+          },
+          {
+            "question": "A cyclist moving at 14 m/s accelerates uniformly at 3 m/s² for 8 s. What distance does she cover in that time?",
+            "options": [
+              "112 m",
+              "216 m",
+              "304 m",
+              "96 m",
+              "208 m"
+            ],
+            "correct": 4,
+            "solution": "\\(s=v_0t+\\tfrac12at^2=14(8)+\\tfrac12(3)(8)^2=208\\) m."
+          },
+          {
+            "question": "A driver covers the first half of a journey (by distance) at 30 km/h and the second half at 60 km/h. What is the average speed for the whole journey?",
+            "options": [
+              "45 km/h",
+              "40 km/h",
+              "50 km/h",
+              "42.43 km/h",
+              "42 km/h"
             ],
             "correct": 1,
-            "solution": "Energy = Power × Time = 500 W × 2 h = 1000 Wh = 1 kWh."
-          },
-          {
-            "question": "A vehicle accelerates uniformly from rest to a speed of 25 m/s over a distance of 125 m. What is the magnitude of its acceleration?",
-            "options": [
-              "2.5 m/s²",
-              "5.0 m/s²",
-              "1.25 m/s²",
-              "3.0 m/s²",
-              "0.5 m/s²"
-            ],
-            "correct": 0,
-            "solution": "Use the kinematic equation v² = u² + 2as. Here u = 0, v = 25 m/s, and s = 125 m. Substituting: (25)² = 0 + 2(a)(125) ⇒ 625 = 250a ⇒ a = 625 / 250 = 2.5 m/s²."
-          },
-          {
-            "question": "A stone is dropped from the top of a cliff and hits the ground after 4.0 s. Neglecting air resistance, what is the height of the cliff? (Use g = 10 m/s²)",
-            "options": [
-              "80 m",
-              "40 m",
-              "160 m",
-              "20 m",
-              "100 m"
-            ],
-            "correct": 0,
-            "solution": "For an object dropped from rest (u = 0): h = ut + (1/2)gt² = 0 + 0.5 × 10 m/s² × (4.0 s)² = 5 × 16 = 80 m."
-          },
-          {
-            "question": "A projectile is launched with an initial velocity of 50 m/s at an angle of 30° above the horizontal over level ground. What is the maximum height reached? (Use g = 10 m/s², sin 30° = 0.5)",
-            "options": [
-              "31.25 m",
-              "62.5 m",
-              "125 m",
-              "25 m",
-              "15.6 m"
-            ],
-            "correct": 0,
-            "solution": "Initial vertical velocity component: u_y = u sin θ = 50 × sin(30°) = 25 m/s. At maximum height, the vertical velocity is zero: v_y² = u_y² - 2g H_max ⇒ 0 = (25)² - 2(10)H_max ⇒ 20 H_max = 625 ⇒ H_max = 31.25 m."
-          },
-          {
-            "question": "In a velocity-time (v-t) graph, what physical quantity does the area under the curve represent?",
-            "options": [
-              "Displacement",
-              "Acceleration",
-              "Instantaneous speed",
-              "Total distance only",
-              "Rate of change of acceleration (jerk)"
-            ],
-            "correct": 0,
-            "solution": "By definition, velocity is v = ds/dt, which integrates to s = ∫ v dt. Therefore, the definite integral (geometric area under the curve between two time coordinates) on a velocity-time graph represents displacement."
-          },
-          {
-            "question": "A car travels the first half of a total distance at a constant speed of 40 km/h, and the second half of the distance at 60 km/h. What is the average speed of the car for the entire journey?",
-            "options": [
-              "48 km/h",
-              "50 km/h",
-              "52 km/h",
-              "45 km/h",
-              "55 km/h"
-            ],
-            "correct": 0,
-            "solution": "Let the total distance be 2d. Time for the first half: t₁ = d / 40. Time for the second half: t₂ = d / 60. Total time: t = t₁ + t₂ = d(1/40 + 1/60) = d(5/120) = d/24. Average speed = total distance / total time = 2d / (d/24) = 48 km/h (harmonic mean of 40 and 60)."
+            "solution": "For distance d each half, total time is \\(\\dfrac d{30}+\\dfrac d{60}\\), so the average speed is \\(\\dfrac{2v_1v_2}{v_1+v_2}=40\\) km/h. It is below the arithmetic mean 45 because more time is spent at the lower speed."
           },
           {
             "question": "A stone is dropped from the top of an 80 m tower. One second later a second stone is thrown straight down so that both hit the ground together (\\(g = 9.8\\) m/s<sup>2</sup>). What is the initial speed of the second stone?",
@@ -36063,52 +36063,52 @@ const subjects = [
             "solution": "First stone: \\(t = \\sqrt{160/9.8} = 4.04\\) s. The second falls for \\(3.04\\) s: \\(80 = 3.04u + 4.9(3.04)^2\\), so \\(u = (80 - 45.3)/3.04 = 11.4\\) m/s."
           },
           {
-            "question": "A ball is thrown horizontally at 15 m/s from the top of a building 20 m high. Neglecting air resistance, what horizontal distance from the base of the building does the ball travel before hitting the ground? (Use g = 10 m/s²)",
+            "question": "A car moving at 20 m/s brakes with a constant deceleration of 4 m/s². How long does it take to stop?",
             "options": [
-              "30 m",
-              "15 m",
-              "45 m",
-              "20 m",
-              "60 m"
+              "10 s",
+              "100 s",
+              "2.5 s",
+              "80 s",
+              "5 s"
             ],
-            "correct": 0,
-            "solution": "Vertical motion: h = (1/2)gt² ⇒ 20 = 0.5 × 10 × t² ⇒ 5t² = 20 ⇒ t² = 4 ⇒ t = 2.0 s. Horizontal motion has constant speed: x = u_x × t = 15 m/s × 2.0 s = 30 m."
+            "correct": 4,
+            "solution": "\\(t=v/a=20/4=5\\) s."
           },
           {
-            "question": "A runner on a circular track of radius 50 m completes one full lap in 40 s. What is the runner's average velocity for this lap?",
+            "question": "A car moving at 6 m/s brakes with a constant deceleration of 2 m/s². How far does it travel before stopping?",
             "options": [
-              "0 m/s",
-              "7.85 m/s",
-              "1.25 m/s",
-              "3.14 m/s",
-              "2.5 m/s"
+              "12 m",
+              "9 m",
+              "3 m",
+              "36 m",
+              "18 m"
             ],
-            "correct": 0,
-            "solution": "Average velocity is defined as net displacement divided by total elapsed time (v_avg = Δs / Δt). Since the runner completes a full lap and returns to the exact starting point, the net displacement is zero, giving an average velocity of 0 m/s (even though average speed is 2πr / 40 ≈ 7.85 m/s)."
+            "correct": 1,
+            "solution": "\\(v^2=2as\\Rightarrow s=\\dfrac{6^2}{2(2)}=9\\) m (not \\(v^2/a\\))."
           },
           {
-            "question": "If an object's position is given by s(t) = 3t² - 4t + 5 (in meters, with t in seconds), what is its instantaneous acceleration at t = 3 s?",
+            "question": "A car moving at 32 m/s brakes with a constant deceleration of 8 m/s². How far does it travel before stopping?",
             "options": [
-              "6 m/s²",
-              "14 m/s²",
-              "18 m/s²",
-              "12 m/s²",
-              "0 m/s²"
+              "4 m",
+              "96 m",
+              "128 m",
+              "4096 m",
+              "64 m"
             ],
-            "correct": 0,
-            "solution": "Velocity is the first derivative: v(t) = ds/dt = 6t - 4. Acceleration is the second derivative: a(t) = dv/dt = 6 m/s². The acceleration is constant and equals 6 m/s² at all times, including t = 3 s."
+            "correct": 4,
+            "solution": "\\(v^2=2as\\Rightarrow s=\\dfrac{32^2}{2(8)}=64\\) m (not \\(v^2/a\\))."
           },
           {
-            "question": "Two cars A and B travel in the same direction along a straight highway. Car A moves at 90 km/h and Car B moves at 110 km/h. What is the velocity of Car B relative to Car A?",
+            "question": "A car moving at 24 m/s brakes with a constant deceleration of 8 m/s². How long does it take to stop?",
             "options": [
-              "20 km/h forward",
-              "200 km/h forward",
-              "-20 km/h",
-              "100 km/h forward",
-              "0 km/h"
+              "192 s",
+              "1.5 s",
+              "6 s",
+              "72 s",
+              "3 s"
             ],
-            "correct": 0,
-            "solution": "Relative velocity v_{B/A} = v_B - v_A = 110 km/h - 90 km/h = +20 km/h (moving forward relative to Car A)."
+            "correct": 4,
+            "solution": "\\(t=v/a=24/8=3\\) s."
           },
           {
             "question": "A ball is kicked at 25 m/s at \\(40^{\\circ}\\) above the horizontal (\\(g = 9.8\\) m/s<sup>2</sup>). At what height is it when it passes a wall 30 m away, horizontally?",
@@ -36123,16 +36123,16 @@ const subjects = [
             "solution": "Time to reach 30 m: \\(t = 30/(25\\cos 40^{\\circ}) = 1.57\\) s. Height \\(y = (25\\sin 40^{\\circ})t - 4.9t^2 = 25.2 - 12 = 13.1\\) m."
           },
           {
-            "question": "At what launch angle θ above the horizontal is the range of a projectile maximum over flat terrain, neglecting air resistance?",
+            "question": "A cyclist moving at 14 m/s accelerates uniformly at 3 m/s² for 9 s. What distance does she cover in that time?",
             "options": [
-              "45°",
-              "30°",
-              "60°",
-              "90°",
-              "15°"
+              "247.5 m",
+              "256.5 m",
+              "369 m",
+              "495 m",
+              "121.5 m"
             ],
             "correct": 0,
-            "solution": "The horizontal range is R = (u² sin 2θ) / g. The maximum value of sin(2θ) is 1, which occurs when 2θ = 90°, meaning θ = 45°."
+            "solution": "\\(s=v_0t+\\tfrac12at^2=14(9)+\\tfrac12(3)(9)^2=247.5\\) m."
           },
           {
             "question": "A ball rolls off a table 1.25 m high at 2.0 m/s horizontally (\\(g = 9.8\\) m/s<sup>2</sup>). What is its speed just before it hits the floor?",
@@ -36159,16 +36159,16 @@ const subjects = [
             "solution": "Take up as positive: \\(-40 = 15t - 4.9t^2\\), so \\(4.9t^2 - 15t - 40 = 0\\). The positive root is \\(t = \\dfrac{15 + \\sqrt{225 + 784}}{9.8} = 4.77\\) s."
           },
           {
-            "question": "A boat crosses a 120 m wide river flowing with a current speed of 3 m/s. The boat heads perpendicular to the current at a speed of 4 m/s relative to the water. How long does the crossing take?",
+            "question": "A driver covers the first half of a journey (by distance) at 50 km/h and the second half at 75 km/h. What is the average speed for the whole journey?",
             "options": [
-              "30 s",
-              "40 s",
-              "24 s",
-              "50 s",
-              "20 s"
+              "62 km/h",
+              "65 km/h",
+              "62.5 km/h",
+              "61.24 km/h",
+              "60 km/h"
             ],
-            "correct": 0,
-            "solution": "The crossing time depends only on the component of velocity perpendicular to the river banks: t = width / v_perpendicular = 120 m / 4 m/s = 30 s. (The current drifts the boat downstream by 3 m/s × 30 s = 90 m, but does not affect the time to cross)."
+            "correct": 4,
+            "solution": "For distance d each half, total time is \\(\\dfrac d{50}+\\dfrac d{75}\\), so the average speed is \\(\\dfrac{2v_1v_2}{v_1+v_2}=60\\) km/h. It is below the arithmetic mean 62.5 because more time is spent at the lower speed."
           },
           {
             "question": "Which of the following is a fundamental SI base unit in kinematics?",
@@ -36183,52 +36183,52 @@ const subjects = [
             "solution": "The International System of Units (SI) defines seven fundamental base units: meter (length), kilogram (mass), second (time), ampere (electric current), kelvin (temperature), mole (amount of substance), and candela (luminous intensity). Second is the base unit for time."
           },
           {
-            "question": "An object undergoes uniformly accelerated motion. During the 1st second it travels 5 m starting from rest. How far does it travel during the 3rd second alone?",
+            "question": "A driver covers the first half of a journey (by distance) at 60 km/h and the second half at 90 km/h. What is the average speed for the whole journey?",
             "options": [
-              "25 m",
-              "15 m",
-              "20 m",
-              "45 m",
-              "10 m"
+              "72 km/h",
+              "73.48 km/h",
+              "75 km/h",
+              "78 km/h",
+              "74 km/h"
             ],
             "correct": 0,
-            "solution": "For motion from rest under constant acceleration, the distances covered in successive equal time intervals follow the ratio of odd integers: 1 : 3 : 5 : 7... (Galileo's odd-number rule). If the 1st second is 5 m, the 2nd second is 3 × 5 = 15 m, and the 3rd second is 5 × 5 = 25 m."
+            "solution": "For distance d each half, total time is \\(\\dfrac d{60}+\\dfrac d{90}\\), so the average speed is \\(\\dfrac{2v_1v_2}{v_1+v_2}=72\\) km/h. It is below the arithmetic mean 75 because more time is spent at the lower speed."
           },
           {
-            "question": "What is the slope of a position-time (s-t) graph at any given instant?",
+            "question": "A cyclist moving at 8 m/s accelerates uniformly at 6 m/s² for 2 s. What distance does she cover in that time?",
             "options": [
-              "Instantaneous velocity",
-              "Instantaneous acceleration",
-              "Total distance",
-              "Average speed",
-              "Rate of change of kinetic energy"
+              "56 m",
+              "12 m",
+              "40 m",
+              "30 m",
+              "28 m"
             ],
-            "correct": 0,
-            "solution": "The derivative of position with respect to time is ds/dt, which represents the instantaneous velocity. Thus, the tangent slope of an s-t graph equals the instantaneous velocity."
+            "correct": 4,
+            "solution": "\\(s=v_0t+\\tfrac12at^2=8(2)+\\tfrac12(6)(2)^2=28\\) m."
           },
           {
-            "question": "A ball thrown straight up reaches its apex (highest point). What are its velocity and acceleration at that exact instant?",
+            "question": "A car moving at 32 m/s brakes with a constant deceleration of 8 m/s². How long does it take to stop?",
             "options": [
-              "Velocity is 0 m/s; acceleration is 9.8 m/s² downward",
-              "Both velocity and acceleration are 0",
-              "Velocity is 0 m/s; acceleration is 9.8 m/s² upward",
-              "Velocity is 9.8 m/s; acceleration is 0",
-              "Velocity is at its maximum; acceleration is 0"
+              "8 s",
+              "256 s",
+              "128 s",
+              "4 s",
+              "2 s"
             ],
-            "correct": 0,
-            "solution": "At the apex of its trajectory, the vertical velocity momentarily ceases (v = 0). However, gravitational force acts continuously on the ball, so the acceleration remains g = 9.8 m/s² pointing downward at all times."
+            "correct": 3,
+            "solution": "\\(t=v/a=32/8=4\\) s."
           },
           {
-            "question": "A cyclist travels around a circular track of radius 20 m at a constant speed of 10 m/s. What is the magnitude of the cyclist's acceleration?",
+            "question": "A car moving at 10 m/s brakes with a constant deceleration of 2 m/s². How long does it take to stop?",
             "options": [
-              "5 m/s² directed toward the center",
-              "0 m/s² because the speed is constant",
-              "2 m/s² tangential",
-              "0.5 m/s² outward",
-              "10 m/s² toward the center"
+              "5 s",
+              "10 s",
+              "20 s",
+              "2.5 s",
+              "50 s"
             ],
             "correct": 0,
-            "solution": "Even at constant speed, the direction of velocity changes continuously, producing a centripetal acceleration directed toward the center of the circle: a_c = v² / r = (10)² / 20 = 100 / 20 = 5 m/s²."
+            "solution": "\\(t=v/a=10/2=5\\) s."
           },
           {
             "question": "A vector is decomposed along two perpendicular directions, x and y. Its components along x and y are 3 and 4 respectively. What is the magnitude of the vector?",
@@ -36243,28 +36243,28 @@ const subjects = [
             "solution": "By the Pythagorean theorem, the magnitude of a vector with perpendicular components is |v| = √(vx² + vy²) = √(3² + 4²) = √(9 + 16) = √25 = 5."
           },
           {
-            "question": "The trajectory of a material point is defined as:",
+            "question": "A cyclist moving at 15 m/s accelerates uniformly at 5 m/s² for 4 s. What distance does she cover in that time?",
             "options": [
-              "The law that provides the position of the material point as a function of time",
-              "The locus of points occupied by the material point during its motion",
-              "The segment joining the initial and final positions of the material point",
-              "The curve describing the velocity over time",
-              "The slope of the time graph"
+              "104 m",
+              "100 m",
+              "140 m",
+              "60 m",
+              "40 m"
             ],
             "correct": 1,
-            "solution": "In kinematics, the trajectory is the geometric curve consisting of the continuous set (locus) of all positions occupied by the particle in space over time."
+            "solution": "\\(s=v_0t+\\tfrac12at^2=15(4)+\\tfrac12(5)(4)^2=100\\) m."
           },
           {
-            "question": "What is the average acceleration of a Ferrari SF90 that accelerates from 0 to 100 km/h in 2.5 seconds?",
+            "question": "A cyclist moving at 10 m/s accelerates uniformly at 4 m/s² for 6 s. What distance does she cover in that time?",
             "options": [
-              "Approximately 40 m/s²",
-              "Approximately 11 m/s²",
-              "Approximately 16 m/s²",
-              "Approximately 9.8 m/s²",
-              "Approximately -40 m/s²"
+              "132 m",
+              "72 m",
+              "138 m",
+              "264 m",
+              "204 m"
             ],
-            "correct": 1,
-            "solution": "Convert 100 km/h to m/s:\n100 km/h = 100 / 3.6 ≈ 27.78 m/s.\nAverage acceleration a = Δv / Δt = (27.78 - 0) / 2.5 ≈ 11.11 m/s² ≈ 11 m/s²."
+            "correct": 0,
+            "solution": "\\(s=v_0t+\\tfrac12at^2=10(6)+\\tfrac12(4)(6)^2=132\\) m."
           },
           {
             "question": "A point moves in the xy-plane, and its projections on the Cartesian axes follow the laws: x = 3t², y = 4t² (with t ≥ 0). Which of the following statements about the motion of the point is true?",
@@ -36297,40 +36297,40 @@ const subjects = [
         "name": "Mechanics: Dynamics & Forces",
         "questions": [
           {
-            "question": "A 500 g mass is suspended from a spring with a spring constant of 200 N/m. By how much does the spring extend at equilibrium? (g = 10 m/s²)",
+            "question": "Take g = 10 m/s². A 60 kg person stands on a scale in a lift that accelerates downwards at 4 m/s². What force does the scale show?",
             "options": [
-              "0.025 m",
-              "0.050 m",
-              "0.10 m",
-              "0.25 m",
-              "0.50 m"
+              "1080 N",
+              "600 N",
+              "360 N",
+              "840 N",
+              "240 N"
             ],
-            "correct": 0,
-            "solution": "Weight = mg = 0.5 × 10 = 5 N. Using Hooke's Law: F = kx → x = F/k = 5/200 = 0.025 m (2.5 cm)."
+            "correct": 2,
+            "solution": "Newton II: \\(mg-N=ma\\Rightarrow N=m(g-a)\\) = \\(60(10-4)=360\\) N."
           },
           {
-            "question": "A nucleus of uranium-238 (²³⁸U) undergoes alpha decay. What is the resulting daughter nucleus?",
+            "question": "Take g = 10 m/s². Masses of 8 kg and 2 kg are joined by a light string over a smooth light pulley. What is the tension in the string?",
             "options": [
-              "²³⁴Th",
-              "²³⁴Pa",
-              "²³⁶U",
-              "²³⁴U",
-              "²³⁸Np"
+              "32 N",
+              "50 N",
+              "48 N",
+              "80 N",
+              "20 N"
             ],
             "correct": 0,
-            "solution": "Alpha decay emits ²He (mass number 4, atomic number 2). ²³⁸U: mass 238 → 238−4 = 234; atomic number 92 → 92−2 = 90. Element 90 is Thorium (Th). Product: ²³⁴₉₀Th."
+            "solution": "Heavier mass: \\(8g-T=8a\\); lighter: \\(T-2g=2a\\). Adding: \\(a=\\dfrac{(8-2)10}{10}=6\\) m/s². Then \\(T=2(10+6)=32\\) N."
           },
           {
-            "question": "Two point charges +2 μC and −4 μC are separated by 0.1 m. What is the force between them? (k = 9 × 10⁹ Nm²/C²)",
+            "question": "Take g = 10 m/s². A 6 kg block on a horizontal floor is pulled by a horizontal force of 52 N. The coefficient of kinetic friction is 0.2. What is the acceleration?",
             "options": [
-              "0.36 N (attractive)",
-              "0.72 N (attractive)",
-              "1.44 N (attractive)",
-              "7.2 N (attractive)",
-              "14.4 N (attractive)"
+              "13.33 m/s²",
+              "40 m/s²",
+              "6.667 m/s²",
+              "10.67 m/s²",
+              "8.667 m/s²"
             ],
-            "correct": 1,
-            "solution": "F = k|q₁q₂|/r² = 9×10⁹ × (2×10⁻⁶)(4×10⁻⁶)/(0.1)² = 9×10⁹ × 8×10⁻¹²/0.01 = 72×10⁻³/0.01 = 7.2 N. Wait, recalc: 9×10⁹ × 8×10⁻¹² = 72×10⁻³. 72×10⁻³/0.01 = 7.2 N. Actually: (2×10⁻⁶)(4×10⁻⁶) = 8×10⁻¹². 9×10⁹ × 8×10⁻¹² = 72×10⁻³ = 0.072. 0.072/0.01 = 7.2 N. Force is attractive (opposite charges)."
+            "correct": 2,
+            "solution": "\\(a=\\dfrac{F-\\mu mg}{m}=\\dfrac{52-0.2\\times6\\times10}{6}=6.667\\) m/s²."
           },
           {
             "question": "A 2.0 kg trolley moving at 6.0 m/s collides <b>elastically</b> and head-on with a stationary 4.0 kg trolley. What is the velocity of the 2.0 kg trolley after the collision?",
@@ -36357,28 +36357,28 @@ const subjects = [
             "solution": "I = (1/12)mL² = (1/12) × 2 × 1 = 2/12 = 0.167 ≈ 0.17 kg m²."
           },
           {
-            "question": "A 5 kg block on a horizontal surface (μ=0.4) is pulled by a 30 N horizontal force. What is the acceleration? (g=10)",
+            "question": "Take g = 10 m/s². A 9 kg block slides down a rough incline of angle θ where sin θ = 0.6 and cos θ = 0.8. The coefficient of kinetic friction is 0.5. What is the acceleration of the block?",
             "options": [
-              "0",
-              "1 m/s²",
+              "5 m/s²",
+              "10 m/s²",
+              "6 m/s²",
               "2 m/s²",
-              "3 m/s²",
               "4 m/s²"
             ],
-            "correct": 2,
-            "solution": "Friction=μmg=0.4×5×10=20 N. Net=30−20=10 N. a=10/5=2 m/s²."
+            "correct": 3,
+            "solution": "Along the slope: \\(ma=mg\\sin\\theta-\\mu mg\\cos\\theta\\), so \\(a=10(0.6-0.5\\times0.8)=2\\) m/s². The mass cancels."
           },
           {
-            "question": "A 10 kg mass is suspended by two strings at 30° and 60° to the horizontal. What is the ratio of tensions?",
+            "question": "Take g = 10 m/s². A 9 kg block slides down a rough incline of angle θ where sin θ = 0.6 and cos θ = 0.8. The coefficient of kinetic friction is 0.25. What is the acceleration of the block?",
             "options": [
-              "1:√3",
-              "√3:1",
-              "1:1",
-              "1:2",
-              "2:1"
+              "6.5 m/s²",
+              "8 m/s²",
+              "4 m/s²",
+              "2 m/s²",
+              "6 m/s²"
             ],
-            "correct": 0,
-            "solution": "Resolving horizontally: T₁cos30=T₂cos60 → T₁/T₂=cos60/cos30=0.5/(√3/2)=1/√3."
+            "correct": 2,
+            "solution": "Along the slope: \\(ma=mg\\sin\\theta-\\mu mg\\cos\\theta\\), so \\(a=10(0.6-0.25\\times0.8)=4\\) m/s². The mass cancels."
           },
           {
             "question": "A 70 kg person stands on a scale in a lift. The lift accelerates upward from rest and the scale reads 910 N (\\(g = 9.8\\) m/s<sup>2</sup>). What is the speed of the lift after 4.0 s of this acceleration?",
@@ -36417,16 +36417,16 @@ const subjects = [
             "solution": "Constant speed means zero net force, so the spring force equals friction: \\(kx = \\mu mg = 0.25 \\times 2.0 \\times 9.8 = 4.9\\) N. \\(x = 4.9/200 = 0.0245\\) m \\(= 2.5\\) cm."
           },
           {
-            "question": "Two masses 4 kg and 6 kg on a frictionless table are connected by a string. A 20 N force pulls the 4 kg mass. What is the tension in the string?",
+            "question": "Take g = 10 m/s². Masses of 9 kg and 1 kg are joined by a light string over a smooth light pulley. What is the tension in the string?",
             "options": [
-              "8 N",
-              "10 N",
-              "12 N",
-              "15 N",
-              "20 N"
+              "18 N",
+              "90 N",
+              "72 N",
+              "50 N",
+              "10 N"
             ],
-            "correct": 2,
-            "solution": "a=F/(m₁+m₂)=20/10=2 m/s². T=m₂a=6×2=12 N."
+            "correct": 0,
+            "solution": "Heavier mass: \\(9g-T=9a\\); lighter: \\(T-1g=1a\\). Adding: \\(a=\\dfrac{(9-1)10}{10}=8\\) m/s². Then \\(T=1(10+8)=18\\) N."
           },
           {
             "question": "A 5.0 kg block slides from rest down a 30° slope. The coefficient of kinetic friction is 0.30 (\\(g = 9.8\\) m/s<sup>2</sup>). What is its speed after it has slid 2.0 m?",
@@ -36441,28 +36441,28 @@ const subjects = [
             "solution": "Along the slope: \\(a = g(\\sin 30^{\\circ} - \\mu\\cos 30^{\\circ}) = 9.8(0.500 - 0.260) = 2.35\\) m/s<sup>2</sup>. Then \\(v = \\sqrt{2as} = \\sqrt{2(2.35)(2.0)} = 3.07\\) m/s."
           },
           {
-            "question": "A 1000 kg car moving at 20 m/s brakes to rest in 40 m. What is the average braking force?",
+            "question": "Take g = 10 m/s². A 7 kg block slides down a rough incline of angle θ where sin θ = 0.6 and cos θ = 0.8. The coefficient of kinetic friction is 0.25. What is the acceleration of the block?",
             "options": [
-              "2000 N",
-              "3000 N",
-              "4000 N",
-              "5000 N",
-              "6000 N"
+              "6.5 m/s²",
+              "8 m/s²",
+              "4 m/s²",
+              "6 m/s²",
+              "2 m/s²"
             ],
-            "correct": 3,
-            "solution": "v²=u²+2as → 0=400+80a → a=−5 m/s². F=ma=1000×5=5000 N."
+            "correct": 2,
+            "solution": "Along the slope: \\(ma=mg\\sin\\theta-\\mu mg\\cos\\theta\\), so \\(a=10(0.6-0.25\\times0.8)=4\\) m/s². The mass cancels."
           },
           {
-            "question": "An astronaut has weight 800 N on Earth. What is their mass on the Moon where g=1.6 m/s²?",
+            "question": "Take g = 10 m/s². A 6 kg block slides down a rough incline of angle θ where sin θ = 0.6 and cos θ = 0.8. The coefficient of kinetic friction is 0.25. What is the acceleration of the block?",
             "options": [
-              "50 kg",
-              "80 kg",
-              "100 kg",
-              "125 kg",
-              "500 kg"
+              "4 m/s²",
+              "6 m/s²",
+              "2 m/s²",
+              "8 m/s²",
+              "6.5 m/s²"
             ],
-            "correct": 1,
-            "solution": "Mass=Weight/g=800/10=80 kg. Mass is constant everywhere."
+            "correct": 0,
+            "solution": "Along the slope: \\(ma=mg\\sin\\theta-\\mu mg\\cos\\theta\\), so \\(a=10(0.6-0.25\\times0.8)=4\\) m/s². The mass cancels."
           },
           {
             "question": "A 3.0 kg block is tied by a light string to a 5.0 kg block on a frictionless table. A horizontal force of 24 N pulls the 5.0 kg block, with the 3.0 kg block behind it. What is the tension in the string?",
@@ -36501,28 +36501,28 @@ const subjects = [
             "solution": "Whole system: \\(a = (2500 - 300 - 200)/1600 = 1.25\\) m/s<sup>2</sup>. For the trailer: \\(T - 200 = 400 \\times 1.25\\), so \\(T = 700\\) N."
           },
           {
-            "question": "A pendulum bob of mass 0.2 kg at the end of a 1 m string is released from horizontal. What is the tension at the lowest point? (g=10)",
+            "question": "Take g = 10 m/s². Masses of 7 kg and 3 kg are joined by a light string over a smooth light pulley. What is the tension in the string?",
             "options": [
-              "2 N",
-              "4 N",
-              "6 N",
-              "8 N",
-              "10 N"
+              "42 N",
+              "28 N",
+              "50 N",
+              "30 N",
+              "70 N"
             ],
-            "correct": 2,
-            "solution": "At bottom: T=mg+mv²/r. v²=2gh=2×10×1=20. T=0.2×10+0.2×20/1=2+4=6 N."
+            "correct": 0,
+            "solution": "Heavier mass: \\(7g-T=7a\\); lighter: \\(T-3g=3a\\). Adding: \\(a=\\dfrac{(7-3)10}{10}=4\\) m/s². Then \\(T=3(10+4)=42\\) N."
           },
           {
-            "question": "A rocket expels gas at 1000 m/s relative to itself. If it ejects 1 kg of gas per second, what thrust is produced?",
+            "question": "Take g = 10 m/s². A 2 kg block slides down a rough incline of angle θ where sin θ = 0.6 and cos θ = 0.8. The coefficient of kinetic friction is 0.5. What is the acceleration of the block?",
             "options": [
-              "500 N",
-              "1000 N",
-              "1500 N",
-              "2000 N",
-              "2500 N"
+              "2 m/s²",
+              "10 m/s²",
+              "4 m/s²",
+              "6 m/s²",
+              "5 m/s²"
             ],
-            "correct": 1,
-            "solution": "Thrust=(dm/dt)×v_e=1×1000=1000 N."
+            "correct": 0,
+            "solution": "Along the slope: \\(ma=mg\\sin\\theta-\\mu mg\\cos\\theta\\), so \\(a=10(0.6-0.5\\times0.8)=2\\) m/s². The mass cancels."
           },
           {
             "question": "A planet has 8 times the mass of the Earth and twice its radius. What is the acceleration of free fall at its surface? (\\(g_{\\text{Earth}} = 9.8\\) m/s<sup>2</sup>)",
@@ -36537,160 +36537,160 @@ const subjects = [
             "solution": "\\(g = GM/R^2\\), so \\(g_2/g_1 = 8/2^2 = 2\\). Then \\(g_2 = 2 \\times 9.8 = 19.6\\) m/s<sup>2</sup>."
           },
           {
-            "question": "A 2 kg block is pushed up a 30° frictionless incline by a 20 N horizontal force. What is the acceleration? (g=10)",
+            "question": "Take g = 10 m/s². A 80 kg person stands on a scale in a lift that accelerates upwards at 2 m/s². What force does the scale show?",
             "options": [
-              "2.0",
-              "3.3",
-              "4.0",
-              "5.0",
-              "6.7"
+              "800 N",
+              "640 N",
+              "1120 N",
+              "960 N",
+              "160 N"
             ],
-            "correct": 1,
-            "solution": "Resolve horizontal force: F_parallel=20cos30=17.32 N. F_perp=20sin30=10 N. Normal=mgcos30+F_perp=17.32+10=27.32 N. Net along plane=17.32−mgsin30=17.32−10=7.32 N. a=7.32/2=3.66≈3.3 m/s²."
+            "correct": 3,
+            "solution": "Newton II: \\(N-mg=ma\\Rightarrow N=m(g+a)\\) = \\(80(10+2)=960\\) N."
           },
           {
-            "question": "A satellite orbits Earth at height R above surface. What is its orbital speed? (g at surface=10, R=6400 km)",
+            "question": "Take g = 10 m/s². A 10 kg block slides down a rough incline of angle θ where sin θ = 0.6 and cos θ = 0.8. The coefficient of kinetic friction is 0.25. What is the acceleration of the block?",
             "options": [
-              "4 km/s",
-              "5.6 km/s",
-              "7.9 km/s",
-              "11.2 km/s",
-              "16 km/s"
+              "8 m/s²",
+              "6 m/s²",
+              "6.5 m/s²",
+              "2 m/s²",
+              "4 m/s²"
             ],
-            "correct": 1,
-            "solution": "v=√(GM/r)=√(gR²/2R)=√(gR/2)=√(10×6.4×10⁶/2)=√(32×10⁶)=5657 m/s≈5.6 km/s."
+            "correct": 4,
+            "solution": "Along the slope: \\(ma=mg\\sin\\theta-\\mu mg\\cos\\theta\\), so \\(a=10(0.6-0.25\\times0.8)=4\\) m/s². The mass cancels."
           },
           {
-            "question": "A 10 kg medical supply box rests on a horizontal floor. The coefficient of static friction is μ_s = 0.40. What is the minimum horizontal force required to start moving the box? (Use g = 10 m/s²)",
+            "question": "Take g = 10 m/s². A 9 kg block on a horizontal floor is pulled by a horizontal force of 29 N. The coefficient of kinetic friction is 0.1. What is the acceleration?",
             "options": [
-              "40 N",
-              "100 N",
-              "25 N",
-              "4.0 N",
-              "50 N"
+              "4.222 m/s²",
+              "4.444 m/s²",
+              "20 m/s²",
+              "2.222 m/s²",
+              "3.222 m/s²"
+            ],
+            "correct": 3,
+            "solution": "\\(a=\\dfrac{F-\\mu mg}{m}=\\dfrac{29-0.1\\times9\\times10}{9}=2.222\\) m/s²."
+          },
+          {
+            "question": "A horizontal force of 12 N pushes block A (5 kg), which is in contact with block B (6 kg), on a smooth table. What force does A exert on B?",
+            "options": [
+              "6.545 N",
+              "14.4 N",
+              "6 N",
+              "12 N",
+              "5.455 N"
             ],
             "correct": 0,
-            "solution": "Normal force N = mg = 10 kg × 10 m/s² = 100 N. The maximum static friction force is f_s(max) = μ_s × N = 0.40 × 100 N = 40 N. To initiate motion, the applied horizontal force must exceed 40 N."
+            "solution": "Both move with \\(a=\\dfrac{F}{m_1+m_2}=\\dfrac{12}{11}=1.091\\) m/s². The only horizontal force on B is the contact force: \\(m_2a=6\\times1.091=6.545\\) N."
           },
           {
-            "question": "A block of mass 5.0 kg slides down a frictionless incline tilted at 30° to the horizontal. What is the acceleration of the block? (Use g = 10 m/s², sin 30° = 0.5)",
+            "question": "Take g = 10 m/s². A 70 kg person stands on a scale in a lift that accelerates downwards at 1 m/s². What force does the scale show?",
             "options": [
-              "5.0 m/s²",
-              "10.0 m/s²",
-              "2.5 m/s²",
-              "8.66 m/s²",
-              "1.0 m/s²"
+              "840 N",
+              "700 N",
+              "70 N",
+              "630 N",
+              "770 N"
+            ],
+            "correct": 3,
+            "solution": "Newton II: \\(mg-N=ma\\Rightarrow N=m(g-a)\\) = \\(70(10-1)=630\\) N."
+          },
+          {
+            "question": "Take g = 10 m/s². A 5 kg block on a horizontal floor is pulled by a horizontal force of 45 N. The coefficient of kinetic friction is 0.1. What is the acceleration?",
+            "options": [
+              "40 m/s²",
+              "10 m/s²",
+              "9 m/s²",
+              "16 m/s²",
+              "8 m/s²"
+            ],
+            "correct": 4,
+            "solution": "\\(a=\\dfrac{F-\\mu mg}{m}=\\dfrac{45-0.1\\times5\\times10}{5}=8\\) m/s²."
+          },
+          {
+            "question": "A horizontal force of 36 N pushes block A (4 kg), which is in contact with block B (1 kg), on a smooth table. What force does A exert on B?",
+            "options": [
+              "18 N",
+              "28.8 N",
+              "36 N",
+              "9 N",
+              "7.2 N"
+            ],
+            "correct": 4,
+            "solution": "Both move with \\(a=\\dfrac{F}{m_1+m_2}=\\dfrac{36}{5}=7.2\\) m/s². The only horizontal force on B is the contact force: \\(m_2a=1\\times7.2=7.2\\) N."
+          },
+          {
+            "question": "Take g = 10 m/s². A 70 kg person stands on a scale in a lift that accelerates upwards at 1 m/s². What force does the scale show?",
+            "options": [
+              "840 N",
+              "770 N",
+              "630 N",
+              "700 N",
+              "70 N"
+            ],
+            "correct": 1,
+            "solution": "Newton II: \\(N-mg=ma\\Rightarrow N=m(g+a)\\) = \\(70(10+1)=770\\) N."
+          },
+          {
+            "question": "Take g = 10 m/s². Masses of 9 kg and 6 kg are joined by a light string over a smooth light pulley. What is the tension in the string?",
+            "options": [
+              "18 N",
+              "75 N",
+              "60 N",
+              "72 N",
+              "90 N"
+            ],
+            "correct": 3,
+            "solution": "Heavier mass: \\(9g-T=9a\\); lighter: \\(T-6g=6a\\). Adding: \\(a=\\dfrac{(9-6)10}{15}=2\\) m/s². Then \\(T=6(10+2)=72\\) N."
+          },
+          {
+            "question": "A horizontal force of 12 N pushes block A (3 kg), which is in contact with block B (2 kg), on a smooth table. What force does A exert on B?",
+            "options": [
+              "4.8 N",
+              "6 N",
+              "7.2 N",
+              "8 N",
+              "12 N"
             ],
             "correct": 0,
-            "solution": "The component of gravitational force parallel to the incline is F_parallel = mg sin θ. By Newton's second law: ma = mg sin θ ⇒ a = g sin θ = 10 m/s² × 0.5 = 5.0 m/s²."
+            "solution": "Both move with \\(a=\\dfrac{F}{m_1+m_2}=\\dfrac{12}{5}=2.4\\) m/s². The only horizontal force on B is the contact force: \\(m_2a=2\\times2.4=4.8\\) N."
           },
           {
-            "question": "A 60 kg person stands on a scale inside an elevator that accelerates upwards at 2.0 m/s². What reading does the scale show? (Use g = 10 m/s²)",
+            "question": "A horizontal force of 12 N pushes block A (7 kg), which is in contact with block B (3 kg), on a smooth table. What force does A exert on B?",
             "options": [
-              "720 N",
-              "600 N",
-              "480 N",
+              "12 N",
+              "8.4 N",
+              "6 N",
+              "5.143 N",
+              "3.6 N"
+            ],
+            "correct": 4,
+            "solution": "Both move with \\(a=\\dfrac{F}{m_1+m_2}=\\dfrac{12}{10}=1.2\\) m/s². The only horizontal force on B is the contact force: \\(m_2a=3\\times1.2=3.6\\) N."
+          },
+          {
+            "question": "Take g = 10 m/s². A 60 kg person stands on a scale in a lift that accelerates upwards at 2 m/s². What force does the scale show?",
+            "options": [
               "120 N",
-              "800 N"
+              "840 N",
+              "480 N",
+              "600 N",
+              "720 N"
             ],
-            "correct": 0,
-            "solution": "Newton's second law for the person: N - mg = ma ⇒ N = m(g + a) = 60 kg × (10 + 2.0) m/s² = 60 × 12 = 720 N."
+            "correct": 4,
+            "solution": "Newton II: \\(N-mg=ma\\Rightarrow N=m(g+a)\\) = \\(60(10+2)=720\\) N."
           },
           {
-            "question": "According to Newton's Third Law, if object A exerts a force F on object B, what force does object B exert on object A?",
+            "question": "Take g = 10 m/s². A 4 kg block on a horizontal floor is pulled by a horizontal force of 24 N. The coefficient of kinetic friction is 0.1. What is the acceleration?",
             "options": [
-              "An equal force -F in the opposite direction acting on object A",
-              "A force depending on the mass of object B",
-              "Zero force if object A is accelerating",
-              "A smaller force if object B has less mass",
-              "A force perpendicular to F"
+              "10 m/s²",
+              "5 m/s²",
+              "7 m/s²",
+              "6 m/s²",
+              "20 m/s²"
             ],
-            "correct": 0,
-            "solution": "Newton's Third Law states that for every action force, there is an equal and opposite reaction force (F_AB = -F_BA). The forces are identical in magnitude, opposite in direction, and act on two different bodies simultaneously."
-          },
-          {
-            "question": "Two masses of 3.0 kg and 2.0 kg are connected by a light string over a frictionless pulley (Atwood machine). What is the acceleration of the system? (Use g = 10 m/s²)",
-            "options": [
-              "2.0 m/s²",
-              "5.0 m/s²",
-              "1.0 m/s²",
-              "4.0 m/s²",
-              "0.5 m/s²"
-            ],
-            "correct": 0,
-            "solution": "For an Atwood machine, the acceleration is a = ((m₁ - m₂) / (m₁ + m₂)) × g. Here: a = ((3.0 - 2.0) / (3.0 + 2.0)) × 10 = (1.0 / 5.0) × 10 = 2.0 m/s²."
-          },
-          {
-            "question": "A spring with force constant k = 200 N/m is compressed by 0.10 m. What is the magnitude of the restoring force exerted by the spring according to Hooke's Law?",
-            "options": [
-              "20 N",
-              "2.0 N",
-              "200 N",
-              "1.0 N",
-              "10 N"
-            ],
-            "correct": 0,
-            "solution": "Hooke's Law gives the restoring force magnitude as F = kx. Here, F = 200 N/m × 0.10 m = 20 N."
-          },
-          {
-            "question": "A net horizontal force of 15 N is applied to an object of mass 3.0 kg. What is the resulting acceleration of the object?",
-            "options": [
-              "5.0 m/s²",
-              "45 m/s²",
-              "0.20 m/s²",
-              "15 m/s²",
-              "3.0 m/s²"
-            ],
-            "correct": 0,
-            "solution": "From Newton's second law, F_net = ma ⇒ a = F_net / m = 15 N / 3.0 kg = 5.0 m/s²."
-          },
-          {
-            "question": "An object of mass m moves across a horizontal surface with a constant velocity. What is the net force acting on the object?",
-            "options": [
-              "0 N",
-              "mg",
-              "μ_k mg",
-              "ma",
-              "Indeterminate without the velocity magnitude"
-            ],
-            "correct": 0,
-            "solution": "By Newton's First Law, if an object moves with constant velocity, its acceleration is zero (a = 0). Therefore, the net force acting on the object is F_net = ma = 0 N."
-          },
-          {
-            "question": "A 2.0 kg block is pulled horizontally across a table by a force of 10 N. The kinetic friction force between the block and the table is 4.0 N. What is the acceleration of the block?",
-            "options": [
-              "3.0 m/s²",
-              "5.0 m/s²",
-              "7.0 m/s²",
-              "2.0 m/s²",
-              "1.0 m/s²"
-            ],
-            "correct": 0,
-            "solution": "The net horizontal force is F_net = F_applied - f_k = 10 N - 4.0 N = 6.0 N. Acceleration a = F_net / m = 6.0 N / 2.0 kg = 3.0 m/s²."
-          },
-          {
-            "question": "What is the tension in a light rope supporting a stationary 50 kg mass suspended vertically in equilibrium? (Use g = 9.8 m/s²)",
-            "options": [
-              "490 N",
-              "50 N",
-              "980 N",
-              "0 N",
-              "245 N"
-            ],
-            "correct": 0,
-            "solution": "Since the mass is stationary (a = 0), the upward tension must balance the downward gravitational force: T = mg = 50 kg × 9.8 m/s² = 490 N."
-          },
-          {
-            "question": "A car of mass 1000 kg rounds a flat, unbanked horizontal curve of radius 50 m at 10 m/s. What minimum coefficient of static friction μ_s is required to prevent skidding? (Use g = 10 m/s²)",
-            "options": [
-              "0.20",
-              "0.50",
-              "0.10",
-              "0.40",
-              "0.25"
-            ],
-            "correct": 0,
-            "solution": "Centripetal force is provided by static friction: f_s = m v² / r. Maximum static friction is μ_s mg. To avoid skidding: m v² / r ≤ μ_s mg ⇒ μ_s ≥ v² / (rg) = (10)² / (50 × 10) = 100 / 500 = 0.20."
+            "correct": 1,
+            "solution": "\\(a=\\dfrac{F-\\mu mg}{m}=\\dfrac{24-0.1\\times4\\times10}{4}=5\\) m/s²."
           },
           {
             "question": "Why is static friction generally greater than kinetic friction between the same two surfaces?",
@@ -36717,40 +36717,40 @@ const subjects = [
             "solution": "The driving force is the weight of the hanging mass: F_drive = m_hang × g = 1.0 kg × 10 m/s² = 10 N. The total mass being accelerated is m_total = 4.0 kg + 1.0 kg = 5.0 kg. Acceleration a = F_drive / m_total = 10 N / 5.0 kg = 2.0 m/s²."
           },
           {
-            "question": "An astronaut's mass is 70 kg on Earth. What is the astronaut's mass and weight on the Moon, where gravity is 1/6 of Earth's gravity? (Use g_Earth = 9.8 m/s²)",
+            "question": "Take g = 10 m/s². A 4 kg block on a horizontal floor is pulled by a horizontal force of 26 N. The coefficient of kinetic friction is 0.4. What is the acceleration?",
             "options": [
-              "Mass = 70 kg; Weight ≈ 114 N",
-              "Mass ≈ 11.7 kg; Weight ≈ 114 N",
-              "Mass = 70 kg; Weight = 686 N",
-              "Mass ≈ 11.7 kg; Weight = 686 N",
-              "Mass = 0 kg; Weight = 0 N"
+              "2.5 m/s²",
+              "6.5 m/s²",
+              "10 m/s²",
+              "10.5 m/s²",
+              "5 m/s²"
             ],
             "correct": 0,
-            "solution": "Mass is an intrinsic measure of the quantity of matter and remains strictly constant regardless of location (70 kg). Weight is the gravitational force: W_Moon = m × g_Moon = 70 kg × (9.8 / 6) m/s² ≈ 114.3 N."
+            "solution": "\\(a=\\dfrac{F-\\mu mg}{m}=\\dfrac{26-0.4\\times4\\times10}{4}=2.5\\) m/s²."
           },
           {
-            "question": "What is the terminal velocity of a falling skydiver?",
+            "question": "A horizontal force of 18 N pushes block A (5 kg), which is in contact with block B (6 kg), on a smooth table. What force does A exert on B?",
             "options": [
-              "The constant velocity reached when upward aerodynamic drag equals downward gravitational force",
-              "The velocity at the moment the parachute opens",
-              "The velocity just before impact with the ground",
-              "The speed of sound in air",
-              "The escape velocity from Earth"
+              "9.818 N",
+              "21.6 N",
+              "9 N",
+              "18 N",
+              "8.182 N"
             ],
             "correct": 0,
-            "solution": "As a falling object speeds up, air resistance (drag) increases with speed. When the upward drag force equals the downward weight (F_drag = mg), the net force becomes zero (a = 0) and the object continues falling at a constant terminal velocity."
+            "solution": "Both move with \\(a=\\dfrac{F}{m_1+m_2}=\\dfrac{18}{11}=1.636\\) m/s². The only horizontal force on B is the contact force: \\(m_2a=6\\times1.636=9.818\\) N."
           },
           {
-            "question": "A horizontal force of 20 N pushes a 5.0 kg crate at constant speed across a rough floor. What is the coefficient of kinetic friction μ_k? (Use g = 10 m/s²)",
+            "question": "A horizontal force of 18 N pushes block A (8 kg), which is in contact with block B (2 kg), on a smooth table. What force does A exert on B?",
             "options": [
-              "0.40",
-              "0.20",
-              "0.25",
-              "0.50",
-              "0.10"
+              "14.4 N",
+              "18 N",
+              "3.6 N",
+              "9 N",
+              "4.5 N"
             ],
-            "correct": 0,
-            "solution": "At constant speed, applied force balances kinetic friction: f_k = 20 N. Normal force N = mg = 5.0 × 10 = 50 N. Coefficient μ_k = f_k / N = 20 N / 50 N = 0.40."
+            "correct": 2,
+            "solution": "Both move with \\(a=\\dfrac{F}{m_1+m_2}=\\dfrac{18}{10}=1.8\\) m/s². The only horizontal force on B is the contact force: \\(m_2a=2\\times1.8=3.6\\) N."
           },
           {
             "question": "Which of the following is true regarding the normal force acting on an object resting on a flat horizontal surface?",
@@ -36765,40 +36765,40 @@ const subjects = [
             "solution": "The normal force is perpendicular to the contact surface, arising microscopically from electrostatic repulsion between electron clouds of the atoms at the contact boundary. It is NOT the reaction force to gravity (the reaction force to the Earth pulling the object down is the object pulling the Earth up)."
           },
           {
-            "question": "A force F acts on mass m₁ producing an acceleration of 6 m/s². The same force acts on mass m₂ producing an acceleration of 3 m/s². What acceleration would force F produce if both masses were tied together?",
+            "question": "Take g = 10 m/s². A 8 kg block on a horizontal floor is pulled by a horizontal force of 62 N. The coefficient of kinetic friction is 0.4. What is the acceleration?",
             "options": [
-              "2 m/s²",
-              "4.5 m/s²",
-              "9 m/s²",
-              "1.5 m/s²",
-              "1 m/s²"
+              "3.75 m/s²",
+              "11.75 m/s²",
+              "7.5 m/s²",
+              "7.75 m/s²",
+              "30 m/s²"
             ],
             "correct": 0,
-            "solution": "m₁ = F / 6 and m₂ = F / 3. When combined: m_total = m₁ + m₂ = F/6 + F/3 = F/6 + 2F/6 = 3F/6 = F/2. Acceleration a = F / m_total = F / (F/2) = 2 m/s²."
+            "solution": "\\(a=\\dfrac{F-\\mu mg}{m}=\\dfrac{62-0.4\\times8\\times10}{8}=3.75\\) m/s²."
           },
           {
-            "question": "What is the unit of force in the SI system, expressed in fundamental base units?",
+            "question": "Take g = 10 m/s². Masses of 4 kg and 1 kg are joined by a light string over a smooth light pulley. What is the tension in the string?",
             "options": [
-              "kg·m·s⁻²",
-              "kg·m²·s⁻²",
-              "kg·m·s⁻¹",
-              "kg·s⁻²",
-              "m·s⁻²"
+              "16 N",
+              "10 N",
+              "40 N",
+              "25 N",
+              "24 N"
             ],
             "correct": 0,
-            "solution": "From Newton's second law F = ma: mass is measured in kg and acceleration in m/s² (m·s⁻²). Thus 1 Newton (N) = 1 kg·m·s⁻²."
+            "solution": "Heavier mass: \\(4g-T=4a\\); lighter: \\(T-1g=1a\\). Adding: \\(a=\\dfrac{(4-1)10}{5}=6\\) m/s². Then \\(T=1(10+6)=16\\) N."
           },
           {
-            "question": "A 2.0 kg ball swinging in a vertical circle has a speed of 4.0 m/s at the bottom of the loop (radius r = 1.0 m). What is the tension in the string at the bottom? (Use g = 10 m/s²)",
+            "question": "Take g = 10 m/s². A 8 kg block on a horizontal floor is pulled by a horizontal force of 46 N. The coefficient of kinetic friction is 0.2. What is the acceleration?",
             "options": [
-              "52 N",
-              "32 N",
-              "20 N",
-              "12 N",
-              "40 N"
+              "5.75 m/s²",
+              "7.5 m/s²",
+              "3.75 m/s²",
+              "30 m/s²",
+              "7.75 m/s²"
             ],
-            "correct": 0,
-            "solution": "At the lowest point, the net upward force provides centripetal acceleration: T - mg = m v² / r ⇒ T = mg + m v² / r = 2.0(10) + 2.0(4.0)² / 1.0 = 20 + 2.0(16) = 20 + 32 = 52 N."
+            "correct": 2,
+            "solution": "\\(a=\\dfrac{F-\\mu mg}{m}=\\dfrac{46-0.2\\times8\\times10}{8}=3.75\\) m/s²."
           },
           {
             "question": "A boy’s weight is 600 N. If, when he steps on a scale inside an elevator, it reads 630 N, is the elevator moving? If yes, how is it moving?",
@@ -36819,40 +36819,40 @@ const subjects = [
         "name": "Mechanics: Energy & Work",
         "questions": [
           {
-            "question": "What is the power dissipated in a 10 Ω resistor with a current of 2 A?",
+            "question": "Take g = 10 m/s². A skier starts from rest and slides down a slope, dropping 10 m in height. Friction removes 50% of the lost potential energy. What is the speed at the bottom?",
             "options": [
-              "10 W",
-              "20 W",
-              "40 W",
-              "80 W",
-              "400 W"
-            ],
-            "correct": 2,
-            "solution": "P = I²R = 2² × 10 = 40 W. Alternatively, P = V²/R or P = VI."
-          },
-          {
-            "question": "What is the efficiency of a heat engine that takes in 1000 J of heat and does 300 J of work?",
-            "options": [
-              "15%",
-              "30%",
-              "45%",
-              "60%",
-              "70%"
-            ],
-            "correct": 1,
-            "solution": "Efficiency = Work/Heat input = 300/1000 = 0.3 = 30%."
-          },
-          {
-            "question": "Two resistors of 10 Ω and 20 Ω are connected in parallel to a 12 V battery. What is the power dissipated in the 10 Ω resistor?",
-            "options": [
-              "4.8 W",
-              "7.2 W",
-              "9.6 W",
-              "14.4 W",
-              "19.2 W"
+              "5 m/s",
+              "17.32 m/s",
+              "14.14 m/s",
+              "10 m/s",
+              "100 m/s"
             ],
             "correct": 3,
-            "solution": "Voltage across 10 Ω = 12 V (parallel). P = V²/R = 144/10 = 14.4 W."
+            "solution": "Energy available as motion: \\(\\tfrac12mv^2=mgh(1-0.5)\\), so \\(v=\\sqrt{2(10)(10)(0.5)}=10\\) m/s."
+          },
+          {
+            "question": "Take g = 10 m/s². A motor lifts a 500 kg load through 12 m in 20 s and is 80% efficient. What electrical power does it draw?",
+            "options": [
+              "1500 W",
+              "3000 W",
+              "4800 W",
+              "2400 W",
+              "3750 W"
+            ],
+            "correct": 4,
+            "solution": "Useful power: \\(\\dfrac{mgh}{t}=\\dfrac{500\\times10\\times12}{20}=3000\\) W. Efficiency = useful/input, so input = 3000/0.8 = 3750 W."
+          },
+          {
+            "question": "A 1000 kg car moving at 20 m/s is brought to rest over 25 m by a constant braking force. What is the size of that force?",
+            "options": [
+              "8000 N",
+              "200000 N",
+              "4000 N",
+              "800 N",
+              "16000 N"
+            ],
+            "correct": 0,
+            "solution": "Work–energy: \\(Fd=\\tfrac12mv^2\\), so \\(F=\\dfrac{0.5\\times1000\\times400}{25}=8000\\) N."
           },
           {
             "question": "A 5 kg object falls from rest through a height of 20 m. What is its kinetic energy just before hitting the ground? (g = 10 m/s²)",
@@ -36903,40 +36903,40 @@ const subjects = [
             "solution": "The work is the area under the force-displacement graph: \\(W = \\int_0^2 3x^2\\,dx = [x^3]_0^2 = 8.0\\) J."
           },
           {
-            "question": "What is the work done to move a 5 μC charge from infinity to a point where potential is 100 V?",
+            "question": "Take g = 10 m/s². A motor lifts a 400 kg load through 5 m in 40 s and is 80% efficient. What electrical power does it draw?",
             "options": [
-              "0.05 J",
-              "0.5 J",
-              "0.5 mJ",
-              "5 mJ",
-              "50 mJ"
+              "800 W",
+              "250 W",
+              "400 W",
+              "500 W",
+              "625 W"
             ],
-            "correct": 2,
-            "solution": "W = qV = 5×10⁻⁶ × 100 = 5×10⁻⁴ J = 0.5 mJ."
+            "correct": 4,
+            "solution": "Useful power: \\(\\dfrac{mgh}{t}=\\dfrac{400\\times10\\times5}{40}=500\\) W. Efficiency = useful/input, so input = 500/0.8 = 625 W."
           },
           {
-            "question": "A 200 g object attached to a spring oscillates with period 0.5 s. What is the spring constant?",
+            "question": "A spring of constant 200 N/m is compressed by 0.3 m and then releases a 0.2 kg block on a smooth horizontal surface. What is the block’s speed as it leaves the spring?",
             "options": [
-              "8 N/m",
-              "16 N/m",
-              "32 N/m",
-              "64 N/m",
-              "128 N/m"
+              "9.487 m/s",
+              "45 m/s",
+              "17.32 m/s",
+              "300 m/s",
+              "6.708 m/s"
             ],
-            "correct": 2,
-            "solution": "T = 2π√(m/k) → T² = 4π²m/k → k = 4π²m/T² = 4π² × 0.2/0.25 = 3.2π² ≈ 31.6 ≈ 32 N/m."
+            "correct": 0,
+            "solution": "Stored energy \\(\\tfrac12kx^2=\\tfrac12(200)(0.3)^2=9\\) J becomes kinetic: \\(v=\\sqrt{2E/m}=\\sqrt{90}=9.487\\) m/s."
           },
           {
-            "question": "A 2 kg object is lifted vertically by 5 m. What is the increase in gravitational potential energy? (g=10)",
+            "question": "Take g = 10 m/s². A motor lifts a 200 kg load through 20 m in 40 s and is 40% efficient. What electrical power does it draw?",
             "options": [
-              "10 J",
-              "20 J",
-              "50 J",
-              "100 J",
-              "200 J"
+              "1000 W",
+              "800 W",
+              "400 W",
+              "2500 W",
+              "500 W"
             ],
             "correct": 3,
-            "solution": "ΔPE=mgh=2×10×5=100 J."
+            "solution": "Useful power: \\(\\dfrac{mgh}{t}=\\dfrac{200\\times10\\times20}{40}=1000\\) W. Efficiency = useful/input, so input = 1000/0.4 = 2500 W."
           },
           {
             "question": "A 70 kg skier slides from rest down a slope with a vertical drop of 40 m and reaches the bottom at 20 m/s. How much work is done against resistance? (\\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -36951,16 +36951,16 @@ const subjects = [
             "solution": "Potential energy lost: \\(mgh = 27.4\\) kJ. Kinetic energy gained: \\(\\tfrac{1}{2}(70)(20)^2 = 14.0\\) kJ. The difference, 13.4 kJ, is the work done against resistance."
           },
           {
-            "question": "A 1000 kg car accelerates from rest to 20 m/s. What is the kinetic energy gained?",
+            "question": "Take g = 10 m/s². A skier starts from rest and slides down a slope, dropping 1.8 m in height. Friction removes 36% of the lost potential energy. What is the speed at the bottom?",
             "options": [
-              "100 kJ",
-              "200 kJ",
-              "300 kJ",
-              "400 kJ",
-              "500 kJ"
+              "4.8 m/s",
+              "2.4 m/s",
+              "6.997 m/s",
+              "18 m/s",
+              "6 m/s"
             ],
-            "correct": 1,
-            "solution": "KE=½mv²=½×1000×400=200,000 J=200 kJ."
+            "correct": 0,
+            "solution": "Energy available as motion: \\(\\tfrac12mv^2=mgh(1-0.36)\\), so \\(v=\\sqrt{2(10)(1.8)(0.64)}=4.8\\) m/s."
           },
           {
             "question": "A 1200 kg car climbs 30 m vertically in 20 s at a constant 15 m/s. The air and road resistance is 400 N. What power must the engine deliver? (\\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -36975,40 +36975,40 @@ const subjects = [
             "solution": "Raising the car: \\(mgh/t = 1200 \\times 9.8 \\times 30/20 = 17.6\\) kW. Overcoming resistance: \\(Fv = 400 \\times 15 = 6.0\\) kW. Total \\(= 23.6\\) kW."
           },
           {
-            "question": "A 0.5 kg ball is thrown at 10 m/s and caught at the same height. What is its kinetic energy just before being caught?",
+            "question": "A spring of constant 800 N/m is compressed by 0.3 m and then releases a 0.5 kg block on a smooth horizontal surface. What is the block’s speed as it leaves the spring?",
             "options": [
-              "12.5 J",
-              "25 J",
-              "50 J",
-              "75 J",
-              "100 J"
+              "21.91 m/s",
+              "12 m/s",
+              "72 m/s",
+              "8.485 m/s",
+              "480 m/s"
             ],
             "correct": 1,
-            "solution": "KE=½mv²=½×0.5×100=25 J."
+            "solution": "Stored energy \\(\\tfrac12kx^2=\\tfrac12(800)(0.3)^2=36\\) J becomes kinetic: \\(v=\\sqrt{2E/m}=\\sqrt{144}=12\\) m/s."
           },
           {
-            "question": "A pump lifts 100 kg of water to a height of 10 m in 20 s. What is the minimum power required? (g=10)",
+            "question": "Take g = 10 m/s². A motor lifts a 100 kg load through 5 m in 40 s and is 40% efficient. What electrical power does it draw?",
             "options": [
-              "250 W",
-              "500 W",
-              "750 W",
-              "1000 W",
-              "1500 W"
+              "100 W",
+              "62.5 W",
+              "50 W",
+              "125 W",
+              "312.5 W"
             ],
-            "correct": 1,
-            "solution": "P=mgh/t=100×10×10/20=500 W."
+            "correct": 4,
+            "solution": "Useful power: \\(\\dfrac{mgh}{t}=\\dfrac{100\\times10\\times5}{40}=125\\) W. Efficiency = useful/input, so input = 125/0.4 = 312.5 W."
           },
           {
-            "question": "A 10 kg block slides down a 5 m high frictionless incline. What is its speed at the bottom? (g=10)",
+            "question": "A spring of constant 800 N/m is compressed by 0.3 m and then releases a 0.1 kg block on a smooth horizontal surface. What is the block’s speed as it leaves the spring?",
             "options": [
-              "5 m/s",
-              "7 m/s",
-              "10 m/s",
-              "14 m/s",
-              "20 m/s"
+              "360 m/s",
+              "48.99 m/s",
+              "18.97 m/s",
+              "2400 m/s",
+              "26.83 m/s"
             ],
-            "correct": 2,
-            "solution": "mgh=½mv² → v=√(2gh)=√(2×10×5)=√100=10 m/s."
+            "correct": 4,
+            "solution": "Stored energy \\(\\tfrac12kx^2=\\tfrac12(800)(0.3)^2=36\\) J becomes kinetic: \\(v=\\sqrt{2E/m}=\\sqrt{720}=26.83\\) m/s."
           },
           {
             "question": "A 2.0 kg block slides from rest down a rough slope 5.0 m long, dropping through 3.0 m of height. It reaches the bottom at 5.0 m/s. What is the average friction force? (\\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -37023,16 +37023,16 @@ const subjects = [
             "solution": "Energy lost to friction: \\(mgh - \\tfrac{1}{2}mv^2 = 58.8 - 25 = 33.8\\) J. This equals \\(f \\times\\) (slope length): \\(f = 33.8/5.0 = 6.76\\) N."
           },
           {
-            "question": "A 2 kg object moving at 3 m/s collides with a stationary 1 kg object and sticks to it. How much kinetic energy is lost?",
+            "question": "A spring of constant 800 N/m is compressed by 0.3 m and then releases a 0.2 kg block on a smooth horizontal surface. What is the block’s speed as it leaves the spring?",
             "options": [
-              "1 J",
-              "2 J",
-              "3 J",
-              "4 J",
-              "6 J"
+              "18.97 m/s",
+              "34.64 m/s",
+              "180 m/s",
+              "1200 m/s",
+              "13.42 m/s"
             ],
-            "correct": 2,
-            "solution": "Initial KE=½×2×9=9 J. Final v=(2×3)/3=2 m/s. Final KE=½×3×4=6 J. Lost=3 J."
+            "correct": 0,
+            "solution": "Stored energy \\(\\tfrac12kx^2=\\tfrac12(800)(0.3)^2=36\\) J becomes kinetic: \\(v=\\sqrt{2E/m}=\\sqrt{360}=18.97\\) m/s."
           },
           {
             "question": "A pump lifts 1200 litres of water per minute through a height of 15 m. The motor takes 5.0 kW of electrical power. What is the efficiency of the system? (1 L of water has a mass of 1.0 kg, \\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -37047,16 +37047,16 @@ const subjects = [
             "solution": "The mass lifted per second is \\(1200/60 = 20\\) kg/s. Useful power: \\(20 \\times 9.8 \\times 15 = 2940\\) W. Efficiency \\(= 2940/5000 = 59\\%\\)."
           },
           {
-            "question": "A pendulum of length 1 m is released from 30° to the vertical. What is its speed at the lowest point? (g=10)",
+            "question": "A spring of constant 400 N/m is compressed by 0.3 m and then releases a 0.5 kg block on a smooth horizontal surface. What is the block’s speed as it leaves the spring?",
             "options": [
-              "1.6 m/s",
-              "2.3 m/s",
-              "3.2 m/s",
-              "4.5 m/s",
-              "5.0 m/s"
+              "6 m/s",
+              "36 m/s",
+              "240 m/s",
+              "8.485 m/s",
+              "15.49 m/s"
             ],
-            "correct": 0,
-            "solution": "h=L(1−cos30)=1×(1−0.866)=0.134 m. v=√(2gh)=√(2.68)=1.64≈1.6 m/s."
+            "correct": 3,
+            "solution": "Stored energy \\(\\tfrac12kx^2=\\tfrac12(400)(0.3)^2=18\\) J becomes kinetic: \\(v=\\sqrt{2E/m}=\\sqrt{72}=8.485\\) m/s."
           },
           {
             "question": "A spring of constant 800 N/m is compressed by 0.10 m and used to launch a 0.050 kg ball vertically. Ignoring friction, how high above the point of release does the ball rise? (\\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -37071,52 +37071,52 @@ const subjects = [
             "solution": "Elastic energy: \\(\\tfrac{1}{2}kx^2 = \\tfrac{1}{2}(800)(0.10)^2 = 4.0\\) J. This becomes \\(mgh\\): \\(h = 4.0/(0.050 \\times 9.8) = 8.16\\) m."
           },
           {
-            "question": "A 5 kg object is dropped from 20 m. What is its kinetic energy after falling 10 m? (g=10, neglect air resistance)",
+            "question": "A spring of constant 800 N/m is compressed by 0.3 m and then releases a 1 kg block on a smooth horizontal surface. What is the block’s speed as it leaves the spring?",
             "options": [
-              "250 J",
-              "500 J",
-              "750 J",
-              "1000 J",
-              "1500 J"
+              "8.485 m/s",
+              "240 m/s",
+              "6 m/s",
+              "15.49 m/s",
+              "36 m/s"
             ],
-            "correct": 1,
-            "solution": "PE lost=mgΔh=5×10×10=500 J=KE gained."
+            "correct": 0,
+            "solution": "Stored energy \\(\\tfrac12kx^2=\\tfrac12(800)(0.3)^2=36\\) J becomes kinetic: \\(v=\\sqrt{2E/m}=\\sqrt{72}=8.485\\) m/s."
           },
           {
-            "question": "A conveyor belt moves at 2 m/s and transports 10 kg/s of material. What power is needed?",
+            "question": "Take g = 10 m/s². A skier starts from rest and slides down a slope, dropping 7.2 m in height. Friction removes 36% of the lost potential energy. What is the speed at the bottom?",
             "options": [
-              "10 W",
-              "20 W",
-              "40 W",
-              "100 W",
-              "200 W"
-            ],
-            "correct": 1,
-            "solution": "Power=rate of KE=½×(dm/dt)×v²=½×10×4=20 W."
-          },
-          {
-            "question": "A spring (k=500 N/m) is stretched until it stores 25 J. What is the extension?",
-            "options": [
-              "0.1 m",
-              "0.2 m",
-              "0.3 m",
-              "0.4 m",
-              "0.5 m"
+              "13.99 m/s",
+              "12 m/s",
+              "9.6 m/s",
+              "92.16 m/s",
+              "72 m/s"
             ],
             "correct": 2,
-            "solution": "E=½kx² → x=√(2E/k)=√(50/500)=√0.1=0.316≈0.3 m."
+            "solution": "Energy available as motion: \\(\\tfrac12mv^2=mgh(1-0.36)\\), so \\(v=\\sqrt{2(10)(7.2)(0.64)}=9.6\\) m/s."
           },
           {
-            "question": "A 2000 kg car climbing a 10° incline at constant speed 10 m/s. What power must the engine deliver against gravity? (g=10, sin10°=0.174)",
+            "question": "Take g = 10 m/s². A skier starts from rest and slides down a slope, dropping 3.2 m in height. Friction removes 36% of the lost potential energy. What is the speed at the bottom?",
             "options": [
-              "17.4 kW",
-              "34.8 kW",
-              "69.6 kW",
-              "100 kW",
-              "200 kW"
+              "6.4 m/s",
+              "3.2 m/s",
+              "40.96 m/s",
+              "8 m/s",
+              "32 m/s"
             ],
-            "correct": 1,
-            "solution": "F=mgsinθ=2000×10×0.174=3480 N. P=Fv=3480×10=34,800 W=34.8 kW."
+            "correct": 0,
+            "solution": "Energy available as motion: \\(\\tfrac12mv^2=mgh(1-0.36)\\), so \\(v=\\sqrt{2(10)(3.2)(0.64)}=6.4\\) m/s."
+          },
+          {
+            "question": "A 1000 kg car moving at 10 m/s is brought to rest over 40 m by a constant braking force. What is the size of that force?",
+            "options": [
+              "250 N",
+              "625 N",
+              "2500 N",
+              "50000 N",
+              "1250 N"
+            ],
+            "correct": 4,
+            "solution": "Work–energy: \\(Fd=\\tfrac12mv^2\\), so \\(F=\\dfrac{0.5\\times1000\\times100}{40}=1250\\) N."
           },
           {
             "question": "A force of 50 N is applied at an angle of 60° to the horizontal to pull a cart a distance of 10 m along a flat floor. What is the work done by this force? (cos 60° = 0.5)",
@@ -37215,16 +37215,16 @@ const subjects = [
             "solution": "A conservative force does work that depends only on initial and final positions (independent of path), and work over any closed loop is zero (e.g., gravity, electrostatic force, spring force). Friction is non-conservative because it dissipates mechanical energy into thermal energy along the path traveled."
           },
           {
-            "question": "What is the SI unit of work and energy, expressed in base units?",
+            "question": "Take g = 10 m/s². A motor lifts a 100 kg load through 12 m in 10 s and is 40% efficient. What electrical power does it draw?",
             "options": [
-              "kg·m²·s⁻²",
-              "kg·m·s⁻²",
-              "kg·m²·s⁻¹",
-              "kg·m²·s⁻³",
-              "N·m⁻¹"
+              "1200 W",
+              "960 W",
+              "600 W",
+              "480 W",
+              "3000 W"
             ],
-            "correct": 0,
-            "solution": "Work is Force × Distance = N × m = (kg·m·s⁻²) × m = kg·m²·s⁻² (Joule, J)."
+            "correct": 4,
+            "solution": "Useful power: \\(\\dfrac{mgh}{t}=\\dfrac{100\\times10\\times12}{10}=1200\\) W. Efficiency = useful/input, so input = 1200/0.4 = 3000 W."
           },
           {
             "question": "A 0.5 kg pendulum bob swings from a maximum height of 0.20 m above its lowest point. What is its speed at the lowest point? (Use g = 10 m/s²)",
@@ -37239,16 +37239,16 @@ const subjects = [
             "solution": "Conservation of mechanical energy: mgh = (1/2)mv² ⇒ v = √(2gh) = √(2 × 10 × 0.20) = √4 = 2.0 m/s."
           },
           {
-            "question": "An electric motor with an efficiency of 80% consumes 500 W of electrical power. What useful mechanical power does it deliver?",
+            "question": "A 1000 kg car moving at 25 m/s is brought to rest over 40 m by a constant braking force. What is the size of that force?",
             "options": [
-              "400 W",
-              "100 W",
-              "625 W",
-              "500 W",
-              "250 W"
+              "625 N",
+              "15630 N",
+              "3906 N",
+              "7813 N",
+              "312500 N"
             ],
-            "correct": 0,
-            "solution": "Efficiency η = P_useful / P_input ⇒ P_useful = η × P_input = 0.80 × 500 W = 400 W."
+            "correct": 3,
+            "solution": "Work–energy: \\(Fd=\\tfrac12mv^2\\), so \\(F=\\dfrac{0.5\\times1000\\times625}{40}=7813\\) N."
           },
           {
             "question": "A block of mass 4.0 kg slides on a rough horizontal surface with an initial velocity of 6.0 m/s and comes to rest due to friction. How much thermal energy is generated?",
@@ -37275,16 +37275,16 @@ const subjects = [
             "solution": "Work is W = F d cos θ. The normal force is perpendicular to the incline surface (θ = 90° to the direction of displacement). Since cos(90°) = 0, the normal force does exactly 0 J of work."
           },
           {
-            "question": "A 100 W lightbulb is left on for 2.0 hours. How much energy in joules does it consume?",
+            "question": "A 1200 kg car moving at 15 m/s is brought to rest over 40 m by a constant braking force. What is the size of that force?",
             "options": [
-              "7.2 × 10⁵ J",
-              "2.0 × 10² J",
-              "3.6 × 10⁵ J",
-              "1.2 × 10⁴ J",
-              "7.2 × 10³ J"
+              "1688 N",
+              "3375 N",
+              "6750 N",
+              "450 N",
+              "135000 N"
             ],
-            "correct": 0,
-            "solution": "Energy E = P × t. Convert time to seconds: t = 2.0 h × 3600 s/h = 7200 s. E = 100 W × 7200 s = 720,000 J = 7.2 × 10⁵ J."
+            "correct": 1,
+            "solution": "Work–energy: \\(Fd=\\tfrac12mv^2\\), so \\(F=\\dfrac{0.5\\times1200\\times225}{40}=3375\\) N."
           },
           {
             "question": "An arrow of mass 0.05 kg is fired from a bow whose string was drawn back with an average force of 200 N over 0.5 m. What is the launch speed of the arrow?",
@@ -37299,28 +37299,28 @@ const subjects = [
             "solution": "Work done on the arrow = F_avg × d = 200 N × 0.5 m = 100 J. This equals the kinetic energy: (1/2) m v² = 100 J ⇒ 0.5 × 0.05 × v² = 100 ⇒ 0.025 v² = 100 ⇒ v² = 4000 ⇒ v = √4000 ≈ 63.2 m/s."
           },
           {
-            "question": "What is 1 kilowatt-hour (kWh) in SI units (Joules)?",
+            "question": "Take g = 10 m/s². A skier starts from rest and slides down a slope, dropping 20 m in height. Friction removes 36% of the lost potential energy. What is the speed at the bottom?",
             "options": [
-              "3.6 × 10⁶ J (3.6 MJ)",
-              "1.0 × 10³ J",
-              "3.6 × 10³ J",
-              "6.0 × 10⁴ J",
-              "3.6 × 10⁹ J"
+              "256 m/s",
+              "200 m/s",
+              "20 m/s",
+              "16 m/s",
+              "23.32 m/s"
             ],
-            "correct": 0,
-            "solution": "1 kWh = (1000 W) × (3600 s) = 3,600,000 J = 3.6 × 10⁶ J (or 3.6 MJ)."
+            "correct": 3,
+            "solution": "Energy available as motion: \\(\\tfrac12mv^2=mgh(1-0.36)\\), so \\(v=\\sqrt{2(10)(20)(0.64)}=16\\) m/s."
           },
           {
-            "question": "A force F(x) = 4x (in N) acts on a particle moving from x = 0 to x = 3 m. What is the total work done by this variable force?",
+            "question": "A 1000 kg car moving at 15 m/s is brought to rest over 100 m by a constant braking force. What is the size of that force?",
             "options": [
-              "18 J",
-              "12 J",
-              "36 J",
-              "6 J",
-              "24 J"
+              "562.5 N",
+              "1125 N",
+              "150 N",
+              "2250 N",
+              "112500 N"
             ],
-            "correct": 0,
-            "solution": "For a variable force, work is the integral: W = ∫₀³ 4x dx = [2x²]₀³ = 2(3)² - 0 = 18 J."
+            "correct": 1,
+            "solution": "Work–energy: \\(Fd=\\tfrac12mv^2\\), so \\(F=\\dfrac{0.5\\times1000\\times225}{100}=1125\\) N."
           },
           {
             "question": "A satellite moves in a circular orbit of radius r around Earth at constant orbital speed. What is the work done by the gravitational force on the satellite during one complete orbit?",
@@ -37335,16 +37335,16 @@ const subjects = [
             "solution": "At every point along the circular orbit, the gravitational force acts radially toward the center of the Earth, which is perpendicular to the satellite's tangential displacement (θ = 90°). Since cos(90°) = 0, the gravitational force does zero work."
           },
           {
-            "question": "Two masses m and 4m have equal kinetic energy. What is the ratio of their linear momenta (p₁ / p₂)?",
+            "question": "A 1200 kg car moving at 10 m/s is brought to rest over 50 m by a constant braking force. What is the size of that force?",
             "options": [
-              "1 : 2",
-              "1 : 4",
-              "2 : 1",
-              "1 : 1",
-              "1 : 16"
+              "240 N",
+              "600 N",
+              "2400 N",
+              "60000 N",
+              "1200 N"
             ],
-            "correct": 0,
-            "solution": "Kinetic energy in terms of momentum is KE = p² / (2m). Since KE₁ = KE₂: p₁² / (2m) = p₂² / (2(4m)) ⇒ p₁² = p₂² / 4 ⇒ p₁ / p₂ = 1/2 = 1 : 2."
+            "correct": 4,
+            "solution": "Work–energy: \\(Fd=\\tfrac12mv^2\\), so \\(F=\\dfrac{0.5\\times1200\\times100}{50}=1200\\) N."
           },
           {
             "question": "A constant force of 25 N acts on an object initially at rest, displacing it by 4.0 m in the direction of the force. What is the final kinetic energy of the object?",
@@ -37401,16 +37401,16 @@ const subjects = [
             "solution": "λ = h/mv = 6.63×10⁻³⁴ / (9.11×10⁻³¹ × 2×10⁶) = 6.63×10⁻³⁴ / 1.822×10⁻²⁴ = 3.64×10⁻¹⁰ m ≈ 3.6×10⁻¹⁰ m. Wait, let me recalculate: 6.63×10⁻³⁴ / (9.11×10⁻³¹ × 2×10⁶) = 6.63×10⁻³⁴ / 1.822×10⁻²⁴ = 3.64×10⁻¹⁰ m. Closest to 3.6×10⁻¹⁰ m (option C)."
           },
           {
-            "question": "A sound wave has a frequency of 440 Hz. What is its period?",
+            "question": "A car travels at 108 km/h. What is its speed in m/s?",
             "options": [
-              "0.0023 s",
-              "0.0045 s",
-              "0.023 s",
-              "0.045 s",
-              "0.23 s"
+              "30 m/s",
+              "1800 m/s",
+              "3 m/s",
+              "1.8 m/s",
+              "388.8 m/s"
             ],
             "correct": 0,
-            "solution": "Period T = 1/f = 1/440 = 0.00227 s ≈ 0.0023 s."
+            "solution": "1 km/h = 1000 m / 3600 s = 1/3.6 m/s, so 108/3.6 = 30 m/s."
           },
           {
             "question": "What is the de Broglie wavelength of an electron moving at 2 × 10⁶ m/s? (h = 6.63 × 10⁻³⁴ Js, m = 9.11 × 10⁻³¹ kg)",
@@ -37461,52 +37461,52 @@ const subjects = [
             "solution": "β = 10 log(I/I₀) = 10 log(10⁻⁶/10⁻¹²) = 10 log(10⁶) = 10 × 6 = 60 dB."
           },
           {
-            "question": "What is the wavelength of a radio wave with frequency 100 MHz? (c = 3 × 10⁸ m/s)",
+            "question": "A uniform light beam is balanced on a pivot. A 9 kg mass hangs 5 m to the left of the pivot. At what mass hung 3 m to the right will the beam balance?",
             "options": [
-              "0.3 m",
-              "1 m",
-              "3 m",
-              "10 m",
-              "30 m"
+              "15 kg",
+              "9 kg",
+              "5.4 kg",
+              "11 kg",
+              "135 kg"
             ],
-            "correct": 2,
-            "solution": "λ = c/f = 3×10⁸/100×10⁶ = 3×10⁸/10⁸ = 3 m."
+            "correct": 0,
+            "solution": "Balance of torques: \\(9g\\times5=m g\\times3\\), so \\(m=\\dfrac{9\\times5}{3}=15\\) kg."
           },
           {
-            "question": "A wave has frequency 200 Hz and speed 400 m/s. What is its wavelength?",
+            "question": "A liquid has a density of 7.8 g/cm³. What is its density in kg/m³?",
             "options": [
-              "0.5 m",
-              "1 m",
-              "2 m",
-              "4 m",
-              "8 m"
+              "0.0078 kg/m³",
+              "780 kg/m³",
+              "7800 kg/m³",
+              "7800000 kg/m³",
+              "7.8 kg/m³"
             ],
             "correct": 2,
-            "solution": "λ=v/f=400/200=2 m."
+            "solution": "1 g/cm³ = 10⁻³ kg / 10⁻⁶ m³ = 1000 kg/m³, so 7.8 g/cm³ = 7800 kg/m³."
           },
           {
-            "question": "A string of length 2 m fixed at both ends vibrates in its second harmonic. What is the wavelength?",
+            "question": "Take g = 10 m/s². A simple pendulum has a length of 0.1 m. What is its period?",
             "options": [
-              "0.5 m",
-              "1 m",
-              "2 m",
-              "4 m",
-              "8 m"
+              "\\(\\dfrac{1}{5}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{2}{5}\\pi\\text{ s}\\)",
+              "\\(20\\pi\\text{ s}\\)",
+              "\\(\\dfrac{1}{25}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{1}{10}\\pi\\text{ s}\\)"
             ],
-            "correct": 1,
-            "solution": "Second harmonic: L=λ → λ=2L/2=2 m. Wait: second harmonic has 2 loops, L=λ, so λ=2 m? Actually L=λ for 2nd harmonic (n=2). λ=2L/n=4/2=2 m. Hmm option C=2m. But fundamental λ=4m for n=1? No for string fixed both ends: L=nλ/2. n=1: λ=2L=4m. n=2: λ=L=2m. n=3: λ=2L/3=1.33m. So second harmonic λ=2 m."
+            "correct": 0,
+            "solution": "\\(T=2\\pi\\sqrt{L/g}=2\\pi\\sqrt{0.1/10}=\\dfrac{1}{5}\\pi\\) s."
           },
           {
-            "question": "A pendulum has period 2 s on Earth (g=10). What is its period on a planet where g=2.5 m/s²?",
+            "question": "A car of mass 1000 kg drives round a circular bend of radius 5 m at 10 m/s. What is the centripetal force needed (provided by friction)?",
             "options": [
-              "1 s",
-              "2 s",
-              "4 s",
-              "6 s",
-              "8 s"
+              "100000 N",
+              "2000 N",
+              "20000 N",
+              "500000 N",
+              "10000 N"
             ],
             "correct": 2,
-            "solution": "T∝1/√g. T₂=T₁×√(g₁/g₂)=2×√(10/2.5)=2×√4=2×2=4 s."
+            "solution": "\\(F=\\dfrac{mv^2}{r}=\\dfrac{1000\\times100}{5}=20000\\) N."
           },
           {
             "question": "A 0.20 kg mass on a spring (\\(k = 80\\) N/m) oscillates with amplitude 0.10 m. What is its kinetic energy when the displacement is 0.060 m?",
@@ -37533,16 +37533,16 @@ const subjects = [
             "solution": "v_max=ωA=2πfA=2π×100×0.02=4π=12.56 m/s."
           },
           {
-            "question": "What is the phase difference between two points on a wave separated by half a wavelength?",
+            "question": "Water flows at 3 m/s in a pipe of diameter 12 cm which narrows to a diameter of 6 cm. What is the speed in the narrow section?",
             "options": [
-              "0",
-              "π/4",
-              "π/2",
-              "π",
-              "2π"
+              "6 m/s",
+              "24 m/s",
+              "12 m/s",
+              "5 m/s",
+              "1.5 m/s"
             ],
-            "correct": 3,
-            "solution": "Phase difference=(2π/λ)×Δx=(2π/λ)×(λ/2)=π."
+            "correct": 2,
+            "solution": "Continuity: \\(A_1v_1=A_2v_2\\) and area \\(\\propto d^2\\), so \\(v_2=v_1(d_1/d_2)^2=3\\times4=12\\) m/s."
           },
           {
             "question": "A pipe open at both ends has length 1 m. What is the frequency of the fundamental mode? (v=340 m/s)",
@@ -37581,16 +37581,16 @@ const subjects = [
             "solution": "A_res=√(A₁²+A₂²+2A₁A₂cosφ). For φ=π, cosπ=−1. A=√(9+9−18)=0."
           },
           {
-            "question": "A standing wave has nodes 0.25 m apart. What is the wavelength?",
+            "question": "A liquid has a density of 0.8 g/cm³. What is its density in kg/m³?",
             "options": [
-              "0.125 m",
-              "0.25 m",
-              "0.5 m",
-              "1 m",
-              "2 m"
+              "800000 kg/m³",
+              "0.8 kg/m³",
+              "800 kg/m³",
+              "80 kg/m³",
+              "0.0008 kg/m³"
             ],
             "correct": 2,
-            "solution": "Node spacing=λ/2 → λ=2×0.25=0.5 m."
+            "solution": "1 g/cm³ = 10⁻³ kg / 10⁻⁶ m³ = 1000 kg/m³, so 0.8 g/cm³ = 800 kg/m³."
           },
           {
             "question": "The Doppler effect causes the observed frequency to increase when:",
@@ -37617,16 +37617,16 @@ const subjects = [
             "solution": "\\(\\omega = \\sqrt{k/m} = \\sqrt{250/0.40} = 25\\) rad/s. \\(v = \\omega\\sqrt{A^2 - x^2} = 25\\sqrt{0.060^2 - 0.036^2} = 25 \\times 0.0480 = 1.2\\) m/s."
           },
           {
-            "question": "A wave pulse travels 20 m in 4 s. What is its speed?",
+            "question": "A liquid has a density of 0.9 g/cm³. What is its density in kg/m³?",
             "options": [
-              "2 m/s",
-              "4 m/s",
-              "5 m/s",
-              "8 m/s",
-              "10 m/s"
+              "900000 kg/m³",
+              "0.9 kg/m³",
+              "0.0009 kg/m³",
+              "900 kg/m³",
+              "90 kg/m³"
             ],
-            "correct": 2,
-            "solution": "v=distance/time=20/4=5 m/s."
+            "correct": 3,
+            "solution": "1 g/cm³ = 10⁻³ kg / 10⁻⁶ m³ = 1000 kg/m³, so 0.9 g/cm³ = 900 kg/m³."
           },
           {
             "question": "In a transverse wave, the particles of the medium move:",
@@ -37653,16 +37653,16 @@ const subjects = [
             "solution": "\\(\\omega = 3000 \\times 2\\pi/60 = 314\\) rad/s. \\(a = \\omega^2 r = (314)^2(0.12) = 11800\\) m/s<sup>2</sup>, which is \\(1210\\,g\\)."
           },
           {
-            "question": "A sound wave in air (v=340 m/s) has wavelength 0.17 m. What is its frequency?",
+            "question": "A hiker walks 5 km east and then 12 km north. What is the magnitude of the displacement from the start?",
             "options": [
-              "1000 Hz",
-              "1500 Hz",
-              "2000 Hz",
-              "2500 Hz",
-              "3000 Hz"
+              "13 km",
+              "8.5 km",
+              "17 km",
+              "4.615 km",
+              "7 km"
             ],
-            "correct": 2,
-            "solution": "f=v/λ=340/0.17=2000 Hz."
+            "correct": 0,
+            "solution": "The legs are perpendicular, so \\(d=\\sqrt{5^2+12^2}=13\\) km (the distance walked is 17 km)."
           },
           {
             "question": "Two coherent sources produce interference. At a point where path difference is 3λ/2, what type of interference occurs?",
@@ -37689,16 +37689,16 @@ const subjects = [
             "solution": "\\(T \\propto \\sqrt{l}\\). The new length is \\(0.64l\\), so \\(T_2 = T\\sqrt{0.64} = 0.80 \\times 2.50 = 2.00\\) s."
           },
           {
-            "question": "What is the period of oscillation of a simple pendulum of length L = 0.98 m on Earth? (Use g = 9.8 m/s² and π ≈ 3.14)",
+            "question": "A 4 kg mass hangs on a spring of constant 25 N/m and oscillates vertically. What is its period?",
             "options": [
-              "1.99 s (≈ 2.0 s)",
-              "1.0 s",
-              "0.50 s",
-              "3.14 s",
-              "4.0 s"
+              "\\(\\dfrac{2}{5}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{4}{5}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{16}{25}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{5}{4}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{25}{2}\\pi\\text{ s}\\)"
             ],
-            "correct": 0,
-            "solution": "The period of a simple pendulum is T = 2π √(L/g) = 2π √(0.98 / 9.8) = 2π √(0.10) ≈ 2 × 3.14 × 0.3162 ≈ 1.99 s ≈ 2.0 s."
+            "correct": 1,
+            "solution": "\\(T=2\\pi\\sqrt{\\dfrac mk}=2\\pi\\sqrt{\\dfrac{4}{25}}=\\dfrac{4}{5}\\pi\\) s."
           },
           {
             "question": "A sound wave in air has a frequency of 680 Hz. If the speed of sound is 340 m/s, what is its wavelength?",
@@ -37713,16 +37713,16 @@ const subjects = [
             "solution": "The wave equation is v = f λ ⇒ λ = v / f = 340 m/s / 680 Hz = 0.50 m."
           },
           {
-            "question": "In a mass-spring harmonic oscillator, what happens to the period T if the oscillating mass m is quadrupled (m' = 4m)?",
+            "question": "A 16 kg mass hangs on a spring of constant 9 N/m and oscillates vertically. What is its period?",
             "options": [
-              "The period doubles",
-              "The period quadruples",
-              "The period is halved",
-              "The period remains unchanged",
-              "The period increases by a factor of 16"
+              "\\(\\dfrac{64}{9}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{3}{8}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{9}{8}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{8}{3}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{4}{3}\\pi\\text{ s}\\)"
             ],
-            "correct": 0,
-            "solution": "The period of a mass-spring system is T = 2π √(m/k). If mass is quadrupled: T' = 2π √(4m/k) = 2 × [2π √(m/k)] = 2T. The period doubles."
+            "correct": 3,
+            "solution": "\\(T=2\\pi\\sqrt{\\dfrac mk}=2\\pi\\sqrt{\\dfrac{16}{9}}=\\dfrac{8}{3}\\pi\\) s."
           },
           {
             "question": "What type of wave is an ultrasound wave traveling through human soft tissue?",
@@ -37785,28 +37785,28 @@ const subjects = [
             "solution": "Comparing with y = A sin(ωt - kx): the angular frequency is ω = 10π rad/s. Since ω = 2π f: 2π f = 10π ⇒ f = 10π / 2π = 5.0 Hz."
           },
           {
-            "question": "What happens to the total mechanical energy of an undamped simple harmonic oscillator when the amplitude of oscillation is doubled?",
+            "question": "Take g = 10 m/s². A simple pendulum has a length of 3.6 m. What is its period?",
             "options": [
-              "It quadruples",
-              "It doubles",
-              "It remains unchanged",
-              "It increases by a factor of √2",
-              "It decreases by half"
+              "\\(\\dfrac{36}{25}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{6}{5}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{12}{5}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{10}{3}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{3}{5}\\pi\\text{ s}\\)"
             ],
-            "correct": 0,
-            "solution": "The total mechanical energy in simple harmonic motion is E = (1/2) k A², where A is the amplitude. Since energy is proportional to the square of amplitude (A²), doubling the amplitude quadruples the total energy (2² = 4)."
+            "correct": 1,
+            "solution": "\\(T=2\\pi\\sqrt{L/g}=2\\pi\\sqrt{3.6/10}=\\dfrac{6}{5}\\pi\\) s."
           },
           {
-            "question": "What is the fundamental frequency (1st harmonic) of an organ pipe of length L = 0.85 m that is open at both ends? (Speed of sound = 340 m/s)",
+            "question": "A 9 kg mass hangs on a spring of constant 4 N/m and oscillates vertically. What is its period?",
             "options": [
-              "200 Hz",
-              "100 Hz",
-              "400 Hz",
-              "150 Hz",
-              "250 Hz"
+              "\\(\\dfrac{3}{2}\\pi\\text{ s}\\)",
+              "\\(6\\pi\\text{ s}\\)",
+              "\\(\\dfrac{1}{3}\\pi\\text{ s}\\)",
+              "\\(3\\pi\\text{ s}\\)",
+              "\\(\\dfrac{8}{9}\\pi\\text{ s}\\)"
             ],
-            "correct": 0,
-            "solution": "For a pipe open at both ends, the fundamental wavelength is λ₁ = 2L = 2(0.85 m) = 1.70 m. The fundamental frequency is f₁ = v / λ₁ = 340 m/s / 1.70 m = 200 Hz."
+            "correct": 3,
+            "solution": "\\(T=2\\pi\\sqrt{\\dfrac mk}=2\\pi\\sqrt{\\dfrac{9}{4}}=3\\pi\\) s."
           },
           {
             "question": "Which wave phenomenon proves that light is a transverse wave rather than a longitudinal wave?",
@@ -37833,16 +37833,16 @@ const subjects = [
             "solution": "When the path difference is an integer multiple of the wavelength (Δx = mλ, where m = 0, 1, 2...), the waves arrive exactly in phase (phase difference = 2mπ), resulting in constructive interference with maximum amplitude."
           },
           {
-            "question": "In simple harmonic motion, at what position is the magnitude of acceleration maximum?",
+            "question": "The period of a simple pendulum is 2 s. Its length is increased to 9 times the original value. What is the new period?",
             "options": [
-              "At the maximum displacement (the turning points, x = ±A)",
-              "At the equilibrium position (x = 0)",
-              "At x = A / 2",
-              "The acceleration is constant throughout",
-              "At the point of maximum speed"
+              "162 s",
+              "0.6667 s",
+              "18 s",
+              "11 s",
+              "6 s"
             ],
-            "correct": 0,
-            "solution": "In SHM, acceleration is given by a = -ω² x. Its magnitude is directly proportional to displacement |x|. Therefore, acceleration is zero at the equilibrium position (x = 0) and reaches its maximum value a_max = ω² A at the turning points (x = ±A)."
+            "correct": 4,
+            "solution": "Since \\(T\\propto\\sqrt L\\), multiplying the length by 9 multiplies the period by 3: 6 s."
           },
           {
             "question": "What is the speed of a transverse wave traveling on a stretched string of linear mass density μ = 0.01 kg/m under a tension T = 100 N?",
@@ -37905,40 +37905,40 @@ const subjects = [
             "solution": "β = 10 log₁₀(I / I₀) = 10 log₁₀((1.0 × 10⁻⁴) / (1.0 × 10⁻¹²)) = 10 log₁₀(10⁸) = 10 × 8 = 80 dB."
           },
           {
-            "question": "What is the relationship between frequency (f) and period (T) of any wave or oscillation?",
+            "question": "A car of mass 200 kg drives round a circular bend of radius 5 m at 20 m/s. What is the centripetal force needed (provided by friction)?",
             "options": [
-              "f = 1 / T",
-              "f = 2π T",
-              "f = T²",
-              "f = √T",
-              "f = T / 2π"
+              "800 N",
+              "80000 N",
+              "400000 N",
+              "16000 N",
+              "8000 N"
             ],
-            "correct": 0,
-            "solution": "Frequency (number of cycles per second) is the reciprocal of period (time per cycle): f = 1 / T."
+            "correct": 3,
+            "solution": "\\(F=\\dfrac{mv^2}{r}=\\dfrac{200\\times400}{5}=16000\\) N."
           },
           {
-            "question": "For a pipe closed at one end and open at the other, what harmonics are present in its acoustic spectrum?",
+            "question": "The period of a simple pendulum is 3 s. Its length is increased to 4 times the original value. What is the new period?",
             "options": [
-              "Only odd harmonics (1st, 3rd, 5th, 7th...)",
-              "Only even harmonics (2nd, 4th, 6th...)",
-              "All integer harmonics (1st, 2nd, 3rd, 4th...)",
-              "Only prime numbered harmonics",
-              "No harmonics; only the fundamental frequency exists"
+              "48 s",
+              "7 s",
+              "6 s",
+              "1.5 s",
+              "12 s"
             ],
-            "correct": 0,
-            "solution": "A pipe closed at one end has a displacement node at the closed end and an antinode at the open end. Its resonant frequencies are given by f_n = n v / (4L), where n = 1, 3, 5, 7... Only odd harmonics are physically allowed."
+            "correct": 2,
+            "solution": "Since \\(T\\propto\\sqrt L\\), multiplying the length by 4 multiplies the period by 2: 6 s."
           },
           {
-            "question": "A spring has a spring constant of 8 N/m. What mass should be suspended from the spring so that it oscillates with a period T = 1 s?",
+            "question": "The period of a simple pendulum is 2 s. Its length is increased to 4 times the original value. What is the new period?",
             "options": [
-              "0.6 kg",
-              "0.2 kg",
-              "2 kg",
-              "1 kg",
-              "5 kg"
+              "8 s",
+              "1 s",
+              "32 s",
+              "6 s",
+              "4 s"
             ],
-            "correct": 1,
-            "solution": "Period of a mass on a spring: T = 2π √(m / k).\nSquaring both sides: T² = 4π² m / k ⇒ m = (k · T²) / (4π²).\nSubstituting k = 8 N/m, T = 1 s, and using π² ≈ 10:\nm ≈ (8 × 1) / (4 × 10) = 8 / 40 = 0.2 kg."
+            "correct": 4,
+            "solution": "Since \\(T\\propto\\sqrt L\\), multiplying the length by 4 multiplies the period by 2: 4 s."
           }
         ]
       },
@@ -37947,28 +37947,28 @@ const subjects = [
         "name": "Electricity & Circuits",
         "questions": [
           {
-            "question": "A 6 Ω resistor in series with two 3 Ω resistors in parallel. What is the total resistance?",
+            "question": "A 2 Ω resistor is in series with a parallel pair of 6 Ω and 6 Ω. The combination is connected across a 36 V battery of negligible internal resistance. What current flows from the battery?",
             "options": [
-              "4.5 Ω",
-              "6.0 Ω",
-              "7.5 Ω",
-              "9.0 Ω",
-              "12.0 Ω"
+              "0.9474 A",
+              "180 A",
+              "2.571 A",
+              "18 A",
+              "7.2 A"
             ],
-            "correct": 2,
-            "solution": "Parallel pair: 1/Rp = 1/3 + 1/3 = 2/3 → Rp = 1.5 Ω. Series total: 6 + 1.5 = 7.5 Ω."
+            "correct": 4,
+            "solution": "Parallel pair: \\(\\dfrac{6\\times6}{6+6}=3\\) Ω. Total 2 + 3 = 5 Ω. \\(I=V/R=36/5=7.2\\) A."
           },
           {
-            "question": "A light ray passes from glass (n = 1.5) into air (n = 1.0). What is the critical angle for total internal reflection?",
+            "question": "A battery of emf 6 V and internal resistance 1 Ω is connected to a 5 Ω resistor. What is the potential difference across the resistor?",
             "options": [
-              "33.7°",
-              "41.8°",
-              "45.0°",
-              "48.2°",
-              "56.4°"
+              "1 V",
+              "5 V",
+              "7 V",
+              "3 V",
+              "6 V"
             ],
             "correct": 1,
-            "solution": "At the critical angle, the refracted ray travels along the boundary (θ_r = 90°). Snell's law: n₁ sin θ_c = n₂ sin 90°. sin θ_c = n₂/n₁ = 1.0/1.5 = 0.667. θ_c = arcsin(0.667) ≈ 41.8°."
+            "solution": "Current \\(I=\\dfrac{E}{R+r}=\\dfrac{6}{6}=1\\) A. Terminal voltage \\(V=IR=1\\times5=5\\) V (less than the emf because of the internal drop)."
           },
           {
             "question": "A transformer has 500 turns on the primary coil and 50 turns on the secondary. The primary voltage is 240 V. What is the secondary voltage and what type of transformer is this?",
@@ -37983,28 +37983,28 @@ const subjects = [
             "solution": "Turns ratio = Np/Ns = 500/50 = 10. Secondary voltage = Primary voltage ÷ 10 = 240 ÷ 10 = 24 V. Since voltage decreases, this is a step-down transformer."
           },
           {
-            "question": "Two resistors of 10 Ω and 15 Ω are connected in parallel to a 12 V battery. What is the current through the 10 Ω resistor?",
+            "question": "A battery of emf 9 V and internal resistance 2 Ω is connected to a 8 Ω resistor. What is the potential difference across the resistor?",
             "options": [
-              "0.48 A",
-              "0.80 A",
-              "1.20 A",
-              "1.80 A",
-              "2.40 A"
+              "7.2 V",
+              "1.8 V",
+              "9.2 V",
+              "12 V",
+              "9 V"
             ],
-            "correct": 2,
-            "solution": "In parallel, voltage across each resistor equals battery voltage (12 V). Current through 10 Ω: I = V/R = 12/10 = 1.2 A."
+            "correct": 0,
+            "solution": "Current \\(I=\\dfrac{E}{R+r}=\\dfrac{9}{10}=0.9\\) A. Terminal voltage \\(V=IR=0.9\\times8=7.2\\) V (less than the emf because of the internal drop)."
           },
           {
-            "question": "A 12 V battery with internal resistance 2 Ω is connected to a 10 Ω external resistor. What is the terminal voltage?",
+            "question": "A 3 Ω resistor is in series with a parallel pair of 12 Ω and 12 Ω. The combination is connected across a 36 V battery of negligible internal resistance. What current flows from the battery?",
             "options": [
-              "8 V",
-              "10 V",
-              "11 V",
-              "12 V",
-              "14 V"
+              "4 A",
+              "324 A",
+              "12 A",
+              "0.2449 A",
+              "1.333 A"
             ],
-            "correct": 1,
-            "solution": "Total resistance = 10 + 2 = 12 Ω. Current I = V/R = 12/12 = 1 A. Terminal voltage = EMF - Ir = 12 - (1 × 2) = 10 V."
+            "correct": 0,
+            "solution": "Parallel pair: \\(\\dfrac{12\\times12}{12+12}=6\\) Ω. Total 3 + 6 = 9 Ω. \\(I=V/R=36/9=4\\) A."
           },
           {
             "question": "A 4.0 \\(\\mu\\)F capacitor is charged to 100 V, then connected in parallel with an uncharged 6.0 \\(\\mu\\)F capacitor. How much energy is lost in the process?",
@@ -38043,16 +38043,16 @@ const subjects = [
             "solution": "Work done by the field \\(= eEd = 1.6 \\times 10^{-19} \\times 2.0 \\times 10^4 \\times 0.020 = 6.4 \\times 10^{-17}\\) J. This is the kinetic energy: \\(v = \\sqrt{2E_k/m} = 1.19 × 10<sup>7</sup>\\) m/s."
           },
           {
-            "question": "A wire of resistance 10 Ω is stretched to twice its original length. What is its new resistance?",
+            "question": "A 3 Ω resistor is in series with a parallel pair of 3 Ω and 6 Ω. The combination is connected across a 36 V battery of negligible internal resistance. What current flows from the battery?",
             "options": [
-              "5 Ω",
-              "10 Ω",
-              "20 Ω",
-              "40 Ω",
-              "80 Ω"
+              "1.714 A",
+              "3 A",
+              "12 A",
+              "180 A",
+              "7.2 A"
             ],
-            "correct": 3,
-            "solution": "When stretched to twice the length, the cross-sectional area halves (volume constant). R = ρL/A. New R = ρ(2L)/(A/2) = 4ρL/A = 4 × 10 = 40 Ω."
+            "correct": 4,
+            "solution": "Parallel pair: \\(\\dfrac{3\\times6}{3+6}=2\\) Ω. Total 3 + 2 = 5 Ω. \\(I=V/R=36/5=7.2\\) A."
           },
           {
             "question": "A transformer has 200 turns on the primary and 50 turns on the secondary. If the primary voltage is 240 V, what is the secondary voltage?",
@@ -38103,16 +38103,16 @@ const subjects = [
             "solution": "\\(I = P/V = 2000/230 = 8.7\\) A. Power lost in the cable: \\(I^2R = 8.7^2 \\times 0.50 = 38\\) W. (Strictly the kettle then sees a slightly lower voltage.)"
           },
           {
-            "question": "A potentiometer wire of length 100 cm has resistance 10 Ω. It is connected to a 2 V battery. What is the potential gradient?",
+            "question": "A 3 Ω resistor is in series with a parallel pair of 12 Ω and 4 Ω. The combination is connected across a 36 V battery of negligible internal resistance. What current flows from the battery?",
             "options": [
-              "0.01 V/cm",
-              "0.02 V/cm",
-              "0.05 V/cm",
-              "0.1 V/cm",
-              "0.2 V/cm"
+              "6 A",
+              "216 A",
+              "0.7059 A",
+              "12 A",
+              "1.895 A"
             ],
-            "correct": 1,
-            "solution": "Current=2/10=0.2 A. Total PD=2 V. Gradient=2/100=0.02 V/cm."
+            "correct": 0,
+            "solution": "Parallel pair: \\(\\dfrac{12\\times4}{12+4}=3\\) Ω. Total 3 + 3 = 6 Ω. \\(I=V/R=36/6=6\\) A."
           },
           {
             "question": "Two identical 60 W, 230 V bulbs are connected in series across a 230 V supply. Assuming constant resistance, what power does each bulb dissipate?",
@@ -38139,16 +38139,16 @@ const subjects = [
             "solution": "Maximum power is transferred when \\(R = r = 3.0\\ \\Omega\\). Then \\(I = 9.0/6.0 = 1.5\\) A and \\(P = I^2R = 2.25 \\times 3.0 = 6.75\\) W."
           },
           {
-            "question": "In a Wheatstone bridge, the ratio arms are 2:3 and the known resistance is 6 Ω. What is the unknown resistance?",
+            "question": "A 5 Ω resistor is in series with a parallel pair of 12 Ω and 4 Ω. The combination is connected across a 36 V battery of negligible internal resistance. What current flows from the battery?",
             "options": [
-              "2 Ω",
-              "3 Ω",
-              "4 Ω",
-              "6 Ω",
-              "9 Ω"
+              "0.6792 A",
+              "1.714 A",
+              "4.5 A",
+              "288 A",
+              "7.2 A"
             ],
             "correct": 2,
-            "solution": "P/Q=R/S → 2/3=6/S → S=9 Ω. Wait: P=2, Q=3, R=6, S=unknown. 2/3=6/S → S=9. Option E=9."
+            "solution": "Parallel pair: \\(\\dfrac{12\\times4}{12+4}=3\\) Ω. Total 5 + 3 = 8 Ω. \\(I=V/R=36/8=4.5\\) A."
           },
           {
             "question": "A 6.0 \\(\\mu\\)F and a 3.0 \\(\\mu\\)F capacitor are connected in series, and this combination is connected in parallel with a 4.0 \\(\\mu\\)F capacitor. The whole network is connected across 12 V. What is the voltage across the 3.0 \\(\\mu\\)F capacitor?",
@@ -38163,28 +38163,28 @@ const subjects = [
             "solution": "The series branch has \\(C = 6 \\times 3/9 = 2.0\\ \\mu\\)F and its voltage is 12 V, so its charge is \\(24\\ \\mu\\)C on <b>each</b> capacitor. \\(V_3 = Q/C = 24/3.0 = 8.0\\) V (and \\(V_6 = 4.0\\) V)."
           },
           {
-            "question": "Two cells of emf 1.5 V and internal resistance 0.5 Ω each are connected in series to a 2 Ω resistor. What is the current?",
+            "question": "A 5 Ω resistor is in series with a parallel pair of 6 Ω and 6 Ω. The combination is connected across a 36 V battery of negligible internal resistance. What current flows from the battery?",
             "options": [
-              "0.5 A",
-              "0.75 A",
-              "1.0 A",
-              "1.2 A",
-              "1.5 A"
+              "7.2 A",
+              "2.118 A",
+              "4.5 A",
+              "0.878 A",
+              "288 A"
             ],
-            "correct": 1,
-            "solution": "Total emf=3 V. Total R=2+0.5+0.5=3 Ω. I=3/3=1 A. Wait, that's option C."
+            "correct": 2,
+            "solution": "Parallel pair: \\(\\dfrac{6\\times6}{6+6}=3\\) Ω. Total 5 + 3 = 8 Ω. \\(I=V/R=36/8=4.5\\) A."
           },
           {
-            "question": "A galvanometer of resistance 50 Ω gives full-scale deflection at 1 mA. What shunt resistance converts it to an ammeter reading 1 A?",
+            "question": "A 2 Ω resistor is in series with a parallel pair of 3 Ω and 6 Ω. The combination is connected across a 12 V battery of negligible internal resistance. What current flows from the battery?",
             "options": [
-              "0.005 Ω",
-              "0.05 Ω",
-              "0.5 Ω",
-              "5 Ω",
-              "50 Ω"
+              "0.6 A",
+              "48 A",
+              "1.091 A",
+              "6 A",
+              "3 A"
             ],
-            "correct": 1,
-            "solution": "S=G×I_g/(I−I_g)=50×0.001/(0.999)=50/999≈0.05 Ω."
+            "correct": 4,
+            "solution": "Parallel pair: \\(\\dfrac{3\\times6}{3+6}=2\\) Ω. Total 2 + 2 = 4 Ω. \\(I=V/R=12/4=3\\) A."
           },
           {
             "question": "A 12 V battery of internal resistance 1.0 \\(\\Omega\\) is connected in a loop with a 6.0 V battery of internal resistance 2.0 \\(\\Omega\\) so that they oppose each other, with a 3.0 \\(\\Omega\\) resistor. What is the potential difference across the terminals of the 6.0 V battery?",
@@ -38247,28 +38247,28 @@ const subjects = [
             "solution": "Balance: \\(qE = mg\\) with \\(E = V/d = 920/0.010 = 9.2 \\times 10^4\\) V/m. \\(q = mg/E = 2.94 \\times 10^{-14}/9.2 \\times 10^4 = 3.2 \\times 10^{-19}\\) C \\(= 2e\\)."
           },
           {
-            "question": "Three resistors with resistances of 6 Ω, 3 Ω, and 2 Ω are connected in parallel. What is the equivalent resistance of the combination?",
+            "question": "A battery of emf 9 V and internal resistance 1 Ω is connected to a 8 Ω resistor. What is the potential difference across the resistor?",
             "options": [
-              "1.0 Ω",
-              "11 Ω",
-              "0.5 Ω",
-              "2.0 Ω",
-              "1.5 Ω"
+              "10.29 V",
+              "8 V",
+              "10 V",
+              "9 V",
+              "1 V"
             ],
-            "correct": 0,
-            "solution": "For parallel resistors: 1 / R_eq = 1/6 + 1/3 + 1/2 = 1/6 + 2/6 + 3/6 = 6/6 = 1.0 Ω⁻¹. Thus, R_eq = 1.0 Ω."
+            "correct": 1,
+            "solution": "Current \\(I=\\dfrac{E}{R+r}=\\dfrac{9}{9}=1\\) A. Terminal voltage \\(V=IR=1\\times8=8\\) V (less than the emf because of the internal drop)."
           },
           {
-            "question": "A 12 V car battery is connected across a 4.0 Ω resistor. How much charge flows through the resistor in 30 seconds?",
+            "question": "A 4 Ω resistor is in series with a parallel pair of 3 Ω and 4 Ω. The combination is connected across a 24 V battery of negligible internal resistance. What current flows from the battery?",
             "options": [
-              "90 C",
-              "30 C",
-              "360 C",
-              "120 C",
-              "48 C"
+              "1.5 A",
+              "6 A",
+              "2.182 A",
+              "137.1 A",
+              "4.2 A"
             ],
-            "correct": 0,
-            "solution": "Current from Ohm's Law: I = V / R = 12 V / 4.0 Ω = 3.0 A. Charge Q = I × t = 3.0 A × 30 s = 90 C."
+            "correct": 4,
+            "solution": "Parallel pair: \\(\\dfrac{3\\times4}{3+4}=1.714\\) Ω. Total 4 + 1.714 = 5.714 Ω. \\(I=V/R=24/5.714=4.2\\) A."
           },
           {
             "question": "A 100 \\(\\mu\\)F capacitor is charged through a 50 k\\(\\Omega\\) resistor from a 9.0 V battery. What is the voltage across the capacitor after 5.0 s?",
@@ -38283,16 +38283,16 @@ const subjects = [
             "solution": "\\(\\tau = RC = 50 \\times 10^3 \\times 100 \\times 10^{-6} = 5.0\\) s, so \\(t = \\tau\\). Charging: \\(V = V_0(1 - e^{-1}) = 9.0 \\times 0.632 = 5.69\\) V."
           },
           {
-            "question": "A cylindrical copper wire has resistance R. If its length is doubled and its radius is halved, what is the new resistance of the wire?",
+            "question": "A battery of emf 12 V and internal resistance 2 Ω is connected to a 8 Ω resistor. What is the potential difference across the resistor?",
             "options": [
-              "8 R",
-              "4 R",
-              "2 R",
-              "16 R",
-              "R / 2"
+              "16 V",
+              "11.6 V",
+              "6 V",
+              "2.4 V",
+              "9.6 V"
             ],
-            "correct": 0,
-            "solution": "Resistance is R = ρ L / A = ρ L / (π r²). If length is doubled (L' = 2L) and radius is halved (r' = r/2), the new area is A' = π (r/2)² = A / 4. New resistance R' = ρ (2L) / (A / 4) = 8 (ρ L / A) = 8 R."
+            "correct": 4,
+            "solution": "Current \\(I=\\dfrac{E}{R+r}=\\dfrac{12}{10}=1.2\\) A. Terminal voltage \\(V=IR=1.2\\times8=9.6\\) V (less than the emf because of the internal drop)."
           },
           {
             "question": "A parallel-plate capacitor in air is charged to 200 V and then <b>disconnected</b> from the battery. A dielectric of constant \\(\\kappa = 4\\) is slid between the plates, filling the gap. What is the new voltage?",
@@ -38367,28 +38367,28 @@ const subjects = [
             "solution": "Energy: \\(\\tfrac{1}{2}CV^2 = \\tfrac{1}{2}(50 \\times 10^{-6})(5000)^2 = 625\\) J. Average power \\(= 625/0.0050 = 1.25 \\times 10^5\\) W."
           },
           {
-            "question": "Two resistors of 10 Ω and 30 Ω are connected in series with a 12 V battery. What is the potential difference across the 30 Ω resistor?",
+            "question": "Two lamps rated 60 W and 100 W at 220 V are connected in series across a 220 V supply. What total power do they dissipate (assuming constant resistances)?",
             "options": [
-              "9.0 V",
-              "3.0 V",
-              "6.0 V",
-              "12 V",
-              "4.0 V"
+              "37.5 W",
+              "160 W",
+              "77.46 W",
+              "75 W",
+              "80 W"
             ],
             "correct": 0,
-            "solution": "Total resistance R_total = 10 + 30 = 40 Ω. Current I = V / R_total = 12 V / 40 Ω = 0.30 A. Potential difference across the 30 Ω resistor: V₃₀ = I × R₂ = 0.30 A × 30 Ω = 9.0 V (voltage divider: 12 × (30/40) = 9.0 V)."
+            "solution": "Resistances: \\(R=V^2/P\\) gives 806.7 Ω and 484 Ω. In series, total 1291 Ω, so \\(P=\\dfrac{V^2}{R_1+R_2}=37.5\\) W — less than either lamp alone at full rating (the powers do not simply add)."
           },
           {
-            "question": "What is the resistance of an ideal voltmeter and an ideal ammeter?",
+            "question": "Two lamps rated 60 W and 150 W at 220 V are connected in series across a 220 V supply. What total power do they dissipate (assuming constant resistances)?",
             "options": [
-              "Ideal voltmeter: Infinite resistance; Ideal ammeter: Zero resistance",
-              "Ideal voltmeter: Zero resistance; Ideal ammeter: Infinite resistance",
-              "Both have zero resistance",
-              "Both have infinite resistance",
-              "Both have 1.0 Ω resistance"
+              "94.87 W",
+              "105 W",
+              "85.71 W",
+              "42.86 W",
+              "210 W"
             ],
-            "correct": 0,
-            "solution": "An ammeter is connected in series, so it must have zero internal resistance to avoid altering the circuit current. A voltmeter is connected in parallel, so it must have infinite internal resistance to draw zero current from the branch it measures."
+            "correct": 3,
+            "solution": "Resistances: \\(R=V^2/P\\) gives 806.7 Ω and 322.7 Ω. In series, total 1129 Ω, so \\(P=\\dfrac{V^2}{R_1+R_2}=42.86\\) W — less than either lamp alone at full rating (the powers do not simply add)."
           },
           {
             "question": "Charges of \\(+3.0\\) nC and \\(-3.0\\) nC are 0.20 m apart. What is the electric field at the midpoint? (\\(k = 9.0 \\times 10^{9}\\) N m<sup>2</sup> C<sup>-2</sup>)",
@@ -38415,40 +38415,40 @@ const subjects = [
             "solution": "\\(R = R_0(1 + \\alpha\\Delta T) = 10.0(1 + 0.004 \\times 100) = 14.0\\ \\Omega\\). \\(P = V^2/R = 144/14.0 = 10.3\\) W, less than the 14.4 W at 20 °C."
           },
           {
-            "question": "What is an ohmic conductor?",
+            "question": "A battery of emf 12 V and internal resistance 1 Ω is connected to a 5 Ω resistor. What is the potential difference across the resistor?",
             "options": [
-              "A conductor for which current is strictly directly proportional to applied voltage at constant temperature (constant resistance)",
-              "A semiconductor whose resistance drops with temperature",
-              "A superconductor with zero resistance",
-              "A non-linear device like a diode",
-              "A material that generates electric charge spontaneously"
+              "12 V",
+              "10 V",
+              "2 V",
+              "15 V",
+              "6 V"
             ],
-            "correct": 0,
-            "solution": "An ohmic conductor obeys Ohm's Law (V = IR), meaning that the current flowing through it is directly proportional to the potential difference across it at constant temperature, producing a linear I-V graph passing through the origin."
+            "correct": 1,
+            "solution": "Current \\(I=\\dfrac{E}{R+r}=\\dfrac{12}{6}=2\\) A. Terminal voltage \\(V=IR=2\\times5=10\\) V (less than the emf because of the internal drop)."
           },
           {
-            "question": "What is the equivalent resistance between two opposite corners of a circuit consisting of two 10 Ω resistors in series, placed in parallel with a third 20 Ω resistor?",
+            "question": "Two lamps rated 100 W and 75 W at 220 V are connected in series across a 220 V supply. What total power do they dissipate (assuming constant resistances)?",
             "options": [
-              "10 Ω",
-              "20 Ω",
-              "40 Ω",
-              "5 Ω",
-              "15 Ω"
+              "85.71 W",
+              "87.5 W",
+              "86.6 W",
+              "175 W",
+              "42.86 W"
             ],
-            "correct": 0,
-            "solution": "The series branch has resistance R_series = 10 + 10 = 20 Ω. This branch is in parallel with a 20 Ω resistor: 1 / R_eq = 1/20 + 1/20 = 2/20 = 1/10 ⇒ R_eq = 10 Ω."
+            "correct": 4,
+            "solution": "Resistances: \\(R=V^2/P\\) gives 484 Ω and 645.3 Ω. In series, total 1129 Ω, so \\(P=\\dfrac{V^2}{R_1+R_2}=42.86\\) W — less than either lamp alone at full rating (the powers do not simply add)."
           },
           {
-            "question": "Which of the following defines electric current in SI base units?",
+            "question": "A battery of emf 9 V and internal resistance 2 Ω is connected to a 5 Ω resistor. What is the potential difference across the resistor?",
             "options": [
-              "Ampere (A), a fundamental base unit",
-              "Coulomb per second (C/s), a derived unit",
-              "Volt per ohm (V/Ω)",
-              "Joule per second (J/s)",
-              "Watt per volt (W/V)"
+              "4.5 V",
+              "8.429 V",
+              "2.571 V",
+              "15 V",
+              "6.429 V"
             ],
-            "correct": 0,
-            "solution": "In the SI system, the Ampere (A) is chosen as one of the seven fundamental base units (and the Coulomb is defined as a derived unit, 1 C = 1 A·s)."
+            "correct": 4,
+            "solution": "Current \\(I=\\dfrac{E}{R+r}=\\dfrac{9}{7}=1.286\\) A. Terminal voltage \\(V=IR=1.286\\times5=6.429\\) V (less than the emf because of the internal drop)."
           },
           {
             "question": "A 2.0 \\(\\mu\\)F capacitor is charged to 300 V and then disconnected from the source. The plates are slowly pulled apart until the separation has doubled. How much work is done?",
@@ -38463,28 +38463,28 @@ const subjects = [
             "solution": "Charge stays constant and \\(C\\) halves, so \\(U = Q^2/2C\\) doubles. \\(U_1 = \\tfrac{1}{2}(2.0 \\times 10^{-6})(300)^2 = 0.090\\) J, \\(U_2 = 0.18\\) J. The work done \\(= U_2 - U_1 = 0.090\\) J."
           },
           {
-            "question": "What is the drift velocity of conduction electrons in a metal wire typically on the order of?",
+            "question": "Two lamps rated 60 W and 100 W at 120 V are connected in series across a 120 V supply. What total power do they dissipate (assuming constant resistances)?",
             "options": [
-              "A few millimeters per second (10⁻³ m/s)",
-              "The speed of light (3 × 10⁸ m/s)",
-              "The speed of sound in air (340 m/s)",
-              "1000 km/s",
-              "Zero"
+              "37.5 W",
+              "80 W",
+              "77.46 W",
+              "75 W",
+              "160 W"
             ],
             "correct": 0,
-            "solution": "Although the electric field signal propagates along the wire near the speed of light, the actual average drift velocity of the conduction electrons themselves is surprisingly slow, typically around 10⁻⁴ to 10⁻³ m/s (fractions of a millimeter per second) due to frequent collisions with lattice ions."
+            "solution": "Resistances: \\(R=V^2/P\\) gives 240 Ω and 144 Ω. In series, total 384 Ω, so \\(P=\\dfrac{V^2}{R_1+R_2}=37.5\\) W — less than either lamp alone at full rating (the powers do not simply add)."
           },
           {
-            "question": "A battery supplies a potential difference of 1.5 V. The current in the circuit is 30 mA. What is the resistance of the resistor in the circuit?",
+            "question": "A battery of emf 9 V and internal resistance 2 Ω is connected to a 4 Ω resistor. What is the potential difference across the resistor?",
             "options": [
-              "50 Ω",
-              "0.045 Ω",
-              "45 Ω",
-              "0.05 Ω",
-              "6 Ω"
+              "6 V",
+              "8 V",
+              "18 V",
+              "4.5 V",
+              "3 V"
             ],
             "correct": 0,
-            "solution": "Using Ohm's law (V = I · R):\nR = V / I = 1.5 V / (30 × 10⁻³ A) = 1.5 / 0.03 = 50 Ω."
+            "solution": "Current \\(I=\\dfrac{E}{R+r}=\\dfrac{9}{6}=1.5\\) A. Terminal voltage \\(V=IR=1.5\\times4=6\\) V (less than the emf because of the internal drop)."
           },
           {
             "question": "Which of the following statements about an electrical circuit with resistors and capacitors is incorrect?",
@@ -38499,16 +38499,16 @@ const subjects = [
             "solution": "For capacitors in series, the reciprocal of the equivalent capacitance equals the sum of the reciprocals: 1/Ceq = 1/C1 + 1/C2 (or Ceq = C1·C2 / (C1+C2) for two capacitors). Capacitances add directly (Ceq = C1 + C2) only when connected in parallel. Therefore, statement C is incorrect."
           },
           {
-            "question": "Which law of electrical circuits states that the algebraic sum of the currents flowing into a node is zero?",
+            "question": "Two lamps rated 100 W and 25 W at 220 V are connected in series across a 220 V supply. What total power do they dissipate (assuming constant resistances)?",
             "options": [
-              "Kirchhoff's third law",
-              "Kirchhoff's second law",
-              "Kirchhoff's first law",
-              "Ohm's law",
-              "Gauss's law"
+              "125 W",
+              "40 W",
+              "50 W",
+              "20 W",
+              "62.5 W"
             ],
-            "correct": 2,
-            "solution": "Kirchhoff's first law (Kirchhoff's Current Law, KCL) states that by conservation of electric charge, the algebraic sum of all electric currents entering and exiting any node (junction) in an electrical circuit is zero (Σ I = 0)."
+            "correct": 3,
+            "solution": "Resistances: \\(R=V^2/P\\) gives 484 Ω and 1936 Ω. In series, total 2420 Ω, so \\(P=\\dfrac{V^2}{R_1+R_2}=20\\) W — less than either lamp alone at full rating (the powers do not simply add)."
           },
           {
             "question": "A particle of mass 1.0 mg and charge \\(+2.0\\ \\mu\\text{C}\\) is released from rest at a point where the potential is 300 V. What is its speed when it reaches a point at 100 V?",
@@ -38577,76 +38577,76 @@ const subjects = [
         "name": "Magnetism & Electromagnetism",
         "questions": [
           {
-            "question": "What is the magnetic flux through a 0.5 m² area when a magnetic field of 2 T is perpendicular to the surface?",
+            "question": "A charged particle moves in a circle of radius 10 cm in a uniform magnetic field. Its speed is multiplied by 3 and the magnetic field is multiplied by 2. What is the new radius?",
             "options": [
-              "0.5 Wb",
-              "1.0 Wb",
-              "1.5 Wb",
-              "2.0 Wb",
-              "2.5 Wb"
+              "45 cm",
+              "15 cm",
+              "5 cm",
+              "60 cm",
+              "30 cm"
             ],
             "correct": 1,
-            "solution": "Φ = BA cos θ = 2 × 0.5 × cos 0° = 1.0 Wb."
+            "solution": "\\(r=\\dfrac{mv}{qB}\\): r is proportional to v and inversely proportional to B, so \\(r_{new}=10\\times\\dfrac{3}{2}=15\\) cm."
           },
           {
-            "question": "A current-carrying loop of radius 5 cm carries 2 A. What is the magnetic field at its center? (μ₀=4π×10⁻⁷ Tm/A)",
+            "question": "A straight wire of length 0.2 m carries 2 A in a uniform 0.2 T field. The wire makes an angle of 30° with the field. What is the magnetic force on the wire?",
             "options": [
-              "2.5×10⁻⁶ T",
-              "5.0×10⁻⁶ T",
-              "7.5×10⁻⁶ T",
-              "1.0×10⁻⁵ T",
-              "2.5×10⁻⁵ T"
-            ],
-            "correct": 3,
-            "solution": "B=μ₀I/(2r)=4π×10⁻⁷×2/(2×0.05)=4π×10⁻⁷×20=2.51×10⁻⁵ T≈2.5×10⁻⁵ T."
-          },
-          {
-            "question": "A proton moves at 2×10⁶ m/s perpendicular to a 0.5 T magnetic field. What is the radius of its circular path? (m_p=1.67×10⁻²⁷ kg, e=1.6×10⁻¹⁹ C)",
-            "options": [
-              "2.1 cm",
-              "4.2 cm",
-              "6.3 cm",
-              "8.4 cm",
-              "10.5 cm"
+              "0.06928 N",
+              "0.04 N",
+              "0.16 N",
+              "0.08 N",
+              "2 N"
             ],
             "correct": 1,
-            "solution": "r=mv/(qB)=1.67×10⁻²⁷×2×10⁶/(1.6×10⁻¹⁹×0.5)=4.18×10⁻² m≈4.2 cm."
+            "solution": "\\(F=BIL\\sin\\theta=0.2\\times2\\times0.2\\times\\sin30^\\circ=0.04\\) N."
           },
           {
-            "question": "A solenoid of length 0.5 m has 1000 turns and carries 2 A. What is the magnetic field inside? (μ₀=4π×10⁻⁷)",
+            "question": "A coil of 50 turns and area 0.05 m² has its plane perpendicular to a magnetic field that rises uniformly from 0.1 T to 0.6 T in 0.2 s. What is the magnitude of the induced emf?",
             "options": [
-              "2.5×10⁻³ T",
-              "5.0×10⁻³ T",
-              "7.5×10⁻³ T",
-              "1.0×10⁻² T",
-              "2.0×10⁻² T"
-            ],
-            "correct": 1,
-            "solution": "B=μ₀nI=4π×10⁻⁷×(1000/0.5)×2=4π×10⁻⁷×4000=5.03×10⁻³ T≈5.0×10⁻³ T."
-          },
-          {
-            "question": "A square loop of side 10 cm carries 5 A in a 0.2 T field parallel to the plane of the loop. What is the torque?",
-            "options": [
-              "0.01 Nm",
-              "0.05 Nm",
-              "0.1 Nm",
-              "0.5 Nm",
-              "1.0 Nm"
+              "6.25 V",
+              "3.125 V",
+              "12.5 V",
+              "7.5 V",
+              "1.25 V"
             ],
             "correct": 0,
-            "solution": "τ=NIAB=1×5×(0.1)²×0.2=5×0.01×0.2=0.01 Nm."
+            "solution": "Faraday: \\(\\varepsilon=N\\dfrac{\\Delta\\Phi}{\\Delta t}=N\\dfrac{A\\,\\Delta B}{\\Delta t}=50\\times\\dfrac{0.05\\times0.5}{0.2}=6.25\\) V."
           },
           {
-            "question": "An electron moves at 10⁷ m/s perpendicular to a magnetic field and experiences a force of 1.6×10⁻¹⁵ N. What is B? (e=1.6×10⁻¹⁹ C)",
+            "question": "A straight wire of length 0.2 m carries 5 A in a uniform 0.2 T field. The wire makes an angle of 30° with the field. What is the magnetic force on the wire?",
             "options": [
-              "10⁻⁴ T",
-              "10⁻³ T",
-              "10⁻² T",
-              "10⁻¹ T",
-              "1 T"
+              "0.4 N",
+              "5 N",
+              "0.1 N",
+              "0.1732 N",
+              "0.2 N"
             ],
-            "correct": 1,
-            "solution": "F=qvB → B=F/(qv)=1.6×10⁻¹⁵/(1.6×10⁻¹⁹×10⁷)=10⁻³ T."
+            "correct": 2,
+            "solution": "\\(F=BIL\\sin\\theta=0.2\\times5\\times0.2\\times\\sin30^\\circ=0.1\\) N."
+          },
+          {
+            "question": "A charged particle moves in a circle of radius 10 cm in a uniform magnetic field. Its speed is multiplied by 2 and the magnetic field is multiplied by 4. What is the new radius?",
+            "options": [
+              "5 cm",
+              "20 cm",
+              "2.5 cm",
+              "10 cm",
+              "80 cm"
+            ],
+            "correct": 0,
+            "solution": "\\(r=\\dfrac{mv}{qB}\\): r is proportional to v and inversely proportional to B, so \\(r_{new}=10\\times\\dfrac{2}{4}=5\\) cm."
+          },
+          {
+            "question": "A straight wire of length 0.5 m carries 10 A in a uniform 0.2 T field. The wire makes an angle of 30° with the field. What is the magnetic force on the wire?",
+            "options": [
+              "1 N",
+              "4 N",
+              "2 N",
+              "0.5 N",
+              "0.866 N"
+            ],
+            "correct": 3,
+            "solution": "\\(F=BIL\\sin\\theta=0.2\\times10\\times0.5\\times\\sin30^\\circ=0.5\\) N."
           },
           {
             "question": "A conducting rod of length 0.40 m slides at a constant 5.0 m/s on rails in a perpendicular field of 0.30 T. The circuit has a total resistance of 2.0 \\(\\Omega\\). What force is needed to keep the rod moving at constant speed?",
@@ -38661,64 +38661,64 @@ const subjects = [
             "solution": "Emf \\(= BLv = 0.30 \\times 0.40 \\times 5.0 = 0.60\\) V. Current \\(= 0.60/2.0 = 0.30\\) A. Magnetic force \\(= BIL = 0.30 \\times 0.30 \\times 0.40 = 0.036\\) N, so the same force must be applied (Lenz's law)."
           },
           {
-            "question": "The magnetic field inside a long straight solenoid depends on:",
+            "question": "A charged particle moves in a circle of radius 4 cm in a uniform magnetic field. Its speed is multiplied by 3 and the magnetic field is multiplied by 2. What is the new radius?",
             "options": [
-              "Length of solenoid",
-              "Number of turns",
-              "Current",
-              "Turns per unit length and current",
-              "Diameter of solenoid"
+              "24 cm",
+              "18 cm",
+              "12 cm",
+              "6 cm",
+              "2 cm"
             ],
             "correct": 3,
-            "solution": "B=μ₀nI depends on turns per unit length (n) and current (I)."
+            "solution": "\\(r=\\dfrac{mv}{qB}\\): r is proportional to v and inversely proportional to B, so \\(r_{new}=4\\times\\dfrac{3}{2}=6\\) cm."
           },
           {
-            "question": "A charged particle moves parallel to a uniform magnetic field. The force on it is:",
+            "question": "A charged particle moves in a circle of radius 10 cm in a uniform magnetic field. Its speed is multiplied by 3 and the magnetic field is multiplied by 4. What is the new radius?",
             "options": [
-              "Maximum",
-              "Minimum but nonzero",
-              "Zero",
-              "Depends on speed",
-              "Depends on charge"
+              "120 cm",
+              "7.5 cm",
+              "2.5 cm",
+              "30 cm",
+              "22.5 cm"
             ],
-            "correct": 2,
-            "solution": "F=qvB sinθ. When θ=0° (parallel), sinθ=0, so F=0."
+            "correct": 1,
+            "solution": "\\(r=\\dfrac{mv}{qB}\\): r is proportional to v and inversely proportional to B, so \\(r_{new}=10\\times\\dfrac{3}{4}=7.5\\) cm."
           },
           {
-            "question": "A circular coil of 50 turns and radius 0.1 m carries 2 A. What is its magnetic moment?",
+            "question": "A charged particle moves in a circle of radius 2 cm in a uniform magnetic field. Its speed is multiplied by 3 and the magnetic field is multiplied by 2. What is the new radius?",
             "options": [
-              "0.314 Am²",
-              "0.628 Am²",
-              "1.257 Am²",
-              "3.14 Am²",
-              "6.28 Am²"
+              "6 cm",
+              "1 cm",
+              "12 cm",
+              "9 cm",
+              "3 cm"
             ],
-            "correct": 2,
-            "solution": "μ=NIA=50×2×π×(0.1)²=50×2×0.0314=3.14 Am²."
+            "correct": 4,
+            "solution": "\\(r=\\dfrac{mv}{qB}\\): r is proportional to v and inversely proportional to B, so \\(r_{new}=2\\times\\dfrac{3}{2}=3\\) cm."
           },
           {
-            "question": "Two parallel wires 1 m apart carry currents 2 A and 3 A in the same direction. What is the force per unit length? (μ₀=4π×10⁻⁷)",
+            "question": "A straight wire of length 0.5 m carries 2 A in a uniform 0.5 T field. The wire makes an angle of 30° with the field. What is the magnetic force on the wire?",
             "options": [
-              "1.2×10⁻⁶ N/m",
-              "2.4×10⁻⁶ N/m",
-              "3.6×10⁻⁶ N/m",
-              "4.8×10⁻⁶ N/m",
-              "6.0×10⁻⁶ N/m"
-            ],
-            "correct": 0,
-            "solution": "F/L=μ₀I₁I₂/(2πd)=4π×10⁻⁷×6/(2π×1)=1.2×10⁻⁶ N/m (attractive)."
-          },
-          {
-            "question": "A transformer has 1000 primary turns and 100 secondary turns. If primary current is 2 A, what is secondary current? (ideal)",
-            "options": [
-              "0.2 A",
-              "2 A",
-              "10 A",
-              "20 A",
-              "50 A"
+              "0.5 N",
+              "1 N",
+              "0.433 N",
+              "0.25 N",
+              "2 N"
             ],
             "correct": 3,
-            "solution": "For ideal transformer: N_p/N_s=I_s/I_p → I_s=I_p×N_p/N_s=2×1000/100=20 A."
+            "solution": "\\(F=BIL\\sin\\theta=0.5\\times2\\times0.5\\times\\sin30^\\circ=0.25\\) N."
+          },
+          {
+            "question": "A straight wire of length 0.2 m carries 4 A in a uniform 0.2 T field. The wire makes an angle of 30° with the field. What is the magnetic force on the wire?",
+            "options": [
+              "0.16 N",
+              "4 N",
+              "0.08 N",
+              "0.32 N",
+              "0.1386 N"
+            ],
+            "correct": 2,
+            "solution": "\\(F=BIL\\sin\\theta=0.2\\times4\\times0.2\\times\\sin30^\\circ=0.08\\) N."
           },
           {
             "question": "A flat coil of 200 turns and area 25 cm<sup>2</sup> is perpendicular to a field that falls uniformly from 0.40 T to zero in 0.050 s. What emf is induced?",
@@ -38745,16 +38745,16 @@ const subjects = [
             "solution": "\\(F/L = \\dfrac{\\mu_0I_1I_2}{2\\pi d} = \\dfrac{2 \\times 10^{-7} \\times 10 \\times 20}{0.050} = 8.0 \\times 10^{-4}\\) N/m. Currents in the same direction attract."
           },
           {
-            "question": "A coil of 100 turns experiences a flux change from 0.02 Wb to 0.08 Wb in 0.5 s. What is the induced EMF?",
+            "question": "A charged particle moves in a circle of radius 6 cm in a uniform magnetic field. Its speed is multiplied by 3 and the magnetic field is multiplied by 4. What is the new radius?",
             "options": [
-              "2 V",
-              "6 V",
-              "10 V",
-              "12 V",
-              "16 V"
+              "13.5 cm",
+              "4.5 cm",
+              "72 cm",
+              "18 cm",
+              "1.5 cm"
             ],
-            "correct": 3,
-            "solution": "ε=−NΔΦ/Δt=−100×(0.08−0.02)/0.5=−100×0.12=−12 V. Magnitude=12 V."
+            "correct": 1,
+            "solution": "\\(r=\\dfrac{mv}{qB}\\): r is proportional to v and inversely proportional to B, so \\(r_{new}=6\\times\\dfrac{3}{4}=4.5\\) cm."
           },
           {
             "question": "A solenoid has 800 turns over a length of 0.40 m and carries a current of 2.0 A. What is the magnetic flux density inside it? (\\(\\mu_0 = 4\\pi \\times 10^{-7}\\) T m/A)",
@@ -38805,16 +38805,16 @@ const subjects = [
             "solution": "\\(\\omega = 2\\pi \\times 50 = 314\\) rad/s. Peak emf \\(= NBA\\omega = 100 \\times 0.30 \\times 0.020 \\times 314 = 188\\) V. \\(\\varepsilon_{\\text{rms}} = 188/\\sqrt{2} = 133\\) V."
           },
           {
-            "question": "A capacitor of 10 μF is connected to 50 Hz AC supply. What is the capacitive reactance?",
+            "question": "A charged particle moves in a circle of radius 2 cm in a uniform magnetic field. Its speed is multiplied by 3 and the magnetic field is multiplied by 4. What is the new radius?",
             "options": [
-              "159 Ω",
-              "318 Ω",
-              "636 Ω",
-              "1000 Ω",
-              "2000 Ω"
+              "1.5 cm",
+              "24 cm",
+              "0.5 cm",
+              "6 cm",
+              "4.5 cm"
             ],
-            "correct": 1,
-            "solution": "X_C=1/(2πfC)=1/(2π×50×10×10⁻⁶)=1/(3.14×10⁻³)=318 Ω."
+            "correct": 0,
+            "solution": "\\(r=\\dfrac{mv}{qB}\\): r is proportional to v and inversely proportional to B, so \\(r_{new}=2\\times\\dfrac{3}{4}=1.5\\) cm."
           },
           {
             "question": "A straight wire 0.30 m long carries 4.0 A in a uniform field of 0.50 T. The wire makes an angle of 30° with the field. What is the force on it?",
@@ -38829,40 +38829,40 @@ const subjects = [
             "solution": "\\(F = BIL\\sin\\theta = 0.50 \\times 4.0 \\times 0.30 \\times \\sin 30^{\\circ} = 0.30\\) N."
           },
           {
-            "question": "A 100-turn coil rotates at 50 rev/s in a 0.5 T field. If area is 0.02 m², what is the maximum induced EMF?",
+            "question": "A coil of 200 turns and area 0.05 m² has its plane perpendicular to a magnetic field that rises uniformly from 0.2 T to 0.8 T in 0.2 s. What is the magnitude of the induced emf?",
             "options": [
-              "314 V",
-              "628 V",
-              "942 V",
-              "1256 V",
-              "1570 V"
+              "0.15 V",
+              "30 V",
+              "60 V",
+              "15 V",
+              "6 V"
             ],
             "correct": 1,
-            "solution": "ε_max=NBAω=100×0.5×0.02×2π×50=100×0.5×0.02×314=314 V. Wait, recalc: 100×0.5×0.02=1. 1×314=314 V. Hmm let me check: ω=2π×50=314 rad/s. ε_max=100×0.5×0.02×314=314 V. Option A."
+            "solution": "Faraday: \\(\\varepsilon=N\\dfrac{\\Delta\\Phi}{\\Delta t}=N\\dfrac{A\\,\\Delta B}{\\Delta t}=200\\times\\dfrac{0.05\\times0.6}{0.2}=30\\) V."
           },
           {
-            "question": "In a DC motor, the function of the commutator is to:",
+            "question": "A charged particle moves in a circle of radius 6 cm in a uniform magnetic field. Its speed is multiplied by 2 and the magnetic field is multiplied by 4. What is the new radius?",
             "options": [
-              "Increase voltage",
-              "Reverse current direction in coil every half rotation",
-              "Reduce friction",
-              "Convert AC to DC",
-              "Store energy"
-            ],
-            "correct": 1,
-            "solution": "Commutator reverses current direction in the coil each half rotation to maintain torque direction."
-          },
-          {
-            "question": "A charged particle enters a uniform magnetic field at an angle. Its path is:",
-            "options": [
-              "Straight line",
-              "Circle",
-              "Ellipse",
-              "Helix",
-              "Parabola"
+              "6 cm",
+              "1.5 cm",
+              "12 cm",
+              "3 cm",
+              "48 cm"
             ],
             "correct": 3,
-            "solution": "At an angle, the parallel component is unaffected and the perpendicular component causes circular motion. Result: helical path."
+            "solution": "\\(r=\\dfrac{mv}{qB}\\): r is proportional to v and inversely proportional to B, so \\(r_{new}=6\\times\\dfrac{2}{4}=3\\) cm."
+          },
+          {
+            "question": "A straight wire of length 0.2 m carries 4 A in a uniform 0.5 T field. The wire makes an angle of 30° with the field. What is the magnetic force on the wire?",
+            "options": [
+              "0.3464 N",
+              "0.8 N",
+              "10 N",
+              "0.4 N",
+              "0.2 N"
+            ],
+            "correct": 4,
+            "solution": "\\(F=BIL\\sin\\theta=0.5\\times4\\times0.2\\times\\sin30^\\circ=0.2\\) N."
           },
           {
             "question": "A proton (charge q = +1.6 × 10⁻¹⁹ C) moves at 2.0 × 10⁶ m/s perpendicular to a uniform magnetic field of 0.50 T. What is the magnitude of the magnetic force exerted on the proton?",
@@ -38877,16 +38877,16 @@ const subjects = [
             "solution": "The magnetic Lorentz force on a moving charge is F = q v B sin θ. Here θ = 90° (perpendicular), so sin(90°) = 1. F = (1.6 × 10⁻¹⁹ C) × (2.0 × 10⁶ m/s) × (0.50 T) = 1.6 × 10⁻¹³ N."
           },
           {
-            "question": "A straight wire of length 0.40 m carries a current of 5.0 A perpendicular to a uniform magnetic field of 0.20 T. What is the magnetic force on the wire?",
+            "question": "A coil of 100 turns and area 0.02 m² has its plane perpendicular to a magnetic field that rises uniformly from 0.2 T to 0.6 T in 0.5 s. What is the magnitude of the induced emf?",
             "options": [
-              "0.40 N",
-              "0.80 N",
-              "0.20 N",
-              "4.0 N",
-              "0.04 N"
+              "0.8 V",
+              "1.6 V",
+              "0.016 V",
+              "3.2 V",
+              "2.4 V"
             ],
-            "correct": 0,
-            "solution": "The magnetic force on a current-carrying wire is F = I L B sin θ = 5.0 A × 0.40 m × 0.20 T × sin(90°) = 0.40 N."
+            "correct": 1,
+            "solution": "Faraday: \\(\\varepsilon=N\\dfrac{\\Delta\\Phi}{\\Delta t}=N\\dfrac{A\\,\\Delta B}{\\Delta t}=100\\times\\dfrac{0.02\\times0.4}{0.5}=1.6\\) V."
           },
           {
             "question": "According to Lenz's Law, what is the direction of an induced electromotive force (or induced current)?",
@@ -38901,16 +38901,16 @@ const subjects = [
             "solution": "Lenz's Law (a consequence of conservation of energy) states that the direction of any induced current is such that the magnetic field created by that current opposes the change in magnetic flux that induced it."
           },
           {
-            "question": "An ideal step-down transformer has 1000 turns on its primary coil and 100 turns on its secondary coil. If the primary voltage is 240 V, what is the secondary voltage?",
+            "question": "An ideal transformer has 500 turns in the primary and 5000 turns in the secondary. The primary is connected to 240 V AC and the secondary delivers 1 A. What current flows in the primary?",
             "options": [
-              "24 V",
-              "2400 V",
-              "12 V",
-              "48 V",
-              "120 V"
+              "1 A",
+              "10 A",
+              "100 A",
+              "0.05 A",
+              "0.1 A"
             ],
-            "correct": 0,
-            "solution": "The transformer equation is V_s / V_p = N_s / N_p ⇒ V_s = V_p × (N_s / N_p) = 240 V × (100 / 1000) = 240 × 0.1 = 24 V."
+            "correct": 1,
+            "solution": "Secondary voltage: \\(240\\times\\dfrac{5000}{500}=2400\\) V. Ideal: power in = power out, so \\(I_pV_p=I_sV_s\\Rightarrow I_p=1\\times10=10\\) A (the step-up raises voltage and lowers current only in the secondary)."
           },
           {
             "question": "A charged particle enters a region of uniform magnetic field perpendicular to its velocity. What path does the particle follow, and what work is done by the magnetic force?",
@@ -38937,40 +38937,40 @@ const subjects = [
             "solution": "Magnetic flux is Φ_B = B A cos θ. The loop is perpendicular to the field, so the normal vector is parallel to B (θ = 0°, cos 0° = 1). Area A = π r² = 3.14 × (0.10)² = 0.0314 m². Φ_B = 2.0 T × 0.0314 m² = 0.0628 Wb (Webers)."
           },
           {
-            "question": "What is the SI unit of magnetic flux density (magnetic field strength B)?",
+            "question": "A straight wire of length 0.5 m carries 2 A in a uniform 1 T field. The wire makes an angle of 30° with the field. What is the magnetic force on the wire?",
             "options": [
-              "Tesla (T)",
-              "Weber (Wb)",
-              "Henry (H)",
-              "Gauss (G)",
-              "Ampere per meter (A/m)"
+              "0.866 N",
+              "1 N",
+              "4 N",
+              "2 N",
+              "0.5 N"
             ],
-            "correct": 0,
-            "solution": "The SI unit for magnetic field strength (magnetic flux density B) is the Tesla (T), where 1 T = 1 N·s·C⁻¹·m⁻¹ = 1 Wb/m²."
+            "correct": 4,
+            "solution": "\\(F=BIL\\sin\\theta=1\\times2\\times0.5\\times\\sin30^\\circ=0.5\\) N."
           },
           {
-            "question": "What is the radius of the circular path of an electron (mass m, charge e) moving with speed v perpendicular to a uniform magnetic field B?",
+            "question": "A coil of 10 turns and area 0.02 m² has its plane perpendicular to a magnetic field that rises uniformly from 0.2 T to 0.6 T in 0.2 s. What is the magnitude of the induced emf?",
             "options": [
-              "r = m v / (e B)",
-              "r = e B / (m v)",
-              "r = m B / (e v)",
-              "r = e v / (m B)",
-              "r = m v² / (e B)"
+              "0.4 V",
+              "0.2 V",
+              "0.08 V",
+              "0.6 V",
+              "0.8 V"
             ],
             "correct": 0,
-            "solution": "The magnetic Lorentz force provides the necessary centripetal force: e v B = m v² / r. Solving for r yields r = m v / (e B)."
+            "solution": "Faraday: \\(\\varepsilon=N\\dfrac{\\Delta\\Phi}{\\Delta t}=N\\dfrac{A\\,\\Delta B}{\\Delta t}=10\\times\\dfrac{0.02\\times0.4}{0.2}=0.4\\) V."
           },
           {
-            "question": "How does the magnetic field inside an ideal, tightly wound long solenoid depend on the current I and number of turns per unit length n?",
+            "question": "An ideal transformer has 500 turns in the primary and 5000 turns in the secondary. The primary is connected to 240 V AC and the secondary delivers 5 A. What current flows in the primary?",
             "options": [
-              "B = μ₀ n I",
-              "B = μ₀ I / (2π r)",
-              "B = μ₀ n I / 2",
-              "B = μ₀ n² I",
-              "B = μ₀ I / n"
+              "0.25 A",
+              "500 A",
+              "5 A",
+              "0.5 A",
+              "50 A"
             ],
-            "correct": 0,
-            "solution": "By Ampère's Law, the magnetic field inside an ideal solenoid is uniform and given by B = μ₀ n I, where n = N/L is the number of turns per unit length and I is the current."
+            "correct": 4,
+            "solution": "Secondary voltage: \\(240\\times\\dfrac{5000}{500}=2400\\) V. Ideal: power in = power out, so \\(I_pV_p=I_sV_s\\Rightarrow I_p=5\\times10=50\\) A (the step-up raises voltage and lowers current only in the secondary)."
           },
           {
             "question": "According to Faraday's Law of Induction, what determines the magnitude of the electromotive force (emf) induced in a circuit?",
@@ -38997,16 +38997,16 @@ const subjects = [
             "solution": "By the right-hand rule and Ampère's/Biot-Savart law, parallel currents flowing in the same direction generate magnetic fields that produce an attractive magnetic force between the wires (F/L = μ₀ I₁ I₂ / (2π d)). Opposite (antiparallel) currents repel."
           },
           {
-            "question": "A stationary electric charge is placed in a strong, constant magnetic field. What magnetic force does the charge experience?",
+            "question": "An ideal transformer has 100 turns in the primary and 1000 turns in the secondary. The primary is connected to 220 V AC and the secondary delivers 1 A. What current flows in the primary?",
             "options": [
-              "0 N",
-              "q B",
-              "q B / c",
-              "Infinite force",
-              "A force depending on its mass"
+              "100 A",
+              "0.1 A",
+              "0.05 A",
+              "10 A",
+              "1 A"
             ],
-            "correct": 0,
-            "solution": "The magnetic force on a charge is F = q v B sin θ. Because the charge is stationary, its speed is v = 0, so the magnetic force is identically 0 N. (Magnetic fields only exert force on moving charges)."
+            "correct": 3,
+            "solution": "Secondary voltage: \\(220\\times\\dfrac{1000}{100}=2200\\) V. Ideal: power in = power out, so \\(I_pV_p=I_sV_s\\Rightarrow I_p=1\\times10=10\\) A (the step-up raises voltage and lowers current only in the secondary)."
           },
           {
             "question": "A square coil of 50 turns with an area of 0.04 m² is in a magnetic field that changes uniformly from 0.10 T to 0.50 T in 0.20 s. What is the magnitude of the induced emf in the coil?",
@@ -39033,28 +39033,28 @@ const subjects = [
             "solution": "As the motor coil rotates past the vertical plane, the direction of magnetic torque would reverse. The split-ring commutator reverses the current connection every 180° (half turn), maintaining a constant torque direction and enabling continuous rotation."
           },
           {
-            "question": "Which of the following materials is classified as a ferromagnetic substance?",
+            "question": "A coil of 100 turns and area 0.02 m² has its plane perpendicular to a magnetic field that rises uniformly from 0.2 T to 0.6 T in 0.1 s. What is the magnitude of the induced emf?",
             "options": [
-              "Iron (Fe)",
-              "Copper (Cu)",
-              "Aluminum (Al)",
-              "Water (H₂O)",
-              "Silver (Ag)"
+              "12 V",
+              "8 V",
+              "4 V",
+              "0.08 V",
+              "16 V"
             ],
-            "correct": 0,
-            "solution": "Ferromagnetic materials (such as iron, cobalt, and nickel) have permanent atomic magnetic dipoles that align parallel into microscopic magnetic domains, producing strong magnetization in the direction of an applied magnetic field."
+            "correct": 1,
+            "solution": "Faraday: \\(\\varepsilon=N\\dfrac{\\Delta\\Phi}{\\Delta t}=N\\dfrac{A\\,\\Delta B}{\\Delta t}=100\\times\\dfrac{0.02\\times0.4}{0.1}=8\\) V."
           },
           {
-            "question": "What is the magnetic field B at a distance r = 0.05 m from a long straight wire carrying a current I = 10 A? (μ₀ = 4π × 10⁻⁷ T·m/A)",
+            "question": "A coil of 50 turns and area 0.02 m² has its plane perpendicular to a magnetic field that rises uniformly from 0.2 T to 1 T in 0.5 s. What is the magnitude of the induced emf?",
             "options": [
-              "4.0 × 10⁻⁵ T",
-              "2.0 × 10⁻⁵ T",
-              "4.0 × 10⁻⁴ T",
-              "1.0 × 10⁻⁴ T",
-              "2.0 × 10⁻⁶ T"
+              "0.032 V",
+              "1.6 V",
+              "0.8 V",
+              "3.2 V",
+              "2 V"
             ],
-            "correct": 0,
-            "solution": "For a long straight wire: B = μ₀ I / (2π r) = (4π × 10⁻⁷ × 10) / (2π × 0.05) = (2 × 10⁻⁶) / 0.05 = 4.0 × 10⁻⁵ T."
+            "correct": 1,
+            "solution": "Faraday: \\(\\varepsilon=N\\dfrac{\\Delta\\Phi}{\\Delta t}=N\\dfrac{A\\,\\Delta B}{\\Delta t}=50\\times\\dfrac{0.02\\times0.8}{0.5}=1.6\\) V."
           },
           {
             "question": "In magnetic resonance imaging (MRI), superconducting coils are commonly cooled with liquid helium to generate what kind of magnetic field?",
@@ -39069,40 +39069,40 @@ const subjects = [
             "solution": "MRI relies on powerful superconducting electromagnets cooled by liquid helium (4.2 K) to generate strong, homogenous static magnetic fields (typically 1.5 T to 3 T) that align hydrogen proton nuclear spins in the patient's body."
           },
           {
-            "question": "What is the direction of the magnetic field lines outside a bar magnet?",
+            "question": "An ideal transformer has 200 turns in the primary and 2000 turns in the secondary. The primary is connected to 220 V AC and the secondary delivers 2 A. What current flows in the primary?",
             "options": [
-              "From the North pole to the South pole",
-              "From the South pole to the North pole",
-              "Radially outward in all directions",
-              "Concentric circles around the equator",
-              "Parallel to the length of the magnet exclusively"
+              "0.2 A",
+              "20 A",
+              "0.1 A",
+              "2 A",
+              "200 A"
             ],
-            "correct": 0,
-            "solution": "By convention, magnetic field lines outside a magnet exit from the North pole and curve around to enter the South pole (forming closed continuous loops that continue from South to North inside the magnet)."
+            "correct": 1,
+            "solution": "Secondary voltage: \\(220\\times\\dfrac{2000}{200}=2200\\) V. Ideal: power in = power out, so \\(I_pV_p=I_sV_s\\Rightarrow I_p=2\\times10=20\\) A (the step-up raises voltage and lowers current only in the secondary)."
           },
           {
-            "question": "In an ideal transformer, the primary coil has 200 turns and draws 2.0 A at 120 V. If the secondary coil has 800 turns, what is the secondary current?",
+            "question": "An ideal transformer has 200 turns in the primary and 2000 turns in the secondary. The primary is connected to 100 V AC and the secondary delivers 5 A. What current flows in the primary?",
             "options": [
-              "0.50 A",
-              "8.0 A",
-              "2.0 A",
-              "4.0 A",
-              "1.0 A"
+              "5 A",
+              "0.25 A",
+              "50 A",
+              "0.5 A",
+              "500 A"
             ],
-            "correct": 0,
-            "solution": "For an ideal transformer, power is conserved: V_p I_p = V_s I_s ⇒ I_s / I_p = N_p / N_s ⇒ I_s = I_p × (N_p / N_s) = 2.0 A × (200 / 800) = 2.0 × 0.25 = 0.50 A."
+            "correct": 2,
+            "solution": "Secondary voltage: \\(100\\times\\dfrac{2000}{200}=1000\\) V. Ideal: power in = power out, so \\(I_pV_p=I_sV_s\\Rightarrow I_p=5\\times10=50\\) A (the step-up raises voltage and lowers current only in the secondary)."
           },
           {
-            "question": "What happens when an electron moves parallel to the direction of a uniform magnetic field?",
+            "question": "An ideal transformer has 100 turns in the primary and 300 turns in the secondary. The primary is connected to 100 V AC and the secondary delivers 2 A. What current flows in the primary?",
             "options": [
-              "It experiences zero magnetic force and continues in a straight line with constant velocity",
-              "It is deflected in a circle",
-              "It accelerates in the direction of the field",
-              "It comes to an immediate stop",
-              "It emits synchrotron radiation"
+              "0.6667 A",
+              "0.3333 A",
+              "6 A",
+              "2 A",
+              "18 A"
             ],
-            "correct": 0,
-            "solution": "The magnetic force is F = q v B sin θ. When the velocity is parallel to the magnetic field, θ = 0°, so sin(0°) = 0, giving F = 0 N. The electron experiences no deflection and maintains its constant velocity."
+            "correct": 2,
+            "solution": "Secondary voltage: \\(100\\times\\dfrac{300}{100}=300\\) V. Ideal: power in = power out, so \\(I_pV_p=I_sV_s\\Rightarrow I_p=2\\times3=6\\) A (the step-up raises voltage and lowers current only in the secondary)."
           },
           {
             "question": "Given a current-carrying copper wire, what happens to a magnetic needle placed near it?",
@@ -39117,16 +39117,16 @@ const subjects = [
             "solution": "According to Oersted's experiment, an electric current generates a magnetic field forming concentric circular field lines around the conductor. A small magnetic needle acts as a magnetic dipole and rotates to align tangent to the resultant magnetic field lines."
           },
           {
-            "question": "Which physical law is the principle of voltage transformers based on?",
+            "question": "An ideal transformer has 500 turns in the primary and 2500 turns in the secondary. The primary is connected to 240 V AC and the secondary delivers 2 A. What current flows in the primary?",
             "options": [
-              "Faraday’s Law",
-              "Gauss’s Theorem",
-              "Coulomb’s Law",
-              "Kirchhoff’s Laws",
-              "Ohm’s Laws"
+              "0.2 A",
+              "50 A",
+              "10 A",
+              "0.4 A",
+              "2 A"
             ],
-            "correct": 0,
-            "solution": "Transformers operate on Faraday's Law of Electromagnetic Induction, where an alternating current in the primary coil creates a time-varying magnetic flux through the magnetic core, which induces an electromotive force (voltage) in the secondary coil."
+            "correct": 2,
+            "solution": "Secondary voltage: \\(240\\times\\dfrac{2500}{500}=1200\\) V. Ideal: power in = power out, so \\(I_pV_p=I_sV_s\\Rightarrow I_p=2\\times5=10\\) A (the step-up raises voltage and lowers current only in the secondary)."
           },
           {
             "question": "A conducting rod of mass m carries a current i and is in a magnetic field B. In which case is the magnitude of the force vector to which the rod is subjected maximum?",
@@ -39147,16 +39147,16 @@ const subjects = [
         "name": "Thermodynamics",
         "questions": [
           {
-            "question": "A gas in a container exerts a pressure of 100 kPa at 300 K. If the temperature is increased to 600 K at constant volume, what is the new pressure?",
+            "question": "A gas is compressed: the surroundings do 100 J of work on it, and it releases 800 J of heat. What is the change in its internal energy?",
             "options": [
-              "50 kPa",
-              "100 kPa",
-              "150 kPa",
-              "200 kPa",
-              "300 kPa"
+              "-700 J",
+              "100 J",
+              "900 J",
+              "-900 J",
+              "700 J"
             ],
-            "correct": 3,
-            "solution": "Gay-Lussac's law: P₁/T₁ = P₂/T₂. P₂ = P₁ × T₂/T₁ = 100 × 600/300 = 200 kPa."
+            "correct": 0,
+            "solution": "Heat released: Q = −800 J; work done by the gas: W = −100 J. \\(\\Delta U=Q-W=-800+100=-700\\) J."
           },
           {
             "question": "A thermometer bulb holds \\(0.50\\) cm<sup>3</sup> of mercury (\\(\\beta = 1.8 \\times 10^{-4}\\) K<sup>-1</sup>) in a glass bulb (\\(\\beta = 2.7 \\times 10^{-5}\\) K<sup>-1</sup>). The temperature rises by 50 K. What volume of mercury is pushed up the stem?",
@@ -39183,28 +39183,28 @@ const subjects = [
             "solution": "\\(T = \\theta + 273 = -40 + 273 = 233\\) K. (Check: \\(\\tfrac{9}{5}(-40) + 32 = -40\\).)"
           },
           {
-            "question": "A gas at 300 K and 1 atm is compressed to half its volume at constant temperature. What is the new pressure?",
+            "question": "An ideal gas expands at constant temperature and absorbs 800 J of heat. How much work does it do?",
             "options": [
-              "0.5 atm",
-              "1 atm",
-              "2 atm",
-              "4 atm",
-              "8 atm"
+              "0 J",
+              "1600 J",
+              "800 J",
+              "900 J",
+              "400 J"
             ],
             "correct": 2,
-            "solution": "Boyle's law: P₁V₁ = P₂V₂ (constant temperature). P₂ = P₁V₁/V₂ = 1 × V/(V/2) = 2 atm."
+            "solution": "Constant temperature means \\(\\Delta U=0\\) for an ideal gas, so \\(W=Q=800\\) J."
           },
           {
-            "question": "A gas at 300 K and 1 atm is compressed isothermally to half its volume. What is the new pressure?",
+            "question": "A fixed amount of ideal gas at 1 atm, 2 L and 27 °C is changed to a volume of 1 L at 177 °C. What is the new pressure?",
             "options": [
-              "0.5 atm",
-              "1 atm",
-              "2 atm",
-              "4 atm",
-              "8 atm"
+              "0.75 atm",
+              "1.333 atm",
+              "13.11 atm",
+              "3 atm",
+              "2 atm"
             ],
-            "correct": 2,
-            "solution": "Boyle's law: P∝1/V at constant T. V halves → P doubles to 2 atm."
+            "correct": 3,
+            "solution": "Convert to kelvin: 300 K and 450 K. \\(\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}\\) gives \\(P_2=1\\times\\dfrac{2}{1}\\times\\dfrac{450}{300}=3\\) atm. Using °C directly is wrong."
           },
           {
             "question": "A Carnot engine works between 500 K and 300 K and does 1200 J of work per cycle. How much heat does it reject to the cold reservoir per cycle?",
@@ -39219,16 +39219,16 @@ const subjects = [
             "solution": "\\(\\eta = 1 - 300/500 = 0.40\\). Heat input \\(= W/\\eta = 1200/0.40 = 3000\\) J. Heat rejected \\(= 3000 - 1200 = 1800\\) J."
           },
           {
-            "question": "What is the internal energy change of an ideal gas heated from 300 K to 400 K? (n=2 mol, C_v=3R/2)",
+            "question": "A fixed amount of ideal gas at 3 atm, 4 L and 27 °C is changed to a volume of 2 L at 177 °C. What is the new pressure?",
             "options": [
-              "1247 J",
-              "2494 J",
-              "3741 J",
-              "4988 J",
-              "6235 J"
+              "9 atm",
+              "2.25 atm",
+              "6 atm",
+              "39.33 atm",
+              "4 atm"
             ],
-            "correct": 1,
-            "solution": "ΔU=nC_vΔT=2×(3×8.314/2)×100=2494 J."
+            "correct": 0,
+            "solution": "Convert to kelvin: 300 K and 450 K. \\(\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}\\) gives \\(P_2=3\\times\\dfrac{4}{2}\\times\\dfrac{450}{300}=9\\) atm. Using °C directly is wrong."
           },
           {
             "question": "A monatomic ideal gas (\\(\\gamma = 5/3\\)) at \\(1.0 \\times 10^{5}\\) Pa and 4.0 L is compressed adiabatically to 1.0 L. What is the final pressure?",
@@ -39255,28 +39255,28 @@ const subjects = [
             "solution": "Net work = area of the triangle \\(= \\tfrac{1}{2}(3.0 \\times 10^{-3})(2.0 \\times 10^5) = 300\\) J. \\(\\eta = 300/1200 = 25\\%\\)."
           },
           {
-            "question": "An ideal gas expands at constant pressure from 1 L to 3 L. If it does 200 J of work, what is the pressure?",
+            "question": "A fixed amount of ideal gas at 2 atm, 6 L and 27 °C is changed to a volume of 12 L at 177 °C. What is the new pressure?",
             "options": [
-              "50 kPa",
-              "100 kPa",
-              "150 kPa",
-              "200 kPa",
-              "300 kPa"
+              "6.556 atm",
+              "0.6667 atm",
+              "1 atm",
+              "6 atm",
+              "1.5 atm"
             ],
-            "correct": 1,
-            "solution": "W=PΔV → P=W/ΔV=200/(2×10⁻³)=100000 Pa=100 kPa."
+            "correct": 4,
+            "solution": "Convert to kelvin: 300 K and 450 K. \\(\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}\\) gives \\(P_2=2\\times\\dfrac{6}{12}\\times\\dfrac{450}{300}=1.5\\) atm. Using °C directly is wrong."
           },
           {
-            "question": "The first law of thermodynamics is essentially a statement of:",
+            "question": "A fixed amount of ideal gas at 2 atm, 2 L and 27 °C is changed to a volume of 4 L at 177 °C. What is the new pressure?",
             "options": [
-              "Conservation of mass",
-              "Conservation of momentum",
-              "Conservation of energy",
-              "Newton's second law",
-              "Entropy increase"
+              "1.5 atm",
+              "0.6667 atm",
+              "6 atm",
+              "1 atm",
+              "6.556 atm"
             ],
-            "correct": 2,
-            "solution": "ΔU=Q−W expresses conservation of energy."
+            "correct": 0,
+            "solution": "Convert to kelvin: 300 K and 450 K. \\(\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}\\) gives \\(P_2=2\\times\\dfrac{2}{4}\\times\\dfrac{450}{300}=1.5\\) atm. Using °C directly is wrong."
           },
           {
             "question": "A 1.5 kW electric heater with an efficiency of 80% heats 2.0 kg of water from 15 °C to 65 °C. How long does it take? (\\(c_{\\text{water}} = 4200\\) J kg<sup>-1</sup> K<sup>-1</sup>)",
@@ -39327,16 +39327,16 @@ const subjects = [
             "solution": "For an isothermal expansion \\(\\Delta U = 0\\), so \\(Q = W = nRT\\ln(V_2/V_1) = 2.0 \\times 8.31 \\times 300 \\times \\ln 4 = 6910\\) J \\(= 6.9\\) kJ."
           },
           {
-            "question": "An ideal gas undergoes free expansion into vacuum. What happens to its temperature?",
+            "question": "An ideal gas expands at constant temperature and absorbs 200 J of heat. How much work does it do?",
             "options": [
-              "Increases",
-              "Decreases",
-              "Remains constant",
-              "Becomes zero",
-              "Cannot determine"
+              "300 J",
+              "0 J",
+              "100 J",
+              "200 J",
+              "400 J"
             ],
-            "correct": 2,
-            "solution": "Free expansion is adiabatic and no work is done. For ideal gas, internal energy unchanged → T constant."
+            "correct": 3,
+            "solution": "Constant temperature means \\(\\Delta U=0\\) for an ideal gas, so \\(W=Q=200\\) J."
           },
           {
             "question": "100 g of a metal at 100 °C is dropped into 200 g of water at 20 °C. The final temperature is 24 °C. What is the specific heat capacity of the metal? (\\(c_{\\text{water}} = 4200\\) J kg<sup>-1</sup> K<sup>-1</sup>)",
@@ -39351,16 +39351,16 @@ const subjects = [
             "solution": "Heat gained by water: \\(0.200 \\times 4200 \\times 4 = 3360\\) J. Heat lost by metal: \\(0.100 \\times c \\times 76\\). So \\(c = 3360/7.6 = 442\\) J kg<sup>-1</sup> K<sup>-1</sup>."
           },
           {
-            "question": "The efficiency of a real heat engine is always:",
+            "question": "A fixed amount of ideal gas at 3 atm, 2 L and 27 °C is changed to a volume of 1 L at 177 °C. What is the new pressure?",
             "options": [
-              "Greater than Carnot efficiency",
-              "Equal to Carnot efficiency",
-              "Less than Carnot efficiency",
-              "100%",
-              "Zero"
+              "9 atm",
+              "4 atm",
+              "39.33 atm",
+              "2.25 atm",
+              "6 atm"
             ],
-            "correct": 2,
-            "solution": "Real engines have irreversibilities, so η_real < η_Carnot."
+            "correct": 0,
+            "solution": "Convert to kelvin: 300 K and 450 K. \\(\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}\\) gives \\(P_2=3\\times\\dfrac{2}{1}\\times\\dfrac{450}{300}=9\\) atm. Using °C directly is wrong."
           },
           {
             "question": "A gas expands at a constant pressure of \\(1.5 \\times 10^{5}\\) Pa from 2.0 L to 5.0 L while absorbing 800 J of heat. What is the change in its internal energy?",
@@ -39375,16 +39375,16 @@ const subjects = [
             "solution": "\\(W = p\\Delta V = 1.5 \\times 10^5 \\times 3.0 \\times 10^{-3} = 450\\) J. \\(\\Delta U = Q - W = 800 - 450 = 350\\) J."
           },
           {
-            "question": "A gas is heated at constant volume. What happens to its pressure?",
+            "question": "A fixed amount of ideal gas at 2 atm, 2 L and 127 °C is changed to a volume of 4 L at 527 °C. What is the new pressure?",
             "options": [
-              "Decreases",
-              "Increases",
-              "Constant",
-              "Becomes zero",
-              "Depends on gas"
+              "1 atm",
+              "8 atm",
+              "4.15 atm",
+              "0.5 atm",
+              "2 atm"
             ],
-            "correct": 1,
-            "solution": "Charles' law at constant V: P∝T. Temperature increases → pressure increases."
+            "correct": 4,
+            "solution": "Convert to kelvin: 400 K and 800 K. \\(\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}\\) gives \\(P_2=2\\times\\dfrac{2}{4}\\times\\dfrac{800}{400}=2\\) atm. Using °C directly is wrong."
           },
           {
             "question": "A fixed mass of gas at \\(2.0 \\times 10^{5}\\) Pa, 4.0 L and 300 K is heated to 450 K while its volume is changed to 5.0 L. What is the new pressure?",
@@ -39399,16 +39399,16 @@ const subjects = [
             "solution": "\\(\\dfrac{p_1V_1}{T_1} = \\dfrac{p_2V_2}{T_2}\\), so \\(p_2 = p_1\\dfrac{V_1}{V_2}\\dfrac{T_2}{T_1} = 2.0 \\times 10^5 \\times 0.80 \\times 1.5 = 2.4 × 10<sup>5</sup>\\) Pa."
           },
           {
-            "question": "An engine operates on a cycle and returns to its initial state. What is the net change in internal energy?",
+            "question": "A gas is compressed: the surroundings do 300 J of work on it, and it releases 800 J of heat. What is the change in its internal energy?",
             "options": [
-              "Positive",
-              "Negative",
-              "Zero",
-              "Depends on path",
-              "Infinite"
+              "1100 J",
+              "-1100 J",
+              "300 J",
+              "-500 J",
+              "500 J"
             ],
-            "correct": 2,
-            "solution": "Internal energy is a state function. For a cycle, ΔU=0."
+            "correct": 3,
+            "solution": "Heat released: Q = −800 J; work done by the gas: W = −300 J. \\(\\Delta U=Q-W=-800+300=-500\\) J."
           },
           {
             "question": "A 0.25 kg block of copper (\\(c = 390\\) J kg<sup>-1</sup> K<sup>-1</sup>) at 200 °C is dropped into 0.80 kg of water at 20 °C in a 0.10 kg aluminium calorimeter (\\(c = 900\\)). What is the final temperature?",
@@ -39423,40 +39423,40 @@ const subjects = [
             "solution": "Heat lost by the copper = heat gained by the water and calorimeter: \\(97.5(200 - T) = (3360 + 90)(T - 20)\\). So \\(19\\,500 + 69\\,000 = 3547.5T\\) and \\(T = 24.9\\) °C. Leaving out the calorimeter gives 24.8 °C, which is slightly wrong."
           },
           {
-            "question": "During an isothermal expansion of an ideal gas, which statement is true?",
+            "question": "A fixed amount of ideal gas at 1 atm, 4 L and 127 °C is changed to a volume of 8 L at 527 °C. What is the new pressure?",
             "options": [
-              "ΔU>0",
-              "Q=0",
-              "W=0",
-              "Q=W",
-              "ΔU<0"
-            ],
-            "correct": 3,
-            "solution": "ΔU=0 for isothermal ideal gas. From 1st law: Q=W."
-          },
-          {
-            "question": "A 2 mol ideal gas expands isothermally at 300 K from 10 L to 20 L. What is the work done?",
-            "options": [
-              "1729 J",
-              "3458 J",
-              "5187 J",
-              "6916 J",
-              "8645 J"
-            ],
-            "correct": 1,
-            "solution": "W=nRTln(V₂/V₁)=2×8.314×300×ln2≈3458 J."
-          },
-          {
-            "question": "What is the maximum theoretical efficiency of a Carnot heat engine operating between a hot reservoir at 500 K and a cold reservoir at 300 K?",
-            "options": [
-              "40%",
-              "60%",
-              "20%",
-              "50%",
-              "66.7%"
+              "1 atm",
+              "2.075 atm",
+              "4 atm",
+              "0.25 atm",
+              "0.5 atm"
             ],
             "correct": 0,
-            "solution": "Carnot efficiency is given by η = 1 - (T_C / T_H) = 1 - (300 / 500) = 1 - 0.60 = 0.40 = 40%."
+            "solution": "Convert to kelvin: 400 K and 800 K. \\(\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}\\) gives \\(P_2=1\\times\\dfrac{4}{8}\\times\\dfrac{800}{400}=1\\) atm. Using °C directly is wrong."
+          },
+          {
+            "question": "A fixed amount of ideal gas at 1 atm, 2 L and 27 °C is changed to a volume of 4 L at 327 °C. What is the new pressure?",
+            "options": [
+              "4 atm",
+              "0.5 atm",
+              "6.056 atm",
+              "0.25 atm",
+              "1 atm"
+            ],
+            "correct": 4,
+            "solution": "Convert to kelvin: 300 K and 600 K. \\(\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}\\) gives \\(P_2=1\\times\\dfrac{2}{4}\\times\\dfrac{600}{300}=1\\) atm. Using °C directly is wrong."
+          },
+          {
+            "question": "A gas is compressed: the surroundings do 200 J of work on it, and it releases 300 J of heat. What is the change in its internal energy?",
+            "options": [
+              "200 J",
+              "-500 J",
+              "500 J",
+              "-100 J",
+              "100 J"
+            ],
+            "correct": 3,
+            "solution": "Heat released: Q = −300 J; work done by the gas: W = −200 J. \\(\\Delta U=Q-W=-300+200=-100\\) J."
           },
           {
             "question": "2.0 kg of water at 80 °C, 3.0 kg of water at 20 °C and 5.0 kg of water at 40 °C are mixed in an insulated container. What is the final temperature?",
@@ -39471,16 +39471,16 @@ const subjects = [
             "solution": "Because the specific heat is the same, \\(T = \\dfrac{2.0(80) + 3.0(20) + 5.0(40)}{10} = \\dfrac{160 + 60 + 200}{10} = 42\\) °C."
           },
           {
-            "question": "In an isobaric expansion at a constant pressure of 2.0 × 10⁵ Pa, an ideal gas expands from a volume of 0.010 m³ to 0.030 m³. How much work is done by the gas?",
+            "question": "An ideal gas at 150 kPa occupies 8 L. It is compressed at constant temperature until the pressure is 450 kPa. What is its new volume?",
             "options": [
-              "4000 J (4.0 kJ)",
-              "2000 J (2.0 kJ)",
-              "6000 J (6.0 kJ)",
-              "400 J",
-              "0 J"
+              "2.667 L",
+              "0.8889 L",
+              "36 L",
+              "24 L",
+              "5 L"
             ],
             "correct": 0,
-            "solution": "Work done during an isobaric process is W = P ΔV = (2.0 × 10⁵ Pa) × (0.030 - 0.010) m³ = (2.0 × 10⁵) × 0.020 = 4000 J = 4.0 kJ."
+            "solution": "Boyle: \\(P_1V_1=P_2V_2\\), so \\(V_2=\\dfrac{150\\times8}{450}=2.667\\) L."
           },
           {
             "question": "According to the First Law of Thermodynamics, if 800 J of heat is added to a system while the system performs 300 J of work on its surroundings, what is the change in internal energy (ΔU)?",
@@ -39495,16 +39495,16 @@ const subjects = [
             "solution": "By the First Law of Thermodynamics, ΔU = Q - W, where Q is heat added to the system (+800 J) and W is work done by the system (+300 J). ΔU = 800 J - 300 J = +500 J."
           },
           {
-            "question": "What is an adiabatic process?",
+            "question": "An ideal gas at 200 kPa occupies 6 L. It is compressed at constant temperature until the pressure is 600 kPa. What is its new volume?",
             "options": [
-              "A thermodynamic process in which no heat is transferred into or out of the system (Q = 0)",
-              "A process occurring at constant temperature (ΔT = 0)",
-              "A process occurring at constant pressure (ΔP = 0)",
-              "A process occurring at constant volume (ΔV = 0)",
-              "A reversible process with zero entropy change"
+              "3 L",
+              "36 L",
+              "18 L",
+              "2 L",
+              "0.6667 L"
             ],
-            "correct": 0,
-            "solution": "An adiabatic process is one in which the system is thermally insulated from its environment or the process occurs so rapidly that no heat enters or leaves the system: Q = 0. Therefore, ΔU = -W."
+            "correct": 3,
+            "solution": "Boyle: \\(P_1V_1=P_2V_2\\), so \\(V_2=\\dfrac{200\\times6}{600}=2\\) L."
           },
           {
             "question": "Steel rails 25 m long are laid at 10 °C. The highest temperature expected is 45 °C (\\(\\alpha = 1.2 \\times 10^{-5}\\) K<sup>-1</sup>). What is the minimum expansion gap needed for each rail?",
@@ -39519,16 +39519,16 @@ const subjects = [
             "solution": "\\(\\Delta L = \\alpha L_0\\Delta T = 1.2 \\times 10^{-5} \\times 25 \\times 35 = 0.0105\\) m \\(= 10.5\\) mm."
           },
           {
-            "question": "During an isochoric (isovolumetric) heating process, what is the work done by the gas?",
+            "question": "A gas is compressed: the surroundings do 150 J of work on it, and it releases 800 J of heat. What is the change in its internal energy?",
             "options": [
-              "0 J",
-              "P ΔV",
-              "nRT ln(V₂/V₁)",
-              "Q",
-              "ΔU"
+              "-950 J",
+              "650 J",
+              "950 J",
+              "150 J",
+              "-650 J"
             ],
-            "correct": 0,
-            "solution": "In an isochoric process, the volume remains constant (ΔV = 0). Because work done by a gas is W = ∫ P dV, when dV = 0, no mechanical work is performed: W = 0 J."
+            "correct": 4,
+            "solution": "Heat released: Q = −800 J; work done by the gas: W = −150 J. \\(\\Delta U=Q-W=-800+150=-650\\) J."
           },
           {
             "question": "0.10 kg of ice at \\(-10\\) °C is added to 0.50 kg of water at 30 °C (\\(c_{\\text{ice}} = 2100\\), \\(L_f = 3.34 \\times 10^{5}\\) J/kg). What is the final temperature?",
@@ -39567,16 +39567,16 @@ const subjects = [
             "solution": "The Zeroth Law of Thermodynamics states that if two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other. This establishes the validity of temperature as a measurable scalar state variable."
           },
           {
-            "question": "What is the change in internal energy (ΔU) of an ideal gas during any isothermal process?",
+            "question": "An ideal gas at 150 kPa occupies 8 L. It is compressed at constant temperature until the pressure is 300 kPa. What is its new volume?",
             "options": [
-              "0 J",
-              "Q",
-              "W",
-              "nRT",
-              "P ΔV"
+              "4 L",
+              "6 L",
+              "24 L",
+              "16 L",
+              "2 L"
             ],
             "correct": 0,
-            "solution": "The internal energy of an ideal gas depends solely on its absolute temperature: U = (3/2) nRT. In an isothermal process, temperature is constant (ΔT = 0), so ΔU = 0 J. By the First Law, Q = W."
+            "solution": "Boyle: \\(P_1V_1=P_2V_2\\), so \\(V_2=\\dfrac{150\\times8}{300}=4\\) L."
           },
           {
             "question": "According to the Second Law of Thermodynamics, what happens to the total entropy of an isolated system during any spontaneous real process?",
@@ -39591,16 +39591,16 @@ const subjects = [
             "solution": "The Second Law states that in any spontaneous or irreversible process, the total entropy of an isolated system (or the universe as a whole) always increases: ΔS_total > 0. For a reversible process, ΔS_total = 0."
           },
           {
-            "question": "A steel railway rail has a length of 20 m at 10 °C. What is its expansion when the temperature reaches 40 °C? (Coefficient of linear expansion of steel α = 1.2 × 10⁻⁵ K⁻¹)",
+            "question": "3 kg of water at 20 °C is mixed with 5 kg of water at 80 °C in an insulated container. What is the final temperature?",
             "options": [
-              "7.2 mm",
-              "3.6 mm",
-              "1.2 mm",
-              "14.4 mm",
-              "0.72 mm"
+              "57.5 °C",
+              "100 °C",
+              "50 °C",
+              "42.5 °C",
+              "460 °C"
             ],
             "correct": 0,
-            "solution": "Linear thermal expansion: ΔL = α L₀ ΔT = (1.2 × 10⁻⁵ K⁻¹) × (20 m) × (40 - 10) K = (1.2 × 10⁻⁵) × 20 × 30 = (1.2 × 10⁻⁵) × 600 = 7.2 × 10⁻³ m = 7.2 mm."
+            "solution": "Heat lost = heat gained: \\(5c(80-T)=3c(T-20)\\), so \\(T=\\dfrac{3\\times20+5\\times80}{8}=57.5\\) °C."
           },
           {
             "question": "Why does sweating (perspiration) effectively cool the human body?",
@@ -39615,16 +39615,16 @@ const subjects = [
             "solution": "Liquid water has an exceptionally high latent heat of vaporization (~2.4 × 10⁶ J/kg at body temperature). As sweat evaporates from the skin surface, it absorbs this large quantity of thermal energy from the skin, efficiently cooling the body."
           },
           {
-            "question": "A Carnot engine absorbs 1000 J of heat from a hot reservoir at 400 K and discharges heat to a cold reservoir at 300 K. How much mechanical work does it deliver?",
+            "question": "An ideal gas at 150 kPa occupies 6 L. It is compressed at constant temperature until the pressure is 450 kPa. What is its new volume?",
             "options": [
-              "250 J",
-              "750 J",
-              "100 J",
-              "500 J",
-              "333 J"
+              "27 L",
+              "18 L",
+              "3 L",
+              "2 L",
+              "0.6667 L"
             ],
-            "correct": 0,
-            "solution": "Carnot efficiency is η = 1 - (T_C / T_H) = 1 - (300 / 400) = 0.25 (25%). Work output W = η × Q_H = 0.25 × 1000 J = 250 J."
+            "correct": 3,
+            "solution": "Boyle: \\(P_1V_1=P_2V_2\\), so \\(V_2=\\dfrac{150\\times6}{450}=2\\) L."
           },
           {
             "question": "According to the Stefan-Boltzmann law, the total power radiated by a blackbody is proportional to which power of its absolute temperature T?",
@@ -39639,16 +39639,16 @@ const subjects = [
             "solution": "The Stefan-Boltzmann law states that the total radiant power emitted per unit area of a blackbody is P / A = σ T⁴, so radiant power is proportional to the fourth power of absolute temperature (T⁴)."
           },
           {
-            "question": "What is the relationship between the molar heat capacities of an ideal gas at constant pressure (C_p) and constant volume (C_v)?",
+            "question": "An ideal gas at 200 kPa occupies 3 L. It is compressed at constant temperature until the pressure is 400 kPa. What is its new volume?",
             "options": [
-              "C_p - C_v = R (Mayer's relation)",
-              "C_p / C_v = R",
-              "C_p + C_v = R",
-              "C_v - C_p = R",
-              "C_p = C_v"
+              "1 L",
+              "6 L",
+              "1.5 L",
+              "0.75 L",
+              "12 L"
             ],
-            "correct": 0,
-            "solution": "For an ideal gas, heating at constant pressure requires extra energy to perform work (P ΔV = R ΔT) as the gas expands, giving Mayer's relation: C_p - C_v = R."
+            "correct": 2,
+            "solution": "Boyle: \\(P_1V_1=P_2V_2\\), so \\(V_2=\\dfrac{200\\times3}{400}=1.5\\) L."
           },
           {
             "question": "During a cyclic thermodynamic process, a heat engine returns to its exact initial state. What is the net change in internal energy (ΔU_cycle) over one complete cycle?",
@@ -39687,16 +39687,16 @@ const subjects = [
             "solution": "The Third Law of Thermodynamics (Nernst's theorem) states that the entropy of a perfect crystalline substance approaches exactly zero as the temperature approaches absolute zero (0 K), establishing an absolute zero reference point for entropy."
           },
           {
-            "question": "What is the term for the direct transition of a substance from solid to gas?",
+            "question": "An ideal gas expands at constant temperature and absorbs 300 J of heat. How much work does it do?",
             "options": [
-              "Fusion",
-              "Evaporation",
-              "Condensation",
-              "Sublimation",
-              "Deposition"
+              "400 J",
+              "600 J",
+              "150 J",
+              "300 J",
+              "0 J"
             ],
             "correct": 3,
-            "solution": "Sublimation is the phase transition in which a substance passes directly from the solid to the gas phase without passing through the intermediate liquid phase."
+            "solution": "Constant temperature means \\(\\Delta U=0\\) for an ideal gas, so \\(W=Q=300\\) J."
           },
           {
             "question": "Which of the following is NOT a characteristic of an ideal gas?",
@@ -39723,16 +39723,16 @@ const subjects = [
             "solution": "Let m₁ = m₂ = m, c_hot = 9c, c_cold = c.\nThermal equilibrium condition: Heat lost by hot = Heat gained by cold:\nm · (9c) · (t - Teq) = m · c · (Teq - 0)\n9(t - Teq) = Teq ⇒ 9t - 9Teq = Teq ⇒ 10Teq = 9t ⇒ Teq = 0.9t °C."
           },
           {
-            "question": "A gas has a volume of 3 m³ and a pressure of 5 atm. If the temperature is kept constant, what will be the volume of the gas if a pressure of 15 atm is applied?",
+            "question": "An ideal gas at 150 kPa occupies 3 L. It is compressed at constant temperature until the pressure is 300 kPa. What is its new volume?",
             "options": [
-              "3 m³",
-              "0.5 m³",
-              "1 m³",
-              "2 m³",
-              "5 m³"
+              "0.75 L",
+              "1.5 L",
+              "6 L",
+              "9 L",
+              "1 L"
             ],
-            "correct": 2,
-            "solution": "Using Boyle's Law (isothermal process): P₁V₁ = P₂V₂.\n(5 atm)(3 m³) = (15 atm) V₂ ⇒ V₂ = 15 / 15 = 1 m³."
+            "correct": 1,
+            "solution": "Boyle: \\(P_1V_1=P_2V_2\\), so \\(V_2=\\dfrac{150\\times3}{300}=1.5\\) L."
           }
         ]
       },
@@ -39765,16 +39765,16 @@ const subjects = [
             "solution": "Using mirror formula: 1/f = 1/u + 1/v. 1/20 = 1/30 + 1/v → 1/v = 1/20 - 1/30 = (3-2)/60 = 1/60 → v = 60 cm. Positive v indicates real image in front of mirror."
           },
           {
-            "question": "What is the refractive index of a medium if light travels at 2 × 10⁸ m/s in it? (c = 3 × 10⁸ m/s)",
+            "question": "Two point charges repel each other with a force of 18 N. One charge is multiplied by 3 and the distance between them is multiplied by 3. What is the new force?",
             "options": [
-              "1.33",
-              "1.5",
-              "1.67",
-              "2.0",
-              "2.5"
+              "0.6667 N",
+              "162 N",
+              "6 N",
+              "18 N",
+              "486 N"
             ],
-            "correct": 1,
-            "solution": "n = c/v = 3×10⁸/2×10⁸ = 1.5."
+            "correct": 2,
+            "solution": "\\(F\\propto\\dfrac{q_1q_2}{r^2}\\): the force becomes \\(18\\times\\dfrac{3}{9}=6\\) N."
           },
           {
             "question": "A concave lens has focal length −20 cm. Where is the image of an object placed 30 cm from the lens?",
@@ -39789,16 +39789,16 @@ const subjects = [
             "solution": "1/v=1/f−1/u=−1/20−1/30=−5/60=−1/12. v=−12 cm (virtual, same side)."
           },
           {
-            "question": "The critical angle for light going from diamond (n=2.4) to air is approximately:",
+            "question": "A uniform light beam is balanced on a pivot. A 3 kg mass hangs 5 m to the left of the pivot. At what mass hung 2 m to the right will the beam balance?",
             "options": [
-              "15°",
-              "20°",
-              "25°",
-              "30°",
-              "45°"
+              "3 kg",
+              "30 kg",
+              "6 kg",
+              "7.5 kg",
+              "1.2 kg"
             ],
-            "correct": 2,
-            "solution": "sin θ_c=1/n=1/2.4=0.417. θ_c≈24.6°≈25°."
+            "correct": 3,
+            "solution": "Balance of torques: \\(3g\\times5=m g\\times2\\), so \\(m=\\dfrac{3\\times5}{2}=7.5\\) kg."
           },
           {
             "question": "A myopic person cannot see objects beyond 2 m clearly. What power lens is needed?",
@@ -39813,28 +39813,28 @@ const subjects = [
             "solution": "Lens forms virtual image at 2 m for object at infinity. f=−2 m. P=1/f=−0.5 D."
           },
           {
-            "question": "Two thin lenses of powers +2 D and −4 D are in contact. What is the combined power?",
+            "question": "A force of 13 N makes an angle with the horizontal such that its horizontal component is 5 N. What is its vertical component?",
             "options": [
-              "−6 D",
-              "−2 D",
-              "+2 D",
-              "+4 D",
-              "+6 D"
-            ],
-            "correct": 1,
-            "solution": "P=P₁+P₂=2−4=−2 D."
-          },
-          {
-            "question": "A hyperopic person has near point at 1 m. What power lens allows clear vision at 25 cm?",
-            "options": [
-              "+1 D",
-              "+2 D",
-              "+3 D",
-              "+4 D",
-              "+5 D"
+              "4.615 N",
+              "18 N",
+              "12 N",
+              "8 N",
+              "8.062 N"
             ],
             "correct": 2,
-            "solution": "1/f=1/0.25−1/1=4−1=3 D."
+            "solution": "\\(F_y=\\sqrt{F^2-F_x^2}=\\sqrt{169-25}=12\\) N."
+          },
+          {
+            "question": "A uniform light beam is balanced on a pivot. A 5 kg mass hangs 5 m to the left of the pivot. At what mass hung 2 m to the right will the beam balance?",
+            "options": [
+              "8 kg",
+              "50 kg",
+              "12.5 kg",
+              "5 kg",
+              "2 kg"
+            ],
+            "correct": 2,
+            "solution": "Balance of torques: \\(5g\\times5=m g\\times2\\), so \\(m=\\dfrac{5\\times5}{2}=12.5\\) kg."
           },
           {
             "question": "In a compound microscope, the final image is:",
@@ -39849,28 +39849,28 @@ const subjects = [
             "solution": "Objective forms real inverted image. Eyepiece acts as magnifier, forming virtual inverted image relative to object."
           },
           {
-            "question": "A prism disperses white light because:",
+            "question": "The peak voltage of a sinusoidal AC supply is 169.7 V. What is its rms value?",
             "options": [
-              "Different wavelengths travel at same speed",
-              "Different wavelengths have different refractive indices",
-              "Light is absorbed",
-              "Light is reflected",
-              "Light is polarized"
-            ],
-            "correct": 1,
-            "solution": "Dispersion occurs because refractive index varies with wavelength."
-          },
-          {
-            "question": "The resolving power of a microscope increases with:",
-            "options": [
-              "Decreasing wavelength",
-              "Increasing wavelength",
-              "Decreasing aperture",
-              "Increasing object distance",
-              "None of these"
+              "120 V",
+              "240 V",
+              "84.85 V",
+              "169.7 V",
+              "108.1 V"
             ],
             "correct": 0,
-            "solution": "Resolving power ∝ NA/λ. Shorter wavelength improves resolution."
+            "solution": "\\(V_{rms}=V_{peak}/\\sqrt2=169.7/1.414=120\\) V."
+          },
+          {
+            "question": "Two point charges repel each other with a force of 9 N. One charge is multiplied by 2 and the distance between them is multiplied by 2. What is the new force?",
+            "options": [
+              "9 N",
+              "36 N",
+              "1.125 N",
+              "4.5 N",
+              "72 N"
+            ],
+            "correct": 3,
+            "solution": "\\(F\\propto\\dfrac{q_1q_2}{r^2}\\): the force becomes \\(9\\times\\dfrac{2}{4}=4.5\\) N."
           },
           {
             "question": "A convex mirror has focal length 20 cm. An object is placed 10 cm in front. Where is the image?",
@@ -39945,16 +39945,16 @@ const subjects = [
             "solution": "M=f_o/f_e → f_e=f_o/M=100/10=10 cm."
           },
           {
-            "question": "Light of wavelength 500 nm in air enters glass (n=1.5). What is its wavelength in glass?",
+            "question": "A uniform light beam is balanced on a pivot. A 9 kg mass hangs 2 m to the left of the pivot. At what mass hung 5 m to the right will the beam balance?",
             "options": [
-              "250 nm",
-              "333 nm",
-              "400 nm",
-              "500 nm",
-              "750 nm"
+              "22.5 kg",
+              "3.6 kg",
+              "90 kg",
+              "9 kg",
+              "6 kg"
             ],
             "correct": 1,
-            "solution": "λ_glass=λ_air/n=500/1.5=333 nm."
+            "solution": "Balance of torques: \\(9g\\times2=m g\\times5\\), so \\(m=\\dfrac{9\\times2}{5}=3.6\\) kg."
           },
           {
             "question": "A person cannot see objects closer than 50 cm. What type of lens and power is needed?",
@@ -39981,16 +39981,16 @@ const subjects = [
             "solution": "Nλ/2=d → λ=2d/N=2×0.1×10⁻³/400=5×10⁻⁷ m=500 nm."
           },
           {
-            "question": "Total internal reflection can occur when light travels from:",
+            "question": "The peak voltage of a sinusoidal AC supply is 325.3 V. What is its rms value?",
             "options": [
-              "Air to glass",
-              "Glass to air",
-              "Air to water",
-              "Water to glass",
-              "Any medium to another"
+              "207.2 V",
+              "162.6 V",
+              "460 V",
+              "325.3 V",
+              "230 V"
             ],
-            "correct": 1,
-            "solution": "TIR occurs from denser to rarer medium when angle > critical angle."
+            "correct": 4,
+            "solution": "\\(V_{rms}=V_{peak}/\\sqrt2=325.3/1.414=230\\) V."
           },
           {
             "question": "Diffraction of light is most noticeable when the obstacle size is:",
@@ -40005,28 +40005,28 @@ const subjects = [
             "solution": "Diffraction is significant when obstacle/aperture size is comparable to wavelength."
           },
           {
-            "question": "A biconvex lens has radii 20 cm and 30 cm, n=1.5. What is its focal length?",
+            "question": "Water flows at 2 m/s in a pipe of diameter 12 cm which narrows to a diameter of 4 cm. What is the speed in the narrow section?",
             "options": [
-              "22 cm",
-              "24 cm",
-              "26 cm",
-              "28 cm",
-              "30 cm"
-            ],
-            "correct": 1,
-            "solution": "1/f=(n−1)(1/R₁−1/R₂)=0.5(1/20+1/30)=0.5×5/60=1/24. f=24 cm."
-          },
-          {
-            "question": "A plane mirror produces an image that is:",
-            "options": [
-              "Real and same size",
-              "Virtual and diminished",
-              "Virtual and same size",
-              "Real and magnified",
-              "Virtual and inverted"
+              "0.6667 m/s",
+              "54 m/s",
+              "18 m/s",
+              "5 m/s",
+              "6 m/s"
             ],
             "correct": 2,
-            "solution": "Plane mirrors produce virtual, erect, same-size images."
+            "solution": "Continuity: \\(A_1v_1=A_2v_2\\) and area \\(\\propto d^2\\), so \\(v_2=v_1(d_1/d_2)^2=2\\times9=18\\) m/s."
+          },
+          {
+            "question": "A force of 5 N makes an angle with the horizontal such that its horizontal component is 3 N. What is its vertical component?",
+            "options": [
+              "2.4 N",
+              "4 N",
+              "3.873 N",
+              "8 N",
+              "2 N"
+            ],
+            "correct": 1,
+            "solution": "\\(F_y=\\sqrt{F^2-F_x^2}=\\sqrt{25-9}=4\\) N."
           },
           {
             "question": "A convex lens forms a real image of an object. If the object is moved closer to the focal point, the image:",
@@ -40311,64 +40311,64 @@ const subjects = [
             "solution": "24 days = 3 half-lives. After each half-life, the amount halves. After 3 half-lives: (1/2)³ = 1/8 remains."
           },
           {
-            "question": "A radioactive sample has activity 800 Bq. After 12 hours it is 200 Bq. What is the half-life?",
+            "question": "A heater of resistance 20 Ω is connected to an AC supply of rms voltage 100 V. What is its average power?",
             "options": [
-              "3 h",
-              "4 h",
-              "6 h",
-              "8 h",
-              "12 h"
-            ],
-            "correct": 2,
-            "solution": "800→400→200 in two half-lives. 2T=12 → T=6 h."
-          },
-          {
-            "question": "In a nuclear reactor, control rods are made of:",
-            "options": [
-              "Uranium",
-              "Graphite",
-              "Boron",
-              "Plutonium",
-              "Heavy water"
-            ],
-            "correct": 2,
-            "solution": "Boron absorbs neutrons without fissioning, controlling reaction rate."
-          },
-          {
-            "question": "What is the energy equivalent of 1 atomic mass unit?",
-            "options": [
-              "83.1 MeV",
-              "511 keV",
-              "931.5 MeV",
-              "1.022 MeV",
-              "13.6 eV"
-            ],
-            "correct": 2,
-            "solution": "1 u = 931.5 MeV/c²."
-          },
-          {
-            "question": "Cobalt-60 undergoes beta decay. What is the daughter nucleus? (Co, Z=27)",
-            "options": [
-              "Fe",
-              "Ni",
-              "Cu",
-              "Mn",
-              "Zn"
+              "707.1 W",
+              "500 W",
+              "1000 W",
+              "5 W",
+              "250 W"
             ],
             "correct": 1,
-            "solution": "Beta decay: Z increases by 1. Co (27) → Ni (28)."
+            "solution": "\\(P=\\dfrac{V_{rms}^2}{R}=\\dfrac{100^2}{20}=500\\) W."
           },
           {
-            "question": "What is the Q-value of a nuclear reaction where mass decreases by 0.005 u?",
+            "question": "A force of 15 N makes an angle with the horizontal such that its horizontal component is 9 N. What is its vertical component?",
             "options": [
-              "2.3 MeV",
-              "3.7 MeV",
-              "4.7 MeV",
-              "9.3 MeV",
-              "18.6 MeV"
+              "6 N",
+              "24 N",
+              "12 N",
+              "7.2 N",
+              "11.62 N"
             ],
             "correct": 2,
-            "solution": "Q = Δm × 931.5 = 0.005 × 931.5 ≈ 4.66 MeV ≈ 4.7 MeV."
+            "solution": "\\(F_y=\\sqrt{F^2-F_x^2}=\\sqrt{225-81}=12\\) N."
+          },
+          {
+            "question": "A car travels at 54 km/h. What is its speed in m/s?",
+            "options": [
+              "900 m/s",
+              "0.9 m/s",
+              "194.4 m/s",
+              "1.5 m/s",
+              "15 m/s"
+            ],
+            "correct": 4,
+            "solution": "1 km/h = 1000 m / 3600 s = 1/3.6 m/s, so 54/3.6 = 15 m/s."
+          },
+          {
+            "question": "A uniform light beam is balanced on a pivot. A 6 kg mass hangs 4 m to the left of the pivot. At what mass hung 2 m to the right will the beam balance?",
+            "options": [
+              "8 kg",
+              "3 kg",
+              "48 kg",
+              "12 kg",
+              "6 kg"
+            ],
+            "correct": 3,
+            "solution": "Balance of torques: \\(6g\\times4=m g\\times2\\), so \\(m=\\dfrac{6\\times4}{2}=12\\) kg."
+          },
+          {
+            "question": "Water flows at 2 m/s in a pipe of diameter 18 cm which narrows to a diameter of 6 cm. What is the speed in the narrow section?",
+            "options": [
+              "54 m/s",
+              "0.6667 m/s",
+              "18 m/s",
+              "6 m/s",
+              "5 m/s"
+            ],
+            "correct": 2,
+            "solution": "Continuity: \\(A_1v_1=A_2v_2\\) and area \\(\\propto d^2\\), so \\(v_2=v_1(d_1/d_2)^2=2\\times9=18\\) m/s."
           },
           {
             "question": "Gamma rays are produced when:",
@@ -40383,16 +40383,16 @@ const subjects = [
             "solution": "Gamma emission occurs when an excited nucleus drops to a lower energy state."
           },
           {
-            "question": "The binding energy per nucleon is maximum for:",
+            "question": "Water flows at 3 m/s in a pipe of diameter 4 cm which narrows to a diameter of 2 cm. What is the speed in the narrow section?",
             "options": [
-              "Hydrogen",
-              "Helium",
-              "Iron-56",
-              "Uranium-238",
-              "Carbon-12"
+              "12 m/s",
+              "5 m/s",
+              "6 m/s",
+              "1.5 m/s",
+              "24 m/s"
             ],
-            "correct": 2,
-            "solution": "Binding energy per nucleon peaks around mass number 56 (iron), making it the most stable nucleus."
+            "correct": 0,
+            "solution": "Continuity: \\(A_1v_1=A_2v_2\\) and area \\(\\propto d^2\\), so \\(v_2=v_1(d_1/d_2)^2=3\\times4=12\\) m/s."
           },
           {
             "question": "A sample contains 10²⁰ atoms of an isotope with half-life 10 years. How many atoms remain after 30 years?",
@@ -40431,28 +40431,28 @@ const subjects = [
             "solution": "Moderators (like water or graphite) slow fast neutrons to thermal energies to sustain fission chain reactions."
           },
           {
-            "question": "A nucleus has mass number A and atomic number Z. How many neutrons does it contain?",
+            "question": "Two point charges repel each other with a force of 4 N. One charge is multiplied by 3 and the distance between them is multiplied by 2. What is the new force?",
             "options": [
-              "A",
-              "Z",
-              "A−Z",
-              "A+Z",
-              "2A−Z"
+              "0.3333 N",
+              "6 N",
+              "3 N",
+              "48 N",
+              "24 N"
             ],
             "correct": 2,
-            "solution": "Number of neutrons = mass number − atomic number = A − Z."
+            "solution": "\\(F\\propto\\dfrac{q_1q_2}{r^2}\\): the force becomes \\(4\\times\\dfrac{3}{4}=3\\) N."
           },
           {
-            "question": "Which radiation has the highest penetrating power?",
+            "question": "Two point charges repel each other with a force of 12 N. One charge is multiplied by 2 and the distance between them is multiplied by 2. What is the new force?",
             "options": [
-              "Alpha",
-              "Beta",
-              "Gamma",
-              "X-rays",
-              "Ultraviolet"
+              "6 N",
+              "48 N",
+              "1.5 N",
+              "96 N",
+              "12 N"
             ],
-            "correct": 2,
-            "solution": "Gamma rays have the highest penetrating power (and lowest ionizing power among nuclear radiations)."
+            "correct": 0,
+            "solution": "\\(F\\propto\\dfrac{q_1q_2}{r^2}\\): the force becomes \\(12\\times\\dfrac{2}{4}=6\\) N."
           },
           {
             "question": "The mass of a nucleus is less than the sum of its individual nucleons. This difference is called:",
@@ -40479,16 +40479,16 @@ const subjects = [
             "solution": "λ = hc/E = (6.63×10⁻³⁴ × 3×10⁸)/(1×10⁶ × 1.6×10⁻¹⁹) = 1.24×10⁻¹² m."
           },
           {
-            "question": "In positron emission (β⁺), the atomic number:",
+            "question": "A heater of resistance 50 Ω is connected to an AC supply of rms voltage 100 V. What is its average power?",
             "options": [
-              "Increases by 1",
-              "Decreases by 1",
-              "Increases by 2",
-              "Decreases by 2",
-              "Remains unchanged"
+              "200 W",
+              "282.8 W",
+              "400 W",
+              "100 W",
+              "2 W"
             ],
-            "correct": 1,
-            "solution": "β⁺ decay: a proton converts to neutron + positron + neutrino. Z decreases by 1, A unchanged."
+            "correct": 0,
+            "solution": "\\(P=\\dfrac{V_{rms}^2}{R}=\\dfrac{100^2}{50}=200\\) W."
           },
           {
             "question": "A Geiger counter detects 800 counts/min from a source. After 30 min it detects 100 counts/min. What is the half-life?",
@@ -40503,16 +40503,16 @@ const subjects = [
             "solution": "800→400→200→100 in 3 half-lives. 3T=30 → T=10 min."
           },
           {
-            "question": "Nuclear fusion occurs most readily for:",
+            "question": "Water flows at 2 m/s in a pipe of diameter 24 cm which narrows to a diameter of 6 cm. What is the speed in the narrow section?",
             "options": [
-              "Heavy nuclei",
-              "Medium mass nuclei",
-              "Light nuclei",
-              "Radioactive nuclei",
-              "Stable nuclei"
+              "128 m/s",
+              "6 m/s",
+              "32 m/s",
+              "0.5 m/s",
+              "8 m/s"
             ],
             "correct": 2,
-            "solution": "Fusion combines light nuclei (like hydrogen isotopes) to form heavier nuclei, releasing energy."
+            "solution": "Continuity: \\(A_1v_1=A_2v_2\\) and area \\(\\propto d^2\\), so \\(v_2=v_1(d_1/d_2)^2=2\\times16=32\\) m/s."
           },
           {
             "question": "What is the purpose of heavy water (D₂O) in some nuclear reactors?",
@@ -40527,16 +40527,16 @@ const subjects = [
             "solution": "Heavy water acts as a moderator, slowing neutrons effectively while not absorbing too many."
           },
           {
-            "question": "The curie (Ci) is a unit of:",
+            "question": "A car travels at 36 km/h. What is its speed in m/s?",
             "options": [
-              "Energy",
-              "Mass",
-              "Activity",
-              "Dose",
-              "Exposure"
+              "600 m/s",
+              "10 m/s",
+              "129.6 m/s",
+              "1 m/s",
+              "0.6 m/s"
             ],
-            "correct": 2,
-            "solution": "1 Ci = 3.7×10¹⁰ decays/s. It measures activity (number of decays per unit time)."
+            "correct": 1,
+            "solution": "1 km/h = 1000 m / 3600 s = 1/3.6 m/s, so 36/3.6 = 10 m/s."
           },
           {
             "question": "In the liquid drop model of the nucleus, the Coulomb term arises from:",
@@ -40551,40 +40551,40 @@ const subjects = [
             "solution": "The Coulomb term accounts for electrostatic repulsion between protons."
           },
           {
-            "question": "What fraction of a radioactive sample remains after 4 half-lives?",
+            "question": "A uniform light beam is balanced on a pivot. A 4 kg mass hangs 4 m to the left of the pivot. At what mass hung 5 m to the right will the beam balance?",
             "options": [
-              "1/2",
-              "1/4",
-              "1/8",
-              "1/16",
-              "1/32"
+              "3.2 kg",
+              "5 kg",
+              "80 kg",
+              "4 kg",
+              "3 kg"
+            ],
+            "correct": 0,
+            "solution": "Balance of torques: \\(4g\\times4=m g\\times5\\), so \\(m=\\dfrac{4\\times4}{5}=3.2\\) kg."
+          },
+          {
+            "question": "A force of 17 N makes an angle with the horizontal such that its horizontal component is 8 N. What is its vertical component?",
+            "options": [
+              "7.059 N",
+              "11.66 N",
+              "15 N",
+              "9 N",
+              "25 N"
+            ],
+            "correct": 2,
+            "solution": "\\(F_y=\\sqrt{F^2-F_x^2}=\\sqrt{289-64}=15\\) N."
+          },
+          {
+            "question": "A heater of resistance 10 Ω is connected to an AC supply of rms voltage 100 V. What is its average power?",
+            "options": [
+              "2000 W",
+              "10 W",
+              "1414 W",
+              "1000 W",
+              "500 W"
             ],
             "correct": 3,
-            "solution": "After n half-lives, fraction remaining = (1/2)ⁿ. For n=4: (1/2)⁴ = 1/16."
-          },
-          {
-            "question": "Strontium-90 (half-life 28 years) is dangerous because it mimics:",
-            "options": [
-              "Potassium",
-              "Calcium",
-              "Iron",
-              "Sodium",
-              "Iodine"
-            ],
-            "correct": 1,
-            "solution": "Sr-90 mimics calcium and accumulates in bones."
-          },
-          {
-            "question": "A nucleus X undergoes two alpha decays and one beta decay. What is the net change in atomic number?",
-            "options": [
-              "−2",
-              "−3",
-              "−4",
-              "−5",
-              "+1"
-            ],
-            "correct": 1,
-            "solution": "Two alpha: Z−4. One beta: Z+1. Net = −3."
+            "solution": "\\(P=\\dfrac{V_{rms}^2}{R}=\\dfrac{100^2}{10}=1000\\) W."
           },
           {
             "question": "How many protons and neutrons are present in the nucleus of Lead-208 (²⁰⁸₈₂Pb)?",
@@ -40845,16 +40845,16 @@ const subjects = [
         "name": "Fluid Mechanics",
         "questions": [
           {
-            "question": "A hydraulic lift has pistons of area 0.01 m² and 0.5 m². What force on the small piston lifts a 2000 kg car? (g=10 m/s²)",
+            "question": "Take g = 10 m/s². At a depth of 30 m in a liquid of density 1030 kg/m³, what is the absolute pressure? (Atmospheric pressure = 100 kPa.)",
             "options": [
-              "200 N",
-              "300 N",
-              "400 N",
-              "500 N",
-              "600 N"
+              "1309 kPa",
+              "130.9 kPa",
+              "309 kPa",
+              "309000 kPa",
+              "409 kPa"
             ],
-            "correct": 2,
-            "solution": "Pascal: F₁/A₁=F₂/A₂. F₂=2000×10=20000 N. F₁=20000×0.01/0.5=400 N."
+            "correct": 4,
+            "solution": "\\(P=P_0+\\rho gh=100\\,000+1030\\times10\\times30=409000\\) Pa = 409 kPa."
           },
           {
             "question": "A rectangular dam wall is 100 m wide and holds back water to a depth of 12 m. What is the total force of the water on the wall? (\\(\\rho = 1000\\) kg/m<sup>3</sup>, \\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -40905,16 +40905,16 @@ const subjects = [
             "solution": "\\(\\Delta p = \\tfrac{1}{2}\\rho(v_{\\text{top}}^2 - v_{\\text{under}}^2) = 0.6(3600 - 2500) = 660\\) Pa. Lift \\(= \\Delta p \\times A = 660 \\times 16 = 10600\\) N."
           },
           {
-            "question": "An object weighs 50 N in air and 30 N submerged in water. What is its density?",
+            "question": "Take g = 10 m/s². At a depth of 30 m in a liquid of density 1000 kg/m³, what is the absolute pressure? (Atmospheric pressure = 100 kPa.)",
             "options": [
-              "1500",
-              "2000",
-              "2500",
-              "3000",
-              "4000"
+              "1300 kPa",
+              "130 kPa",
+              "300 kPa",
+              "400 kPa",
+              "300000 kPa"
             ],
-            "correct": 2,
-            "solution": "Buoyancy=20 N. V=20/(1000×10)=2×10⁻³ m³. Mass=5 kg. ρ=5/2×10⁻³=2500 kg/m³."
+            "correct": 3,
+            "solution": "\\(P=P_0+\\rho gh=100\\,000+1000\\times10\\times30=400000\\) Pa = 400 kPa."
           },
           {
             "question": "A metal object weighs 8.0 N in air and 6.8 N when fully submerged in water. What is the density of the metal? (water \\(\\rho = 1000\\) kg/m<sup>3</sup>)",
@@ -40929,16 +40929,16 @@ const subjects = [
             "solution": "Buoyant force \\(= 8.0 - 6.8 = 1.2\\) N \\(= \\rho_w g V\\). The weight is \\(\\rho_m g V\\). So \\(\\rho_m/\\rho_w = 8.0/1.2\\) and \\(\\rho_m = 6670\\) kg/m<sup>3</sup>."
           },
           {
-            "question": "Water rises 6 cm in a capillary of radius 0.2 mm. What is surface tension? (ρ=1000, g=10)",
+            "question": "Take g = 10 m/s². At a depth of 10 m in a liquid of density 1200 kg/m³, what is the absolute pressure? (Atmospheric pressure = 100 kPa.)",
             "options": [
-              "0.04 N/m",
-              "0.06 N/m",
-              "0.08 N/m",
-              "0.10 N/m",
-              "0.12 N/m"
+              "1120 kPa",
+              "120000 kPa",
+              "120 kPa",
+              "220 kPa",
+              "112 kPa"
             ],
-            "correct": 1,
-            "solution": "γ=hρgr/(2)=0.06×1000×10×2×10⁻⁴/2=0.06 N/m."
+            "correct": 3,
+            "solution": "\\(P=P_0+\\rho gh=100\\,000+1200\\times10\\times10=220000\\) Pa = 220 kPa."
           },
           {
             "question": "A submarine of volume 500 m<sup>3</sup> and mass \\(4.8 \\times 10^{5}\\) kg floats at the surface with all of its volume submerged except for a negligible part. What is the minimum mass of sea water (\\(\\rho = 1030\\) kg/m<sup>3</sup>) it must take on as ballast to hover under water?",
@@ -40989,16 +40989,16 @@ const subjects = [
             "solution": "\\(v_1 = Q/A_1 = 2.55\\) m/s and \\(v_2 = Q/A_2 = 10.2\\) m/s. Bernoulli: \\(p_2 = p_1 + \\tfrac{1}{2}\\rho(v_1^2 - v_2^2) = 2.0 \\times 10^5 + 500(6.48 - 104) = 1.51 × 10<sup>5</sup>\\) Pa."
           },
           {
-            "question": "A hot-air balloon displaces 2000 m³ of air (ρ=1.2). If balloon+cargo=1800 kg, what is net lift? (g=10)",
+            "question": "Take g = 10 m/s². At a depth of 5 m in a liquid of density 1000 kg/m³, what is the absolute pressure? (Atmospheric pressure = 100 kPa.)",
             "options": [
-              "2000 N",
-              "4000 N",
-              "6000 N",
-              "8000 N",
-              "10000 N"
+              "50 kPa",
+              "105 kPa",
+              "150 kPa",
+              "1050 kPa",
+              "50000 kPa"
             ],
             "correct": 2,
-            "solution": "Lift=ρVg−mg=1.2×2000×10−1800×10=24000−18000=6000 N."
+            "solution": "\\(P=P_0+\\rho gh=100\\,000+1000\\times10\\times5=150000\\) Pa = 150 kPa."
           },
           {
             "question": "A U-tube manometer containing mercury (\\(ho = 13,600\\) kg/m<sup>3</sup>) is connected to a gas on one side and open to the air on the other. The mercury surface is 15 cm <b>lower</b> on the gas side than on the open side. The atmospheric pressure is \\(1.013 \times 10^5\\) Pa. What is the pressure of the gas? (\\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -41025,28 +41025,28 @@ const subjects = [
             "solution": "At 25 m: \\(p = 1.01 \\times 10^5 + 1030(9.8)(25) = 3.53 × 10<sup>5</sup>\\) Pa. Boyle's law: \\(V_2/V_1 = p_1/p_2 = 3.53 × 10<sup>5</sup>/1.01 \\times 10^5 = 3.5\\)."
           },
           {
-            "question": "A dam gate is 4 m wide and 2 m high with top edge 3 m below surface. Total force?",
+            "question": "Take g = 10 m/s². At a depth of 20 m in a liquid of density 1000 kg/m³, what is the absolute pressure? (Atmospheric pressure = 100 kPa.)",
             "options": [
-              "160 kN",
-              "240 kN",
-              "320 kN",
-              "400 kN",
-              "480 kN"
-            ],
-            "correct": 2,
-            "solution": "Average pressure at centroid=ρg(3+1)=40000 Pa. F=P×A=40000×8=320000 N=320 kN."
-          },
-          {
-            "question": "A sphere radius 1 mm (ρ=8000) falls through glycerine (ρ=1260, η=1.5). Terminal velocity? (g=10)",
-            "options": [
-              "0.5 cm/s",
-              "1.0 cm/s",
-              "1.5 cm/s",
-              "2.0 cm/s",
-              "3.0 cm/s"
+              "120 kPa",
+              "300 kPa",
+              "200 kPa",
+              "200000 kPa",
+              "1200 kPa"
             ],
             "correct": 1,
-            "solution": "v=2r²g(ρ_s−ρ_f)/(9η)=2×10⁻⁶×10×6740/(13.5)≈0.01 m/s=1.0 cm/s."
+            "solution": "\\(P=P_0+\\rho gh=100\\,000+1000\\times10\\times20=300000\\) Pa = 300 kPa."
+          },
+          {
+            "question": "Take g = 10 m/s². At a depth of 30 m in a liquid of density 800 kg/m³, what is the absolute pressure? (Atmospheric pressure = 100 kPa.)",
+            "options": [
+              "340 kPa",
+              "240 kPa",
+              "240000 kPa",
+              "124 kPa",
+              "1240 kPa"
+            ],
+            "correct": 0,
+            "solution": "\\(P=P_0+\\rho gh=100\\,000+800\\times10\\times30=340000\\) Pa = 340 kPa."
           },
           {
             "question": "A large open tank has a small hole 1.8 m below the water surface and 1.0 m above the ground. How far from the base of the tank does the water jet land? (\\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -41073,52 +41073,52 @@ const subjects = [
             "solution": "Continuity: \\(A_1v_1 = A_2v_2\\). \\(A_1 = \\pi(1.0)^2 = 3.14\\) cm<sup>2</sup>. \\(v_2 = 0.30 \\times 3.14/2000 = 4.71 × 10<sup>-4</sup>\\) m/s. The slow flow gives time for exchange with the tissues."
           },
           {
-            "question": "A balloon volume 0.15 m³ is filled with helium (ρ=0.18 kg/m³) in air (ρ=1.2). What mass can it lift? (g=10)",
+            "question": "Take g = 10 m/s². At a depth of 15 m in a liquid of density 1000 kg/m³, what is the absolute pressure? (Atmospheric pressure = 100 kPa.)",
             "options": [
-              "50 g",
-              "100 g",
-              "150 g",
-              "200 g",
-              "250 g"
+              "1150 kPa",
+              "115 kPa",
+              "250 kPa",
+              "150000 kPa",
+              "150 kPa"
             ],
             "correct": 2,
-            "solution": "Liftable mass=(ρ_air−ρ_He)V=(1.2−0.18)×0.15=0.153 kg≈150 g."
+            "solution": "\\(P=P_0+\\rho gh=100\\,000+1000\\times10\\times15=250000\\) Pa = 250 kPa."
           },
           {
-            "question": "What is the absolute pressure at a depth of 10 m in fresh water? (Atmospheric pressure P₀ = 1.0 × 10⁵ Pa, density of water ρ = 1000 kg/m³, g = 10 m/s²)",
+            "question": "A cube of wood of density 400 kg/m³ floats in a liquid of density 1250 kg/m³. What percentage of its volume is submerged?",
             "options": [
-              "2.0 × 10⁵ Pa (2.0 atm)",
-              "1.0 × 10⁵ Pa (1.0 atm)",
-              "1.5 × 10⁵ Pa",
-              "3.0 × 10⁵ Pa",
-              "1.1 × 10⁵ Pa"
+              "31.25 %",
+              "24.24 %",
+              "68 %",
+              "32 %",
+              "40 %"
             ],
-            "correct": 0,
-            "solution": "Hydrostatic gauge pressure is P_gauge = ρ g h = 1000 kg/m³ × 10 m/s² × 10 m = 1.0 × 10⁵ Pa. Absolute pressure is P_abs = P₀ + P_gauge = 1.0 × 10⁵ Pa + 1.0 × 10⁵ Pa = 2.0 × 10⁵ Pa (≈ 2.0 atm)."
+            "correct": 3,
+            "solution": "Floating: weight = buoyancy, \\(\\rho_oVg=\\rho_fV_{sub}g\\), so \\(\\dfrac{V_{sub}}V=\\dfrac{400}{1250}=0.32\\) = 32%."
           },
           {
-            "question": "In a hydraulic lift, a force of 50 N is applied to a small piston of cross-sectional area 0.01 m². What load force can be supported by the large piston having an area of 0.20 m²?",
+            "question": "Take g = 10 m/s². A solid block of volume 10 litres and density 4000 kg/m³ hangs from a spring balance fully submerged in water (1000 kg/m³). What does the balance read?",
             "options": [
-              "1000 N",
+              "400 N",
               "500 N",
-              "250 N",
-              "2000 N",
-              "100 N"
+              "100 N",
+              "300 N",
+              "200 N"
             ],
-            "correct": 0,
-            "solution": "By Pascal's Principle, pressure is transmitted undiminished: P₁ = P₂ ⇒ F₁ / A₁ = F₂ / A₂ ⇒ F₂ = F₁ × (A₂ / A₁) = 50 N × (0.20 / 0.01) = 50 × 20 = 1000 N."
+            "correct": 3,
+            "solution": "Weight \\(\\rho Vg=4000\\times0.01\\times10=400\\) N; buoyancy \\(\\rho_wVg=100\\) N. Apparent weight = 400 − 100 = 300 N."
           },
           {
-            "question": "A solid object of volume 0.002 m³ is completely submerged in water (density ρ = 1000 kg/m³). What is the buoyant force acting on the object? (Use g = 10 m/s²)",
+            "question": "Take g = 10 m/s². A solid block of volume 2 litres and density 8900 kg/m³ hangs from a spring balance fully submerged in water (1000 kg/m³). What does the balance read?",
             "options": [
+              "178 N",
               "20 N",
-              "2.0 N",
-              "200 N",
-              "10 N",
-              "5.0 N"
+              "89 N",
+              "198 N",
+              "158 N"
             ],
-            "correct": 0,
-            "solution": "Archimedes' Principle states that the buoyant force equals the weight of displaced fluid: F_b = ρ_fluid × V_displaced × g = 1000 kg/m³ × 0.002 m³ × 10 m/s² = 20 N."
+            "correct": 4,
+            "solution": "Weight \\(\\rho Vg=8900\\times0.002\\times10=178\\) N; buoyancy \\(\\rho_wVg=20\\) N. Apparent weight = 178 − 20 = 158 N."
           },
           {
             "question": "According to the continuity equation for an incompressible fluid (A₁ v₁ = A₂ v₂), if the radius of a blood vessel is halved due to atherosclerotic plaque, what happens to the blood flow velocity?",
@@ -41145,52 +41145,52 @@ const subjects = [
             "solution": "Poiseuille's Law for laminar viscous flow is Q = (π r⁴ ΔP) / (8 η L). Flow rate is proportional to the fourth power of radius (r⁴). This explains why even slight arterial vasoconstriction or vasodilation causes dramatic changes in vascular resistance and blood flow."
           },
           {
-            "question": "What does Bernoulli's Principle state for the steady streamline flow of an ideal fluid?",
+            "question": "Water flows at 1 m/s in a pipe of diameter 16 cm which narrows to a diameter of 4 cm. What is the speed in the narrow section?",
             "options": [
-              "Where fluid velocity increases, static fluid pressure decreases",
-              "Where fluid velocity increases, pressure increases",
-              "Pressure is constant throughout all points of a fluid",
-              "Buoyant force increases with flow speed",
-              "Viscous resistance is proportional to velocity squared"
+              "16 m/s",
+              "5 m/s",
+              "4 m/s",
+              "64 m/s",
+              "0.25 m/s"
             ],
             "correct": 0,
-            "solution": "Bernoulli's equation is P + (1/2)ρ v² + ρ g h = constant. In horizontal streamline flow (constant h), as the kinetic energy density ((1/2)ρ v²) increases due to higher velocity, the static pressure P must decrease to conserve total mechanical energy."
+            "solution": "Continuity: \\(A_1v_1=A_2v_2\\) and area \\(\\propto d^2\\), so \\(v_2=v_1(d_1/d_2)^2=1\\times16=16\\) m/s."
           },
           {
-            "question": "A piece of wood floats in water with 60% of its total volume submerged. What is the density of the wood? (Density of water = 1000 kg/m³)",
+            "question": "Take g = 10 m/s². A solid block of volume 5 litres and density 4000 kg/m³ hangs from a spring balance fully submerged in water (1000 kg/m³). What does the balance read?",
             "options": [
-              "600 kg/m³",
-              "400 kg/m³",
-              "800 kg/m³",
-              "1000 kg/m³",
-              "300 kg/m³"
+              "200 N",
+              "50 N",
+              "150 N",
+              "100 N",
+              "250 N"
             ],
-            "correct": 0,
-            "solution": "For a floating object in equilibrium: Weight = Buoyant force ⇒ ρ_object V_total g = ρ_water V_submerged g ⇒ ρ_object / ρ_water = V_submerged / V_total = 0.60. Thus, ρ_object = 0.60 × 1000 kg/m³ = 600 kg/m³."
+            "correct": 2,
+            "solution": "Weight \\(\\rho Vg=4000\\times0.005\\times10=200\\) N; buoyancy \\(\\rho_wVg=50\\) N. Apparent weight = 200 − 50 = 150 N."
           },
           {
-            "question": "What is the gauge pressure measured by a sphygmomanometer during a blood pressure reading of 120 mmHg in SI units (Pascals)? (Density of mercury = 13,600 kg/m³, g = 9.8 m/s²)",
+            "question": "Take g = 10 m/s². A solid block of volume 2 litres and density 7800 kg/m³ hangs from a spring balance fully submerged in water (1000 kg/m³). What does the balance read?",
             "options": [
-              "≈ 1.6 × 10⁴ Pa (16 kPa)",
-              "≈ 1.2 × 10⁵ Pa (120 kPa)",
-              "≈ 1.6 × 10³ Pa (1.6 kPa)",
-              "≈ 1.0 × 10⁵ Pa (100 kPa)",
-              "≈ 8.0 × 10⁴ Pa (80 kPa)"
+              "20 N",
+              "136 N",
+              "78 N",
+              "156 N",
+              "176 N"
             ],
-            "correct": 0,
-            "solution": "P = ρ g h = 13,600 kg/m³ × 9.8 m/s² × 0.120 m ≈ 133.28 kPa/m × 0.120 m ≈ 15,994 Pa ≈ 1.6 × 10⁴ Pa (16 kPa)."
+            "correct": 1,
+            "solution": "Weight \\(\\rho Vg=7800\\times0.002\\times10=156\\) N; buoyancy \\(\\rho_wVg=20\\) N. Apparent weight = 156 − 20 = 136 N."
           },
           {
-            "question": "What causes surface tension in liquids?",
+            "question": "A cube of wood of density 750 kg/m³ floats in a liquid of density 1250 kg/m³. What percentage of its volume is submerged?",
             "options": [
-              "Unbalanced inward cohesive intermolecular forces experienced by molecules at the liquid-gas interface",
-              "Atmospheric pressure pressing down on the liquid",
-              "Viscous friction between fluid layers",
-              "Repulsive forces between liquid and container walls",
-              "Gravitational attraction between molecules"
+              "37.5 %",
+              "60 %",
+              "75 %",
+              "16.67 %",
+              "40 %"
             ],
-            "correct": 0,
-            "solution": "Molecules in the bulk liquid experience equal cohesive forces in all directions. Molecules at the liquid surface lack neighboring liquid molecules above them, creating a net inward attractive force that pulls surface molecules toward the bulk, causing the surface to behave like a stretched elastic membrane."
+            "correct": 1,
+            "solution": "Floating: weight = buoyancy, \\(\\rho_oVg=\\rho_fV_{sub}g\\), so \\(\\dfrac{V_{sub}}V=\\dfrac{750}{1250}=0.6\\) = 60%."
           },
           {
             "question": "Water leaves a horizontal hose nozzle of diameter 2.0 cm at 12 m/s and hits a vertical wall, stopping completely. What is the force on the wall? (\\(\\rho = 1000\\) kg/m<sup>3</sup>)",
@@ -41205,52 +41205,52 @@ const subjects = [
             "solution": "Mass flow rate \\(= \\rho Av = 1000 \\times \\pi(0.010)^2 \\times 12 = 3.77\\) kg/s. Force \\(= \\Delta p/\\Delta t = (\\text{mass rate}) \\times v = 3.77 \\times 12 = 45.2\\) N."
           },
           {
-            "question": "What happens to the pressure at the constricted throat of a Venturi tube through which air is flowing?",
+            "question": "Water flows at 3 m/s in a pipe of diameter 16 cm which narrows to a diameter of 4 cm. What is the speed in the narrow section?",
             "options": [
-              "The pressure drops because the air speed increases",
-              "The pressure increases because the air speed decreases",
-              "The pressure remains unchanged",
-              "The air completely stops moving",
-              "The density of the air quadruples"
+              "12 m/s",
+              "0.75 m/s",
+              "7 m/s",
+              "192 m/s",
+              "48 m/s"
             ],
-            "correct": 0,
-            "solution": "At the constriction, cross-sectional area decreases, so air speed must increase by the continuity equation. By Bernoulli's Principle, this increase in speed leads to a corresponding drop in fluid pressure (the Venturi effect)."
+            "correct": 4,
+            "solution": "Continuity: \\(A_1v_1=A_2v_2\\) and area \\(\\propto d^2\\), so \\(v_2=v_1(d_1/d_2)^2=3\\times16=48\\) m/s."
           },
           {
-            "question": "An intravenous (IV) bag of saline solution is placed at a height h above a patient's arm. What minimum height is required for the fluid to enter a vein where blood gauge pressure is 1360 Pa? (Density of saline = 1000 kg/m³, g = 10 m/s²)",
+            "question": "A cube of wood of density 900 kg/m³ floats in a liquid of density 1200 kg/m³. What percentage of its volume is submerged?",
             "options": [
-              "0.136 m (13.6 cm)",
-              "1.36 m",
-              "0.0136 m",
-              "0.68 m",
-              "2.72 m"
+              "42.86 %",
+              "90 %",
+              "13.33 %",
+              "25 %",
+              "75 %"
             ],
-            "correct": 0,
-            "solution": "Hydrostatic pressure generated by the saline column must equal the venous pressure: P = ρ g h ⇒ 1360 Pa = 1000 kg/m³ × 10 m/s² × h = 10,000 h ⇒ h = 1360 / 10,000 = 0.136 m (13.6 cm)."
+            "correct": 4,
+            "solution": "Floating: weight = buoyancy, \\(\\rho_oVg=\\rho_fV_{sub}g\\), so \\(\\dfrac{V_{sub}}V=\\dfrac{900}{1200}=0.75\\) = 75%."
           },
           {
-            "question": "Why does a hot air balloon rise in the Earth's atmosphere?",
+            "question": "A cube of wood of density 600 kg/m³ floats in a liquid of density 1250 kg/m³. What percentage of its volume is submerged?",
             "options": [
-              "The heated air inside is less dense than the cooler surrounding air, so the buoyant force exceeds the total weight of the balloon",
-              "Hot air has negative mass",
-              "Heat destroys gravitational attraction",
-              "Bernoulli lift is generated by the balloon's shape",
-              "Atmospheric pressure pushes the hot air upward by conduction"
+              "60 %",
+              "48 %",
+              "20.83 %",
+              "52 %",
+              "32.43 %"
             ],
-            "correct": 0,
-            "solution": "Heating air causes it to expand, reducing its density (ρ_hot < ρ_cold). The weight of cooler ambient air displaced by the balloon's large volume (buoyant force) exceeds the total combined weight of the balloon structure and hot air inside, producing a net upward force."
+            "correct": 1,
+            "solution": "Floating: weight = buoyancy, \\(\\rho_oVg=\\rho_fV_{sub}g\\), so \\(\\dfrac{V_{sub}}V=\\dfrac{600}{1250}=0.48\\) = 48%."
           },
           {
-            "question": "In a horizontal pipe, water flows at 2.0 m/s through a section of diameter 4.0 cm. What is the speed of water in a downstream section where the diameter widens to 8.0 cm?",
+            "question": "Take g = 10 m/s². A solid block of volume 2 litres and density 2700 kg/m³ hangs from a spring balance fully submerged in water (1000 kg/m³). What does the balance read?",
             "options": [
-              "0.50 m/s",
-              "1.0 m/s",
-              "4.0 m/s",
-              "8.0 m/s",
-              "0.25 m/s"
+              "34 N",
+              "54 N",
+              "20 N",
+              "27 N",
+              "74 N"
             ],
             "correct": 0,
-            "solution": "From the continuity equation A₁ v₁ = A₂ v₂: (π d₁² / 4) v₁ = (π d₂² / 4) v₂ ⇒ v₂ = v₁ × (d₁ / d₂)² = 2.0 m/s × (4.0 / 8.0)² = 2.0 × (1/2)² = 2.0 × 0.25 = 0.50 m/s."
+            "solution": "Weight \\(\\rho Vg=2700\\times0.002\\times10=54\\) N; buoyancy \\(\\rho_wVg=20\\) N. Apparent weight = 54 − 20 = 34 N."
           },
           {
             "question": "A steel sphere of radius 1.0 mm (\\(\\rho = 8000\\) kg/m<sup>3</sup>) falls at terminal velocity in oil of viscosity 0.80 Pa s and density 900 kg/m<sup>3</sup>. What is the terminal speed? (Use Stokes' law, \\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -41265,64 +41265,64 @@ const subjects = [
             "solution": "At terminal speed: weight = buoyancy + drag, so \\(\\tfrac{4}{3}\\pi r^3(\\rho_s - \\rho_f)g = 6\\pi\\eta rv\\). Therefore \\(v = \\dfrac{2r^2(\\rho_s - \\rho_f)g}{9\\eta} = \\dfrac{2(10^{-6})(7100)(9.8)}{9(0.80)} = 0.0193\\) m/s."
           },
           {
-            "question": "A U-tube manometer containing mercury (density = 13.6 g/cm³) has water (density = 1.0 g/cm³) poured into one arm. If the water column has a height of 27.2 cm, what is the difference in mercury height (Δh_Hg) between the two arms?",
+            "question": "A cube of wood of density 500 kg/m³ floats in a liquid of density 1250 kg/m³. What percentage of its volume is submerged?",
             "options": [
-              "2.0 cm",
-              "13.6 cm",
-              "27.2 cm",
-              "1.0 cm",
-              "4.0 cm"
+              "40 %",
+              "28.57 %",
+              "25 %",
+              "50 %",
+              "60 %"
             ],
             "correct": 0,
-            "solution": "Equating hydrostatic pressures at the reference level: ρ_water g h_water = ρ_Hg g Δh_Hg ⇒ Δh_Hg = (ρ_water / ρ_Hg) × h_water = (1.0 / 13.6) × 27.2 cm = 2.0 cm."
+            "solution": "Floating: weight = buoyancy, \\(\\rho_oVg=\\rho_fV_{sub}g\\), so \\(\\dfrac{V_{sub}}V=\\dfrac{500}{1250}=0.4\\) = 40%."
           },
           {
-            "question": "What is the condition for an object of average density ρ_obj to sink when placed in a fluid of density ρ_fluid?",
+            "question": "Take g = 10 m/s². A solid block of volume 10 litres and density 8900 kg/m³ hangs from a spring balance fully submerged in water (1000 kg/m³). What does the balance read?",
             "options": [
-              "ρ_obj > ρ_fluid",
-              "ρ_obj < ρ_fluid",
-              "ρ_obj = ρ_fluid",
-              "ρ_obj = 0",
-              "The object will sink regardless of density"
+              "790 N",
+              "445 N",
+              "990 N",
+              "100 N",
+              "890 N"
             ],
             "correct": 0,
-            "solution": "The downward gravitational force is F_g = ρ_obj V g and upward buoyant force is F_b = ρ_fluid V g. When fully submerged, net downward force F_net = (ρ_obj - ρ_fluid) V g. If ρ_obj > ρ_fluid, F_net > 0 and the object sinks."
+            "solution": "Weight \\(\\rho Vg=8900\\times0.01\\times10=890\\) N; buoyancy \\(\\rho_wVg=100\\) N. Apparent weight = 890 − 100 = 790 N."
           },
           {
-            "question": "How does pulmonary surfactant reduce the work of breathing in human alveoli?",
+            "question": "A cube of wood of density 800 kg/m³ floats in a liquid of density 1250 kg/m³. What percentage of its volume is submerged?",
             "options": [
-              "It lowers the surface tension of the alveolar fluid lining, preventing alveolar collapse (atelectasis) according to the Law of Laplace",
-              "It increases the viscosity of air",
-              "It increases thoracic hydrostatic pressure",
-              "It prevents turbulent airflow in bronchi",
-              "It seals the pleural cavity"
+              "64 %",
+              "36 %",
+              "80 %",
+              "15.63 %",
+              "39.02 %"
             ],
             "correct": 0,
-            "solution": "According to the Law of Laplace for a sphere, pressure required to prevent collapse is P = 2T / r, where T is surface tension. Surfactant reduces T in the thin water lining, drastically lowering the pressure needed to keep small alveoli inflated and equalizing pressures across alveoli of different sizes."
+            "solution": "Floating: weight = buoyancy, \\(\\rho_oVg=\\rho_fV_{sub}g\\), so \\(\\dfrac{V_{sub}}V=\\dfrac{800}{1250}=0.64\\) = 64%."
           },
           {
-            "question": "An iceberg floats in seawater (density = 1025 kg/m³). If the density of pure ice is 920 kg/m³, what percentage of the iceberg's volume is submerged below the water surface?",
+            "question": "Take g = 10 m/s². A solid block of volume 5 litres and density 8900 kg/m³ hangs from a spring balance fully submerged in water (1000 kg/m³). What does the balance read?",
             "options": [
-              "89.8% (≈ 90%)",
-              "10.2%",
-              "50.0%",
-              "75.5%",
-              "98.0%"
+              "445 N",
+              "222.5 N",
+              "495 N",
+              "50 N",
+              "395 N"
             ],
-            "correct": 0,
-            "solution": "Fraction submerged = ρ_ice / ρ_seawater = 920 / 1025 ≈ 0.8976 ≈ 89.8% (meaning approximately 90% is below the surface, and only ~10% is visible above water)."
+            "correct": 4,
+            "solution": "Weight \\(\\rho Vg=8900\\times0.005\\times10=445\\) N; buoyancy \\(\\rho_wVg=50\\) N. Apparent weight = 445 − 50 = 395 N."
           },
           {
-            "question": "What is the total mass of air inside a room measuring 5.0 m × 4.0 m × 3.0 m, assuming an air density of 1.25 kg/m³?",
+            "question": "Take g = 10 m/s². A solid block of volume 10 litres and density 2700 kg/m³ hangs from a spring balance fully submerged in water (1000 kg/m³). What does the balance read?",
             "options": [
-              "75 kg",
-              "60 kg",
-              "125 kg",
-              "15 kg",
-              "150 kg"
+              "100 N",
+              "170 N",
+              "270 N",
+              "135 N",
+              "370 N"
             ],
-            "correct": 0,
-            "solution": "Volume of the room V = 5.0 m × 4.0 m × 3.0 m = 60 m³. Mass m = ρ × V = 1.25 kg/m³ × 60 m³ = 75 kg."
+            "correct": 1,
+            "solution": "Weight \\(\\rho Vg=2700\\times0.01\\times10=270\\) N; buoyancy \\(\\rho_wVg=100\\) N. Apparent weight = 270 − 100 = 170 N."
           },
           {
             "question": "Water drains from a large tank through a pipe of diameter 3.0 cm whose exit is 2.0 m below the water surface. What is the volume flow rate? (\\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -41415,16 +41415,16 @@ const subjects = [
             "solution": "T = 2π√(r³/GM) = 2π√(R³/gR²) = 2π√(R/g) = 2π√(6.4×10⁶/10) ≈ 5060 s ≈ 84 min."
           },
           {
-            "question": "A car of mass 1000 kg goes around a curve of radius 50 m at 20 m/s. What is the required centripetal force?",
+            "question": "A car of mass 800 kg drives round a circular bend of radius 2 m at 10 m/s. What is the centripetal force needed (provided by friction)?",
             "options": [
-              "4,000 N",
-              "6,000 N",
-              "8,000 N",
-              "10,000 N",
-              "12,000 N"
+              "40000 N",
+              "80000 N",
+              "20000 N",
+              "4000 N",
+              "160000 N"
             ],
-            "correct": 2,
-            "solution": "Fc = mv²/r = 1000 × 400/50 = 8,000 N."
+            "correct": 0,
+            "solution": "\\(F=\\dfrac{mv^2}{r}=\\dfrac{800\\times100}{2}=40000\\) N."
           },
           {
             "question": "What is the acceleration due to gravity at a height of 2R above Earth's surface? (g at surface = 10 m/s²)",
@@ -41439,16 +41439,16 @@ const subjects = [
             "solution": "g' = g(R/(R+h))² = 10(R/(3R))² = 10/9 ≈ 1.1 m/s²."
           },
           {
-            "question": "A 0.5 kg ball on a string of length 1 m is whirled in a horizontal circle. If the string breaks at 50 N tension, what is the maximum speed?",
+            "question": "A car of mass 400 kg drives round a circular bend of radius 4 m at 8 m/s. What is the centripetal force needed (provided by friction)?",
             "options": [
-              "3.5 m/s",
-              "5.0 m/s",
-              "7.1 m/s",
-              "10.0 m/s",
-              "14.1 m/s"
+              "102400 N",
+              "6400 N",
+              "800 N",
+              "25600 N",
+              "3200 N"
             ],
             "correct": 1,
-            "solution": "T = mv²/r. 50 = 0.5 × v²/1 → v² = 100 → v = 10 m/s."
+            "solution": "\\(F=\\dfrac{mv^2}{r}=\\dfrac{400\\times64}{4}=6400\\) N."
           },
           {
             "question": "A car takes a flat curve of radius 80 m. The coefficient of static friction between the tyres and the road is 0.65 (\\(g = 9.8\\) m/s<sup>2</sup>). What is the maximum speed at which it can take the curve without skidding?",
@@ -41463,16 +41463,16 @@ const subjects = [
             "solution": "Friction provides the centripetal force: \\(\\mu mg = mv^2/r\\), so \\(v = \\sqrt{\\mu g r} = \\sqrt{0.65 \\times 9.8 \\times 80} = 22.6\\) m/s. The mass cancels."
           },
           {
-            "question": "A satellite has orbital period T. If its orbital radius doubles, what is the new period?",
+            "question": "A heater of resistance 20 Ω is connected to an AC supply of rms voltage 220 V. What is its average power?",
             "options": [
-              "T/2",
-              "T/√2",
-              "T√2",
-              "2T",
-              "2√2 T"
+              "11 W",
+              "4840 W",
+              "1210 W",
+              "3422 W",
+              "2420 W"
             ],
             "correct": 4,
-            "solution": "T ∝ r^(3/2). If r doubles, T increases by 2^(3/2) = 2√2."
+            "solution": "\\(P=\\dfrac{V_{rms}^2}{R}=\\dfrac{220^2}{20}=2420\\) W."
           },
           {
             "question": "What is the escape velocity from Earth's surface? (g = 10 m/s², R = 6.4 × 10⁶ m)",
@@ -41511,16 +41511,16 @@ const subjects = [
             "solution": "PE = -GMm/(R+h) = -mgR²/(2R) = -mgR/2 = -10 × 10 × 6.4×10⁶/2 = -32×10⁶ J. Change from surface: ΔPE = mgR/2 = 32 MJ."
           },
           {
-            "question": "A car goes around a banked curve at 20 m/s. If the banking angle is 30°, what is the ideal radius? (g = 10 m/s²)",
+            "question": "A car of mass 500 kg drives round a circular bend of radius 2 m at 8 m/s. What is the centripetal force needed (provided by friction)?",
             "options": [
-              "23 m",
-              "35 m",
-              "46 m",
-              "69 m",
-              "115 m"
+              "32000 N",
+              "2000 N",
+              "8000 N",
+              "64000 N",
+              "16000 N"
             ],
-            "correct": 3,
-            "solution": "For ideal banking: tan θ = v²/(rg). r = v²/(g tan θ) = 400/(10 × 0.577) = 400/5.77 ≈ 69 m."
+            "correct": 4,
+            "solution": "\\(F=\\dfrac{mv^2}{r}=\\dfrac{500\\times64}{2}=16000\\) N."
           },
           {
             "question": "A 0.50 kg mass hangs at rest from a spring and stretches it by 4.9 cm (\\(g = 9.8\\) m/s<sup>2</sup>). It is pulled down a little and released. What is the period of the oscillation?",
@@ -41547,52 +41547,52 @@ const subjects = [
             "solution": "g = GM/R². If M → 2M and R → 2R, g' = G(2M)/(2R)² = 2GM/4R² = g/2."
           },
           {
-            "question": "What is the work done by centripetal force in one complete revolution?",
+            "question": "A car of mass 700 kg drives round a circular bend of radius 20 m at 8 m/s. What is the centripetal force needed (provided by friction)?",
             "options": [
-              "Zero",
-              "Positive",
-              "Negative",
-              "2πmv²",
-              "mv²/r"
+              "1120 N",
+              "280 N",
+              "44800 N",
+              "896000 N",
+              "2240 N"
             ],
-            "correct": 0,
-            "solution": "Centripetal force is always perpendicular to displacement, so work done is zero."
+            "correct": 4,
+            "solution": "\\(F=\\dfrac{mv^2}{r}=\\dfrac{700\\times64}{20}=2240\\) N."
           },
           {
-            "question": "A conical pendulum has string length L and angle θ with vertical. What is the period?",
+            "question": "A car of mass 200 kg drives round a circular bend of radius 8 m at 12 m/s. What is the centripetal force needed (provided by friction)?",
             "options": [
-              "2π√(L/g)",
-              "2π√(L cos θ/g)",
-              "2π√(L/g cos θ)",
-              "2π√(L sin θ/g)",
-              "2π√(L tan θ/g)"
-            ],
-            "correct": 1,
-            "solution": "For conical pendulum: T = 2π√(L cos θ/g)."
-          },
-          {
-            "question": "What is the relationship between orbital period and radius for circular orbits?",
-            "options": [
-              "T ∝ r",
-              "T ∝ r²",
-              "T ∝ √r",
-              "T ∝ r^(3/2)",
-              "T ∝ 1/r"
+              "300 N",
+              "1800 N",
+              "230400 N",
+              "3600 N",
+              "28800 N"
             ],
             "correct": 3,
-            "solution": "Kepler's third law: T² ∝ r³, so T ∝ r^(3/2)."
+            "solution": "\\(F=\\dfrac{mv^2}{r}=\\dfrac{200\\times144}{8}=3600\\) N."
           },
           {
-            "question": "A 5 kg object on a frictionless horizontal table is attached to a string through a hole. At radius 0.5 m, it has speed 4 m/s. If pulled to radius 0.25 m, what is the new speed?",
+            "question": "A uniform light beam is balanced on a pivot. A 6 kg mass hangs 5 m to the left of the pivot. At what mass hung 3 m to the right will the beam balance?",
             "options": [
-              "4 m/s",
-              "8 m/s",
-              "12 m/s",
-              "16 m/s",
-              "32 m/s"
+              "3.6 kg",
+              "8 kg",
+              "10 kg",
+              "90 kg",
+              "6 kg"
             ],
-            "correct": 1,
-            "solution": "Angular momentum conserved: mvr = constant. v₁r₁ = v₂r₂. 4 × 0.5 = v₂ × 0.25. v₂ = 8 m/s."
+            "correct": 2,
+            "solution": "Balance of torques: \\(6g\\times5=m g\\times3\\), so \\(m=\\dfrac{6\\times5}{3}=10\\) kg."
+          },
+          {
+            "question": "A 9 kg mass hangs on a spring of constant 16 N/m and oscillates vertically. What is its period?",
+            "options": [
+              "\\(\\dfrac{9}{4}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{3}{4}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{3}{2}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{32}{9}\\pi\\text{ s}\\)",
+              "\\(3\\pi\\text{ s}\\)"
+            ],
+            "correct": 2,
+            "solution": "\\(T=2\\pi\\sqrt{\\dfrac mk}=2\\pi\\sqrt{\\dfrac{9}{16}}=\\dfrac{3}{2}\\pi\\) s."
           },
           {
             "question": "What is the gravitational field strength at a point halfway between two equal masses M separated by distance d?",
@@ -41619,16 +41619,16 @@ const subjects = [
             "solution": "r³ = GMT²/(4π²) = 6.67×10⁻¹¹ × 6×10²⁴ × (86400)²/(4π²) ≈ 7.5×10²². r ≈ 4.2×10⁷ m."
           },
           {
-            "question": "An object moves in a circular path of radius 2.0 m with a constant speed of 4.0 m/s. What is its centripetal acceleration?",
+            "question": "Take g = 10 m/s². A simple pendulum has a length of 0.4 m. What is its period?",
             "options": [
-              "8.0 m/s² directed toward the center",
-              "2.0 m/s² directed away from the center",
-              "16 m/s² tangential",
-              "4.0 m/s² directed toward the center",
-              "0 m/s²"
+              "\\(\\dfrac{1}{5}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{2}{5}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{4}{5}\\pi\\text{ s}\\)",
+              "\\(10\\pi\\text{ s}\\)",
+              "\\(\\dfrac{4}{25}\\pi\\text{ s}\\)"
             ],
-            "correct": 0,
-            "solution": "Centripetal acceleration is a_c = v² / r = (4.0 m/s)² / 2.0 m = 16 / 2.0 = 8.0 m/s² directed radially inward toward the center of curvature."
+            "correct": 1,
+            "solution": "\\(T=2\\pi\\sqrt{L/g}=2\\pi\\sqrt{0.4/10}=\\dfrac{2}{5}\\pi\\) s."
           },
           {
             "question": "According to Newton's Law of Universal Gravitation, if the distance between two masses is tripled, what happens to the gravitational force between them?",
@@ -41679,16 +41679,16 @@ const subjects = [
             "solution": "Kepler's Third Law (harmonic law) states that the square of the orbital period of any planet is directly proportional to the cube of the semi-major axis of its orbit: T² / a³ = constant (4π² / GM)."
           },
           {
-            "question": "What is the angular velocity ω in radians per second of the second hand of a standard analog clock?",
+            "question": "A 4 kg mass hangs on a spring of constant 9 N/m and oscillates vertically. What is its period?",
             "options": [
-              "π / 30 rad/s (≈ 0.105 rad/s)",
-              "2π rad/s",
-              "π / 60 rad/s",
-              "60 rad/s",
-              "π / 6 rad/s"
+              "\\(\\dfrac{2}{3}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{4}{3}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{9}{2}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{3}{4}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{16}{9}\\pi\\text{ s}\\)"
             ],
-            "correct": 0,
-            "solution": "The second hand completes one full revolution (2π radians) in 60 seconds (T = 60 s). Angular velocity is ω = 2π / T = 2π / 60 s = π / 30 rad/s ≈ 0.105 rad/s."
+            "correct": 1,
+            "solution": "\\(T=2\\pi\\sqrt{\\dfrac mk}=2\\pi\\sqrt{\\dfrac{4}{9}}=\\dfrac{4}{3}\\pi\\) s."
           },
           {
             "question": "What is the apparent weightlessness experienced by astronauts aboard the International Space Station (ISS) in low Earth orbit primarily due to?",
@@ -41715,16 +41715,16 @@ const subjects = [
             "solution": "Surface gravity is g = G M / R². If radius is halved (R' = R/2): g' = G M / (R/2)² = G M / (R²/4) = 4 (G M / R²) = 4g."
           },
           {
-            "question": "A car of mass 1200 kg travels over the crest of a vertical circular hill of radius 40 m at a speed of 10 m/s. What normal force does the road exert on the car at the peak? (Use g = 10 m/s²)",
+            "question": "A 2 kg mass on a spring of constant 50 N/m oscillates with amplitude 0.2 m. What is its maximum speed?",
             "options": [
-              "9000 N",
-              "12,000 N",
-              "15,000 N",
-              "3000 N",
-              "6000 N"
+              "0.04 m/s",
+              "2 m/s",
+              "1 m/s",
+              "10 m/s",
+              "5 m/s"
             ],
-            "correct": 0,
-            "solution": "At the crest of the hill, net downward force provides centripetal acceleration: mg - N = m v² / r ⇒ N = m(g - v² / r) = 1200 × (10 - 10² / 40) = 1200 × (10 - 2.5) = 1200 × 7.5 = 9000 N."
+            "correct": 2,
+            "solution": "\\(\\omega=\\sqrt{k/m}=\\sqrt{50/2}=5\\) rad/s, and \\(v_{max}=A\\omega=0.2\\times5=1\\) m/s."
           },
           {
             "question": "What is a geostationary orbit?",
@@ -41751,16 +41751,16 @@ const subjects = [
             "solution": "Kepler's Second Law states that the radius vector drawn from the Sun to a planet sweeps out equal areas in equal times. This is a direct consequence of the conservation of angular momentum under a central gravitational force (meaning a planet travels fastest at perihelion and slowest at aphelion)."
           },
           {
-            "question": "An ultracentrifuge in a biochemistry laboratory rotates at 60,000 rpm (revolutions per minute). What is its frequency in Hertz (Hz)?",
+            "question": "A 4 kg mass hangs on a spring of constant 1 N/m and oscillates vertically. What is its period?",
             "options": [
-              "1000 Hz",
-              "60 Hz",
-              "60,000 Hz",
-              "3600 Hz",
-              "100 Hz"
+              "\\(\\dfrac{1}{2}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{1}{4}\\pi\\text{ s}\\)",
+              "\\(8\\pi\\text{ s}\\)",
+              "\\(4\\pi\\text{ s}\\)",
+              "\\(2\\pi\\text{ s}\\)"
             ],
-            "correct": 0,
-            "solution": "Frequency in Hz is revolutions per second: f = 60,000 rpm / 60 s/min = 1000 Hz."
+            "correct": 3,
+            "solution": "\\(T=2\\pi\\sqrt{\\dfrac mk}=2\\pi\\sqrt{\\dfrac{4}{1}}=4\\pi\\) s."
           },
           {
             "question": "What is the gravitational potential energy of a mass m located at distance r from the center of a planet of mass M (with reference zero at infinity)?",
@@ -41775,28 +41775,28 @@ const subjects = [
             "solution": "Gravitational potential energy with reference U = 0 at r = ∞ is given by U(r) = -G M m / r. The negative sign signifies an attractive bound gravitational well."
           },
           {
-            "question": "A stone attached to a string of length 0.50 m is whirled in a horizontal circle at a constant rate of 2.0 revolutions per second. What is its linear speed?",
+            "question": "Take g = 10 m/s². A simple pendulum has a length of 0.9 m. What is its period?",
             "options": [
-              "2π m/s (≈ 6.28 m/s)",
-              "π m/s (≈ 3.14 m/s)",
-              "4π m/s (≈ 12.57 m/s)",
-              "2.0 m/s",
-              "1.0 m/s"
+              "\\(\\dfrac{3}{5}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{6}{5}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{3}{10}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{9}{25}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{20}{3}\\pi\\text{ s}\\)"
             ],
             "correct": 0,
-            "solution": "Angular velocity ω = 2π f = 2π × (2.0 rev/s) = 4π rad/s. Linear speed v = ω r = 4π rad/s × 0.50 m = 2π m/s ≈ 6.28 m/s."
+            "solution": "\\(T=2\\pi\\sqrt{L/g}=2\\pi\\sqrt{0.9/10}=\\dfrac{3}{5}\\pi\\) s."
           },
           {
-            "question": "Why does a road engineer bank a high-speed highway curve at an angle θ?",
+            "question": "A 2 kg mass on a spring of constant 50 N/m oscillates with amplitude 0.1 m. What is its maximum speed?",
             "options": [
-              "The horizontal component of the normal force provides centripetal acceleration, reducing reliance on friction to prevent skidding",
-              "Banking increases the coefficient of friction",
-              "Banking reduces the car's mass",
-              "Banking creates aerodynamic downforce",
-              "Banking aligns the car with Earth's magnetic field"
+              "5 m/s",
+              "0.02 m/s",
+              "1 m/s",
+              "0.5 m/s",
+              "2.5 m/s"
             ],
-            "correct": 0,
-            "solution": "On a banked curve tilted at angle θ, the normal force tilts inward. Its horizontal component N sin θ points toward the center of curvature, supplying the required centripetal force (m v² / r) even on completely frictionless (e.g., icy) surfaces when tan θ = v² / (rg)."
+            "correct": 3,
+            "solution": "\\(\\omega=\\sqrt{k/m}=\\sqrt{50/2}=5\\) rad/s, and \\(v_{max}=A\\omega=0.1\\times5=0.5\\) m/s."
           },
           {
             "question": "What happens to the orbital period T of a satellite if the radius of its circular orbit is quadrupled (r' = 4r)?",
@@ -41835,16 +41835,16 @@ const subjects = [
             "solution": "In planetary orbits, the gravitational attraction exerted by the Sun on the planet acts as the central restoring force that provides the necessary centripetal acceleration to keep the planet in orbit."
           },
           {
-            "question": "A laboratory centrifuge produces a centripetal acceleration of 9800 m/s². How many 'g's of acceleration does this correspond to? (Use g = 9.8 m/s²)",
+            "question": "A 1 kg mass hangs on a spring of constant 9 N/m and oscillates vertically. What is its period?",
             "options": [
-              "1000 g",
-              "100 g",
-              "10 g",
-              "500 g",
-              "10,000 g"
+              "\\(\\dfrac{2}{3}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{4}{9}\\pi\\text{ s}\\)",
+              "\\(\\dfrac{3}{2}\\pi\\text{ s}\\)",
+              "\\(18\\pi\\text{ s}\\)",
+              "\\(\\dfrac{1}{3}\\pi\\text{ s}\\)"
             ],
             "correct": 0,
-            "solution": "Acceleration in multiples of g is a / g = 9800 m/s² / 9.8 m/s² = 1000 g."
+            "solution": "\\(T=2\\pi\\sqrt{\\dfrac mk}=2\\pi\\sqrt{\\dfrac{1}{9}}=\\dfrac{2}{3}\\pi\\) s."
           },
           {
             "question": "A ball on a string is swinging in a horizontal circle when the string suddenly snaps. What path does the ball follow immediately after the break?",
@@ -41901,16 +41901,16 @@ const subjects = [
         "name": "Momentum & Collisions",
         "questions": [
           {
-            "question": "A 5 kg object moving at 10 m/s collides elastically with a stationary 10 kg object. What is the velocity of the 5 kg object after collision?",
+            "question": "A 3 kg ball moving at 6 m/s collides head-on and elastically with a stationary 2 kg ball. What is the speed of the 2 kg ball afterwards?",
             "options": [
-              "-3.33 m/s",
-              "0 m/s",
-              "3.33 m/s",
-              "5 m/s",
-              "10 m/s"
+              "12 m/s",
+              "1.2 m/s",
+              "9 m/s",
+              "7.2 m/s",
+              "6 m/s"
             ],
-            "correct": 0,
-            "solution": "For elastic collision: v₁f = (m₁-m₂)/(m₁+m₂) × v₁i = (5-10)/(15) × 10 = -3.33 m/s."
+            "correct": 3,
+            "solution": "For an elastic collision with the target at rest: \\(v_2=\\dfrac{2m_1}{m_1+m_2}v=\\dfrac{2(3)}{5}(6)=7.2\\) m/s (the first ball continues at 1.2 m/s)."
           },
           {
             "question": "A 0.15 kg ball hits a wall at 20 m/s, with its velocity at 60° to the normal to the wall, and rebounds elastically. The contact lasts 5.0 ms. What is the average force on the ball?",
@@ -41925,28 +41925,28 @@ const subjects = [
             "solution": "Only the component along the normal changes: \\(20\\cos 60^{\\circ} = 10\\) m/s, which reverses. \\(\\Delta p = 2(0.15)(10) = 3.0\\) N s. \\(F = 3.0/0.0050 = 600\\) N."
           },
           {
-            "question": "Two objects of equal mass collide elastically. If one is initially at rest, what happens after collision?",
+            "question": "A 4 kg ball moving at 20 m/s collides head-on and elastically with a stationary 1 kg ball. What is the speed of the 1 kg ball afterwards?",
             "options": [
-              "Both move together",
-              "First stops, second moves",
-              "Both bounce back",
-              "First continues, second stays",
-              "Cannot determine"
-            ],
-            "correct": 1,
-            "solution": "In elastic collision of equal masses with one at rest, the incoming mass stops and the target moves off with the incoming velocity."
-          },
-          {
-            "question": "A 1000 kg car traveling at 20 m/s collides with a 2000 kg truck at rest. If they stick together, what is their final velocity?",
-            "options": [
-              "3.33 m/s",
-              "6.67 m/s",
-              "10 m/s",
-              "13.33 m/s",
+              "80 m/s",
+              "40 m/s",
+              "12 m/s",
+              "32 m/s",
               "20 m/s"
             ],
-            "correct": 1,
-            "solution": "Conservation of momentum: 1000 × 20 = (1000 + 2000) × v. v = 20000/3000 = 6.67 m/s."
+            "correct": 3,
+            "solution": "For an elastic collision with the target at rest: \\(v_2=\\dfrac{2m_1}{m_1+m_2}v=\\dfrac{2(4)}{5}(20)=32\\) m/s (the first ball continues at 12 m/s)."
+          },
+          {
+            "question": "A 6 kg trolley moving at 4 m/s hits a 4 kg trolley moving at 4 m/s in the opposite direction and they stick together. How much kinetic energy is lost in the collision?",
+            "options": [
+              "76.8 J",
+              "48 J",
+              "3.2 J",
+              "38.4 J",
+              "80.8 J"
+            ],
+            "correct": 0,
+            "solution": "Momentum is conserved: \\(m_1v_1+m_2v_2=(m_1+m_2)V\\) → \\(6(4)+4(-4)=10V\\), so \\(V=0.8\\) m/s. Kinetic energy before minus after = 76.8 J."
           },
           {
             "question": "A 20 g bullet moving at 400 m/s embeds itself in a 2.0 kg block hanging from a long string. To what height does the block swing? (\\(g = 9.8\\) m/s<sup>2</sup>)",
@@ -41961,16 +41961,16 @@ const subjects = [
             "solution": "Momentum: \\(0.020 \\times 400 = 2.02\\,v\\), so \\(v = 3.96\\) m/s. Energy: \\(h = v^2/2g = 15.7/19.6 = 0.8\\) m."
           },
           {
-            "question": "A 10 kg object at rest explodes into two fragments of 4 kg and 6 kg. If the 4 kg fragment moves at 10 m/s, what is the velocity of the 6 kg fragment?",
+            "question": "A 5 kg ball moving at 12 m/s collides head-on and elastically with a stationary 3 kg ball. What is the speed of the 3 kg ball afterwards?",
             "options": [
-              "-4 m/s",
-              "-6.67 m/s",
-              "-10 m/s",
-              "-15 m/s",
-              "-20 m/s"
+              "12 m/s",
+              "15 m/s",
+              "24 m/s",
+              "3 m/s",
+              "20 m/s"
             ],
             "correct": 1,
-            "solution": "Conservation of momentum: 0 = 4 × 10 + 6 × v. v = -40/6 = -6.67 m/s."
+            "solution": "For an elastic collision with the target at rest: \\(v_2=\\dfrac{2m_1}{m_1+m_2}v=\\dfrac{2(5)}{8}(12)=15\\) m/s (the first ball continues at 3 m/s)."
           },
           {
             "question": "Masses of 2.0 kg at \\((0, 0)\\), 3.0 kg at \\((4, 0)\\) and 5.0 kg at \\((2, 6)\\) (coordinates in metres) form a system. What are the coordinates of its centre of mass?",
@@ -41985,16 +41985,16 @@ const subjects = [
             "solution": "\\(x = (2.0 \\times 0 + 3.0 \\times 4 + 5.0 \\times 2)/10 = 2.2\\) m. \\(y = (2.0 \\times 0 + 3.0 \\times 0 + 5.0 \\times 6)/10 = 3.0\\) m."
           },
           {
-            "question": "A 2 kg ball moving at 8 m/s hits a wall and rebounds at 6 m/s. What is the impulse imparted to the ball?",
+            "question": "A 4 kg trolley moving at 10 m/s hits a 1 kg trolley moving at 5 m/s in the opposite direction and they stick together. How much kinetic energy is lost in the collision?",
             "options": [
-              "4 Ns",
-              "16 Ns",
-              "20 Ns",
-              "28 Ns",
-              "32 Ns"
+              "200 J",
+              "91 J",
+              "122.5 J",
+              "90 J",
+              "45 J"
             ],
             "correct": 3,
-            "solution": "Impulse = m(vf - vi) = 2 × (-6 - 8) = 2 × (-14) = -28 Ns. Magnitude = 28 Ns."
+            "solution": "Momentum is conserved: \\(m_1v_1+m_2v_2=(m_1+m_2)V\\) → \\(4(10)+1(-5)=5V\\), so \\(V=7\\) m/s. Kinetic energy before minus after = 90 J."
           },
           {
             "question": "Two objects of masses 3 kg and 5 kg move toward each other at 4 m/s and 2 m/s respectively. After collision, they stick together. What is their final velocity?",
@@ -42045,88 +42045,88 @@ const subjects = [
             "solution": "Horizontal momentum is conserved: \\(8000 \\times 1.5 = 10\\,000v\\), so \\(v = 1.2\\) m/s. \\(E_k\\) before: \\(\\tfrac{1}{2}(8000)(1.5)^2 = 9000\\) J. After: \\(\\tfrac{1}{2}(10\\,000)(1.2)^2 = 7200\\) J. Lost: 1800 J."
           },
           {
-            "question": "A 1 kg object moving at 10 m/s collides with a 2 kg object at rest. If the collision is elastic, what is the velocity of the 2 kg object after collision?",
+            "question": "A 4 kg ball moving at 6 m/s collides head-on and elastically with a stationary 1 kg ball. What is the speed of the 1 kg ball afterwards?",
             "options": [
-              "3.33 m/s",
-              "5 m/s",
-              "6.67 m/s",
-              "10 m/s",
-              "15 m/s"
+              "6 m/s",
+              "24 m/s",
+              "12 m/s",
+              "9.6 m/s",
+              "3.6 m/s"
+            ],
+            "correct": 3,
+            "solution": "For an elastic collision with the target at rest: \\(v_2=\\dfrac{2m_1}{m_1+m_2}v=\\dfrac{2(4)}{5}(6)=9.6\\) m/s (the first ball continues at 3.6 m/s)."
+          },
+          {
+            "question": "A 3 kg trolley moving at 10 m/s hits a 2 kg trolley moving at 4 m/s in the opposite direction and they stick together. How much kinetic energy is lost in the collision?",
+            "options": [
+              "119.6 J",
+              "150 J",
+              "117.6 J",
+              "58.8 J",
+              "48.4 J"
             ],
             "correct": 2,
-            "solution": "For elastic collision: v₂f = 2m₁/(m₁+m₂) × v₁i = 2×1/3 × 10 = 6.67 m/s."
+            "solution": "Momentum is conserved: \\(m_1v_1+m_2v_2=(m_1+m_2)V\\) → \\(3(10)+2(-4)=5V\\), so \\(V=4.4\\) m/s. Kinetic energy before minus after = 117.6 J."
           },
           {
-            "question": "What is the momentum of a photon of wavelength 500 nm? (h = 6.63 × 10⁻³⁴ Js)",
+            "question": "A 1 kg ball hits a wall at 10 m/s and rebounds along the same line at 15 m/s. The contact lasts 0.02 s. What is the average force on the ball?",
             "options": [
-              "1.33 × 10⁻²⁷ kg m/s",
-              "1.33 × 10⁻²⁶ kg m/s",
-              "1.33 × 10⁻²⁵ kg m/s",
-              "1.33 × 10⁻²⁴ kg m/s",
-              "1.33 × 10⁻²³ kg m/s"
+              "500 N",
+              "250 N",
+              "25 N",
+              "1250 N",
+              "625 N"
             ],
-            "correct": 0,
-            "solution": "p = h/λ = 6.63×10⁻³⁴/(500×10⁻⁹) = 1.33×10⁻²⁷ kg m/s."
+            "correct": 3,
+            "solution": "The velocity reverses, so the change is \\(\\Delta v=10+15=25\\) m/s. Impulse \\(F\\Delta t=m\\Delta v\\) gives \\(F=\\dfrac{1\\times25}{0.02}=1250\\) N."
           },
           {
-            "question": "A 1000 kg car traveling at 30 m/s collides with a stationary 500 kg car. If they stick together, what fraction of kinetic energy is lost?",
+            "question": "A 6 kg trolley moving at 2 m/s hits a 4 kg trolley moving at 6 m/s in the opposite direction and they stick together. How much kinetic energy is lost in the collision?",
             "options": [
-              "25%",
-              "33%",
-              "50%",
-              "67%",
-              "75%"
+              "38.4 J",
+              "7.2 J",
+              "76.8 J",
+              "80.8 J",
+              "12 J"
             ],
-            "correct": 1,
-            "solution": "Initial KE = ½ × 1000 × 900 = 450,000 J. Final v = 30000/1500 = 20 m/s. Final KE = ½ × 1500 × 400 = 300,000 J. Lost = 150,000/450,000 = 33%."
+            "correct": 2,
+            "solution": "Momentum is conserved: \\(m_1v_1+m_2v_2=(m_1+m_2)V\\) → \\(6(2)+4(-6)=10V\\), so \\(V=-1.2\\) m/s. Kinetic energy before minus after = 76.8 J."
           },
           {
-            "question": "What is the center of mass velocity of a system of two particles with momenta p₁ and p₂?",
+            "question": "A 0.5 kg ball hits a wall at 10 m/s and rebounds along the same line at 15 m/s. The contact lasts 0.01 s. What is the average force on the ball?",
             "options": [
-              "(p₁ + p₂)/(m₁ + m₂)",
-              "(p₁ - p₂)/(m₁ + m₂)",
-              "(p₁ + p₂)/(m₁ - m₂)",
-              "(p₁p₂)/(m₁ + m₂)",
-              "Zero"
+              "500 N",
+              "12.5 N",
+              "625 N",
+              "1250 N",
+              "250 N"
             ],
-            "correct": 0,
-            "solution": "v_cm = (p₁ + p₂)/(m₁ + m₂) = total momentum / total mass."
+            "correct": 3,
+            "solution": "The velocity reverses, so the change is \\(\\Delta v=10+15=25\\) m/s. Impulse \\(F\\Delta t=m\\Delta v\\) gives \\(F=\\dfrac{0.5\\times25}{0.01}=1250\\) N."
           },
           {
-            "question": "A 5 kg ball moving at 10 m/s collides with a stationary 5 kg ball. After collision, both move at 5 m/s. What is the coefficient of restitution?",
+            "question": "A 4 kg trolley moving at 5 m/s hits a 4 kg trolley moving at 4 m/s in the opposite direction and they stick together. How much kinetic energy is lost in the collision?",
             "options": [
-              "0",
-              "0.5",
-              "1",
-              "2",
-              "Cannot determine"
-            ],
-            "correct": 1,
-            "solution": "e = (v₂f - v₁f)/(v₁i - v₂i) = (5 - 5)/(10 - 0) = 0. This is perfectly inelastic. Wait, let me recalculate: if both move at 5 m/s, they're stuck together. e = 0."
-          },
-          {
-            "question": "What is the momentum of a system of two particles with equal and opposite velocities?",
-            "options": [
-              "Zero",
-              "mv",
-              "2mv",
-              "mv²",
-              "Depends on mass"
-            ],
-            "correct": 0,
-            "solution": "Total momentum = m₁v₁ + m₂v₂. If v₁ = -v₂ and masses equal, total = 0."
-          },
-          {
-            "question": "A 2 kg object moving at 6 m/s collides with a 3 kg object moving at 4 m/s in the same direction. If they stick together, what is their final velocity?",
-            "options": [
-              "4.2 m/s",
-              "4.8 m/s",
-              "5 m/s",
-              "5.4 m/s",
-              "6 m/s"
+              "1 J",
+              "81 J",
+              "85 J",
+              "40.5 J",
+              "50 J"
             ],
             "correct": 1,
-            "solution": "Initial momentum = 2×6 + 3×4 = 12 + 12 = 24. Total mass = 5 kg. v = 24/5 = 4.8 m/s."
+            "solution": "Momentum is conserved: \\(m_1v_1+m_2v_2=(m_1+m_2)V\\) → \\(4(5)+4(-4)=8V\\), so \\(V=0.5\\) m/s. Kinetic energy before minus after = 81 J."
+          },
+          {
+            "question": "A 3 kg ball moving at 6 m/s collides head-on and elastically with a stationary 1 kg ball. What is the speed of the 1 kg ball afterwards?",
+            "options": [
+              "18 m/s",
+              "12 m/s",
+              "3 m/s",
+              "6 m/s",
+              "9 m/s"
+            ],
+            "correct": 4,
+            "solution": "For an elastic collision with the target at rest: \\(v_2=\\dfrac{2m_1}{m_1+m_2}v=\\dfrac{2(3)}{4}(6)=9\\) m/s (the first ball continues at 3 m/s)."
           },
           {
             "question": "A 60 kg skater at rest on frictionless ice throws a 2.0 kg ball horizontally at 8.0 m/s (relative to the ice). What is the skater's recoil speed?",
@@ -42141,16 +42141,16 @@ const subjects = [
             "solution": "The total momentum stays zero: \\(60v = 2.0 \\times 8.0\\), so \\(v = 16/60 = 0.267\\) m/s in the opposite direction."
           },
           {
-            "question": "A rocket of mass 1000 kg ejects fuel at 100 kg/s with exhaust velocity 2000 m/s. What is the thrust?",
+            "question": "A 1 kg trolley moving at 5 m/s hits a 1 kg trolley moving at 2 m/s in the opposite direction and they stick together. How much kinetic energy is lost in the collision?",
             "options": [
-              "100 kN",
-              "200 kN",
-              "400 kN",
-              "800 kN",
-              "2000 kN"
+              "2.25 J",
+              "6.125 J",
+              "13.25 J",
+              "12.25 J",
+              "12.5 J"
             ],
-            "correct": 1,
-            "solution": "Thrust = (dm/dt) × ve = 100 × 2000 = 200,000 N = 200 kN."
+            "correct": 3,
+            "solution": "Momentum is conserved: \\(m_1v_1+m_2v_2=(m_1+m_2)V\\) → \\(1(5)+1(-2)=2V\\), so \\(V=1.5\\) m/s. Kinetic energy before minus after = 12.25 J."
           },
           {
             "question": "A 0.20 kg tennis ball moving horizontally at 30 m/s is struck by a racket and returns in the opposite direction at 20 m/s. If the impact lasts 0.010 s, what is the magnitude of the average force exerted on the ball?",
@@ -42201,28 +42201,28 @@ const subjects = [
             "solution": "Initial momentum is zero: p_total = 0. By conservation of momentum: m_skater v_skater + m_ball v_ball = 0 ⇒ 60 v_skater + (2.0 × 6.0) = 0 ⇒ 60 v_skater = -12 ⇒ v_skater = -12 / 60 = -0.20 m/s."
           },
           {
-            "question": "What is the SI unit of impulse and momentum?",
+            "question": "A 1 kg trolley moving at 8 m/s hits a 1 kg trolley moving at 2 m/s in the opposite direction and they stick together. How much kinetic energy is lost in the collision?",
             "options": [
-              "N·s or kg·m·s⁻¹",
-              "N/s",
-              "J·s",
-              "kg·m²·s⁻¹",
-              "N·m"
+              "12.5 J",
+              "25 J",
+              "26 J",
+              "32 J",
+              "9 J"
             ],
-            "correct": 0,
-            "solution": "Impulse is J = F Δt, so its units are N·s. Momentum is p = m v, with units kg·m/s = kg·m·s⁻¹. Since 1 N = 1 kg·m·s⁻², 1 N·s = 1 kg·m·s⁻¹."
+            "correct": 1,
+            "solution": "Momentum is conserved: \\(m_1v_1+m_2v_2=(m_1+m_2)V\\) → \\(1(8)+1(-2)=2V\\), so \\(V=3\\) m/s. Kinetic energy before minus after = 25 J."
           },
           {
-            "question": "A constant force of 20 N acts on an object of mass 4.0 kg for 3.0 seconds. What is the change in momentum of the object?",
+            "question": "A 500 kg cannon, initially at rest, fires a 20 kg shell horizontally at 300 m/s. What is the recoil speed of the cannon? (The 500 kg includes the shell before firing.)",
             "options": [
-              "60 kg·m/s",
-              "240 kg·m/s",
-              "15 kg·m/s",
-              "80 kg·m/s",
-              "20 kg·m/s"
+              "25 m/s",
+              "12 m/s",
+              "12.5 m/s",
+              "11.54 m/s",
+              "300 m/s"
             ],
-            "correct": 0,
-            "solution": "Impulse equals the change in momentum: Δp = J = F × Δt = 20 N × 3.0 s = 60 N·s = 60 kg·m/s."
+            "correct": 2,
+            "solution": "Total momentum stays zero: \\((M-m)V=mv\\), so \\(V=\\dfrac{20\\times300}{480}=12.5\\) m/s."
           },
           {
             "question": "Why do modern automobiles incorporate crumple zones and air bags to protect passengers during a collision?",
@@ -42285,16 +42285,16 @@ const subjects = [
             "solution": "Momentum: \\(1.0 \\times 12 = 2.0v\\), so the 2.0 kg piece moves at 6.0 m/s. \\(E_k = \\tfrac{1}{2}(1.0)(12)^2 + \\tfrac{1}{2}(2.0)(6.0)^2 = 72 + 36 = 108\\) J."
           },
           {
-            "question": "A rocket expels 50 kg of exhaust gas per second at a speed of 2000 m/s relative to the rocket. What is the thrust force produced on the rocket?",
+            "question": "A 0.2 kg ball hits a wall at 15 m/s and rebounds along the same line at 10 m/s. The contact lasts 0.01 s. What is the average force on the ball?",
             "options": [
-              "100,000 N (100 kN)",
-              "40 N",
-              "10,000 N",
-              "200,000 N",
-              "50,000 N"
+              "5 N",
+              "300 N",
+              "500 N",
+              "250 N",
+              "100 N"
             ],
-            "correct": 0,
-            "solution": "By Newton's second law in momentum form, rocket thrust is F = (Δm / Δt) × v_exhaust = (50 kg/s) × (2000 m/s) = 100,000 N = 100 kN."
+            "correct": 2,
+            "solution": "The velocity reverses, so the change is \\(\\Delta v=15+10=25\\) m/s. Impulse \\(F\\Delta t=m\\Delta v\\) gives \\(F=\\dfrac{0.2\\times25}{0.01}=500\\) N."
           },
           {
             "question": "Under what condition is the total linear momentum of a multi-body system strictly conserved?",
@@ -42309,16 +42309,16 @@ const subjects = [
             "solution": "The Law of Conservation of Momentum states that if the net external force on a system is zero (F_ext = 0), the total linear momentum of the system remains strictly constant over time, regardless of internal interactions or collisions."
           },
           {
-            "question": "A stationary nucleus of mass M emits an alpha particle of mass m with velocity v_α. What is the recoil velocity of the daughter nucleus?",
+            "question": "A 0.4 kg ball hits a wall at 10 m/s and rebounds along the same line at 5 m/s. The contact lasts 0.1 s. What is the average force on the ball?",
             "options": [
-              "- (m / (M - m)) v_α",
-              "- (M / m) v_α",
-              "+ v_α",
-              "- (m / M) v_α",
-              "0"
+              "20 N",
+              "30 N",
+              "40 N",
+              "60 N",
+              "6 N"
             ],
-            "correct": 0,
-            "solution": "Initial momentum is zero. Daughter nucleus has mass (M - m). Momentum conservation: (M - m) v_daughter + m v_α = 0 ⇒ v_daughter = - (m / (M - m)) v_α."
+            "correct": 3,
+            "solution": "The velocity reverses, so the change is \\(\\Delta v=10+5=15\\) m/s. Impulse \\(F\\Delta t=m\\Delta v\\) gives \\(F=\\dfrac{0.4\\times15}{0.1}=60\\) N."
           },
           {
             "question": "Two objects have equal momentum. Object A has mass 2 kg and Object B has mass 8 kg. What is the ratio of their kinetic energies (KE_A / KE_B)?",
@@ -42345,28 +42345,28 @@ const subjects = [
             "solution": "Speed of block+bullet after collision: v = √(2gh) = √(2 × 10 × 0.20) = √4 = 2.0 m/s. Momentum conservation during collision: m_bullet v_bullet = (m_bullet + m_block) v ⇒ 0.010 v_bullet = (0.010 + 0.990)(2.0) = 1.00 × 2.0 = 2.0 ⇒ v_bullet = 2.0 / 0.010 = 200 m/s."
           },
           {
-            "question": "What is the center of mass of a system consisting of a 2.0 kg mass at x = 1.0 m and a 6.0 kg mass at x = 5.0 m?",
+            "question": "A 5 kg ball moving at 10 m/s collides head-on and elastically with a stationary 2 kg ball. What is the speed of the 2 kg ball afterwards?",
             "options": [
-              "x = 4.0 m",
-              "x = 3.0 m",
-              "x = 2.5 m",
-              "x = 4.5 m",
-              "x = 3.5 m"
+              "10 m/s",
+              "4.286 m/s",
+              "14.29 m/s",
+              "20 m/s",
+              "25 m/s"
             ],
-            "correct": 0,
-            "solution": "Center of mass is x_cm = (m₁ x₁ + m₂ x₂) / (m₁ + m₂) = (2.0 × 1.0 + 6.0 × 5.0) / (2.0 + 6.0) = (2.0 + 30.0) / 8.0 = 32.0 / 8.0 = 4.0 m."
+            "correct": 2,
+            "solution": "For an elastic collision with the target at rest: \\(v_2=\\dfrac{2m_1}{m_1+m_2}v=\\dfrac{2(5)}{7}(10)=14.29\\) m/s (the first ball continues at 4.286 m/s)."
           },
           {
-            "question": "If an impulse-time graph shows a triangular force pulse with base duration 0.04 s and peak force 500 N, what is the total impulse delivered?",
+            "question": "A 0.5 kg ball hits a wall at 10 m/s and rebounds along the same line at 5 m/s. The contact lasts 0.02 s. What is the average force on the ball?",
             "options": [
-              "10 N·s",
-              "20 N·s",
-              "5.0 N·s",
-              "12.5 N·s",
-              "25 N·s"
+              "375 N",
+              "187.5 N",
+              "7.5 N",
+              "125 N",
+              "250 N"
             ],
             "correct": 0,
-            "solution": "Impulse is the area under the F-t curve. For a triangle: Area = (1/2) × base × height = 0.5 × 0.04 s × 500 N = 10 N·s."
+            "solution": "The velocity reverses, so the change is \\(\\Delta v=10+5=15\\) m/s. Impulse \\(F\\Delta t=m\\Delta v\\) gives \\(F=\\dfrac{0.5\\times15}{0.02}=375\\) N."
           },
           {
             "question": "Can an object have zero kinetic energy and non-zero momentum, or zero momentum and non-zero kinetic energy?",
@@ -42393,16 +42393,16 @@ const subjects = [
             "solution": "Taking the initial direction as positive: v_i = +10 m/s, v_f = -8.0 m/s. Impulse J = Δp = m(v_f - v_i) = 5.0 kg × (-8.0 - 10) m/s = 5.0 × (-18) = -90 N·s (or 90 N·s in the opposite direction)."
           },
           {
-            "question": "A constant force of 30 N acts on an object for 10 seconds. What is the resulting impulse?",
+            "question": "A 3 kg trolley moving at 10 m/s hits a 2 kg trolley moving at 2 m/s in the opposite direction and they stick together. How much kinetic energy is lost in the collision?",
             "options": [
-              "3 N",
-              "3 N·s",
-              "15 N·s",
-              "30 N",
-              "300 N·s"
+              "67.6 J",
+              "86.4 J",
+              "150 J",
+              "43.2 J",
+              "88.4 J"
             ],
-            "correct": 4,
-            "solution": "Impulse J is defined as the product of force and the time interval over which it acts: J = F · Δt = 30 N × 10 s = 300 N·s."
+            "correct": 1,
+            "solution": "Momentum is conserved: \\(m_1v_1+m_2v_2=(m_1+m_2)V\\) → \\(3(10)+2(-2)=5V\\), so \\(V=5.2\\) m/s. Kinetic energy before minus after = 86.4 J."
           }
         ]
       },
@@ -42483,16 +42483,16 @@ const subjects = [
             "solution": "E = hc/λ = 6.63×10⁻³⁴ × 3×10⁸/(600×10⁻⁹) = 3.32×10⁻¹⁹ J = 2.07 eV ≈ 2.1 eV."
           },
           {
-            "question": "In beta decay, a neutron converts to:",
+            "question": "The peak voltage of a sinusoidal AC supply is 141.4 V. What is its rms value?",
             "options": [
-              "A proton and electron",
-              "A proton and positron",
-              "An electron and neutrino",
-              "A proton, electron, and antineutrino",
-              "Two neutrons"
+              "100 V",
+              "90.09 V",
+              "70.71 V",
+              "200 V",
+              "141.4 V"
             ],
-            "correct": 3,
-            "solution": "In beta-minus decay, a neutron converts to a proton, an electron, and an antineutrino."
+            "correct": 0,
+            "solution": "\\(V_{rms}=V_{peak}/\\sqrt2=141.4/1.414=100\\) V."
           },
           {
             "question": "What is the threshold frequency for photoelectric emission from a metal with work function 2 eV? (h = 6.63 × 10⁻³⁴ Js)",
@@ -42543,52 +42543,52 @@ const subjects = [
             "solution": "When light passes to a rarer medium (lower refractive index), its wavelength increases."
           },
           {
-            "question": "What is the relationship between energy and frequency of a photon?",
+            "question": "The electric field at a distance r from a point charge has magnitude 9 N/C. What is the field magnitude at a distance of 2r?",
             "options": [
-              "E = hf",
-              "E = h/f",
-              "E = hc/λ",
-              "E = hλ/c",
-              "Both A and C"
+              "36 N/C",
+              "18 N/C",
+              "4.5 N/C",
+              "1.125 N/C",
+              "2.25 N/C"
             ],
             "correct": 4,
-            "solution": "E = hf and E = hc/λ are both correct relationships for photon energy."
+            "solution": "\\(E\\propto1/r^2\\), so the field is \\(9/4=2.25\\) N/C."
           },
           {
-            "question": "In alpha decay, the atomic number:",
+            "question": "A hiker walks 3 km east and then 4 km north. What is the magnitude of the displacement from the start?",
             "options": [
-              "Increases by 2",
-              "Decreases by 2",
-              "Increases by 4",
-              "Decreases by 4",
-              "Stays same"
-            ],
-            "correct": 1,
-            "solution": "Alpha decay emits a helium nucleus (2 protons), so atomic number decreases by 2."
-          },
-          {
-            "question": "What is the stopping potential for electrons emitted with maximum kinetic energy 2 eV?",
-            "options": [
-              "0.5 V",
-              "1 V",
-              "2 V",
-              "4 V",
-              "8 V"
+              "3.5 km",
+              "1 km",
+              "5 km",
+              "2.4 km",
+              "7 km"
             ],
             "correct": 2,
-            "solution": "Stopping potential V = KE_max/e = 2 eV/e = 2 V."
+            "solution": "The legs are perpendicular, so \\(d=\\sqrt{3^2+4^2}=5\\) km (the distance walked is 7 km)."
           },
           {
-            "question": "What is the daughter nucleus after alpha decay of ²³⁸U?",
+            "question": "The electric field at a distance r from a point charge has magnitude 12 N/C. What is the field magnitude at a distance of 3r?",
             "options": [
-              "²³⁴Th",
-              "²³⁴Pa",
-              "²³⁶U",
-              "²³⁴U",
-              "²³⁸Np"
+              "36 N/C",
+              "4 N/C",
+              "0.4444 N/C",
+              "108 N/C",
+              "1.333 N/C"
             ],
-            "correct": 0,
-            "solution": "Alpha decay: mass decreases by 4, atomic number by 2. ²³⁸U → ²³⁴Th."
+            "correct": 4,
+            "solution": "\\(E\\propto1/r^2\\), so the field is \\(12/9=1.333\\) N/C."
+          },
+          {
+            "question": "A force of 10 N makes an angle with the horizontal such that its horizontal component is 6 N. What is its vertical component?",
+            "options": [
+              "16 N",
+              "8 N",
+              "4.8 N",
+              "4 N",
+              "7.746 N"
+            ],
+            "correct": 1,
+            "solution": "\\(F_y=\\sqrt{F^2-F_x^2}=\\sqrt{100-36}=8\\) N."
           },
           {
             "question": "What is the Compton shift when X-rays scatter at 90°? (λ_c = 2.43 × 10⁻¹² m)",
@@ -42627,16 +42627,16 @@ const subjects = [
             "solution": "The photoelectric effect demonstrates the particle nature of light, where photons transfer energy to electrons."
           },
           {
-            "question": "What is the decay constant if half-life is 10 days?",
+            "question": "A car travels at 90 km/h. What is its speed in m/s?",
             "options": [
-              "0.069 day⁻¹",
-              "0.1 day⁻¹",
-              "0.693 day⁻¹",
-              "6.93 day⁻¹",
-              "69.3 day⁻¹"
+              "324 m/s",
+              "1500 m/s",
+              "2.5 m/s",
+              "1.5 m/s",
+              "25 m/s"
             ],
-            "correct": 0,
-            "solution": "λ = ln2/T₁/₂ = 0.693/10 = 0.0693 day⁻¹."
+            "correct": 4,
+            "solution": "1 km/h = 1000 m / 3600 s = 1/3.6 m/s, so 90/3.6 = 25 m/s."
           },
           {
             "question": "What is the activity of a 1 g sample of ²³⁸U? (half-life = 4.5 × 10⁹ years)",
