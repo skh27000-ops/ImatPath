@@ -6,6 +6,7 @@
 
 const SB = 'https://wcbyuuysiaaicasxehgc.supabase.co';
 const KEY = 'sb_publishable_ZwIeiQUOlxx3buyi-nSO5A_OiA8ZZtr'; // public (publishable) key, same as in supabase.js
+const SEEN = new Map(); // token -> {id,email,t}: skips the sign-in check for repeat requests within a minute
 const GUARDED = /^\/docs\/(biology|chemistry|physics|math)\/[^/]+\.pdf$/i;
 
 const deny = (status, msg) =>
@@ -22,22 +23,23 @@ export async function onRequest(context) {
   const token = m[1];
   const h = { apikey: KEY, Authorization: 'Bearer ' + token };
 
-  // 1. who is this?
-  let user;
-  try {
-    const r = await fetch(SB + '/auth/v1/user', { headers: h });
-    if (!r.ok) return deny(401, 'Your session has expired. Sign in again.');
-    user = await r.json();
-  } catch (e) { return deny(503, 'Could not check your session. Try again.'); }
-  const email = String(user.email || '').toLowerCase();
+  // 1+2. who is this, and is paid access switched on? (checked in parallel; same switch as the app screens)
+  const cfgP = env.ASSETS.fetch(new Request(new URL('/paywall-config.js', url), { headers: { Accept: 'text/javascript' } }))
+    .then(r => r.text()).then(x => /ENABLED\s*:\s*true/.test(x)).catch(() => false);
+  let user = SEEN.get(token);
+  if (!user || user.t < Date.now() - 60000) {
+    try {
+      const r = await fetch(SB + '/auth/v1/user', { headers: h });
+      if (!r.ok) return deny(401, 'Your session has expired. Sign in again.');
+      const u = await r.json();
+      user = { id: u.id, email: String(u.email || '').toLowerCase(), t: Date.now() };
+      if (SEEN.size > 200) SEEN.clear();
+      SEEN.set(token, user);
+    } catch (e) { return deny(503, 'Could not check your session. Try again.'); }
+  }
+  const email = user.email;
   if (!user.id || !email) return deny(401, 'Sign in to read this document.');
-
-  // 2. is paid access switched on? (same switch as the app screens)
-  let enforce = false;
-  try {
-    const cfg = await env.ASSETS.fetch(new Request(new URL('/paywall-config.js', url), { headers: { Accept: 'text/javascript' } }));
-    enforce = /ENABLED\s*:\s*true/.test(await cfg.text());
-  } catch (e) { enforce = false; }
+  const enforce = await cfgP;
 
   if (enforce) {
     try {
@@ -57,7 +59,7 @@ export async function onRequest(context) {
     }).catch(() => {}));
   }
   const out = new Response(res.body, res);
-  out.headers.set('Cache-Control', 'private, no-store');
+  out.headers.set('Cache-Control', 'private, max-age=86400'); // only this browser may keep it, so reopening is instant
   out.headers.set('X-Robots-Tag', 'noindex');
   return out;
 }

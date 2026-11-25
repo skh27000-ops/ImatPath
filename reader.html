@@ -47,6 +47,7 @@ iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff
 </div>
 <div class="view" id="view">
   <iframe id="f" title="Course document"></iframe>
+  <div id="ld" style="position:absolute;inset:0;z-index:2;display:none;align-items:center;justify-content:center;background:var(--bg,#FFFDF9);font:700 1.05rem 'Bricolage Grotesque',Arial,sans-serif">Loading the lesson…</div>
   <div class="fallback">
     <h2>Open the lesson</h2>
     <p>Phones show one page at a time inside other pages. For the best reading, open the PDF directly. Come back afterwards to mark it as read.</p>
@@ -69,11 +70,14 @@ iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff
   var mobile=window.innerWidth<760||/iPhone|iPad|Android/i.test(navigator.userAgent);
   if(mobile)document.getElementById('view').classList.add('mobile');
   var fname=title.replace(/[^\w\- ]+/g,'').trim()||'ImatPath document';
+  var ld=document.getElementById('ld');
   function show(href){
+    ld.style.display='none';
     dl.href=href;dl.setAttribute('download','ImatPath - '+fname+'.pdf');op.href=href;
     if(!mobile)f.src=href+'#view=FitH';
   }
   function fail(msg){
+    ld.style.display='none';
     var v=document.getElementById('view');v.classList.add('mobile');
     v.querySelector('.fallback h2').textContent='Cannot open this document';
     v.querySelector('.fallback p').textContent=msg;
@@ -82,12 +86,27 @@ iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff
   }
   if(isLocal){show(doc);}
   else{
-    // course documents are only served to signed-in accounts, so fetch with the session token
+    // course documents are only served to signed-in accounts, so fetch with the session token.
+    // The token is read straight from storage so the download starts at once, without waiting for the sign-in library.
+    ld.style.display='flex';
+    function quickToken(){
+      try{
+        var k=Object.keys(localStorage).filter(function(x){return /^sb-.*-auth-token$/.test(x)})[0];
+        var o=k&&JSON.parse(localStorage.getItem(k));
+        if(o&&o.access_token&&(!o.expires_at||o.expires_at*1000>Date.now()+30000))return o.access_token;
+      }catch(e){}
+      return null;
+    }
+    async function load(tok){return fetch(doc,{headers:{Authorization:'Bearer '+tok}});}
     (async function(){
       try{
-        var ses=window.ImatAuth&&await window.ImatAuth.getSession();
-        if(!ses){location.replace('auth.html');return;}
-        var r=await fetch(doc,{headers:{Authorization:'Bearer '+ses.access_token}});
+        var tok=quickToken(),r=null;
+        if(tok)r=await load(tok);
+        if(!r||r.status===401){
+          var ses=window.ImatAuth&&await window.ImatAuth.getSession();
+          if(!ses){location.replace('auth.html');return;}
+          r=await load(ses.access_token);
+        }
         if(r.status===403){location.replace('access.html');return;}
         if(!r.ok)throw new Error(r.status);
         show(URL.createObjectURL(await r.blob()));
