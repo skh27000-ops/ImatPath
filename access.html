@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Get access — ImatPath</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1B1340;--grape:#6C3BFF;--sun:#FFC83D;--coral:#FF5C7A;--lav:#EDE6FF}
+*{box-sizing:border-box}html,body{margin:0}
+body{font:17px/1.55 Figtree,system-ui,sans-serif;color:var(--ink);background:#FFFDF9 radial-gradient(rgba(27,19,64,.07) 1.6px,transparent 1.6px) 0 0/24px 24px;min-height:100vh}
+.w{max-width:940px;margin:auto;padding:34px 22px 70px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:34px}
+.wm{font:800 1.6rem 'Bricolage Grotesque';letter-spacing:-.04em;color:var(--ink);text-decoration:none}
+.who{font-size:.9rem;opacity:.75}.who a{color:var(--grape);font-weight:700;cursor:pointer;margin-left:10px}
+.px{font:700 .72rem Silkscreen,monospace;color:var(--grape)}
+h1{font:800 clamp(1.9rem,4.4vw,2.8rem)/1.08 'Bricolage Grotesque';letter-spacing:-.04em;margin:8px 0 10px}
+.lead{max-width:600px;opacity:.8;margin:0 0 30px}
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+.mn{display:flex;flex-direction:column;background:#fff;border:2px solid var(--grape);border-radius:26px;padding:28px 28px 24px}
+.mn-h{display:flex;justify-content:space-between;align-items:center;gap:10px}.mn-h h3{font:800 1.3rem 'Bricolage Grotesque';margin:0}
+.mn-k{font:700 .62rem Silkscreen,monospace;text-transform:uppercase;padding:5px 10px;border-radius:7px;background:var(--lav);color:var(--grape);white-space:nowrap}
+.mn-p{font:800 3.2rem/1 'Bricolage Grotesque';letter-spacing:-.05em;margin:16px 0 8px}
+.mn-d{font-weight:800;color:#9A5B00;font-size:.95rem}
+.mn-v{font-size:.88rem;opacity:.7;margin:8px 0 0}
+.mn-l{list-style:none;margin:18px 0 22px;padding:16px 0 0;border-top:1px solid #ECE9F3;display:grid;gap:10px;font-size:.95rem}
+.mn-l li{position:relative;padding-left:30px}.mn-l li:before{content:"✓";position:absolute;left:0;top:0;width:21px;height:21px;border-radius:50%;background:#1FA463;color:#fff;font-size:.78rem;font-weight:800;display:flex;align-items:center;justify-content:center}
+.mn-b{margin-top:auto;display:block;text-align:center;background:var(--grape);color:#fff;font:800 1.05rem 'Bricolage Grotesque';padding:15px 18px;border-radius:14px;text-decoration:none;box-shadow:0 4px 0 #4B26BF;border:0;cursor:pointer;width:100%}
+.mn-b[aria-disabled=true]{background:#B9B3D6;box-shadow:0 4px 0 #9892BD;cursor:not-allowed;pointer-events:none}
+.note{margin-top:26px;padding:16px 18px;background:#fff;border:2px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);font-size:.95rem}
+.note b{font-family:'Bricolage Grotesque'}
+.chk{margin-top:12px;background:var(--sun);color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:9px 20px;font:800 .95rem 'Bricolage Grotesque';cursor:pointer}
+#st{margin-top:10px;font-weight:700;font-size:.92rem}
+@media(max-width:760px){.plans{grid-template-columns:1fr}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="supabase.js"></script>
+<script src="paywall-config.js?v=1"></script>
+<script src="auth-guard.js"></script>
+</head><body><div class="w">
+<div class="top"><a class="wm" href="index.html">ImatPath</a><div class="who"><span id="em"></span><a id="out">Sign out</a></div></div>
+<span class="px">Access</span>
+<h1>Get access to your IMAT preparation.</h1>
+<p class="lead">Your account is ready. Choose a plan to open the dashboard, lessons, question bank, mock exams and flashcards. It is a one-time payment, with no subscription.</p>
+<div class="plans" id="pl"></div>
+<div class="note"><b>Already paid?</b> Access opens a few seconds after the payment, once it is confirmed. Use the same email as your ImatPath account.<br>
+<button class="chk" id="chk" type="button">I have paid, check again</button><div id="st" role="status"></div></div>
+</div>
+<script>
+(function(){
+  var PLANS=[
+    {key:'selfstudy',n:'Self-Study',k:'Study on your own',p:'€39.50',was:'€79',v:'One-time payment · access until IMAT exam day',b:'Get Self-Study',
+     l:['4,000+ questions with worked solutions','Flashcards with spaced repetition','85 course documents (PDF)','20 timed mock exams','Analytics and score predictor']},
+    {key:'application',n:'Application Guide',k:'One-to-one',p:'€50',was:'€100',v:'One-time payment · works with Self-Study',b:'Get the Application Guide',
+     l:['Choose your university','Documents, Apostille, Declaration of Value','Universitaly pre-enrolment and visa file','Help after you are admitted']}
+  ];
+  var user=null;
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function link(base){
+    if(!base) return '';
+    var sep=base.indexOf('?')>=0?'&':'?';
+    return base+sep+'checkout[email]='+encodeURIComponent(user&&user.email||'')+'&checkout[custom][user_id]='+encodeURIComponent(user&&user.id||'');
+  }
+  function render(){
+    var C=(window.ImatPay&&window.ImatPay.CHECKOUT)||{};
+    document.getElementById('pl').innerHTML=PLANS.map(function(x){
+      var u=link(C[x.key]);
+      return '<div class="mn"><div class="mn-h"><h3>'+x.n+'</h3><span class="mn-k">'+x.k+'</span></div><div class="mn-p">'+x.p+'</div>'+
+        '<div class="mn-d">Launch price −50% · then '+x.was+'</div><p class="mn-v">'+x.v+'</p><ul class="mn-l">'+x.l.map(function(i){return '<li>'+esc(i)+'</li>'}).join('')+'</ul>'+
+        (u?'<a class="mn-b" href="'+esc(u)+'">'+x.b+' →</a>':'<a class="mn-b" aria-disabled="true">Opening soon</a>')+'</div>';
+    }).join('');
+  }
+  async function hasAccess(){
+    var c=window.ImatAuth&&window.ImatAuth.client; if(!c||!user) return false;
+    var r=await c.from('entitlements').select('status').eq('email',String(user.email||'').toLowerCase()).maybeSingle();
+    return !r.error&&!!r.data&&r.data.status==='active';
+  }
+  async function check(auto){
+    var st=document.getElementById('st'); st.textContent=auto?'Checking your payment…':'Checking…';
+    try{
+      if(await hasAccess()){ try{sessionStorage.removeItem('imatpath_ent_'+user.id)}catch(e){} st.textContent='Payment found. Opening your dashboard…'; location.replace('dashboard.html'); return true; }
+    }catch(e){}
+    st.textContent=auto?'':'No payment found yet for this email. If you just paid, wait a few seconds and try again.'; return false;
+  }
+  document.getElementById('chk').onclick=function(){check(false)};
+  document.getElementById('out').onclick=async function(){ try{await window.ImatAuth.signOut()}catch(e){} location.replace('index.html'); };
+  render();
+  (async function(){
+    try{ var s=await window.ImatAuth.getSession(); user=s&&s.user||null; }catch(e){}
+    if(!user&&/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) user={id:'local',email:'candidate@imatpath.com'};  // preview only
+    if(!user){ location.replace('auth.html'); return; }
+    document.getElementById('em').textContent=user.email||''; render();
+    if(await hasAccess()){ location.replace('dashboard.html'); return; }
+    if(/[?&]paid=1/.test(location.search)){ var n=0,t=setInterval(async function(){ n++; if(await check(true)||n>20) clearInterval(t); },3000); }
+  })();
+})();
+</script></body></html>

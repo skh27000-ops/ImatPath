@@ -41,6 +41,34 @@
     }
   }
 
+  // ---- Paid access ----------------------------------------------------------
+  // Only when paywall-config.js says ENABLED. Needs an active row in public.entitlements for the user's email.
+  // (This locks the app screens. The static files themselves, such as the question data and the PDFs, stay public URLs.)
+  // access.html and the past papers simulator (roadmap.html) stay open to every signed-in account.
+  if (!isLocalEnv && !/(access|roadmap)\.html$/i.test(window.location.pathname)) {
+    try {
+      await new Promise(function (ok) {
+        var s = document.createElement('script');
+        s.src = 'paywall-config.js?v=1'; s.onload = ok; s.onerror = ok; document.head.appendChild(s);
+      });
+      var PAY = window.ImatPay;
+      if (PAY && PAY.ENABLED && session && session.user) {
+        var key = 'imatpath_ent_' + session.user.id, cached = null;
+        try { cached = JSON.parse(sessionStorage.getItem(key) || 'null'); } catch (e) {}
+        var fresh = cached && (Date.now() - cached.t) < (cached.ok ? 10 * 60 * 1000 : 15 * 1000);
+        var allowed = fresh ? cached.ok : null;
+        if (allowed === null) {
+          var email = String(session.user.email || '').toLowerCase();
+          var res = await window.ImatAuth.client.from('entitlements').select('plan,status').eq('email', email).maybeSingle();
+          allowed = !res.error && !!res.data && res.data.status === 'active';
+          if (res.error) allowed = cached ? cached.ok : false;   // on an error keep the last known answer, else block
+          try { sessionStorage.setItem(key, JSON.stringify({ ok: allowed, t: Date.now() })); } catch (e) {}
+        }
+        if (!allowed) { window.location.replace('access.html'); return; }
+      }
+    } catch (e) { /* if the check itself breaks, do not lock people out by accident */ }
+  }
+
   // Populate nav safely
   async function initNav() {
     window.ImatAuth.populateNav(session.user);
