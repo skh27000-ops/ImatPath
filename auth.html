@@ -153,6 +153,11 @@ a{text-decoration:none}
 .auth-forgot{text-align:right;margin:-6px 0 14px;font-size:.85rem;font-weight:700}
 .auth-forgot a,.auth-linkbtn{color:var(--grape);cursor:pointer;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;background:none;border:0;font:inherit;font-weight:800;padding:0}
 .auth-forgot a:hover,.auth-linkbtn:hover{color:var(--coral)}
+.auth-terms{display:none;align-items:flex-start;gap:10px;margin:2px 0 16px;font-size:.86rem;line-height:1.45;font-weight:600;color:var(--ink-2);cursor:pointer}
+.auth-terms input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--grape);cursor:pointer}
+.auth-terms a{color:var(--grape);font-weight:800;text-decoration:underline}
+.auth-gnote{font-size:.78rem;color:var(--ink-2);text-align:center;margin:10px 0 0;line-height:1.4}
+.auth-gnote a{color:var(--grape);font-weight:700}
 .auth-hint{display:none;font-size:.8rem;color:var(--ink-2);margin:-8px 0 14px;line-height:1.45}
 .auth-hint.bad{color:#a1163a}.auth-hint.ok{color:#0b6b52}
 .auth-view{display:none;text-align:center;padding:10px 4px}
@@ -281,6 +286,7 @@ a{text-decoration:none}
           </div>
         </div>
         <p class="auth-hint" id="pwHint">Use at least 6 characters. A mix of letters and numbers is safer.</p>
+        <label class="auth-terms" id="fieldTerms" for="inputTerms"><input type="checkbox" id="inputTerms"><span>I have read and accept the <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a>, the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and the <a href="refund.html" target="_blank" rel="noopener">Refund Policy</a>.</span></label>
         <div class="auth-forgot" id="forgotRow"><a onclick="showView('forgot')">Forgot your password?</a></div>
         <button class="auth-submit" type="submit" id="submitBtn">
           <div class="spinner" id="spinner"></div>
@@ -352,6 +358,8 @@ a{text-decoration:none}
         </svg>
         Continue with Google
       </button>
+
+      <p class="auth-gnote" id="googleNote">By continuing with Google you accept our <a href="terms.html" target="_blank" rel="noopener">Terms</a> and <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
 
       <!-- Direct Access (Visible ONLY on local file preview / localhost) -->
       <a id="localBypassBtn" href="dashboard.html" onclick="if(window.ImatAuth)window.ImatAuth.enterGuestMode();" class="auth-google" style="display:none;margin-top:10px;text-align:center;align-items:center;justify-content:center;gap:10px;background:var(--sun);text-decoration:none">
@@ -437,6 +445,8 @@ function switchTab(tab) {
   showView('form');
   document.getElementById('pwHint').style.display = isSignUp ? 'block' : 'none';
   document.getElementById('forgotRow').style.display = isSignUp ? 'none' : 'block';
+  document.getElementById('fieldTerms').style.display = isSignUp ? 'flex' : 'none';
+  document.getElementById('googleNote').style.display = isSignUp ? 'none' : 'block';
   if (isSignUp) {
     document.getElementById('inputPassword').setAttribute('autocomplete', 'new-password');
     document.getElementById('inputPassword').placeholder = 'Choose a password (min. 6 chars)';
@@ -556,6 +566,7 @@ async function handleSubmit(e) {
   const name     = document.getElementById('inputName').value.trim();
   if (!email || !password) { showError('Please fill in all fields.'); return; }
   if (currentTab === 'signup' && !name) { showError('Please enter your first name.'); return; }
+  if (currentTab === 'signup' && !document.getElementById('inputTerms').checked) { showError('Please tick the box to accept the Terms of Service, Privacy Policy and Refund Policy.'); return; }
   if (password.length < 6) { showError('Password must be at least 6 characters.'); return; }
   setLoading(true);
   try {
@@ -608,6 +619,7 @@ async function handleReset(e) {
 }
 
 async function handleGoogle() {
+  if (currentTab === 'signup' && !document.getElementById('inputTerms').checked) { showError('Please tick the box to accept the Terms of Service, Privacy Policy and Refund Policy.'); return; }
   try {
     await window.ImatAuth.signInWithGoogle();
   } catch (err) {

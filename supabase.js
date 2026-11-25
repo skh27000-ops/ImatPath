@@ -92,7 +92,7 @@
     const { data, error } = await client.auth.signUp({
       email, password,
       options: {
-        data: { first_name: firstName, is_premium: false },
+        data: { first_name: firstName, is_premium: false, terms_accepted_at: new Date().toISOString() },
         emailRedirectTo: AUTH_RETURN() + '?verified=1'
       }
     });
