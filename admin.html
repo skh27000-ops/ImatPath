@@ -36,21 +36,12 @@ td{padding:8px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tab
 .tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.tools input{flex:1;min-width:180px}
 .empty{opacity:.6;padding:10px 0}
 #msg{padding:40px 0;font-weight:700}
-#gate{max-width:380px;margin:30px auto;background:#fff;border:2px solid var(--ink);border-radius:20px;box-shadow:5px 6px 0 var(--ink);padding:22px}
-#gate h2{margin:0 0 6px}#gate p{margin:0 0 14px;opacity:.75}#gate input{display:block;width:100%;margin-bottom:10px}#gate button{width:100%}
-#err{color:#B3133A;font-weight:700;margin-top:10px;min-height:1.4em}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase.js"></script>
 </head><body><div class="w">
-<header><div><h1>ImatPath admin</h1><div class="sub" id="when"></div></div><div><button id="lock" type="button" hidden style="background:#fff">Lock</button> <button id="re" type="button" hidden>Refresh</button></div></header>
+<header><div><h1>ImatPath admin</h1><div class="sub" id="when"></div></div><button id="re" type="button">Refresh</button></header>
 <div id="msg" role="status">Loading…</div>
-<form id="gate" hidden>
-  <h2 id="gt">Admin password</h2><p id="gp"></p>
-  <input id="p1" type="password" placeholder="Admin password" aria-label="Admin password" required>
-  <input id="p2" type="password" placeholder="Type it again" aria-label="Type the password again" autocomplete="new-password" hidden>
-  <button id="go" type="submit">Open</button><div id="err" role="alert"></div>
-</form>
 <main id="app" hidden>
   <h2>Visitors</h2><div class="kp" id="kv"></div>
   <h2>Sales</h2><div class="kp" id="ks"></div>
@@ -116,55 +107,17 @@ td{padding:8px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tab
     $('fb').innerHTML='<b>Feedback</b>'+table(['Date','Email','Rating','Comment'],(D.feedback||[]).map(function(x){return [esc(day(x.at)),esc(x.email||'—'),esc(x.rating),'<span style="white-space:normal">'+esc(x.comment||'')+'</span>']}),'No feedback yet.');
     people();$('msg').hidden=true;$('app').hidden=false;
   }
-  var pass=null,creating=false;   // the password stays in memory only: closing or reloading the page asks again
-  var ERR={wrong:'Wrong password.',locked:'Too many wrong tries. Wait 15 minutes.',short:'Use at least 8 characters.',none:'No password is set yet.'};
-  function say(t){$('app').hidden=true;$('gate').hidden=true;$('msg').hidden=false;$('msg').textContent=t}
-  function failed(error){say(error.code==='42501'?'This page is for the site owner only. Sign in with the owner account.':'Could not load. Reload the page.')}
-  function gate(create,err){
-    creating=create;pass=null;D=null;
-    $('app').hidden=true;$('msg').hidden=true;$('re').hidden=true;$('lock').hidden=true;$('gate').hidden=false;$('when').textContent='';
-    $('people').innerHTML='';$('orders').innerHTML='';
-    $('gt').textContent=create?'Create your admin password':'Admin password';
-    $('gp').textContent=create?'Choose at least 8 characters, different from your account password. You will need it every time you open this page.':'Enter your admin password to see the numbers.';
-    $('p2').hidden=!create;$('p2').required=create;$('p1').autocomplete=create?'new-password':'current-password';
-    $('go').textContent=create?'Save password':'Open';$('p1').value='';$('p2').value='';$('err').textContent=err||'';$('p1').focus();
-  }
   async function load(){
-    $('re').disabled=true;
-    var r=await window.ImatAuth.client.rpc('admin_dashboard',{pass:pass});
-    $('re').disabled=false;
-    if(r.error){failed(r.error);return}
-    if(r.data.error){gate(r.data.error==='none',ERR[r.data.error]);return}
-    $('gate').hidden=true;$('re').hidden=false;$('lock').hidden=false;render(r.data);
-  }
-  async function start(){
     var A=window.ImatAuth,session=A&&await A.getSession();
-    if(!session){location.replace('auth.html');return}
-    var r=await A.client.rpc('admin_status');
-    if(r.error){failed(r.error);return}
-    gate(!r.data.has_password);
+    if(!session){location.replace('auth.html');return;}
+    $('re').disabled=true;
+    var r=await A.client.rpc('admin_dashboard');
+    $('re').disabled=false;
+    if(r.error){$('app').hidden=true;$('msg').hidden=false;$('msg').textContent=r.error.code==='42501'?'This page is for the site owner only. Sign in with the owner account.':'Could not load the numbers. Press Refresh.';return;}
+    render(r.data);
   }
-  $('gate').onsubmit=async function(e){
-    e.preventDefault();
-    var v=$('p1').value;
-    if(creating){
-      if(v.length<8){$('err').textContent=ERR.short;return}
-      if(v!==$('p2').value){$('err').textContent='The two passwords are not the same.';return}
-    }
-    $('go').disabled=true;$('err').textContent='';
-    try{
-      if(creating){
-        var r=await window.ImatAuth.client.rpc('admin_set_password',{new_pass:v});
-        if(r.error){failed(r.error);return}
-        if(r.data.error){gate(false,ERR[r.data.error]);return}
-      }
-      pass=v;$('p1').value='';$('p2').value='';
-      await load();
-    }finally{$('go').disabled=false}
-  };
-  $('lock').onclick=function(){gate(false)};
   $('re').onclick=load;$('q').oninput=function(){if(D)people()};$('f').onchange=function(){if(D)people()};
-  window.renderAdmin=render;window.adminGate=gate;
-  if(!/^(localhost|127\.0\.0\.1)$/.test(location.hostname))start();else $('msg').textContent='Preview: no data here.';
+  window.renderAdmin=render;
+  if(!/^(localhost|127\.0\.0\.1)$/.test(location.hostname))load();else $('msg').textContent='Preview: no data here.';
 })();
 </script></body></html>
