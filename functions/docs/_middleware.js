@@ -25,7 +25,7 @@ export async function onRequest(context) {
 
   // 1+2. who is this, and is paid access switched on? (checked in parallel; same switch as the app screens)
   const cfgP = env.ASSETS.fetch(new Request(new URL('/paywall-config.js', url), { headers: { Accept: 'text/javascript' } }))
-    .then(r => r.text()).then(x => /ENABLED\s*:\s*true/.test(x)).catch(() => false);
+    .then(r => r.text()).then(x => /ENABLED\s*:\s*true/.test(x.replace(/\/\*[\s\S]*?\*\//g, ''))).catch(() => false); // comments are ignored
   let user = SEEN.get(token);
   if (!user || user.t < Date.now() - 60000) {
     try {
