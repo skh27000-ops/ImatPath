@@ -72,6 +72,14 @@
   // Populate nav safely
   async function initNav() {
     window.ImatAuth.populateNav(session.user);
+
+    // Record today's visit for the owner's dashboard (at most once every 5 minutes per tab).
+    try {
+      if (!isLocalEnv && Date.now() - Number(sessionStorage.getItem('imatpath_ping') || 0) > 5 * 60 * 1000) {
+        sessionStorage.setItem('imatpath_ping', Date.now());
+        window.ImatAuth.client.rpc('touch_activity').then(function () {}, function () {});
+      }
+    } catch (e) {}
     
     // Migrate any existing localStorage data (once per user)
     window.ImatAuth.migrateLocalStorage();

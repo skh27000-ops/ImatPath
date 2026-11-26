@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — ImatPath</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Silkscreen&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1B1340;--grape:#6C3BFF;--sun:#FFC83D;--coral:#FF5C7A;--green:#157F4A;--line:#ECE9F3;--lav:#EDE6FF}
+*{box-sizing:border-box}html,body{margin:0}
+body{font:15px/1.5 Figtree,system-ui,sans-serif;color:var(--ink);background:#FFFDF9}
+.w{max-width:1140px;margin:auto;padding:24px 16px 70px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+h1{font:800 1.9rem 'Bricolage Grotesque';letter-spacing:-.04em;margin:0}
+h2{font:800 1.2rem 'Bricolage Grotesque';letter-spacing:-.02em;margin:34px 0 12px}
+.sub{opacity:.65;font-size:.85rem}
+button,select,input{font:600 .9rem Figtree,sans-serif;color:var(--ink);border:2px solid var(--ink);border-radius:12px;padding:9px 14px;background:#fff}
+button{cursor:pointer;background:var(--sun);font-weight:800}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.k{background:#fff;border:2px solid var(--ink);border-radius:18px;box-shadow:4px 4px 0 var(--ink);padding:14px 16px}
+.k span{font:700 .6rem Silkscreen,monospace;color:var(--grape);text-transform:uppercase}
+.k b{display:block;font:800 2rem/1.1 'Bricolage Grotesque';letter-spacing:-.04em;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.k small{opacity:.65}
+.box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;min-width:0}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.bars{display:flex;align-items:flex-end;gap:3px;height:110px;margin:10px 0 4px}
+.bars i{flex:1;background:var(--grape);border-radius:4px 4px 0 0;min-height:2px}
+.bars i[data-z]{background:var(--line)}
+.ax{display:flex;justify-content:space-between;font-size:.75rem;opacity:.6}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.86rem;white-space:nowrap}
+th{text-align:left;font-weight:800;padding:8px 10px;border-bottom:2px solid var(--ink)}
+td{padding:8px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.tag{display:inline-block;padding:2px 9px;border-radius:99px;font-weight:800;font-size:.74rem;background:var(--line)}
+.tag.ok{background:#DDF5E8;color:var(--green)}.tag.bad{background:#FFE3E8;color:#B3133A}.tag.free{background:var(--lav);color:var(--grape)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.tools input{flex:1;min-width:180px}
+.empty{opacity:.6;padding:10px 0}
+#msg{padding:40px 0;font-weight:700}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+</head><body><div class="w">
+<header><div><h1>ImatPath admin</h1><div class="sub" id="when"></div></div><button id="re" type="button">Refresh</button></header>
+<div id="msg" role="status">Loading…</div>
+<main id="app" hidden>
+  <h2>Visitors</h2><div class="kp" id="kv"></div>
+  <h2>Sales</h2><div class="kp" id="ks"></div>
+  <h2>Last 30 days</h2><div class="two" id="ch"></div>
+  <h2>Orders</h2><div class="box scroll" id="orders"></div>
+  <h2>Study activity</h2><div class="kp" id="kst"></div>
+  <div class="two" style="margin-top:12px"><div class="box scroll" id="topdocs"></div><div class="box scroll" id="fb"></div></div>
+  <h2>Accounts</h2>
+  <div class="box">
+    <div class="tools"><input id="q" type="search" placeholder="Search name or email" aria-label="Search accounts">
+      <select id="f" aria-label="Filter accounts"><option value="all">All accounts</option><option value="today">Seen today</option><option value="buy">With access</option><option value="no">Without access</option><option value="idle">Never answered a question</option></select></div>
+    <div class="sub" id="count"></div><div class="scroll" id="people"></div>
+  </div>
+</main>
+</div>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)},D=null,TZ='Africa/Algiers';
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function day(t){return t?new Date(t).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:TZ}):'—'}
+  function when(t){return t?new Date(t).toLocaleString('en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',timeZone:TZ}):'never'}
+  function isToday(t){return !!t&&day(t)===day(Date.now())}
+  function money(c,cur){return new Intl.NumberFormat('en-GB',{style:'currency',currency:(cur||'EUR').toUpperCase()}).format((c||0)/100)}
+  function cards(id,list){$(id).innerHTML=list.map(function(x){return '<div class="k"><span>'+x[0]+'</span><b>'+esc(x[1])+'</b><small>'+esc(x[2]||'')+'</small></div>'}).join('')}
+  function table(head,rows,empty){return rows.length?'<table><thead><tr>'+head.map(function(h){return '<th>'+h+'</th>'}).join('')+'</tr></thead><tbody>'+rows.map(function(r){return '<tr>'+r.map(function(c){return '<td>'+c+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table>':'<div class="empty">'+empty+'</div>'}
+  function chart(title,key){
+    var d=D.daily||[],max=Math.max.apply(null,d.map(function(x){return x[key]}).concat([1])),sum=d.reduce(function(a,x){return a+x[key]},0);
+    return '<div class="box"><b>'+title+'</b> <span class="sub">'+(key==='active'?'highest day: '+(sum?max:0):'total: '+sum)+'</span><div class="bars">'+
+      d.map(function(x){return '<i'+(x[key]?'':' data-z')+' style="height:'+Math.round(x[key]/max*100)+'%" title="'+esc(x.day)+': '+x[key]+'"></i>'}).join('')+
+      '</div><div class="ax"><span>'+(d.length?day(d[0].day):'')+'</span><span>today</span></div></div>';
+  }
+  function people(){
+    var q=$('q').value.trim().toLowerCase(),f=$('f').value;
+    var list=(D.people||[]).filter(function(p){
+      if(q&&(p.email+' '+p.name).toLowerCase().indexOf(q)<0)return false;
+      if(f==='today')return isToday(p.seen);
+      if(f==='buy')return p.status==='active';
+      if(f==='no')return p.status!=='active';
+      if(f==='idle')return !p.answers;
+      return true;
+    });
+    $('count').textContent=list.length+' account'+(list.length===1?'':'s');
+    $('people').innerHTML=table(['Name','Email','Access','Last seen','Joined','Sign-in','Answers','Mocks','Documents'],list.map(function(p){
+      var a=p.status==='active'?'<span class="tag ok">'+esc(p.plan)+'</span>':p.status?'<span class="tag bad">'+esc(p.status)+'</span>':'<span class="tag">none</span>';
+      return [esc(p.name||'—'),esc(p.email),a,esc(when(p.seen)),esc(day(p.joined)),esc(p.provider),+p.answers,+p.mocks,+p.docs];
+    }),'No account matches.');
+  }
+  function render(data){
+    D=data;var u=D.users,s=D.sales,st=D.study;
+    $('when').textContent='Updated '+when(D.generated_at)+' (Algiers time). Your own account is not counted.';
+    cards('kv',[['Online now',u.online_now,'seen in the last 10 minutes'],['Today',u.active_today,'accounts that connected'],['Last 7 days',u.active_7,'accounts that connected'],['Last 30 days',u.active_30,'accounts that connected'],['Accounts',u.total,u.google+' with Google'],['New today',u.new_today,u.new_7+' in 7 days, '+u.new_30+' in 30']]);
+    var rev=(s.revenue||[]).length?s.revenue:[{currency:'EUR',today:0,d30:0,total:0}];
+    var m=function(k){return rev.map(function(r){return money(r[k],r.currency)}).join(' + ')};
+    cards('ks',[['Paying buyers',s.paying,u.total?(Math.round(s.paying/u.total*1000)/10)+'% of accounts':''],['With access',s.with_access,'includes free codes'],['Orders',s.orders,s.free_orders+' free, '+s.refunds+' refunded'],['Sales today',m('today'),'before Polar fees and tax'],['Sales 30 days',m('d30'),'before Polar fees and tax'],['Sales total',m('total'),'refunds removed']]);
+    $('ch').innerHTML=chart('New accounts','signups')+chart('Connected per day','active')+chart('Orders','orders')+
+      '<div class="sub" style="grid-column:1/-1">Daily connections are recorded from '+esc(D.tracking_since?day(D.tracking_since):'today')+'. Earlier days show empty.</div>';
+    $('orders').innerHTML=table(['Date','Email','Product','Amount','Code','Status'],(s.recent||[]).map(function(o){
+      var cls=o.status==='paid'?(o.amount?'ok':'free'):'bad';
+      return [esc(when(o.created_at)),esc(o.email),esc(o.product||''),esc(money(o.amount,o.currency)),esc(o.discount_code||'—'),'<span class="tag '+cls+'">'+esc(o.status==='paid'&&!o.amount?'free':o.status)+'</span>'];
+    }),'No order yet.');
+    cards('kst',[['Students practising',st.students_with_answers,'answered at least one question'],['Questions answered',st.answers,'all students together'],['Mock exams',st.mocks,'saved results'],['Document opens',st.doc_opens,'course PDFs']]);
+    $('topdocs').innerHTML='<b>Most opened documents</b>'+table(['Document','Students'],(st.top_docs||[]).map(function(x){return [esc(x.doc.replace(/\.pdf$/,'')),+x.n]}),'No document opened yet.');
+    $('fb').innerHTML='<b>Feedback</b>'+table(['Date','Email','Rating','Comment'],(D.feedback||[]).map(function(x){return [esc(day(x.at)),esc(x.email||'—'),esc(x.rating),'<span style="white-space:normal">'+esc(x.comment||'')+'</span>']}),'No feedback yet.');
+    people();$('msg').hidden=true;$('app').hidden=false;
+  }
+  async function load(){
+    var A=window.ImatAuth,session=A&&await A.getSession();
+    if(!session){location.replace('auth.html');return;}
+    $('re').disabled=true;
+    var r=await A.client.rpc('admin_dashboard');
+    $('re').disabled=false;
+    if(r.error){$('app').hidden=true;$('msg').hidden=false;$('msg').textContent=r.error.code==='42501'?'This page is for the site owner only. Sign in with the owner account.':'Could not load the numbers. Press Refresh.';return;}
+    render(r.data);
+  }
+  $('re').onclick=load;$('q').oninput=function(){if(D)people()};$('f').onchange=function(){if(D)people()};
+  window.renderAdmin=render;
+  if(!/^(localhost|127\.0\.0\.1)$/.test(location.hostname))load();else $('msg').textContent='Preview: no data here.';
+})();
+</script></body></html>
