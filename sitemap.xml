@@ -42,4 +42,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url><loc>https://imatpath.pages.dev/guide</loc></url>
 </urlset>
