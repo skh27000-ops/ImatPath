@@ -36,7 +36,7 @@ h1{font:800 clamp(1.9rem,4.4vw,2.8rem)/1.08 'Bricolage Grotesque';letter-spacing
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="supabase.js"></script>
-<script src="paywall-config.js?v=1"></script>
+<script src="paywall-config.js?v=2"></script>
 <script src="auth-guard.js"></script>
 </head><body><div class="w">
 <div class="top"><a class="wm" href="index.html">ImatPath</a><div class="who"><span id="em"></span><a id="out">Sign out</a></div></div>
@@ -60,7 +60,7 @@ h1{font:800 clamp(1.9rem,4.4vw,2.8rem)/1.08 'Bricolage Grotesque';letter-spacing
   function link(base){
     if(!base) return '';
     var sep=base.indexOf('?')>=0?'&':'?';
-    return base+sep+'checkout[email]='+encodeURIComponent(user&&user.email||'')+'&checkout[custom][user_id]='+encodeURIComponent(user&&user.id||'');
+    return base+sep+'customer_email='+encodeURIComponent(user&&user.email||'')+'&reference_id='+encodeURIComponent(user&&user.id||'');
   }
   function render(){
     var C=(window.ImatPay&&window.ImatPay.CHECKOUT)||{};
@@ -68,7 +68,7 @@ h1{font:800 clamp(1.9rem,4.4vw,2.8rem)/1.08 'Bricolage Grotesque';letter-spacing
       var u=link(C[x.key]);
       return '<div class="mn"><div class="mn-h"><h3>'+x.n+'</h3><span class="mn-k">'+x.k+'</span></div><div class="mn-p">'+x.p+'</div>'+
         '<div class="mn-d">Launch price −50% · then '+x.was+'</div><p class="mn-v">'+x.v+'</p><ul class="mn-l">'+x.l.map(function(i){return '<li>'+esc(i)+'</li>'}).join('')+'</ul>'+
-        (u?'<a class="mn-b" href="'+esc(u)+'">'+x.b+' →</a>':'<a class="mn-b" aria-disabled="true">Opening soon</a>')+'</div>';
+        (u?'<a class="mn-b" href="'+esc(u)+'">'+x.b+' →</a>':x.key==='application'?'<a class="mn-b" href="mailto:imatpathpro@gmail.com?subject=Application%20Guide">Contact us →</a>':'<a class="mn-b" aria-disabled="true">Opening soon</a>')+'</div>';
     }).join('');
   }
   async function hasAccess(){

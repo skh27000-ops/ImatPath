@@ -49,7 +49,7 @@
     try {
       await new Promise(function (ok) {
         var s = document.createElement('script');
-        s.src = 'paywall-config.js?v=1'; s.onload = ok; s.onerror = ok; document.head.appendChild(s);
+        s.src = 'paywall-config.js?v=2'; s.onload = ok; s.onerror = ok; document.head.appendChild(s);
       });
       var PAY = window.ImatPay;
       if (PAY && PAY.ENABLED && session && session.user) {
