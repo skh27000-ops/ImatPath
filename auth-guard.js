@@ -45,11 +45,11 @@
   // Only when paywall-config.js says ENABLED. Needs an active row in public.entitlements for the user's email.
   // (This locks the app screens. The static files themselves, such as the question data and the PDFs, stay public URLs.)
   // access.html and the past papers simulator (roadmap.html) stay open to every signed-in account.
-  if (!isLocalEnv && !/(access|roadmap)\.html$/i.test(window.location.pathname)) {
+  if (!isLocalEnv && !/\/(access|roadmap)(\.html)?\/?$/i.test(window.location.pathname)) {
     try {
       await new Promise(function (ok) {
         var s = document.createElement('script');
-        s.src = 'paywall-config.js?v=2'; s.onload = ok; s.onerror = ok; document.head.appendChild(s);
+        s.src = 'paywall-config.js?v=3'; s.onload = ok; s.onerror = ok; document.head.appendChild(s);
       });
       var PAY = window.ImatPay;
       if (PAY && PAY.ENABLED && session && session.user) {

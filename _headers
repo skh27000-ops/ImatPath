@@ -23,3 +23,11 @@
   Cache-Control: public, max-age=604800
 /*.woff2
   Cache-Control: public, max-age=604800
+
+# the paywall switch and its check must never be served from an old browser copy
+/auth-guard.js
+  ! Cache-Control
+  Cache-Control: no-cache
+/paywall-config.js
+  ! Cache-Control
+  Cache-Control: no-cache
